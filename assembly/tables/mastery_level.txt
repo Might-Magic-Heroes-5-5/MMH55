@@ -1,0 +1,22 @@
+switch ( mastery_id_a2 )
+  {
+    case 0:
+      return_game_text_from_id(a1, "MASTERY_NONE");
+      result = v2;
+      break;
+    case 1:
+      return_game_text_from_id(a1, "MASTERY_BASIC");
+      result = v2;
+      break;
+    case 2:
+      return_game_text_from_id(a1, "MASTERY_ADVANCED");
+      result = v2;
+      break;
+    case 3:
+      return_game_text_from_id(a1, "MASTERY_EXPERT");
+      result = v2;
+      break;
+    case 4:
+      return_game_text_from_id(a1, "MASTERY_EXTRA_EXPERT");
+      result = v2;
+      break;

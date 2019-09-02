@@ -1,0 +1,522 @@
+int __fastcall sub_84A960(int a1, int a2)
+{
+  int v2; // esi@1
+  int result; // eax@2
+
+  v2 = a1;
+  switch ( a2 )
+  {
+    case 0:
+      i_take_string_as_input(a1, "WEEK_OF_NOTHING");
+      result = v2;
+      break;
+    case 1:
+      i_take_string_as_input(a1, "WEEK_OF_TOAD");
+      result = v2;
+      break;
+    case 2:
+      i_take_string_as_input(a1, "WEEK_OF_SALAMANDER");
+      result = v2;
+      break;
+    case 3:
+      i_take_string_as_input(a1, "WEEK_OF_BEETLE");
+      result = v2;
+      break;
+    case 4:
+      i_take_string_as_input(a1, "WEEK_OF_FIREFLY");
+      result = v2;
+      break;
+    case 5:
+      i_take_string_as_input(a1, "WEEK_OF_DRAGONFLY");
+      result = v2;
+      break;
+    case 6:
+      i_take_string_as_input(a1, "WEEK_OF_FOX");
+      result = v2;
+      break;
+    case 7:
+      i_take_string_as_input(a1, "WEEK_OF_RAT");
+      result = v2;
+      break;
+    case 8:
+      i_take_string_as_input(a1, "WEEK_OF_RABBIT");
+      result = v2;
+      break;
+    case 9:
+      i_take_string_as_input(a1, "WEEK_OF_SQUIRREL");
+      result = v2;
+      break;
+    case 10:
+      i_take_string_as_input(a1, "WEEK_OF_CATERPILLAR");
+      result = v2;
+      break;
+    case 11:
+      i_take_string_as_input(a1, "WEEK_OF_HAMSTER");
+      result = v2;
+      break;
+    case 12:
+      i_take_string_as_input(a1, "WEEK_OF_PIGEON");
+      result = v2;
+      break;
+    case 13:
+      i_take_string_as_input(a1, "WEEK_OF_CUCKOO");
+      result = v2;
+      break;
+    case 14:
+      i_take_string_as_input(a1, "WEEK_OF_EAGLE");
+      result = v2;
+      break;
+    case 15:
+      i_take_string_as_input(a1, "WEEK_OF_BEE");
+      result = v2;
+      break;
+    case 16:
+      i_take_string_as_input(a1, "WEEK_OF_WASP");
+      result = v2;
+      break;
+    case 17:
+      i_take_string_as_input(a1, "WEEK_OF_SWAN");
+      result = v2;
+      break;
+    case 18:
+      i_take_string_as_input(a1, "WEEK_OF_BUTTERFLY");
+      result = v2;
+      break;
+    case 19:
+      i_take_string_as_input(a1, "WEEK_OF_WHALE");
+      result = v2;
+      break;
+    case 20:
+      i_take_string_as_input(a1, "WEEK_OF_ANTILOPE");
+      result = v2;
+      break;
+    case 21:
+      i_take_string_as_input(a1, "WEEK_OF_HYENA");
+      result = v2;
+      break;
+    case 22:
+      i_take_string_as_input(a1, "WEEK_OF_RAVEN");
+      result = v2;
+      break;
+    case 23:
+      i_take_string_as_input(a1, "WEEK_OF_BADGER");
+      result = v2;
+      break;
+    case 24:
+      i_take_string_as_input(a1, "WEEK_OF_FLAMINGO");
+      result = v2;
+      break;
+    case 25:
+      i_take_string_as_input(a1, "WEEK_OF_TORTOISE");
+      result = v2;
+      break;
+    case 26:
+      i_take_string_as_input(a1, "WEEK_OF_LYNX");
+      result = v2;
+      break;
+    case 27:
+      i_take_string_as_input(a1, "WEEK_OF_PENGUIN");
+      result = v2;
+      break;
+    case 28:
+      i_take_string_as_input(a1, "WEEK_OF_FALCON");
+      result = v2;
+      break;
+    case 29:
+      i_take_string_as_input(a1, "WEEK_OF_HEDGEHOG");
+      result = v2;
+      break;
+    case 30:
+      i_take_string_as_input(a1, "WEEK_OF_SPARROW");
+      result = v2;
+      break;
+    case 31:
+      i_take_string_as_input(a1, "WEEK_OF_SWALLOW");
+      result = v2;
+      break;
+    case 32:
+      i_take_string_as_input(a1, "WEEK_OF_LION");
+      result = v2;
+      break;
+    case 33:
+      i_take_string_as_input(a1, "WEEK_OF_STORK");
+      result = v2;
+      break;
+    case 34:
+      i_take_string_as_input(a1, "WEEK_OF_BEAR");
+      result = v2;
+      break;
+    case 35:
+      i_take_string_as_input(a1, "WEEK_OF_ROOSTER");
+      result = v2;
+      break;
+    case 36:
+      i_take_string_as_input(a1, "WEEK_OF_VIPER");
+      result = v2;
+      break;
+    case 37:
+      i_take_string_as_input(a1, "WEEK_OF_SHEEP");
+      result = v2;
+      break;
+    case 38:
+      i_take_string_as_input(a1, "WEEK_OF_DEER");
+      result = v2;
+      break;
+    case 39:
+      i_take_string_as_input(a1, "WEEK_OF_OWL");
+      result = v2;
+      break;
+    case 40:
+      i_take_string_as_input(a1, "WEEK_OF_GOAT");
+      result = v2;
+      break;
+    case 41:
+      i_take_string_as_input(a1, "WEEK_OF_WYRM");
+      result = v2;
+      break;
+    case 42:
+      i_take_string_as_input(a1, "WEEK_OF_TIGER");
+      result = v2;
+      break;
+    case 43:
+      i_take_string_as_input(a1, "WEEK_OF_PLAGUE");
+      result = v2;
+      break;
+    case 44:
+      i_take_string_as_input(a1, "WEEK_OF_DISEASE");
+      result = v2;
+      break;
+    case 45:
+      i_take_string_as_input(a1, "WEEK_OF_FEVER");
+      result = v2;
+      break;
+    case 46:
+      i_take_string_as_input(a1, "WEEK_OF_FLAME");
+      result = v2;
+      break;
+    case 47:
+      i_take_string_as_input(a1, "WEEK_OF_WINDS");
+      result = v2;
+      break;
+    case 48:
+      i_take_string_as_input(a1, "WEEK_OF_FOLLY");
+      result = v2;
+      break;
+    case 49:
+      i_take_string_as_input(a1, "WEEK_OF_HONOR");
+      result = v2;
+      break;
+    case 50:
+      i_take_string_as_input(a1, "WEEK_OF_DIPLOMACY");
+      result = v2;
+      break;
+    case 51:
+      i_take_string_as_input(a1, "WEEK_OF_FORGERY");
+      result = v2;
+      break;
+    case 52:
+      i_take_string_as_input(a1, "WEEK_OF_TRADE");
+      result = v2;
+      break;
+    case 53:
+      i_take_string_as_input(a1, "WEEK_OF_MEDITATION");
+      result = v2;
+      break;
+    case 54:
+      i_take_string_as_input(a1, "WEEK_OF_LIFE");
+      result = v2;
+      break;
+    case 55:
+      i_take_string_as_input(a1, "WEEK_OF_CONJUNCTION");
+      result = v2;
+      break;
+    case 56:
+      i_take_string_as_input(a1, "WEEK_OF_JEWELS");
+      result = v2;
+      break;
+    case 57:
+      i_take_string_as_input(a1, "WEEK_OF_ALCHEMY");
+      result = v2;
+      break;
+    case 58:
+      i_take_string_as_input(a1, "WEEK_OF_GOLD");
+      result = v2;
+      break;
+    case 59:
+      i_take_string_as_input(a1, "WEEK_OF_FESTIVALS");
+      result = v2;
+      break;
+    case 60:
+      i_take_string_as_input(a1, "WEEK_OF_HARVEST");
+      result = v2;
+      break;
+    case 61:
+      i_take_string_as_input(a1, "WEEK_OF_IDLENESS");
+      result = v2;
+      break;
+    case 62:
+      i_take_string_as_input(a1, "WEEK_OF_MAGIC");
+      result = v2;
+      break;
+    case 63:
+      i_take_string_as_input(a1, "WEEK_OF_FEEBLENESS");
+      result = v2;
+      break;
+    case 64:
+      i_take_string_as_input(a1, "WEEK_OF_SORROW");
+      result = v2;
+      break;
+    case 65:
+      i_take_string_as_input(a1, "WEEK_OF_CHAOS");
+      result = v2;
+      break;
+    case 66:
+      i_take_string_as_input(a1, "WEEK_OF_CALM");
+      result = v2;
+      break;
+    case 67:
+      i_take_string_as_input(a1, "WEEK_OF_HOPE");
+      result = v2;
+      break;
+    case 68:
+      i_take_string_as_input(a1, "WEEK_OF_WATER");
+      result = v2;
+      break;
+    case 69:
+      i_take_string_as_input(a1, "WEEK_OF_FIRE");
+      result = v2;
+      break;
+    case 70:
+      i_take_string_as_input(a1, "WEEK_OF_EARTH");
+      result = v2;
+      break;
+    case 71:
+      i_take_string_as_input(a1, "WEEK_OF_AIR");
+      result = v2;
+      break;
+    case 72:
+      i_take_string_as_input(a1, "WEEK_OF_FIRENICE");
+      result = v2;
+      break;
+    case 73:
+      i_take_string_as_input(a1, "WEEK_OF_MIGHT");
+      result = v2;
+      break;
+    case 74:
+      i_take_string_as_input(a1, "WEEK_OF_BALANCE");
+      result = v2;
+      break;
+    case 75:
+      i_take_string_as_input(a1, "WEEK_OF_MIGHTNMAGIC");
+      result = v2;
+      break;
+    case 76:
+      i_take_string_as_input(a1, "WEEK_OF_INFIRMITY");
+      result = v2;
+      break;
+    case 77:
+      i_take_string_as_input(a1, "WEEK_OF_LIGHT");
+      result = v2;
+      break;
+    case 78:
+      i_take_string_as_input(a1, "WEEK_OF_EVOCATION");
+      result = v2;
+      break;
+    case 79:
+      i_take_string_as_input(a1, "WEEK_OF_ABJURATION");
+      result = v2;
+      break;
+    case 80:
+      i_take_string_as_input(a1, "WEEK_OF_ALTERATION");
+      result = v2;
+      break;
+    case 81:
+      i_take_string_as_input(a1, "WEEK_OF_CONJURATION");
+      result = v2;
+      break;
+    case 82:
+      i_take_string_as_input(a1, "WEEK_OF_ETHER");
+      result = v2;
+      break;
+    case 83:
+      i_take_string_as_input(a1, "WEEK_OF_TOUGHNESS");
+      result = v2;
+      break;
+    case 84:
+      i_take_string_as_input(a1, "WEEK_OF_PEASANT");
+      result = v2;
+      break;
+    case 85:
+      i_take_string_as_input(a1, "WEEK_OF_ARCHER");
+      result = v2;
+      break;
+    case 86:
+      i_take_string_as_input(a1, "WEEK_OF_FOOTMAN");
+      result = v2;
+      break;
+    case 87:
+      i_take_string_as_input(a1, "WEEK_OF_GRIFFIN");
+      result = v2;
+      break;
+    case 88:
+      i_take_string_as_input(a1, "WEEK_OF_PRIEST");
+      result = v2;
+      break;
+    case 89:
+      i_take_string_as_input(a1, "WEEK_OF_CAVALIER");
+      result = v2;
+      break;
+    case 90:
+      i_take_string_as_input(a1, "WEEK_OF_ANGEL");
+      result = v2;
+      break;
+    case 91:
+      i_take_string_as_input(a1, "WEEK_OF_GREMLIN");
+      result = v2;
+      break;
+    case 92:
+      i_take_string_as_input(a1, "WEEK_OF_GARGOYLE");
+      result = v2;
+      break;
+    case 93:
+      i_take_string_as_input(a1, "WEEK_OF_GOLEM");
+      result = v2;
+      break;
+    case 94:
+      i_take_string_as_input(a1, "WEEK_OF_MAGI");
+      result = v2;
+      break;
+    case 95:
+      i_take_string_as_input(a1, "WEEK_OF_GENIE");
+      result = v2;
+      break;
+    case 96:
+      i_take_string_as_input(a1, "WEEK_OF_RAKSHASA");
+      result = v2;
+      break;
+    case 97:
+      i_take_string_as_input(a1, "WEEK_OF_GIANT");
+      result = v2;
+      break;
+    case 98:
+      i_take_string_as_input(a1, "WEEK_OF_PIXIE");
+      result = v2;
+      break;
+    case 99:
+      i_take_string_as_input(a1, "WEEK_OF_WARDANCER");
+      result = v2;
+      break;
+    case 100:
+      i_take_string_as_input(a1, "WEEK_OF_WOODELF");
+      result = v2;
+      break;
+    case 101:
+      i_take_string_as_input(a1, "WEEK_OF_DRUID");
+      result = v2;
+      break;
+    case 102:
+      i_take_string_as_input(a1, "WEEK_OF_UNICORN");
+      result = v2;
+      break;
+    case 103:
+      i_take_string_as_input(a1, "WEEK_OF_TREANT");
+      result = v2;
+      break;
+    case 104:
+      i_take_string_as_input(a1, "WEEK_OF_GREENDRAGON");
+      result = v2;
+      break;
+    case 105:
+      i_take_string_as_input(a1, "WEEK_OF_IMP");
+      result = v2;
+      break;
+    case 106:
+      i_take_string_as_input(a1, "WEEK_OF_DEMON");
+      result = v2;
+      break;
+    case 107:
+      i_take_string_as_input(a1, "WEEK_OF_HELLHOUND");
+      result = v2;
+      break;
+    case 108:
+      i_take_string_as_input(a1, "WEEK_OF_SUCCUBUS");
+      result = v2;
+      break;
+    case 109:
+      i_take_string_as_input(a1, "WEEK_OF_NIGHTMARE");
+      result = v2;
+      break;
+    case 110:
+      i_take_string_as_input(a1, "WEEK_OF_BALOR");
+      result = v2;
+      break;
+    case 111:
+      i_take_string_as_input(a1, "WEEK_OF_DEVIL");
+      result = v2;
+      break;
+    case 112:
+      i_take_string_as_input(a1, "WEEK_OF_ASSASSIN");
+      result = v2;
+      break;
+    case 113:
+      i_take_string_as_input(a1, "WEEK_OF_WITCH");
+      result = v2;
+      break;
+    case 114:
+      i_take_string_as_input(a1, "WEEK_OF_MINOTAUR");
+      result = v2;
+      break;
+    case 115:
+      i_take_string_as_input(a1, "WEEK_OF_RIDER");
+      result = v2;
+      break;
+    case 116:
+      i_take_string_as_input(a1, "WEEK_OF_HYDRA");
+      result = v2;
+      break;
+    case 117:
+      i_take_string_as_input(a1, "WEEK_OF_MATRON");
+      result = v2;
+      break;
+    case 118:
+      i_take_string_as_input(a1, "WEEK_OF_DRAGON");
+      result = v2;
+      break;
+    case 119:
+      i_take_string_as_input(a1, "WEEK_OF_SKELETON");
+      result = v2;
+      break;
+    case 120:
+      i_take_string_as_input(a1, "WEEK_OF_WALKINGDEAD");
+      result = v2;
+      break;
+    case 121:
+      i_take_string_as_input(a1, "WEEK_OF_GHOST");
+      result = v2;
+      break;
+    case 122:
+      i_take_string_as_input(a1, "WEEK_OF_VAMPIRE");
+      result = v2;
+      break;
+    case 123:
+      i_take_string_as_input(a1, "WEEK_OF_LICH");
+      result = v2;
+      break;
+    case 124:
+      i_take_string_as_input(a1, "WEEK_OF_WIGHT");
+      result = v2;
+      break;
+    case 125:
+      i_take_string_as_input(a1, "WEEK_OF_BONEDRAGON");
+      result = v2;
+      break;
+    default:
+      *(_DWORD *)a1 = 0;
+      *(_DWORD *)(a1 + 4) = 0;
+      *(_DWORD *)(a1 + 8) = 0;
+      sub_401020((_DWORD *)a1, "WEEK_OF_NOTHING", "");
+      result = v2;
+      break;
+  }
+  return result;
+}

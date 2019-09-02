@@ -1,0 +1,1038 @@
+int __fastcall define_town_spec_vars(int a1, int townspec_id_a2)
+{
+  int v2; // esi
+  int result; // eax
+
+  v2 = a1;
+  switch ( townspec_id_a2 )
+  {
+    case 0:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_ALEMADROS");
+      result = v2;
+      break;
+    case 1:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_AYER");
+      result = v2;
+      break;
+    case 2:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_BATTA");
+      result = v2;
+      break;
+    case 3:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_CASIM");
+      result = v2;
+      break;
+    case 4:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_DAVVAD");
+      result = v2;
+      break;
+    case 5:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_DEMIR");
+      result = v2;
+      break;
+    case 6:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_DGOH");
+      result = v2;
+      break;
+    case 7:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_EFDAL");
+      result = v2;
+      break;
+    case 8:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_GAN");
+      result = v2;
+      break;
+    case 9:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_HIKM");
+      result = v2;
+      break;
+    case 10:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_MAHK");
+      result = v2;
+      break;
+    case 11:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_MANS");
+      result = v2;
+      break;
+    case 12:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_NAZ");
+      result = v2;
+      break;
+    case 13:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_RAG");
+      result = v2;
+      break;
+    case 14:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_TIRITH");
+      result = v2;
+      break;
+    case 15:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_UMAR");
+      result = v2;
+      break;
+    case 16:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_ZEID");
+      result = v2;
+      break;
+    case 17:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_SCRIPT_ALEMADROS");
+      result = v2;
+      break;
+    case 18:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_SCRIPT_DAVVAD");
+      result = v2;
+      break;
+    case 19:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_SCRIPT_HIKM");
+      result = v2;
+      break;
+    case 20:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_SCRIPT_INSAR");
+      result = v2;
+      break;
+    case 21:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_SCRIPT_LAL");
+      result = v2;
+      break;
+    case 22:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_SCRIPT_SAY_IN_3_CAMPANY");
+      result = v2;
+      break;
+    case 23:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_SCRIPT_SAY_IN_6_CAMPANY");
+      result = v2;
+      break;
+    case 24:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_ALKLOMED");
+      result = v2;
+      break;
+    case 25:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_ANGBAND");
+      result = v2;
+      break;
+    case 26:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_BALVALAK");
+      result = v2;
+      break;
+    case 27:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_DOLNUR");
+      result = v2;
+      break;
+    case 28:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_EFELGUL");
+      result = v2;
+      break;
+    case 29:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_FIRINGIL");
+      result = v2;
+      break;
+    case 30:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_GIBIRLAD");
+      result = v2;
+      break;
+    case 31:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_GORTADAN");
+      result = v2;
+      break;
+    case 32:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_HIMANNUN");
+      result = v2;
+      break;
+    case 33:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_ILUTANG");
+      result = v2;
+      break;
+    case 34:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_KIRIRAT");
+      result = v2;
+      break;
+    case 35:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_LASKURUN");
+      result = v2;
+      break;
+    case 36:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_MITBARAD");
+      result = v2;
+      break;
+    case 37:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_NARMOR");
+      result = v2;
+      break;
+    case 38:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_NAZHIR");
+      result = v2;
+      break;
+    case 39:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_PELDUAT");
+      result = v2;
+      break;
+    case 40:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_ROGMIR");
+      result = v2;
+      break;
+    case 41:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_TONDNOR");
+      result = v2;
+      break;
+    case 42:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_TORONDIR");
+      result = v2;
+      break;
+    case 43:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_RANDOM_VINHIT");
+      result = v2;
+      break;
+    case 44:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_SCRIPT_AANHOST");
+      result = v2;
+      break;
+    case 45:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_SCRIPT_BALNUR");
+      result = v2;
+      break;
+    case 46:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_SCRIPT_EAHOST");
+      result = v2;
+      break;
+    case 47:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_SCRIPT_EFELNUR");
+      result = v2;
+      break;
+    case 48:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_SCRIPT_FOUHOST");
+      result = v2;
+      break;
+    case 49:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_SCRIPT_GIBIRNUR");
+      result = v2;
+      break;
+    case 50:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_SCRIPT_GORTADAN");
+      result = v2;
+      break;
+    case 51:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_SCRIPT_HIMANNUR");
+      result = v2;
+      break;
+    case 52:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_SCRIPT_ILUNUR");
+      result = v2;
+      break;
+    case 53:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_SCRIPT_MIAHOST");
+      result = v2;
+      break;
+    case 54:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_SCRIPT_PELNUR");
+      result = v2;
+      break;
+    case 55:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_SCRIPT_SEAHOST");
+      result = v2;
+      break;
+    case 56:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_SCRIPT_TOAHOST");
+      result = v2;
+      break;
+    case 57:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_SCRIPT_TONDNUR");
+      result = v2;
+      break;
+    case 58:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_SCRIPT_WAAHOST");
+      result = v2;
+      break;
+    case 59:
+      return_game_text_from_id(a1, "TOWNSPEC_DUNGEON_SCRIPT_ZIAHOST");
+      result = v2;
+      break;
+    case 60:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_ALEXANDRETTA");
+      result = v2;
+      break;
+    case 61:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_BAILEY");
+      result = v2;
+      break;
+    case 62:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_CASTLEGATE");
+      result = v2;
+      break;
+    case 63:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_CHILLBURY");
+      result = v2;
+      break;
+    case 64:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_CLAXTON");
+      result = v2;
+      break;
+    case 65:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_DEVICEY");
+      result = v2;
+      break;
+    case 66:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_DUNHART");
+      result = v2;
+      break;
+    case 67:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_GLENHEIM");
+      result = v2;
+      break;
+    case 68:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_KILDERSOM");
+      result = v2;
+      break;
+    case 69:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_MERLON");
+      result = v2;
+      break;
+    case 70:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_MILLFIELD");
+      result = v2;
+      break;
+    case 71:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_SORRETH");
+      result = v2;
+      break;
+    case 72:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_STORMDALE");
+      result = v2;
+      break;
+    case 73:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_SCRIPT_BARRINGTON");
+      result = v2;
+      break;
+    case 74:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_SCRIPT_BAYWORTH");
+      result = v2;
+      break;
+    case 75:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_SCRIPT_CHERTLES");
+      result = v2;
+      break;
+    case 76:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_SCRIPT_CHILLBURY");
+      result = v2;
+      break;
+    case 77:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_SCRIPT_EXETER");
+      result = v2;
+      break;
+    case 78:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_SCRIPT_GRACEVILLE");
+      result = v2;
+      break;
+    case 79:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_SCRIPT_GRYPHONHILL");
+      result = v2;
+      break;
+    case 80:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_SCRIPT_HUNT");
+      result = v2;
+      break;
+    case 81:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_SCRIPT_LENCEROS");
+      result = v2;
+      break;
+    case 82:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_SCRIPT_MILLFIELD");
+      result = v2;
+      break;
+    case 83:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_SCRIPT_NEWPOST");
+      result = v2;
+      break;
+    case 84:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_SCRIPT_PALEDON");
+      result = v2;
+      break;
+    case 85:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_SCRIPT_PROVIDENCE");
+      result = v2;
+      break;
+    case 86:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_SCRIPT_SORRETH");
+      result = v2;
+      break;
+    case 87:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_SCRIPT_TALONGUARD");
+      result = v2;
+      break;
+    case 88:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_SCRIPT_TRADEVILLE");
+      result = v2;
+      break;
+    case 89:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_ABADDON");
+      result = v2;
+      break;
+    case 90:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_ACHERON");
+      result = v2;
+      break;
+    case 91:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_BLACKBURN");
+      result = v2;
+      break;
+    case 92:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_CANDENT");
+      result = v2;
+      break;
+    case 93:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_DEHT");
+      result = v2;
+      break;
+    case 94:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_FURF");
+      result = v2;
+      break;
+    case 95:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_FURNACE");
+      result = v2;
+      break;
+    case 96:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_GEHENNA");
+      result = v2;
+      break;
+    case 97:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_GRADL");
+      result = v2;
+      break;
+    case 98:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_HABOR");
+      result = v2;
+      break;
+    case 99:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_HELLWIND");
+      result = v2;
+      break;
+    case 100:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_MAVOYR");
+      result = v2;
+      break;
+    case 101:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_MULCIBER");
+      result = v2;
+      break;
+    case 102:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_SPLINTER");
+      result = v2;
+      break;
+    case 103:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_STYX");
+      result = v2;
+      break;
+    case 104:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_TARTAROS");
+      result = v2;
+      break;
+    case 105:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_UPHIR");
+      result = v2;
+      break;
+    case 106:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_SCRIPT_ABADDON");
+      result = v2;
+      break;
+    case 107:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_SCRIPT_ASMAR");
+      result = v2;
+      break;
+    case 108:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_SCRIPT_BURDEN");
+      result = v2;
+      break;
+    case 109:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_SCRIPT_DEVUR");
+      result = v2;
+      break;
+    case 110:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_SCRIPT_MAMMON");
+      result = v2;
+      break;
+    case 111:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_SCRIPT_NEBIRCIAS");
+      result = v2;
+      break;
+    case 112:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_SCRIPT_TARTAROS");
+      result = v2;
+      break;
+    case 113:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_SCRIPT_WAALAG");
+      result = v2;
+      break;
+    case 114:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_ANIMUS");
+      result = v2;
+      break;
+    case 115:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_CEREBRUM");
+      result = v2;
+      break;
+    case 116:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_CORPORIS");
+      result = v2;
+      break;
+    case 117:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_DECUS");
+      result = v2;
+      break;
+    case 118:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_FAMULUS");
+      result = v2;
+      break;
+    case 119:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_FODIN");
+      result = v2;
+      break;
+    case 120:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_INHUMATIO");
+      result = v2;
+      break;
+    case 121:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_LAPIS");
+      result = v2;
+      break;
+    case 122:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_LOCULUS");
+      result = v2;
+      break;
+    case 123:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_MANUS");
+      result = v2;
+      break;
+    case 124:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_METUS");
+      result = v2;
+      break;
+    case 125:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_PORTA");
+      result = v2;
+      break;
+    case 126:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_SANCTUM");
+      result = v2;
+      break;
+    case 127:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_TELUM");
+      result = v2;
+      break;
+    case 128:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_TERMINUS");
+      result = v2;
+      break;
+    case 129:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_TRABS");
+      result = v2;
+      break;
+    case 130:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_ALEMADRUM");
+      result = v2;
+      break;
+    case 131:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_ANIMUS");
+      result = v2;
+      break;
+    case 132:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_CORPORIS");
+      result = v2;
+      break;
+    case 133:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_DAVVES");
+      result = v2;
+      break;
+    case 134:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_DECUS");
+      result = v2;
+      break;
+    case 135:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_FAMULUS");
+      result = v2;
+      break;
+    case 136:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_INHUMATIO");
+      result = v2;
+      break;
+    case 137:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_INITIUM");
+      result = v2;
+      break;
+    case 138:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_INSARIUS");
+      result = v2;
+      break;
+    case 139:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_LATRO");
+      result = v2;
+      break;
+    case 140:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_NECORRUM");
+      result = v2;
+      break;
+    case 141:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_PUTOR");
+      result = v2;
+      break;
+    case 142:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_SANCTUM");
+      result = v2;
+      break;
+    case 143:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_SEPULCRUM");
+      result = v2;
+      break;
+    case 144:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_SPES");
+      result = v2;
+      break;
+    case 145:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_TELUM");
+      result = v2;
+      break;
+    case 146:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_SCRIPT_TERMINUS");
+      result = v2;
+      break;
+    case 147:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_DAMLAD");
+      result = v2;
+      break;
+    case 148:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_DUAGOR");
+      result = v2;
+      break;
+    case 149:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_EREWEL");
+      result = v2;
+      break;
+    case 150:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_ETERAMON");
+      result = v2;
+      break;
+    case 151:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_GIADAN");
+      result = v2;
+      break;
+    case 152:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_HOLIN");
+      result = v2;
+      break;
+    case 153:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_LUVIN");
+      result = v2;
+      break;
+    case 154:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_MENELFOR");
+      result = v2;
+      break;
+    case 155:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_NANTOUR");
+      result = v2;
+      break;
+    case 156:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_NGAURASH");
+      result = v2;
+      break;
+    case 157:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_PELARBER");
+      result = v2;
+      break;
+    case 158:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_PERAEL");
+      result = v2;
+      break;
+    case 159:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_REUTEERN");
+      result = v2;
+      break;
+    case 160:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_ROVADELL");
+      result = v2;
+      break;
+    case 161:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_TIRNBES");
+      result = v2;
+      break;
+    case 162:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_VERLIRN");
+      result = v2;
+      break;
+    case 163:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_SCRIPT_GIADAN");
+      result = v2;
+      break;
+    case 164:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_SCRIPT_GONAREST");
+      result = v2;
+      break;
+    case 165:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_SCRIPT_HOLIN");
+      result = v2;
+      break;
+    case 166:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_SCRIPT_IMARIUM");
+      result = v2;
+      break;
+    case 167:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_SCRIPT_KEENLIN");
+      result = v2;
+      break;
+    case 168:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_SCRIPT_LADEFALOT");
+      result = v2;
+      break;
+    case 169:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_SCRIPT_NGAURASH");
+      result = v2;
+      break;
+    case 170:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_SCRIPT_PERAEL");
+      result = v2;
+      break;
+    case 171:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_SCRIPT_ROUTMIT");
+      result = v2;
+      break;
+    case 172:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_SCRIPT_ROVADELL");
+      result = v2;
+      break;
+    case 173:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_TIER4");
+      result = v2;
+      break;
+    case 174:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_EXTRAORE");
+      result = v2;
+      break;
+    case 175:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_EXTRAWOOD");
+      result = v2;
+      break;
+    case 176:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_FIRSTAIDTENT");
+      result = v2;
+      break;
+    case 177:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_SULFUR");
+      result = v2;
+      break;
+    case 178:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_SHIPS");
+      result = v2;
+      break;
+    case 179:
+      return_game_text_from_id(a1, "TOWNSPEC_HAVEN_RANDOM_TOWERS");
+      result = v2;
+      break;
+    case 180:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_EXTRAORE");
+      result = v2;
+      break;
+    case 181:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_EXTRAWOOD");
+      result = v2;
+      break;
+    case 182:
+      return_game_text_from_id(a1, "TOWNSPEC_INFERNO_RANDOM_GOLD250");
+      result = v2;
+      break;
+    case 183:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_THIEVES");
+      result = v2;
+      break;
+    case 184:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_MINUS_LUCK");
+      result = v2;
+      break;
+    case 185:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_GEMS");
+      result = v2;
+      break;
+    case 186:
+      return_game_text_from_id(a1, "TOWNSPEC_NECROPOLIS_RANDOM_TOWERS");
+      result = v2;
+      break;
+    case 187:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_TIER1");
+      result = v2;
+      break;
+    case 188:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_TIER3");
+      result = v2;
+      break;
+    case 189:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_THIEVES");
+      result = v2;
+      break;
+    case 190:
+      return_game_text_from_id(a1, "TOWNSPEC_PRESERVE_RANDOM_WALLS");
+      result = v2;
+      break;
+    case 191:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_TIER4");
+      result = v2;
+      break;
+    case 192:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_MINUS_DEFENCE_OFFENSE");
+      result = v2;
+      break;
+    case 193:
+      return_game_text_from_id(a1, "TOWNSPEC_ACADEMY_RANDOM_TOWERS");
+      result = v2;
+      break;
+    case 194:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_TIER1");
+      result = v2;
+      break;
+    case 195:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_TIER2");
+      result = v2;
+      break;
+    case 196:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_TIER3");
+      result = v2;
+      break;
+    case 197:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_TIER4");
+      result = v2;
+      break;
+    case 198:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_MARKET");
+      result = v2;
+      break;
+    case 199:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_THIEVES");
+      result = v2;
+      break;
+    case 200:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_EXTRA_ORE");
+      result = v2;
+      break;
+    case 201:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_EXTRA_WOOD");
+      result = v2;
+      break;
+    case 202:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_PLUS_DEFENCE_2");
+      result = v2;
+      break;
+    case 203:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_MINUS_OFFENCE_2");
+      result = v2;
+      break;
+    case 204:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_PLUS_LUCK");
+      result = v2;
+      break;
+    case 205:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_MINUS_MORALE");
+      result = v2;
+      break;
+    case 206:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_FIRST_AID_TENT");
+      result = v2;
+      break;
+    case 207:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_AMMO_CART");
+      result = v2;
+      break;
+    case 208:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_CRYSTALS");
+      result = v2;
+      break;
+    case 209:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_GEMS");
+      result = v2;
+      break;
+    case 210:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_250_GOLD");
+      result = v2;
+      break;
+    case 211:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_WALLS");
+      result = v2;
+      break;
+    case 212:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_TOWERS");
+      result = v2;
+      break;
+    case 213:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_RANDOM_HEROES");
+      result = v2;
+      break;
+    case 214:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_TIER1");
+      result = v2;
+      break;
+    case 215:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_TIER2");
+      result = v2;
+      break;
+    case 216:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_TIER3");
+      result = v2;
+      break;
+    case 217:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_TIER4");
+      result = v2;
+      break;
+    case 218:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_MARKET");
+      result = v2;
+      break;
+    case 219:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_THIEVES");
+      result = v2;
+      break;
+    case 220:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_EXTRA_ORE");
+      result = v2;
+      break;
+    case 221:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_EXTRA_WOOD");
+      result = v2;
+      break;
+    case 222:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_PLUS_DEFENCE_2");
+      result = v2;
+      break;
+    case 223:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_MINUS_OFFENCE_2");
+      result = v2;
+      break;
+    case 224:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_PLUS_LUCK");
+      result = v2;
+      break;
+    case 225:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_MINUS_MORALE");
+      result = v2;
+      break;
+    case 226:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_FIRST_AID_TENT");
+      result = v2;
+      break;
+    case 227:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_AMMO_CART");
+      result = v2;
+      break;
+    case 228:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_CRYSTALS");
+      result = v2;
+      break;
+    case 229:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_GEMS");
+      result = v2;
+      break;
+    case 230:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_250_GOLD");
+      result = v2;
+      break;
+    case 231:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_WALLS");
+      result = v2;
+      break;
+    case 232:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_TOWERS");
+      result = v2;
+      break;
+    case 233:
+      return_game_text_from_id(a1, "TOWNSPEC_FORTRESS_SCRIPT_HEROES");
+      result = v2;
+      break;
+    case 234:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_AR_RAMAN");
+      result = v2;
+      break;
+    case 235:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_ARANKARD");
+      result = v2;
+      break;
+    case 236:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_ARSHTAN");
+      result = v2;
+      break;
+    case 237:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_CHADRAK_KUSH");
+      result = v2;
+      break;
+    case 238:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_CHET_GNAAL");
+      result = v2;
+      break;
+    case 239:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_GOTDYYN_NOOR");
+      result = v2;
+      break;
+    case 240:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_KIR_SHAIDEN");
+      result = v2;
+      break;
+    case 241:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_KUNTANAAR");
+      result = v2;
+      break;
+    case 242:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_KURTAN_UGR");
+      result = v2;
+      break;
+    case 243:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_MAGRINDAR");
+      result = v2;
+      break;
+    case 244:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_MAIRGAR");
+      result = v2;
+      break;
+    case 245:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_OR_GDAN");
+      result = v2;
+      break;
+    case 246:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_RASH_NAVUL");
+      result = v2;
+      break;
+    case 247:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_ROSH_NAUL");
+      result = v2;
+      break;
+    case 248:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_RUF_NORROT");
+      result = v2;
+      break;
+    case 249:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_SARRABA");
+      result = v2;
+      break;
+    case 250:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_SHANTAR_RA");
+      result = v2;
+      break;
+    case 251:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_TAUROT");
+      result = v2;
+      break;
+    case 252:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_UKKAR_AAN");
+      result = v2;
+      break;
+    case 253:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_RANDOM_USHDAN_TAR");
+      result = v2;
+      break;
+    case 254:
+      return_game_text_from_id(a1, "TOWNSPEC_STRONGHOLD_SCRIPT_FAKE");
+      result = v2;
+      break;
+    default:
+      *a1 = 0;
+      *(a1 + 4) = 0;
+      *(a1 + 8) = 0;
+      sub_401020(a1, "TOWNSPEC_ACADEMY_RANDOM_ALEMADROS", "");
+      result = v2;
+      break;
+  }
+  return result;
+}

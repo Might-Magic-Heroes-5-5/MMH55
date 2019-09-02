@@ -1,0 +1,48 @@
+ v2 = a1;
+  switch ( a2 )
+  {
+    case 0:
+      v6(a1, "HERO_CLASS_NONE");
+      result = v2;
+      break;
+    case 1:
+      v6(a1, "HERO_CLASS_KNIGHT");
+      result = v2;
+      break;
+    case 2:
+      v6(a1, "HERO_CLASS_RANGER");
+      result = v2;
+      break;
+    case 3:
+      v6(a1, "HERO_CLASS_WIZARD");
+      result = v2;
+      break;
+    case 4:
+      v6(a1, "HERO_CLASS_DEMON_LORD");
+      result = v2;
+      break;
+    case 5:
+      v6(a1, "HERO_CLASS_NECROMANCER");
+      result = v2;
+      break;
+    case 6:
+      v6(a1, "HERO_CLASS_WARLOCK");
+      result = v2;
+      break;
+    case 7:
+      v6(a1, "HERO_CLASS_RUNEMAGE");
+      result = v2;
+      break;
+    case 8:
+      v6(a1, "HERO_CLASS_BARBARIAN");
+      result = v2;
+      break;
+    default:
+      *a1 = 0;
+      *(a1 + 4) = 0;
+      *(a1 + 8) = 0;
+      sub_401020(a1, "HERO_CLASS_NONE", "");
+      result = v2;
+      break;
+  }
+  return result;

@@ -1,0 +1,406 @@
+int __fastcall sub_96CD20(int a1, int a2)
+{
+  int v2; // esi@1
+  int result; // eax@2
+
+  v2 = a1;
+  switch ( a2 )
+  {
+    case 0:
+      i_take_string_as_input(a1, "ARTIFACT_NONE");
+      result = v2;
+      break;
+    case 1:
+      i_take_string_as_input(a1, "SWORD_OF_RUINS");
+      result = v2;
+      break;
+    case 2:
+      i_take_string_as_input(a1, "GREAT_AXE_OF_GIANT_SLAYING");
+      result = v2;
+      break;
+    case 3:
+      i_take_string_as_input(a1, "WAND_OF_X");
+      result = v2;
+      break;
+    case 4:
+      i_take_string_as_input(a1, "UNICORN_HORN_BOW");
+      result = v2;
+      break;
+    case 5:
+      i_take_string_as_input(a1, "TITANS_TRIDENT");
+      result = v2;
+      break;
+    case 6:
+      i_take_string_as_input(a1, "STAFF_OF_VEXINGS");
+      result = v2;
+      break;
+    case 7:
+      i_take_string_as_input(a1, "SHACKLES_OF_WAR");
+      result = v2;
+      break;
+    case 8:
+      i_take_string_as_input(a1, "FOUR_LEAF_CLOVER");
+      result = v2;
+      break;
+    case 9:
+      i_take_string_as_input(a1, "ICEBERG_SHIELD");
+      result = v2;
+      break;
+    case 10:
+      i_take_string_as_input(a1, "GOLDEN_SEXTANT");
+      result = v2;
+      break;
+    case 11:
+      i_take_string_as_input(a1, "CROWN_OF_COURAGE");
+      result = v2;
+      break;
+    case 12:
+      i_take_string_as_input(a1, "CROWN_OF_MANY_EYES");
+      result = v2;
+      break;
+    case 13:
+      i_take_string_as_input(a1, "PLATE_MAIL_OF_STABILITY");
+      result = v2;
+      break;
+    case 14:
+      i_take_string_as_input(a1, "BREASTPLATE_OF_PETRIFIED_WOOD");
+      result = v2;
+      break;
+    case 15:
+      i_take_string_as_input(a1, "PEDANT_OF_MASTERY");
+      result = v2;
+      break;
+    case 16:
+      i_take_string_as_input(a1, "NECKLACE_OF_BRAVERY");
+      result = v2;
+      break;
+    case 17:
+      i_take_string_as_input(a1, "WEREWOLF_CLAW_NECKLACE");
+      result = v2;
+      break;
+    case 18:
+      i_take_string_as_input(a1, "EVERCOLD_ICICLE");
+      result = v2;
+      break;
+    case 19:
+      i_take_string_as_input(a1, "NECKLACE_OF_POWER");
+      result = v2;
+      break;
+    case 20:
+      i_take_string_as_input(a1, "RING_OF_LIGHTING_PROTECTION");
+      result = v2;
+      break;
+    case 21:
+      i_take_string_as_input(a1, "RING_OF_LIFE");
+      result = v2;
+      break;
+    case 22:
+      i_take_string_as_input(a1, "RING_OF_HASTE");
+      result = v2;
+      break;
+    case 23:
+      i_take_string_as_input(a1, "NIGHTMARISH_RING");
+      result = v2;
+      break;
+    case 24:
+      i_take_string_as_input(a1, "BOOTS_OF_SPEED");
+      result = v2;
+      break;
+    case 25:
+      i_take_string_as_input(a1, "GOLDEN_HORSESHOE");
+      result = v2;
+      break;
+    case 26:
+      i_take_string_as_input(a1, "WAYFARER_BOOTS");
+      result = v2;
+      break;
+    case 27:
+      i_take_string_as_input(a1, "BOOTS_OF_INTERFERENCE");
+      result = v2;
+      break;
+    case 28:
+      i_take_string_as_input(a1, "ENDLESS_SACK_OF_GOLD");
+      result = v2;
+      break;
+    case 29:
+      i_take_string_as_input(a1, "ENDLESS_BAG_OF_GOLD");
+      result = v2;
+      break;
+    case 30:
+      i_take_string_as_input(a1, "ANGEL_WINGS");
+      result = v2;
+      break;
+    case 31:
+      i_take_string_as_input(a1, "LION_HIDE_CAPE");
+      result = v2;
+      break;
+    case 32:
+      i_take_string_as_input(a1, "PHOENIX_FEATHER_CAPE");
+      result = v2;
+      break;
+    case 33:
+      i_take_string_as_input(a1, "CLOAK_OF_MOURNING");
+      result = v2;
+      break;
+    case 34:
+      i_take_string_as_input(a1, "HELM_OF_ENLIGHTMENT");
+      result = v2;
+      break;
+    case 35:
+      i_take_string_as_input(a1, "CHAIN_MAIL_OF_ENLIGHTMENT");
+      result = v2;
+      break;
+    case 36:
+      i_take_string_as_input(a1, "DRAGON_SCALE_ARMOR");
+      result = v2;
+      break;
+    case 37:
+      i_take_string_as_input(a1, "DRAGON_SCALE_SHIELD");
+      result = v2;
+      break;
+    case 38:
+      i_take_string_as_input(a1, "DRAGON_BONE_GRAVES");
+      result = v2;
+      break;
+    case 39:
+      i_take_string_as_input(a1, "DRAGON_WING_MANTLE");
+      result = v2;
+      break;
+    case 40:
+      i_take_string_as_input(a1, "DRAGON_TEETH_NECKLACE");
+      result = v2;
+      break;
+    case 41:
+      i_take_string_as_input(a1, "DRAGON_TALON_CROWN");
+      result = v2;
+      break;
+    case 42:
+      i_take_string_as_input(a1, "DRAGON_EYE_RING");
+      result = v2;
+      break;
+    case 43:
+      i_take_string_as_input(a1, "DRAGON_FLAME_TONGUE");
+      result = v2;
+      break;
+    case 44:
+      i_take_string_as_input(a1, "ROBE_OF_MAGI");
+      result = v2;
+      break;
+    case 45:
+      i_take_string_as_input(a1, "STAFF_OF_MAGI");
+      result = v2;
+      break;
+    case 46:
+      i_take_string_as_input(a1, "CROWN_OF_MAGI");
+      result = v2;
+      break;
+    case 47:
+      i_take_string_as_input(a1, "RING_OF_MAGI");
+      result = v2;
+      break;
+    case 48:
+      i_take_string_as_input(a1, "DWARVEN_MITHRAL_CUIRASS");
+      result = v2;
+      break;
+    case 49:
+      i_take_string_as_input(a1, "DWARVEN_MITHRAL_GREAVES");
+      result = v2;
+      break;
+    case 50:
+      i_take_string_as_input(a1, "DWARVEN_MITHRAL_HELMET");
+      result = v2;
+      break;
+    case 51:
+      i_take_string_as_input(a1, "DWARVEN_MITHRAL_SHIELD");
+      result = v2;
+      break;
+    case 52:
+      i_take_string_as_input(a1, "SCROLL_OF_SPELL_X");
+      result = v2;
+      break;
+    case 53:
+      i_take_string_as_input(a1, "GRAAL");
+      result = v2;
+      break;
+    case 54:
+      i_take_string_as_input(a1, "BOOTS_OF_LEVITATION");
+      result = v2;
+      break;
+    case 55:
+      i_take_string_as_input(a1, "ARTIFACT_SKULL_HELMET");
+      result = v2;
+      break;
+    case 56:
+      i_take_string_as_input(a1, "ARTIFACT_VALORIOUS_ARMOR");
+      result = v2;
+      break;
+    case 57:
+      i_take_string_as_input(a1, "ARTIFACT_BOOTS_OF_SWIFTNESS");
+      result = v2;
+      break;
+    case 58:
+      i_take_string_as_input(a1, "ARTIFACT_MOONBLADE");
+      result = v2;
+      break;
+    case 59:
+      i_take_string_as_input(a1, "ARTIFACT_RING_OF_CELERITY");
+      result = v2;
+      break;
+    case 60:
+      i_take_string_as_input(a1, "ARTIFACT_BAND_OF_CONJURER");
+      result = v2;
+      break;
+    case 61:
+      i_take_string_as_input(a1, "ARTIFACT_EARTHSLIDERS");
+      result = v2;
+      break;
+    case 62:
+      i_take_string_as_input(a1, "ARTIFACT_RIGID_MANTLE");
+      result = v2;
+      break;
+    case 63:
+      i_take_string_as_input(a1, "ARTIFACT_JINXING_BAND");
+      result = v2;
+      break;
+    case 64:
+      i_take_string_as_input(a1, "ARTIFACT_BONESTUDDED_LEATHER");
+      result = v2;
+      break;
+    case 65:
+      i_take_string_as_input(a1, "ARTIFACT_WISPERING_RING");
+      result = v2;
+      break;
+    case 66:
+      i_take_string_as_input(a1, "ARTIFACT_HELM_OF_CHAOS");
+      result = v2;
+      break;
+    case 67:
+      i_take_string_as_input(a1, "ARTIFACT_TWISTING_NEITHER");
+      result = v2;
+      break;
+    case 68:
+      i_take_string_as_input(a1, "ARTIFACT_SANDALS_OF_THE_SAINT");
+      result = v2;
+      break;
+    case 69:
+      i_take_string_as_input(a1, "ARTIFACT_SHAWL_OF_GREAT_LICH");
+      result = v2;
+      break;
+    case 70:
+      i_take_string_as_input(a1, "ARTIFACT_RING_OF_DEATH");
+      result = v2;
+      break;
+    case 71:
+      i_take_string_as_input(a1, "ARTIFACT_NECROMANCER_PENDANT");
+      result = v2;
+      break;
+    case 72:
+      i_take_string_as_input(a1, "ARTIFACT_FREIDA");
+      result = v2;
+      break;
+    case 73:
+      i_take_string_as_input(a1, "ARTIFACT_RING_OF_THE_SHADOWBRAND");
+      result = v2;
+      break;
+    case 74:
+      i_take_string_as_input(a1, "ARTIFACT_OGRE_CLUB");
+      result = v2;
+      break;
+    case 75:
+      i_take_string_as_input(a1, "ARTIFACT_OGRE_SHIELD");
+      result = v2;
+      break;
+    case 76:
+      i_take_string_as_input(a1, "ARTIFACT_TOME_OF_DESTRUCTION");
+      result = v2;
+      break;
+    case 77:
+      i_take_string_as_input(a1, "ARTIFACT_TOME_OF_LIGHT_MAGIC");
+      result = v2;
+      break;
+    case 78:
+      i_take_string_as_input(a1, "ARTIFACT_TOME_OF_DARK_MAGIC");
+      result = v2;
+      break;
+    case 79:
+      i_take_string_as_input(a1, "ARTIFACT_TOME_OF_SUMMONING_MAGIC");
+      result = v2;
+      break;
+    case 80:
+      i_take_string_as_input(a1, "ARTIFACT_BEGINNER_MAGIC_STICK");
+      result = v2;
+      break;
+    case 81:
+      i_take_string_as_input(a1, "ARTIFACT_RUNIC_WAR_AXE");
+      result = v2;
+      break;
+    case 82:
+      i_take_string_as_input(a1, "ARTIFACT_RUNIC_WAR_HARNESS");
+      result = v2;
+      break;
+    case 83:
+      i_take_string_as_input(a1, "ARTIFACT_SKULL_OF_MARKAL");
+      result = v2;
+      break;
+    case 84:
+      i_take_string_as_input(a1, "ARTIFACT_BEARHIDE_WRAPS");
+      result = v2;
+      break;
+    case 85:
+      i_take_string_as_input(a1, "ARTIFACT_DWARVEN_SMITHY_HUMMER");
+      result = v2;
+      break;
+    case 86:
+      i_take_string_as_input(a1, "ARTIFACT_RUNE_OF_FLAME");
+      result = v2;
+      break;
+    case 87:
+      i_take_string_as_input(a1, "ARTIFACT_TAROT_DECK");
+      result = v2;
+      break;
+    case 88:
+      i_take_string_as_input(a1, "ARTIFACT_CROWN_OF_LEADER");
+      result = v2;
+      break;
+    case 89:
+      i_take_string_as_input(a1, "ARTIFACT_MASK_OF_DOPPELGANGER");
+      result = v2;
+      break;
+    case 90:
+      i_take_string_as_input(a1, "ARTIFACT_EDGE_OF_BALANCE");
+      result = v2;
+      break;
+    case 91:
+      i_take_string_as_input(a1, "ARTIFACT_RING_OF_MACHINE_AFFINITY");
+      result = v2;
+      break;
+    case 92:
+      i_take_string_as_input(a1, "ARTIFACT_HORN_OF_PLENTY");
+      result = v2;
+      break;
+    case 93:
+      i_take_string_as_input(a1, "ARTIFACT_RING_OF_UNSUMMONING");
+      result = v2;
+      break;
+    case 94:
+      i_take_string_as_input(a1, "ARTIFACT_BOOK_OF_POWER");
+      result = v2;
+      break;
+    case 95:
+      i_take_string_as_input(a1, "ARTIFACT_TREEBORN_QUIVER");
+      result = v2;
+      break;
+    case 96:
+      i_take_string_as_input(a1, "ARTIFACT_PRINCESS");
+      result = v2;
+      break;
+    default:
+      *(_DWORD *)a1 = 0;
+      *(_DWORD *)(a1 + 4) = 0;
+      *(_DWORD *)(a1 + 8) = 0;
+      sub_401020((_DWORD *)a1, "ARTIFACT_NONE", "");
+      result = v2;
+      break;
+  }
+  return result;
+}

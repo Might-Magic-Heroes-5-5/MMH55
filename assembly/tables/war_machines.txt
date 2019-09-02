@@ -1,0 +1,29 @@
+switch ( a2 )
+  {
+    case 0:
+      return_game_text_from_id(a1, "WAR_MACHINE_NONE");
+      result = v2;
+      break;
+    case 1:
+      return_game_text_from_id(a1, "WAR_MACHINE_BALLISTA");
+      result = v2;
+      break;
+    case 2:
+      return_game_text_from_id(a1, "WAR_MACHINE_CATAPULT");
+      result = v2;
+      break;
+    case 3:
+      return_game_text_from_id(a1, "WAR_MACHINE_FIRST_AID_TENT");
+      result = v2;
+      break;
+    case 4:
+      return_game_text_from_id(a1, "WAR_MACHINE_AMMO_CART");
+      result = v2;
+      break;
+    default:
+      *a1 = 0;
+      *(a1 + 4) = 0;
+      *(a1 + 8) = 0;
+      sub_401020(a1, "WAR_MACHINE_NONE", "");
+      result = v2;
+      break;

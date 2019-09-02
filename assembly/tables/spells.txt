@@ -1,0 +1,1430 @@
+int __fastcall icall_millions(int a1, int a2)
+{
+  int v2; // esi@1
+  int result; // eax@2
+
+  v2 = a1;
+  switch ( a2 )
+  {
+    case 0:
+      i_take_string_as_input(a1, "SPELL_NONE");
+      result = v2;
+      break;
+    case 1:
+      i_take_string_as_input(a1, "SPELL_MAGIC_ARROW");
+      result = v2;
+      break;
+    case 2:
+      i_take_string_as_input(a1, "SPELL_MAGIC_FIST");
+      result = v2;
+      break;
+    case 3:
+      i_take_string_as_input(a1, "SPELL_LIGHTNING_BOLT");
+      result = v2;
+      break;
+    case 4:
+      i_take_string_as_input(a1, "SPELL_ICE_BOLT");
+      result = v2;
+      break;
+    case 5:
+      i_take_string_as_input(a1, "SPELL_FIREBALL");
+      result = v2;
+      break;
+    case 6:
+      i_take_string_as_input(a1, "SPELL_FROST_RING");
+      result = v2;
+      break;
+    case 7:
+      i_take_string_as_input(a1, "SPELL_CHAIN_LIGHTNING");
+      result = v2;
+      break;
+    case 8:
+      i_take_string_as_input(a1, "SPELL_METEOR_SHOWER");
+      result = v2;
+      break;
+    case 9:
+      i_take_string_as_input(a1, "SPELL_IMPLOSION");
+      result = v2;
+      break;
+    case 10:
+      i_take_string_as_input(a1, "SPELL_ARMAGEDDON");
+      result = v2;
+      break;
+    case 11:
+      i_take_string_as_input(a1, "SPELL_CURSE");
+      result = v2;
+      break;
+    case 12:
+      i_take_string_as_input(a1, "SPELL_SLOW");
+      result = v2;
+      break;
+    case 13:
+      i_take_string_as_input(a1, "SPELL_DISRUPTING_RAY");
+      result = v2;
+      break;
+    case 14:
+      i_take_string_as_input(a1, "SPELL_PLAGUE");
+      result = v2;
+      break;
+    case 15:
+      i_take_string_as_input(a1, "SPELL_WEAKNESS");
+      result = v2;
+      break;
+    case 16:
+      i_take_string_as_input(a1, "SPELL_ABILITY_WEAKNING_STRIKE");
+      result = v2;
+      break;
+    case 17:
+      i_take_string_as_input(a1, "SPELL_FORGETFULNESS");
+      result = v2;
+      break;
+    case 18:
+      i_take_string_as_input(a1, "SPELL_BERSERK");
+      result = v2;
+      break;
+    case 19:
+      i_take_string_as_input(a1, "SPELL_BLIND");
+      result = v2;
+      break;
+    case 20:
+      i_take_string_as_input(a1, "SPELL_HYPNOTIZE");
+      result = v2;
+      break;
+    case 21:
+      i_take_string_as_input(a1, "SPELL_UNHOLY_WORD");
+      result = v2;
+      break;
+    case 22:
+      i_take_string_as_input(a1, "SPELL_UNHOLY_WORD_HIT_EFFECT");
+      result = v2;
+      break;
+    case 23:
+      i_take_string_as_input(a1, "SPELL_BLESS");
+      result = v2;
+      break;
+    case 24:
+      i_take_string_as_input(a1, "SPELL_HASTE");
+      result = v2;
+      break;
+    case 25:
+      i_take_string_as_input(a1, "SPELL_STONESKIN");
+      result = v2;
+      break;
+    case 26:
+      i_take_string_as_input(a1, "SPELL_DISPEL");
+      result = v2;
+      break;
+    case 27:
+      i_take_string_as_input(a1, "SPELL_DISPEL_FAIL");
+      result = v2;
+      break;
+    case 28:
+      i_take_string_as_input(a1, "SPELL_BLOODLUST");
+      result = v2;
+      break;
+    case 29:
+      i_take_string_as_input(a1, "SPELL_DEFLECT_ARROWS");
+      result = v2;
+      break;
+    case 30:
+      i_take_string_as_input(a1, "SPELL_DEFLECT_ARROWS_HIT_EFFECT");
+      result = v2;
+      break;
+    case 31:
+      i_take_string_as_input(a1, "SPELL_ANTI_MAGIC");
+      result = v2;
+      break;
+    case 32:
+      i_take_string_as_input(a1, "SPELL_TELEPORT");
+      result = v2;
+      break;
+    case 33:
+      i_take_string_as_input(a1, "SPELL_TELEPORT_FINISH_EFFECT");
+      result = v2;
+      break;
+    case 34:
+      i_take_string_as_input(a1, "SPELL_CELESTIAL_SHIELD");
+      result = v2;
+      break;
+    case 35:
+      i_take_string_as_input(a1, "SPELL_HOLY_WORD");
+      result = v2;
+      break;
+    case 36:
+      i_take_string_as_input(a1, "SPELL_HOLY_WORD_HIT_EFFECT");
+      result = v2;
+      break;
+    case 37:
+      i_take_string_as_input(a1, "SPELL_ARMAGEDDON_HIT_EFFECT");
+      result = v2;
+      break;
+    case 38:
+      i_take_string_as_input(a1, "SPELL_LAND_MINE");
+      result = v2;
+      break;
+    case 39:
+      i_take_string_as_input(a1, "SPELL_WASP_SWARM");
+      result = v2;
+      break;
+    case 40:
+      i_take_string_as_input(a1, "SPELL_PHANTOM");
+      result = v2;
+      break;
+    case 41:
+      i_take_string_as_input(a1, "SPELL_EARTHQUAKE");
+      result = v2;
+      break;
+    case 42:
+      i_take_string_as_input(a1, "SPELL_ANIMATE_DEAD");
+      result = v2;
+      break;
+    case 43:
+      i_take_string_as_input(a1, "SPELL_SUMMON_ELEMENTALS");
+      result = v2;
+      break;
+    case 44:
+      i_take_string_as_input(a1, "SPELL_EFFECT_SUMMON_ELEMENTALS_AIR");
+      result = v2;
+      break;
+    case 45:
+      i_take_string_as_input(a1, "SPELL_EFFECT_SUMMON_ELEMENTALS_EARTH");
+      result = v2;
+      break;
+    case 46:
+      i_take_string_as_input(a1, "SPELL_EFFECT_SUMMON_ELEMENTALS_FIRE");
+      result = v2;
+      break;
+    case 47:
+      i_take_string_as_input(a1, "SPELL_EFFECT_SUMMON_ELEMENTALS_WATER");
+      result = v2;
+      break;
+    case 48:
+      i_take_string_as_input(a1, "SPELL_RESURRECT");
+      result = v2;
+      break;
+    case 49:
+      i_take_string_as_input(a1, "SPELL_SUMMON_BOAT");
+      result = v2;
+      break;
+    case 50:
+      i_take_string_as_input(a1, "SPELL_DIMENSION_DOOR");
+      result = v2;
+      break;
+    case 51:
+      i_take_string_as_input(a1, "SPELL_TOWN_PORTAL");
+      result = v2;
+      break;
+    case 52:
+      i_take_string_as_input(a1, "SPELL_ENCOURAGE");
+      result = v2;
+      break;
+    case 53:
+      i_take_string_as_input(a1, "SPELL_HOLY_CHARGE");
+      result = v2;
+      break;
+    case 54:
+      i_take_string_as_input(a1, "SPELL_PRAYER");
+      result = v2;
+      break;
+    case 55:
+      i_take_string_as_input(a1, "SPELL_DEMONIC_STRIKE_CAST");
+      result = v2;
+      break;
+    case 56:
+      i_take_string_as_input(a1, "SPELL_DEMONIC_STRIKE");
+      result = v2;
+      break;
+    case 57:
+      i_take_string_as_input(a1, "SPELL_CONSUME_CORPSE");
+      result = v2;
+      break;
+    case 58:
+      i_take_string_as_input(a1, "SPELL_SPIRIT_LINK");
+      result = v2;
+      break;
+    case 59:
+      i_take_string_as_input(a1, "SPELL_DEATH_SCREAM");
+      result = v2;
+      break;
+    case 60:
+      i_take_string_as_input(a1, "SPELL_SNIPE_DEAD");
+      result = v2;
+      break;
+    case 61:
+      i_take_string_as_input(a1, "SPELL_MULTISHOT");
+      result = v2;
+      break;
+    case 62:
+      i_take_string_as_input(a1, "SPELL_IMBUE_ARROW");
+      result = v2;
+      break;
+    case 63:
+      i_take_string_as_input(a1, "SPELL_ABILITY_MAGIC_BOND");
+      result = v2;
+      break;
+    case 64:
+      i_take_string_as_input(a1, "SPELL_ABILITY_MELT_ARTIFACT");
+      result = v2;
+      break;
+    case 65:
+      i_take_string_as_input(a1, "SPELL_ABILITY_COUNTERSPELL");
+      result = v2;
+      break;
+    case 66:
+      i_take_string_as_input(a1, "SPELL_ABILITY_UNSUMMON");
+      result = v2;
+      break;
+    case 67:
+      i_take_string_as_input(a1, "SPELL_ABILITY_DARK_RITUAL");
+      result = v2;
+      break;
+    case 68:
+      i_take_string_as_input(a1, "SPELL_SKILL_OFFENCE1");
+      result = v2;
+      break;
+    case 69:
+      i_take_string_as_input(a1, "SPELL_SKILL_OFFENCE2");
+      result = v2;
+      break;
+    case 70:
+      i_take_string_as_input(a1, "SPELL_SKILL_OFFENCE3");
+      result = v2;
+      break;
+    case 71:
+      i_take_string_as_input(a1, "SPELL_SKILL_ARCHERY");
+      result = v2;
+      break;
+    case 72:
+      i_take_string_as_input(a1, "SPELL_SKILL_FRENZY");
+      result = v2;
+      break;
+    case 73:
+      i_take_string_as_input(a1, "SPELL_SKILL_DEFENCE1");
+      result = v2;
+      break;
+    case 74:
+      i_take_string_as_input(a1, "SPELL_SKILL_DEFENCE2");
+      result = v2;
+      break;
+    case 75:
+      i_take_string_as_input(a1, "SPELL_SKILL_DEFENCE3");
+      result = v2;
+      break;
+    case 76:
+      i_take_string_as_input(a1, "SPELL_SKILL_PROTECTION");
+      result = v2;
+      break;
+    case 77:
+      i_take_string_as_input(a1, "SPELL_SKILL_EVASION");
+      result = v2;
+      break;
+    case 78:
+      i_take_string_as_input(a1, "SPELL_SKILL_TOUGHNESS");
+      result = v2;
+      break;
+    case 79:
+      i_take_string_as_input(a1, "SPELL_SKILL_LUCK1");
+      result = v2;
+      break;
+    case 80:
+      i_take_string_as_input(a1, "SPELL_SKILL_LUCK2");
+      result = v2;
+      break;
+    case 81:
+      i_take_string_as_input(a1, "SPELL_SKILL_LUCK3");
+      result = v2;
+      break;
+    case 82:
+      i_take_string_as_input(a1, "SPELL_SKILL_RESISTANCE");
+      result = v2;
+      break;
+    case 83:
+      i_take_string_as_input(a1, "SPELL_SKILL_LUCKY_STRIKE");
+      result = v2;
+      break;
+    case 84:
+      i_take_string_as_input(a1, "SPELL_SKILL_LEADERSHIP1");
+      result = v2;
+      break;
+    case 85:
+      i_take_string_as_input(a1, "SPELL_SKILL_LEADERSHIP2");
+      result = v2;
+      break;
+    case 86:
+      i_take_string_as_input(a1, "SPELL_SKILL_LEADERSHIP3");
+      result = v2;
+      break;
+    case 87:
+      i_take_string_as_input(a1, "SPELL_SKILL_WAR_MACHINES1");
+      result = v2;
+      break;
+    case 88:
+      i_take_string_as_input(a1, "SPELL_SKILL_WAR_MACHINES2");
+      result = v2;
+      break;
+    case 89:
+      i_take_string_as_input(a1, "SPELL_SKILL_WAR_MACHINES3");
+      result = v2;
+      break;
+    case 90:
+      i_take_string_as_input(a1, "SPELL_SKILL_FIRST_AID");
+      result = v2;
+      break;
+    case 91:
+      i_take_string_as_input(a1, "SPELL_SKILL_BALLISTA");
+      result = v2;
+      break;
+    case 92:
+      i_take_string_as_input(a1, "SPELL_SKILL_CATAPULT");
+      result = v2;
+      break;
+    case 93:
+      i_take_string_as_input(a1, "SPELL_SKILL_DEMONIC_FIRE");
+      result = v2;
+      break;
+    case 94:
+      i_take_string_as_input(a1, "SPELL_SKILL_ELVEN_VOLLEY");
+      result = v2;
+      break;
+    case 95:
+      i_take_string_as_input(a1, "SPELL_SKILL_MATRON_SALVO");
+      result = v2;
+      break;
+    case 96:
+      i_take_string_as_input(a1, "SPELL_SKILL_ANCIENT_SMITHY");
+      result = v2;
+      break;
+    case 97:
+      i_take_string_as_input(a1, "SPELL_SKILL_FIRE_PROTECTION");
+      result = v2;
+      break;
+    case 98:
+      i_take_string_as_input(a1, "SPELL_SPEC_JOUSTER");
+      result = v2;
+      break;
+    case 99:
+      i_take_string_as_input(a1, "SPELL_SPEC_PEASANTS");
+      result = v2;
+      break;
+    case 100:
+      i_take_string_as_input(a1, "SPELL_SPEC_ARCHERS");
+      result = v2;
+      break;
+    case 101:
+      i_take_string_as_input(a1, "SPELL_SPEC_FOOTMEN");
+      result = v2;
+      break;
+    case 102:
+      i_take_string_as_input(a1, "SPELL_SPEC_GRIFFINS");
+      result = v2;
+      break;
+    case 103:
+      i_take_string_as_input(a1, "SPELL_SPEC_ARTILLERYMAN");
+      result = v2;
+      break;
+    case 104:
+      i_take_string_as_input(a1, "SPELL_SPEC_FURIOUS");
+      result = v2;
+      break;
+    case 105:
+      i_take_string_as_input(a1, "SPELL_SPEC_BOMBARDIER");
+      result = v2;
+      break;
+    case 106:
+      i_take_string_as_input(a1, "SPELL_SPEC_IMPREGNABLE");
+      result = v2;
+      break;
+    case 107:
+      i_take_string_as_input(a1, "SPELL_SPEC_FLAGBEARER_OF_DARKNESS");
+      result = v2;
+      break;
+    case 108:
+      i_take_string_as_input(a1, "SPELL_SPEC_HOUNDS");
+      result = v2;
+      break;
+    case 109:
+      i_take_string_as_input(a1, "SPELL_SPEC_SUCCUBUSES");
+      result = v2;
+      break;
+    case 110:
+      i_take_string_as_input(a1, "SPELL_SPEC_BLADE_MASTER");
+      result = v2;
+      break;
+    case 111:
+      i_take_string_as_input(a1, "SPELL_SPEC_ELVES");
+      result = v2;
+      break;
+    case 112:
+      i_take_string_as_input(a1, "SPELL_SPEC_UNICORNS");
+      result = v2;
+      break;
+    case 113:
+      i_take_string_as_input(a1, "SPELL_SPEC_ELVEN_FURY");
+      result = v2;
+      break;
+    case 114:
+      i_take_string_as_input(a1, "SPELL_SPEC_FOREST_GUARDIAN");
+      result = v2;
+      break;
+    case 115:
+      i_take_string_as_input(a1, "SPELL_SPEC_ZOMBIES");
+      result = v2;
+      break;
+    case 116:
+      i_take_string_as_input(a1, "SPELL_SPEC_VAMPIRES");
+      result = v2;
+      break;
+    case 117:
+      i_take_string_as_input(a1, "SPELL_SPEC_EMPIRIC");
+      result = v2;
+      break;
+    case 118:
+      i_take_string_as_input(a1, "SPELL_SPEC_SOULHUNTER");
+      result = v2;
+      break;
+    case 119:
+      i_take_string_as_input(a1, "SPELL_SPEC_MASTER_OF_ELEMENTS");
+      result = v2;
+      break;
+    case 120:
+      i_take_string_as_input(a1, "SPELL_SPEC_GREMLINS");
+      result = v2;
+      break;
+    case 121:
+      i_take_string_as_input(a1, "SPELL_SPEC_GOLEMS");
+      result = v2;
+      break;
+    case 122:
+      i_take_string_as_input(a1, "SPELL_SPEC_MAGES");
+      result = v2;
+      break;
+    case 123:
+      i_take_string_as_input(a1, "SPELL_SPEC_PRUDENT");
+      result = v2;
+      break;
+    case 124:
+      i_take_string_as_input(a1, "SPELL_SPEC_EVASIVE");
+      result = v2;
+      break;
+    case 125:
+      i_take_string_as_input(a1, "SPELL_SPEC_RIDERS");
+      result = v2;
+      break;
+    case 126:
+      i_take_string_as_input(a1, "SPELL_SPEC_MATRON_SALVO");
+      result = v2;
+      break;
+    case 127:
+      i_take_string_as_input(a1, "SPELL_SPEC_SAVAGE");
+      result = v2;
+      break;
+    case 128:
+      i_take_string_as_input(a1, "SPELL_SPEC_WITCHES");
+      result = v2;
+      break;
+    case 129:
+      i_take_string_as_input(a1, "SPELL_SPEC_MINOTAURS");
+      result = v2;
+      break;
+    case 130:
+      i_take_string_as_input(a1, "SPELL_TOWN_OFFENCE_P1");
+      result = v2;
+      break;
+    case 131:
+      i_take_string_as_input(a1, "SPELL_TOWN_OFFENCE_M1");
+      result = v2;
+      break;
+    case 132:
+      i_take_string_as_input(a1, "SPELL_TOWN_DEFENCE_P1");
+      result = v2;
+      break;
+    case 133:
+      i_take_string_as_input(a1, "SPELL_TOWN_DEFENCE_M1");
+      result = v2;
+      break;
+    case 134:
+      i_take_string_as_input(a1, "SPELL_TOWN_OFFENCE_DEFENCE_P1");
+      result = v2;
+      break;
+    case 135:
+      i_take_string_as_input(a1, "SPELL_TOWN_OFFENCE_DEFENCE_M1");
+      result = v2;
+      break;
+    case 136:
+      i_take_string_as_input(a1, "SPELL_TOWN_OFFENCE_P2");
+      result = v2;
+      break;
+    case 137:
+      i_take_string_as_input(a1, "SPELL_TOWN_OFFENCE_M2");
+      result = v2;
+      break;
+    case 138:
+      i_take_string_as_input(a1, "SPELL_TOWN_DEFENCE_P2");
+      result = v2;
+      break;
+    case 139:
+      i_take_string_as_input(a1, "SPELL_TOWN_DEFENCE_M2");
+      result = v2;
+      break;
+    case 140:
+      i_take_string_as_input(a1, "SPELL_TOWN_OFFENCE_DEFENCE_P2");
+      result = v2;
+      break;
+    case 141:
+      i_take_string_as_input(a1, "SPELL_TOWN_OFFENCE_DEFENCE_M2");
+      result = v2;
+      break;
+    case 142:
+      i_take_string_as_input(a1, "SPELL_TOWN_LUCK_P1");
+      result = v2;
+      break;
+    case 143:
+      i_take_string_as_input(a1, "SPELL_TOWN_LUCK_M1");
+      result = v2;
+      break;
+    case 144:
+      i_take_string_as_input(a1, "SPELL_TOWN_MORALE_P1");
+      result = v2;
+      break;
+    case 145:
+      i_take_string_as_input(a1, "SPELL_TOWN_MORALE_M1");
+      result = v2;
+      break;
+    case 146:
+      i_take_string_as_input(a1, "SPELL_TOWN_ELVEN_CAPITAL");
+      result = v2;
+      break;
+    case 147:
+      i_take_string_as_input(a1, "SPELL_TOWN_WALLS");
+      result = v2;
+      break;
+    case 148:
+      i_take_string_as_input(a1, "SPELL_TOWN_TOWERS");
+      result = v2;
+      break;
+    case 149:
+      i_take_string_as_input(a1, "SPELL_TOWN_UNHOLY_TEMPLE");
+      result = v2;
+      break;
+    case 150:
+      i_take_string_as_input(a1, "SPELL_TOWN_DARK_GUARDIAN");
+      result = v2;
+      break;
+    case 151:
+      i_take_string_as_input(a1, "SPELL_TOWN_SPARKLING_FOUNTAIN");
+      result = v2;
+      break;
+    case 152:
+      i_take_string_as_input(a1, "SPELL_TOWN_DIETY_OF_FIRE");
+      result = v2;
+      break;
+    case 153:
+      i_take_string_as_input(a1, "SPELL_TOWN_INFERNAL_LOOM");
+      result = v2;
+      break;
+    case 154:
+      i_take_string_as_input(a1, "SPELL_ABILITY_BATTLE_DIVE");
+      result = v2;
+      break;
+    case 155:
+      i_take_string_as_input(a1, "SPELL_ABILITY_BATTLE_DIVE_FINISH");
+      result = v2;
+      break;
+    case 156:
+      i_take_string_as_input(a1, "SPELL_ABILITY_LAY_HANDS");
+      result = v2;
+      break;
+    case 157:
+      i_take_string_as_input(a1, "SPELL_ABILITY_RESURRECT_ALLIES");
+      result = v2;
+      break;
+    case 158:
+      i_take_string_as_input(a1, "SPELL_ABILITY_SCATTER_SHOT");
+      result = v2;
+      break;
+    case 159:
+      i_take_string_as_input(a1, "SPELL_ABILITY_GATING");
+      result = v2;
+      break;
+    case 160:
+      i_take_string_as_input(a1, "SPELL_ABILITY_FEAR");
+      result = v2;
+      break;
+    case 161:
+      i_take_string_as_input(a1, "SPELL_ABILITY_SUMMON_BALOR");
+      result = v2;
+      break;
+    case 162:
+      i_take_string_as_input(a1, "SPELL_ABILITY_EXPLOSION");
+      result = v2;
+      break;
+    case 163:
+      i_take_string_as_input(a1, "SPELL_ABILITY_EXPLOSION_EFFECT");
+      result = v2;
+      break;
+    case 164:
+      i_take_string_as_input(a1, "SPELL_ABILITY_CHAIN_SHOT_END_EFFECT");
+      result = v2;
+      break;
+    case 165:
+      i_take_string_as_input(a1, "SPELL_ABILITY_MANA_DESTROY");
+      result = v2;
+      break;
+    case 166:
+      i_take_string_as_input(a1, "SPELL_ABILITY_MANA_STEAL");
+      result = v2;
+      break;
+    case 167:
+      i_take_string_as_input(a1, "SPELL_ABILITY_LIFE_DRAIN");
+      result = v2;
+      break;
+    case 168:
+      i_take_string_as_input(a1, "SPELL_ABILITY_MANA_DRAIN");
+      result = v2;
+      break;
+    case 169:
+      i_take_string_as_input(a1, "SPELL_ABILITY_DEATH_CLOUD");
+      result = v2;
+      break;
+    case 170:
+      i_take_string_as_input(a1, "SPELL_ABILITY_HARM_TOUCH");
+      result = v2;
+      break;
+    case 171:
+      i_take_string_as_input(a1, "SPELL_ABILITY_MANA_FEED");
+      result = v2;
+      break;
+    case 172:
+      i_take_string_as_input(a1, "SPELL_ABILITY_ENTANGLING_ROOTS");
+      result = v2;
+      break;
+    case 173:
+      i_take_string_as_input(a1, "SPELL_ABILITY_REPAIR");
+      result = v2;
+      break;
+    case 174:
+      i_take_string_as_input(a1, "SPELL_ABILITY_RANDOM_CAST_DARK");
+      result = v2;
+      break;
+    case 175:
+      i_take_string_as_input(a1, "SPELL_ABILITY_RANDOM_CAST_DARK_LIGHT");
+      result = v2;
+      break;
+    case 176:
+      i_take_string_as_input(a1, "SPELL_ABILITY_DASH");
+      result = v2;
+      break;
+    case 177:
+      i_take_string_as_input(a1, "SPELL_ABILITY_DASH_EFFECT");
+      result = v2;
+      break;
+    case 178:
+      i_take_string_as_input(a1, "SPELL_REMOTE_CONTROL");
+      result = v2;
+      break;
+    case 179:
+      i_take_string_as_input(a1, "SPELL_EFFECT_ARMOR_CRUSHING");
+      result = v2;
+      break;
+    case 180:
+      i_take_string_as_input(a1, "SPELL_ABILITY_POISONOUS_ATTACK");
+      result = v2;
+      break;
+    case 181:
+      i_take_string_as_input(a1, "SPELL_LIZARD_BITE_HIT");
+      result = v2;
+      break;
+    case 182:
+      i_take_string_as_input(a1, "SPELL_EFFECT_REGENRATION");
+      result = v2;
+      break;
+    case 183:
+      i_take_string_as_input(a1, "SPELL_EFFECT_REBIRTH");
+      result = v2;
+      break;
+    case 184:
+      i_take_string_as_input(a1, "SPELL_ABILITY_FROST_BREATH");
+      result = v2;
+      break;
+    case 185:
+      i_take_string_as_input(a1, "SPELL_EFFECT_BAD_LUCK");
+      result = v2;
+      break;
+    case 186:
+      i_take_string_as_input(a1, "SPELL_EFFECT_GOOD_LUCK");
+      result = v2;
+      break;
+    case 187:
+      i_take_string_as_input(a1, "SPELL_EFFECT_BAD_MORALE");
+      result = v2;
+      break;
+    case 188:
+      i_take_string_as_input(a1, "SPELL_EFFECT_GOOD_MORALE");
+      result = v2;
+      break;
+    case 189:
+      i_take_string_as_input(a1, "SPELL_EFFECT_FIRST_AID_TENT_HEAL");
+      result = v2;
+      break;
+    case 190:
+      i_take_string_as_input(a1, "SPELL_EFFECT_CLERIC_HIT");
+      result = v2;
+      break;
+    case 191:
+      i_take_string_as_input(a1, "SPELL_EFFECT_COMBAT_HIT_00");
+      result = v2;
+      break;
+    case 192:
+      i_take_string_as_input(a1, "SPELL_EFFECT_COMBAT_HIT_01");
+      result = v2;
+      break;
+    case 193:
+      i_take_string_as_input(a1, "SPELL_EFFECT_COMBAT_HIT_02");
+      result = v2;
+      break;
+    case 194:
+      i_take_string_as_input(a1, "SPELL_EFFECT_WAR_MACHINE_HIT");
+      result = v2;
+      break;
+    case 195:
+      i_take_string_as_input(a1, "SPELL_EFFECT_FIRST_AID_HIT");
+      result = v2;
+      break;
+    case 196:
+      i_take_string_as_input(a1, "SPELL_EFFECT_FIRE_HIT");
+      result = v2;
+      break;
+    case 197:
+      i_take_string_as_input(a1, "SPELL_EFFECT_BASH_HIT");
+      result = v2;
+      break;
+    case 198:
+      i_take_string_as_input(a1, "SPELL_EFFECT_SUN_FIRE");
+      result = v2;
+      break;
+    case 199:
+      i_take_string_as_input(a1, "SPELL_EFFECT_SOIL_BURN");
+      result = v2;
+      break;
+    case 200:
+      i_take_string_as_input(a1, "SPELL_ABILITY_AVATAR_OF_DEATH");
+      result = v2;
+      break;
+    case 201:
+      i_take_string_as_input(a1, "SPELL_EFFECT_FROZEN");
+      result = v2;
+      break;
+    case 202:
+      i_take_string_as_input(a1, "SPELL_EFFECT_FIRE_DAMAGE");
+      result = v2;
+      break;
+    case 203:
+      i_take_string_as_input(a1, "SPELL_EFFECT_SEDUCE_CASTED");
+      result = v2;
+      break;
+    case 204:
+      i_take_string_as_input(a1, "SPELL_SPEC_DEMON_HUNTER");
+      result = v2;
+      break;
+    case 205:
+      i_take_string_as_input(a1, "SPELL_EFFECT_FIRE_SHIELD");
+      result = v2;
+      break;
+    case 206:
+      i_take_string_as_input(a1, "SPELL_ARTFSET_NECROMANCERS_DEBUFF");
+      result = v2;
+      break;
+    case 207:
+      i_take_string_as_input(a1, "SPELL_SKILL_CHILLING_BONES");
+      result = v2;
+      break;
+    case 208:
+      i_take_string_as_input(a1, "SPELL_DEBUG_TELEPORT");
+      result = v2;
+      break;
+    case 209:
+      i_take_string_as_input(a1, "SPELL_ABILITY_ENRAGED");
+      result = v2;
+      break;
+    case 210:
+      i_take_string_as_input(a1, "SPELL_MASS_CURSE");
+      result = v2;
+      break;
+    case 211:
+      i_take_string_as_input(a1, "SPELL_MASS_DISRUPTING_RAY");
+      result = v2;
+      break;
+    case 212:
+      i_take_string_as_input(a1, "SPELL_MASS_SLOW");
+      result = v2;
+      break;
+    case 213:
+      i_take_string_as_input(a1, "SPELL_MASS_FORGETFULNESS");
+      result = v2;
+      break;
+    case 214:
+      i_take_string_as_input(a1, "SPELL_MASS_PLAGUE");
+      result = v2;
+      break;
+    case 215:
+      i_take_string_as_input(a1, "SPELL_MASS_WEAKNESS");
+      result = v2;
+      break;
+    case 216:
+      i_take_string_as_input(a1, "SPELL_MASS_BLESS");
+      result = v2;
+      break;
+    case 217:
+      i_take_string_as_input(a1, "SPELL_MASS_DISPEL");
+      result = v2;
+      break;
+    case 218:
+      i_take_string_as_input(a1, "SPELL_MASS_STONESKIN");
+      result = v2;
+      break;
+    case 219:
+      i_take_string_as_input(a1, "SPELL_MASS_DEFLECT_ARROWS");
+      result = v2;
+      break;
+    case 220:
+      i_take_string_as_input(a1, "SPELL_MASS_BLOODLUST");
+      result = v2;
+      break;
+    case 221:
+      i_take_string_as_input(a1, "SPELL_MASS_HASTE");
+      result = v2;
+      break;
+    case 222:
+      i_take_string_as_input(a1, "SPELL_ABILITY_CALL_LIGHTNING");
+      result = v2;
+      break;
+    case 223:
+      i_take_string_as_input(a1, "SPELL_EMPOWERED_MAGIC_ARROW");
+      result = v2;
+      break;
+    case 224:
+      i_take_string_as_input(a1, "SPELL_EMPOWERED_MAGIC_FIST");
+      result = v2;
+      break;
+    case 225:
+      i_take_string_as_input(a1, "SPELL_EMPOWERED_LIGHTNING_BOLT");
+      result = v2;
+      break;
+    case 226:
+      i_take_string_as_input(a1, "SPELL_EMPOWERED_ICE_BOLT");
+      result = v2;
+      break;
+    case 227:
+      i_take_string_as_input(a1, "SPELL_EMPOWERED_FIREBALL");
+      result = v2;
+      break;
+    case 228:
+      i_take_string_as_input(a1, "SPELL_EMPOWERED_FROST_RING");
+      result = v2;
+      break;
+    case 229:
+      i_take_string_as_input(a1, "SPELL_EMPOWERED_CHAIN_LIGHTNING");
+      result = v2;
+      break;
+    case 230:
+      i_take_string_as_input(a1, "SPELL_EMPOWERED_METEOR_SHOWER");
+      result = v2;
+      break;
+    case 231:
+      i_take_string_as_input(a1, "SPELL_EMPOWERED_IMPLOSION");
+      result = v2;
+      break;
+    case 232:
+      i_take_string_as_input(a1, "SPELL_EMPOWERED_ARMAGEDDON");
+      result = v2;
+      break;
+    case 233:
+      i_take_string_as_input(a1, "SPELL_EMPOWERED_STONE_SPIKES");
+      result = v2;
+      break;
+    case 234:
+      i_take_string_as_input(a1, "SPELL_SUMMON_CREATURES");
+      result = v2;
+      break;
+    case 235:
+      i_take_string_as_input(a1, "SPELL_CONJURE_PHOENIX");
+      result = v2;
+      break;
+    case 236:
+      i_take_string_as_input(a1, "SPELL_FIREWALL");
+      result = v2;
+      break;
+    case 237:
+      i_take_string_as_input(a1, "SPELL_STONE_SPIKES");
+      result = v2;
+      break;
+    case 238:
+      i_take_string_as_input(a1, "SPELL_UBER_CHAIN_LIGHTNING");
+      result = v2;
+      break;
+    case 239:
+      i_take_string_as_input(a1, "SPELL_BOSS_FIREWALL");
+      result = v2;
+      break;
+    case 240:
+      i_take_string_as_input(a1, "SPELL_TIME_SHIFT");
+      result = v2;
+      break;
+    case 241:
+      i_take_string_as_input(a1, "SPELL_EFFECT_GUARDIAN_ANGEL");
+      result = v2;
+      break;
+    case 242:
+      i_take_string_as_input(a1, "SPELL_GHOST_DISPELL");
+      result = v2;
+      break;
+    case 243:
+      i_take_string_as_input(a1, "SPELL_GHOST_GUARD");
+      result = v2;
+      break;
+    case 244:
+      i_take_string_as_input(a1, "SPELL_EFFECT_WOUND");
+      result = v2;
+      break;
+    case 245:
+      i_take_string_as_input(a1, "SPELL_ABILITY_BERSERKER_RAGE");
+      result = v2;
+      break;
+    case 246:
+      i_take_string_as_input(a1, "SPELL_EFFECT_MARK_OF_FIRE");
+      result = v2;
+      break;
+    case 247:
+      i_take_string_as_input(a1, "SPELL_ABILITY_STORMBOLT");
+      result = v2;
+      break;
+    case 248:
+      i_take_string_as_input(a1, "SPELL_EFFECT_MAGMA_SHIELD");
+      result = v2;
+      break;
+    case 249:
+      i_take_string_as_input(a1, "SPELL_RUNE_OF_CHARGE");
+      result = v2;
+      break;
+    case 250:
+      i_take_string_as_input(a1, "SPELL_RUNE_OF_BERSERKING");
+      result = v2;
+      break;
+    case 251:
+      i_take_string_as_input(a1, "SPELL_RUNE_OF_MAGIC_CONTROL");
+      result = v2;
+      break;
+    case 252:
+      i_take_string_as_input(a1, "SPELL_RUNE_OF_EXORCISM");
+      result = v2;
+      break;
+    case 253:
+      i_take_string_as_input(a1, "SPELL_RUNE_OF_ELEMENTAL_IMMUNITY");
+      result = v2;
+      break;
+    case 254:
+      i_take_string_as_input(a1, "SPELL_RUNE_OF_STUNNING");
+      result = v2;
+      break;
+    case 255:
+      i_take_string_as_input(a1, "SPELL_RUNE_OF_BATTLERAGE");
+      result = v2;
+      break;
+    case 256:
+      i_take_string_as_input(a1, "SPELL_RUNE_OF_ETHEREALNESS");
+      result = v2;
+      break;
+    case 257:
+      i_take_string_as_input(a1, "SPELL_RUNE_OF_REVIVE");
+      result = v2;
+      break;
+    case 258:
+      i_take_string_as_input(a1, "SPELL_RUNE_OF_DRAGONFORM");
+      result = v2;
+      break;
+    case 259:
+      i_take_string_as_input(a1, "SPELL_ABILITY_REFRESH_RUNE");
+      result = v2;
+      break;
+    case 260:
+      i_take_string_as_input(a1, "SPELL_SPEC_BORDERGUARD");
+      result = v2;
+      break;
+    case 261:
+      i_take_string_as_input(a1, "SPELL_SPEC_AXE_MASTER");
+      result = v2;
+      break;
+    case 262:
+      i_take_string_as_input(a1, "SPELL_SPEC_BEAR_RAIDERS");
+      result = v2;
+      break;
+    case 263:
+      i_take_string_as_input(a1, "SPELL_SPEC_MAGISTER");
+      result = v2;
+      break;
+    case 264:
+      i_take_string_as_input(a1, "SPELL_SPEC_DEFENDER");
+      result = v2;
+      break;
+    case 265:
+      i_take_string_as_input(a1, "SPELL_SKILL_DWARVEN_LUCK");
+      result = v2;
+      break;
+    case 266:
+      i_take_string_as_input(a1, "SPELL_SKILL_OFFENSIVE_FORMATION");
+      result = v2;
+      break;
+    case 267:
+      i_take_string_as_input(a1, "SPELL_SKILL_DEFENSIVE_FORMATION");
+      result = v2;
+      break;
+    case 268:
+      i_take_string_as_input(a1, "SPELL_SKILL_DISTRACT");
+      result = v2;
+      break;
+    case 269:
+      i_take_string_as_input(a1, "SPELL_SKILL_ABSOLUTE_PROTECTION");
+      result = v2;
+      break;
+    case 270:
+      i_take_string_as_input(a1, "SPELL_EFFECT_SET_AFIRE");
+      result = v2;
+      break;
+    case 271:
+      i_take_string_as_input(a1, "SPELL_ABILITY_AGILITY");
+      result = v2;
+      break;
+    case 272:
+      i_take_string_as_input(a1, "SPELL_EFFECT_FINE_RUNE");
+      result = v2;
+      break;
+    case 273:
+      i_take_string_as_input(a1, "SPELL_EFFECT_STRONG_RUNE");
+      result = v2;
+      break;
+    case 274:
+      i_take_string_as_input(a1, "SPELL_EFFECT_BATTLE_FRENZY");
+      result = v2;
+      break;
+    case 275:
+      i_take_string_as_input(a1, "SPELL_EFFECT_RUNIC_ATTUNEMENT");
+      result = v2;
+      break;
+    case 276:
+      i_take_string_as_input(a1, "SPELL_EFFECT_MASTER_OF_INITIATIVE");
+      result = v2;
+      break;
+    case 277:
+      i_take_string_as_input(a1, "SPELL_SORROW");
+      result = v2;
+      break;
+    case 278:
+      i_take_string_as_input(a1, "SPELL_VAMPIRISM");
+      result = v2;
+      break;
+    case 279:
+      i_take_string_as_input(a1, "SPELL_DEEP_FREEZE");
+      result = v2;
+      break;
+    case 280:
+      i_take_string_as_input(a1, "SPELL_REGENERATION");
+      result = v2;
+      break;
+    case 281:
+      i_take_string_as_input(a1, "SPELL_DIVINE_VENGEANCE");
+      result = v2;
+      break;
+    case 282:
+      i_take_string_as_input(a1, "SPELL_ARCANE_CRYSTAL");
+      result = v2;
+      break;
+    case 283:
+      i_take_string_as_input(a1, "SPELL_SUMMON_HIVE");
+      result = v2;
+      break;
+    case 284:
+      i_take_string_as_input(a1, "SPELL_BLADE_BARRIER");
+      result = v2;
+      break;
+    case 285:
+      i_take_string_as_input(a1, "SPELL_UBER_METEOR_SHOWER");
+      result = v2;
+      break;
+    case 286:
+      i_take_string_as_input(a1, "SPELL_EFFECT_PREPARATION");
+      result = v2;
+      break;
+    case 287:
+      i_take_string_as_input(a1, "SPELL_EFFECT_EXPLODING_CORPSES");
+      result = v2;
+      break;
+    case 288:
+      i_take_string_as_input(a1, "SPELL_EFFECT_MASTER_OF_LIGHTNING");
+      result = v2;
+      break;
+    case 289:
+      i_take_string_as_input(a1, "SPELL_TOWN_BLAZING_ANVIL");
+      result = v2;
+      break;
+    case 290:
+      i_take_string_as_input(a1, "SPELL_WARCRY_RALLING_CRY");
+      result = v2;
+      break;
+    case 291:
+      i_take_string_as_input(a1, "SPELL_WARCRY_CALL_OF_BLOOD");
+      result = v2;
+      break;
+    case 292:
+      i_take_string_as_input(a1, "SPELL_WARCRY_WORD_OF_THE_CHIEF");
+      result = v2;
+      break;
+    case 293:
+      i_take_string_as_input(a1, "SPELL_WARCRY_FEAR_MY_ROAR");
+      result = v2;
+      break;
+    case 294:
+      i_take_string_as_input(a1, "SPELL_WARCRY_BATTLECRY");
+      result = v2;
+      break;
+    case 295:
+      i_take_string_as_input(a1, "SPELL_WARCRY_SHOUT_OF_MANY");
+      result = v2;
+      break;
+    case 296:
+      i_take_string_as_input(a1, "SPELL_ABILITY_VENOM");
+      result = v2;
+      break;
+    case 297:
+      i_take_string_as_input(a1, "SPELL_ARTFSET_LIONS_DEMORALIZED");
+      result = v2;
+      break;
+    case 298:
+      i_take_string_as_input(a1, "SPELL_EMPOWERED_DEEP_FREEZE");
+      result = v2;
+      break;
+    case 299:
+      i_take_string_as_input(a1, "SPELL_ABILITY_SACRIFICE_GOBLIN");
+      result = v2;
+      break;
+    case 300:
+      i_take_string_as_input(a1, "SPELL_ABILITY_SWALLOW_GOBLIN");
+      result = v2;
+      break;
+    case 301:
+      i_take_string_as_input(a1, "SPELL_ABILITY_SET_SNARES");
+      result = v2;
+      break;
+    case 302:
+      i_take_string_as_input(a1, "SPELL_DEMON_RAGE_LEVEL_1");
+      result = v2;
+      break;
+    case 303:
+      i_take_string_as_input(a1, "SPELL_DEMON_RAGE_LEVEL_2");
+      result = v2;
+      break;
+    case 304:
+      i_take_string_as_input(a1, "SPELL_DEMON_RAGE_LEVEL_3");
+      result = v2;
+      break;
+    case 305:
+      i_take_string_as_input(a1, "SPELL_EFFECT_POWERFULL_BLOW");
+      result = v2;
+      break;
+    case 306:
+      i_take_string_as_input(a1, "SPELL_SKILL_BATTLE_ELATION");
+      result = v2;
+      break;
+    case 307:
+      i_take_string_as_input(a1, "SPELL_SKILL_LUCK_OF_THE_BARBARIAN");
+      result = v2;
+      break;
+    case 308:
+      i_take_string_as_input(a1, "SPELL_SKILL_DEATH_TO_NONEXISTENT");
+      result = v2;
+      break;
+    case 309:
+      i_take_string_as_input(a1, "SPELL_SKILL_MIGHT_OVER_MAGIC");
+      result = v2;
+      break;
+    case 310:
+      i_take_string_as_input(a1, "SPELL_SPEC_GRIM_FIGHTER");
+      result = v2;
+      break;
+    case 311:
+      i_take_string_as_input(a1, "SPELL_SPEC_CENTAUR_MISTRESS");
+      result = v2;
+      break;
+    case 312:
+      i_take_string_as_input(a1, "SPELL_SPEC_WYVERN_TAMER");
+      result = v2;
+      break;
+    case 313:
+      i_take_string_as_input(a1, "SPELL_SPEC_ORC_ELDER");
+      result = v2;
+      break;
+    case 314:
+      i_take_string_as_input(a1, "SPELL_SPEC_BLOODDRINKER");
+      result = v2;
+      break;
+    case 315:
+      i_take_string_as_input(a1, "SPELL_SPEC_GOBLIN_KING");
+      result = v2;
+      break;
+    case 316:
+      i_take_string_as_input(a1, "SPELL_ABILITY_DEATH_WAIL");
+      result = v2;
+      break;
+    case 317:
+      i_take_string_as_input(a1, "SPELL_ABILITY_INVISIBILITY");
+      result = v2;
+      break;
+    case 318:
+      i_take_string_as_input(a1, "SPELL_ABILITY_SCAVENGER");
+      result = v2;
+      break;
+    case 319:
+      i_take_string_as_input(a1, "SPELL_ABILITY_SYPHON_MANA");
+      result = v2;
+      break;
+    case 320:
+      i_take_string_as_input(a1, "SPELL_ABILITY_LEAP");
+      result = v2;
+      break;
+    case 321:
+      i_take_string_as_input(a1, "SPELL_ABILITY_SUMMON_OTHER");
+      result = v2;
+      break;
+    case 322:
+      i_take_string_as_input(a1, "SPELL_ABILITY_INCINERATE");
+      result = v2;
+      break;
+    case 323:
+      i_take_string_as_input(a1, "SPELL_ABILITY_TREEANT_UNION");
+      result = v2;
+      break;
+    case 324:
+      i_take_string_as_input(a1, "SPELL_ABILITY_AMMO_STEAL");
+      result = v2;
+      break;
+    case 325:
+      i_take_string_as_input(a1, "SPELL_ABILITY_ORDER_OF_THE_CHIEF");
+      result = v2;
+      break;
+    case 326:
+      i_take_string_as_input(a1, "SPELL_ABILITY_DEFILE_MAGIC");
+      result = v2;
+      break;
+    case 327:
+      i_take_string_as_input(a1, "SPELL_ABILITY_BEAR_ROAR");
+      result = v2;
+      break;
+    case 328:
+      i_take_string_as_input(a1, "SPELL_ABILITY_SEDUCE");
+      result = v2;
+      break;
+    case 329:
+      i_take_string_as_input(a1, "SPELL_ABILITY_RAGE_OF_THE_FOREST");
+      result = v2;
+      break;
+    case 330:
+      i_take_string_as_input(a1, "SPELL_ABILITY_SABOTAGE");
+      result = v2;
+      break;
+    case 331:
+      i_take_string_as_input(a1, "SPELL_ABILITY_HARPOON_STRIKE");
+      result = v2;
+      break;
+    case 332:
+      i_take_string_as_input(a1, "SPELL_ABILITY_LUCK_GAMBLER");
+      result = v2;
+      break;
+    case 333:
+      i_take_string_as_input(a1, "SPELL_ABILITY_POWER_FEED");
+      result = v2;
+      break;
+    case 334:
+      i_take_string_as_input(a1, "SPELL_ABILITY_CALL_STORM");
+      result = v2;
+      break;
+    case 335:
+      i_take_string_as_input(a1, "SPELL_EFFECT_LIQUID_FLAME_BREATH");
+      result = v2;
+      break;
+    case 336:
+      i_take_string_as_input(a1, "SPELL_EFFECT_SLEEPING_STRIKE");
+      result = v2;
+      break;
+    case 337:
+      i_take_string_as_input(a1, "SPELL_EFFECT_PREPARED_POSITION");
+      result = v2;
+      break;
+    case 338:
+      i_take_string_as_input(a1, "SPELL_EFFECT_BATTLE_RAGE");
+      result = v2;
+      break;
+    case 339:
+      i_take_string_as_input(a1, "SPELL_EFFECT_UNLUCKY");
+      result = v2;
+      break;
+    case 340:
+      i_take_string_as_input(a1, "SPELL_EFFECT_HORROR_OF_THE_DEATH");
+      result = v2;
+      break;
+    case 341:
+      i_take_string_as_input(a1, "SPELL_EFFECT_IMMUNITY_TO_AIR");
+      result = v2;
+      break;
+    case 342:
+      i_take_string_as_input(a1, "SPELL_EFFECT_IMMUNITY_TO_FIRE");
+      result = v2;
+      break;
+    case 343:
+      i_take_string_as_input(a1, "SPELL_EFFECT_IMMUNITY_TO_WATER");
+      result = v2;
+      break;
+    case 344:
+      i_take_string_as_input(a1, "SPELL_EFFECT_IMMUNITY_TO_EARTH");
+      result = v2;
+      break;
+    case 345:
+      i_take_string_as_input(a1, "SPELL_ABILITY_FLAMESTRIKE");
+      result = v2;
+      break;
+    case 346:
+      i_take_string_as_input(a1, "SPELL_ABILITY_PACK_DIVE");
+      result = v2;
+      break;
+    case 347:
+      i_take_string_as_input(a1, "SPELL_ABILITY_PACK_DIVE_FINISH");
+      result = v2;
+      break;
+    case 348:
+      i_take_string_as_input(a1, "SPELL_ABILITY_CUSTOM1");
+      result = v2;
+      break;
+    case 349:
+      i_take_string_as_input(a1, "SPELL_ABILITY_CUSTOM2");
+      result = v2;
+      break;
+    case 350:
+      i_take_string_as_input(a1, "SPELL_ABILITY_CUSTOM3");
+      result = v2;
+      break;
+    case 351:
+      i_take_string_as_input(a1, "SPELL_ABILITY_CUSTOM4");
+      result = v2;
+      break;
+    case 352:
+      i_take_string_as_input(a1, "SPELL_EFFECT_FIRST_AID_TENT_PLAGUE");
+      result = v2;
+      break;
+    default:
+      *(_DWORD *)a1 = 0;
+      *(_DWORD *)(a1 + 4) = 0;
+      *(_DWORD *)(a1 + 8) = 0;
+      sub_401020((_DWORD *)a1, "SPELL_NONE", "");
+      result = v2;
+      break;
+  }
+  return result;
+}

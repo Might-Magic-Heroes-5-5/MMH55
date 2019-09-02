@@ -1,0 +1,36 @@
+# ----------------------------------------------------
+# ----------------- Expert Frenzy actions --------------
+# ----------------------------------------------------
+#
+# Changes Frenzy spell bonus duration on expert level.
+#
+# ----------------------------------------------------
+# Frenzy action duration is always 1 but if the spell is cast on expert a bonus is added to it. Default is 1. Value is in Hex.
+# Things you may want to modify
+definitions: 
+- &tote_duration          01     # Expert Frenzy will work for 2 actions
+- &patched_duration       00     # Expert Frenzy will work for 1 action
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   0057CD20                            # spell action duration
+checkBytes:     24 18 EB 63 83 FF 12 75
+patchAddress:   0057CD35
+originalBytes:  *tote_duration
+patchBytes:     *patched_duration
+---
+group: Original
+patchAddress:    005BB3A9                           # spellbook action duration
+originalBytes:  *tote_duration
+patchBytes:     *patched_duration
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   004B8D90
+checkBytes:     F8 12 75 13 33 D2 83 7C
+patchAddress:   004B8DA0                            # spell action duration
+originalBytes:  *tote_duration
+patchBytes:     *patched_duration
+---
+group: Quantomas3.1j
+patchAddress:   00587FB9                            # spellbook action duration
+originalBytes:  *tote_duration
+patchBytes:     *patched_duration

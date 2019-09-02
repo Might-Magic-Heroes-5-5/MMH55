@@ -1,0 +1,354 @@
+int __fastcall sub_850DD0(int a1, int a2)
+{
+  int v2; // esi@1
+  int result; // eax@2
+
+  v2 = a1;
+  switch ( a2 )
+  {
+    case 0:
+      i_take_string_as_input(a1, "HERO_SPEC_NONE");
+      result = v2;
+      break;
+    case 1:
+      i_take_string_as_input(a1, "HERO_SPEC_SUZERAIN");
+      result = v2;
+      break;
+    case 2:
+      i_take_string_as_input(a1, "HERO_SPEC_WHITE_KNIGHT");
+      result = v2;
+      break;
+    case 3:
+      i_take_string_as_input(a1, "HERO_SPEC_JOUSTING");
+      result = v2;
+      break;
+    case 4:
+      i_take_string_as_input(a1, "HERO_SPEC_PEASANTS");
+      result = v2;
+      break;
+    case 5:
+      i_take_string_as_input(a1, "HERO_SPEC_ARCHERS");
+      result = v2;
+      break;
+    case 6:
+      i_take_string_as_input(a1, "HERO_SPEC_FOOTMEN");
+      result = v2;
+      break;
+    case 7:
+      i_take_string_as_input(a1, "HERO_SPEC_GRIFFINS");
+      result = v2;
+      break;
+    case 8:
+      i_take_string_as_input(a1, "HERO_SPEC_WAR_MACHINES");
+      result = v2;
+      break;
+    case 9:
+      i_take_string_as_input(a1, "HERO_SPEC_LOGISTICS");
+      result = v2;
+      break;
+    case 10:
+      i_take_string_as_input(a1, "HERO_SPEC_HASTE");
+      result = v2;
+      break;
+    case 11:
+      i_take_string_as_input(a1, "HERO_SPEC_FURIOUS");
+      result = v2;
+      break;
+    case 12:
+      i_take_string_as_input(a1, "HERO_SPEC_GATE_KEEPER");
+      result = v2;
+      break;
+    case 13:
+      i_take_string_as_input(a1, "HERO_SPEC_BEATER");
+      result = v2;
+      break;
+    case 14:
+      i_take_string_as_input(a1, "HERO_SPEC_BOMBARDIER");
+      result = v2;
+      break;
+    case 15:
+      i_take_string_as_input(a1, "HERO_SPEC_IMPREGNABLE");
+      result = v2;
+      break;
+    case 16:
+      i_take_string_as_input(a1, "HERO_SPEC_HYPNOTIST");
+      result = v2;
+      break;
+    case 17:
+      i_take_string_as_input(a1, "HERO_SPEC_FLAGBEARER_OF_DARKNESS");
+      result = v2;
+      break;
+    case 18:
+      i_take_string_as_input(a1, "HERO_SPEC_HOUNDS");
+      result = v2;
+      break;
+    case 19:
+      i_take_string_as_input(a1, "HERO_SPEC_SUCCUBUSES");
+      result = v2;
+      break;
+    case 20:
+      i_take_string_as_input(a1, "HERO_SPEC_ELVEN_VOLLEY");
+      result = v2;
+      break;
+    case 21:
+      i_take_string_as_input(a1, "HERO_SPEC_BLADE_MASTER");
+      result = v2;
+      break;
+    case 22:
+      i_take_string_as_input(a1, "HERO_SPEC_ELVES");
+      result = v2;
+      break;
+    case 23:
+      i_take_string_as_input(a1, "HERO_SPEC_UNICORNS");
+      result = v2;
+      break;
+    case 24:
+      i_take_string_as_input(a1, "HERO_SPEC_ELVEN_FURY");
+      result = v2;
+      break;
+    case 25:
+      i_take_string_as_input(a1, "HERO_SPEC_WAYLAYER");
+      result = v2;
+      break;
+    case 26:
+      i_take_string_as_input(a1, "HERO_SPEC_CALL_OF_THE_WASP");
+      result = v2;
+      break;
+    case 27:
+      i_take_string_as_input(a1, "HERO_SPEC_TALENTED_WARRIOR");
+      result = v2;
+      break;
+    case 28:
+      i_take_string_as_input(a1, "HERO_SPEC_FOREST_GUARDIAN");
+      result = v2;
+      break;
+    case 29:
+      i_take_string_as_input(a1, "HERO_SPEC_HEIR_OF_UNDEAD");
+      result = v2;
+      break;
+    case 30:
+      i_take_string_as_input(a1, "HERO_SPEC_ZOMBIES");
+      result = v2;
+      break;
+    case 31:
+      i_take_string_as_input(a1, "HERO_SPEC_VAMPIRES");
+      result = v2;
+      break;
+    case 32:
+      i_take_string_as_input(a1, "HERO_SPEC_REANIMATOR");
+      result = v2;
+      break;
+    case 33:
+      i_take_string_as_input(a1, "HERO_SPEC_MALEDICTOR");
+      result = v2;
+      break;
+    case 34:
+      i_take_string_as_input(a1, "HERO_SPEC_DARK_EMISSARY");
+      result = v2;
+      break;
+    case 35:
+      i_take_string_as_input(a1, "HERO_SPEC_MIND_CLEANER");
+      result = v2;
+      break;
+    case 36:
+      i_take_string_as_input(a1, "HERO_SPEC_EMPIRIC");
+      result = v2;
+      break;
+    case 37:
+      i_take_string_as_input(a1, "HERO_SPEC_SOULHUNTER");
+      result = v2;
+      break;
+    case 38:
+      i_take_string_as_input(a1, "HERO_SPEC_MASTER_OF_ELEMENTS");
+      result = v2;
+      break;
+    case 39:
+      i_take_string_as_input(a1, "HERO_SPEC_RADIANT");
+      result = v2;
+      break;
+    case 40:
+      i_take_string_as_input(a1, "HERO_SPEC_INEXHAUSTIBLE");
+      result = v2;
+      break;
+    case 41:
+      i_take_string_as_input(a1, "HERO_SPEC_FEATHER_MAGE");
+      result = v2;
+      break;
+    case 42:
+      i_take_string_as_input(a1, "HERO_SPEC_DISRUPTER");
+      result = v2;
+      break;
+    case 43:
+      i_take_string_as_input(a1, "HERO_SPEC_WEILDER_OF_FIRE");
+      result = v2;
+      break;
+    case 44:
+      i_take_string_as_input(a1, "HERO_SPEC_GREMLINS");
+      result = v2;
+      break;
+    case 45:
+      i_take_string_as_input(a1, "HERO_SPEC_GOLEMS");
+      result = v2;
+      break;
+    case 46:
+      i_take_string_as_input(a1, "HERO_SPEC_MAGES");
+      result = v2;
+      break;
+    case 47:
+      i_take_string_as_input(a1, "HERO_SPEC_PRUDENT");
+      result = v2;
+      break;
+    case 48:
+      i_take_string_as_input(a1, "HERO_SPEC_EVASIVE");
+      result = v2;
+      break;
+    case 49:
+      i_take_string_as_input(a1, "HERO_SPEC_POWER_BARGAIN");
+      result = v2;
+      break;
+    case 50:
+      i_take_string_as_input(a1, "HERO_SPEC_RIDERS");
+      result = v2;
+      break;
+    case 51:
+      i_take_string_as_input(a1, "HERO_SPEC_DARK_ACOLYTE");
+      result = v2;
+      break;
+    case 52:
+      i_take_string_as_input(a1, "HERO_SPEC_POISONER");
+      result = v2;
+      break;
+    case 53:
+      i_take_string_as_input(a1, "HERO_SPEC_MATRON_SALVO");
+      result = v2;
+      break;
+    case 54:
+      i_take_string_as_input(a1, "HERO_SPEC_SAVAGE");
+      result = v2;
+      break;
+    case 55:
+      i_take_string_as_input(a1, "HERO_SPEC_WITCHES");
+      result = v2;
+      break;
+    case 56:
+      i_take_string_as_input(a1, "HERO_SPEC_MINOTAURS");
+      result = v2;
+      break;
+    case 57:
+      i_take_string_as_input(a1, "HERO_SPEC_TIME_SHIFT");
+      result = v2;
+      break;
+    case 58:
+      i_take_string_as_input(a1, "HERO_SPEC_BORDERGUARD");
+      result = v2;
+      break;
+    case 59:
+      i_take_string_as_input(a1, "HERO_SPEC_COURTIER");
+      result = v2;
+      break;
+    case 60:
+      i_take_string_as_input(a1, "HERO_SPEC_MOUNTAIN_KING");
+      result = v2;
+      break;
+    case 61:
+      i_take_string_as_input(a1, "HERO_SPEC_AXE_MASTER");
+      result = v2;
+      break;
+    case 62:
+      i_take_string_as_input(a1, "HERO_SPEC_BEAR_RIDERS");
+      result = v2;
+      break;
+    case 63:
+      i_take_string_as_input(a1, "HERO_SPEC_MAGISTER");
+      result = v2;
+      break;
+    case 64:
+      i_take_string_as_input(a1, "HERO_SPEC_RESEARCHER");
+      result = v2;
+      break;
+    case 65:
+      i_take_string_as_input(a1, "HERO_SPEC_SACRED_HAMMER");
+      result = v2;
+      break;
+    case 66:
+      i_take_string_as_input(a1, "HERO_SPEC_ECONOMIST");
+      result = v2;
+      break;
+    case 67:
+      i_take_string_as_input(a1, "HERO_SPEC_DEFENDER");
+      result = v2;
+      break;
+    case 68:
+      i_take_string_as_input(a1, "HERO_SPEC_STORMCALLER");
+      result = v2;
+      break;
+    case 69:
+      i_take_string_as_input(a1, "HERO_SPEC_MASTER_OF_INITIATIVE");
+      result = v2;
+      break;
+    case 70:
+      i_take_string_as_input(a1, "HERO_SPEC_CHOSEN_BY_GODS");
+      result = v2;
+      break;
+    case 71:
+      i_take_string_as_input(a1, "HERO_SPEC_GRIM_FIGHTER");
+      result = v2;
+      break;
+    case 72:
+      i_take_string_as_input(a1, "HERO_SPEC_RASH");
+      result = v2;
+      break;
+    case 73:
+      i_take_string_as_input(a1, "HERO_SPEC_CENTAUR_MISTRESS");
+      result = v2;
+      break;
+    case 74:
+      i_take_string_as_input(a1, "HERO_SPEC_OFFENDER");
+      result = v2;
+      break;
+    case 75:
+      i_take_string_as_input(a1, "HERO_SPEC_WAR_LEADER");
+      result = v2;
+      break;
+    case 76:
+      i_take_string_as_input(a1, "HERO_SPEC_WYVERN_TAMER");
+      result = v2;
+      break;
+    case 77:
+      i_take_string_as_input(a1, "HERO_SPEC_BLOODDRINKER");
+      result = v2;
+      break;
+    case 78:
+      i_take_string_as_input(a1, "HERO_SPEC_ORC_ELDER");
+      result = v2;
+      break;
+    case 79:
+      i_take_string_as_input(a1, "HERO_SPEC_GOBLIN_KING");
+      result = v2;
+      break;
+    case 80:
+      i_take_string_as_input(a1, "HERO_SPEC_DEMON_HUNTER");
+      result = v2;
+      break;
+    case 81:
+      i_take_string_as_input(a1, "HERO_SPEC_AVATAR_OF_DEATH");
+      result = v2;
+      break;
+    case 82:
+      i_take_string_as_input(a1, "HERO_SPEC_VESSEL_OF_ELRATH");
+      result = v2;
+      break;
+    case 83:
+      i_take_string_as_input(a1, "HERO_SPEC_INFERNAL_MACHINE");
+      result = v2;
+      break;
+    default:
+      *(_DWORD *)a1 = 0;
+      *(_DWORD *)(a1 + 4) = 0;
+      *(_DWORD *)(a1 + 8) = 0;
+      sub_401020((_DWORD *)a1, "HERO_SPEC_NONE", "");
+      result = v2;
+      break;
+  }
+  return result;
+}

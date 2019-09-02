@@ -1,0 +1,718 @@
+int __fastcall sub_96DDD0(int a1, int a2)
+{
+  int v2; // esi@1
+  int result; // eax@2
+
+  v2 = a1;
+  switch ( a2 )
+  {
+    case 0:
+      i_take_string_as_input(a1, "ABILITY_NONE");
+      result = v2;
+      break;
+    case 1:
+      i_take_string_as_input(a1, "ABILITY_SHOOTER");
+      result = v2;
+      break;
+    case 2:
+      i_take_string_as_input(a1, "ABILITY_NO_MELEE_PENALTY");
+      result = v2;
+      break;
+    case 3:
+      i_take_string_as_input(a1, "ABILITY_NO_RANGE_PENALTY");
+      result = v2;
+      break;
+    case 4:
+      i_take_string_as_input(a1, "ABILITY_RANGE_PENALTY");
+      result = v2;
+      break;
+    case 5:
+      i_take_string_as_input(a1, "ABILITY_NO_ENEMY_RETALIATION");
+      result = v2;
+      break;
+    case 6:
+      i_take_string_as_input(a1, "ABILITY_UNLIMITED_RETALIATION");
+      result = v2;
+      break;
+    case 7:
+      i_take_string_as_input(a1, "ABILITY_DOUBLE_ATTACK");
+      result = v2;
+      break;
+    case 8:
+      i_take_string_as_input(a1, "ABILITY_DOUBLE_SHOT");
+      result = v2;
+      break;
+    case 9:
+      i_take_string_as_input(a1, "ABILITY_MECHANICAL");
+      result = v2;
+      break;
+    case 10:
+      i_take_string_as_input(a1, "ABILITY_UNDEAD");
+      result = v2;
+      break;
+    case 11:
+      i_take_string_as_input(a1, "ABILITY_DEMONIC");
+      result = v2;
+      break;
+    case 12:
+      i_take_string_as_input(a1, "ABILITY_ELEMENTAL");
+      result = v2;
+      break;
+    case 13:
+      i_take_string_as_input(a1, "ABILITY_CURSING_ATTACK");
+      result = v2;
+      break;
+    case 14:
+      i_take_string_as_input(a1, "ABILITY_FLESH_AND_BLOOD");
+      result = v2;
+      break;
+    case 15:
+      i_take_string_as_input(a1, "ABILITY_ENRAGED");
+      result = v2;
+      break;
+    case 16:
+      i_take_string_as_input(a1, "ABILITY_IMMUNITY_TO_BLIND");
+      result = v2;
+      break;
+    case 17:
+      i_take_string_as_input(a1, "ABILITY_IMMUNITY_TO_MAGIC");
+      result = v2;
+      break;
+    case 18:
+      i_take_string_as_input(a1, "ABILITY_IMMUNITY_TO_SLOW");
+      result = v2;
+      break;
+    case 19:
+      i_take_string_as_input(a1, "ABILITY_IMMUNITY_TO_MIND_CONTROL");
+      result = v2;
+      break;
+    case 20:
+      i_take_string_as_input(a1, "ABILITY_IMMUNITY_TO_AIR");
+      result = v2;
+      break;
+    case 21:
+      i_take_string_as_input(a1, "ABILITY_IMMUNITY_TO_FIRE");
+      result = v2;
+      break;
+    case 22:
+      i_take_string_as_input(a1, "ABILITY_IMMUNITY_TO_WATER");
+      result = v2;
+      break;
+    case 23:
+      i_take_string_as_input(a1, "ABILITY_IMMUNITY_TO_EARTH");
+      result = v2;
+      break;
+    case 24:
+      i_take_string_as_input(a1, "ABILITY_MAGIC_PROOF_50");
+      result = v2;
+      break;
+    case 25:
+      i_take_string_as_input(a1, "ABILITY_PRECISE_SHOT");
+      result = v2;
+      break;
+    case 26:
+      i_take_string_as_input(a1, "ABILITY_LARGE_SHIELD");
+      result = v2;
+      break;
+    case 27:
+      i_take_string_as_input(a1, "ABILITY_SHIELD_OTHER");
+      result = v2;
+      break;
+    case 28:
+      i_take_string_as_input(a1, "ABILITY_JOUSTING");
+      result = v2;
+      break;
+    case 29:
+      i_take_string_as_input(a1, "ABILITY_BASH");
+      result = v2;
+      break;
+    case 30:
+      i_take_string_as_input(a1, "ABILITY_BATTLE_DIVE");
+      result = v2;
+      break;
+    case 31:
+      i_take_string_as_input(a1, "ABILITY_MANA_DESTROYER");
+      result = v2;
+      break;
+    case 32:
+      i_take_string_as_input(a1, "ABILITY_MANA_STEALER");
+      result = v2;
+      break;
+    case 33:
+      i_take_string_as_input(a1, "ABILITY_EXPLOSION");
+      result = v2;
+      break;
+    case 34:
+      i_take_string_as_input(a1, "ABILITY_RANGED_RETALIATE");
+      result = v2;
+      break;
+    case 35:
+      i_take_string_as_input(a1, "ABILITY_FEAR");
+      result = v2;
+      break;
+    case 36:
+      i_take_string_as_input(a1, "ABILITY_FRIGHT_AURA");
+      result = v2;
+      break;
+    case 37:
+      i_take_string_as_input(a1, "ABILITY_VORPAL_SWORD");
+      result = v2;
+      break;
+    case 38:
+      i_take_string_as_input(a1, "ABILITY_CHAIN_SHOT");
+      result = v2;
+      break;
+    case 39:
+      i_take_string_as_input(a1, "ABILITY_WEAKENING_STRIKE");
+      result = v2;
+      break;
+    case 40:
+      i_take_string_as_input(a1, "ABILITY_INCORPOREAL");
+      result = v2;
+      break;
+    case 41:
+      i_take_string_as_input(a1, "ABILITY_MANA_DRAIN");
+      result = v2;
+      break;
+    case 42:
+      i_take_string_as_input(a1, "ABILITY_LIFE_DRAIN");
+      result = v2;
+      break;
+    case 43:
+      i_take_string_as_input(a1, "ABILITY_DEATH_CLOUD");
+      result = v2;
+      break;
+    case 44:
+      i_take_string_as_input(a1, "ABILITY_ELVES_DOUBLE_SHOT");
+      result = v2;
+      break;
+    case 45:
+      i_take_string_as_input(a1, "ABILITY_WARDING_ARROWS");
+      result = v2;
+      break;
+    case 46:
+      i_take_string_as_input(a1, "ABILITY_BLINDING_ATTACK");
+      result = v2;
+      break;
+    case 47:
+      i_take_string_as_input(a1, "ABILITY_AURA_OF_MAGIC_RESISTANCE");
+      result = v2;
+      break;
+    case 48:
+      i_take_string_as_input(a1, "ABILITY_TAKE_ROOTS");
+      result = v2;
+      break;
+    case 49:
+      i_take_string_as_input(a1, "ABILITY_ENTANGLING_ROOTS");
+      result = v2;
+      break;
+    case 50:
+      i_take_string_as_input(a1, "ABILITY_ACID_BREATH");
+      result = v2;
+      break;
+    case 51:
+      i_take_string_as_input(a1, "ABILITY_MAGIC_ATTACK");
+      result = v2;
+      break;
+    case 52:
+      i_take_string_as_input(a1, "ABILITY_ENERGY_CHANNEL");
+      result = v2;
+      break;
+    case 53:
+      i_take_string_as_input(a1, "ABILITY_MAGIC_PROOF_75");
+      result = v2;
+      break;
+    case 54:
+      i_take_string_as_input(a1, "ABILITY_POISONOUS_ATTACK");
+      result = v2;
+      break;
+    case 55:
+      i_take_string_as_input(a1, "ABILITY_STRIKE_AND_RETURN");
+      result = v2;
+      break;
+    case 56:
+      i_take_string_as_input(a1, "ABILITY_BRAVERY");
+      result = v2;
+      break;
+    case 57:
+      i_take_string_as_input(a1, "ABILITY_RIDER_CHARGE");
+      result = v2;
+      break;
+    case 58:
+      i_take_string_as_input(a1, "ABILITY_LIZARD_BITE");
+      result = v2;
+      break;
+    case 59:
+      i_take_string_as_input(a1, "ABILITY_SIX_HEADED_ATTACK");
+      result = v2;
+      break;
+    case 60:
+      i_take_string_as_input(a1, "ABILITY_REGENERATION");
+      result = v2;
+      break;
+    case 61:
+      i_take_string_as_input(a1, "ABILITY_WHIP_STRIKE");
+      result = v2;
+      break;
+    case 62:
+      i_take_string_as_input(a1, "ABILITY_FIRE_SHIELD");
+      result = v2;
+      break;
+    case 63:
+      i_take_string_as_input(a1, "ABILITY_DEADLY_STRIKE");
+      result = v2;
+      break;
+    case 64:
+      i_take_string_as_input(a1, "ABILITY_REBIRTH");
+      result = v2;
+      break;
+    case 65:
+      i_take_string_as_input(a1, "ABILITY_FRIGHTFUL_PRESENCE");
+      result = v2;
+      break;
+    case 66:
+      i_take_string_as_input(a1, "ABILITY_CRYSTAL_SCALES");
+      result = v2;
+      break;
+    case 67:
+      i_take_string_as_input(a1, "ABILITY_LARGE_CREATURE");
+      result = v2;
+      break;
+    case 68:
+      i_take_string_as_input(a1, "ABILITY_FLYER");
+      result = v2;
+      break;
+    case 69:
+      i_take_string_as_input(a1, "ABILITY_CASTER");
+      result = v2;
+      break;
+    case 70:
+      i_take_string_as_input(a1, "ABILITY_TAXPAYER");
+      result = v2;
+      break;
+    case 71:
+      i_take_string_as_input(a1, "ABILITY_SCATTER_SHOT");
+      result = v2;
+      break;
+    case 72:
+      i_take_string_as_input(a1, "ABILITY_RESURRECT_ALLIES");
+      result = v2;
+      break;
+    case 73:
+      i_take_string_as_input(a1, "ABILITY_BALOR_SUMMONIG");
+      result = v2;
+      break;
+    case 74:
+      i_take_string_as_input(a1, "ABILITY_SPRAY_ATTACK");
+      result = v2;
+      break;
+    case 75:
+      i_take_string_as_input(a1, "ABILITY_MANA_FEED");
+      result = v2;
+      break;
+    case 76:
+      i_take_string_as_input(a1, "ABILITY_FIRE_BREATH");
+      result = v2;
+      break;
+    case 77:
+      i_take_string_as_input(a1, "ABILITY_HARM_TOUCH");
+      result = v2;
+      break;
+    case 78:
+      i_take_string_as_input(a1, "ABILITY_WAR_DANCE");
+      result = v2;
+      break;
+    case 79:
+      i_take_string_as_input(a1, "ABILITY_REPAIR");
+      result = v2;
+      break;
+    case 80:
+      i_take_string_as_input(a1, "ABILITY_RANDOM_CASTER");
+      result = v2;
+      break;
+    case 81:
+      i_take_string_as_input(a1, "ABILITY_DASH");
+      result = v2;
+      break;
+    case 82:
+      i_take_string_as_input(a1, "ABILITY_CALL_LIGHTNING");
+      result = v2;
+      break;
+    case 83:
+      i_take_string_as_input(a1, "ABILITY_LAY_HANDS");
+      result = v2;
+      break;
+    case 84:
+      i_take_string_as_input(a1, "ABILITY_THREE_HEADED_ATTACK");
+      result = v2;
+      break;
+    case 85:
+      i_take_string_as_input(a1, "ABILITY_ARMORED");
+      result = v2;
+      break;
+    case 86:
+      i_take_string_as_input(a1, "ABILITY_SHIELD_WALL");
+      result = v2;
+      break;
+    case 87:
+      i_take_string_as_input(a1, "ABILITY_WOUND");
+      result = v2;
+      break;
+    case 88:
+      i_take_string_as_input(a1, "ABILITY_PAW_STRIKE");
+      result = v2;
+      break;
+    case 89:
+      i_take_string_as_input(a1, "ABILITY_BERSERKER_RAGE");
+      result = v2;
+      break;
+    case 90:
+      i_take_string_as_input(a1, "ABILITY_STORMBOLT");
+      result = v2;
+      break;
+    case 91:
+      i_take_string_as_input(a1, "ABILITY_STORMSTRIKE");
+      result = v2;
+      break;
+    case 92:
+      i_take_string_as_input(a1, "ABILITY_MARK_OF_FIRE");
+      result = v2;
+      break;
+    case 93:
+      i_take_string_as_input(a1, "ABILITY_CROSS_ATTACK");
+      result = v2;
+      break;
+    case 94:
+      i_take_string_as_input(a1, "ABILITY_MAGMA_SHIELD");
+      result = v2;
+      break;
+    case 95:
+      i_take_string_as_input(a1, "ABILITY_PACK_HUNTER");
+      result = v2;
+      break;
+    case 96:
+      i_take_string_as_input(a1, "ABILITY_HOWL");
+      result = v2;
+      break;
+    case 97:
+      i_take_string_as_input(a1, "ABILITY_AGILITY");
+      result = v2;
+      break;
+    case 98:
+      i_take_string_as_input(a1, "ABILITY_HEXING_ATTACK");
+      result = v2;
+      break;
+    case 99:
+      i_take_string_as_input(a1, "ABILITY_CLEAVE");
+      result = v2;
+      break;
+    case 100:
+      i_take_string_as_input(a1, "ABILITY_BATTLE_FRENZY");
+      result = v2;
+      break;
+    case 101:
+      i_take_string_as_input(a1, "ABILITY_PACK_DIVE");
+      result = v2;
+      break;
+    case 102:
+      i_take_string_as_input(a1, "ABILITY_CHAMPION_CHARGE");
+      result = v2;
+      break;
+    case 103:
+      i_take_string_as_input(a1, "ABILITY_PURGER");
+      result = v2;
+      break;
+    case 104:
+      i_take_string_as_input(a1, "ABILITY_BLADE_BARRIER");
+      result = v2;
+      break;
+    case 105:
+      i_take_string_as_input(a1, "ABILITY_DEMON_RAGED");
+      result = v2;
+      break;
+    case 106:
+      i_take_string_as_input(a1, "ABILITY_COWARDICE");
+      result = v2;
+      break;
+    case 107:
+      i_take_string_as_input(a1, "ABILITY_TREACHERY");
+      result = v2;
+      break;
+    case 108:
+      i_take_string_as_input(a1, "ABILITY_SET_SNARES");
+      result = v2;
+      break;
+    case 109:
+      i_take_string_as_input(a1, "ABILITY_DEFILE_MAGIC");
+      result = v2;
+      break;
+    case 110:
+      i_take_string_as_input(a1, "ABILITY_MANEURE");
+      result = v2;
+      break;
+    case 111:
+      i_take_string_as_input(a1, "ABILITY_BRUTALITY");
+      result = v2;
+      break;
+    case 112:
+      i_take_string_as_input(a1, "ABILITY_TAUNT");
+      result = v2;
+      break;
+    case 113:
+      i_take_string_as_input(a1, "ABILITY_FIERCE_RETALIATION");
+      result = v2;
+      break;
+    case 114:
+      i_take_string_as_input(a1, "ABILITY_SACRIFICE_GOBLIN");
+      result = v2;
+      break;
+    case 115:
+      i_take_string_as_input(a1, "ABILITY_FAST_ATTACK");
+      result = v2;
+      break;
+    case 116:
+      i_take_string_as_input(a1, "ABILITY_PRESENCE_OF_COMMANDER");
+      result = v2;
+      break;
+    case 117:
+      i_take_string_as_input(a1, "ABILITY_ORDER_OF_THE_CHIEF");
+      result = v2;
+      break;
+    case 118:
+      i_take_string_as_input(a1, "ABILITY_VENOM");
+      result = v2;
+      break;
+    case 119:
+      i_take_string_as_input(a1, "ABILITY_SCAVENGER");
+      result = v2;
+      break;
+    case 120:
+      i_take_string_as_input(a1, "ABILITY_LIGHTNING_BREATH");
+      result = v2;
+      break;
+    case 121:
+      i_take_string_as_input(a1, "ABILITY_SWALLOW_GOBLIN");
+      result = v2;
+      break;
+    case 122:
+      i_take_string_as_input(a1, "ABILITY_GOBLIN_THROWER");
+      result = v2;
+      break;
+    case 123:
+      i_take_string_as_input(a1, "ABILITY_CRUSHING_BLOW");
+      result = v2;
+      break;
+    case 124:
+      i_take_string_as_input(a1, "ABILITY_EVIL_EYE");
+      result = v2;
+      break;
+    case 125:
+      i_take_string_as_input(a1, "ABILITY_RANDOM_CASTER_BLESS");
+      result = v2;
+      break;
+    case 126:
+      i_take_string_as_input(a1, "ABILITY_SYPHON_MANA");
+      result = v2;
+      break;
+    case 127:
+      i_take_string_as_input(a1, "ABILITY_SEARING_AURA");
+      result = v2;
+      break;
+    case 128:
+      i_take_string_as_input(a1, "ABILITY_AXE_OF_SLAUGHTER");
+      result = v2;
+      break;
+    case 129:
+      i_take_string_as_input(a1, "ABILITY_SUMMON_OTHER");
+      result = v2;
+      break;
+    case 130:
+      i_take_string_as_input(a1, "ABILITY_SEDUCE");
+      result = v2;
+      break;
+    case 131:
+      i_take_string_as_input(a1, "ABILITY_LEAP");
+      result = v2;
+      break;
+    case 132:
+      i_take_string_as_input(a1, "ABILITY_DEATH_WAIL");
+      result = v2;
+      break;
+    case 133:
+      i_take_string_as_input(a1, "ABILITY_WEAKENING_AURA");
+      result = v2;
+      break;
+    case 134:
+      i_take_string_as_input(a1, "ABILITY_AMMO_STEAL");
+      result = v2;
+      break;
+    case 135:
+      i_take_string_as_input(a1, "ABILITY_SLEEPING_STRIKE");
+      result = v2;
+      break;
+    case 136:
+      i_take_string_as_input(a1, "ABILITY_SORROW_STRIKE");
+      result = v2;
+      break;
+    case 137:
+      i_take_string_as_input(a1, "ABILITY_HORROR_OF_THE_DEATH");
+      result = v2;
+      break;
+    case 138:
+      i_take_string_as_input(a1, "ABILITY_PIERCING_ARROW");
+      result = v2;
+      break;
+    case 139:
+      i_take_string_as_input(a1, "ABILITY_TREEANT_UNION");
+      result = v2;
+      break;
+    case 140:
+      i_take_string_as_input(a1, "ABILITY_RAGE_OF_THE_FOREST");
+      result = v2;
+      break;
+    case 141:
+      i_take_string_as_input(a1, "ABILITY_POWER_FEED");
+      result = v2;
+      break;
+    case 142:
+      i_take_string_as_input(a1, "ABILITY_RAINBOW_BREATH");
+      result = v2;
+      break;
+    case 143:
+      i_take_string_as_input(a1, "ABILITY_BOND_OF_LIGHT");
+      result = v2;
+      break;
+    case 144:
+      i_take_string_as_input(a1, "ABILITY_WHIRLWIND");
+      result = v2;
+      break;
+    case 145:
+      i_take_string_as_input(a1, "ABILITY_ELDRITCH_AURA");
+      result = v2;
+      break;
+    case 146:
+      i_take_string_as_input(a1, "ABILITY_AURA_OF_FIRE_VULNERABILITY");
+      result = v2;
+      break;
+    case 147:
+      i_take_string_as_input(a1, "ABILITY_AURA_OF_ICE_VULNERABILITY");
+      result = v2;
+      break;
+    case 148:
+      i_take_string_as_input(a1, "ABILITY_AURA_OF_LIGHTNING_VULNERABILITY");
+      result = v2;
+      break;
+    case 149:
+      i_take_string_as_input(a1, "ABILITY_AURA_OF_EARTH_VULNERABILITY");
+      result = v2;
+      break;
+    case 150:
+      i_take_string_as_input(a1, "ABILITY_CALL_STORM");
+      result = v2;
+      break;
+    case 151:
+      i_take_string_as_input(a1, "ABILITY_SABOTAGE");
+      result = v2;
+      break;
+    case 152:
+      i_take_string_as_input(a1, "ABILITY_LUCK_GAMBLER");
+      result = v2;
+      break;
+    case 153:
+      i_take_string_as_input(a1, "ABILITY_ENCHANTED_OBSIDIAN");
+      result = v2;
+      break;
+    case 154:
+      i_take_string_as_input(a1, "ABILITY_ACID_BLOOD");
+      result = v2;
+      break;
+    case 155:
+      i_take_string_as_input(a1, "ABILITY_AURA_OF_BRAVERY");
+      result = v2;
+      break;
+    case 156:
+      i_take_string_as_input(a1, "ABILITY_INCINERATE");
+      result = v2;
+      break;
+    case 157:
+      i_take_string_as_input(a1, "ABILITY_INVISIBILITY");
+      result = v2;
+      break;
+    case 158:
+      i_take_string_as_input(a1, "ABILITY_RIDE_BY_ATTACK");
+      result = v2;
+      break;
+    case 159:
+      i_take_string_as_input(a1, "ABILITY_ANTI_GIANT");
+      result = v2;
+      break;
+    case 160:
+      i_take_string_as_input(a1, "ABILITY_AVENGING_FLAME");
+      result = v2;
+      break;
+    case 161:
+      i_take_string_as_input(a1, "ABILITY_PREPARED_POSITION");
+      result = v2;
+      break;
+    case 162:
+      i_take_string_as_input(a1, "ABILITY_BATTLE_RAGE");
+      result = v2;
+      break;
+    case 163:
+      i_take_string_as_input(a1, "ABILITY_HARPOON_STRIKE");
+      result = v2;
+      break;
+    case 164:
+      i_take_string_as_input(a1, "ABILITY_BEAR_ROAR");
+      result = v2;
+      break;
+    case 165:
+      i_take_string_as_input(a1, "ABILITY_HOLD_GROUND");
+      result = v2;
+      break;
+    case 166:
+      i_take_string_as_input(a1, "ABILITY_FLAMEWAVE");
+      result = v2;
+      break;
+    case 167:
+      i_take_string_as_input(a1, "ABILITY_FLAMESTRIKE");
+      result = v2;
+      break;
+    case 168:
+      i_take_string_as_input(a1, "ABILITY_LIQUID_FLAME_BREATH");
+      result = v2;
+      break;
+    case 169:
+      i_take_string_as_input(a1, "ABILITY_IMMUNITY_TO_CURSE");
+      result = v2;
+      break;
+    case 170:
+      i_take_string_as_input(a1, "ABILITY_IMMUNITY_TO_BERSERK");
+      result = v2;
+      break;
+    case 171:
+      i_take_string_as_input(a1, "ABILITY_IMMUNITY_TO_HYPNOTIZE");
+      result = v2;
+      break;
+    case 172:
+      i_take_string_as_input(a1, "ABILITY_MAGIC_PROOF_25");
+      result = v2;
+      break;
+    case 173:
+      i_take_string_as_input(a1, "ABILITY_FIRE_PROOF_50");
+      result = v2;
+      break;
+    case 174:
+      i_take_string_as_input(a1, "ABILITY_DESTRUCTION_MAGIC_MAGNETISM");
+      result = v2;
+      break;
+    default:
+      *(_DWORD *)a1 = 0;
+      *(_DWORD *)(a1 + 4) = 0;
+      *(_DWORD *)(a1 + 8) = 0;
+      sub_401020((_DWORD *)a1, "ABILITY_NONE", "");
+      result = v2;
+      break;
+  }
+  return result;
+}

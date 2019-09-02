@@ -1,0 +1,902 @@
+int __fastcall sub_96A790(int a1, int a2)
+{
+  int v2; // esi@1
+  int result; // eax@2
+
+  v2 = a1;
+  switch ( a2 )
+  {
+    case 0:
+      i_take_string_as_input(a1, "HERO_SKILL_NONE");
+      result = v2;
+      break;
+    case 1:
+      i_take_string_as_input(a1, "HERO_SKILL_LOGISTICS");
+      result = v2;
+      break;
+    case 2:
+      i_take_string_as_input(a1, "HERO_SKILL_WAR_MACHINES");
+      result = v2;
+      break;
+    case 3:
+      i_take_string_as_input(a1, "HERO_SKILL_LEARNING");
+      result = v2;
+      break;
+    case 4:
+      i_take_string_as_input(a1, "HERO_SKILL_LEADERSHIP");
+      result = v2;
+      break;
+    case 5:
+      i_take_string_as_input(a1, "HERO_SKILL_LUCK");
+      result = v2;
+      break;
+    case 6:
+      i_take_string_as_input(a1, "HERO_SKILL_OFFENCE");
+      result = v2;
+      break;
+    case 7:
+      i_take_string_as_input(a1, "HERO_SKILL_DEFENCE");
+      result = v2;
+      break;
+    case 8:
+      i_take_string_as_input(a1, "HERO_SKILL_SORCERY");
+      result = v2;
+      break;
+    case 9:
+      i_take_string_as_input(a1, "HERO_SKILL_DESTRUCTIVE_MAGIC");
+      result = v2;
+      break;
+    case 10:
+      i_take_string_as_input(a1, "HERO_SKILL_DARK_MAGIC");
+      result = v2;
+      break;
+    case 11:
+      i_take_string_as_input(a1, "HERO_SKILL_LIGHT_MAGIC");
+      result = v2;
+      break;
+    case 12:
+      i_take_string_as_input(a1, "HERO_SKILL_SUMMONING_MAGIC");
+      result = v2;
+      break;
+    case 13:
+      i_take_string_as_input(a1, "HERO_SKILL_TRAINING");
+      result = v2;
+      break;
+    case 14:
+      i_take_string_as_input(a1, "HERO_SKILL_GATING");
+      result = v2;
+      break;
+    case 15:
+      i_take_string_as_input(a1, "HERO_SKILL_NECROMANCY");
+      result = v2;
+      break;
+    case 16:
+      i_take_string_as_input(a1, "HERO_SKILL_AVENGER");
+      result = v2;
+      break;
+    case 17:
+      i_take_string_as_input(a1, "HERO_SKILL_ARTIFICIER");
+      result = v2;
+      break;
+    case 18:
+      i_take_string_as_input(a1, "HERO_SKILL_INVOCATION");
+      result = v2;
+      break;
+    case 19:
+      i_take_string_as_input(a1, "HERO_SKILL_PATHFINDING");
+      result = v2;
+      break;
+    case 20:
+      i_take_string_as_input(a1, "HERO_SKILL_SCOUTING");
+      result = v2;
+      break;
+    case 21:
+      i_take_string_as_input(a1, "HERO_SKILL_NAVIGATION");
+      result = v2;
+      break;
+    case 22:
+      i_take_string_as_input(a1, "HERO_SKILL_FIRST_AID");
+      result = v2;
+      break;
+    case 23:
+      i_take_string_as_input(a1, "HERO_SKILL_BALLISTA");
+      result = v2;
+      break;
+    case 24:
+      i_take_string_as_input(a1, "HERO_SKILL_CATAPULT");
+      result = v2;
+      break;
+    case 25:
+      i_take_string_as_input(a1, "HERO_SKILL_INTELLIGENCE");
+      result = v2;
+      break;
+    case 26:
+      i_take_string_as_input(a1, "HERO_SKILL_SCHOLAR");
+      result = v2;
+      break;
+    case 27:
+      i_take_string_as_input(a1, "HERO_SKILL_EAGLE_EYE");
+      result = v2;
+      break;
+    case 28:
+      i_take_string_as_input(a1, "HERO_SKILL_RECRUITMENT");
+      result = v2;
+      break;
+    case 29:
+      i_take_string_as_input(a1, "HERO_SKILL_ESTATES");
+      result = v2;
+      break;
+    case 30:
+      i_take_string_as_input(a1, "HERO_SKILL_DIPLOMACY");
+      result = v2;
+      break;
+    case 31:
+      i_take_string_as_input(a1, "HERO_SKILL_RESISTANCE");
+      result = v2;
+      break;
+    case 32:
+      i_take_string_as_input(a1, "HERO_SKILL_LUCKY_STRIKE");
+      result = v2;
+      break;
+    case 33:
+      i_take_string_as_input(a1, "HERO_SKILL_FORTUNATE_ADVENTURER");
+      result = v2;
+      break;
+    case 34:
+      i_take_string_as_input(a1, "HERO_SKILL_TACTICS");
+      result = v2;
+      break;
+    case 35:
+      i_take_string_as_input(a1, "HERO_SKILL_ARCHERY");
+      result = v2;
+      break;
+    case 36:
+      i_take_string_as_input(a1, "HERO_SKILL_FRENZY");
+      result = v2;
+      break;
+    case 37:
+      i_take_string_as_input(a1, "HERO_SKILL_PROTECTION");
+      result = v2;
+      break;
+    case 38:
+      i_take_string_as_input(a1, "HERO_SKILL_EVASION");
+      result = v2;
+      break;
+    case 39:
+      i_take_string_as_input(a1, "HERO_SKILL_TOUGHNESS");
+      result = v2;
+      break;
+    case 40:
+      i_take_string_as_input(a1, "HERO_SKILL_MYSTICISM");
+      result = v2;
+      break;
+    case 41:
+      i_take_string_as_input(a1, "HERO_SKILL_WISDOM");
+      result = v2;
+      break;
+    case 42:
+      i_take_string_as_input(a1, "HERO_SKILL_ARCANE_TRAINING");
+      result = v2;
+      break;
+    case 43:
+      i_take_string_as_input(a1, "HERO_SKILL_MASTER_OF_ICE");
+      result = v2;
+      break;
+    case 44:
+      i_take_string_as_input(a1, "HERO_SKILL_MASTER_OF_FIRE");
+      result = v2;
+      break;
+    case 45:
+      i_take_string_as_input(a1, "HERO_SKILL_MASTER_OF_LIGHTNINGS");
+      result = v2;
+      break;
+    case 46:
+      i_take_string_as_input(a1, "HERO_SKILL_MASTER_OF_CURSES");
+      result = v2;
+      break;
+    case 47:
+      i_take_string_as_input(a1, "HERO_SKILL_MASTER_OF_MIND");
+      result = v2;
+      break;
+    case 48:
+      i_take_string_as_input(a1, "HERO_SKILL_MASTER_OF_SICKNESS");
+      result = v2;
+      break;
+    case 49:
+      i_take_string_as_input(a1, "HERO_SKILL_MASTER_OF_BLESSING");
+      result = v2;
+      break;
+    case 50:
+      i_take_string_as_input(a1, "HERO_SKILL_MASTER_OF_ABJURATION");
+      result = v2;
+      break;
+    case 51:
+      i_take_string_as_input(a1, "HERO_SKILL_MASTER_OF_WRATH");
+      result = v2;
+      break;
+    case 52:
+      i_take_string_as_input(a1, "HERO_SKILL_MASTER_OF_QUAKES");
+      result = v2;
+      break;
+    case 53:
+      i_take_string_as_input(a1, "HERO_SKILL_MASTER_OF_CREATURES");
+      result = v2;
+      break;
+    case 54:
+      i_take_string_as_input(a1, "HERO_SKILL_MASTER_OF_ANIMATION");
+      result = v2;
+      break;
+    case 55:
+      i_take_string_as_input(a1, "HERO_SKILL_HOLY_CHARGE");
+      result = v2;
+      break;
+    case 56:
+      i_take_string_as_input(a1, "HERO_SKILL_PRAYER");
+      result = v2;
+      break;
+    case 57:
+      i_take_string_as_input(a1, "HERO_SKILL_EXPERT_TRAINER");
+      result = v2;
+      break;
+    case 58:
+      i_take_string_as_input(a1, "HERO_SKILL_CONSUME_CORPSE");
+      result = v2;
+      break;
+    case 59:
+      i_take_string_as_input(a1, "HERO_SKILL_DEMONIC_FIRE");
+      result = v2;
+      break;
+    case 60:
+      i_take_string_as_input(a1, "HERO_SKILL_DEMONIC_STRIKE");
+      result = v2;
+      break;
+    case 61:
+      i_take_string_as_input(a1, "HERO_SKILL_RAISE_ARCHERS");
+      result = v2;
+      break;
+    case 62:
+      i_take_string_as_input(a1, "HERO_SKILL_NO_REST_FOR_THE_WICKED");
+      result = v2;
+      break;
+    case 63:
+      i_take_string_as_input(a1, "HERO_SKILL_DEATH_SCREAM");
+      result = v2;
+      break;
+    case 64:
+      i_take_string_as_input(a1, "HERO_SKILL_MULTISHOT");
+      result = v2;
+      break;
+    case 65:
+      i_take_string_as_input(a1, "HERO_SKILL_SNIPE_DEAD");
+      result = v2;
+      break;
+    case 66:
+      i_take_string_as_input(a1, "HERO_SKILL_IMBUE_ARROW");
+      result = v2;
+      break;
+    case 67:
+      i_take_string_as_input(a1, "HERO_SKILL_MAGIC_BOND");
+      result = v2;
+      break;
+    case 68:
+      i_take_string_as_input(a1, "HERO_SKILL_MELT_ARTIFACT");
+      result = v2;
+      break;
+    case 69:
+      i_take_string_as_input(a1, "HERO_SKILL_MAGIC_MIRROR");
+      result = v2;
+      break;
+    case 70:
+      i_take_string_as_input(a1, "HERO_SKILL_EMPOWERED_SPELLS");
+      result = v2;
+      break;
+    case 71:
+      i_take_string_as_input(a1, "HERO_SKILL_DARK_RITUAL");
+      result = v2;
+      break;
+    case 72:
+      i_take_string_as_input(a1, "HERO_SKILL_ELEMENTAL_VISION");
+      result = v2;
+      break;
+    case 73:
+      i_take_string_as_input(a1, "HERO_SKILL_ROAD_HOME");
+      result = v2;
+      break;
+    case 74:
+      i_take_string_as_input(a1, "HERO_SKILL_TRIPLE_BALLISTA");
+      result = v2;
+      break;
+    case 75:
+      i_take_string_as_input(a1, "HERO_SKILL_ENCOURAGE");
+      result = v2;
+      break;
+    case 76:
+      i_take_string_as_input(a1, "HERO_SKILL_RETRIBUTION");
+      result = v2;
+      break;
+    case 77:
+      i_take_string_as_input(a1, "HERO_SKILL_HOLD_GROUND");
+      result = v2;
+      break;
+    case 78:
+      i_take_string_as_input(a1, "HERO_SKILL_GUARDIAN_ANGEL");
+      result = v2;
+      break;
+    case 79:
+      i_take_string_as_input(a1, "HERO_SKILL_STUDENT_AWARD");
+      result = v2;
+      break;
+    case 80:
+      i_take_string_as_input(a1, "HERO_SKILL_GRAIL_VISION");
+      result = v2;
+      break;
+    case 81:
+      i_take_string_as_input(a1, "HERO_SKILL_CASTER_CERTIFICATE");
+      result = v2;
+      break;
+    case 82:
+      i_take_string_as_input(a1, "HERO_SKILL_ANCIENT_SMITHY");
+      result = v2;
+      break;
+    case 83:
+      i_take_string_as_input(a1, "HERO_SKILL_PARIAH");
+      result = v2;
+      break;
+    case 84:
+      i_take_string_as_input(a1, "HERO_SKILL_ELEMENTAL_BALANCE");
+      result = v2;
+      break;
+    case 85:
+      i_take_string_as_input(a1, "HERO_SKILL_ABSOLUTE_CHARGE");
+      result = v2;
+      break;
+    case 86:
+      i_take_string_as_input(a1, "HERO_SKILL_QUICK_GATING");
+      result = v2;
+      break;
+    case 87:
+      i_take_string_as_input(a1, "HERO_SKILL_MASTER_OF_SECRETS");
+      result = v2;
+      break;
+    case 88:
+      i_take_string_as_input(a1, "HERO_SKILL_TRIPLE_CATAPULT");
+      result = v2;
+      break;
+    case 89:
+      i_take_string_as_input(a1, "HERO_SKILL_GATING_MASTERY");
+      result = v2;
+      break;
+    case 90:
+      i_take_string_as_input(a1, "HERO_SKILL_CRITICAL_GATING");
+      result = v2;
+      break;
+    case 91:
+      i_take_string_as_input(a1, "HERO_SKILL_CRITICAL_STRIKE");
+      result = v2;
+      break;
+    case 92:
+      i_take_string_as_input(a1, "HERO_SKILL_DEMONIC_RETALIATION");
+      result = v2;
+      break;
+    case 93:
+      i_take_string_as_input(a1, "HERO_SKILL_EXPLODING_CORPSES");
+      result = v2;
+      break;
+    case 94:
+      i_take_string_as_input(a1, "HERO_SKILL_DEMONIC_FLAME");
+      result = v2;
+      break;
+    case 95:
+      i_take_string_as_input(a1, "HERO_SKILL_WEAKENING_STRIKE");
+      result = v2;
+      break;
+    case 96:
+      i_take_string_as_input(a1, "HERO_SKILL_FIRE_PROTECTION");
+      result = v2;
+      break;
+    case 97:
+      i_take_string_as_input(a1, "HERO_SKILL_FIRE_AFFINITY");
+      result = v2;
+      break;
+    case 98:
+      i_take_string_as_input(a1, "HERO_SKILL_ABSOLUTE_GATING");
+      result = v2;
+      break;
+    case 99:
+      i_take_string_as_input(a1, "HERO_SKILL_DEATH_TREAD");
+      result = v2;
+      break;
+    case 100:
+      i_take_string_as_input(a1, "HERO_SKILL_LAST_AID");
+      result = v2;
+      break;
+    case 101:
+      i_take_string_as_input(a1, "HERO_SKILL_LORD_OF_UNDEAD");
+      result = v2;
+      break;
+    case 102:
+      i_take_string_as_input(a1, "HERO_SKILL_HERALD_OF_DEATH");
+      result = v2;
+      break;
+    case 103:
+      i_take_string_as_input(a1, "HERO_SKILL_DEAD_LUCK");
+      result = v2;
+      break;
+    case 104:
+      i_take_string_as_input(a1, "HERO_SKILL_CHILLING_STEEL");
+      result = v2;
+      break;
+    case 105:
+      i_take_string_as_input(a1, "HERO_SKILL_CHILLING_BONES");
+      result = v2;
+      break;
+    case 106:
+      i_take_string_as_input(a1, "HERO_SKILL_SPELLPROOF_BONES");
+      result = v2;
+      break;
+    case 107:
+      i_take_string_as_input(a1, "HERO_SKILL_DEADLY_COLD");
+      result = v2;
+      break;
+    case 108:
+      i_take_string_as_input(a1, "HERO_SKILL_SPIRIT_LINK");
+      result = v2;
+      break;
+    case 109:
+      i_take_string_as_input(a1, "HERO_SKILL_TWILIGHT");
+      result = v2;
+      break;
+    case 110:
+      i_take_string_as_input(a1, "HERO_SKILL_HAUNT_MINE");
+      result = v2;
+      break;
+    case 111:
+      i_take_string_as_input(a1, "HERO_SKILL_ABSOLUTE_FEAR");
+      result = v2;
+      break;
+    case 112:
+      i_take_string_as_input(a1, "HERO_SKILL_DISGUISE_AND_RECKON");
+      result = v2;
+      break;
+    case 113:
+      i_take_string_as_input(a1, "HERO_SKILL_IMBUE_BALLISTA");
+      result = v2;
+      break;
+    case 114:
+      i_take_string_as_input(a1, "HERO_SKILL_CUNNING_OF_THE_WOODS");
+      result = v2;
+      break;
+    case 115:
+      i_take_string_as_input(a1, "HERO_SKILL_FOREST_GUARD_EMBLEM");
+      result = v2;
+      break;
+    case 116:
+      i_take_string_as_input(a1, "HERO_SKILL_ELVEN_LUCK");
+      result = v2;
+      break;
+    case 117:
+      i_take_string_as_input(a1, "HERO_SKILL_FOREST_RAGE");
+      result = v2;
+      break;
+    case 118:
+      i_take_string_as_input(a1, "HERO_SKILL_LAST_STAND");
+      result = v2;
+      break;
+    case 119:
+      i_take_string_as_input(a1, "HERO_SKILL_INSIGHTS");
+      result = v2;
+      break;
+    case 120:
+      i_take_string_as_input(a1, "HERO_SKILL_SUN_FIRE");
+      result = v2;
+      break;
+    case 121:
+      i_take_string_as_input(a1, "HERO_SKILL_SOIL_BURN");
+      result = v2;
+      break;
+    case 122:
+      i_take_string_as_input(a1, "HERO_SKILL_STORM_WIND");
+      result = v2;
+      break;
+    case 123:
+      i_take_string_as_input(a1, "HERO_SKILL_FOG_VEIL");
+      result = v2;
+      break;
+    case 124:
+      i_take_string_as_input(a1, "HERO_SKILL_ABSOLUTE_LUCK");
+      result = v2;
+      break;
+    case 125:
+      i_take_string_as_input(a1, "HERO_SKILL_MARCH_OF_THE_MACHINES");
+      result = v2;
+      break;
+    case 126:
+      i_take_string_as_input(a1, "HERO_SKILL_REMOTE_CONTROL");
+      result = v2;
+      break;
+    case 127:
+      i_take_string_as_input(a1, "HERO_SKILL_ACADEMY_AWARD");
+      result = v2;
+      break;
+    case 128:
+      i_take_string_as_input(a1, "HERO_SKILL_ARTIFICIAL_GLORY");
+      result = v2;
+      break;
+    case 129:
+      i_take_string_as_input(a1, "HERO_SKILL_SPOILS_OF_WAR");
+      result = v2;
+      break;
+    case 130:
+      i_take_string_as_input(a1, "HERO_SKILL_WILDFIRE");
+      result = v2;
+      break;
+    case 131:
+      i_take_string_as_input(a1, "HERO_SKILL_SEAL_OF_PROTECTION");
+      result = v2;
+      break;
+    case 132:
+      i_take_string_as_input(a1, "HERO_SKILL_COUNTERSPELL");
+      result = v2;
+      break;
+    case 133:
+      i_take_string_as_input(a1, "HERO_SKILL_MAGIC_CUSHION");
+      result = v2;
+      break;
+    case 134:
+      i_take_string_as_input(a1, "HERO_SKILL_SUPRESS_DARK");
+      result = v2;
+      break;
+    case 135:
+      i_take_string_as_input(a1, "HERO_SKILL_SUPRESS_LIGHT");
+      result = v2;
+      break;
+    case 136:
+      i_take_string_as_input(a1, "HERO_SKILL_UNSUMMON");
+      result = v2;
+      break;
+    case 137:
+      i_take_string_as_input(a1, "HERO_SKILL_ABSOLUTE_WIZARDY");
+      result = v2;
+      break;
+    case 138:
+      i_take_string_as_input(a1, "HERO_SKILL_TELEPORT_ASSAULT");
+      result = v2;
+      break;
+    case 139:
+      i_take_string_as_input(a1, "HERO_SKILL_SHAKE_GROUND");
+      result = v2;
+      break;
+    case 140:
+      i_take_string_as_input(a1, "HERO_SKILL_DARK_REVELATION");
+      result = v2;
+      break;
+    case 141:
+      i_take_string_as_input(a1, "HERO_SKILL_FAST_AND_FURIOUS");
+      result = v2;
+      break;
+    case 142:
+      i_take_string_as_input(a1, "HERO_SKILL_LUCKY_SPELLS");
+      result = v2;
+      break;
+    case 143:
+      i_take_string_as_input(a1, "HERO_SKILL_POWER_OF_HASTE");
+      result = v2;
+      break;
+    case 144:
+      i_take_string_as_input(a1, "HERO_SKILL_POWER_OF_STONE");
+      result = v2;
+      break;
+    case 145:
+      i_take_string_as_input(a1, "HERO_SKILL_CHAOTIC_SPELLS");
+      result = v2;
+      break;
+    case 146:
+      i_take_string_as_input(a1, "HERO_SKILL_SECRETS_OF_DESTRUCTION");
+      result = v2;
+      break;
+    case 147:
+      i_take_string_as_input(a1, "HERO_SKILL_PAYBACK");
+      result = v2;
+      break;
+    case 148:
+      i_take_string_as_input(a1, "HERO_SKILL_ELITE_CASTERS");
+      result = v2;
+      break;
+    case 149:
+      i_take_string_as_input(a1, "HERO_SKILL_ELEMENTAL_OVERKILL");
+      result = v2;
+      break;
+    case 150:
+      i_take_string_as_input(a1, "HERO_SKILL_ABSOLUTE_CHAINS");
+      result = v2;
+      break;
+    case 151:
+      i_take_string_as_input(a1, "HERO_SKILL_RUNELORE");
+      result = v2;
+      break;
+    case 152:
+      i_take_string_as_input(a1, "HERO_SKILL_REFRESH_RUNE");
+      result = v2;
+      break;
+    case 153:
+      i_take_string_as_input(a1, "HERO_SKILL_STRONG_RUNE");
+      result = v2;
+      break;
+    case 154:
+      i_take_string_as_input(a1, "HERO_SKILL_FINE_RUNE");
+      result = v2;
+      break;
+    case 155:
+      i_take_string_as_input(a1, "HERO_SKILL_QUICKNESS_OF_MIND");
+      result = v2;
+      break;
+    case 156:
+      i_take_string_as_input(a1, "HERO_SKILL_RUNIC_MACHINES");
+      result = v2;
+      break;
+    case 157:
+      i_take_string_as_input(a1, "HERO_SKILL_TAP_RUNES");
+      result = v2;
+      break;
+    case 158:
+      i_take_string_as_input(a1, "HERO_SKILL_RUNIC_ATTUNEMENT");
+      result = v2;
+      break;
+    case 159:
+      i_take_string_as_input(a1, "HERO_SKILL_DWARVEN_LUCK");
+      result = v2;
+      break;
+    case 160:
+      i_take_string_as_input(a1, "HERO_SKILL_OFFENSIVE_FORMATION");
+      result = v2;
+      break;
+    case 161:
+      i_take_string_as_input(a1, "HERO_SKILL_DEFENSIVE_FORMATION");
+      result = v2;
+      break;
+    case 162:
+      i_take_string_as_input(a1, "HERO_SKILL_DISTRACT");
+      result = v2;
+      break;
+    case 163:
+      i_take_string_as_input(a1, "HERO_SKILL_SET_AFIRE");
+      result = v2;
+      break;
+    case 164:
+      i_take_string_as_input(a1, "HERO_SKILL_SHRUG_DARKNESS");
+      result = v2;
+      break;
+    case 165:
+      i_take_string_as_input(a1, "HERO_SKILL_ETERNAL_LIGHT");
+      result = v2;
+      break;
+    case 166:
+      i_take_string_as_input(a1, "HERO_SKILL_RUNIC_ARMOR");
+      result = v2;
+      break;
+    case 167:
+      i_take_string_as_input(a1, "HERO_SKILL_ABSOLUTE_PROTECTION");
+      result = v2;
+      break;
+    case 168:
+      i_take_string_as_input(a1, "HERO_SKILL_SNATCH");
+      result = v2;
+      break;
+    case 169:
+      i_take_string_as_input(a1, "HERO_SKILL_MENTORING");
+      result = v2;
+      break;
+    case 170:
+      i_take_string_as_input(a1, "HERO_SKILL_EMPATHY");
+      result = v2;
+      break;
+    case 171:
+      i_take_string_as_input(a1, "HERO_SKILL_PREPARATION");
+      result = v2;
+      break;
+    case 172:
+      i_take_string_as_input(a1, "HERO_SKILL_DEMONIC_RAGE");
+      result = v2;
+      break;
+    case 173:
+      i_take_string_as_input(a1, "HERO_SKILL_MIGHT_OVER_MAGIC");
+      result = v2;
+      break;
+    case 174:
+      i_take_string_as_input(a1, "HERO_SKILL_MEMORY_OF_OUR_BLOOD");
+      result = v2;
+      break;
+    case 175:
+      i_take_string_as_input(a1, "HERO_SKILL_POWERFULL_BLOW");
+      result = v2;
+      break;
+    case 176:
+      i_take_string_as_input(a1, "HERO_SKILL_ABSOLUTE_RAGE");
+      result = v2;
+      break;
+    case 177:
+      i_take_string_as_input(a1, "HERO_SKILL_PATH_OF_WAR");
+      result = v2;
+      break;
+    case 178:
+      i_take_string_as_input(a1, "HERO_SKILL_BATTLE_ELATION");
+      result = v2;
+      break;
+    case 179:
+      i_take_string_as_input(a1, "HERO_SKILL_LUCK_OF_THE_BARBARIAN");
+      result = v2;
+      break;
+    case 180:
+      i_take_string_as_input(a1, "HERO_SKILL_STUNNING_BLOW");
+      result = v2;
+      break;
+    case 181:
+      i_take_string_as_input(a1, "HERO_SKILL_DEFEND_US_ALL");
+      result = v2;
+      break;
+    case 182:
+      i_take_string_as_input(a1, "HERO_SKILL_GOBLIN_SUPPORT");
+      result = v2;
+      break;
+    case 183:
+      i_take_string_as_input(a1, "HERO_SKILL_BARBARIAN_LEARNING");
+      result = v2;
+      break;
+    case 184:
+      i_take_string_as_input(a1, "HERO_SKILL_POWER_OF_BLOOD");
+      result = v2;
+      break;
+    case 185:
+      i_take_string_as_input(a1, "HERO_SKILL_WARCRY_LEARNING");
+      result = v2;
+      break;
+    case 186:
+      i_take_string_as_input(a1, "HERO_SKILL_BODYBUILDING");
+      result = v2;
+      break;
+    case 187:
+      i_take_string_as_input(a1, "HERO_SKILL_VOICE");
+      result = v2;
+      break;
+    case 188:
+      i_take_string_as_input(a1, "HERO_SKILL_VOICE_TRAINING");
+      result = v2;
+      break;
+    case 189:
+      i_take_string_as_input(a1, "HERO_SKILL_MIGHTY_VOICE");
+      result = v2;
+      break;
+    case 190:
+      i_take_string_as_input(a1, "HERO_SKILL_VOICE_OF_RAGE");
+      result = v2;
+      break;
+    case 191:
+      i_take_string_as_input(a1, "HERO_SKILL_SHATTER_DESTRUCTIVE_MAGIC");
+      result = v2;
+      break;
+    case 192:
+      i_take_string_as_input(a1, "HERO_SKILL_CORRUPT_DESTRUCTIVE");
+      result = v2;
+      break;
+    case 193:
+      i_take_string_as_input(a1, "HERO_SKILL_WEAKEN_DESTRUCTIVE");
+      result = v2;
+      break;
+    case 194:
+      i_take_string_as_input(a1, "HERO_SKILL_DETAIN_DESTRUCTIVE");
+      result = v2;
+      break;
+    case 195:
+      i_take_string_as_input(a1, "HERO_SKILL_SHATTER_DARK_MAGIC");
+      result = v2;
+      break;
+    case 196:
+      i_take_string_as_input(a1, "HERO_SKILL_CORRUPT_DARK");
+      result = v2;
+      break;
+    case 197:
+      i_take_string_as_input(a1, "HERO_SKILL_WEAKEN_DARK");
+      result = v2;
+      break;
+    case 198:
+      i_take_string_as_input(a1, "HERO_SKILL_DETAIN_DARK");
+      result = v2;
+      break;
+    case 199:
+      i_take_string_as_input(a1, "HERO_SKILL_SHATTER_LIGHT_MAGIC");
+      result = v2;
+      break;
+    case 200:
+      i_take_string_as_input(a1, "HERO_SKILL_CORRUPT_LIGHT");
+      result = v2;
+      break;
+    case 201:
+      i_take_string_as_input(a1, "HERO_SKILL_WEAKEN_LIGHT");
+      result = v2;
+      break;
+    case 202:
+      i_take_string_as_input(a1, "HERO_SKILL_DETAIN_LIGHT");
+      result = v2;
+      break;
+    case 203:
+      i_take_string_as_input(a1, "HERO_SKILL_SHATTER_SUMMONING_MAGIC");
+      result = v2;
+      break;
+    case 204:
+      i_take_string_as_input(a1, "HERO_SKILL_CORRUPT_SUMMONING");
+      result = v2;
+      break;
+    case 205:
+      i_take_string_as_input(a1, "HERO_SKILL_WEAKEN_SUMMONING");
+      result = v2;
+      break;
+    case 206:
+      i_take_string_as_input(a1, "HERO_SKILL_DETAIN_SUMMONING");
+      result = v2;
+      break;
+    case 207:
+      i_take_string_as_input(a1, "HERO_SKILL_DEATH_TO_NONEXISTENT");
+      result = v2;
+      break;
+    case 208:
+      i_take_string_as_input(a1, "HERO_SKILL_BARBARIAN_ANCIENT_SMITHY");
+      result = v2;
+      break;
+    case 209:
+      i_take_string_as_input(a1, "HERO_SKILL_BARBARIAN_WEAKENING_STRIKE");
+      result = v2;
+      break;
+    case 210:
+      i_take_string_as_input(a1, "HERO_SKILL_BARBARIAN_SOIL_BURN");
+      result = v2;
+      break;
+    case 211:
+      i_take_string_as_input(a1, "HERO_SKILL_BARBARIAN_FOG_VEIL");
+      result = v2;
+      break;
+    case 212:
+      i_take_string_as_input(a1, "HERO_SKILL_BARBARIAN_INTELLIGENCE");
+      result = v2;
+      break;
+    case 213:
+      i_take_string_as_input(a1, "HERO_SKILL_BARBARIAN_MYSTICISM");
+      result = v2;
+      break;
+    case 214:
+      i_take_string_as_input(a1, "HERO_SKILL_BARBARIAN_ELITE_CASTERS");
+      result = v2;
+      break;
+    case 215:
+      i_take_string_as_input(a1, "HERO_SKILL_BARBARIAN_STORM_WIND");
+      result = v2;
+      break;
+    case 216:
+      i_take_string_as_input(a1, "HERO_SKILL_BARBARIAN_FIRE_PROTECTION");
+      result = v2;
+      break;
+    case 217:
+      i_take_string_as_input(a1, "HERO_SKILL_BARBARIAN_SUN_FIRE");
+      result = v2;
+      break;
+    case 218:
+      i_take_string_as_input(a1, "HERO_SKILL_BARBARIAN_DISTRACT");
+      result = v2;
+      break;
+    case 219:
+      i_take_string_as_input(a1, "HERO_SKILL_BARBARIAN_DARK_REVELATION");
+      result = v2;
+      break;
+    case 220:
+      i_take_string_as_input(a1, "HERO_SKILL_BARBARIAN_MENTORING");
+      result = v2;
+      break;
+    default:
+      *(_DWORD *)a1 = 0;
+      *(_DWORD *)(a1 + 4) = 0;
+      *(_DWORD *)(a1 + 8) = 0;
+      sub_401020((_DWORD *)a1, "HERO_SKILL_NONE", "");
+      result = v2;
+      break;
+  }
+  return result;
+}

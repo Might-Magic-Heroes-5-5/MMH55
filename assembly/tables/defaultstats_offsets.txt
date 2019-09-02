@@ -1,0 +1,776 @@
+	*(number_of_creatures_maybe() + 04)																	- 
+	*(number_of_creatures_maybe() + 08)																	- 
+	*(number_of_creatures_maybe() + 12)																	- 
+	*(number_of_creatures_maybe() + 16)																	- 
+	*(number_of_creatures_maybe() + 20)																	- 
+	*(number_of_creatures_maybe() + 24)																	- 
+	*(number_of_creatures_maybe() + 28)																	- 
+	*(number_of_creatures_maybe() + 32)																	- 
+	*(number_of_creatures_maybe() + 36)																	- 
+	*(number_of_creatures_maybe() + 40)																	- 
+	*(number_of_creatures_maybe() + 44)																	- 
+	*(number_of_creatures_maybe() + 48)																	- 
+	*(number_of_creatures_maybe() + 52)																	- 
+	*(number_of_creatures_maybe() + 56)																	- 
+	*(number_of_creatures_maybe() + 60)																	- 
+	*(number_of_creatures_maybe() + 64)																	- RPGStats
+	*(number_of_creatures_maybe() + 68)																	- HeroInitiative
+VRF	*(number_of_creatures_maybe() + 72)																	- SpellInitiative
+	*(number_of_creatures_maybe() + 76)																	- ATBEndTime
+VRF	*(number_of_creatures_maybe() + 80)																	- ATBBaseTime
+VRF	*(number_of_creatures_maybe() + 84)																	- RumorCost
+VRF	*(number_of_creatures_maybe() + 88)																	- adventure
+VRF	*(number_of_creatures_maybe() + 92)																	- BaseHeroMovement
+	*(number_of_creatures_maybe() + 96)																	- BaseHeroLookRange
+	*(number_of_creatures_maybe() + 100)																- MinCreatureSpeed
+	*(number_of_creatures_maybe() + 104)																- MaxCreatureSpeed
+VRF	*(number_of_creatures_maybe() + 108)																- DepthBetweenFloors
+	*(number_of_creatures_maybe() + 112)																- VisitFountainOfYouthMovementBonus
+	*(number_of_creatures_maybe() + 116)																- VisitRallyFlagMovementBonus
+	*(number_of_creatures_maybe() + 120)																- VisitOasisMovementBonus
+	*(number_of_creatures_maybe() + 124)																- VisitStablesMovementBonus
+	*(number_of_creatures_maybe() + 128)																- ForWeekStablesMaxLandMovementBonus
+VRF	*(number_of_creatures_maybe() + 132)																- LighthouseMaxSeaMovementBonus
+VRF	*(number_of_creatures_maybe() + 136)																- HeroManaPerKnowledge
+VRF	*(number_of_creatures_maybe() + 140)																- Respawn
+VRF	*(number_of_creatures_maybe() + 144)																- MonstersMin
+VRF	*(number_of_creatures_maybe() + 148)																- MonstersMax
+VRF	*(number_of_creatures_maybe() + 152)																- MonstersRandomUpgradeSub
+	*(number_of_creatures_maybe() + 156)																- MonsterDowngradeProb
+	*(number_of_creatures_maybe() + 160)																- MonsterDowngradeMult
+	*(number_of_creatures_maybe() + 164)																- MonsterProbabilityPerCell
+	*(number_of_creatures_maybe() + 168)																- StartHumanResources
+	*(number_of_creatures_maybe() + 172)																- Item
+	*(number_of_creatures_maybe() + 176)																- StartComputerResources
+	*(number_of_creatures_maybe() + 180)																- Item
+	*(number_of_creatures_maybe() + 184)																- 
+	*(number_of_creatures_maybe() + 188)																- 
+	*(number_of_creatures_maybe() + 192)																- 
+	*(number_of_creatures_maybe() + 196)																- 
+	*(number_of_creatures_maybe() + 200)																- 
+	*(number_of_creatures_maybe() + 204)																- 
+	*(number_of_creatures_maybe() + 208)																- 
+	*(number_of_creatures_maybe() + 212)																- 
+	*(number_of_creatures_maybe() + 216)																- 
+	*(number_of_creatures_maybe() + 220)																- 
+	*(number_of_creatures_maybe() + 224)																- 
+	*(number_of_creatures_maybe() + 228)																- 
+	*(number_of_creatures_maybe() + 232)																- 
+	*(number_of_creatures_maybe() + 236)																- 
+	*(number_of_creatures_maybe() + 240)																- 
+	*(number_of_creatures_maybe() + 244)																- 
+	*(number_of_creatures_maybe() + 248)																- 
+	*(number_of_creatures_maybe() + 252)																- 
+	*(number_of_creatures_maybe() + 256)																- 
+	*(number_of_creatures_maybe() + 260)																- 
+	*(number_of_creatures_maybe() + 264)																- 
+	*(number_of_creatures_maybe() + 268)																- 
+	*(number_of_creatures_maybe() + 272)																- 
+VRF	*(number_of_creatures_maybe() + 276)																- HeroSkills
+VRF	*(number_of_creatures_maybe() + 280)																- Scouting_VisibilityIncrease
+VRF	*(number_of_creatures_maybe() + 284)																- DisguiseAndReckon_VisibilityIncrease
+VRF	*(number_of_creatures_maybe() + 288)																- Intelligence_ManaPointsBonus
+VRF	*(number_of_creatures_maybe() + 292)																- WarMachines_HealthBonusPerSkillTrained
+	*(number_of_creatures_maybe() + 296)																- WarMachines_PerkSpecificHealthMultiplier
+VRF	*(number_of_creatures_maybe() + 300)																- TownBuildingBonuses
+VRF	*(number_of_creatures_maybe() + 304)																- Heaven_GrailLuckBoost
+VRF	*(number_of_creatures_maybe() + 308)																- Inferno_InfernalLoomEnemyLuckPenalty
+VRF	*(number_of_creatures_maybe() + 312)																- Inferno_GrailDefenderSpellpowerBonus
+VRF	*(number_of_creatures_maybe() + 316)																- Sylvian_SparklingFountainDefenderLuckBonus
+VRF	*(number_of_creatures_maybe() + 320)																- Sylvian_GrailLuckBoost
+VRF	*(number_of_creatures_maybe() + 324)																- Necropolis_UnholyTempleEnemyMoralePenalty
+VRF	*(number_of_creatures_maybe() + 328)																- Academy_GrailDefenderKnowledgeBonus
+VRF	*(number_of_creatures_maybe() + 332)																- Dungeon_HallOfIntrigueKnowledgeBoost
+VRF	*(number_of_creatures_maybe() + 336)																- Dungeon_GrailDefenderSpellpowerBonus
+VRF	*(number_of_creatures_maybe() + 340)																- Fortress_Arena_BrawlerGrowthAddition
+VRF	*(number_of_creatures_maybe() + 344)																- Fortress_Arena_RuneMageGrowthAddition
+VRF	*(number_of_creatures_maybe() + 348)																- Fortress_GuardPostStats
+	*(number_of_creatures_maybe() + 352)																- CellToPlaceWithFort
+	*(number_of_creatures_maybe() + 356)																- <x>
+	*(number_of_creatures_maybe() + 360)																- <y>
+	*(number_of_creatures_maybe() + 364)																- CellToPlaceNoFort
+	*(number_of_creatures_maybe() + 368)																- <x>
+	*(number_of_creatures_maybe() + 372)																- <y>
+VRF	*(number_of_creatures_maybe() + 376)																- BaseCreatureToPlace
+VRF	*(number_of_creatures_maybe() + 380)																- CreaturesPerTownLevelPerMonth
+VRF	*(number_of_creatures_maybe() + 384)																- Fortress_BlazingAnvil_DefenderDefenceBonus
+VRF	*(number_of_creatures_maybe() + 388)																- Fortress_BlazingAnvil_DefenderSpellPowerBonus
+	*(number_of_creatures_maybe() + 392)																- Stronghold_TowerOfHeroes_OffenceBonus
+VRF	*(number_of_creatures_maybe() + 396)																- Stronghold_GarbagePile_GoblinGrowthAddition
+	*(number_of_creatures_maybe() + 400)																- TalismanOfAdventure
+	*(number_of_creatures_maybe() + 404)																- Levels
+	*(number_of_creatures_maybe() + 408)																- Spell
+	*(number_of_creatures_maybe() + 412)																- CostOfUpgrade
+	*(number_of_creatures_maybe() + 416)																- resources
+	*(number_of_creatures_maybe() + 420)																- HeroLevel
+	*(number_of_creatures_maybe() + 424)																- Spell
+	*(number_of_creatures_maybe() + 428)																- CostOfUpgrade
+	*(number_of_creatures_maybe() + 432)																- resources
+	*(number_of_creatures_maybe() + 436)																- HeroLevel
+	*(number_of_creatures_maybe() + 440)																- AstrologerCallWeekCost
+	*(number_of_creatures_maybe() + 444)																- resource
+VRF	*(number_of_creatures_maybe() + 448)																- SacrificialAltar_ArtifactCostOfGoldToExpCoef
+VRF	*(number_of_creatures_maybe() + 452)																- SacrificialAltar_CreatureHitsToExpCoef
+VRF	*(number_of_creatures_maybe() + 456)																- Marketplace_ArtifactSellCostOfGoldCoef
+	*(number_of_creatures_maybe() + 460)																- <combat>
+VRF	*(number_of_creatures_maybe() + 464)																- DamageIncrease
+	*(number_of_creatures_maybe() + 468)																- DamageIncreaseCap
+VRF	*(number_of_creatures_maybe() + 472)																- DamageDecrease
+	*(number_of_creatures_maybe() + 476)																- DamageDecreaseCap
+	*(number_of_creatures_maybe() + 480)																- DynamicBattle_HeroTimeToCommand
+	*(number_of_creatures_maybe() + 484)																- DynamicBattle_ChoosePresetTime
+	*(number_of_creatures_maybe() + 488)																- DynamicBattle_TacticsTime
+	*(number_of_creatures_maybe() + 492)																- DynamicBattle_SpeedCoeffs
+	*(number_of_creatures_maybe() + 496)																- Item
+	*(number_of_creatures_maybe() + 500)																- Item
+	*(number_of_creatures_maybe() + 504)																- DynamicBattle_SpeedCoefAffectsTactics
+	*(number_of_creatures_maybe() + 508)																- <Creatures>
+	*(number_of_creatures_maybe() + 512)																- <Haven>
+VRF	*(number_of_creatures_maybe() + 516)																- PreciseShotRange
+VRF	*(number_of_creatures_maybe() + 520)																- Jousting_DamageBonusPerPathCell and 524?
+	*(number_of_creatures_maybe() + 524)																- <renegates>
+VRF	*(number_of_creatures_maybe() + 528)																- BattleFrenzyBoostFactor
+	*(number_of_creatures_maybe() + 532)																- ChampionChargeMinimalDistance	
+	*(number_of_creatures_maybe() + 536)																- <ChampionChargePattern href="/GameMechanics/Creature/Creatures/Haven/ChampionCharge.xdb#xpointer(/PatternAttack)"/>	
+	*(number_of_creatures_maybe() + 540)																- <ChampionChargePattern href="/GameMechanics/Creature/Creatures/Haven/ChampionCharge.xdb#xpointer(/PatternAttack)"/>	
+VRF	*(number_of_creatures_maybe() + 544)																- PackDive_DelayBeforAttack	
+VRF	*(number_of_creatures_maybe() + 548)																- PackDive_DamageMultiplier	
+VRF	*(number_of_creatures_maybe() + 552)																- array <Inferno>
+VRF	*(number_of_creatures_maybe() + 556)																- ManaStealPerWeekPopulation
+VRF	*(number_of_creatures_maybe() + 560)																- SearingAuraDamageHits
+VRF	*(number_of_creatures_maybe() + 564)																- AxeOfSlaughterDamageHits
+VRF	*(number_of_creatures_maybe() + 568)																- SyphonManaCoef
+VRF	*(number_of_creatures_maybe() + 572)																- Leap_JumpDistanceMin
+VRF	*(number_of_creatures_maybe() + 576)																- Leap_JumpDistanceMax
+VRF	*(number_of_creatures_maybe() + 580)																- Leap_AttackDamageBonusBase
+VRF	*(number_of_creatures_maybe() + 584)																- Leap_AttackDamageBonusPerPathCell
+VRF	*(number_of_creatures_maybe() + 588)																- Leap_RetaliateDamageBonusBase
+VRF	*(number_of_creatures_maybe() + 592)																- Leap_RetaliateDamageBonusPerPathCell
+VRF	*(number_of_creatures_maybe() + 596)																- SummonOther_CalcDistanceIgnoreObstacles
+VRF	*(number_of_creatures_maybe() + 600)																- SummonOther_DistanceDecrease
+	*(number_of_creatures_maybe() + 604)																- array <Necropolis>
+VRF	*(number_of_creatures_maybe() + 608)																- ZombieWeakeningStrike
+VRF	*(number_of_creatures_maybe() + 612)																- ChanceToMissToIncorporeal
+VRF	*(number_of_creatures_maybe() + 616)																- LifeDrainIntensity
+VRF	*(number_of_creatures_maybe() + 620)																- DeathWailRange
+VRF	*(number_of_creatures_maybe() + 624)																- DeathWailDamageCoef
+VRF	*(number_of_creatures_maybe() + 628)																- DeathWailDamageArgument
+VRF	*(number_of_creatures_maybe() + 632)																- DeathWailDamageConst
+VRF	*(number_of_creatures_maybe() + 636)																- WeakeningAuraMoraleDec
+VRF	*(number_of_creatures_maybe() + 640)																- WeakeningAuraOffenceDec
+VRF	*(number_of_creatures_maybe() + 644)																- WeakeningAuraDeffenceDec
+VRF	*(number_of_creatures_maybe() + 648)																- SleepingStrike_Duration
+VRF	*(number_of_creatures_maybe() + 652)																- SorrowStrike_SpellTrained
+VRF	*(number_of_creatures_maybe() + 656)																- HorrorOfDeath_MoraleDecrease
+VRF	*(number_of_creatures_maybe() + 660)																- AmmoSteal_CalcDistanceIgnoreObstacles
+VRF	*(number_of_creatures_maybe() + 664)																- AmmoSteal_DistanceDecrease
+	*(number_of_creatures_maybe() + 668)																- <Sylvan>
+VRF	*(number_of_creatures_maybe() + 672)																- AuraOfMagicResistance
+VRF	*(number_of_creatures_maybe() + 676)																- BlindingAttackSpellPower
+VRF	*(number_of_creatures_maybe() + 680)																- WardingArrowsATBAffect
+VRF	*(number_of_creatures_maybe() + 684)																- DefenceBonusOnTakeRoots
+VRF	*(number_of_creatures_maybe() + 688)																- PiercingArrowCoef
+VRF	*(number_of_creatures_maybe() + 692)																- TreeanUnionCasterHits
+VRF	*(number_of_creatures_maybe() + 696)																- TreeanUnionTargetHits
+	*(number_of_creatures_maybe() + 700)																- TreeanUnionTargetBaseCreature
+VRF	*(number_of_creatures_maybe() + 704)																- RageOfTheForestInitiativeInc
+VRF	*(number_of_creatures_maybe() + 708)																- PowerFeedOnlyRanger
+	*(number_of_creatures_maybe() + 712)																- BondOfLight_MinDuplicatedEffectMastery
+VRF	*(number_of_creatures_maybe() + 716)																- AgilityDefenceBoostPerCell
+	*(number_of_creatures_maybe() + 720)																- <Academy>
+VRF	*(number_of_creatures_maybe() + 724)																- GremlinRepairPowerPreCreature
+VRF	*(number_of_creatures_maybe() + 728)																- Dash_InitiativeFactor
+VRF	*(number_of_creatures_maybe() + 732)																- Dash_Duration
+VRF	*(number_of_creatures_maybe() + 736)																- VulnerabilityDamageCoef
+	*(number_of_creatures_maybe() + 740)																- EnchantedObsidian_DamageToHealCoef
+VRF	*(number_of_creatures_maybe() + 744)																- MagicMagnetism_DamageRedirectPercentPerWeeklyGrowth
+	*(number_of_creatures_maybe() + 748)																- SabotageCoef
+VRF	*(number_of_creatures_maybe() + 752)																- CallStorm_DamagePerCreature
+VRF	*(number_of_creatures_maybe() + 756)																- CallStorm_ShootPenaltyPerCreature
+VRF	*(number_of_creatures_maybe() + 760)																- CallStorm_MaxShootPenalty
+VRF	*(number_of_creatures_maybe() + 764)																- CallStorm_DurationInRounds
+	*(number_of_creatures_maybe() + 768)																- <Dungeon>
+	*(number_of_creatures_maybe() + 772)																- AssasinPoisonDamagePerPower
+VRF	*(number_of_creatures_maybe() + 776)																- AssasinPoisonCounter
+VRF	*(number_of_creatures_maybe() + 780)																- WhipStrikeSpellPower
+VRF	*(number_of_creatures_maybe() + 784)																- HydraRegenerationMin
+	*(number_of_creatures_maybe() + 788)																- HydraRegenerationMax
+VRF	*(number_of_creatures_maybe() + 792)																- RiderCharge_DefenceReducePerPathCell
+VRF	*(number_of_creatures_maybe() + 796)																- AcidicHydraPattern href=
+VRF	*(number_of_creatures_maybe() + 800)																- AcidicHydraPattern href=
+VRF	*(number_of_creatures_maybe() + 804)																- AuraOfBraveryMoraleMin
+VRF	*(number_of_creatures_maybe() + 808)																- Invisibility_DurationInRounds
+VRF	*(number_of_creatures_maybe() + 812)																- IncinerateCoef
+VRF	*(number_of_creatures_maybe() + 816)																- RideByAttack_DamageCoef
+VRF	*(number_of_creatures_maybe() + 820)																- RideByAttack_LastPointsToExclude
+VRF	*(number_of_creatures_maybe() + 824)																- <Fortress>
+VRF	*(number_of_creatures_maybe() + 828)																- ShieldWall_DamageReducePerPathCell
+VRF	*(number_of_creatures_maybe() + 832)																- ShieldWall_MaxDamageReduce
+VRF	*(number_of_creatures_maybe() + 836)																- Wound_EffectDurationInRounds
+VRF	*(number_of_creatures_maybe() + 840)																- Wound_SpeedDecrease
+VRF	*(number_of_creatures_maybe() + 844)																- Wound_InitiativeDecrease
+VRF	*(number_of_creatures_maybe() + 848)																- MarkOfFire_EffectDurationInRounds
+VRF	*(number_of_creatures_maybe() + 852)																- MarkOfFire_FireDamageMultiplier
+VRF	*(number_of_creatures_maybe() + 856)																- AntiGiantDefenceInc
+VRF	*(number_of_creatures_maybe() + 860)																- AntiGiantAttackInc
+VRF	*(number_of_creatures_maybe() + 864)																- <AvengingFlameEffect href="/GameMechanics/Spell/Creature_Abilities/Dwarf/AvangingFlame.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+VRF	*(number_of_creatures_maybe() + 868)																- <AvengingFlameEffect href="/GameMechanics/Spell/Creature_Abilities/Dwarf/AvangingFlame.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+VRF	*(number_of_creatures_maybe() + 872)																- AvengingFlameCoef
+VRF	*(number_of_creatures_maybe() + 876)																- BearRoar_SmallCreaturesChanceMult
+	*(number_of_creatures_maybe() + 880) 																- BearRoar_EffectDuration
+VRF	*(number_of_creatures_maybe() + 884) 																- BearRoar_MoraleBonus
+	*(number_of_creatures_maybe() + 888) 																- BearRoar_HealthBonus
+VRF	*(number_of_creatures_maybe() + 892) 																- HarpoonStrike_DamageBonus
+VRF	*(number_of_creatures_maybe() + 896) 																- HarpoonStrike_WorksOnLargeCreatures
+VRF	*(number_of_creatures_maybe() + 900) 																- LiquidFlameBreath_DamagePerCreature
+VRF	*(number_of_creatures_maybe() + 904) 																- LiquidFlameBreath_MinDuration
+VRF	*(number_of_creatures_maybe() + 908) 																- LiquidFlameBreath_MaxDuration
+VRF	*(number_of_creatures_maybe() + 912) 																- PreparedPosition_DefenceBonus
+VRF	*(number_of_creatures_maybe() + 916) 																- BattleRage_InitiativeBonus
+VRF	*(number_of_creatures_maybe() + 920)																- BattleRage_AttackBonus
+VRF	*(number_of_creatures_maybe() + 924)																- BattleRage_EffectDuration
+VRF	*(number_of_creatures_maybe() + 928)																- FlameWave_WaveLength
+VRF	*(number_of_creatures_maybe() + 932)																- FlameWave_ChanceCoef
+VRF	*(number_of_creatures_maybe() + 936)																- FlameWave_WaveSpeed
+VRF	*(number_of_creatures_maybe() + 940)																- Flamestrike_DamageMultipiler
+	*(number_of_creatures_maybe() + 944)																- Neutral
+VRF	*(number_of_creatures_maybe() + 948)																- HowlMaxATBValueAtStart
+VRF	*(number_of_creatures_maybe() + 952)																- ManticorePoisonDamagePerPower
+	*(number_of_creatures_maybe() + 956)																- ManticorePoisonCounter
+	*(number_of_creatures_maybe() + 960)																- HexingAttackSpells
+	*(number_of_creatures_maybe() + 964)																- Item
+	*(number_of_creatures_maybe() + 968)																- Spell
+	*(number_of_creatures_maybe() + 972)																- Stronghold
+VRF	*(number_of_creatures_maybe() + 976)																- DemonRage
+	*(number_of_creatures_maybe() + 980)																- RPForLevel1
+	*(number_of_creatures_maybe() + 984)																- RPForLevel2
+	*(number_of_creatures_maybe() + 988)																- RPForLevel3
+	*(number_of_creatures_maybe() + 992)																- StartRP
+	*(number_of_creatures_maybe() + 996)																- EnemyStackKilledRP
+VRF	*(number_of_creatures_maybe() + 1000)																- FriendlyStackKilledRP
+VRF	*(number_of_creatures_maybe() + 1004)																- FriendlyStackKilledRPEnraged
+VRF	*(number_of_creatures_maybe() + 1008)																- HeroAttackRP
+VRF	*(number_of_creatures_maybe() + 1012)																- ReceiveHeroAttackRP
+	*(number_of_creatures_maybe() + 1016)																- MeleeAtackRP
+VRF	*(number_of_creatures_maybe() + 1020)																- RecevieMeleeAttackRP
+	*(number_of_creatures_maybe() + 1024)																- RangedAttackRP
+VRF	*(number_of_creatures_maybe() + 1028)																- ReceiveRangedAttackRP
+	*(number_of_creatures_maybe() + 1032)																- CastSpellRP
+VRF	*(number_of_creatures_maybe() + 1036)																- ReceiveDDSpellRP
+	*(number_of_creatures_maybe() + 1040)																- ReceiveCurseRP
+VRF	*(number_of_creatures_maybe() + 1044)																- ReceiveMoatDamageRP
+	*(number_of_creatures_maybe() + 1048)																- MoveRP
+	*(number_of_creatures_maybe() + 1052)																- DefendRP
+	*(number_of_creatures_maybe() + 1056)																- WaitRP
+VRF	*(number_of_creatures_maybe() + 1060)																- BadMoraleRP
+	*(number_of_creatures_maybe() + 1064)																- UseGoblinRP
+VRF	*(number_of_creatures_maybe() + 1068)																- UseCowardiceRP
+VRF	*(number_of_creatures_maybe() + 1072)																- BlindedRPPerTurn
+	*(number_of_creatures_maybe() + 1076)																- RPCoefUnderBerserk
+	*(number_of_creatures_maybe() + 1080)																- ActionRPUnderHypnotize
+VRF	*(number_of_creatures_maybe() + 1084)																- ForgetfullnessRPBonusBase
+VRF	*(number_of_creatures_maybe() + 1088)																- ForgetfullnessRPBonusPerTrained
+VRF	*(number_of_creatures_maybe() + 1092)																- ReceiveBashRP
+VRF	*(number_of_creatures_maybe() + 1096)																- ReceiveFearRP
+	*(number_of_creatures_maybe() + 1100)																- LifeDrainedRP
+VRF	*(number_of_creatures_maybe() + 1104)																- WeakenedRP
+VRF	*(number_of_creatures_maybe() + 1108)																- RPCoefPowerOfBlood
+VRF	*(number_of_creatures_maybe() + 1112)																- AbsoluteRageRP
+	*(number_of_creatures_maybe() + 1116)																- UltimateBloodRage_RageForLevelDecrease
+VRF	*(number_of_creatures_maybe() + 1120)																- MemoryOfOurBlood_MinRP
+VRF	*(number_of_creatures_maybe() + 1124)																- MemoryOfOurBlood_MaxRP
+VRF	*(number_of_creatures_maybe() + 1128)																- MemoryOfOurBlood_RPStep
+	*(number_of_creatures_maybe() + 1132)																- BattleElation_RPOnGoodMorale
+VRF	*(number_of_creatures_maybe() + 1136)																- PileOfOurFoes_StartRPBonus
+	*(number_of_creatures_maybe() + 1140)																- DemonHunter_RPBonusPerHeroLevel
+VRF	*(number_of_creatures_maybe() + 1144)																- Base
+VRF	*(number_of_creatures_maybe() + 1148)																- LevelDivisor
+VRF	*(number_of_creatures_maybe() + 1152)																- PerDividedLevel
+	*(number_of_creatures_maybe() + 1156)																- Bonuses
+	*(number_of_creatures_maybe() + 1160)																- Item
+	*(number_of_creatures_maybe() + 1164)																- DamageAbsorbtionPerHeroSkill
+	*(number_of_creatures_maybe() + 1168)																- Item 0
+	*(number_of_creatures_maybe() + 1172)																- Item1,2
+	*(number_of_creatures_maybe() + 1176)																- Item3,4
+VRF	*(number_of_creatures_maybe() + 1180)																- HealthToRageTransferCoef
+VRF	*(number_of_creatures_maybe() + 1184)																- VenomDuration
+VRF	*(number_of_creatures_maybe() + 1188)																- SwallowGoblinRange
+VRF	*(number_of_creatures_maybe() + 1192)																- SacrificeGoblinRange
+	*(number_of_creatures_maybe() + 1196)																- 
+VRF	*(number_of_creatures_maybe() + 1200)																- SacrificeGoblin_ManaRestorePerHP
+VRF	*(number_of_creatures_maybe() + 1204)																- SacrificeGoblinMaxTimesStacked
+	*(number_of_creatures_maybe() + 1208)																- ThrowerRange
+	*(number_of_creatures_maybe() + 1212)																- ShamanAttackIncrease
+	*(number_of_creatures_maybe() + 1216)																- ShamanDefenceIncrease
+	*(number_of_creatures_maybe() + 1220)																- ShamanMoraleIncrease
+VRF	*(number_of_creatures_maybe() + 1224)																- Treachery
+VRF	*(number_of_creatures_maybe() + 1228)																- PresenceOfCommanderInitiativeInc
+VRF	*(number_of_creatures_maybe() + 1232)																- FierceRetaliationCoef
+VRF	*(number_of_creatures_maybe() + 1236)																- ScavengerCoef
+VRF	*(number_of_creatures_maybe() + 1240)																- CrushigBlowCoef
+VRF	*(number_of_creatures_maybe() + 1244)																- OrderOfTheChiefDamageCoef
+VRF	*(number_of_creatures_maybe() + 1248)																- OrderOfTheChiefInitiativeCoef
+VRF	*(number_of_creatures_maybe() + 1252)																- OrderOfTheChiefInitiativeMax
+	*(number_of_creatures_maybe() + 1256)																- DefileMagicSpellPowerCoef
+VRF	*(number_of_creatures_maybe() + 1260)																- DefileMagicManaCoef
+VRF	*(number_of_creatures_maybe() + 1264)																- EvilEye_LuckDecrease
+VRF	*(number_of_creatures_maybe() + 1268)																- ConjuredPhoenix href="ConjuredPhoenix
+	*(number_of_creatures_maybe() + 1272)																- ConjuredPhoenix href="ConjuredPhoenix
+VRF	*(number_of_creatures_maybe() + 1276)																- DefenceBonusOnDefend
+	*(number_of_creatures_maybe() + 1280)																- Abilities
+VRF	*(number_of_creatures_maybe() + 1284)																- FireShield_Damage_Multiplier
+VRF	*(number_of_creatures_maybe() + 1288)																- MagmaShield_Damage_Multiplier	
+	*(number_of_creatures_maybe() + 1292)																- HeroSkills
+VRF	*(number_of_creatures_maybe() + 1296)																- Knight
+VRF	*(number_of_creatures_maybe() + 1300)																- RoadHome
+VRF	*(number_of_creatures_maybe() + 1304)																- SpeedBonus
+VRF	*(number_of_creatures_maybe() + 1308)																- NativeTerrain
+VRF	*(number_of_creatures_maybe() + 1312)																- HoldGround_DefendBonusMultiplier
+VRF	*(number_of_creatures_maybe() + 1316)																- HoldGround_TakeRootsBonusMultiplier
+VRF	*(number_of_creatures_maybe() + 1320)																- Training
+VRF	*(number_of_creatures_maybe() + 1324)																- BasicDamageBonus
+VRF	*(number_of_creatures_maybe() + 1328)																- AdvancedDamageBonus
+VRF	*(number_of_creatures_maybe() + 1332)																- ExpertDamageBonus
+VRF	*(number_of_creatures_maybe() + 1336)																- ExtraExpertDamageBonus
+VRF	*(number_of_creatures_maybe() + 1340)																- TrainingPointsPerWeek
+VRF	*(number_of_creatures_maybe() + 1344)																- TrainingPointsPerWeek_Upgraded
+	*(number_of_creatures_maybe() + 1348)																- BaseCostMultiplier
+VRF	*(number_of_creatures_maybe() + 1352)																- SkillTraining_CostDiscountPerLevel
+VRF	*(number_of_creatures_maybe() + 1356)																- ExpertTrainer_CostDiscount
+VRF	*(number_of_creatures_maybe() + 1360)																- <Suserain_CostDiscount>
+VRF	*(number_of_creatures_maybe() + 1364)																- <Suserain_CostDiscount><Base>
+VRF	*(number_of_creatures_maybe() + 1368)																- <Suserain_CostDiscount><LevelDivisor>
+VRF	*(number_of_creatures_maybe() + 1372)																- <Suserain_CostDiscount><PerDividedLevel>
+VRF	*(number_of_creatures_maybe() + 1376)																- Prayer_DefenceBonus
+VRF	*(number_of_creatures_maybe() + 1380)																- Prayer_InitiativeBonus
+VRF	*(number_of_creatures_maybe() + 1384)																- WhiteKnight_PrayerMultiplier
+VRF	*(number_of_creatures_maybe() + 1388)																- Encourage_ATBIncrease
+VRF	*(number_of_creatures_maybe() + 1392)																- Retribution_DamageBonusPerMorale
+	*(number_of_creatures_maybe() + 1396)																- <DemonLord>
+	*(number_of_creatures_maybe() + 1400)																- Gating
+	*(number_of_creatures_maybe() + 1404)																- PortionOfSummonedByGatingLevel 
+	*(number_of_creatures_maybe() + 1408)																- <item>
+	*(number_of_creatures_maybe() + 1412)																- <item>
+	*(number_of_creatures_maybe() + 1416)																- CallerStartATB
+VRF	*(number_of_creatures_maybe() + 1420)																- GatedStartATB
+	*(number_of_creatures_maybe() + 1424)																- InitiativeFactor	
+VRF	*(number_of_creatures_maybe() + 1428)																- GatingMasteryPortionBonus
+	*(number_of_creatures_maybe() + 1432)																- QuickGatingStartATB
+VRF	*(number_of_creatures_maybe() + 1436)																- CriticalGatingConstantProb
+VRF	*(number_of_creatures_maybe() + 1440)																- CriticalGatingPerLuckPointProb
+VRF	*(number_of_creatures_maybe() + 1444)																- CriticalGatingPortionBonus
+VRF	*(number_of_creatures_maybe() + 1448)																- InfernalLoomPortionBonus
+VRF	*(number_of_creatures_maybe() + 1452)																- GatekeeperHeroSpecPerLevelPortionBonus
+VRF	*(number_of_creatures_maybe() + 1456)																- DemonicFire
+VRF	*(number_of_creatures_maybe() + 1460)																- BaseDamage
+VRF	*(number_of_creatures_maybe() + 1464)																- DamagePerSpellPower
+	*(number_of_creatures_maybe() + 1468)																- ManaCost
+VRF	*(number_of_creatures_maybe() + 1472)																- ConsumeCorpseHPForOneMana
+VRF	*(number_of_creatures_maybe() + 1476)																- CriticalStrike_ChanceToWork
+VRF	*(number_of_creatures_maybe() + 1480)																- <Necromancer>
+	*(number_of_creatures_maybe() + 1484)																- <Necromancy>
+VRF	*(number_of_creatures_maybe() + 1488)																- RaisePercentBase
+	*(number_of_creatures_maybe() + 1492)																- RaisePercentPerSkillLevel
+	*(number_of_creatures_maybe() + 1496)																- LordOfUndeadBonus
+	*(number_of_creatures_maybe() + 1500)																- NecromancyAmplifierBonus
+	*(number_of_creatures_maybe() + 1504)																- GrailBonus
+	*(number_of_creatures_maybe() + 1508)																- NecroPendantBonus
+VRF	*(number_of_creatures_maybe() + 1512)																- EnergyBase
+VRF	*(number_of_creatures_maybe() + 1516)																- EnergyPerNecromancerLevel
+VRF	*(number_of_creatures_maybe() + 1520)																- EnergyPerNecromancyAmplifier
+VRF	*(number_of_creatures_maybe() + 1524)																- EnergyForGrailBuilding
+VRF	*(number_of_creatures_maybe() + 1528)																- CreaturePowerPointsForOneEnergy
+VRF	*(number_of_creatures_maybe() + 1532)																- NecroPendant_CreatureCostDisountPercents
+VRF	*(number_of_creatures_maybe() + 1536)																- TransformTable
+	*(number_of_creatures_maybe() + 1540)																- <Dead>
+	*(number_of_creatures_maybe() + 1544)																- <Rise>
+VRF	*(number_of_creatures_maybe() + 1548)																- DeathTread
+VRF	*(number_of_creatures_maybe() + 1552)																- SpeedBonus
+VRF	*(number_of_creatures_maybe() + 1556)																- SpiritLink_HPForOneMana
+VRF	*(number_of_creatures_maybe() + 1560)																- DeathScream_MoralePenalty
+	*(number_of_creatures_maybe() + 1564)																- DeathScream_InitiativePenalty
+VRF	*(number_of_creatures_maybe() + 1568)																- DarkEissary_DeathScreamMultiplier
+VRF	*(number_of_creatures_maybe() + 1572)																- Warlock
+VRF *(number_of_creatures_maybe() + 1576)																- ElementalChainBonusPerInvocationTrained
+VRF *(number_of_creatures_maybe() + 1580)																- ElementalChainBonusPerAltarOfChaos
+VRF	*(number_of_creatures_maybe() + 1584)																- ShakeGroundDamage
+VRF	*(number_of_creatures_maybe() + 1588)																- ShakeGroundDamagePerPower
+VRF	*(number_of_creatures_maybe() + 1592)																- ShakeGroundATBReduce
+VRF	*(number_of_creatures_maybe() + 1596)																- Wizard
+VRF	*(number_of_creatures_maybe() + 1600)																- Unsummon_DamagePerHeroLevel
+VRF	*(number_of_creatures_maybe() + 1604)																- Unsummon_DamagePerSkillMastery	
+VRF	*(number_of_creatures_maybe() + 1608)																- MeltArtifact_HealPerArtifactEffectPerHeroLevel	
+	*(number_of_creatures_maybe() + 1612)																- MeltArtifact_ATBUsage	
+	*(number_of_creatures_maybe() + 1616)																- Ranger	
+VRF	*(number_of_creatures_maybe() + 1620)																- SunFireDamagePerHeroLevel	
+VRF	*(number_of_creatures_maybe() + 1624)																- SoilBurnDamagePerHeroLevel	
+NOT	*(number_of_creatures_maybe() + 1628)																- StormWind_InitiativePenalty	
+VRF	*(number_of_creatures_maybe() + 1632)																- StormWind_SpeedPenalty	
+VRF	*(number_of_creatures_maybe() + 1636)																- FogVeil_InitiativePenalty	
+	*(number_of_creatures_maybe() + 1640)																- FogVeil_DamageDecrease	
+	*(number_of_creatures_maybe() + 1644)																- ElvenLuck_DamageMultiplier	1628???
+VRF	*(number_of_creatures_maybe() + 1648)																- ImbueArrow_ATBDropOnCast	
+
+======================================== SOMETHING IS WRONG HERE, BOTH SIDES SEEM RIGHT ============================================================================
+	
+	*(number_of_creatures_maybe() + 1636)																- <Runemage>
+	*(number_of_creatures_maybe() + 1640)																- StrongRune_2ndUseCostMultiplier
+	*(number_of_creatures_maybe() + 1644)																- FineRune_ChanceToActivateRuneForFree
+	*(number_of_creatures_maybe() + 1648)																- QuicknessOfMind_InitiativeBonus
+VRF	*(number_of_creatures_maybe() + 1652)																- TapRunes_ManaRestorePerKnowledge
+VRF	*(number_of_creatures_maybe() + 1656) 																- RunicAttunement_EffectDurationInRounds
+VRF	*(number_of_creatures_maybe() + 1660) 																- RunicAttunement_MoraleBonus
+VRF	*(number_of_creatures_maybe() + 1664) 																- Offensive_MaxOffenseBonus
+VRF	*(number_of_creatures_maybe() + 1668) 																- Defensive_MaxDefenseBonus
+VRF	*(number_of_creatures_maybe() + 1672) 																- Distract_EnemyHeroInitiativeDrop
+	*(number_of_creatures_maybe() + 1676)																- SetAfire_DamageMultiplier
+VRF	*(number_of_creatures_maybe() + 1680)																- SetAfire_DamageDurationInRounds
+VRF	*(number_of_creatures_maybe() + 1684)																- ShrugDarkness_EnemySpellpowerMultiplier
+VRF	*(number_of_creatures_maybe() + 1688)																- RunicArmor_SpellpowerBonus
+VRF	*(number_of_creatures_maybe() + 1692)																- RunicMachines_InitiativeBonus
+	*(number_of_creatures_maybe() + 1696)																- Mentoring_ExpPecentToGiveToVisitor
+VRF	*(number_of_creatures_maybe() + 1700)																- Empathy_ATBAffectionOnMorale
+VRF	*(number_of_creatures_maybe() + 1704)																- Preparation_RetaliateToNER
+VRF	*(number_of_creatures_maybe() + 1708)																- <Barbarian>
+VRF	*(number_of_creatures_maybe() + 1712)																- PowerfullBlow_ChanceToCritical
+VRF	*(number_of_creatures_maybe() + 1716)																- PathOfWar_MovePointsBonus
+VRF	*(number_of_creatures_maybe() + 1720)																- LuckOfTheBarbarian_MagicProofPerLuck
+VRF	*(number_of_creatures_maybe() + 1724)																- StunningBlow_ATBDrop
+VRF	*(number_of_creatures_maybe() + 1728)																- DefendUsAll_CreatureToCount
+VRF	*(number_of_creatures_maybe() + 1732)																- DefendUsAll_CreatureCountMultiplier
+VRF	*(number_of_creatures_maybe() + 1736)																- GoblinSupport_GoblinsIncomePerDay
+VRF	*(number_of_creatures_maybe() + 1740)																- Bodybuilding_HPBonusPercent
+VRF	*(_DWORD *)(number_of_creatures_maybe() + 1744)														- VoiceTraining_WarcryCostDiscount
+VRF	*(number_of_creatures_maybe() + 1748)																- DeathToNonexistent_DamageToSummonsMult
+VRF	*(number_of_creatures_maybe() + 1752)																- MightyVoice_HeroLevelBonus
+VRF	*(number_of_creatures_maybe() + 1756)																- VoiceOfRage_RageMultCallOfBlood
+VRF	*(number_of_creatures_maybe() + 1760)																- VoiceOfRage_RageMultOther
+=================== CANNOT VERIFY FROM HERE  1 ===================
+	*(number_of_creatures_maybe() + 1764)																- <BasicShatterMagic>
+	*(float *)(number_of_creatures_maybe() + 1772)														- SpellTrainedDecrease
+	*(float *)(number_of_creatures_maybe() + 1776)														- Item
+	*(float *)(number_of_creatures_maybe() + 1780)														- Item
+	*(float *)(number_of_creatures_maybe() + 1784)														- SpellpowerDecreaseForTrainedDrop1BelowNone
+	*(float *)(number_of_creatures_maybe() + 1788)														- SpellpowerDecreaseForTrainedDrop2BelowNone
+	*(float *)(number_of_creatures_maybe() + 1792)														-AdvancedShatterMagic
+	*(float *)(number_of_creatures_maybe() + 1796)														- SpellTrainedDecrease
+	*(float *)(number_of_creatures_maybe() + 1800)														- Item
+	*(float *)(number_of_creatures_maybe() + 1804)														- Item
+	*(float *)(number_of_creatures_maybe() + 1808)														- SpellpowerDecreaseForTrainedDrop1BelowNone
+	*(float *)(number_of_creatures_maybe() + 1812)														- SpellpowerDecreaseForTrainedDrop2BelowNone
+	*(float *)(number_of_creatures_maybe() + 1816)														- ExpertShatterMagic
+	*(float *)(number_of_creatures_maybe() + 1820)														- SpellTrainedDecrease
+	*(float *)(number_of_creatures_maybe() + 1824)														- Item
+	*(float *)(number_of_creatures_maybe() + 1828)														- SpellpowerDecreaseForTrainedDrop1BelowNone
+	*(float *)(number_of_creatures_maybe() + 1832)														- SpellpowerDecreaseForTrainedDrop2BelowNone
+=================== UP TO HERE 1 ===================
+VRF	*(float *)(number_of_creatures_maybe() + 1836)														- CorruptMagic_SpellCostIncrease
+VRF	*(float *)(number_of_creatures_maybe() + 1840)														- WeakenMagic_SpellPowerDecrease
+VRF	*(float *)(number_of_creatures_maybe() + 1844)														- DetainMagic_CasterExtraATBDrop
+	*(float *)(number_of_creatures_maybe() + 1848)														- Melee
+	*(float *)(number_of_creatures_maybe() + 1852)														- HeroDamageLevel1
+	*(float *)(number_of_creatures_maybe() + 1856)														- Item
+	*(float *)(number_of_creatures_maybe() + 1860)														- Item
+	*(float *)(number_of_creatures_maybe() + 1864)														- HeroDamageLevel30
+	*(float *)(number_of_creatures_maybe() + 1868)														- Item
+	*(float *)(number_of_creatures_maybe() + 1872)														- Item
+VRF	*(number_of_creatures_maybe() + 1876)																- EmpoweredLightningATBDrop
+VRF	*(number_of_creatures_maybe() + 1880)																- EmpoweredIceFreezeDuration
+VRF	*(float *)(number_of_creatures_maybe() + 1884)														- MagicMirrorLevelMultiplier
+VRF	*(number_of_creatures_maybe() + 1888)																- PrayerLevelMultiplier
+VRF	*(number_of_creatures_maybe() + 1892)																- DeathScreamLevelMultiplier
+VRF	*(number_of_creatures_maybe() + 1896)																- SkillDefence
+VRF	*(number_of_creatures_maybe() + 1900)																- BasicDamageReduce
+vRF	*(number_of_creatures_maybe() + 1904)																- AdvancedDamageReduce
+VRF	*(number_of_creatures_maybe() + 1908)																- ExpertDamageReduce
+VRF	*(number_of_creatures_maybe() + 1912)																- Evasion_DamageReduce
+VRF	*(number_of_creatures_maybe() + 1916)																- SkillOffence
+VRF	*(number_of_creatures_maybe() + 1920)																- BasicDamageBonus
+VRF	*(number_of_creatures_maybe() + 1924)																- AdvancedDamageBonus
+VRF	*(number_of_creatures_maybe() + 1928)																- ExpertDamageBonus
+VRF	*(number_of_creatures_maybe() + 1932)																- Archery_DamageBonus
+VRF	*(number_of_creatures_maybe() + 1936)																- Obstacles
+VRF	*(number_of_creatures_maybe() + 1940)																- MinSmallObstacles
+VRF	*(number_of_creatures_maybe() + 1944)																- MaxSmallObstacles
+VRF	*(number_of_creatures_maybe() + 1948)																- MinBigObstacles
+VRF	*(number_of_creatures_maybe() + 1952)																- MaxBigObstacles
+VRF	*(number_of_creatures_maybe() + 1956)																- MinMixedObstacles
+VRF	*(number_of_creatures_maybe() + 1960)																- MaxMixedObstacles
+VRF	*(number_of_creatures_maybe() + 1964)																- ObstaclesMaxArea
+VRF	*(number_of_creatures_maybe() + 1968)																- FreeLines
+VRF	*(number_of_creatures_maybe() + 1972)																- <HeroSpecializations>
+VRF	*(number_of_creatures_maybe() + 1976)																- <Knight>
+VRF	*(number_of_creatures_maybe() + 1980)																- CavalryCommander_JoustingBonus
+VRF	*(number_of_creatures_maybe() + 1984)																- CavalryCommander_JoustingBonusPerLevel
+VRF	*(number_of_creatures_maybe() + 1988)																- CavalryCommander_HolyChargeBonus
+VRF	*(number_of_creatures_maybe() + 1992)																- Expediter_HasteBonusPerLevel
+VRF	*(number_of_creatures_maybe() + 1996)																- Wanderer_MPBonusBase
+VRF	*(number_of_creatures_maybe() + 2000)																- Wanderer_MPBonusPerLevel
+VRF	*(number_of_creatures_maybe() + 2004)																- Wanderer_LevelDivisor
+VRF	*(number_of_creatures_maybe() + 2008)																- <Demonlord>
+	*(number_of_creatures_maybe() + 2012)																- Hypnotist_ManaDrainPerLevel
+	*(number_of_creatures_maybe() + 2016)																- Bombardier_FireballSpellpower
+	*(number_of_creatures_maybe() + 2020)																- Bombardier_FireballSpellpowerLevelDivisor
+	*(number_of_creatures_maybe() + 2024)																- Bombardier_FireballSpellpowerPerLevel
+VRF	*(number_of_creatures_maybe() + 2028)																- Beater_MPBonusBase
+VRF	*(number_of_creatures_maybe() + 2032)																- Beater_MPBonusPerLevel
+VRF	*(number_of_creatures_maybe() + 2036)																- Beater_LevelDivisor
+VRF *(float *)(number_of_creatures_maybe() + 2040)														- Furious_InitiativeBonusBase
+VRF *(float *)(number_of_creatures_maybe() + 2044)														- Furious_InitiativeBonusPerLevel
+VRF	*(number_of_creatures_maybe() + 2048)																- Ranger
+	*(number_of_creatures_maybe() + 2052)																- CallOfTheWasp_DamageBonusPerLevel
+	*(number_of_creatures_maybe() + 2056)																- CallOfTheWasp_ATBReducePerLevel3
+VRF	*(number_of_creatures_maybe() + 2060)																- ForestGuardian_DamageBonus
+VRF	*(number_of_creatures_maybe() + 2064)																- ForestGuardian_DamageBonusPerHeroLevel
+VRF	*(number_of_creatures_maybe() + 2068)																- Waylayer_ATBShift
+VRF	*(number_of_creatures_maybe() + 2072)																- Waylayer_ATBShiftPerLevel
+VRF	*(number_of_creatures_maybe() + 2076)																- Necromancer
+VRF	*(number_of_creatures_maybe() + 2080)																- Soulhunter_ManesSummonedBase
+vRF	*(number_of_creatures_maybe() + 2084)																- Soulhunter_ManesSummonedPerLevel
+VRF	*(number_of_creatures_maybe() + 2088)																- Reanimator_SpellpowerBonus
+VRF *(number_of_creatures_maybe() + 2092)																- Reanimator_SpellpowerBonusLevelDivisor
+	*(number_of_creatures_maybe() + 2096)																- Reanimator_SpellpowerBonusPerLevel
+	*(number_of_creatures_maybe() + 2100)																- <AvatarOfDeath_Creature href="AvatarOfDeath.xdb#xpointer(/RPGCombatUniqueCreatureStats)"/>
+	*(number_of_creatures_maybe() + 2104)																- <AvatarOfDeath_Creature href="AvatarOfDeath.xdb#xpointer(/RPGCombatUniqueCreatureStats)"/>
+VRF	*(number_of_creatures_maybe() + 2108)																- AvatarOfDeath_ManaCostPerLevel
+VRF	*(number_of_creatures_maybe() + 2112)																- Wizard
+VRF *(number_of_creatures_maybe() + 2116)																- Radiant_MirrorProb
+VRF	*(number_of_creatures_maybe() + 2120)																- Radiant_MirrorProbPerLevel
+VRF	*(number_of_creatures_maybe() + 2124) 																- Disrupter_Damage
+VRF	*(number_of_creatures_maybe() + 2128) 																- Disrupter_DamageLevelDivisor
+VRF	*(number_of_creatures_maybe() + 2132) 																- Disrupter_DamagePerLevel	
+	*(number_of_creatures_maybe() + 2136) 																- TimeShiftStopFactor	
+VRF	*(number_of_creatures_maybe() + 2140) 																- TimeShiftBonusATBPerLevel
+	*(number_of_creatures_maybe() + 2144) 																- FeatherMage_InitiativeBonusBase
+	*(number_of_creatures_maybe() + 2148) 																- FeatherMage_InitiativeBonusPerLevel
+VRF	*(number_of_creatures_maybe() + 2152)																- MasterOfElements_SpellpowerBonus
+	*(number_of_creatures_maybe() + 2156)																- Base
+	*(number_of_creatures_maybe() + 2160)																- LevelDivisor
+	*(number_of_creatures_maybe() + 2164)																- PerDividedLevel	
+VRF	*(number_of_creatures_maybe() + 2168)																- MasterOfElements_NumElementals
+VRF	*(number_of_creatures_maybe() + 2172)																- Base
+VRF	*(number_of_creatures_maybe() + 2176)																- LevelDivisor
+VRF	*(number_of_creatures_maybe() + 2180)																- PerDividedLevel
+VRF	*(number_of_creatures_maybe() + 2184)																- Inexhaustible_ManaRestorePerTurn
+VRF	*(number_of_creatures_maybe() + 2188)																- Base
+VRF	*(number_of_creatures_maybe() + 2192)																- LevelDivisor
+VRF	*(number_of_creatures_maybe() + 2196)																- PerDividedLevel
+VRF	*(number_of_creatures_maybe() + 2200)																- WeilderOfFire_FireballSpellpowerBonus
+VRF	*(number_of_creatures_maybe() + 2204)																- Base
+VRF	*(number_of_creatures_maybe() + 2208)																- LevelDivisor
+VRF	*(number_of_creatures_maybe() + 2212)																- PerDividedLevel
+VRF	*(number_of_creatures_maybe() + 2216)																- Warlock
+VRF	*(_DWORD *)(number_of_creatures_maybe() + 2220)														- Poisoner_PlagueProb
+VRF	*(_DWORD *)(number_of_creatures_maybe() + 2224)														- Poisoner_PlagueProbPerLevel
+	*(number_of_creatures_maybe() + 2228)																- PowerBargain_CostReduce
+	*(number_of_creatures_maybe() + 2232)																- PowerBargain_CostReducePerLevel
+	*(number_of_creatures_maybe() + 2236)																- Prudent_InitiativeDisbonusBase
+	*(number_of_creatures_maybe() + 2240)																- Prudent_InitiativeDisbonusPerLevel
+VRF	*(number_of_creatures_maybe() + 2244)																- Evasive_DamageReduceBase
+VRF	*(number_of_creatures_maybe() + 2248)																- Evasive_DamageReducePerLevel
+	*(number_of_creatures_maybe() + 2252)																- Runemage
+	*(number_of_creatures_maybe() + 2256)																- BorderGuard_DistanceFromCityInDays
+	*(number_of_creatures_maybe() + 2260)																- BorderGuard_LevelDivisor
+VRF	*(number_of_creatures_maybe() + 2264)																- BorderGuard_DefenceBonusPerLevel
+	*(number_of_creatures_maybe() + 2268)																- Courtier_DiplomacyBonusPerLevel
+	*(number_of_creatures_maybe() + 2272)																- MountainKing_ActiveRune
+VRF	*(number_of_creatures_maybe() + 2276)																- Researcher_ChanceToGetExtraRune
+VRF	*(number_of_creatures_maybe() + 2280)																- SacredHammer_ChanceToCastBase
+VRF	*(number_of_creatures_maybe() + 2284)																- SacredHammer_ChanceToCastPerLevel
+VRF	*(number_of_creatures_maybe() + 2288)																- SacredHammer_SpellToCast
+VRF	*(number_of_creatures_maybe() + 2292)																- Economist_FineRuneChanceBonusBase
+	*(number_of_creatures_maybe() + 2296)																- Economist_FineRuneChanceBonusPerLevel
+VRF	*(number_of_creatures_maybe() + 2300)																- FineRuneProbability
+VRF	*(number_of_creatures_maybe() + 2304)																- StrongRuneCostConstant
+VRF	*(number_of_creatures_maybe() + 2308)																- StrongAndFineRuneCostConstant	
+VRF	*(number_of_creatures_maybe() + 2312)																- Barbarian
+VRF	*(number_of_creatures_maybe() + 2316)																- Rash_MovementPenaltyReducePerLevel
+VRF	*(number_of_creatures_maybe() + 2320)																- Rash_MovePointsIncreasePerPevel
+VRF	*(number_of_creatures_maybe() + 2324)																- CentaurMistress_StartATBBonusPerHeroLevel
+	*(number_of_creatures_maybe() + 2328)																- Offender_HeroAttackDamageBonusPerLevel
+not	*(number_of_creatures_maybe() + 2332)																- WyvernTamer_HealthBonus
+	*(number_of_creatures_maybe() + 2336)																- Base
+	*(number_of_creatures_maybe() + 2340)																- LevelDivisor
+	*(number_of_creatures_maybe() + 2344)																- PerDividedLevel
+VRF	*(number_of_creatures_maybe() + 2348)																- Blooddrinker_OffenceBonusPerStack
+VRF	*(number_of_creatures_maybe() + 2352)																- Base
+VRF	*(number_of_creatures_maybe() + 2356)																- LevelDivisor
+VRF	*(number_of_creatures_maybe() + 2360)																- PerDividedLevel
+	*(number_of_creatures_maybe() + 2364)																- GoblinKing_GoblinsWeeklyIncome
+	*(number_of_creatures_maybe() + 2368)																- Base
+	*(number_of_creatures_maybe() + 2372)																- LevelDivisor
+	*(number_of_creatures_maybe() + 2376)																- PerDividedLevel
+VRF	*(number_of_creatures_maybe() + 2380)																- GoblinKing_TreacheryBonusPerLevel
+	*(number_of_creatures_maybe() + 2384)																- WarLeader_WarcryCostReducePerHeroLevel
+VRF	*(number_of_creatures_maybe() + 2388)																- Base
+VRF	*(number_of_creatures_maybe() + 2392)																- LevelDivisor
+VRF	*(number_of_creatures_maybe() + 2396)																- PerDividedLevel
+	*(number_of_creatures_maybe() + 2400)																- Spells
+	*(number_of_creatures_maybe() + 2404)																- Armageddon
+VRF	*(number_of_creatures_maybe() + 2408)																- StoneRadius
+	*(number_of_creatures_maybe() + 2412)																- StoneDelay
+	*(number_of_creatures_maybe() + 2416)																- WaveSpeed
+	*(number_of_creatures_maybe() + 2420)																- Runic
+VRF	*(number_of_creatures_maybe() + 2424)																- DragonFormSpellPercent
+	*(number_of_creatures_maybe() + 2428)																- ReviveSpellPercent
+	*(number_of_creatures_maybe() + 2432)																- HolyWordWaveSpeed
+	*(number_of_creatures_maybe() + 2436)																- UnholyWordWaveSpeed
+VRF	*(number_of_creatures_maybe() + 2440)																- BossFirewallSpeed
+	*(number_of_creatures_maybe() + 2444)																- ArcaneCrystal
+	*(number_of_creatures_maybe() + 2448)																- <Object href="/GameMechanics/CreatureVisual/SpellSpawned/ArcaneCrystal.xdb#xpointer(/CreatureVisual)"/>
+	*(number_of_creatures_maybe() + 2452)																- <Object href="/GameMechanics/CreatureVisual/SpellSpawned/ArcaneCrystal.xdb#xpointer(/CreatureVisual)"/>
+VRF	*(number_of_creatures_maybe() + 2456)																- Tier
+VRF	*(number_of_creatures_maybe() + 2460)																- Health
+	*(number_of_creatures_maybe() + 2464)																- Defence
+	*(number_of_creatures_maybe() + 2468)																- <ExplosionEffect href="/GameMechanics/SpellVisual/ArcaneCrystalExplosion.xdb#xpointer(/SpellVisual)"/>
+	*(number_of_creatures_maybe() + 2472)																- <ExplosionEffect href="/GameMechanics/SpellVisual/ArcaneCrystalExplosion.xdb#xpointer(/SpellVisual)"/>
+VRF	*(number_of_creatures_maybe() + 2476)																- SummonHive
+VRF	*(number_of_creatures_maybe() + 2480)																- <Object href="/GameMechanics/CreatureVisual/SpellSpawned/Hive.xdb#xpointer(/CreatureVisual)"/>
+VRF	*(number_of_creatures_maybe() + 2484)																- <Object href="/GameMechanics/CreatureVisual/SpellSpawned/Hive.xdb#xpointer(/CreatureVisual)"/>
+VRF	*(number_of_creatures_maybe() + 2488)																- Spell
+VRF	*(number_of_creatures_maybe() + 2492)																- Spell
+VRF	*(number_of_creatures_maybe() + 2496)																- Mastery
+VRF	*(number_of_creatures_maybe() + 2500)																- Tier
+VRF	*(number_of_creatures_maybe() + 2504)																- Power
+VRF	*(number_of_creatures_maybe() + 2508)																- Initiative
+VRF	*(number_of_creatures_maybe() + 2512)																- Base
+VRF	*(number_of_creatures_maybe() + 2516)																- PerPower
+VRF	*(number_of_creatures_maybe() + 2520)																- Health
+VRF	*(number_of_creatures_maybe() + 2522)																- Base
+VRF	*(number_of_creatures_maybe() + 2528)																- PerPower
+VRF	*(number_of_creatures_maybe() + 2532)																- DefenseBase
+VRF	*(number_of_creatures_maybe() + 2536)																- DefensePerCasterLevel
+VRF	*(number_of_creatures_maybe() + 2540)																- BladeBarrier
+VRF	*(number_of_creatures_maybe() + 2544)																- <Object href="/GameMechanics/CreatureVisual/SpellSpawned/BladeBarrier.xdb#xpointer(/CreatureVisual)"/>
+VRF	*(number_of_creatures_maybe() + 2548)																- <Object href="/GameMechanics/CreatureVisual/SpellSpawned/BladeBarrier.xdb#xpointer(/CreatureVisual)"/>
+VRF	*(number_of_creatures_maybe() + 2552)																- ShieldStrength
+VRF	*(number_of_creatures_maybe() + 2556)																- RangedResistance
+VRF	*(number_of_creatures_maybe() + 2560)																- MagicProof
+VRF	*(number_of_creatures_maybe() + 2564)																- Health
+	*(number_of_creatures_maybe() + 2568)																- Base
+	*(number_of_creatures_maybe() + 2572)																- PerPower
+	*(number_of_creatures_maybe() + 2576)																- DeepFreeze
+VRF	*(number_of_creatures_maybe() + 2580)																- DamageMultiplier
+	*(number_of_creatures_maybe() + 2584)																- Base
+	*(number_of_creatures_maybe() + 2588)																- PerPower
+VRF	*(number_of_creatures_maybe() + 2592)																- Warcries 
+VRF	*(number_of_creatures_maybe() + 2596)																- RPToArmyOnWarcryLevel1 
+VRF	*(number_of_creatures_maybe() + 2600)																- RPToArmyOnWarcryLevel2 
+VRF	*(number_of_creatures_maybe() + 2604)																- RPToArmyOnWarcryLevel3 
+VRF	*(number_of_creatures_maybe() + 2608)																- RallingCry_MoraleBonus 
+VRF	*(number_of_creatures_maybe() + 2612)																- Base 
+VRF	*(number_of_creatures_maybe() + 2616)																- LevelDivisor 
+VRF	*(number_of_creatures_maybe() + 2620)																- PerDividedLevel 
+VRF	*(number_of_creatures_maybe() + 2624)																- RallingCry_Duration 
+VRF	*(number_of_creatures_maybe() + 2628)																- CallOfBlood_RPPerCasterLevel 
+VRF	*(number_of_creatures_maybe() + 2632)																- WordOfTheChief_ATBBonusBase 
+VRF	*(number_of_creatures_maybe() + 2636)																- WordOfTheChief_ATBBonusPerCasterLevel 
+	*(number_of_creatures_maybe() + 2640)																- WordOfTheChief_RPBonus 
+VRF	*(number_of_creatures_maybe() + 2644)																- Battlecry_SpeedBonus 
+VRF	*(number_of_creatures_maybe() + 2648)																- Base 
+VRF	*(number_of_creatures_maybe() + 2652)																- LevelDivisor 
+VRF	*(number_of_creatures_maybe() + 2656)																- PerDividedLevel 
+	*(number_of_creatures_maybe() + 2660)																- Battlecry_OffenceBonus 
+VRF	*(number_of_creatures_maybe() + 2664)																- Base 
+VRF	*(number_of_creatures_maybe() + 2668)																- LevelDivisor 
+VRF	*(number_of_creatures_maybe() + 2672)																- PerDividedLevel 
+VRF	*(number_of_creatures_maybe() + 2676)																- ShoutOfMany_DamagePerCreatureInArmy 
+VRF	*(number_of_creatures_maybe() + 2680)																- ShoutOfMany_ShockwaveMoveTime 
+	*(number_of_creatures_maybe() + 2684)																- LuckAndMorale 
+VRF	*(number_of_creatures_maybe() + 2688)																- GoodLuck_DamageMultiplier 
+VRF	*(number_of_creatures_maybe() + 2692)																- BadLuck_DamageMultiplier 
+VRF *(number_of_creatures_maybe() + 2696)																- GoodMorale_ATBValue 
+VRF *(number_of_creatures_maybe() + 2700)																- BadMorale_ATBValue 
+VRF	*(number_of_creatures_maybe() + 2704)																- GhostMode 
+VRF	*(number_of_creatures_maybe() + 2708)																- MaxSkillLevel 
+VRF	*(number_of_creatures_maybe() + 2712)																- EnergyReviveBase 
+VRF	*(number_of_creatures_maybe() + 2716)																- EnergyRevivePerMinute 
+	*(number_of_creatures_maybe() + 2720)																- EnergyPerLevel 
+	*(number_of_creatures_maybe() + 2724)																- EnergyPerLevel 
+	*(number_of_creatures_maybe() + 2728)																- BaseMoveCost 
+	*(number_of_creatures_maybe() + 2732)																- TouchObjectCost 
+VRF	*(number_of_creatures_maybe() + 2736)																- DevourDiceSize 
+	*(number_of_creatures_maybe() + 2740)																- Revenge 
+	*(number_of_creatures_maybe() + 2744)																- LevelLosedBase 
+	*(number_of_creatures_maybe() + 2748)																- LevelLosedPerRevenge 
+	*(number_of_creatures_maybe() + 2752)																- HeroArmyGeneration 
+	*(number_of_creatures_maybe() + 2756)																- MinWeekGrowthCoef_Tier1 
+	*(number_of_creatures_maybe() + 2760)																- MaxWeekGrowthCoef_Tier1 
+	*(number_of_creatures_maybe() + 2764)																- MinWeekGrowthCoef_Tier2 
+	*(number_of_creatures_maybe() + 2768)																- MaxWeekGrowthCoef_Tier2 
+	*(number_of_creatures_maybe() + 2772)																- MinWeekGrowthCoef_Tier3 
+	*(number_of_creatures_maybe() + 2776)																- MaxWeekGrowthCoef_Tier3 
+	*(number_of_creatures_maybe() + 2780)																- MinWeekGrowthCoef_SpecTier1 
+	*(number_of_creatures_maybe() + 2784)																- MaxWeekGrowthCoef_SpecTier1 
+	*(number_of_creatures_maybe() + 2788)																- NumSuchStacks_SpecTier1 
+	*(number_of_creatures_maybe() + 2792)																- MinWeekGrowthCoef_SpecTier2 
+	*(number_of_creatures_maybe() + 2796)																- MaxWeekGrowthCoef_SpecTier2 
+	*(number_of_creatures_maybe() + 2800)																- NumSuchStacks_SpecTier2 
+	*(number_of_creatures_maybe() + 2804)																- MinWeekGrowthCoef_SpecTier3 
+	*(number_of_creatures_maybe() + 2808)																- MaxWeekGrowthCoef_SpecTier3 
+	*(number_of_creatures_maybe() + 2812)																- NumSuchStacks_SpecTier3 
+	*(number_of_creatures_maybe() + 2816)																- AI 
+	*(number_of_creatures_maybe() + 2820)																- Combat
+	*(number_of_creatures_maybe() + 2824)																- DifficultyEasy
+	*(number_of_creatures_maybe() + 2828)																-   
+	*(number_of_creatures_maybe() + 2832)																-   
+	*(number_of_creatures_maybe() + 2836)																- DifficultyNormal 
+	*(number_of_creatures_maybe() + 2840)																-   
+	*(number_of_creatures_maybe() + 2844)																-   
+	*(number_of_creatures_maybe() + 2848)																- DifficultyHard
+	*(number_of_creatures_maybe() + 2852)																-   
+	*(number_of_creatures_maybe() + 2856)																-   
+	*(number_of_creatures_maybe() + 2860)																- DifficultyHeroic
+	*(number_of_creatures_maybe() + 2864)																-   
+	*(number_of_creatures_maybe() + 2868)																-   
+	*(number_of_creatures_maybe() + 2872)																-   
+	*(number_of_creatures_maybe() + 2876)																-   
+	*(number_of_creatures_maybe() + 2880)																-   
+	*(number_of_creatures_maybe() + 2884)																-   
+	*(number_of_creatures_maybe() + 2888)																-   
+	*(number_of_creatures_maybe() + 2892)																-   
+	*(number_of_creatures_maybe() + 2896)																-   
+	*(number_of_creatures_maybe() + 2900)																-   
+	*(number_of_creatures_maybe() + 2904)																-   
+	*(number_of_creatures_maybe() + 2908)																-   
+
+	
+	
+	*(number_of_creatures_maybe() + 4340)																- UpgradesParams
+	*(number_of_creatures_maybe() + 4344)																- RegradeCostCoef
+	*(number_of_creatures_maybe() + 4348)																- ArtifactsSetsEffectsConsts
+VRF	*(number_of_creatures_maybe() + 4352)																- Dragonish_2_AllStats
+VRF *(number_of_creatures_maybe() + 4356)																- Dragonish_4_Creature_Tier
+	*(number_of_creatures_maybe() + 4360)																- Dragonish_4_Creature_Attack
+	*(number_of_creatures_maybe() + 4364)																- Dragonish_4_Creature_Defence
+VRF *(number_of_creatures_maybe() + 4368)																- Dragonish_4_Creature_HitPoints
+VRF	*(number_of_creatures_maybe() + 4372)																- Dragonish_6_AllStats
+VRF	*(number_of_creatures_maybe() + 4376)																- Dragonish_8_Creature_Tier
+	*(number_of_creatures_maybe() + 4380)																- Dragonish_8_Creature_Count
+VRF	*(number_of_creatures_maybe() + 4384)																- Dwarven_2_Creature_MagicProofPercents
+VRF	*(number_of_creatures_maybe() + 4388)																- Dwarven_2Dwarf_SpellpowerPercents
+VRF	*(number_of_creatures_maybe() + 4392)																- Dwarven_4_Creature_SpellsBuffsTurns
+VRF	*(number_of_creatures_maybe() + 4396)																- Lions_2_HeroAttack_DeMorale
+VRF	*(number_of_creatures_maybe() + 4400)																- Magis_2_Casters_SpellpowerMultiplier
+VRF	*(number_of_creatures_maybe() + 4404)																- Magis_4_2Wizard_AfterCastATBLessPercents
+VRF	*(number_of_creatures_maybe() + 4408)																- Necromancers_2_EnemyCreature_DeSpeed
+VRF	*(number_of_creatures_maybe() + 4412)																- Necromancers_2Necromancer_BansheeWhail_DeMorale
+VRF	*(number_of_creatures_maybe() + 4416)																- Necromancers_2Necromancer_BansheeWhail_DeLuck
+VRF	*(number_of_creatures_maybe() + 4420)																- Necromancers_2Necromancer_BansheeWhail_DeInitiativeMultiplier
+	*(number_of_creatures_maybe() + 4424)																- Necromancers_2Necromancer_BansheeWhail_ATBLessPercents
+VRF	*(number_of_creatures_maybe() + 4428)																- Necromancers_4_EnemyCreature_BadMoralePenaltyToAttackDefencePercents
+VRF	*(number_of_creatures_maybe() + 4432)																- Necromancers_4Necromancer_NecromancyBonusPercents
+VRF	*(number_of_creatures_maybe() + 4436)																- Necromancers_4Necromancer_NecromancyCreatureCostDisountPercents
+VRF	*(number_of_creatures_maybe() + 4440)																- Educational_2_GainExperienceBonusPercents
+VRF	*(number_of_creatures_maybe() + 4444)																- Hunters_2_ShootersATBLessPercents
+	*(number_of_creatures_maybe() + 4448)																- Ogres_2_Creature_Attack
+VRF *(number_of_creatures_maybe() + 4452)																- Ogres_2_Creature_HitPoints
+VRF	*(number_of_creatures_maybe() + 4456)																- Ogres_2Barbarian_HeroAttack_ATBLessPercents
+	*(number_of_creatures_maybe() + 4460)																- Runic_2_AllStats
+VRF	*(number_of_creatures_maybe() + 4464)																- Runic_2Warlock_ElementalVisionMultiplier
+VRF	*(number_of_creatures_maybe() + 4468)																- Demonic_2_Attack
+VRF	*(number_of_creatures_maybe() + 4472)																- Demonic_2DemonLord_GatingBonusPercents
+	*(number_of_creatures_maybe() + 4476)																- SlaveMarketConsts
+VRF	*(number_of_creatures_maybe() + 4480)																- <SlaveMarketConsts><BasePercents>
+VRF	*(number_of_creatures_maybe() + 4484)																- <BonusPercentsPerMarketplace>
+VRF	*(number_of_creatures_maybe() + 4488)																- <AffectResources>

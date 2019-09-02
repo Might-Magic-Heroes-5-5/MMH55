@@ -1,0 +1,530 @@
+int __fastcall sub_84EAE0(int a1, int a2)
+{
+  int v2; // esi@1
+  int result; // eax@2
+
+  v2 = a1;
+  switch ( a2 )
+  {
+    case 0:
+      i_take_string_as_input(a1, "BUILDING_ABANDONED_MINE");
+      result = v2;
+      break;
+    case 1:
+      i_take_string_as_input(a1, "BUILDING_ALCHEMIST_LAB");
+      result = v2;
+      break;
+    case 2:
+      i_take_string_as_input(a1, "BUILDING_CRYSTAL_CAVERN");
+      result = v2;
+      break;
+    case 3:
+      i_take_string_as_input(a1, "BUILDING_GEM_POND");
+      result = v2;
+      break;
+    case 4:
+      i_take_string_as_input(a1, "BUILDING_GOLD_MINE");
+      result = v2;
+      break;
+    case 5:
+      i_take_string_as_input(a1, "BUILDING_ORE_PIT");
+      result = v2;
+      break;
+    case 6:
+      i_take_string_as_input(a1, "BUILDING_SAWMILL");
+      result = v2;
+      break;
+    case 7:
+      i_take_string_as_input(a1, "BUILDING_SULFUR_DUNE");
+      result = v2;
+      break;
+    case 8:
+      i_take_string_as_input(a1, "BUILDING_WATER_WHEEL");
+      result = v2;
+      break;
+    case 9:
+      i_take_string_as_input(a1, "BUILDING_WINDMILL");
+      result = v2;
+      break;
+    case 10:
+      i_take_string_as_input(a1, "BUILDING_LEAN_TO");
+      result = v2;
+      break;
+    case 11:
+      i_take_string_as_input(a1, "BUILDING_TRADING_POST");
+      result = v2;
+      break;
+    case 12:
+      i_take_string_as_input(a1, "BUILDING_BLACK_MARKET");
+      result = v2;
+      break;
+    case 13:
+      i_take_string_as_input(a1, "BUILDING_WAGON");
+      result = v2;
+      break;
+    case 14:
+      i_take_string_as_input(a1, "BUILDING_SKELETON");
+      result = v2;
+      break;
+    case 15:
+      i_take_string_as_input(a1, "BUILDING_STABLES");
+      result = v2;
+      break;
+    case 16:
+      i_take_string_as_input(a1, "BUILDING_RALLY_FLAG");
+      result = v2;
+      break;
+    case 17:
+      i_take_string_as_input(a1, "BUILDING_OASIS");
+      result = v2;
+      break;
+    case 18:
+      i_take_string_as_input(a1, "BUILDING_LAKE_OF_SCARLET_SWAN");
+      result = v2;
+      break;
+    case 19:
+      i_take_string_as_input(a1, "BUILDING_FONTAIN_OF_FORTUNE");
+      result = v2;
+      break;
+    case 20:
+      i_take_string_as_input(a1, "BUILDING_MAGIC_SPRING");
+      result = v2;
+      break;
+    case 21:
+      i_take_string_as_input(a1, "BUILDING_FONTAIN_OF_YOUTH");
+      result = v2;
+      break;
+    case 22:
+      i_take_string_as_input(a1, "BUILDING_FAERIE_RING");
+      result = v2;
+      break;
+    case 23:
+      i_take_string_as_input(a1, "BUILDING_IDOL_OF_FORTUNE");
+      result = v2;
+      break;
+    case 24:
+      i_take_string_as_input(a1, "BUILDING_TEMPLE");
+      result = v2;
+      break;
+    case 25:
+      i_take_string_as_input(a1, "BUILDING_SANCTUARY");
+      result = v2;
+      break;
+    case 26:
+      i_take_string_as_input(a1, "BUILDING_LIGHTHOUSE");
+      result = v2;
+      break;
+    case 27:
+      i_take_string_as_input(a1, "BUILDING_HILL_FORT");
+      result = v2;
+      break;
+    case 28:
+      i_take_string_as_input(a1, "BUILDING_MAGIC_WELL");
+      result = v2;
+      break;
+    case 29:
+      i_take_string_as_input(a1, "BUILDING_SIGN");
+      result = v2;
+      break;
+    case 30:
+      i_take_string_as_input(a1, "BUILDING_SHIPYARD");
+      result = v2;
+      break;
+    case 31:
+      i_take_string_as_input(a1, "BUILDING_SEER_HUT");
+      result = v2;
+      break;
+    case 32:
+      i_take_string_as_input(a1, "BUILDING_REDWOORD_OBSERVATORY");
+      result = v2;
+      break;
+    case 33:
+      i_take_string_as_input(a1, "BUILDING_HUT_OF_MAGI");
+      result = v2;
+      break;
+    case 34:
+      i_take_string_as_input(a1, "BUILDING_EYE_OF_MAGI");
+      result = v2;
+      break;
+    case 35:
+      i_take_string_as_input(a1, "BUILDING_PRISON");
+      result = v2;
+      break;
+    case 36:
+      i_take_string_as_input(a1, "BUILDING_BORDER_GUARD");
+      result = v2;
+      break;
+    case 37:
+      i_take_string_as_input(a1, "BUILDING_KEYMASTER_TENT");
+      result = v2;
+      break;
+    case 38:
+      i_take_string_as_input(a1, "BUILDING_DEN_OF_THIEVES");
+      result = v2;
+      break;
+    case 39:
+      i_take_string_as_input(a1, "BUILDING_SUBTERRA_GATE");
+      result = v2;
+      break;
+    case 40:
+      i_take_string_as_input(a1, "BUILDING_MONOLITH_ONE_WAY_EXIT");
+      result = v2;
+      break;
+    case 41:
+      i_take_string_as_input(a1, "BUILDING_MONOLITH_ONE_WAY_ENTRANCE");
+      result = v2;
+      break;
+    case 42:
+      i_take_string_as_input(a1, "BUILDING_MONOLITH_TWO_WAY");
+      result = v2;
+      break;
+    case 43:
+      i_take_string_as_input(a1, "BUILDING_GARRISON");
+      result = v2;
+      break;
+    case 44:
+      i_take_string_as_input(a1, "BUILDING_GARRISON_ANTIMAGIC");
+      result = v2;
+      break;
+    case 45:
+      i_take_string_as_input(a1, "BUILDING_CRYPT");
+      result = v2;
+      break;
+    case 46:
+      i_take_string_as_input(a1, "BUILDING_CYCLOPS_STOCKPILE");
+      result = v2;
+      break;
+    case 47:
+      i_take_string_as_input(a1, "BUILDING_NAGA_BANK");
+      result = v2;
+      break;
+    case 48:
+      i_take_string_as_input(a1, "BUILDING_PYRAMID");
+      result = v2;
+      break;
+    case 49:
+      i_take_string_as_input(a1, "BUILDING_DRAGON_UTOPIA");
+      result = v2;
+      break;
+    case 50:
+      i_take_string_as_input(a1, "BUILDING_STAR_AXIS");
+      result = v2;
+      break;
+    case 51:
+      i_take_string_as_input(a1, "BUILDING_GARDEN_OF_REVELATION");
+      result = v2;
+      break;
+    case 52:
+      i_take_string_as_input(a1, "BUILDING_MARLETTO_TOWER");
+      result = v2;
+      break;
+    case 53:
+      i_take_string_as_input(a1, "BUILDING_MERCENARY_CAMP");
+      result = v2;
+      break;
+    case 54:
+      i_take_string_as_input(a1, "BUILDING_LEARNING_STONE");
+      result = v2;
+      break;
+    case 55:
+      i_take_string_as_input(a1, "BUILDING_WITCH_HUT");
+      result = v2;
+      break;
+    case 56:
+      i_take_string_as_input(a1, "BUILDING_SHRINE_OF_MAGIC");
+      result = v2;
+      break;
+    case 57:
+      i_take_string_as_input(a1, "BUILDING_OBELISK");
+      result = v2;
+      break;
+    case 58:
+      i_take_string_as_input(a1, "BUILDING_CARTOGRAPHER");
+      result = v2;
+      break;
+    case 59:
+      i_take_string_as_input(a1, "BUILDING_TREE_OF_KNOWLEDGE");
+      result = v2;
+      break;
+    case 60:
+      i_take_string_as_input(a1, "BUILDING_BUOY");
+      result = v2;
+      break;
+    case 61:
+      i_take_string_as_input(a1, "BUILDING_SIRENS");
+      result = v2;
+      break;
+    case 62:
+      i_take_string_as_input(a1, "BUILDING_MERMAIDS");
+      result = v2;
+      break;
+    case 63:
+      i_take_string_as_input(a1, "BUILDING_WHIRLPOOL");
+      result = v2;
+      break;
+    case 64:
+      i_take_string_as_input(a1, "BUILDING_PEASANT_HUT");
+      result = v2;
+      break;
+    case 65:
+      i_take_string_as_input(a1, "BUILDING_ARCHERS_HOUSE");
+      result = v2;
+      break;
+    case 66:
+      i_take_string_as_input(a1, "BUILDING_BARRACKS");
+      result = v2;
+      break;
+    case 67:
+      i_take_string_as_input(a1, "BUILDING_HEAVEN_MILITARY_POST");
+      result = v2;
+      break;
+    case 68:
+      i_take_string_as_input(a1, "BUILDING_MYSTICAL_GARDEN");
+      result = v2;
+      break;
+    case 69:
+      i_take_string_as_input(a1, "BUILDING_ARENA");
+      result = v2;
+      break;
+    case 70:
+      i_take_string_as_input(a1, "BUILDING_SHIP_GALEON");
+      result = v2;
+      break;
+    case 71:
+      i_take_string_as_input(a1, "BUILDING_SPHINX");
+      result = v2;
+      break;
+    case 72:
+      i_take_string_as_input(a1, "BUILDING_DEMON_GATE");
+      result = v2;
+      break;
+    case 73:
+      i_take_string_as_input(a1, "BUILDING_IMP_CRUCIBLE");
+      result = v2;
+      break;
+    case 74:
+      i_take_string_as_input(a1, "BUILDING_KENNELS");
+      result = v2;
+      break;
+    case 75:
+      i_take_string_as_input(a1, "BUILDING_INFERNO_MILITARY_POST");
+      result = v2;
+      break;
+    case 76:
+      i_take_string_as_input(a1, "BUILDING_GRAVEYARD");
+      result = v2;
+      break;
+    case 77:
+      i_take_string_as_input(a1, "BUILDING_NECROPOLIS_MILITARY_POST");
+      result = v2;
+      break;
+    case 78:
+      i_take_string_as_input(a1, "BUILDING_HIGH_CABINS");
+      result = v2;
+      break;
+    case 79:
+      i_take_string_as_input(a1, "BUILDING_WOOD_GUARD_QUARTERS");
+      result = v2;
+      break;
+    case 80:
+      i_take_string_as_input(a1, "BUILDING_PRESERVE_MILITARY_POST");
+      result = v2;
+      break;
+    case 81:
+      i_take_string_as_input(a1, "BUILDING_ACADEMY_MILITARY_POST");
+      result = v2;
+      break;
+    case 82:
+      i_take_string_as_input(a1, "BUILDING_DUNGEON_MILITARY_POST");
+      result = v2;
+      break;
+    case 83:
+      i_take_string_as_input(a1, "BUILDING_FAIRIE_TREE");
+      result = v2;
+      break;
+    case 84:
+      i_take_string_as_input(a1, "BUILDING_FIRE_LAKE");
+      result = v2;
+      break;
+    case 85:
+      i_take_string_as_input(a1, "BUILDING_WORKSHOP");
+      result = v2;
+      break;
+    case 86:
+      i_take_string_as_input(a1, "BUILDING_STONE_PARAPET");
+      result = v2;
+      break;
+    case 87:
+      i_take_string_as_input(a1, "BUILDING_GOLEM_FORGE");
+      result = v2;
+      break;
+    case 88:
+      i_take_string_as_input(a1, "BUILDING_BATTLE_ACADEMY");
+      result = v2;
+      break;
+    case 89:
+      i_take_string_as_input(a1, "BUILDING_SHADOW_STONE");
+      result = v2;
+      break;
+    case 90:
+      i_take_string_as_input(a1, "BUILDING_MAZE");
+      result = v2;
+      break;
+    case 91:
+      i_take_string_as_input(a1, "BUILDING_FORGOTTEN_CRYPT");
+      result = v2;
+      break;
+    case 92:
+      i_take_string_as_input(a1, "BUILDING_RUINED_TOWER");
+      result = v2;
+      break;
+    case 93:
+      i_take_string_as_input(a1, "BUILDING_WARMACHINE_FACTORY");
+      result = v2;
+      break;
+    case 94:
+      i_take_string_as_input(a1, "BUILDING_REFUGEE_CAMP");
+      result = v2;
+      break;
+    case 95:
+      i_take_string_as_input(a1, "BUILDING_ELEMENTAL_CONFLUX");
+      result = v2;
+      break;
+    case 96:
+      i_take_string_as_input(a1, "BUILDING_TAVERN");
+      result = v2;
+      break;
+    case 97:
+      i_take_string_as_input(a1, "BUILDING_DEMOLISH");
+      result = v2;
+      break;
+    case 98:
+      i_take_string_as_input(a1, "BUILDING_UNKEMPT");
+      result = v2;
+      break;
+    case 99:
+      i_take_string_as_input(a1, "BUILDING_BIARA_CITADEL");
+      result = v2;
+      break;
+    case 100:
+      i_take_string_as_input(a1, "BUILDING_DEMON_SOVEREIGN_CITADEL");
+      result = v2;
+      break;
+    case 101:
+      i_take_string_as_input(a1, "BUILDING_SCHOOL_OF_MAGIC");
+      result = v2;
+      break;
+    case 102:
+      i_take_string_as_input(a1, "BUILDING_WAR_ACADEMY");
+      result = v2;
+      break;
+    case 103:
+      i_take_string_as_input(a1, "BUILDING_TOMB_OF_THE_WARRIOR");
+      result = v2;
+      break;
+    case 104:
+      i_take_string_as_input(a1, "BUILDING_DWARVEN_TREASURE");
+      result = v2;
+      break;
+    case 105:
+      i_take_string_as_input(a1, "BUILDING_BLOOD_TEMPLE");
+      result = v2;
+      break;
+    case 106:
+      i_take_string_as_input(a1, "BUILDING_LIBRARY_OF_ENLIGHTENMENT");
+      result = v2;
+      break;
+    case 107:
+      i_take_string_as_input(a1, "BUILDING_TREANT_THICKET");
+      result = v2;
+      break;
+    case 108:
+      i_take_string_as_input(a1, "BUILDING_GARGOYLE_STONEVAULT");
+      result = v2;
+      break;
+    case 109:
+      i_take_string_as_input(a1, "BUILDING_MAGMA_SHRINE");
+      result = v2;
+      break;
+    case 110:
+      i_take_string_as_input(a1, "BUILDING_DWARVEN_WARREN");
+      result = v2;
+      break;
+    case 111:
+      i_take_string_as_input(a1, "BUILDING_FORTRESS_DEFENDERS");
+      result = v2;
+      break;
+    case 112:
+      i_take_string_as_input(a1, "BUILDING_FORTRESS_AXEMEN");
+      result = v2;
+      break;
+    case 113:
+      i_take_string_as_input(a1, "BUILDING_FORTRESS_BEAR_RIDERS");
+      result = v2;
+      break;
+    case 114:
+      i_take_string_as_input(a1, "BUILDING_FORTRESS_MILITARY_POST");
+      result = v2;
+      break;
+    case 115:
+      i_take_string_as_input(a1, "BUILDING_MEMORY_MENTOR");
+      result = v2;
+      break;
+    case 116:
+      i_take_string_as_input(a1, "BUILDING_SACRIFICIAL_ALTAR");
+      result = v2;
+      break;
+    case 117:
+      i_take_string_as_input(a1, "BUILDING_SPELL_SHOP");
+      result = v2;
+      break;
+    case 118:
+      i_take_string_as_input(a1, "BUILDING_NOMADS_SHAMAN");
+      result = v2;
+      break;
+    case 119:
+      i_take_string_as_input(a1, "BUILDING_FORTUITOUS_SANCTUARY");
+      result = v2;
+      break;
+    case 120:
+      i_take_string_as_input(a1, "BUILDING_ASTROLOGER_TOWER");
+      result = v2;
+      break;
+    case 121:
+      i_take_string_as_input(a1, "BUILDING_SUNKEN_TEMPLE");
+      result = v2;
+      break;
+    case 122:
+      i_take_string_as_input(a1, "BUILDING_OUTPOST");
+      result = v2;
+      break;
+    case 123:
+      i_take_string_as_input(a1, "BUILDING_STRONGHOLD_GOBLINS");
+      result = v2;
+      break;
+    case 124:
+      i_take_string_as_input(a1, "BUILDING_STRONGHOLD_CENTAURS");
+      result = v2;
+      break;
+    case 125:
+      i_take_string_as_input(a1, "BUILDING_STRONGHOLD_WARRIORS");
+      result = v2;
+      break;
+    case 126:
+      i_take_string_as_input(a1, "BUILDING_STRONGHOLD_MILITARY_POST");
+      result = v2;
+      break;
+    case 127:
+      i_take_string_as_input(a1, "BUILDING_NAGA_TEMPLE");
+      result = v2;
+      break;
+    default:
+      *(_DWORD *)a1 = 0;
+      *(_DWORD *)(a1 + 4) = 0;
+      *(_DWORD *)(a1 + 8) = 0;
+      sub_401020((_DWORD *)a1, "BUILDING_ABANDONED_MINE", "");
+      result = v2;
+      break;
+  }
+  return result;
+}

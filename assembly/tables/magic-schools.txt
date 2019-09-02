@@ -1,0 +1,54 @@
+int __fastcall sub_84E420(int a1, int a2)
+{
+  int v2; // esi@1
+  int result; // eax@2
+
+  v2 = a1;
+  switch ( a2 )
+  {
+    case 0:
+      i_take_string_as_input(a1, "MAGIC_SCHOOL_DESTRUCTIVE");
+      result = v2;
+      break;
+    case 1:
+      i_take_string_as_input(a1, "MAGIC_SCHOOL_DARK");
+      result = v2;
+      break;
+    case 2:
+      i_take_string_as_input(a1, "MAGIC_SCHOOL_LIGHT");
+      result = v2;
+      break;
+    case 3:
+      i_take_string_as_input(a1, "MAGIC_SCHOOL_SUMMONING");
+      result = v2;
+      break;
+    case 4:
+      i_take_string_as_input(a1, "MAGIC_SCHOOL_ADVENTURE");
+      result = v2;
+      break;
+    case 5:
+      i_take_string_as_input(a1, "MAGIC_SCHOOL_RUNIC");
+      result = v2;
+      break;
+    case 6:
+      i_take_string_as_input(a1, "MAGIC_SCHOOL_WARCRIES");
+      result = v2;
+      break;
+    case 7:
+      i_take_string_as_input(a1, "MAGIC_SCHOOL_SPECIAL");
+      result = v2;
+      break;
+    case 8:
+      i_take_string_as_input(a1, "MAGIC_SCHOOL_NONE");
+      result = v2;
+      break;
+    default:
+      *(_DWORD *)a1 = 0;
+      *(_DWORD *)(a1 + 4) = 0;
+      *(_DWORD *)(a1 + 8) = 0;
+      sub_401020((_DWORD *)a1, "MAGIC_SCHOOL_DESTRUCTIVE", "");
+      result = v2;
+      break;
+  }
+  return result;
+}
