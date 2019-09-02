@@ -1,0 +1,23 @@
+# ----------------------------------------------------
+# ----------------- Chain lighting dmg v1.0 --------------
+# ----------------------------------------------------
+#
+# Changes Chain lighting damage multiplier from 0.5 to 0.75 per jump
+#
+# ----------------------------------------------------
+# 
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0045E40A
+originalBytes:  70 AB E0
+patchBytes:     5C 4C E3
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0066D9DA
+originalBytes:  00 88
+patchBytes:     4C FC

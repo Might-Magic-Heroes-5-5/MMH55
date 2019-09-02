@@ -2,31 +2,41 @@
 # ----------------- Matron Salvo fix v1 --------------
 # ----------------------------------------------------
 #
-# Changes salvo chance to 20% + 1% per hero lvl
+# Changes salvo chance to 30% + 1% per hero lvl and enables activation on non damaging and mass spells
 #
 # ----------------------------------------------------
 
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original
 checkAddress:   00000400
-checkBytes:     8D 22 22 33 
-patchAddress:   004B4310
-originalBytes:  8B 4F 04 8B D6 E8 46 26 0D 00 84 C0 0F 84 96 01 00 00
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00578230                                                    ### is spell dealing damage?
+originalBytes:  8B 4F 04 8B D6 E8 76 CE B6 FF 84 C0 0F 84 96 01 00 00
 patchBytes:     90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
 ---
+#group: Original
+#patchAddress:   00578242                                                    ### is spell mass? This will activate salvo calculation under mass spell cast cursor unit
+#originalBytes:  8B 4F 04 E8 26 B8 0B 00 84 C0 0F 85 86 01 00 00
+#patchBytes:     90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+#---
 group: Original
-patchAddress:   007BF9F0
-originalBytes:  03 04 8B FF 26 04 BC 00 5A 03 BC 00 92 03 BC 00 31 03 BC 00 56 04 BC 00 00 01 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 02 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 04 03 04 03 CC CC CC CC CC
-patchBytes:     03 04 8B FF 26 04 BC 00 5A 03 BC 00 92 03 BC 00 31 03 BC 00 70 02 BC 00 56 04 BC 00 00 01 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 04 05 05 05 05 05 05 05 02 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 05 03 05 03 CC
+patchAddress:   00578330                                                     ### Salvo formula
+originalBytes:  6C 00 0A
+patchBytes:     68 1E 90
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
 checkAddress:   00000400
 checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
-patchAddress:   004B4310
+patchAddress:   004B4310                                                    ### is spell dealing damage?
 originalBytes:  8B 4F 04 8B D6 E8 46 26 0D 00 84 C0 0F 84 96 01 00 00
 patchBytes:     90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
 ---
+#group: Quantomas3.1j
+#patchAddress:   004B4322                                                    ### is spell mass? This will activate salvo calculation under mass spell cast cursor unit
+#originalBytes:  8B 4F 04 E8 16 0F 02 00 84 C0 0F 85 86 01 00 00
+#patchBytes:     90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+#---
 group: Quantomas3.1j
-patchAddress:   004B4322
-originalBytes:  8B 4F 04 E8 16 0F 02 00 84 C0 0F 85 86 01 00 00
-patchBytes:     90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+patchAddress:   004B4410                                                     ### Salvo formula
+originalBytes:  6C 00 0A
+patchBytes:     68 1E 90

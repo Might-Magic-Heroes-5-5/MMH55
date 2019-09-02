@@ -12,8 +12,8 @@ definitions:
 - &patched_duration       00     # Expert Frenzy will work for 1 action
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original
-checkAddress:   0057CD20                            # spell action duration
-checkBytes:     24 18 EB 63 83 FF 12 75
+checkAddress:   00000400                            
+checkBytes:     8D 41 34 C3 CC CC CC CC             # spell action duration
 patchAddress:   0057CD35
 originalBytes:  *tote_duration
 patchBytes:     *patched_duration
@@ -24,8 +24,8 @@ originalBytes:  *tote_duration
 patchBytes:     *patched_duration
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
-checkAddress:   004B8D90
-checkBytes:     F8 12 75 13 33 D2 83 7C
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
 patchAddress:   004B8DA0                            # spell action duration
 originalBytes:  *tote_duration
 patchBytes:     *patched_duration

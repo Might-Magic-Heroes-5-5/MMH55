@@ -9,7 +9,7 @@
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original
 checkAddress:   00000400
-checkBytes:     8D 41 34 C3 CC CC CC CC   
+checkBytes:     8D 41 34 C3 CC CC CC CC
 patchAddress:   004A18F1                                ##if unit is dwarf calculate defensive formation coeficient
 originalBytes:  0F 85 8D 00 00 00
 patchBytes:     90 90 90 90 90 90

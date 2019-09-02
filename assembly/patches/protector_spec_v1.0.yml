@@ -12,16 +12,16 @@ definitions:
 - &devisor_by_10       858993460      # this is 2^32/10 which is div by 5 lvls
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original
-checkAddress:   000BB920
-checkBytes:     1B 8B 06 8B CE FF 50 20 8B C8
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
 patchAddress:   000BB92B
 valueType:      Integer
 originalValue:  *devisor_by_5
 patchValue:     *devisor_by_10
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
-checkAddress:   004750C0
-checkBytes:     1B 8B 06 8B CE FF 50 20 8B C8
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
 patchAddress:   004750CB
 valueType:      Integer
 originalValue:  *devisor_by_5
