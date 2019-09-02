@@ -3,7 +3,8 @@
 # ----------------------------------------------------
 #
 # Makes "Offensive & Defensive formation" skills applicable to all units
-#
+# WARNING: Dwarven formations formula depends on unit POWER value. Make sure proper power balance is done otherwise players can experience non intuitive bonus disparities.
+# Note: If 2 nearby stacks have the same POWER value, none of them will gain any bonus
 # ----------------------------------------------------
 
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
