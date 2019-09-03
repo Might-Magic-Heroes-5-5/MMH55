@@ -6,52 +6,40 @@ int __fastcall sub_9A4690(int a1, int a2)
   v2 = a1;
   switch ( a2 )
   {
-    case 0:
-      i_take_string_as_input(a1, "RACE_SPECIAL");
+    case 0:(a1, "RACE_SPECIAL");
       result = v2;
       break;
-    case 1:
-      i_take_string_as_input(a1, "RACE_RANDOM_TYPE");
+    case 1:(a1, "RACE_RANDOM_TYPE");
       result = v2;
       break;
-    case 2:
-      i_take_string_as_input(a1, "RACE_NO_TYPE");
+    case 2:(a1, "RACE_NO_TYPE");
       result = v2;
       break;
-    case 3:
-      i_take_string_as_input(a1, "RACE_HEAVEN");
+    case 3:(a1, "RACE_HEAVEN");
       result = v2;
       break;
-    case 4:
-      i_take_string_as_input(a1, "RACE_PRESERVE");
+    case 4:(a1, "RACE_PRESERVE");
       result = v2;
       break;
-    case 5:
-      i_take_string_as_input(a1, "RACE_ACADEMY");
+    case 5:(a1, "RACE_ACADEMY");
       result = v2;
       break;
-    case 6:
-      i_take_string_as_input(a1, "RACE_DUNGEON");
+    case 6:(a1, "RACE_DUNGEON");
       result = v2;
       break;
-    case 7:
-      i_take_string_as_input(a1, "RACE_NECROMANCY");
+    case 7:(a1, "RACE_NECROMANCY");
       result = v2;
       break;
-    case 8:
-      i_take_string_as_input(a1, "RACE_INFERNO");
+    case 8:(a1, "RACE_INFERNO");
       result = v2;
       break;
-    case 9:
-      i_take_string_as_input(a1, "RACE_DWARF");
+    case 9:(a1, "RACE_DWARF");
       result = v2;
       break;
-    case 10:
-      i_take_string_as_input(a1, "RACE_STRONGHOLD");
+    case 10:(a1, "RACE_STRONGHOLD");
       result = v2;
       break;
-    case 11:
-      i_take_string_as_input(a1, "__RACE_COUNT");
+    case 11:(a1, "__RACE_COUNT");
       result = v2;
       break;
     default:

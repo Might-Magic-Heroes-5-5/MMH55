@@ -1,52 +1,42 @@
   switch ( v8 )
     {
-      case 0:
-        ::v6(&v43, "HEALTH");
+      case 0:(&v43, "HEALTH");
         v13 = sub_CA8E40(v34, &v43);
         sub_404740(&v38, v13);
         break;
-      case 1:
-        ::v6(&v31, "DAMAGE");
+      case 1:(&v31, "DAMAGE");
         v10 = sub_CA8E40(v34, &v31);
         sub_404740(&v38, v10);
         break;
-      case 2:
-        ::v6(&v45, "ATTACK");
+      case 2:(&v45, "ATTACK");
         v11 = sub_CA8E40(v34, &v45);
         sub_404740(&v38, v11);
         break;
-      case 3:
-        ::v6(&v49, "DEFENCE");
+      case 3:(&v49, "DEFENCE");
         v14 = sub_CA8E40(v34, &v49);
         sub_404740(&v38, v14);
         break;
-      case 4:
-        ::v6(&v48, "DEFENCE_CRUSH");
+      case 4:(&v48, "DEFENCE_CRUSH");
         v12 = sub_CA8E40(v34, &v48);
         sub_404740(&v38, v12);
         break;
-      case 5:
-        ::v6(&v47, "MAGIC_PROTECTION");
+      case 5:(&v47, "MAGIC_PROTECTION");
         v15 = sub_CA8E40(v34, &v47);
         sub_404740(&v38, v15);
         break;
-      case 6:
-        ::v6(&v52, "LUCK");
+      case 6:(&v52, "LUCK");
         v16 = sub_CA8E40(v34, &v52);
         sub_404740(&v38, v16);
         break;
-      case 7:
-        ::v6(&v44, "MORALE");
+      case 7:(&v44, "MORALE");
         v17 = sub_CA8E40(v34, &v44);
         sub_404740(&v38, v17);
         break;
-      case 8:
-        ::v6(&v46, "MOVEMENT");
+      case 8:(&v46, "MOVEMENT");
         v18 = sub_CA8E40(v34, &v46);
         sub_404740(&v38, v18);
         break;
-      case 9:
-        ::v6(&v42, "INITIATIVE");
+      case 9:(&v42, "INITIATIVE");
         v19 = sub_CA8E40(v34, &v42);
         sub_404740(&v38, v19);
         break;

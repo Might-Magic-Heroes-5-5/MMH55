@@ -6,32 +6,25 @@ int __fastcall sub_6C1A70(int a1, int a2)
   v2 = a1;
   switch ( a2 )
   {
-    case 0:
-      i_take_string_as_input(a1, "Wood");
+    case 0:(a1, "Wood");
       result = v2;
       break;
-    case 1:
-      i_take_string_as_input(a1, "Ore");
+    case 1:(a1, "Ore");
       result = v2;
       break;
-    case 2:
-      i_take_string_as_input(a1, "Mercury");
+    case 2:(a1, "Mercury");
       result = v2;
       break;
-    case 3:
-      i_take_string_as_input(a1, "Crystal");
+    case 3:(a1, "Crystal");
       result = v2;
       break;
-    case 4:
-      i_take_string_as_input(a1, "Sulfur");
+    case 4:(a1, "Sulfur");
       result = v2;
       break;
-    case 5:
-      i_take_string_as_input(a1, "Gem");
+    case 5:(a1, "Gem");
       result = v2;
       break;
-    case 6:
-      i_take_string_as_input(a1, "Gold");
+    case 6:(a1, "Gold");
       result = v2;
       break;
     default:

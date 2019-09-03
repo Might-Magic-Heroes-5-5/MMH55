@@ -1,23 +1,18 @@
 switch ( a2 )
   {
-    case 0:
-      return_game_text_from_id(a1, "WAR_MACHINE_NONE");
+    case 0:(a1, "WAR_MACHINE_NONE");
       result = v2;
       break;
-    case 1:
-      return_game_text_from_id(a1, "WAR_MACHINE_BALLISTA");
+    case 1:(a1, "WAR_MACHINE_BALLISTA");
       result = v2;
       break;
-    case 2:
-      return_game_text_from_id(a1, "WAR_MACHINE_CATAPULT");
+    case 2:(a1, "WAR_MACHINE_CATAPULT");
       result = v2;
       break;
-    case 3:
-      return_game_text_from_id(a1, "WAR_MACHINE_FIRST_AID_TENT");
+    case 3:(a1, "WAR_MACHINE_FIRST_AID_TENT");
       result = v2;
       break;
-    case 4:
-      return_game_text_from_id(a1, "WAR_MACHINE_AMMO_CART");
+    case 4:(a1, "WAR_MACHINE_AMMO_CART");
       result = v2;
       break;
     default:

@@ -1,40 +1,31 @@
  v2 = a1;
   switch ( a2 )
   {
-    case 0:
-      v6(a1, "HERO_CLASS_NONE");
+    case 0:(a1, "HERO_CLASS_NONE");
       result = v2;
       break;
-    case 1:
-      v6(a1, "HERO_CLASS_KNIGHT");
+    case 1:(a1, "HERO_CLASS_KNIGHT");
       result = v2;
       break;
-    case 2:
-      v6(a1, "HERO_CLASS_RANGER");
+    case 2:(a1, "HERO_CLASS_RANGER");
       result = v2;
       break;
-    case 3:
-      v6(a1, "HERO_CLASS_WIZARD");
+    case 3:(a1, "HERO_CLASS_WIZARD");
       result = v2;
       break;
-    case 4:
-      v6(a1, "HERO_CLASS_DEMON_LORD");
+    case 4:(a1, "HERO_CLASS_DEMON_LORD");
       result = v2;
       break;
-    case 5:
-      v6(a1, "HERO_CLASS_NECROMANCER");
+    case 5:(a1, "HERO_CLASS_NECROMANCER");
       result = v2;
       break;
-    case 6:
-      v6(a1, "HERO_CLASS_WARLOCK");
+    case 6:(a1, "HERO_CLASS_WARLOCK");
       result = v2;
       break;
-    case 7:
-      v6(a1, "HERO_CLASS_RUNEMAGE");
+    case 7:(a1, "HERO_CLASS_RUNEMAGE");
       result = v2;
       break;
-    case 8:
-      v6(a1, "HERO_CLASS_BARBARIAN");
+    case 8:(a1, "HERO_CLASS_BARBARIAN");
       result = v2;
       break;
     default:

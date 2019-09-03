@@ -1,47 +1,37 @@
 v2 = a1;
   switch ( a2 )
   {
-    case 0:
-      i_take_string_as_input(a1, "NONE");
+    case 0:(a1, "NONE");
       result = v2;
       break;
-    case 1:
-      i_take_string_as_input(a1, "DRAGONISH");
+    case 1:(a1, "DRAGONISH");
       result = v2;
       break;
-    case 2:
-      i_take_string_as_input(a1, "DWARVEN");
+    case 2:(a1, "DWARVEN");
       result = v2;
       break;
-    case 3:
-      i_take_string_as_input(a1, "LIONS");
+    case 3:(a1, "LIONS");
       result = v2;
       break;
-    case 4:
-      i_take_string_as_input(a1, "MAGIS");
+    case 4:(a1, "MAGIS");
       result = v2;
       break;
     case 5:  i_take_string_as_input(a1, "NECROMANCERS");
       result = v2;
       break;
-    case 6:
-      i_take_string_as_input(a1, "EDUCATIONAL");
+    case 6:(a1, "EDUCATIONAL");
       result = v2;
       break;
-	 case 7:
-      i_take_string_as_input(a1, "HUNTERS");
+	 case 7:(a1, "HUNTERS");
       result = v2;
       break;  
-	 case 8:
-      i_take_string_as_input(a1, "OGRES");
+	 case 8:(a1, "OGRES");
       result = v2;
       break;  
-	 case 9:
-      i_take_string_as_input(a1, "RUNIC");
+	 case 9:(a1, "RUNIC");
       result = v2;
       break;  
-	 case 10:
-      i_take_string_as_input(a1, "DEMONIC");
+	 case 10:(a1, "DEMONIC");
       result = v2;
       break;  
 	 
