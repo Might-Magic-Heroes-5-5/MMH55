@@ -48,16 +48,16 @@
     case 15:(a1, "TB_WONDER");
       result = v2;
       break;
-    case 16:(a1, "TB_SPECIAL_0");
+    case 16:(a1, "TB_SPECIAL_0"); Avenger Guild
       result = v2;
       break;
-    case 17:(a1, "TB_SPECIAL_1");
+    case 17:(a1, "TB_SPECIAL_1"); Training Grounds
       result = v2;
       break;
-    case 18:(a1, "TB_SPECIAL_2");
+    case 18:(a1, "TB_SPECIAL_2"); Merchant Guild 
       result = v2;
       break;
-    case 19:(a1, "TB_SPECIAL_3");
+    case 19:(a1, "TB_SPECIAL_3"); Something related to Elemental chains?
       result = v2;
       break;
     case 20:(a1, "TB_SPECIAL_4");
