@@ -1,0 +1,48 @@
+int __fastcall sub_8505E0(int a1, int a2)
+{
+  int v2; // esi@1
+  int result; // eax@2
+
+  v2 = a1;
+  switch ( a2 )
+  {
+    case 0:(a1, "INVENTORY");
+      result = v2;
+      break;
+    case 1:(a1, "PRIMARY");
+      result = v2;
+      break;
+    case 2:(a1, "SECONDARY");
+      result = v2;
+      break;
+    case 3:(a1, "HEAD");
+      result = v2;
+      break;
+    case 4:(a1, "CHEST");
+      result = v2;
+      break;
+    case 5:(a1, "NECK");
+      result = v2;
+      break;
+    case 6:(a1, "FINGER");
+      result = v2;
+      break;
+    case 7:(a1, "FEET");
+      result = v2;
+      break;
+    case 8:(a1, "SHOULDERS");
+      result = v2;
+      break;
+    case 9:(a1, "MISCSLOT1");
+      result = v2;
+      break;
+    default:
+      *(_DWORD *)a1 = 0;
+      *(_DWORD *)(a1 + 4) = 0;
+      *(_DWORD *)(a1 + 8) = 0;
+      sub_401020((_DWORD *)a1, "INVENTORY", "");
+      result = v2;
+      break;
+  }
+  return result;
+}

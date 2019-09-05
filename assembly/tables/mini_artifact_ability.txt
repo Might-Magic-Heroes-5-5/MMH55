@@ -1,0 +1,51 @@
+int __fastcall sub_8507F0(int a1, int a2)
+{
+  int v2; // esi@1
+  int result; // eax@2
+
+  v2 = a1;
+  switch ( a2 )
+  {
+    case 0:(a1, "MAE_NONE");
+      result = v2;
+      break;
+    case 1:(a1, "MAE_WOUNDING");
+      result = v2;
+      break;
+    case 2:(a1, "MAE_PIERCING");
+      result = v2;
+      break;
+    case 3:(a1, "MAE_ARMOR_CRUSHING");
+      result = v2;
+      break;
+    case 4:(a1, "MAE_HEALTH");
+      result = v2;
+      break;
+    case 5:(a1, "MAE_DEFENCE");
+      result = v2;
+      break;
+    case 6:(a1, "MAE_MAGIC_PROTECTION");
+      result = v2;
+      break;
+    case 7:(a1, "MAE_LUCK");
+      result = v2;
+      break;
+    case 8:(a1, "MAE_MORALE");
+      result = v2;
+      break;
+    case 9:(a1, "MAE_SPEED");
+      result = v2;
+      break;
+    case 10:(a1, "MAE_HASTE");
+      result = v2;
+      break;
+    default:
+      *(_DWORD *)a1 = 0;
+      *(_DWORD *)(a1 + 4) = 0;
+      *(_DWORD *)(a1 + 8) = 0;
+      sub_401020((_DWORD *)a1, "MAE_NONE", "");
+      result = v2;
+      break;
+  }
+  return result;
+}

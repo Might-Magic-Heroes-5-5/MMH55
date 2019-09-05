@@ -1,0 +1,76 @@
+ switch ( v22 )
+    {
+      case 0:((int)&v46, "RUMOUR_FORMAT_OBJECT_GROUND_DIRT");
+        v25 = cant_cast_on_someone_mayb((const char **)&v46);
+        v26 = a1;
+        sub_401E30(a1, (int)v25);
+        framerelatedmb();
+        break;
+      case 1:((int)&v50, "RUMOUR_FORMAT_OBJECT_GROUND_GRASS");
+        v27 = cant_cast_on_someone_mayb((const char **)&v50);
+        v26 = a1;
+        sub_401E30(a1, (int)v27);
+        framerelatedmb();
+        break;
+      case 2:((int)&v52, "RUMOUR_FORMAT_OBJECT_GROUND_SAND");
+        v28 = cant_cast_on_someone_mayb((const char **)&v52);
+        v26 = a1;
+        sub_401E30(a1, (int)v28);
+        framerelatedmb();
+        break;
+      case 3:((int)&v56, "RUMOUR_FORMAT_OBJECT_GROUND_SNOW");
+        v29 = cant_cast_on_someone_mayb((const char **)&v56);
+        v26 = a1;
+        sub_401E30(a1, (int)v29);
+        framerelatedmb();
+        break;
+      case 4:((int)&v54, "RUMOUR_FORMAT_OBJECT_GROUND_LAVA");
+        v30 = cant_cast_on_someone_mayb((const char **)&v54);
+        v26 = a1;
+        sub_401E30(a1, (int)v30);
+        framerelatedmb();
+        break;
+      case 5:
+      case 12:((int)&v58, "RUMOUR_FORMAT_OBJECT_GROUND_SUBTERRANEAN");
+        v31 = cant_cast_on_someone_mayb((const char **)&v58);
+        v26 = a1;
+        *(_DWORD *)a1 = 0;
+        *(_DWORD *)(a1 + 4) = 0;
+        *(_DWORD *)(a1 + 8) = 0;
+        sub_401020((_DWORD *)a1, (_BYTE *)*v31, (_BYTE *)v31[1]);
+        framerelatedmb();
+        v32 = v6 == 0;
+        goto LABEL_49;
+      case 13:((int)&v51, "RUMOUR_FORMAT_OBJECT_GROUND_TAIGA");
+        v33 = cant_cast_on_someone_mayb((const char **)&v51);
+        v26 = a1;
+        sub_401E30(a1, (int)v33);
+        framerelatedmb();
+        break;
+      case 14:((int)&v53, "RUMOUR_FORMAT_OBJECT_GROUND_WASTELAND");
+        v34 = cant_cast_on_someone_mayb((const char **)&v53);
+        v26 = a1;
+        sub_401E30(a1, (int)v34);
+        framerelatedmb();
+        break;
+      case 10:((int)&v55, "RUMOUR_FORMAT_OBJECT_GROUND_SMALL_WATER");
+        v35 = cant_cast_on_someone_mayb((const char **)&v55);
+        v26 = a1;
+        sub_401E30(a1, (int)v35);
+        framerelatedmb();
+        break;
+      case 11:((int)&v57, "RUMOUR_FORMAT_OBJECT_GROUND_BIG_WATER");
+        v36 = cant_cast_on_someone_mayb((const char **)&v57);
+        v26 = a1;
+        sub_401E30(a1, (int)v36);
+        framerelatedmb();
+        break;
+      default:
+        v26 = a1;
+        *(_DWORD *)a1 = 0;
+        *(_DWORD *)(a1 + 4) = 0;
+        *(_DWORD *)(a1 + 8) = 0;
+        sub_401020((_DWORD *)a1, Default, Default);
+        break;
+    }
+  }
