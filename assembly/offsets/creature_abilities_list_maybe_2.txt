@@ -8,11 +8,12 @@
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 92)													- returns unit initiative
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 96)													- returns is unit flying?
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 100)												- returns unit hp
-	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 104)												- ABILITY_CASTER
-	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 108)												- related to ABILITY_CASTER
-	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 116)					 							- returns unit spell points
-	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 120)					 							- returns unit spell points1
-	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 124)					 							- returns unit spell points2
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 104)												- return KnownSpells
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 108)												- return KnownSpells
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 112)												- return KnownSpells
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 116)					 							- returns unit spellpoints
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 120)					 							- returns unit spellpoints1
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 124)					 							- returns unit spellpoints2
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 128)					 							- returns unit experience
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 132)					 							- returns unit power
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 136)					 							- returns unit timeToCommand
@@ -20,9 +21,17 @@
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 144)					 							- returns unit upgrade
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 148)					 							- returns unit pair creature
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 152)					 							- returns unit CreatureTown
-	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 156)					 							- returns unit magicelemenet
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 156)					 							- returns unit element_first
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 160)					 							- returns unit element_second
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 168)					 							- returns unit weekly Growth
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 172)					 							- returns unit Cost
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 176)					 							- returns unit Cost related 1
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 180)					 							- returns unit Cost related 2
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 184)					 							- returns unit Cost related 3
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 188)					 							- returns unit Cost related 4
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 192)					 							- returns unit Cost related 5
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 196)					 							- returns unit Cost related 6
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 200)					 							- returns unit Cost related 7
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 204)					 							- returns unit PresetPrice
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 208)					 							- returns SubjectOfRandomGeneration
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 212)					 							- returns MonsterShared	
@@ -33,3 +42,45 @@
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 256)												- returns unit BaseCreature
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 260)												- returns unit Upgrades
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 272)												- returns unit Abilities
+	
+	( v6 && v6[38] == race_id_v4 && v6[35] == unit_tier_v3 && !v6[64] - upgrades or abilities)
+	==========================================================================================================================================
+	*(v7 + 32)																						- returns stack size
+	
+	
+	*(v2 + 164)																						- returns unit spellpower/ initial offset?
+	*(v2 + 180) 																					- returns unit shot count
+	*(v2 + 184) 																					- returns unit spellpoints (mana)
+	*(v2 + 188)																						- returns unit spellpoints1 (special abilities charges)
+	*(v2 + 192)																						- returns unit spellpoints2 (gating related)
+	*(v2 + 196)																						- returns mastery lvl
+	*(v2 + 200)																						- returns duration
+	*(v2 + 204)																						- returns defense
+	*(v2 + 208) 																					- returns health
+	*(v2 + 212)																						- returns initiative
+    *(v2 + 216)																						- returns Tier
+	*(v2 + 220)																						- Casting spell "Wasp swarm" mastery
+	
+	==========================================================================================================================================
+	
+  *(unit_v8 + 76) 																					- unit attack after bonuses
+  *(unit_v8 + 80) 																					- unit defense after bonuses
+  *(unit_v8 + 84) 																					- unit min dmg after bonuses
+  *(unit_v8 + 88) 																					- unit max dmg after bonuses
+  *(unit_v8 + 92)																					- unit hp after bonuses
+  *(unit_v8 + 96)																					- unit hp after bonuses
+  *(unit_v8 + 100)																					- unit speed after bonuses
+  *(unit_v8 + 104)																					- unit initiative after bonuses
+  *(unit_v8 + 112)																					- unit morale after bonuses
+  *(unit_v8 + 116)																					- unit luck after bonuses
+  *(unit_v8 + 124)																					- unit range
+  *(unit_v8 + 152) = 0;
+  *(unit_v8 + 156)
+  *(unit_v8 + 168)
+  *(unit_v8 + 196) = sub_9DBE10(a3, v5, SLODWORD(a4));
+  *(unit_v8 + 184) = *(v5 + 72);
+  *(unit_v8 + 188) = *(v5 + 76);
+  *v13 = *(v5 + 56);
+  v13[1] = *(v5 + 60);
+  v13[2] = *(v5 + 64);
+  v13[3] = *(v5 + 68);
