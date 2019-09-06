@@ -1,0 +1,35 @@
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 76)													- returns unit shot count 
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 68)													- returns unit attack 
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 72)													- returns unit defense
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 76)													- returns unit shots 
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 80)													- returns unit min_dmg 
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 84)													- returns unit max_dmg 
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 88)													- returns unit speed
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 92)													- returns unit initiative
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 96)													- returns is unit flying?
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 100)												- returns unit hp
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 104)												- ABILITY_CASTER
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 108)												- related to ABILITY_CASTER
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 116)					 							- returns unit spell points
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 120)					 							- returns unit spell points1
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 124)					 							- returns unit spell points2
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 128)					 							- returns unit experience
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 132)					 							- returns unit power
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 136)					 							- returns unit timeToCommand
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 140)					 							- returns unit tier
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 144)					 							- returns unit upgrade
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 148)					 							- returns unit pair creature
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 152)					 							- returns unit CreatureTown
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 156)					 							- returns unit magicelemenet
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 168)					 							- returns unit weekly Growth
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 172)					 							- returns unit Cost
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 204)					 							- returns unit PresetPrice
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 208)					 							- returns SubjectOfRandomGeneration
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 212)					 							- returns MonsterShared	
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 220)												- returns unit combat size (1 or 2)
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 224)												- returns unit pattern attack
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 244)												- returns unit Visual
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 252)												- returns unit Range
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 256)												- returns unit BaseCreature
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 260)												- returns unit Upgrades
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 272)												- returns unit Abilities
