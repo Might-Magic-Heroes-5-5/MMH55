@@ -26,7 +26,7 @@
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 204)					 							- returns unit PresetPrice
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 208)					 							- returns SubjectOfRandomGeneration
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 212)					 							- returns MonsterShared	
-	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 220)												- returns unit combat size (1 or 2)
+	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 220)	or (var + 68)								- returns unit combat size (1 or 2)
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 224)												- returns unit pattern attack
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 244)												- returns unit Visual
 	*(creature_abilities_list_maybe_2(*(v5 + 28)) + 252)												- returns unit Range
