@@ -1,5 +1,5 @@
 --Witch Huts
--------------------------------Def,Elt,logt,luck,offf,Drk,Dest,Lght,Smng,Lp/Sc,Cb/Oc,WarM
+--#############################Def,Elt,logt,luck,offf,Drk,Dest,Lght,Smng,Lp/Sc,Cb/Oc,WarM
 H55_WitchKnights =      {  6,  8, 13, 14, 17, 19, 20, 12, 22,  10,   4, 26 };
 H55_WitchRenegades = 	{  6,  8, 13, 14, 17,  5, 20, 12, 22,  10,   4, 26 };
 H55_WitchPaladins = 	{  6,  8, 13, 14, 17, 19, 20, 12, 24,  10,   4, 26 };
