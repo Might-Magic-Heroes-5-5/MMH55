@@ -24,4 +24,72 @@ H55_WitchRunemages = 	{  6,  8, 13, 14, 17, 19,  7, 12, 22,  23,  18, 26 }; --No
 H55_WitchFlamekeepers = {  6,  8, 13, 14, 17,  5,  7, 12, 24,  23,  16, 18 };
 H55_WitchBarbarians = 	{  6, 11, 13, 14, 17, 19, 20, 21, 22,  10,  25, 26 }; --Access to all shatters, Voice and Barb learning instead of enlightement
 H55_WitchShamans =      {  6,  8, 13, 14, 17, 19, 20, 12, 24,  23,  16, 26 };
-H55_WitchWitchs =       {  6,  8, 13, 14, 17,  5,  7, 21, 24,  23,  16, 21 };
+H55_WitchWitches =      {  6,  8, 13, 14, 17,  5,  7, 21, 24,  23,  16, 21 };
+
+H55_WitchSelect = { 
+H55_WitchKnights, H55_WitchRenegades, H55_WitchPaladins, H55_WitchHeretics,
+H55_WitchRangers, H55_WitchWardens, H55_WitchDruids,
+H55_WitchDemonlords, H55_WitchGatekeepers, H55_WitchSorcerers,
+H55_WitchDeathKnights, H55_WitchReavers, H55_WitchNecromancers,
+H55_WitchSeers, H55_WitchWizards, H55_WitchElementalists,
+H55_WitchOverlords, H55_WitchAssassins, H55_WitchWarlocks,
+H55_WitchEngineers, H55_WitchRunemages, H55_WitchFlamekeepers,
+H55_WitchBarbarians, H55_WitchShamans, H55_WitchWitches };
+
+H55_WitchSkills = {
+	SKILL_ARTIFICIER,
+	SKILL_AVENGER,
+	HERO_SKILL_DEMONIC_RAGE,
+	SKILL_TRAINING,
+	SKILL_DARK_MAGIC,
+	SKILL_DEFENCE,
+	SKILL_DESTRUCTIVE_MAGIC,
+	SKILL_LEARNING,
+	SKILL_GATING,
+	SKILL_LEADERSHIP,
+	HERO_SKILL_BARBARIAN_LEARNING,
+	SKILL_LIGHT_MAGIC,
+	SKILL_LOGISTICS,
+	SKILL_LUCK,
+	SKILL_NECROMANCY,
+	SKILL_INVOCATION,
+	SKILL_OFFENCE,
+	HERO_SKILL_RUNELORE,
+	HERO_SKILL_SHATTER_DARK_MAGIC,
+	HERO_SKILL_SHATTER_DESTRUCTIVE_MAGIC,
+	HERO_SKILL_SHATTER_LIGHT_MAGIC,
+	HERO_SKILL_SHATTER_SUMMONING_MAGIC,	
+	SKILL_SORCERY,
+	SKILL_SUMMONING_MAGIC,
+	HERO_SKILL_VOICE,
+	SKILL_WAR_MACHINES
+};
+
+H55_WitchSkillText = {
+	"/Text/Game/Scripts/Witch/Artificier.txt",
+	"/Text/Game/Scripts/Witch/Avenger.txt",
+	"/Text/Game/Scripts/Witch/Bloodrage.txt",
+	"/Text/Game/Scripts/Witch/Combat.txt",
+	"/Text/Game/Scripts/Witch/Darkmagic.txt",
+	"/Text/Game/Scripts/Witch/Defense.txt",
+	"/Text/Game/Scripts/Witch/Destructivemagic.txt",
+	"/Text/Game/Scripts/Witch/Enlightment.txt",
+	"/Text/Game/Scripts/Witch/Gating.txt",
+	"/Text/Game/Scripts/Witch/Leadership.txt",
+	"/Text/Game/Scripts/Witch/Learning.txt",
+	"/Text/Game/Scripts/Witch/Lightmagic.txt",
+	"/Text/Game/Scripts/Witch/Logistics.txt",
+	"/Text/Game/Scripts/Witch/Luck.txt",
+	"/Text/Game/Scripts/Witch/Necromancy.txt",
+	"/Text/Game/Scripts/Witch/Occultism.txt",
+	"/Text/Game/Scripts/Witch/Offense.txt",
+	"/Text/Game/Scripts/Witch/Runelore.txt",
+	"/Text/Game/Scripts/Witch/Shatterdark.txt",
+	"/Text/Game/Scripts/Witch/Shatterdestructive.txt",
+	"/Text/Game/Scripts/Witch/Shatterlight.txt",
+	"/Text/Game/Scripts/Witch/Shattersummoning.txt",
+	"/Text/Game/Scripts/Witch/Sorcery.txt",
+	"/Text/Game/Scripts/Witch/Summoningmagic.txt",
+	"/Text/Game/Scripts/Witch/Voice.txt",
+	"/Text/Game/Scripts/Witch/Warmachines.txt"
+};
