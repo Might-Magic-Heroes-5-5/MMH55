@@ -1,5 +1,5 @@
 --Witch Huts
-------------------------Def,Elt,logt,lck,off,Drk,Dest,Lgt,Smg,Lp/Sc,Cb/Oc,WarM
+------------------------Def,Elt,logt,lck,off,Drk,Dst,Lgt,Smg,Lp/Sc,Cb/Oc,WarM
 H55_WitchKnights =      {  6,  8, 13, 14, 17, 19, 20, 12, 22,  10,   4, 26 };
 H55_WitchRenegades = 	{  6,  8, 13, 14, 17,  5, 20, 12, 22,  10,   4, 26 };
 H55_WitchPaladins = 	{  6,  8, 13, 14, 17, 19, 20, 12, 24,  10,   4, 26 };
@@ -36,33 +36,33 @@ H55_WitchOverlords, H55_WitchAssassins, H55_WitchWarlocks,
 H55_WitchEngineers, H55_WitchRunemages, H55_WitchFlamekeepers,
 H55_WitchBarbarians, H55_WitchShamans, H55_WitchWitches };
 
-H55_WitchSkills = {
-	SKILL_ARTIFICIER,						-- 1
-	SKILL_AVENGER,							-- 1
-	HERO_SKILL_DEMONIC_RAGE,				-- 1
-	SKILL_TRAINING,							-- 1
-	SKILL_DARK_MAGIC,						-- 1
-	SKILL_DEFENCE,							-- 1
-	SKILL_DESTRUCTIVE_MAGIC,				-- 1
-	SKILL_LEARNING,							-- 1
-	SKILL_GATING,							-- 1
-	SKILL_LEADERSHIP,						-- 1
-	HERO_SKILL_BARBARIAN_LEARNING,			-- 1
-	SKILL_LIGHT_MAGIC,						-- 1
-	SKILL_LOGISTICS,						-- 1
-	SKILL_LUCK,								-- 1
-	SKILL_NECROMANCY,						-- 1
-	SKILL_INVOCATION,						-- 1
-	SKILL_OFFENCE,							-- 1
-	HERO_SKILL_RUNELORE,					-- 1
-	HERO_SKILL_SHATTER_DARK_MAGIC,			-- 1
-	HERO_SKILL_SHATTER_DESTRUCTIVE_MAGIC,	-- 1
-	HERO_SKILL_SHATTER_LIGHT_MAGIC,			-- 1
-	HERO_SKILL_SHATTER_SUMMONING_MAGIC,		-- 1
-	SKILL_SORCERY,							-- 1
-	SKILL_SUMMONING_MAGIC,					-- 1
-	HERO_SKILL_VOICE,						-- 1
-	SKILL_WAR_MACHINES						-- 1
+H55_WitchSkills = {                         --SKILL ID
+	SKILL_ARTIFICIER,                       -- 1
+	SKILL_AVENGER,                          -- 2
+	HERO_SKILL_DEMONIC_RAGE,                -- 3
+	SKILL_TRAINING,                         -- 4
+	SKILL_DARK_MAGIC,                       -- 5
+	SKILL_DEFENCE,                          -- 6
+	SKILL_DESTRUCTIVE_MAGIC,                -- 7
+	SKILL_LEARNING,                         -- 8
+	SKILL_GATING,                           -- 9
+	SKILL_LEADERSHIP,                       -- 10
+	HERO_SKILL_BARBARIAN_LEARNING,          -- 11
+	SKILL_LIGHT_MAGIC,                      -- 12
+	SKILL_LOGISTICS,                        -- 13
+	SKILL_LUCK,                             -- 14
+	SKILL_NECROMANCY,                       -- 15
+	SKILL_INVOCATION,                       -- 16
+	SKILL_OFFENCE,                          -- 17
+	HERO_SKILL_RUNELORE,                    -- 18
+	HERO_SKILL_SHATTER_DARK_MAGIC,          -- 19
+	HERO_SKILL_SHATTER_DESTRUCTIVE_MAGIC,   -- 20
+	HERO_SKILL_SHATTER_LIGHT_MAGIC,         -- 21
+	HERO_SKILL_SHATTER_SUMMONING_MAGIC,     -- 22
+	SKILL_SORCERY,                          -- 23
+	SKILL_SUMMONING_MAGIC,                  -- 24
+	HERO_SKILL_VOICE,                       -- 25
+	SKILL_WAR_MACHINES                      -- 26
 };
 
 H55_WitchSkillText = {
