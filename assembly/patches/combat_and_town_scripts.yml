@@ -1,0 +1,62 @@
+# ----------------------------------------------------
+# ----------------- Enable fllyby, combat and town scripts --------------
+# ----------------------------------------------------
+#
+# Enables the usage of flybys, combat and town scripts during multiplayer
+#
+# ----------------------------------------------------
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC   
+patchAddress:   001490D2                                                    ##  Enable FlyBy in multiplayer
+originalBytes:  84 C0 75 20 68 50 35 40 00 68 84 D7 E1 00 B9 0C 54 FF 00 E8 46 F9 37 00 8B C8 E8 9F F4 37 00 5E 5B C2 04 00
+patchBytes:     90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+---
+group: Original                           
+patchAddress:   0014C231                                                    ##  Enable combat scripts
+originalBytes:  74 1F
+patchBytes:     90 90
+---
+group: Original
+patchAddress:   0020703A                                                    ##  Enable scripts debugging
+originalBytes:  0F 84 9A 00 00 00
+patchBytes:     90 90 90 90 90 90
+---
+group: Original
+patchAddress:   002082D0                                                    ##  Enable scripts, not sure where
+originalBytes:  0F 84 29 01 00 00
+patchBytes:     90 90 90 90 90 90
+---
+group: Original
+patchAddress:   0021C787                                                    ##  Enable scripts in town
+originalBytes:  74 45
+patchBytes:     90 90
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   00144CBD                                                    ##  Enable FlyBy
+originalBytes:  E8 FE 7E 09 00 84 C0 75 20 68 30 9E 40 00 68 70 8D E1 00 B9 00 FA FA 00 E8 66 A9 F7 FF 8B C8 E8 BF A4 F7 FF 5E 5B C2 04 00
+patchBytes:     90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+---
+group: Quantomas3.1j                           
+patchAddress:   00147D49                                                    ##  Enable combat scripts
+originalBytes:  74 1F
+patchBytes:     90 90
+---
+group: Quantomas3.1j                                                        ##  Enable scripts debugging
+patchAddress:   0021235A
+originalBytes:  0F 84 9A 00 00 00
+patchBytes:     90 90 90 90 90 90
+---
+group: Quantomas3.1j                                                        ##  Enable scripts, not sure where
+patchAddress:   00213610
+originalBytes:  0F 84 29 01 00 00
+patchBytes:     90 90 90 90 90 90
+---
+group: Quantomas3.1j
+patchAddress:   003316BA                                                    ##  Enable scripts in town
+originalBytes:  74 45
+patchBytes:     90 90
