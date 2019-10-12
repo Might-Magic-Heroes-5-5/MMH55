@@ -25,7 +25,7 @@ originalBytes:  0F 84 9A 00 00 00
 patchBytes:     90 90 90 90 90 90
 ---
 group: Original
-patchAddress:   002082D0                                                    ##  Enable scripts, not sure where
+patchAddress:   002082D0                                                    ##  Enable scripts on adventure map
 originalBytes:  0F 84 29 01 00 00
 patchBytes:     90 90 90 90 90 90
 ---
@@ -51,10 +51,10 @@ patchAddress:   0021235A
 originalBytes:  0F 84 9A 00 00 00
 patchBytes:     90 90 90 90 90 90
 ---
-group: Quantomas3.1j                                                        ##  Enable scripts, not sure where
-patchAddress:   00213610
-originalBytes:  0F 84 29 01 00 00
-patchBytes:     90 90 90 90 90 90
+##group: Quantomas3.1j                                                        ##  Enable scripts on adventure map
+##patchAddress:   00213610
+##originalBytes:  0F 84 29 01 00 00
+##patchBytes:     90 90 90 90 90 90
 ---
 group: Quantomas3.1j
 patchAddress:   003316BA                                                    ##  Enable scripts in town
