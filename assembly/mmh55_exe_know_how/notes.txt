@@ -1,0 +1,176 @@
+sub_4A99F0 - debugger in heroes 5?
+sub_9811F0 - hypnotize berserk?
+sub_7B1D90 - game lobby player choice, colour choice, faction choice
+00A356A0 - week of might and magic and week of magic 50% damage bonus (besides unit damage impacts balista and town tower damage)
+00B466CC (value address) - "Absolute charge" perk damage multiplier. This is x3 but can be changed.
+00B4FDB0 - Castle towers initial damage (50 for side and 70 for main) and WEEK OF HEAVY TOWERS bonus (during the week towers do 25% more damage)
+00988BB7 - Frenzy spellbook duration text. Managed to make duration 100, but real is still 2 unit actions. 
+008B2F40 - spell Damage amplification artifacts 50%
+004b8da0
+- master_of_fire_exclusively - can reduce master of fire by 3 instead of 2?
+00993CDA - death cloud 50% damage
+A35580 - weeks_of_mana - WEEK_OF_MIGHTNMAGIC, WEEK_OF_MAGIC, WEEK_OF_ETHER
+advanced_mana_cost_supress_skills_unit_casters - mana increase based on supress light/dark shatter perks
+int __fastcall weeks_of_mana(signed int spell_cost_a1, int week_id_a2)
+00987810 - skill_detain_shatters - hero_has_detain?_v10
+A355A0 - week_of_spell_masteries(signed int mastery_lvl_a1, void *spell_id_a2, int week_id_a3) returns mastery_lvl
+8D54C0 - spell_to_mass_light_and_dark_perk(void *this_spell_id) - returns skill_id
+specific_creatures_to_raise_dead_maybe - wrong name, returns the ID of a racial skill for each race
+9FFED0 - Learning_skills
+sub_701A60 - relates diplomacy_unit_join_window
+sub_714AC0 - hut_buildings_quest_prize
+creature_spellpower_formula - unit_id!
+00987950		Battle_lore_and_eagle_eye_spell_teaching_may_be
+009879F0		battle_lore_and_eagle_eye_spell_teaching_maybe2
+sub_9FA0B0  	Learning_runes_and_warcries
+
+Xrefed functions:
+emp_or_mass_become_normal
+cast_custom_spell
+is_this_spell_a_special_ability
+mass_emp_normal_clone_5
+does_hero_have_bloodrage
+is_spell_a_rune_hopefully
+sub_9C8BC0
+how_much_damage_health_more( a2 and a3 masteries?)
+week_of_water_fire_earth_air
+sub_8D6400
+direct_dmg_spell
+*********determining_spell_damage
+*********sub_A720B0(v17, v18, st7_0, st6_0, st2_0, st3_0, st4_0, st5_0, v33, mastery_lvl_v31, a4, (int)a2);
+how_much_damage_health_more2
+*****angel_resurrection_was_melt_artif_maybe
+*********sub_987E20(&v38, mastery_lvl_v16, v13, (int)v14, v26, 1065353216, v33);
+spell_cost_calculation_basic
+*is_caster_a_creature_maybe_inspectme
+*advanced_mana_cost_supress_skills_unit_casters
+ *skill_detain_shatters(v18, (int)v8, spell_cost_v10, 0)
+**creature_health_rel_or_stats_2_or_3var_max
+**creature_health_rel_or_stats_1
+*does_anyone_have_energy_channel
+*fine_rune_related_fortress_grail_servicing_rune_cost
+*is_spell_a_rune_hopefully
+is_bloodrage_present_mystery_mb_morale
+does_hero_have_runelore
+mighty_shout_orc_lvl_inc_by_5
+spell_duration
+reature_health_rel_or_stats_2_or_3var_max
+creature_health_rel_or_stats_1
+*sub_A66590 - creature_summoning_related
+creature_abilities_list_maybe_2
+WEEK_OF_IDLENESS_lower_initiative
+bonus_max_damage
+ creature_race_proper
+*sub_9368F0(race_id_v5)
+sub_9368D0  race_from_vanilla returns yes/no
+int __fastcall sub_A38820(int a1, char *race_id_a2)
+void __userpurge sub_AFA240(int a1@<ecx>, double a2@<st0>, int a3, int a4, int a5, int race_id_a6, char a7, char a8)
+race_id_v30 = sub_936900(*(v31 + 28)); -returns race ID; race_id_random_faction
+igned int __fastcall sub_94F990(int a1, int a2, int a3) - returns race_id
+sub_95D2A0(race_id) 
+game_lobby_hotseat_menu_choice
+sub_84C020(&v27, race_id_v7); unknown_selection_based_on_race_id
+sub_A864D0(v10, v18, a5, v19, 3, race_id_v17);
+?????sub_A87F50(v9, v12, a6, a5, v10, a6, a7, v37, race_id_a4);
+????????????????????????????????????sub_AE9850 -what is this?
+week_of_lower_defense(0, v4, race_is_good_or_evil_v6, week_id_a3);
+element_type(spell_id_a2) - returns element id air 1, fire  2,water 3, earth 4
+*****fireball_sized_area_regul_mb_inspectme - havent been checked
+ ????????some_chance_based_roll(spell_dmg_multiplier_v15, 0.0, 1.0);
+sub_8D5B00(spell_id_a2)
+ ??????????????sub_69EC80(v3, &spell_id_a2); - is it spell id?
+unit_damaging_abilities(v19, v24, spell_id, v26, v27, v28)
+gold_income_per_day - big one
+golden_tongue_resources_from_battle
+weeks_of_initiative(int race_is_good_or_evil_a1, int week_id_a2, float initiative_a3)
+proxy02_weeks_of_morale
+artificial_glory_implementation_2
+war_machines_and_artif_glory
+global_morale
+ sub_4873D0(&v19, race_id_v10 + 1, &v18)
+sub_991C30( - important!!!
+is_spell_target_viable_is_living(int target_unit_a1, int spell_id_a2) - write down the calls, explore xrefs!
+roll_magic_resist_irresistible_piercing - do xref and func variable
+sub_9DD330 - function that gathers many unit variables. Unknown function.
+unit_gets_hit_phantom_check
+direct_dmg_spell - update xref sp
+targetable_hero_ability(some_unit_a4, 40)
+avenger_things_inspectme
+WORKING ON THIS ONE - sub_9DD1D0
+determining_spell_damage - XREF VARS and specially MASTERYYYYYY
+also_calls_ignite_and_noidea - full revision
+return_unit_weekly_population
+devides_hero_classes_maybe(v18);
+COMBAT_AI_difficulty_maybe_defaultstats_2836
+ acid_blood_ability(int *this, int a2, int dmg_a3, int a4, int a5, int a6, int a7, int *a8) -check this out
+ animations_for_spells_that_fly_from_hero(&v56, attacking_unit_v19, v21, v20, &dword_F716A4);
+ 
+ returns_127_max_artifact_count
+ 
+********************* sub_9DDFB0 xref dmg or mastery? - This one is big ONE
+elemental_chains
+ sub_995450(target_unit_v16, &stack_size_v30, v17, &dmg_v31, 0, v21, 0, a12, attacking_unit_v12);
+
+sub_612850
+sub_4F4BE0
+sub_4F4E40
+
+
+
+
+
+
+
+mass_emp_to_normal_clone(void *this_spell_id) - returns element iD?
+damage_from_abilities(a3, a4, a5, a6, a8, a9, a10);
+calculating_stack_damage(int a1, int a2, int a3, int week_id_a4)
+rage_unit_bonuses_maybe(v23, 4) -check what is 4?
+
+
+_DWORD *__fastcall sub_B56E20(int a1, int a2, int a3) check this one switch!
+ 
+
+
+all_forms_of_summoning_and_more
+
+chance_based_ability_roll
+
+hero_ATB_after_spellcast_mass_spells_decompilation_failed
+
+return_hero_race_related_or_general_or_magic_school
+
+mana_spellpoints_on_creature_maybe (a1, a2 not unit id?)
+
+sub_ACF2F0(void *this_unit_id) is it unit_id?
+
+chilling_bones - check parent fucnction
+
+last_stand
+
+sub_A873E0(int a1@<edx>, int a2@<ecx>, int race_id_a3 - decompilation failed for parent
+
+sub_A87250(_BYTE *a1@<edx>, int *a2@<ecx>, int race_id_a3@<ebx>,  - decompilation failed for parent
+
+sub_A88330(_BYTE *a1@<edx>, int *a2@<ecx>, _BYTE *a3@<ebx>, int race_id_a4@<esi> - decompilation failed for parent
+
+sub_5DD7C0 - enable FLYBY in multi!
+sub_689660 - ENABLE SCRIPTS in multi!
+
+H55-3P-Epic - failed
+H55-3P-Triangle - failed
+H55-4P-belt - failed
+H55-4P-Chain - failed
+H55-4P-Epic - failed
+H55-4P-Scarce - failed
+H55-4P-Square - failed
+H55-4P-SquareW - failed
+H55-4P-Stair - failed
+H55-5-Ultima - failed
+H55-6P-Epic - WORKS
+H55-6P-Triangle - failed
+
+
+Commands to inspect:
+arena_override 
+
+14x14 field is made by pointer to Bank_Void.(AdvMapTownCombat).xdb
