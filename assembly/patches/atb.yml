@@ -1,0 +1,96 @@
+# ----------------------------------------------------
+# -------------- ATB Patch --------------------
+# ----------------------------------------------------
+# A compilation of various ATB related values.
+# 
+# Start ATB by Indral (see http://heroescommunity.com/viewthread.php3?TID=36538)
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+  - &mass_spells_atb                          0.15     # atb bonus for using mass spells
+  - &wait_action_atb                          0.50     # the atb of the creatures which uses wait is multiplied with this value
+  - &max_start_value_atb                      0.15     # the maximal atb creatures can have during the start of a combat. The actual value is determined randomly.
+  - &sorcery_atb                              0.1111   # atb bonus each sorcery skill level gives
+  
+# -----------Things that should not be modified ----------------
+  
+  - &original_atb_mass_spells                     0.50
+  - &original_atb_wait_action                     0.50
+  - &original_atb_max_start_value                 0.25
+  
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ checkAddress:   007BEC6F
+ checkBytes:     8B 4B 04 E8 E9 46 E7 FF 84 C0 74 0A C7 44 24 1C
+ patchAddress:   007BEC7F
+ valueType:      Float
+ originalValue:  *original_atb_mass_spells
+ patchValue:     *mass_spells_atb
+---
+ group: Original
+ checkAddress:   0066A98C
+ checkBytes:     FF 8B 51 08 8D 8C 32 50 FF FF FF 8B F8 8B 01 68
+ patchAddress:   0066A99C
+ valueType:      Float
+ originalValue:  *original_atb_wait_action
+ patchValue:     *wait_action_atb
+---
+ group: Original
+ checkAddress:   006734E7
+ checkBytes:     8B 07 8B CF FF 50 0C 8B 4F 04 8B 51 08 6A 01 68
+ patchAddress:   006734F7
+ valueType:      Float
+ originalValue:  *original_atb_max_start_value
+ patchValue:     *max_start_value_atb
+---
+ group: Original
+ patchAddress:   0000033C
+ originalBytes:  00*              # empty space
+ valueType:      Float
+ patchValue:     *sorcery_atb
+---
+ group: Original
+ checkAddress:   007BECB9
+ checkBytes:     FF 92 74 01 00 00 89 44 24 1C DB 44 24 1C D8 0D
+ patchAddress:   007BECC9
+ valueType:      Address
+ originalValue:  E12F10           # pointer to float value 0.10 (for sorcery skill level multiplier)
+ patchValue:     40033C           # pointer to own float value  
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+ group: Quantomas3.1j
+ checkAddress:   0074398F
+ checkBytes:     8B 4B 04 E8 99 11 D9 FF 84 C0 74 0A C7 44 24 1C
+ patchAddress:   0074399F
+ valueType:      Float
+ originalValue:  *original_atb_mass_spells
+ patchValue:     *mass_spells_atb
+---
+ group: Quantomas3.1j
+ checkAddress:   004C5C7C
+ checkBytes:     FF 8B 51 08 8D 8C 32 54 FF FF FF 8B F8 8B 01 68
+ patchAddress:   004C5C8C
+ valueType:      Float
+ originalValue:  *original_atb_wait_action
+ patchValue:     *wait_action_atb
+---
+ group: Quantomas3.1j
+ checkAddress:   004CE6E1
+ checkBytes:     8B 07 8B CF FF 50 0C 8B 4F 04 8B 51 08 6A 01 68
+ patchAddress:   004CE6F1
+ valueType:      Float
+ originalValue:  *original_atb_max_start_value
+ patchValue:     *max_start_value_atb
+---
+ group: Quantomas3.1j
+ patchAddress:   0000033C
+ originalBytes:  00*              # empty space
+ valueType:      Float
+ patchValue:     *sorcery_atb
+---
+ group: Quantomas3.1j
+ checkAddress:   007439D9
+ checkBytes:     FF 92 78 01 00 00 89 44 24 1C DB 44 24 1C D8 0D
+ patchAddress:   007439E9
+ valueType:      Address
+ originalValue:  E09FC0           # pointer to float value 0.10 (for sorcery skill level multiplier)
+ patchValue:     40033C           # pointer to own float value  

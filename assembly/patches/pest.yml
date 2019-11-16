@@ -1,0 +1,181 @@
+# -----------------------------------------------------
+# ---------------- PEST v1.6 --------------------------
+# -----------------------------------------------------
+# Permanent and Endless Simultaneous Turns by Deflaktor
+# -----------------------------------------------------
+#
+# Original post:
+# http://heroescommunity.com/viewthread.php3?TID=39792
+# Steam thread:
+# http://steamcommunity.com/app/15370/discussions/0/540743758000530320
+#
+# Makes simultaneous turns last forever.
+# Players can interact in real time with each other. 
+# Testing has proven this to be stable. 
+# Otherwise impossible actions like three way 
+# combat are ignored. 
+# 
+# 
+# Thanks for finding bugs and testing:
+# - ZX_Lost_Soul
+# - Palingenese
+# - SimonaK
+# - Mahnthor 
+# - dredknight
+# Thanks for additional motivation to work on it:
+# - lotihoti
+# - magnomagus
+#
+# ------------------ CHANGELOG -----------------------
+# 
+# v1.6 (24th December 2016):
+# - Fix call ship trigger for Quantomas' AI exe file
+#
+# v1.5 (30th May 2016):
+# - Fix buy ship trigger for Quantomas' AI exe file
+#
+# v1.4 (25th December 2014):
+# - Added support for Quantomas' AI Exe file
+# 
+# v1.3 (25th March 2014):
+# - Angel Wings fix
+# - Levitation Boots fix
+# - Ghost Mode fix
+# - Little GUI polishing
+# 
+# v1.2 (20th January 2014):
+# - Computer player end of turn fix
+# - Dimensional door fix
+# 
+# v1.1 (14th December 2013):
+# - Fixed the end of simultaneous turns after combat
+# - Various GUI fixes of the patcher
+# 
+# v1.0 (9th December 2013):
+# - Initial Release
+# 
+#
+# ----------------------------------------------------
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+
+# Make algorithm return instantly
+group: Original
+checkAddress:   005C1A5E
+checkBytes:     CC CC 81 EC 74 01 00 00 53 8B D9 8B 03 89 5C 24
+originalBytes:  81
+patchAddress:   005C1A60
+patchBytes:     C3      # patch to RET opcode 
+---
+# End of combat trigger
+group: Original
+checkAddress:   006F2A59
+checkBytes:     8B CF FF 52 1C 84 C0 74 07 8B CF E8 57 EF EC FF
+originalBytes:  E8 57 EF EC FF
+patchAddress:   006F2A64
+patchBytes:     90 90 90 90 90      # NOP opcodes 
+---
+# Computer player turn trigger
+group: Original
+checkAddress:   0002D464
+checkBytes:     08 5F 74 20 8B 4E 0C 8B 11 FF 52 1C 84 C0 74 14
+originalBytes:  74 14
+patchAddress:   0002D472
+patchBytes:     EB 14           # JMP always opcode
+---
+# Computer player end of turn trigger 1
+group: Original
+checkAddress:   00464ED5
+checkBytes:     84 8A 00 00 00 8B 07 8B CF FF 50 1C 84 C0 74 7F
+patchAddress:   00464EE3
+originalBytes:  74 7F
+patchBytes:     EB 7F           # JMP always opcode
+---
+# Computer player end of turn trigger 2
+group: Original
+checkAddress:   005978E9
+checkBytes:     00 00 74 1F 8B 55 00 8B CD FF 52 1C 84 C0 74 13
+patchAddress:   005978F7
+originalBytes:  74 13
+patchBytes:     EB 13           # JMP always opcode
+---
+# Dimensional door trigger
+group: Original
+checkAddress:   00464DBB
+checkBytes:     00 8B 07 8B CF FF 50 1C 84 C0 0F 84 6F 05 00 00
+patchAddress:   00464DC5
+originalBytes:  0F 84 6F 05 00 00
+patchBytes:     E9 70 05 00 00 90
+---
+# Angel wings and boots of levitation trigger
+group: Original
+checkAddress:   0074AAC6
+checkBytes:     83 FD 1E 75 1D 8B 03 8B CB FF 50 1C 84 C0 74 12
+patchAddress:   0074AAD4
+originalBytes:  74 12
+patchBytes:     EB 12       # JMP always
+---
+# Ghost mode trigger
+group: Original
+checkAddress:   0058ECFB
+checkBytes:     00 00 00 74 3F 8B 16 8B CE FF 52 1C 84 C0 74 34
+patchAddress:   0058ED09
+originalBytes:  74 34
+patchBytes:     EB 34       # JMP always
+
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+# Make algorithm return instantly
+group: Quantomas3.1j
+checkAddress:   006091BE
+checkBytes:     CC CC 81 EC 74 01 00 00 53 8B D9 8B 03 89 5C 24
+patchAddress:   006091C0
+originalBytes:  81
+patchBytes:     C3      # RET opcode
+---
+# Start of game trigger
+group: Quantomas3.1j
+checkAddress:   004969D9
+checkBytes:     74 34 8B 06 8B CE FF 50 20 6A 01 32 D2 8B CE E8
+patchAddress:   004969D9
+originalBytes:  74      # Jump if equal
+patchBytes:     EB      # Jump always
+---
+# Dimensional door trigger
+group: Quantomas3.1j
+checkAddress:   005C97A6
+checkBytes:     0F 84 98 05 00 00 8B CF E8 6D F9 03 00 5F 5E 5D 5B 81 C4 9C
+patchAddress:   005C97A6
+originalBytes:  0F 84 98 05 00 00       # Jump if equal
+patchBytes:     E9 99 05 00 00 90       # Jump always
+---
+# Angel wings and boots of levitation trigger
+group: Quantomas3.1j
+checkAddress:   005F6634
+checkBytes:     74 12 8B 13 8B CB FF 52 20 6A 01 32 D2 8B CB E8
+patchAddress:   005F6634
+originalBytes:  74 12       # Jump if equal
+patchBytes:     EB 12       # Jump always
+---
+# End of combat trigger
+group: Quantomas3.1j
+checkAddress:   0057F840
+checkBytes:     74 07 8B CF E8 D7 98 08 00 5F 5E C2 08 00 CC CC
+patchAddress:   0057F840
+originalBytes:  74 07       # Jump if equal
+patchBytes:     EB 07       # Jump always
+---
+# Buy Ship trigger
+group: Quantomas3.1j
+checkAddress:   004F26B2
+checkBytes:     38 58 08 5F 74 20 8B 4E 0C 8B 11 FF 52 1C 84 C0
+patchAddress:   004F26C2
+originalBytes:  74 14       # Jump if equal
+patchBytes:     EB 14       # Jump always
+---
+# Call Ship trigger
+group: Quantomas3.1j
+checkAddress:   5C98B0
+checkBytes:     8B 07 8B CF FF 50 1C 84 C0
+patchAddress:   5C98B9
+originalBytes:  74 7F       # Jump if equal
+patchBytes:     EB 7F       # Jump always
