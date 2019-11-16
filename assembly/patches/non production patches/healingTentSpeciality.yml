@@ -1,0 +1,110 @@
+# ----------------------------------------------------
+# ------------ Healing Tent Speciality ---------------
+# ----------------------------------------------------
+# Balsamers' speciality will increase healing amount by 2 percent per level instead of 5 hp per level.
+#
+# By Deflaktor
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+- &hp_per_level                 0
+- &percentage_per_level      0.02
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ patchAddress:   00A0856F
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *hp_per_level
+---
+ group: Original
+ patchAddress:   00A0856B
+ originalBytes:  00*               # empty space
+ valueType:      Float
+ patchValue:     *percentage_per_level
+---
+ group: Original
+ checkAddress:   0057660E
+ checkBytes:     48 08 8B 54 31 04 8D 4C 31 04 FF 92 3C 02 00 00
+ patchAddress:   0057661E          # Location which increases 5 hp per hero level to healing amount
+ originalBytes:  8D 04 80 01 07    # lea eax,[eax+eax*4] ;  add [edi],eax
+ patchBytes:     E9 15 1F 49 00    # jmp 00E09138
+---
+ group: Original
+ checkAddress:   00A08538
+ checkBytes:     00 00 00 00
+ patchAddress:   00A08538
+ originalBytes:  00*               # empty space
+ patchBytes:     |
+     50                    # push eax
+     8B 0E                 # mov ecx,[esi]
+     51                    # push ecx
+     D9 1E                 # fstp dword ptr [esi]
+     8B 0E                 # mov ecx,[esi]
+     51                    # push ecx
+     89 06                 # mov [esi],eax
+     8B 0D 6F 91 E0 00     # mov ecx,[00E0916F]
+     F7 E1                 # mul ecx
+     01 07                 # add [edi],eax
+     D9 05 6B 91 E0 00     # fld dword ptr [00E0916B]
+     DA 0E                 # fimul [esi]
+     DA 0F                 # fimul [edi]
+     DB 1E                 # fistp dword ptr [esi]
+     8B 0E                 # mov ecx,[esi]
+     01 0F                 # add [edi],ecx
+     59                    # pop ecx
+     89 0E                 # mov [esi],ecx
+     D9 06                 # fld dword ptr [esi]
+     59                    # pop ecx
+     89 0E                 # mov [esi],ecx
+     58                    # pop eax
+     E9 B8 E0 B6 FF        # jmp 00977223
+--- # ----------- Quantomas3.1j EXE PATCH DATA ------------
+ group: Quantomas3.1j
+ patchAddress:   00A067BF
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *hp_per_level
+---
+ group: Quantomas3.1j
+ patchAddress:   00A067BB
+ originalBytes:  00*               # empty space
+ valueType:      Float
+ patchValue:     *percentage_per_level
+---
+ group: Quantomas3.1j
+ checkAddress:   004B274E
+ checkBytes:     48 08 8B 54 31 04 8D 4C 31 04 FF 92 34 02 00 00
+ patchAddress:   004B275E          # Location which increases 5 hp per hero level to healing amount
+ originalBytes:  8D 04 80 01 07    # lea eax,[eax+eax*4] ;  add [edi],eax
+ patchBytes:     E9 25 40 55 00    # jmp 00E07388
+---
+ group: Quantomas3.1j
+ checkAddress:   00A06788
+ checkBytes:     00 00 00 00
+ patchAddress:   00A06788
+ originalBytes:  00*               # empty space
+ patchBytes:     |
+     50                    # push eax
+     8B 0E                 # mov ecx,[esi]
+     51                    # push ecx
+     D9 1E                 # fstp dword ptr [esi]
+     8B 0E                 # mov ecx,[esi]
+     51                    # push ecx
+     89 06                 # mov [esi],eax
+     8B 0D BF 73 E0 00     # mov ecx,[00E073BF]
+     F7 E1                 # mul ecx
+     01 07                 # add [edi],eax
+     D9 05 BB 73 E0 00     # fld dword ptr [00E073BB]
+     DA 0E                 # fimul [esi]
+     DA 0F                 # fimul [edi]
+     DB 1E                 # fistp dword ptr [esi]
+     8B 0E                 # mov ecx,[esi]
+     01 0F                 # add [edi],ecx
+     59                    # pop ecx
+     89 0E                 # mov [esi],ecx
+     D9 06                 # fld dword ptr [esi]
+     59                    # pop ecx
+     89 0E                 # mov [esi],ecx
+     58                    # pop eax
+     E9 A8 BF AA FF        # jmp 008B3363

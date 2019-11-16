@@ -1,0 +1,135 @@
+# ----------------------------------------------------
+# ------------ Healing Tent HP ---------------
+# ----------------------------------------------------
+# Changes Healing amount from (10,20,50,100) to (10,10,10,10)
+#
+# By Deflaktor
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+- &no_mastery_healing         10
+- &basic_mastery_healing      10
+- &advanced_mastery_healing   10
+- &expert_mastery_healing     10
+
+- &no_mastery_unknown_value          0
+- &basic_mastery_unknown_value       0
+- &advanced_mastery_unknown_value    1
+- &expert_mastery_unknown_value      3
+
+# -----------Things that should not be modified ----------------
+
+- &original_healing_value_no_mastery         10
+- &original_healing_value_basic_mastery      20
+- &original_healing_value_advanced_mastery   50
+- &original_healing_value_expert_mastery    100
+
+- &original_unknown_value_no_mastery          0
+- &original_unknown_value_basic_mastery       0
+- &original_unknown_value_advanced_mastery    1
+- &original_unknown_value_expert_mastery      3
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ checkAddress:   00576596
+ checkBytes:     03 56 57 8B F9 77 3D FF 24 85 4C 72 97 00 C7 07
+ patchAddress:   005765A6
+ valueType:      Integer
+ originalValue:  *original_healing_value_no_mastery
+ patchValue:     *no_mastery_healing
+---
+ group: Original
+ checkAddress:   005765AA
+ checkBytes:     C7 02
+ patchAddress:   005765AC
+ valueType:      Integer
+ originalValue:  *original_unknown_value_no_mastery
+ patchValue:     *no_mastery_unknown_value
+---
+ group: Original
+ patchAddress:   005765B4
+ valueType:      Integer
+ originalValue:  *original_healing_value_basic_mastery
+ patchValue:     *basic_mastery_healing
+---
+ group: Original
+ patchAddress:   005765BA
+ valueType:      Integer
+ originalValue:  *original_unknown_value_basic_mastery
+ patchValue:     *basic_mastery_unknown_value
+---
+ group: Original
+ patchAddress:   005765C2
+ valueType:      Integer
+ originalValue:  *original_healing_value_advanced_mastery
+ patchValue:     *advanced_mastery_healing
+---
+ group: Original
+ patchAddress:   005765C8
+ valueType:      Integer
+ originalValue:  *original_unknown_value_advanced_mastery
+ patchValue:     *advanced_mastery_unknown_value
+---
+ group: Original
+ patchAddress:   005765D0
+ valueType:      Integer
+ originalValue:  *original_healing_value_expert_mastery
+ patchValue:     *expert_mastery_healing
+---
+ group: Original
+ patchAddress:   005765D6
+ valueType:      Integer
+ originalValue:  *original_unknown_value_expert_mastery
+ patchValue:     *expert_mastery_unknown_value
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+ group: Quantomas3.1j
+ checkAddress:   004B26D6
+ checkBytes:     03 56 57 8B F9 77 3D FF 24 85 8C 33 8B 00 C7 07
+ patchAddress:   004B26E6
+ valueType:      Integer
+ originalValue:  *original_healing_value_no_mastery
+ patchValue:     *no_mastery_healing
+---
+ group: Quantomas3.1j
+ checkAddress:   004B26EA
+ checkBytes:     C7 02
+ patchAddress:   004B26EC
+ valueType:      Integer
+ originalValue:  *original_unknown_value_no_mastery
+ patchValue:     *no_mastery_unknown_value
+---
+ group: Quantomas3.1j
+ patchAddress:   004B26F4
+ valueType:      Integer
+ originalValue:  *original_healing_value_basic_mastery
+ patchValue:     *basic_mastery_healing
+---
+ group: Quantomas3.1j
+ patchAddress:   004B26FA
+ valueType:      Integer
+ originalValue:  *original_unknown_value_basic_mastery
+ patchValue:     *basic_mastery_unknown_value
+---
+ group: Quantomas3.1j
+ patchAddress:   004B2702
+ valueType:      Integer
+ originalValue:  *original_healing_value_advanced_mastery
+ patchValue:     *advanced_mastery_healing
+---
+ group: Quantomas3.1j
+ patchAddress:   004B2708
+ valueType:      Integer
+ originalValue:  *original_unknown_value_advanced_mastery
+ patchValue:     *advanced_mastery_unknown_value
+---
+ group: Quantomas3.1j
+ patchAddress:   004B2710
+ valueType:      Integer
+ originalValue:  *original_healing_value_expert_mastery
+ patchValue:     *expert_mastery_healing
+---
+ group: Quantomas3.1j
+ patchAddress:   004B2716
+ valueType:      Integer
+ originalValue:  *original_unknown_value_expert_mastery
+ patchValue:     *expert_mastery_unknown_value

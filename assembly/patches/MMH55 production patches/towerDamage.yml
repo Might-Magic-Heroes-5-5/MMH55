@@ -1,0 +1,153 @@
+# ----------------------------------------------------
+# ----------------- Tower Damage v1.1 ----------------
+# ----------------------------------------------------
+# Increase tower main damage from 70 to 200 and tower side damage from 50 to 140, also changes formula.
+#
+# The formula for tower and mines/river damage has been changed from
+#  
+#                   tower_damage * (TL/Max TL)
+#
+#                               to
+#
+#   tower_damage * (  TL/Max TL * factor_linear + TL*TL/(Max TL*Max TL) * factor_quadratic  )
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+ - &tower_main_damage 200
+ - &tower_side_damage 140
+ - &factor_linear     0.5
+ - &factor_quadratic  0.5
+# ----------- Things that should not be modified ----------------
+ - &original_tower_main_damage 70
+ - &original_tower_side_damage 50
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ patchAddress:   352
+ valueType:      Integer
+ originalBytes:  00*
+ patchBytes:     |
+   83 EC 04              # sub esp,04 { 4 }
+   DB 44 24 0C           # fild dword ptr [esp+0C]
+   DA 74 24 10           # fidiv dword ptr [esp+10]
+   D8 0D 87034000        # fmul dword ptr [00400387] { [205] }
+   D9 1C 24              # fstp dword ptr [esp]
+   DB 44 24 0C           # fild dword ptr [esp+0C]
+   DA 4C 24 0C           # fimul [esp+0C]
+   DA 74 24 10           # fidiv dword ptr [esp+10]
+   DA 74 24 10           # fidiv dword ptr [esp+10]
+   D8 0D 8B034000        # fmul dword ptr [0040038B] { [205] }
+   D8 04 24              # fadd dword ptr [esp]
+   83 C4 04              # add esp,04 { 4 }
+   E9 9B1E8D00           # jmp 00CD2222
+---
+ group: Original
+ patchAddress:   387
+ valueType:      Float
+ originalBytes:  00*
+ patchValue:     *factor_linear
+---
+ group: Original
+ patchAddress:   38B
+ valueType:      Float
+ originalBytes:  00*
+ patchValue:     *factor_quadratic
+---
+ group: Original
+ patchAddress:   8D161D
+ originalBytes:  |
+   DB 44 24 08           # fild dword ptr [esp+08]
+   5F                    # pop edi
+   5E                    # pop esi
+   DA 74 24 04           # fidiv dword ptr [esp+04]
+   83 C4 0C              # add esp,0C { 12 }
+   C3                    # ret 
+ patchBytes:     |
+   E9 30E172FF           # jmp 00400352
+   5F                    # pop edi
+   5E                    # pop esi
+   83 C4 0C              # add esp,0C { 12 }
+   C3                    # ret 
+   CC                    # int 3 
+   CC                    # int 3 
+   CC                    # int 3 
+---
+ group: Original
+ checkAddress:   7FD43F
+ checkBytes:     C7 44 24 0C
+ patchAddress:   7FD443
+ valueType:      Integer
+ originalValue:  *original_tower_main_damage
+ patchValue:     *tower_main_damage
+---
+ group: Original
+ checkAddress:   7FD449
+ checkBytes:     C7 44 24 0C
+ patchAddress:   7FD44D
+ valueType:      Integer
+ originalValue:  *original_tower_side_damage
+ patchValue:     *tower_side_damage
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+ group: Quantomas3.1j
+ patchAddress:   352
+ originalBytes:  00*
+ patchBytes:     |
+   83 EC 04              # sub esp,04 { 4 }
+   DB 44 24 0C           # fild dword ptr [esp+0C]
+   DA 74 24 10           # fidiv dword ptr [esp+10]
+   D8 0D 87034000        # fmul dword ptr [00400387] { [205] }
+   D9 1C 24              # fstp dword ptr [esp]
+   DB 44 24 0C           # fild dword ptr [esp+0C]
+   DA 4C 24 0C           # fimul [esp+0C]
+   DA 74 24 10           # fidiv dword ptr [esp+10]
+   DA 74 24 10           # fidiv dword ptr [esp+10]
+   D8 0D 8B034000        # fmul dword ptr [0040038B] { [205] }
+   D8 04 24              # fadd dword ptr [esp]
+   83 C4 04              # add esp,04 { 4 }
+   E9 4BB35500           # jmp 0095B6D2
+---
+ group: Quantomas3.1j
+ patchAddress:   387
+ valueType:      Float
+ originalBytes:  00*
+ patchValue:     *factor_linear
+---
+ group: Quantomas3.1j
+ patchAddress:   38B
+ valueType:      Float
+ originalBytes:  00*
+ patchValue:     *factor_quadratic
+---
+ group: Quantomas3.1j
+ patchAddress:   55AACD
+ originalBytes:  |
+   DB 44 24 08           # fild dword ptr [esp+08]
+   5F                    # pop edi
+   5E                    # pop esi
+   DA 74 24 04           # fidiv dword ptr [esp+04]
+   83 C4 0C              # add esp,0C { 12 }
+   C3                    # ret 
+ patchBytes:     |
+   E9 804CAAFF           # jmp 00400352
+   5F                    # pop edi
+   5E                    # pop esi
+   83 C4 0C              # add esp,0C { 12 }
+   C3                    # ret 
+   CC                    # int 3 
+   CC                    # int 3 
+   CC                    # int 3 
+---
+ group: Quantomas3.1j
+ checkAddress:   74F23F
+ checkBytes:     C7 44 24 0C
+ patchAddress:   74F243
+ valueType:      Integer
+ originalValue:  *original_tower_main_damage
+ patchValue:     *tower_main_damage
+---
+ group: Quantomas3.1j
+ checkAddress:   74F249
+ checkBytes:     C7 44 24 0C
+ patchAddress:   74F24D
+ valueType:      Integer
+ originalValue:  *original_tower_side_damage
+ patchValue:     *tower_side_damage

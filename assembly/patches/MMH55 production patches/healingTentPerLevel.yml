@@ -1,0 +1,114 @@
+# ----------------------------------------------------
+# ------------ Healing Tent HP per Level ---------------
+# ----------------------------------------------------
+# Depending on mastery each hero level will add 5, 6, 8 or 10 hp to healing amount of the healing tent.
+#
+# By Deflaktor
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+- &no_mastery_hp_per_level         5
+- &basic_mastery_hp_per_level      6
+- &advanced_mastery_hp_per_level   8
+- &expert_mastery_hp_per_level    10
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ patchAddress:   00A08528
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *no_mastery_hp_per_level
+---
+ group: Original
+ patchAddress:   00A0852C
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *basic_mastery_hp_per_level
+---
+ group: Original
+ patchAddress:   00A08530
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *advanced_mastery_hp_per_level
+---
+ group: Original
+ patchAddress:   00A08534
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *expert_mastery_hp_per_level
+---
+ group: Original
+ checkAddress:   005765E0
+ checkBytes:     FF 50 18 8B 10 8B C8 FF 52 0C 8B F0 85 F6 74 57
+ patchAddress:   005765F0                # Location after calculating the healing amount depending on mastery, just before finding out whether hero has healing tent speciality
+ originalBytes:  8B 46 04 8B 48 08       # mov eax,[esi+04] ;  mov ecx,[eax+08]
+ patchBytes:     E9 05 1F 49 00 90       # jmp 00E090FA     ;  nop
+---
+ group: Original
+ checkAddress:   00A084EA
+ checkBytes:     CC CC CC CC CC CC B9 E4 9E 0E 01 E9 66 17 F7 FF
+ patchAddress:   00A084FA
+ originalBytes:  00*                     # empty space
+ patchBytes:     |
+     8B 46 04              # mov eax,[esi+04]
+     8B 48 08              # mov ecx,[eax+08]
+     8B 54 31 04           # mov edx,[ecx+esi+04]
+     8D 4C 31 04           # lea ecx,[ecx+esi+04]
+     FF 92 3C 02 00 00     # call dword ptr [edx+0000023C]
+     8B 4C 24 10           # mov ecx,[esp+10]
+     8B 0C 8D 28 91 E0 00  # mov ecx,[ecx*4+00E09128]
+     F7 E1                 # mul ecx
+     01 07                 # add [edi],eax
+     8B 46 04              # mov eax,[esi+04]
+     8B 48 08              # mov ecx,[eax+08]
+     E9 CE E0 B6 FF        # jmp 009771F6
+--- # ----------- Quantomas3.1j EXE PATCH DATA ------------
+ group: Quantomas3.1j
+ patchAddress:   00A06778
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *no_mastery_hp_per_level
+---
+ group: Quantomas3.1j
+ patchAddress:   00A0677C
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *basic_mastery_hp_per_level
+---
+ group: Quantomas3.1j
+ patchAddress:   00A06780
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *advanced_mastery_hp_per_level
+---
+ group: Quantomas3.1j
+ patchAddress:   00A06784
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *expert_mastery_hp_per_level
+---
+ group: Quantomas3.1j
+ checkAddress:   004B2720
+ checkBytes:     FF 50 18 8B 10 8B C8 FF 52 0C 8B F0 85 F6 74 57
+ patchAddress:   004B2730                # Location after calculating the healing amount depending on mastery, just before finding out whether hero has healing tent speciality
+ originalBytes:  8B 46 04 8B 48 08       # mov eax,[esi+04] ;  mov ecx,[eax+08]
+ patchBytes:     E9 15 40 55 00 90       # jmp 00E0734A     ;  nop
+---
+ group: Quantomas3.1j
+ checkAddress:   00A0673A
+ checkBytes:     CC CC CC CC CC CC B9 E4 57 0F 01 E9 C6 CD DA FF
+ patchAddress:   00A0674A
+ originalBytes:  00*                     # empty space
+ patchBytes:     |
+     8B 46 04              # mov eax,[esi+04]
+     8B 48 08              # mov ecx,[eax+08]
+     8B 54 31 04           # mov edx,[ecx+esi+04]
+     8D 4C 31 04           # lea ecx,[ecx+esi+04]
+     FF 92 34 02 00 00     # call dword ptr [edx+00000234]
+     8B 4C 24 10           # mov ecx,[esp+10]
+     8B 0C 8D 78 73 E0 00  # mov ecx,[ecx*4+00E07378]
+     F7 E1                 # mul ecx
+     01 07                 # add [edi],eax
+     8B 46 04              # mov eax,[esi+04]
+     8B 48 08              # mov ecx,[eax+08]
+     E9 BE BF AA FF        # jmp 008B3336
