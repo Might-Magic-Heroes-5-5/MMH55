@@ -1,0 +1,42 @@
+# ----------------------------------------------------
+# ----------------- Counterspell mana fix v1 --------------
+# ----------------------------------------------------
+#
+# Changes Counterspell ability to charge 1.5x instead of 2.0x mana of ressisted spell
+#
+# ----------------------------------------------------
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 22 22 33 
+patchAddress:   004B4310
+originalBytes:  00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+patchBytes:     00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+group: Original
+patchAddress:   007BF9F0
+originalBytes:  00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+patchBytes:     00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+---
+group: Original
+patchAddress:   007BF9F0
+originalBytes:  00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+patchBytes:     00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   004B3B2B
+originalBytes:  8D 0C 3F 5E 2B C1
+patchBytes:     E8 60 1C 89 00 5E
+---
+group: Quantomas3.1j
+patchAddress:   004B3BCF
+originalBytes:  8D 0C 1B 2B C1
+patchBytes:     E8 C8 1B 89 00
+---
+group: Quantomas3.1j
+patchAddress:   01146390
+originalBytes:  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+patchBytes:     8D 0C 7F D1 E9 29 C8 C3 00 00 00 00 8D 0C 5B D1 EB 29 D8 C3

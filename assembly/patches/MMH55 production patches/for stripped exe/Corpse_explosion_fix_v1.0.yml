@@ -1,0 +1,52 @@
+# ----------------------------------------------------
+# ----------------- Corpse Explosion mana per HP fix v1 --------------
+# ----------------------------------------------------
+#
+# Changes the mana per HP from stackhp/40 to sqrt(stackhp)/2
+#
+# ----------------------------------------------------
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00578230                                                    
+originalBytes:  00 00 00 00 00 00 00 00 00 00 00 00
+patchBytes:     00 00 00 00 00 00 00 00 00 00 00 00
+---
+group: Original
+patchAddress:   00578242                                                   
+originalBytes:  00 00 00 00 00 00 00 00 00 00 00 00
+patchBytes:     00 00 00 00 00 00 00 00 00 00 00 00
+---
+group: Original
+patchAddress:   00578330                                                   
+originalBytes:  00 00 00 00 00 00 00 00 00 00 00 00
+patchBytes:     00 00 00 00 00 00 00 00 00 00 00 00
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   011463A6                                                 
+originalBytes:  00 00 00 00 00 00 00 00 00 00 00 00
+patchBytes:     DB 44 24 24 D9 FA D8 4C 24 14 C3 90
+---
+group: Quantomas3.1j
+patchAddress:   004B6C8A
+originalBytes:  DB 44 24 20 D8 4C 24 10
+patchBytes:     E8 17 EB 88 00 90 90 90
+---
+group: Quantomas3.1j
+patchAddress:   004B6CAA
+originalBytes:  DB 44 24 20 D8 4C 24 10
+patchBytes:     E8 F7 EA 88 00 90 90 90
+---
+group: Quantomas3.1j
+patchAddress:   004B6D04
+originalBytes:  DB 44 24 20 D8 4C 24 10
+patchBytes:     E8 9D EA 88 00 90 90 90
+---
+group: Quantomas3.1j
+patchAddress:   004B6D24
+originalBytes:  DB 44 24 20 D8 4C 24 10
+patchBytes:     E8 7D EA 88 00 90 90 90
