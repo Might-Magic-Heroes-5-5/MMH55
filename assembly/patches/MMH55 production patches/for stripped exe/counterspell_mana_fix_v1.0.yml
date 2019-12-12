@@ -10,19 +10,19 @@
 group: Original
 checkAddress:   00000400
 checkBytes:     8D 41 34 C3 CC CC CC CC
-patchAddress:   00578230                                                    
-originalBytes:  00 00 00 00 00 00 00 00 00 00 00 00
-patchBytes:     00 00 00 00 00 00 00 00 00 00 00 00
+patchAddress:   00577A4B
+originalBytes:  8D 0C 3F 5E 2B C1
+patchBytes:     E8 40 DD 7B 00 5E
 ---
 group: Original
-patchAddress:   00578242                                                   
-originalBytes:  00 00 00 00 00 00 00 00 00 00 00 00
-patchBytes:     00 00 00 00 00 00 00 00 00 00 00 00
+patchAddress:   00577AEF
+originalBytes:  8D 0C 1B 2B C1
+patchBytes:     E8 A8 DC 7B 00
 ---
 group: Original
-patchAddress:   00578330                                                   
-originalBytes:  00 00 00 00 00 00 00 00 00 00 00 00
-patchBytes:     00 00 00 00 00 00 00 00 00 00 00 00
+patchAddress:   00BD9390
+originalBytes:  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+patchBytes:     8D 0C 7F D1 E9 29 C8 C3 00 00 00 00 8D 0C 5B D1 E9 29 C8 C3
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
 checkAddress:   00000400
