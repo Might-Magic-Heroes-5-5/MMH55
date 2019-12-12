@@ -10,14 +10,24 @@
 group: Original
 checkAddress:   00000400
 checkBytes:     8D 41 34 C3 CC CC CC CC
-patchAddress:   0057ABCA                                                    
+patchAddress:   0057ABCA
 originalBytes:  DB 44 24 20 D8 4C 24 10
 patchBytes:     E8 D7 AB 7B 00 90 90 90
 ---
 group: Original
-patchAddress:   00578242                                                   
+patchAddress:   0057ABEA
 originalBytes:  DB 44 24 20 D8 4C 24 10
 patchBytes:     E8 B7 AB 7B 00 90 90 90
+---
+group: Original
+patchAddress:   0057AC44
+originalBytes:  DB 44 24 20 D8 4C 24 10
+patchBytes:     E8 5D AB 7B 00 90 90 90
+---
+group: Original
+patchAddress:   0057AC64
+originalBytes:  DB 44 24 20 D8 4C 24 10
+patchBytes:     E8 3D AB 7B 00 90 90 90
 ---
 group: Original
 patchAddress:   00BD93A6                                                  
