@@ -1,0 +1,72 @@
+# ----------------------------------------------------
+# ----------------- Haven training fix v1 --------------
+# ----------------------------------------------------
+#
+# Haven units can be trained in training grounds without any requirements (hero does not have to be Knight nor have Combat)
+# Only haven humanoid units can be trained
+# ----------------------------------------------------
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   008CDFAC                              # removing requirement for Knight class
+originalBytes:  75 06
+patchBytes:     90 90
+---
+group: Original
+patchAddress:   008D2C4A                              # removing requirement for Knight class
+originalBytes:  74 13
+patchBytes:     EB 13
+---
+group: Original
+patchAddress:   0021449E                              # Jump to combat check
+originalBytes:  85 C0 74 04 B3 01 EB 02 32 DB
+patchBytes:     E8 1D 13 B2 00 90 90 90 90 90
+---
+group: Original
+patchAddress:   002144D7                              # Jump to combat check  
+originalBytes:  85 C0 74 07 B8 01 00 00 00 EB 02 33 C0
+patchBytes:     E8 04 13 B2 00 90 90 90 90 90 90 90 90
+---
+group: Original
+patchAddress:   00BD93C0                              # new code removes requirement for COMBAT for visiting hero (other racials checks are done)
+originalBytes:  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+patchBytes:     56 8B 74 24 20 83 FE 0D 75 04 B3 01 5E C3 85 C0 74 04 B3 01 5E C3 30 DB 5E C3
+---
+group: Original
+patchAddress:   00BD93E0                              # new code removes requirement for COMBAT for garrison hero (other racials checks are done)
+originalBytes:  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+patchBytes:     56 8B 74 24 20 83 FE 0D 75 07 B8 01 00 00 00 5E C3 85 C0 74 07 B8 01 00 00 00 5E C3 31 C0 5E C3
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0055746C                              # removing requirement for Knight class
+originalBytes:  75 06
+patchBytes:     90 90
+---
+group: Quantomas3.1j                              
+patchAddress:   0055C09A                              # removing requirement for Knight class
+originalBytes:  74
+patchBytes:     EB
+---
+group: Quantomas3.1j
+patchAddress:   003293DE                              # Jump to combat check
+originalBytes:  85 C0 74 04 B3 01 EB 02 32 DB
+patchBytes:     E8 DD C3 A1 00 90 90 90 90 90
+---
+group: Quantomas3.1j
+patchAddress:   00329417                              # Jump to combat check
+originalBytes:  85 C0 74 07 B8 01 00 00 00 EB 02 33 C0
+patchBytes:     E8 C4 C3 A1 00 90 90 90 90 90 90 90 90
+---
+group: Quantomas3.1j
+patchAddress:   00BD93C0                              # new code removes requirement for COMBAT for visiting hero (other racials checks are done)
+originalBytes:  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+patchBytes:     56 8B 74 24 20 83 FE 0D 75 04 B3 01 5E C3 85 C0 74 04 B3 01 5E C3 30 DB 5E C3
+---
+group: Quantomas3.1j
+patchAddress:   00BD93E0                              # new code removes requirement for COMBAT for garrison hero (other racials checks are done)
+originalBytes:  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+patchBytes:     56 8B 74 24 20 83 FE 0D 75 07 B8 01 00 00 00 5E C3 85 C0 74 07 B8 01 00 00 00 5E C3 31 C0 5E C3
