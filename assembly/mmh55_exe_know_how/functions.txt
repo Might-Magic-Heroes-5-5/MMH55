@@ -67,7 +67,7 @@
 	*(_DWORD *)v22 + 248))(v22)																			- return hero current movement points
 	*(_DWORD *)v22 + 256))																				- return hero max movement points
 	*(_DWORD *)(a4 + 368))(a4)																			- return hero level
-	*(_DWORD *)(&hero + 376)(v6, X)																		- return hero skill level; 0 - no skill, 1 yes/basic, 2 adv, 3 exp, 4 ult
+	*(_DWORD *)(&hero + 376)(v6, X)																		- return hero skill level; 0 - no skill, 1 yes/basic, 2 adv, 3 exp, 4 ult; Calls function does_hero_have_skill - 009F8C80
 	(*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v3 + 388))(v3, LODWORD(v9))						- set ATB value of v3 to v9
 	*(_DWORD *)(v6 + 408)(v6)																			- return hero specialization ID
 	*(_DWORD *)(v6 + 420)(v6)																			- return hero luck
@@ -149,7 +149,6 @@
 	(*(int (__thiscall **)(int))(*(_DWORD *)v3 + 380))(v3)												- return ATB of v3
 	+ 612))(*(*(a2 + 4) + 8) + a2 + 4, 159, v2);														- returns if creature has spell ID
 	 + 292))(v11, 0, 0, 159, 0);																		- returns if creature has spell ID?? mastey lvl amy be?
-	+376																								- Pendant of mastery
 	(*(*v1 + 28))(v1)																				    - return hero mana regen may be?
 	*((*(*v2 + 32))(v2) + 16)																			- necromancy amplifier count of town v2
 	*((*(*v2 + 32))(v2) + 20)																			- Necro grail count of town v2	
