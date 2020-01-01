@@ -33,6 +33,34 @@ DONE:
 - get_BackgroundFrameSequence_from_xdb													-- data\UI\AdventureScreen-FPP-2\EndOfTurnBlink.xdb
 - get_BackgroundSimpleTexture_from_xdb													-- data\UI\AcademyCreatureArtifacts\Tabs\First\Active.xdb
 - get_Table_DBArtifact_ArtifactEffect_from_Artifacts_xdb                                -- data\GameMechanics\RefTables\Artifacts.xdb
+- get_SpellBookDesc_from_Spellbook_xdb													-- data\UI\SpellBook\SpellBook.xdb
+- get_AdvMapDwellingShared_from_xdb														-- data\MapObjects\Dungeon\Battle_Academy.xdb
+- get_AdvMapStandShared_from_TieruHut_xdb												-- data\MapObjects\Objects-All-Terra\TieruHut.xdb
+- get_AdvMapAbanMineShared_from_Abandoned_Mine_xdb										-- data\MapObjects\Abandoned_Mine.xdb
+- get_AdvMapArtifactShared_from_xdb														-- data\MapObjects\Artifacts\Twisted_Neither.xdb
+- get_AdvMapTreasureShared_from_xdb														-- data\MapObjects\Campfire.xdb
+- get_AdvMapCaravanShared_from_Caravan_xdb												-- data\MapObjects\Caravans\Caravan.xdb
+
+
+
+
+
+
+############ the following 5 are any of the following ###########################################################################
+####### AdvMapMineShared_or_AdvMapBuildingShared_or_AdvMapCartographerShared_or_AdvMapGarrisonShared_or_AdvMapHillFortShared ####
+
+- get_AdvMap01Shared_Mine_Building_Cartographer_Garrison_HillFort - sub_9120C0
+- get_AdvMap02Shared_Mine_Building_Cartographer_Garrison_HillFort - sub_911B00
+- get_AdvMap03Shared_Mine_Building_Cartographer_Garrison_HillFort - sub_9119B0
+- get_AdvMap04Shared_Mine_Building_Cartographer_Garrison_HillFort - sub_9118E0
+- get_AdvMap05Shared_Mine_Building_Cartographer_Garrison_HillFort - sub_9117E0
+
+###########################################
+
+
+
+
+
 - get_WindowSimpleShared_from_xdb????
 
 
