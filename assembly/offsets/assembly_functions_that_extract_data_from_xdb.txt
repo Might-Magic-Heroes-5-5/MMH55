@@ -1,0 +1,39 @@
+DONE:
+- get_AdvMapDesc_from_map_xdb
+- get_AdvMapDesc_objects_Item_AdvMapTown_from_map_xdb
+- get_Table_HeroSkill_SkillID_from_Skills_xdb 											-- data\GameMechanics\RefTables\Skills.xdb
+- get_RPGRoot_from_defaultstats_xdb														-- data\GameMechanics\RPGStats\RPGRoot.xdb
+- get_RPGstats_from_defaultstats_xdb													-- data\GameMechanics\RPGStats\Defaultstats.xdb	
+- get_AdvMapHero_from_xdb 																-- data\Maps\DuelMode\Heroes\AcademyPreset2.xdb
+- get_TownSpecialization_from_xdb 														-- data\GameMechanics\TownSpecialization\Academy\Random\Towers.xdb
+- get_Table_TownTypeInfo_TownType_from_towntypesinfo_xdb 								-- data\GameMechanics\RefTables\TownTypesInfo.xdb
+- get_TableGhostClass_from_classses_xdb                    								-- data\GameMechanics\RefTables\GhostMode\Classes.xdb
+- get_RMGParameters_from_Default_xdb													-- data\RMG\Params\Default.xdb
+- get_DialogScene_from_xdb																-- data\DialogScenes\A2Single\SM2\S3\DialogScene.xdb
+- get_AdvMapHeroShared_from_xdb                           								-- data\MapObjects\Academy\Zehir.(AdvMapHeroShared).xdb
+- get_TableRaceMusic_from_TableRaceMusic_xdb											-- data\Sounds\_(Music)\TableRaceMusic.xdb
+- get_UIGameRoot_from_UIGameRoot_xdb													-- data\UI\UIGameRoot.(UIGameRoot)
+- get_DuelArenas_from_DuelArenasTable_xdb												-- data\DuelArenasTable.(DuelArenas).xdb
+- get_Table_CreatureAbility_CombatAbility_from_CombatAbilities_xdb						-- data\GameMechanics\RefTables\CombatAbilities.xdb
+- get_spell_from_xdb																	-- data\GameMechanics\Spell\Combat_Spells\DestructiveMagic\Fireball.xdb
+- get_AdvMapArtifact_from_map_xdb														-- data\Maps\Multiplayer\A1L10\map.xdb
+- get_CombatCamera_from_xdb																-- data\ArenaObjects\_(CombatCamera)\Creatures\Academy\T4_Combat_Mage_Range.xdb
+- get_Table_Spell_SpellID_from_UndividedSpells_xdb										-- data\GameMechanics\RefTables\UndividedSpells.xdb
+- get_Creature_from_xdb																	-- data\GameMechanics\Creature\Creatures\Dungeon\Black_Dragon.xdb
+- get_Table_WarMachine_WarMachineType_objects_item_Obj_WarMachine_from_WarMachines_xdb 	-- data\GameMechanics\RefTables\WarMachines.xdb
+- get_Table_Cursor_CursorName_from_Cursors_xdb											-- data\UI\RefTables\Cursors.xdb
+- get_RPGCombatUniqueCreatureStats_from_conjuredPhoenix_and_AvatarOfDeath_xdb			-- data\GameMechanics\RPGStats\ConjuredPhoenix.xdb
+- get_RMGCustomArmyTemplate_from_Example_xdb											-- data\RMG\CustomArmyTemplates\Example.xdb
+- get_AdvMapMonsterShared_from_Random_Monster_xdb										-- data\MapObjects\Random\Random-Monster-L2.xdb
+- get_AdvMapMonster_from_map_xdb														-- data\Maps\Multiplayer\A1L10\map.xdb
+- get_Table_Creature_CreatureType_from_Creatures_xdb									-- data\GameMechanics\RefTables\Creatures.xdb
+- get_TownBuildingSharedStats_from_xdb													-- data\GameMechanics\TownBuildingSharedStats\Academy\Blacksmith\Blacksmith.xdb
+- get_TownBuildDefinition_from_xdb 														-- data\UI\TownBuildNew\Towns\necropolis.xdb
+- get_BackgroundTiledTexture_from_xdb													-- data\UI\AdventureScreen\StackInfo\Normal.xdb
+- get_BackgroundFrameSequence_from_xdb													-- data\UI\AdventureScreen-FPP-2\EndOfTurnBlink.xdb
+- get_BackgroundSimpleTexture_from_xdb													-- data\UI\AcademyCreatureArtifacts\Tabs\First\Active.xdb
+- get_Table_DBArtifact_ArtifactEffect_from_Artifacts_xdb                                -- data\GameMechanics\RefTables\Artifacts.xdb
+- get_WindowSimpleShared_from_xdb????
+
+
+
