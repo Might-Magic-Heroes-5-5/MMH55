@@ -40,6 +40,23 @@ DONE:
 - get_AdvMapArtifactShared_from_xdb														-- data\MapObjects\Artifacts\Twisted_Neither.xdb
 - get_AdvMapTreasureShared_from_xdb														-- data\MapObjects\Campfire.xdb
 - get_AdvMapCaravanShared_from_Caravan_xdb												-- data\MapObjects\Caravans\Caravan.xdb
+- get_AdvMapShrineShared_from_xdb														-- data\MapObjects\MagmaShrine.xdb
+- get_AdventureFlybyScene_from_xdb														-- data\Scenes\CombatArenas\Beach_Dirt_Big_01.xdb
+- get_ArenaDesc_from_xdb																-- data\Arenas\CombatArena\Academyarena\academyarena.xdb
+- get_ArenaModObject_from_xdb															-- data\Arenas\CombatArena\Academyarena\entourb.xdb
+- get_AdvMapTile_from_xdb																-- data\MapObjects\_(AdvMapTile)\Dirt\DarkGround.xdb
+- get_CombatSelectionDesc_from_xdb														-- data\UI\CombatArena-Heavy\SelectionDesc.xdb
+- get_BasicSkelAnim_from_xdb															-- data\_(BasicSkelAnim)\Town\Rampart\MagicGuildRoot.xdb
+- get_AdvMapTentShared_from_xdb															-- data\MapObjects\Keymaster_Tent_1.xdb
+- get_DuelPresetsPrices_from_xdb														-- data\PresetsPrices.xdb
+- get_PuzzleDesc_from_xdb																-- data\UI\PuzzleMap\Academy.(PuzzleDesc).xdb
+- get_SphinxRiddle_from_xdb																-- data\GameMechanics\SphinxRiddles\SphinxRiddle_1.xdb
+- get_DSceneCameraSet_Camera_xdb_href													-- data\DialogScenes\A2C0\M1\S1\cam2nd sur kujin&foule.xdb
+
+
+
+
+
 
 
 
