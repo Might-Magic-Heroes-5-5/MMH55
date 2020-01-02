@@ -68,6 +68,14 @@ DONE:
 - get_Geometry_from_xdb																	-- data\Arenas\CombatArena\Academyarena\central_tower_u1r0-geom.xdb
 - get_AdvMapAbanMine_from_xdb															-- data\Maps\Multiplayer\A1M7\map.xdb and data\DialogScenes\A2Single\SM5\S1\DialogScene.xdb
 - get_ParticleInstance_from_xdb															-- data\Effects\_(Effect)\Towns\Stronghold\Special_1\Special_1_glow_lava.xdb
+- get_WindowRelatedTextures_from_xdb													-- data\UI\Tooltips\CreatureInfo\Attributes.xdb
+- get_SunFlares_from_xdb																-- data\_(SunFlares)\Test.(SunFlares).xdb
+- get_Material_from_xdb																	-- data\_(Model)\TerrainObjects\Lava\LavaFlows\Lavaflow3x2_5.(Model).xdb
+- get_DistanceFog_from_xdb																-- data\_(DistanceFog)\dtest.xdb
+- get_DSceneCamera_from_xdb																-- data\DialogScenes\A2Single\SM1\S1\K10camera.xdb
+- get_CreatureVisual_from_xdb															-- data\GameMechanics\CreatureVisual\Creatures\Academy\3rd\DjinnVizier.xdb
+- get_DuelPresets_from_xdb																-- data\UI\MPDMLobby\presets.(DuelPresets).xdb
+- get_AdvMapMine_from_xdb																-- data\Maps\SingleMissions\A2S3\map.xdb
 
 
 
