@@ -76,7 +76,7 @@ DONE:
 - get_CreatureVisual_from_xdb															-- data\GameMechanics\CreatureVisual\Creatures\Academy\3rd\DjinnVizier.xdb
 - get_DuelPresets_from_xdb																-- data\UI\MPDMLobby\presets.(DuelPresets).xdb
 - get_AdvMapMine_from_xdb																-- data\Maps\SingleMissions\A2S3\map.xdb
-
+- get_AdvMapDwarvenWarren_from_xdb														-- data\Maps\SingleMissions\A2S3\map.xdb
 
 
 
