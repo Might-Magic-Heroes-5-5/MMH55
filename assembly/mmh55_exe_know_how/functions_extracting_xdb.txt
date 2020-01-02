@@ -62,6 +62,15 @@ DONE:
 - get_AdvMapTreasure_from_xdb															-- data\Maps\Multiplayer\A1L10\map.xdb
 - get_Table_ArenaBuildingStats_ArenaBuildingType_from_xdb								-- data\GameMechanics\RefTables\ArenaBuildingsStats.xdb
 - get_Shot_from_xdb																		-- data\GameMechanics\Shot\Heroes\ranger.xdb
+- get_CampaignsSet_from_xdb																-- data\Campaigns\CampaignsSets\Standart.xdb
+- get_AdvMapHeroTrace_from_xdb															-- data\MapObjects\_(AdvMapHeroTrace)\Haven\2.xdb
+- get_AdvMapTownExterior_from_xdb														-- data\MapObjects\Inferno.(AdvMapTownShared).xdb
+- get_Geometry_from_xdb																	-- data\Arenas\CombatArena\Academyarena\central_tower_u1r0-geom.xdb
+- get_AdvMapAbanMine_from_xdb															-- data\Maps\Multiplayer\A1M7\map.xdb and data\DialogScenes\A2Single\SM5\S1\DialogScene.xdb
+- get_ParticleInstance_from_xdb															-- data\Effects\_(Effect)\Towns\Stronghold\Special_1\Special_1_glow_lava.xdb
+
+
+
 
 
 ############ the following 5 are any of the following ###########################################################################
