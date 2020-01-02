@@ -1,5 +1,6 @@
 DONE:
-- get_AdvMapDesc_from_map_xdb
+- get_AdvMapDesc01_from_xdb																-- data\Maps\Multiplayer\A1L10\map.xdb
+- get_AdvMapDesc02_from_xdb																-- data\Maps\Multiplayer\A1L10\map.xdb
 - get_AdvMapDesc_objects_Item_AdvMapTown_from_map_xdb
 - get_Table_HeroSkill_SkillID_from_Skills_xdb 											-- data\GameMechanics\RefTables\Skills.xdb
 - get_RPGRoot_from_defaultstats_xdb														-- data\GameMechanics\RPGStats\RPGRoot.xdb
@@ -52,15 +53,15 @@ DONE:
 - get_PuzzleDesc_from_xdb																-- data\UI\PuzzleMap\Academy.(PuzzleDesc).xdb
 - get_SphinxRiddle_from_xdb																-- data\GameMechanics\SphinxRiddles\SphinxRiddle_1.xdb
 - get_DSceneCameraSet_Camera_xdb_href													-- data\DialogScenes\A2C0\M1\S1\cam2nd sur kujin&foule.xdb
-
-
-
-
-
-
-
-
-
+- get_CameraAntiRepeat_from_xdb															-- data\ArenaObjects\_(CombatCamera)\CameraAntiRepeat.xdb
+- get_AdvMapStatic_from_xdb																-- data\Maps\CombatArenas\Orcish_Siege_Big_01\Orcish_Siege_Big_01.xdb
+- get_Table_PlayerDesc_PlayerID_from_xdb												-- data\GameMechanics\RefTables\Players.xdb
+- get_AdvMapDwelling_from_xdb															-- data\Maps\Multiplayer\A1L10\map.xdb
+- get_Table_RMGPreset_Race_from_xdb														-- data\GameMechanics\RefTables\RMGPresetTable.xdb
+- get_RMGTemplate_from_xdb																-- data\RMG\Templates\S2-3P2Z7N2.xdb
+- get_AdvMapTreasure_from_xdb															-- data\Maps\Multiplayer\A1L10\map.xdb
+- get_Table_ArenaBuildingStats_ArenaBuildingType_from_xdb								-- data\GameMechanics\RefTables\ArenaBuildingsStats.xdb
+- get_Shot_from_xdb																		-- data\GameMechanics\Shot\Heroes\ranger.xdb
 
 
 ############ the following 5 are any of the following ###########################################################################
