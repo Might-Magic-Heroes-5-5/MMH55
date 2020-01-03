@@ -77,6 +77,43 @@ DONE:
 - get_DuelPresets_from_xdb																-- data\UI\MPDMLobby\presets.(DuelPresets).xdb
 - get_AdvMapMine_from_xdb																-- data\Maps\SingleMissions\A2S3\map.xdb
 - get_AdvMapDwarvenWarren_from_xdb														-- data\Maps\SingleMissions\A2S3\map.xdb
+- get_PatternAttack_from_xdb															-- data\GameMechanics\Creature\Creatures\Dungeon\SixHeadedAttack.xdb
+- get_CameraLimits_from_xdb																-- data\Arenas\Town\Fortress\CL_of_Fortress1.xdb
+- get_initialCamPos_from_xdb															-- data\Arenas\Town\Necropolis\Necropolis.xdb
+- get_AdvMapShipyard_from_xdb															-- data\Maps\SmallSpecialArenas\SmallSpecialArena_Towns_DngGrsWtr\map.xdb
+- get_MicroArtifactShell_from_xdb														-- data\GameMechanics\RefTables\MicroArtifactShells.xdb
+- get_MicroArtifactEffect_from_xdb														-- data\GameMechanics\RefTables\MicroArtifactEffects.xdb
+- get_Table_PlayerColourScheme_PlayerColour_from_xdb									-- data\UI\RefTables\PlayerColourSchemes.xdb
+- get_AmbientLight_from_xdb																-- data\Maps\Multiplayer\S2\DesertArena01.xdb
+- get_Effect_from_xdb																	-- data\Effects\_(Effect)\Arenas\Boat\Surf02.xdb
+- get_AdvMapPrison_from_xdb																-- data\Maps\SingleMissions\A2S1\map.xdb
+- get_AdvMapSphinx_from_xdb																-- data\Maps\Multiplayer\A2M7\map.xdb
+- get_SphinxRiddleGroup_from_xdb														-- data\GameMechanics\SphinxRiddles\RandomGroup.xdb
+- get_ArenaObstaclesGroup_from_xdb														-- data\ArenaObjects\_(ArenaObstaclesGroup)\LavaArena\LavaObstacles.xdb
+- get_UIGameConstsH5_from_xdb															-- data\UI\uiconsts.xdb
+- get_CubeTexture_from_xdb																-- data\Textures\_(CubeTexture)\Sky.xdb
+- get_JogDialButton_from_xdb															-- data\UI\Common\JogDial\Buttons\EnterTownBuildDone.xdb
+- get_Font_from_xdb																		-- texts\UI\Fonts\Header_22.(Font).xdb
+- get_WindowMSButton_from_xdb															-- data\UI\AdventureScreen-heavy\TownHeroPanel\Right.xdb
+- get_FadeParams_from_xdb																-- data\UI\FadeParams\Tactics\TacticsInfo.xdb
+- get_Decal_from_xdb																	-- data\_(Decal)\Arena\Spells\Fireball.xdb
+- get_Model_from_xdb																	-- data\Arenas\CombatArena\Academyarena\gate1_u1r0.xdb
+- get_ModelInstance_from_xdb															-- data\ModelInstance.xdb
+- get_ArenaBuilding_from_xdb															-- data\MapObjects\Stronghold_Wall2.xdb
+- get_UIConsoleCommand_from_xdb															-- data\UI\ConsoleCommand.xdb
+- get_UISSendGameMessage_from_xdb  														-- data\UI\HotSeatWait\PlayersList\Item\EditLostFocus.xdb
+- get_UISDirectRunReaction_from_xdb														-- data\UI\BuyArtefact\Select_1.xdb
+- get_ForegroundTextString_from_xdb														-- data\UI\AcademyCreatureArtifacts\CreateArtifacts-caption.xdb
+- get_TextFormat_from_xdb																-- data\UI\Common\MenuButtonDisabled.xdb
+- get_UISSendUIMessage_from_xdb															-- data\UI\Console\ConsoleShowWindow.xdb
+- get_UISRunReaction_from_xdb															-- data\UI\CombatArena-Heavy\RunesBar\RuneButton.xdb
+- get_UISMoveTo_from_xdb																-- data\UI\Console\ConsoleMove.xdb
+- get_ARSendGameMessage_from_xdb														-- data\UI\BuyArtefact\Select_2.xdb
+
+
+
+
+
 
 
 
