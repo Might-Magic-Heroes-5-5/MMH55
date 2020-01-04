@@ -1,4 +1,11 @@
-DONE:
+Legend:
+#########################################################################################################
+- Get_xxxxxx_from_xdb - XXX is the XML tree that is taken by exe from one or more xdb files. On the right one file is given as example source
+- get_xxxxxx_proxyY - Proxy means that this is a transitive function that leads to the original get_xxxxxxx function. Y is the number of transitive function to the original.
+- get_xxxxxx_xdb_href - This means that the function gets a link to another XDB file.
+#########################################################################################################
+Known Functions:
+#########################################################################################################
 - get_AdvMapDesc01_from_xdb																-- data\Maps\Multiplayer\A1L10\map.xdb
 - get_AdvMapDesc02_from_xdb																-- data\Maps\Multiplayer\A1L10\map.xdb
 - get_AdvMapDesc_objects_Item_AdvMapTown_from_map_xdb
@@ -164,35 +171,6 @@ DONE:
 - get_WindowTooltipShared_from_xdb														-- data\UI\Tooltips\TextTooltip\TextTooltip.xdb
 - get_WindowTextViewShared_from_xdb														-- data\UI\CreatureInfo\Tooltips\Addition.xdb
 - get_AdvMapArtifact_from_xdb															-- data\Maps\Multiplayer\A1M7\map.xdb
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
