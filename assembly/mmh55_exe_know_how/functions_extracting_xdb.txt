@@ -2,7 +2,7 @@ DONE:
 - get_AdvMapDesc01_from_xdb																-- data\Maps\Multiplayer\A1L10\map.xdb
 - get_AdvMapDesc02_from_xdb																-- data\Maps\Multiplayer\A1L10\map.xdb
 - get_AdvMapDesc_objects_Item_AdvMapTown_from_map_xdb
-- get_Table_HeroSkill_SkillID_from_Skills_xdb 											-- data\GameMechanics\RefTables\Skills.xdb
+- get_Table_HeroSkill_SkillID_from_xdb 													-- data\GameMechanics\RefTables\Skills.xdb
 - get_RPGRoot_from_defaultstats_xdb														-- data\GameMechanics\RPGStats\RPGRoot.xdb
 - get_RPGstats_from_defaultstats_xdb													-- data\GameMechanics\RPGStats\Defaultstats.xdb	
 - get_AdvMapHero_from_xdb 																-- data\Maps\DuelMode\Heroes\AcademyPreset2.xdb
@@ -109,8 +109,23 @@ DONE:
 - get_UISRunReaction_from_xdb															-- data\UI\CombatArena-Heavy\RunesBar\RuneButton.xdb
 - get_UISMoveTo_from_xdb																-- data\UI\Console\ConsoleMove.xdb
 - get_ARSendGameMessage_from_xdb														-- data\UI\BuyArtefact\Select_2.xdb
-
-
+- get_Table_UIGameDifficultyInfo_UIGameDifficulty_from_xdb								-- data\GameMechanics\RefTables\UIGameDifficultyInfo.xdb
+- get_Table_TownSpecRef_TownSpec_from_xdb												-- data\GameMechanics\RefTables\TownSpecs.xdb
+- get_TownRandomSpecGroup_from_xdb														-- data\RMG\TownRandomSpecGroup.xdb
+- get_Table_BonusTypeDesc_Bonus_from_xdb												-- data\GameMechanics\RefTables\CampaignBonus.xdb
+- get_Table_MasteryDesc_Mastery_from_xdb												-- data\GameMechanics\RefTables\Mastery.xdb
+- get_Table_HeroAttributeDesc_HeroAttribute_from_xdb									-- data\GameMechanics\RefTables\HeroAttribute.xdb
+- get_Table_DemonRageBonusTypeInfo_DemonRageBonusType_from_xdb							-- data\GameMechanics\RefTables\DemonRageBonusInfo.xdb
+- get_Table_WarMachine_WarMachineType_from_xdb											-- data\GameMechanics\RefTables\WarMachines.xdb
+- get_Table_MicroArtifactEffect_MicroArtifactEffectType_from_xdb						-- data\GameMechanics\RefTables\MicroArtifactEffects.xdb
+- get_Table_MicroArtifactPrefixes_MicroArtifactPrefixesType_from_xdb					-- data\GameMechanics\RefTables\MicroArtifactPrefixes.xdb
+- get_Table_MicroArtifactShell_MicroArtifactShellType_from_xdb							-- data\GameMechanics\RefTables\MicroArtifactShells.xdb
+- get_Table_ResourceInfo_ResourceID_from_xdb											-- data\GameMechanics\RefTables\ResourcesInfo.xdb
+- get_Table_MoonWeekInfo_MoonWeekID_from_xdb											-- data\GameMechanics\RefTables\MoonWeeks.xdb
+- get_MoonCalendar_from_xdb																-- data\GameMechanics\MoonCalendar\Default.xdb, NoMonsterWeeks.xdb
+- get_Table_ObjectiveInfo_ObjectiveKind_from_xdb										-- data\GameMechanics\RefTables\ObjectivesInfo.xdb
+- get_Table_HeroClassDesc_HeroClass_from_xdb											-- data\GameMechanics\RefTables\HeroClass.xdb
+- get_Table_CombatLogEvent_CombatLogEvents_from_xdb										-- data\GameMechanics\RefTables\CombatLog.xdb
 
 
 
