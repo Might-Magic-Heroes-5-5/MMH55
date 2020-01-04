@@ -126,6 +126,71 @@ DONE:
 - get_Table_ObjectiveInfo_ObjectiveKind_from_xdb										-- data\GameMechanics\RefTables\ObjectivesInfo.xdb
 - get_Table_HeroClassDesc_HeroClass_from_xdb											-- data\GameMechanics\RefTables\HeroClass.xdb
 - get_Table_CombatLogEvent_CombatLogEvents_from_xdb										-- data\GameMechanics\RefTables\CombatLog.xdb
+- get_ArenaEnvObject_from_xdb															-- data\Arenas\Interface\MainMenu\Goblin2_Global.xdb
+- get_Character_from_xdb																-- data\Characters\Buildings\Windmill.xdb
+- get_ArenaObstacle_from_xdb															-- data\ArenaObjects\_(ArenaObstaclesGroup)\SnowArena\Rock_03.xdb
+- get_Win3DObj_from_xdb																	-- data\GameMechanics\CreatureVisual\Creatures\Haven\Archangel.xdb
+- get_ArenaLocObject_from_xdb															-- data\Arenas\CombatArena\Dungeonarena\shooter_s3.xdb
+- get_Wind_from_xdb																		-- data\MapObjects\_(Wind)\Strong.xdb
+- get_LightInstance_from_xdb															-- data\Characters\Creatures\WarMachines\Ballista_wildfire\idle00.xdb
+- get_Music_from_xdb																	-- data\Sounds\_(Music)\AdvMap-Terrain\Taiga.xdb
+- get_AIGeometry_from_xdb																-- data\Arenas\Town\Fortress\townhall_u2r0-geom-AI.xdb
+- get_Sound_from_xdb																	-- data\Maps\Scenario\A2C3M2\C3M2_VO7_Freyda_01sound.xdb
+- get_AmbientSoundSet_from_xdb															-- data\Sounds\_(Ambient)\TerrainAmbients\Dirt.xdb
+- get_AnimLight_from_xdb																-- data\Effects\_(Effect)\Spells\TownPortalEnd.xdb
+- get_Particle_from_xdb																	-- data\Particle.xdb
+- get_Skeleton_from_xdb																	-- data\_(Model)\Effects\Buildings\Capture\Academy\03Orange-skel.xdb
+- get_ForegroundTextStringShared_from_xdb												-- data\UI\FortScreen\Parts\JogDile\Edit.xdb
+- get_CustomPresets_array_from_xdb														-- provided by modders probably
+- get_DialogScenesList_from_xdb															-- data\DialogScenes\AllDialogScenes.xdb
+- get_AdvMapHeroTraceSet_from_xdb														-- data\MapObjects\_(AdvMapHeroTraceSet)\Academy.xdb
+- get_AdvMapSharedGroup_from_xdb														-- data\MapObjects\_(AdvMapSharedGroup)\Dwellings\Inferno.xdb
+- get_customCameras_from_xdb_maybe														-- No files, could be collecting mod made cameras?
+- get_RMGCustomArmyTemplateGroup_from_xdb												-- data\CustomArmyTemplateList.xdb
+- get_AnimSet_from_xdb																	-- data\Characters\Creatures\Neutral\EarthElemental_Death-arena.xdb
+- get_WindowRelatedTexts_from_xdb														-- data\UI\Tooltips\CreatureInfo\Attibutes.xdb
+- get_WindowListHeaderShared_from_xdb													-- data\UI\MPChangeChannel\ChannelsTable.xdb
+- get_WindowScrollBarShared_from_xdb													-- data\UI\Common\VerticalScrollBar\ScrollBar.xdb
+- get_WindowSliderShared_from_xdb														-- data\UI\MissionBox\TextSlider.xdb
+- get_WindowComboBoxShared_from_xdb														-- data\UI\MPDMWait\Arenas.xdb
+- get_WindowConsoleShared_from_xdb														-- data\UI\Console.xdb
+- get_WindowMSButtonShared_from_xdb														-- data\UI\CombatReplayScreen\JogDial\OnJog-PlayPause.xdb
+- get_WindowListItemShared_from_xdb														-- data\UI\Common\ComboBox_201_33\ComboListItem.xdb
+- get_WindowScrollableContainerShared_from_xdb											-- data\UI\HeroScreen3\Biography.xdb
+- get_WindowListSharedData_from_xdb                                                     -- data\UI\MPChangeChannel\ChannelsTable.xdb
+- get_WindowEditBoxShared_from_xdb														-- data\UI\MPProfile\AddInfo.xdb
+- get_WindowEditLineShared_from_xdb														-- data\UI\ConsoleEntry.xdb
+- get_WindowProgressBarShared_from_xdb													-- data\UI\HeroScreen2\HeroExperience.xdb
+- get_WindowTooltipShared_from_xdb														-- data\UI\Tooltips\TextTooltip\TextTooltip.xdb
+- get_WindowTextViewShared_from_xdb														-- data\UI\CreatureInfo\Tooltips\Addition.xdb
+- get_AdvMapArtifact_from_xdb															-- data\Maps\Multiplayer\A1M7\map.xdb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
