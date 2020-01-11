@@ -188,19 +188,19 @@ Known Functions:
 ###########################################
 #### This group of functions are responsible for adventure map, combat and town script commands ###
 
-ScriptCommand_Combat_GetGameVar															-- sub_4D3DF0
-ScriptCommand_Global_GetGameVar															-- sub_4DA480
-ScriptCommand_AdvMap_GetGameVar															-- sub_4E27B0
-ScriptCommand_Combat_SetGameVar															-- sub_4D4060
-ScriptCommand_Global_SetGameVar															-- sub_4DA6A0
-ScriptCommand_AdvMap_SetGameVar															-- sub_4E29D0
+ScriptCommand_Combat_GetGameVar															-- sub_4D3DF0 (name)
+ScriptCommand_Global_GetGameVar															-- sub_4DA480 (name)
+ScriptCommand_AdvMap_GetGameVar															-- sub_4E27B0 (name)
+ScriptCommand_Combat_SetGameVar															-- sub_4D4060 (name)
+ScriptCommand_Global_SetGameVar															-- sub_4DA6A0 (name) 
+ScriptCommand_AdvMap_SetGameVar															-- sub_4E29D0 (name)
 ScriptCommand_AdvMap_CalcAverageMonstersTier											-- sub_500AB0
 ScriptCommand_AdvMap_CreateArtifact														-- sub_4F9410
 ScriptCommand_AdvMap_DisableCameraFollowHeroes											-- sub_4E3430
 ScriptCommand_AdvMap_GetGuardsTier														-- sub_4E4950
 ScriptCommand_AdvMap_GetHeroName														-- sub_4D1C90
 ScriptCommand_AdvMap_GetHeroLevel														-- sub_4F3E90
-ScriptCommand_AdvMap_GetHeroStat														-- sub_4F40A0
+ScriptCommand_AdvMap_GetHeroStat														-- sub_4F40A0 (heroName, statID);
 ScriptCommand_AdvMap_GetHeroSkillMastery												-- sub_4F4E40
 ScriptCommand_AdvMap_GetHeroArtifactsCount												-- sub_4F5C70
 ScriptCommand_AdvMap_GetHeroCreatures													-- sub_4F6BD0 returns not an array but 7 values (so-called tuple)
@@ -210,18 +210,15 @@ ScriptCommand_AdvMap_GetMaxFloor														-- sub_4E5290
 ScriptCommand_AdvMap_GetObjectDwellingCreatures											-- sub_4FE240
 ScriptCommand_AdvMap_GetObjectNamesByType												-- sub_4E4380  *
 ScriptCommand_AdvMap_GetObjectsFromPath													-- sub_5019E0
-ScriptCommand_AdvMap_GetObjectCreatures													-- sub_4FD2B0
+ScriptCommand_AdvMap_GetObjectCreatures													-- sub_4FD2B0 (objectName, creatureID);
 ScriptCommand_AdvMap_GetPlayerState														-- sub_4F2090
-ScriptCommand_AdvMap_GetPlayerHeroes													-- sub_4F2240
-ScriptCommand_AdvMap_GetPlayerGetPlayerResource											-- sub_4F26A0
 ScriptCommand_AdvMap_GetPlayerSelectedCampaignBonusIndex								-- sub_503520
 ScriptCommand_AdvMap_GetStandState														-- sub_501050  *
 ScriptCommand_AdvMap_GetStandStatesCount												-- sub_500E40  **
 ScriptCommand_AdvMap_GetTerrainSize														-- sub_4E4CB0
 ScriptCommand_AdvMap_GiveBorderguardKey													-- sub_4F3240
-ScriptCommand_AdvMap_HasBorderguardKey													-- sub_4F2FA0
+
 ScriptCommand_AdvMap_IsTilePassable														-- sub_4E4EC0
-ScriptCommand_AdvMap_LevelUpHero														-- sub_4F4900
 ScriptCommand_AdvMap_RemoveAllMonsters													-- sub_500890
 ScriptCommand_AdvMap_SetHeroesExpCoef													-- sub_4E6990
 ScriptCommand_AdvMap_SetAIHeroFleeControl												-- sub_4E6230 ( hero, uniqueControl ) if uniqueControl=1, this hero is unaffected by global flee control rules (has its own)
@@ -244,7 +241,7 @@ ScriptCommand_AdvMap_GetSoundTimeInSleeps												-- sub_4E0490 ( soundName )
 ScriptCommand_AdvMap_OverrideAdvMapDialogPos											-- sub_4E6DB0
 ScriptCommand_AdvMap_UpgradeTownBuilding												-- sub_4EB750
 ScriptCommand_AdvMap_CreateTreasure														-- sub_502100 (Script Name, Treasure Type, Qty, x-coord, y-coord, floorID, rot=0),  treasure_id is between 0 and 13
-ScriptCommand_AdvMap_GetCurrentPlayer													-- sub_4DB3A0	
+ScriptCommand_AdvMap_GetCurrentPlayer													-- sub_4DB3A0 ()
 ScriptCommand_AdvMap_GetTurnTimeLeft													-- sub_4EC020	
 ScriptCommand_AdvMap_CanShowToPlayer													-- sub_4EBD80 ( playerID )	
 ScriptCommand_AdvMap_IsPlayerLost														-- sub_4EBAD0 ( playerID )
@@ -278,8 +275,37 @@ ScriptCommand_AdvMap_AddObjectCreatures													-- sub_4FDBE0 ** modified in
 ScriptCommand_AdvMap_RemoveObjectCreatures												-- sub_4FE4C0 ** modified in 3.1 so Q using old version
 ScriptCommand_AdvMap_CreateMonster														-- sub_4F9780 ** modified in 3.1 so Q using old version - Now you can set whether the monster should grow.
 ScriptCommand_AdvMap_SetMonsterCourageAndMood											-- sub_4F9F20 ** modified in 3.1 so Q using old version ( monsterName, playerID, courageID, moodID ) <-- correct parameters order: first courage then mood
-
-
+ScriptCommand_AdvMap_GetDate															-- sub_4DB140 (dateTypeID)
+ScriptCommand_AdvMap_GetAllNames														-- sub_4DBEF0
+ScriptCommand_AdvMap_CalcHeroMoveCost													-- sub_4FF7F0 (heroName, x, y, floorID = -1);
+ScriptCommand_AdvMap_CanMoveHero														-- sub_4FF490 (heroName, x, y, floorID = -1);
+ScriptCommand_AdvMap_ChangeHeroStat														-- sub_4F4320 (heroName, statID, delta);
+ScriptCommand_AdvMap_EnableAIHeroHiring													-- sub_4DE770 (playerID, townName, enable);
+ScriptCommand_AdvMap_EnableHeroAI														-- sub_4DE4D0 (heroName, enable);
+ScriptCommand_AdvMap_IsObjectExists														-- sub_4F9200 (objectName);
+ScriptCommand_AdvMap_GenerateMonsters													-- sub_5005B0
+ScriptCommand_AdvMap_GetObjectiveProgress												-- sub_4DCE70 (objectiveName, playerID = PLAYER_1);
+ScriptCommand_AdvMap_GetObjectiveState													-- sub_4DC6E0 (objectiveName, playerID = PLAYER_1);
+ScriptCommand_AdvMap_GetObjectOwner														-- sub_4FC3F0 (objectName);
+ScriptCommand_AdvMap_GetObjectsInRegion													-- sub_4FCC80 (regionName, objectType); Objects with no names are ignored
+ScriptCommand_AdvMap_GetObjectPosition													-- sub_4FBC60 (objectName);
+ScriptCommand_AdvMap_GetPlayerHeroes													-- sub_4F2240 (playerID);
+ScriptCommand_AdvMap_GetPlayerGetPlayerResource											-- sub_4F26A0 (player, resourceKind);
+ScriptCommand_AdvMap_GetTownBuildingLevel												-- sub_4F8270 (townName, buildingID);
+ScriptCommand_AdvMap_GetTownBuildingLimitLevel											-- sub_4F87F0 (townName, buildingID);
+ScriptCommand_AdvMap_GetTownBuildingMaxLevel											-- sub_4F8530 (townName, buildingID);
+ScriptCommand_AdvMap_GetTownHero														-- sub_501530 (townName);
+ScriptCommand_AdvMap_GiveArtefact														-- sub_4F5F00 (heroname, artefactID, [bindToHero = 0]);
+ScriptCommand_AdvMap_LevelUpHero														-- sub_4F4900 (heroName);
+ScriptCommand_AdvMap_GiveHeroSkill														-- sub_4F50A0 (heroName, skillID);
+ScriptCommand_AdvMap_GiveHeroWarMachine													-- sub_4F7730 (heroName, warMachineType);
+ScriptCommand_AdvMap_HasArtefact														-- sub_4F59D0 (heroname, artefactID);
+ScriptCommand_AdvMap_HasBorderguardKey													-- sub_4F2FA0 (player, color);
+ScriptCommand_AdvMap_HasHeroSkill														-- sub_4F4BE0 (heroName, skillID);
+ScriptCommand_AdvMap_HasHeroWarMachine													-- sub_4F74D0 (heroName, warMachineType);
+ScriptCommand_AdvMap_IsHeroAlive														-- sub_4F3C80 (heroname);
+ScriptCommand_AdvMap_IsHeroLootable														-- sub_4F6770 (heroname);
+ScriptCommand_AdvMap_IsObjectEnabled													-- sub_4FE8D0 (objectName);
 
 
 ScriptCommand_Combat_SetCombatAmbientLight												-- sub_4E40F0
@@ -312,11 +338,15 @@ ScriptCommand_Combat_CombatSetPause														-- sub_4D6DC0
 ScriptCommand_Combat_CombatReadyPerson													-- sub_4D6760
 ScriptCommand_Combat_SummonCreature														-- sub_4D2B80
 ScriptCommand_Combat_AddCreature														-- sub_4D2790
-
-
+ScriptCommand_Combat_EnableAutoFinish													-- sub_4D0C10
+ScriptCommand_Combat_Finish																-- sub_4D0DF0
+ScriptCommand_Combat_SetControlMode														-- sub_4D0770
 
 ScriptCommand_Global_ExitGame															-- sub_4E51A0
-ScriptCommand_Global_GetDifficulty														-- sub_50D600
+ScriptCommand_Global_GetDifficulty														-- sub_50D600 ()
+ScriptCommand_Global_Save																-- sub_50D7A0 (fileName)
+ScriptCommand_Global_Load																-- sub_50D970 (fileName)
+ScriptCommand_Global_StartThread														-- sub_BF7C80 (func)
 ScriptCommand_Global_EnableDynamicBattleMode											-- sub_4D0560
 ScriptCommand_Global_errorHook															-- sub_BF7D80
 ScriptCommand_Global_IsTutorialEnabled													-- sub_50CAB0
@@ -328,10 +358,6 @@ ScriptCommand_Global_MessageBox															-- sub_4D8380
 ScriptCommand_Global_MessageBoxForPlayers												-- sub_4DF8E0 ( playersFilter, msg, callback )
 ScriptCommand_Global_TutorialMessageBox													-- sub_50C7E0
 ScriptCommand_Global_IsTutorialMessageBoxOpen											-- sub_50C920
-ScriptCommand_Combat_EnableAutoFinish													-- sub_4D0C10
-ScriptCommand_Combat_Finish																-- sub_4D0DF0
-ScriptCommand_Combat_SetControlMode														-- sub_4D0770
-ScriptCommand_Combat_													-- 
 
 
 
@@ -348,6 +374,10 @@ resource related - sub_505910
 ### working but cannot find ####
 doFile
 
+
+########## Basic functions #############
+mod (x, y)
+print (..)
 
 ###########################################
 ### may be not in Q exe ??? ###
