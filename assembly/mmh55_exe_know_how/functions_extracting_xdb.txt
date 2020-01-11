@@ -1,8 +1,8 @@
 Legend:
 #########################################################################################################
-- Get_xxxxxx_from_xdb - XXX is the XML tree that is taken by exe from one or more xdb files. On the right one file is given as example source
-- get_xxxxxx_proxyY - Proxy means that this is a transitive function that leads to the original get_xxxxxxx function. Y is the number of transitive function to the original.
-- get_xxxxxx_xdb_href - This means that the function gets a link to another XDB file.
+- Get_xxxxxx_from_xdb - xxxxxx is the XML tree that is taken by exe from one or more xdb files. On the right side is given as example xdb source file
+- get_xxxxxx_proxyZ - Proxy means that this is a transitive function to original get_xxxxxxx function. Z is the number of transitive functions to the source function.
+- get_xxxxxx_xdb_href - The function is a link to another XDB file.
 #########################################################################################################
 Known Functions:
 #########################################################################################################
@@ -186,12 +186,116 @@ Known Functions:
 - get_AdvMap05Shared_Mine_Building_Cartographer_Garrison_HillFort - sub_9117E0
 
 ###########################################
+#### This group of functions are responsible for adventure map, combat and town script commands ###
+
+ScriptCommand_AdvMap_CalcAverageMonstersTier											-- sub_500AB0
+ScriptCommand_AdvMap_CreateArtifact														-- sub_4F9410
+ScriptCommand_AdvMap_DisableCameraFollowHeroes											-- sub_4E3430
+ScriptCommand_AdvMap_GetGuardsTier														-- sub_4E4950
+ScriptCommand_AdvMap_GetHeroTown														-- sub_501780
+ScriptCommand_AdvMap_GetMaxFloor														-- sub_4E5290
+ScriptCommand_AdvMap_GetObjectDwellingCreatures											-- sub_4FE240
+ScriptCommand_AdvMap_GetObjectNamesByType												-- sub_4E4380  *
+ScriptCommand_AdvMap_GetObjectsFromPath													-- sub_5019E0
+ScriptCommand_AdvMap_GetPlayerState														-- sub_4F2090
+ScriptCommand_AdvMap_GetStandState														-- sub_501050  *
+ScriptCommand_AdvMap_GetStandStatesCount												-- sub_500E40  **
+ScriptCommand_AdvMap_GetTerrainSize														-- sub_4E4CB0
+ScriptCommand_AdvMap_GiveBorderguardKey													-- sub_4F3240
+ScriptCommand_AdvMap_HasBorderguardKey													-- sub_4F2FA0
+ScriptCommand_AdvMap_IsTilePassable														-- sub_4E4EC0
+ScriptCommand_AdvMap_LevelUpHero														-- sub_4F4900
+ScriptCommand_AdvMap_RemoveAllMonsters													-- sub_500890
+ScriptCommand_AdvMap_SetHeroesExpCoef													-- sub_4E6990
+ScriptCommand_AdvMap_SetObjectDwellingCreatures											-- sub_4FDF80
+ScriptCommand_AdvMap_SetPlayerHeroesCountNotForHire										-- sub_501EB0
+ScriptCommand_AdvMap_SetTrigger															-- sub_4E1280 **
+ScriptCommand_AdvMap_StopTrigger														-- sub_4E1CC0 **
+ScriptCommand_AdvMap_CreateStatic														-- sub_502500
+ScriptCommand_AdvMap_GetLastSavedCombatIndex											-- sub_4E9970
+ScriptCommand_AdvMap_GetSoundTimeInSleeps												-- sub_4E0490
+ScriptCommand_AdvMap_OverrideAdvMapDialogPos											-- sub_4E6DB0
+ScriptCommand_AdvMap_UpgradeTownBuilding												-- sub_4EB750
+ScriptCommand_AdvMap_CreateTreasure														-- sub_502100 ** treasure_id is between 0 and 13
+ScriptCommand_AdvMap_IsPlayerLost														-- sub_4EBAD0
+ScriptCommand_AdvMap_IsTeamCurrent														-- sub_4DBC80
+ScriptCommand_AdvMap_IsPlayerWaitingForTurn												-- sub_4DBA30
+ScriptCommand_AdvMap_IsPlayerInGhostMode												-- sub_4DB7E0
+
+
+ScriptCommand_Combat_SetCombatAmbientLight												-- sub_4E40F0
+ScriptCommand_Combat_combatStarted														-- sub_4D65D0
+ScriptCommand_Combat_combatPlayEmotion													-- sub_4D6FC0
+ScriptCommand_Combat_playAnimation														-- sub_4D6B70
+ScriptCommand_Combat_CombatUnitNames													-- sub_4D49A0
+ScriptCommand_Combat_GetUnits															-- sub_4D1670
+ScriptCommand_Combat_GetUnitSide														-- sub_4D11A0
+ScriptCommand_Combat_setATB																-- sub_4D6960
+ScriptCommand_Combat_CombatDisplaceUnit													-- sub_4D5080
+ScriptCommand_Combat_UnitCastAimedSpell													-- sub_4D3A80
+ScriptCommand_Combat_UnitCastAreaSpell													-- sub_4D3860
+ScriptCommand_Combat_UnitCastGlobalSpell												-- sub_4D3630
+ScriptCommand_Combat_CombatRemoveUnit													-- sub_4D4BD0
+ScriptCommand_Combat_GetUnitType														-- sub_4D13F0
+ScriptCommand_Combat_GetRageLevel														-- sub_4D8110
+ScriptCommand_Combat_GetRagePoints														-- sub_4D7EA0
+ScriptCommand_Combat_GetUnitMaxManaPoints												-- sub_4D3190
+ScriptCommand_Combat_GetUnitManaPoints													-- sub_4D2F70
+ScriptCommand_Combat_SetUnitManaPoints													-- sub_4D33B0
+ScriptCommand_Combat_CombatShowHighlighting												-- sub_4D4290
+ScriptCommand_Combat_Break																-- sub_4D1060
+
+
+
+ScriptCommand_global_ExitGame															-- sub_4E51A0
+ScriptCommand_global_GetDifficulty														-- sub_50D600
+ScriptCommand_global_EnableDynamicBattleMode											-- sub_4D0560
+ScriptCommand_global_errorHook															-- sub_BF7D80
+ScriptCommand_global_IsTutorialEnabled													-- sub_50CAB0
+ScriptCommand_global_GetMapDataPath														-- sub_50DB40
+
+	
+
+
+
+
+######## funky functions to take a look around ##########
+
+musicsounds_many - sub_5922A0, sub_592A20
+
+
+##############################################
+### working but cannot find ####
+doFile
+
+
+###########################################
+### may be not in Q exe ??? ###
+exist 
+commandMove
+commandDoSpell
+displace
+commandShot
+commandAttack
+commandDefend
+removeUnit
+
+GetPlayerNecroEnergy
+GiveHeroBattleBonus
+WarpHeroExp
+WarpToMap
+###########################################
+LuaEngine_freeing_stack - frees lua script stack
 
 
 
 
 
-- get_WindowSimpleShared_from_xdb????
 
 
+
+
+
+
+get_WindowRelatedTextures_textures_arrays
 
