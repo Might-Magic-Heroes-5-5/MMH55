@@ -352,18 +352,10 @@ doFile
 ###########################################
 ### may be not in Q exe ??? ###
 exist 
-commandMove
-commandDoSpell CombatUnitDoSpell
-displace
 commandShot
-commandMoveAttack - CombatUnitMoveAttack
 commandAttack
 commandDefend
-removeUnit
-QuestionBoxInt
-
 GiveHeroBattleBonus
-
 GiveTurnToNextPlayers - not sure if this is part of command or message
 CombatEnableFinish
 
