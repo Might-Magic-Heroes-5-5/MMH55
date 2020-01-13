@@ -250,6 +250,7 @@ ScriptCommand_AdvMap_KnowHeroSpell														-- sub_4F5470 (heroName, spell);
 ScriptCommand_AdvMap_Loose																-- sub_4DAEA0 ()
 ScriptCommand_AdvMap_MarkObjectAsVisited												-- sub_4FEDF0 (objectName, heroName);
 ScriptCommand_Global_MessageBox															-- sub_4D8380 (messageName, callback = "")
+ScriptCommand_AdvMap_MessageBox															-- sub_4D8380 (messageName, callback = "")
 ScriptCommand_AdvMap_MoveCamera															-- sub_4E2E70 ( x,y,floorID, zoom=50, pitch=1.57, yaw=0, noZoom=0, noRotate=0, noMotion=0 )
 ScriptCommand_AdvMap_MoveHero															-- sub_4FFC50 (heroName, x, y, floorID = -1);
 ScriptCommand_AdvMap_MoveHeroRealTime													-- sub_500000 (heroName, x, y, floorID = -1);
@@ -259,6 +260,7 @@ ScriptCommand_AdvMap_OpenRegionFog														-- sub_4DDDC0 (player, regionNam
 ScriptCommand_AdvMap_Play2DSound														-- sub_4E06E0 (soundName);
 ScriptCommand_Global_Play2DSound														-- sub_4D89F0 (soundName);
 ScriptCommand_Global_Play3DSound														-- sub_4D8BE0 (soundName, x, y, floor);
+ScriptCommand_AdvMap_Play3DSound														-- sub_4E08F0 (soundName, x, y, floor);
 ScriptCommand_Combat_PlayObjectAnimation												-- sub_4E5AB0 (objectName, animName, action);
 ScriptCommand_Global_random																-- sub_4E3950 (top);
 ScriptCommand_AdvMap_RazeTown															-- sub_4FB110 (townName);
@@ -287,6 +289,7 @@ ScriptCommand_AdvMap_SetRegionBlocked													-- sub_4DDA20 (regionName, sta
 ScriptCommand_AdvMap_SetTownBuildingLimitLevel											-- sub_4F8AB0 (townName, buildingID, limit);
 ScriptCommand_AdvMap_SetWarfogBehaviour													-- sub_4E36F0 (onLand, onSea);
 ScriptCommand_AdvMap_ShowFlyingSign														-- sub_4DFF70 (messageName, objectName, targetPlayerID = -1, time = 1.0);
+ScriptCommand_Combat_ShowFlyingSign														-- sub_4D85E0 (???)
 ScriptCommand_AdvMap_SiegeTown															-- sub_504470 (heroName, townName, arenaName = "");
 ScriptCommand_AdvMap_StartCombat														-- sub_503BA0 (heroName, enemyHeroName, enemyHeroName, creaturesCount, creatureType[1], 
 																						creatureAmount[1],…,creatureType[Count] ,creatureAmount[Count],combatScriptName,
@@ -298,8 +301,6 @@ ScriptCommand_AdvMap_TransformTown														-- sub_4FAC00 (townName, type);
 ScriptCommand_AdvMap_UnblockGame														-- sub_4E2D20 ( playersFilter=0 ) - parameter is only used in MP.
 ScriptCommand_AdvMap_UnreserveHero														-- sub_4F3990 (heroName);
 ScriptCommand_AdvMap_Win																-- sub_4DA9A0 ()
-
-
 
 ScriptCommand_Combat_DoPrepare															-- sub_5A9890 ()
 ScriptCommand_Combat_DoStart															-- sub_5A9910 ()
@@ -314,39 +315,96 @@ ScriptCommand_Combat_GetBuildingType													-- sub_4D2560 (unitName);
 ScriptCommand_Combat_GetUnitPosition													-- sub_4D1A60 (unitName);
 ScriptCommand_Combat_AddCreature														-- sub_4D2790 (side, type, number, x = -1, y = -1);
 ScriptCommand_Combat_EnableCinematicCamera												-- sub_4D7D70 (enable);
-
 ScriptCommand_Global_IsTutorialItemEnabled												-- sub_50C3C0 IsTutorialItemEnabled
 ScriptCommand_Global_IsTutorialMessageBoxOpen											-- sub_50C920 ()
 ScriptCommand_Global_TutorialMessageBox													-- sub_50C7E0 (stringID);
-
-
 ScriptCommand_Town_HeroHired															-- sub_7985D0 (name);
 ScriptCommand_Town_CreatureHired														-- sub_798610 (type, number);
- 
+
+### Hammers of fate ####
+ScriptCommand_AdvMap_SetPlayerTeam														-- sub_4E5D50 (player, team);
+ScriptCommand_AdvMap_DenyAIHeroFlee														-- sub_4E5FD0 ( heroName, isDenied, enemyHeroName = "" );
+ScriptCommand_AdvMap_DenyAIHeroesFlee													-- sub_4E6480 ( PlayerID, isDenied, enemyHeroName = "" );
+ScriptCommand_AdvMap_SetAIHeroFleeControl												-- sub_4E6230 ( hero, uniqueControl ) if uniqueControl=1, this hero is unaffected by global flee control rules (has its own)
+ScriptCommand_AdvMap_GetHeroSkillMastery												-- sub_4F4E40 (heroName, skillID);
+ScriptCommand_AdvMap_RazeBuilding														-- sub_4FB550 (heroName, skillID);
+ScriptCommand_AdvMap_CreateCaravan														-- sub_4E6FE0 (caravanName, caravanPlayer, floorID, x, y, destFloorID, destX, destY );
+ScriptCommand_AdvMap_SetObjectRotation													-- sub_4FC160 (objectName, rotation);
+ScriptCommand_AdvMap_PlayVisualEffect													-- sub_4E5430 ( effectName, objectName="", tag="", x=0,y=0,z=0, rot=0, floorID=0, playersFilter=0 )
+=== in 3.1 - for MP, can now define whom to show
+ScriptCommand_AdvMap_StopVisualEffects													-- sub_4E58D0 ( tagName="" );
+ScriptCommand_AdvMap_OpenPuzzleMap														-- sub_4E6710 (player, numObelisks);
+ScriptCommand_AdvMap_StartAdvMapDialog													-- sub_4E6BA0 (dialogIndex, callback);
+ScriptCommand_AdvMap_QuestionBox														-- sub_4DF5C0 (messageName, callbackYes = “”, callbackNo = “”);
+
+
+############# Tribes Of The East Functions ##############
+
+ScriptCommand_AdvMap_GetCurrentMoonWeek													-- sub_5039B0 ();
+ScriptCommand_AdvMap_AllowPlayerTavernRace												-- sub_4E8510 ( playerID, townTypeID, allow );
+ScriptCommand_AdvMap_AllowPlayerTavernHero												-- sub_4E87E0 ( playerID, heroName, allow );
+ScriptCommand_AdvMap_AllowHeroHiringByRaceInTown										-- sub_4E7F90 ( townName, townTypeID, allow );
+ScriptCommand_AdvMap_AllowHiringOfHeroInTown											-- sub_4E8250 ( townName, heroName, allow );
+ScriptCommand_AdvMap_AllowOpenFogOfWarForAlly											-- sub_4E8F10 ( townName, heroName, allow );
+ScriptCommand_AdvMap_GetPlayerSelectedCampaignBonusIndex								-- sub_503520 ( playerID );
+ScriptCommand_AdvMap_BlockTownGarrisonForAI												-- sub_4E77C0 ( townName, isBlocked );
+ScriptCommand_AdvMap_AllowHeroHiringByRaceForAI											-- sub_4E7A60 ( playerID, townTypeID, allow );
+ScriptCommand_AdvMap_AllowHiringOfHeroForAI												-- sub_4E7D20 ( playerID, heroName, allow );
+ScriptCommand_AdvMap_DoNotGiveTurnToPlayerAIIfNoTownsAndActiveHeroes     				-- sub_4EB470 ( playerID, enable );
+ScriptCommand_AdvMap_SetHeroesExpCoef								     				-- sub_4E6990 ( fCoef );
+ScriptCommand_AdvMap_IsHeroInBoat								     					-- sub_4E72A0 ( heroName );
+ScriptCommand_AdvMap_SinkHero								     						-- sub_4E7510 ( heroName );
+ScriptCommand_AdvMap_MakeHeroReturnToTavernAfterDeath		     						-- sub_4E8CE0 ( heroName, enable, heroShouldStayAtTavernUntilHired = 0 );
+ScriptCommand_AdvMap_MakeHeroNecromancer		     									-- sub_4E8A70 (  heroName, necromancyLevel );
+ScriptCommand_AdvMap_TakeAwayHeroExp		     										-- sub_4E9720 ( heroName, exp );
+ScriptCommand_AdvMap_LockMinHeroSkillsAndAttributes		     							-- sub_4EAD30 ( heroName );
+ScriptCommand_AdvMap_SetHeroRoleMode		     										-- sub_4EAF80 ( heroName, roleMode );
+ScriptCommand_AdvMap_GetArtifactSetItemsCount		     								-- sub_4F64C0 ( heroName, artifactSetID, onlyCombined=1 );
+ScriptCommand_AdvMap_IsHeroInTown		     											-- sub_4FA930 ( heroName, townName, checkGate=1, checkGarrison=1 );
+ScriptCommand_AdvMap_SetHeroBiography	     											-- sub_503740 ( heroName, newBioTextFileRef );
+ScriptCommand_AdvMap_MakeHeroInteractWithObject	     									-- sub_502F10 ( heroName, objectName );
+ScriptCommand_AdvMap_ControlHeroCustomAbility	     									-- sub_503250 ( heroName, customAbilityID, customAbilityMode );
+ScriptCommand_AdvMap_GetHeroCreaturesTypes												-- sub_4FD890 ( heroName );
+ScriptCommand_AdvMap_GetObjectCreaturesTypes											-- sub_4FD540 ( objectName );
+ScriptCommand_AdvMap_SetMonsterSelectionType											-- sub_4FF190 ( monsterName, selectionType ); **
+ScriptCommand_AdvMap_SetMonsterNames													-- sub_4F9CB0 ( monsterName, monsterNamesFilter, nameFileRef );
+ScriptCommand_AdvMap_SetMonsterCourageAndMood											-- sub_4F9F20 ( monsterName, playerID, courageID, moodID ) 
+ScriptCommand_AdvMap_CreateDwelling														-- sub_4FA210 ( scriptName, townType, creaturesTier, ownerPlayer, x, y, floorID, rotation = 0 )
+ScriptCommand_AdvMap_ReplaceDwelling													-- sub_502940 ( name, newTownType, [creatureId1, [creatureId2, [creatureId3, [creatureId4] ] ] ] )
+ScriptCommand_AdvMap_SetRegionAutoObjectEnable											-- sub_4EA9C0 ( regionName, autoMode,heroTownType, heroPlayerID, heroName, objectName, enableType )
+ScriptCommand_AdvMap_SetDisabledObjectMode												-- sub_4E91D0 ( objectName, disabledMode );
+ScriptCommand_AdvMap_OverrideObjectTooltipNameAndDescription							-- sub_4EB200 ( objectName, name, desc );
+ScriptCommand_AdvMap_DenyGarrisonCreaturesTakeAway										-- sub_502CB0 ( garrisonName, deny = 1/0 );
+ScriptCommand_AdvMap_MakeTownMovable													-- sub_4E9490 ( townName );
+ScriptCommand_AdvMap_DisableAutoEnterTown												-- sub_4EA720 ( townName, disable );
+ScriptCommand_AdvMap_DestroyTownBuildingToLevel											-- sub_4F8E20 ( townName, buildingID, level, canRebuild = 1 );
+ScriptCommand_AdvMap_GetSavedCombatResult												-- sub_4E9B60 ( combatIndex )
+ScriptCommand_AdvMap_GetSavedCombatArmyPlayer											-- sub_4E9D50 ( combatIndex, forWinner )
+ScriptCommand_AdvMap_GetSavedCombatArmyHero												-- sub_4E9F80 ( combatIndex, forWinner )
+ScriptCommand_AdvMap_GetSavedCombatArmyCreaturesCount									-- sub_4EA1F0 ( combatIndex, forWinner )
+ScriptCommand_AdvMap_GetSavedCombatArmyCreatureInfo										-- sub_4EA440 ( combatIndex, forWinner, creatureIndex )
+
+
  ########### UNDOCUMENTED #############
  
 ScriptCommand_AdvMap_CalcAverageMonstersTier											-- sub_500AB0
 ScriptCommand_AdvMap_CreateArtifact														-- sub_4F9410
 ScriptCommand_AdvMap_DisableCameraFollowHeroes											-- sub_4E3430
 ScriptCommand_AdvMap_GetGuardsTier														-- sub_4E4950
-ScriptCommand_AdvMap_GetHeroSkillMastery												-- sub_4F4E40
 ScriptCommand_AdvMap_GetHeroArtifactsCount												-- sub_4F5C70
-ScriptCommand_AdvMap_GetHeroCreaturesTypes												-- sub_4FD890
 ScriptCommand_AdvMap_GetHeroTown														-- sub_501780
 ScriptCommand_AdvMap_GetMaxFloor														-- sub_4E5290
 ScriptCommand_AdvMap_GetObjectDwellingCreatures											-- sub_4FE240
 ScriptCommand_AdvMap_GetObjectNamesByType												-- sub_4E4380  *
 ScriptCommand_AdvMap_GetObjectsFromPath													-- sub_5019E0
 ScriptCommand_AdvMap_GetPlayerState														-- sub_4F2090
-ScriptCommand_AdvMap_GetPlayerSelectedCampaignBonusIndex								-- sub_503520
 ScriptCommand_AdvMap_GetStandState														-- sub_501050  *
+ScriptCommand_AdvMap_SetStandState														-- sub_501260 
 ScriptCommand_AdvMap_GetStandStatesCount												-- sub_500E40  **
 ScriptCommand_AdvMap_GetTerrainSize														-- sub_4E4CB0
 ScriptCommand_AdvMap_GiveBorderguardKey													-- sub_4F3240
 ScriptCommand_AdvMap_IsTilePassable														-- sub_4E4EC0
 ScriptCommand_AdvMap_RemoveAllMonsters													-- sub_500890
-ScriptCommand_AdvMap_SetHeroesExpCoef													-- sub_4E6990
-ScriptCommand_AdvMap_SetAIHeroFleeControl												-- sub_4E6230 ( hero, uniqueControl ) if uniqueControl=1, this hero is unaffected by global flee control rules (has its own)
 ScriptCommand_AdvMap_SetObjectDwellingCreatures											-- sub_4FDF80
 ScriptCommand_AdvMap_SetPlayerHeroesCountNotForHire										-- sub_501EB0
 ScriptCommand_AdvMap_SetTrigger															-- sub_4E1280 **
@@ -356,11 +414,6 @@ ScriptCommand_AdvMap_CreateStatic														-- sub_502500
 	- terrainAligned: -1=auto (as pre-patch), 0=disable, 1=force terrain align
 	- scalePercent: 100=normal size		
 ScriptCommand_AdvMap_GetLastSavedCombatIndex											-- sub_4E9970 ()
-ScriptCommand_AdvMap_GetSavedCombatResult												-- sub_4E9B60 ( index )
-ScriptCommand_AdvMap_GetSavedCombatArmyPlayer											-- sub_4E9D50 ( index, winner )
-ScriptCommand_AdvMap_GetSavedCombatArmyHero												-- sub_4E9F80 ( index, winner )
-ScriptCommand_AdvMap_GetSavedCombatArmyCreaturesCount									-- sub_4EA1F0 ( index, winner )
-ScriptCommand_AdvMap_GetSavedCombatArmyCreatureInfo										-- sub_4EA440 ( index, winner )
 ScriptCommand_AdvMap_GetSoundTimeInSleeps												-- sub_4E0490 ( soundName ) returns sound's length in sleeps
 ScriptCommand_AdvMap_OverrideAdvMapDialogPos											-- sub_4E6DB0
 ScriptCommand_AdvMap_UpgradeTownBuilding												-- sub_4EB750
@@ -376,16 +429,10 @@ ScriptCommand_AdvMap_DisableCameraFollowHeroesForPlayers								-- sub_4E3590 ( 
 ScriptCommand_AdvMap_MoveCameraForPlayers												-- sub_4E3150 ( playersFilter, x,y,floorID, zoom=50, pitch=1.57, yaw=0, noZoom=0, noRotate=0, noMotion=0 )
 ScriptCommand_AdvMap_SetAmbientLightForPlayers											-- sub_4DED60 ( playersFilter, floorID, lightName, fade=false, time=1 )
 ScriptCommand_AdvMap_Play3DSoundForPlayers												-- sub_4E0EC0 ( playersFilter, soundName, x,y,floorID )
-ScriptCommand_AdvMap_QuestionBox														-- sub_4DF5C0
-ScriptCommand_AdvMap_QuestionBoxForPlayers												-- sub_4DFC00 ( playersFilter, msg, callbackYes, callbackNo )
-ScriptCommand_AdvMap_GetArtifactSetItemsCount											-- sub_4F64C0
-ScriptCommand_AdvMap_ReplaceDwelling													-- sub_502940	
+ScriptCommand_AdvMap_QuestionBoxForPlayers												-- sub_4DFC00 ( playersFilter, msg, callbackYes, callbackNo )	
 ScriptCommand_AdvMap_StartDialogSceneForPlayers											-- sub_4E22C0 ( playersFilter, dialogDBID, callback="", save="" )
 ScriptCommand_AdvMap_StartCutSceneForPlayers											-- sub_4E2540 ( playersFilter, cutSceneDBID, callback="", save="" )
-ScriptCommand_AdvMap_PlayVisualEffect													-- sub_4E5430 ( effectName, objectName="", tag="", x=0,y=0,z=0, rot=0, floorID=0, playersFilter=0 )
-=== in 3.1 - for MP, can now define whom to show
 ScriptCommand_AdvMap_WinTeam															-- sub_4DAC40	
-ScriptCommand_AdvMap_SetMonsterCourageAndMood											-- sub_4F9F20 ** modified in 3.1 so Q using old version ( monsterName, playerID, courageID, moodID ) <-- correct parameters order: first courage then mood
 ScriptCommand_Global_ExitGame															-- sub_4E51A0
 ScriptCommand_Combat_SetCombatAmbientLight												-- sub_4E40F0
 ScriptCommand_Combat_combatStarted														-- sub_4D65D0
@@ -423,6 +470,38 @@ ScriptCommand_Global_GetMapDataPath														-- sub_50DB40
 ScriptCommand_Global_Play2DSoundForPlayers												-- sub_4E0CA0 ( playersFilter, soundName, asVoiceover=0 )
 ScriptCommand_Global_MessageBoxForPlayers												-- sub_4DF8E0 ( playersFilter, msg, callback )
 
+ScriptCommand_Combat_ShotsNumber     													-- sub_4D7B80
+ScriptCommand_Combat_Shots     															-- sub_4D7910
+ScriptCommand_Combat_GetHost     														-- sub_4D0A00
+ScriptCommand_Combat_ChangeSubject     													-- sub_4D75C0
+ScriptCommand_Combat_ClearTutorialMessage     											-- sub_4D7490
+ScriptCommand_Combat_ShowTutorialMessage     											-- sub_4D7300
+ScriptCommand_Combat_ToggleTutorialMode     											-- sub_4D71D0
+ScriptCommand_Combat_CombatUnitShot    													-- sub_4D5C00
+ScriptCommand_Combat_CombatUnitMove    													-- sub_4D5530
+ScriptCommand_Combat_CombatUnitDefend  													-- sub_4D5350
+ScriptCommand_Combat_CombatUnitExist  													-- sub_4D4800
+ScriptCommand_Combat_PostEvent      													-- sub_4D3CF0
+ScriptCommand_Global_ActivateTutorialHint      											-- sub_50C560
+ScriptCommand_Global_SetTutorialBlink      												-- sub_50C6A0
+ScriptCommand_Global_Callback      														-- sub_8490A0
+ScriptCommand_Global_IsEqual      														-- sub_BFD340
+ScriptCommand_Global_GetGlobalVar      													-- sub_BFD460
+ScriptCommand_Global_SetGlobalVar      													-- sub_BFD620
+ScriptCommand_Global_LuaTest      														-- sub_BFDA60
+ScriptCommand_Global_CoreErrorMessageImpl      											-- sub_847E80
+ScriptCommand_Global_CoreParse			     											-- sub_847FD0
+ScriptCommand_Global_CoreConsoleCommand			     									-- sub_848110
+ScriptCommand_Global_CoreLoadScript			     										-- sub_848210
+ScriptCommand_Global_MathMod			     											-- sub_848370
+ScriptCommand_Global_MathSqrt			     											-- sub_848500
+ScriptCommand_Global_CorePrint			     											-- sub_848670
+ScriptCommand_Global_Error			     												-- sub_849250
+ScriptCommand_Combat_Subject			     											-- sub_4D77B0
+
+
+
+
 
 ######## funky functions to take a look around ##########
 
@@ -444,6 +523,7 @@ commandDefend
 GiveHeroBattleBonus
 GiveTurnToNextPlayers - not sure if this is part of command or message
 CombatEnableFinish
+
 == probably in 3.1? ==
 ResetObjectFlashlight(objectName); 
 SetCombatLight
@@ -465,10 +545,9 @@ Combat_IsHero
 Combat_IsCreature
 Combat_IsWarMachine
 Combat_IsBuilding
-Combat_IsCreature
-Combat_IsCreature
 Global_TutorialActivateHint
 Global_TutorialSetBlink
+
 #### included since 3.1 (documented) ###
 triggers:
 + HERO_ADD_SKILL_TRIGGER
@@ -495,22 +574,10 @@ functions:
 + GetHeroCount
 + HasHeroArtefact
 + GiveArtifact/GiveArtefacyy, bindToHero - comment incorrect. Should read: 0 - do not bind (default), 1 - bind to hero.
-+ GetObjectCreaturesTypes 
+ 
 +
 +
 +
 ###########################################
 LuaEngine_freeing_stack - frees lua script stack
-
-
-
-
-
-
-
-
-
-
-
-get_WindowRelatedTextures_textures_arrays
 
