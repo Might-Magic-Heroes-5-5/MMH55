@@ -1,16 +1,23 @@
+# Author: dredknight
+# Requirements: Ruby Shoes 3.3.8 or higher
+#
+# Usage: Unpack data.pak or MMH55-index.pak and point as source GameMechanics\Creature\Creatures directory.
+# HP_gain is the % of hp to be added to the current one. 0.25 is 25%. Float results are rounded up.
+#
+
 require 'nokogiri'
 
 Shoes.app do
 	
 	DEBUG = 1;
-	src = Dir.pwd + '\MMH55-Index_25\GameMechanics\Creature\Creatures'
+	source = Dir.pwd + '\MMH55-Index_25\GameMechanics\Creature\Creatures'
 	@hp_gain = 0.25
 
-	def get_tree (src)
-		Dir.entries(src).reject{ |rj| rj == '..' or rj == '.' }.each_with_index do |f, i|
-				debug("#{src}\\#{f}") if DEBUG == 1
-			curDir = "#{src}\\#{f}"
-			File.directory?("#{src}\\#{f}")? get_tree(curDir) : change_hp(curDir)
+	def get_tree (source)
+		Dir.entries(source).reject{ |rj| rj == '..' or rj == '.' }.each_with_index do |f, i|
+				debug("#{source}\\#{f}") if DEBUG == 1
+			curDir = "#{source}\\#{f}"
+			File.directory?("#{source}\\#{f}")? get_tree(curDir) : change_hp(curDir)
 		end
 	end	
 
@@ -24,7 +31,7 @@ Shoes.app do
 		end
 	end
 	
-	get_tree(src)
+	get_tree(source)
 	para "DONE"
 
 end	
