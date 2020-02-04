@@ -35,11 +35,11 @@
 	(mastery_lvl + 4)																					- returns spell ID
 	mastery_lvl[1]																						- returns spell ID
 	(*v6 + 360))(v6, mastery_lvl) 																		- returns spellpower
+	((v3 + 232))(v3);																					- returns war machine ID
 	
 	
 	
-	
-	
+
 	
 	(*(*v25 + 12))(v25, 1, 10)																			- returns random number betwen 1 and 10
 	(*(int (__thiscall **)(int, signed int))(*(_DWORD *)v4 + 116))(v4, 21);								- does hero has artifact with id 21 if yes, it returns artifact ID

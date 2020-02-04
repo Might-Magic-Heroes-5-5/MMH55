@@ -409,7 +409,9 @@ ScriptCommand_AdvMap_SetObjectDwellingCreatures											-- sub_4FDF80
 ScriptCommand_AdvMap_SetPlayerHeroesCountNotForHire										-- sub_501EB0
 ScriptCommand_AdvMap_SetTrigger															-- sub_4E1280 **
 ScriptCommand_AdvMap_StopTrigger														-- sub_4E1CC0 **
-ScriptCommand_AdvMap_CreateStatic														-- sub_502500	
+ScriptCommand_AdvMap_CreateStatic														-- sub_502500
+CreateStatic("Will_o_wisp","/MapObjects/Dirt/Misc/Will_o_the_wisp.(AdvMapStaticShared).xdb#xpointer(/AdvMapStaticShared)",X,Y,Floor);	
+CreateStatic("dead C","/MapObjects/Catapult.(AdvMapStaticShared).xdb#xpointer(/AdvMapStaticShared)",X,Y,Floor);	
 	vars (scriptName, dataFile, x,y,floorID, rot=0, terrainAligned=-1, scalePercent=100)
 	- terrainAligned: -1=auto (as pre-patch), 0=disable, 1=force terrain align
 	- scalePercent: 100=normal size		
