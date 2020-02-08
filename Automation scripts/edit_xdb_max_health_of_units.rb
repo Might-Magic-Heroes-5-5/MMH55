@@ -3,7 +3,7 @@
 #
 # Usage: Unpack data.pak or MMH55-index.pak and point as source GameMechanics\Creature\Creatures directory.
 # HP_gain is the % of hp to be added to the current one. 0.25 is 25%. Float results are rounded up.
-#
+# Debug: 0 is disabled; 1 will give output of files changed and hp comparison in Shoes console
 
 require 'nokogiri'
 
