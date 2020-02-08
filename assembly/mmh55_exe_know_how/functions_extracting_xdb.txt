@@ -404,6 +404,7 @@ ScriptCommand_AdvMap_GetStandStatesCount												-- sub_500E40  **
 ScriptCommand_AdvMap_GetTerrainSize														-- sub_4E4CB0
 ScriptCommand_AdvMap_GiveBorderguardKey													-- sub_4F3240
 ScriptCommand_AdvMap_IsTilePassable														-- sub_4E4EC0
+Returns 1 if the tile at (X, Y) on the surface (Floor_ID = 0) or underground (Floor_ID = 1) is passable, or "nil" when it is blocked. It takes the mask in consideration, but ignores temporary blockades (like a Monster stack, a player Hero, etc ...).
 ScriptCommand_AdvMap_RemoveAllMonsters													-- sub_500890
 ScriptCommand_AdvMap_SetObjectDwellingCreatures											-- sub_4FDF80
 ScriptCommand_AdvMap_SetPlayerHeroesCountNotForHire										-- sub_501EB0
