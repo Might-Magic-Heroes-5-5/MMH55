@@ -686,7 +686,7 @@ VRF	*(number_of_creatures_maybe() + 2708)																- MaxSkillLevel
 VRF	*(number_of_creatures_maybe() + 2712)																- EnergyReviveBase 
 VRF	*(number_of_creatures_maybe() + 2716)																- EnergyRevivePerMinute 
 	*(number_of_creatures_maybe() + 2720)																- EnergyPerLevel 
-	*(number_of_creatures_maybe() + 2724)																- EnergyPerLevel 
+	*(number_of_creatures_maybe() + 2724)																- BaseVisibleRange 
 	*(number_of_creatures_maybe() + 2728)																- BaseMoveCost 
 	*(number_of_creatures_maybe() + 2732)																- TouchObjectCost 
 VRF	*(number_of_creatures_maybe() + 2736)																- DevourDiceSize 

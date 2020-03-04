@@ -176,3 +176,16 @@ Commands to inspect:
 arena_override 
 
 14x14 field is made by pointer to Bank_Void.(AdvMapTownCombat).xdb
+
+=====================
+sub_B0F340 
+sub_B0FBC0 - combat related
+devides_hero_classes_maybe - divides hero classes
+
+creature_health_rel_or_stats_1 -- return damage coef?
+PU_lookin_chip - disperse a2 damage
+sub_61BC30 - damage calculation
+
+
+
+sub_858610 - get_creature_source_xdb_file (sub_D12640, sub_D112C0, sub_A52940)
