@@ -81,6 +81,7 @@
 	*(_DWORD *)(&hero + 504))(&hero, *(v4 - 63))														- return if hero has visited spell shrine or not
 	*(_DWORD *)(X + 548))(X, mana, Z)																	- sets hero current mana to new value
 	*(_DWORD *)(&hero + 556)(&hero)																		- returns hero current mana
+	*(_DWORD *)(&hero + 560)(&hero)																		- returns hero max mana may be
 	*(_DWORD *)(&hero + 564)(&hero)																		- return hero level
 	*(_DWORD *)(&hero + 568)(&hero, a5, a6)																- return hero mastery level	
 	*(_DWORD *)(&hero + 572)(&hero, &v247, 0) or (mastery, 0, sp)									    - return hero spellpower

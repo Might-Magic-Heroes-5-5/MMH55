@@ -1,0 +1,38 @@
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 76)						- returns unit shot count 
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 68)						# ruturns unit shots??
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 72)						# returns unit initiative         
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 76)						- returns unit shots 
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 80)						# returns unit defense
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 84)						# returns min_dmg 
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 88)						# returns max_dmg
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 92)						# returns Health
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 96)						- returns is unit flying?
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 100)					- returns unit hp
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 104)					- returns KnownSpells
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 108)					- returns KnownSpells
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 112)					# returns morale
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 116)					- returns unit spellpoints
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 120)					- returns unit spellpoints1
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 124)					- returns unit spellpoints2
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 128)					- returns unit experience
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 132)					- returns unit power
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 136)					# returns PresetPrice
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 140)					# returns Combat Size
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 144)					- returns unit upgrade
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 148)					- returns unit pair creature
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 152)					- returns unit CreatureTown
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 156)					- returns unit element_first
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 160)					- returns unit element_second
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 164)					# returns TimeToCommand
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 168)					- returns unit weekly Growth
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 172)					- returns unit Cost
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 176)					- returns unit Cost Wood
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 180)					- returns unit Cost Ore
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 184)					- returns unit Cost Mercury
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 188)					- returns unit Cost Crystal
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 192)					- returns unit Cost Sulfur
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 196)					- returns unit Cost Gem
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 200)					- returns unit Cost Gold
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 204)					- returns unit PresetPrice
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 208)					- returns SubjectOfRandomGeneration
+	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 212)					- returns MonsterShared	
