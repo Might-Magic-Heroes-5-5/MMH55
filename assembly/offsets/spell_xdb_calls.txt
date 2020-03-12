@@ -1,0 +1,41 @@
+	(return_spell_xdb_address_for_mastery_values(V4) + 68)					# returns NameFileRef
+	(return_spell_xdb_address_for_mastery_values(V4) + 72)					# LongDescriptionFileRef
+	(return_spell_xdb_address_for_mastery_values(V4) + 76)					# Texture
+	(return_spell_xdb_address_for_mastery_values(V4) + 80)					# EffectTexture
+	(return_spell_xdb_address_for_mastery_values(V4) + 84)						- returns min_dmg 
+	(return_spell_xdb_address_for_mastery_values(V4) + 88)						- returns max_dmg
+	(return_spell_xdb_address_for_mastery_values(V4) + 92)						- returns Health
+	(return_spell_xdb_address_for_mastery_values(V4) + 96)						- returns is unit flying?
+	(return_spell_xdb_address_for_mastery_values(V4) + 100)					- returns unit hp
+	(return_spell_xdb_address_for_mastery_values(V4) + 104)					- returns KnownSpells
+	(return_spell_xdb_address_for_mastery_values(V4) + 108)					- returns KnownSpells
+	(return_spell_xdb_address_for_mastery_values(V4) + 112)					- returns morale
+	(return_spell_xdb_address_for_mastery_values(V4) + 116)					- returns unit spellpoints
+	(return_spell_xdb_address_for_mastery_values(V4) + 120)					- returns unit spellpoints1
+	(return_spell_xdb_address_for_mastery_values(V4) + 124)					- returns unit spellpoints2
+	(return_spell_xdb_address_for_mastery_values(V4) + 128)					- returns unit experience
+	(return_spell_xdb_address_for_mastery_values(V4) + 132)					# returns spell lvl
+	(return_spell_xdb_address_for_mastery_values(V4) + 136)					# returns MagicSchool
+	(return_spell_xdb_address_for_mastery_values(V4) + 140)					# returns RequiredHeroLevel
+	(return_spell_xdb_address_for_mastery_values(V4) + 144)					# returns IsAimed
+	(return_spell_xdb_address_for_mastery_values(V4) + 148)					# returns damage array
+	(return_spell_xdb_address_for_mastery_values(V4) + 152)					# returns damage array
+	(return_spell_xdb_address_for_mastery_values(V4) + 156)					- returns unit element_first
+	(return_spell_xdb_address_for_mastery_values(V4) + 160)					# returns duration array
+	(return_spell_xdb_address_for_mastery_values(V4) + 164)					# returns duration array
+	(return_spell_xdb_address_for_mastery_values(V4) + 168)					# returns duration array
+	(return_spell_xdb_address_for_mastery_values(V4) + 172)					# returns sSpellCost array
+	(return_spell_xdb_address_for_mastery_values(V4) + 176)					- returns unit Cost Wood
+	(return_spell_xdb_address_for_mastery_values(V4) + 180)					- returns unit Cost Ore
+	(return_spell_xdb_address_for_mastery_values(V4) + 184)					- returns unit Cost Mercury
+	(return_spell_xdb_address_for_mastery_values(V4) + 188)					- returns unit Cost Crystal
+	(return_spell_xdb_address_for_mastery_values(V4) + 192)					- returns unit Cost Sulfur
+	(return_spell_xdb_address_for_mastery_values(V4) + 196)					- returns unit Cost Gem
+	(return_spell_xdb_address_for_mastery_values(V4) + 200)					# returns IsAreaAttack
+	(return_spell_xdb_address_for_mastery_values(V4) + 204)					# returns IsAreaAttack
+	(return_spell_xdb_address_for_mastery_values(V4) + 205)					# returns IsAreaAttack
+	
+	(return_spell_xdb_address_for_mastery_values(V4) + 206)					# returns CanSelectDead
+	(return_spell_xdb_address_for_mastery_values(V4) + 208)					# returns Target
+	(return_spell_xdb_address_for_mastery_values(V4) + 212)					# returns Element
+	(return_spell_xdb_address_for_mastery_values(V4) + 216)					# returns <visuals> array	

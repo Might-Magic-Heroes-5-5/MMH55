@@ -1,0 +1,90 @@
+# ----------------------------------------------------
+# ----------- New Creatures Framework ----------------
+# ----------------------------------------------------
+# By SimonaK
+#
+# Original post:
+# http://heroescommunity.com/viewthread.php3?TID=27113
+# Updated thread:
+# http://heroescommunity.com/viewthread.php3?TID=27275
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+- &creatures_count      1000
+
+# -----------Things that should not be modified ----------------
+
+- &original_creatures_count  180
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ checkAddress:   00000400
+ checkBytes:     8D 41 34 C3 CC CC CC CC
+ patchAddress:   006CA781
+ valueType:      Integer
+ originalValue:  *original_creatures_count
+ patchValue:     *creatures_count
+---
+ group: Original
+ patchAddress:   006E1A20
+ valueType:      Integer
+ originalValue:  *original_creatures_count
+ patchValue:     *creatures_count
+---
+ group: Original
+ patchAddress:   0000E076
+ originalBytes:  8B F1
+ patchBytes:     EB 3B
+---
+ group: Original
+ patchAddress:   0000E0B3
+ originalBytes:  CC CC CC CC CC CC CC CC CC
+ patchBytes:     83 FF 0C 74 F4 89 CE EB BC
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+ group: Quantomas3.1j
+ checkAddress:   00000400
+ checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+ patchAddress:   00448D41
+ valueType:      Integer
+ originalValue:  *original_creatures_count
+ patchValue:     *creatures_count
+---
+ group: Quantomas3.1j
+ patchAddress:   00461340
+ valueType:      Integer
+ originalValue:  *original_creatures_count
+ patchValue:     *creatures_count
+---
+ group: Quantomas3.1j
+ patchAddress:   000051E6
+ originalBytes:  8B F1
+ patchBytes:     EB 3B
+---
+ group: Quantomas3.1j
+ patchAddress:   00005223
+ originalBytes:  CC CC CC CC CC CC CC CC CC
+ patchBytes:     83 FF 0C 74 F4 89 CE EB BC
+--- # ----------- MAP EDITOR EXE 3.1 PATCH DATA ------------
+ group: MapEditorOriginal
+ checkAddress:   00000400
+ checkBytes:     8B 4C 24 04 83 41 04 FF
+ patchAddress:   004B6DB1
+ valueType:      Integer
+ originalValue:  *original_creatures_count
+ patchValue:     *creatures_count
+---
+ group: MapEditorOriginal
+ patchAddress:   004CF860
+ valueType:      Integer
+ originalValue:  *original_creatures_count
+ patchValue:     *creatures_count
+---
+ group: MapEditorOriginal
+ patchAddress:   00031F76
+ originalBytes:  8B F1
+ patchBytes:     EB 3B
+---
+ group: MapEditorOriginal
+ patchAddress:   00031FB3
+ originalBytes:  CC CC CC CC CC CC CC CC CC
+ patchBytes:     83 FF 0C 74 F4 89 CE EB BC

@@ -21,7 +21,7 @@
   *(v10 + 32) = *(a5 + 4);
   *(v10 + 36) = *a6;
   v13 = *(a6 + 4);
-  *(v10 + 44) = sp_a8;
+  *(v10 + 44) = sp_a8;          																		-- creature mana?
   *(v10 + 40) = v13;
   *(v10 + 56) = a10;
   *(v10 + 48) = mastery_lvl_a9;
@@ -87,6 +87,7 @@
 	*(_DWORD *)(&hero + 572)(&hero, &v247, 0) or (mastery, 0, sp)									    - return hero spellpower
 	*(_DWORD *)(&hero + 600))(&hero);																	- return hero race id	
 	*(_DWORD *)(&hero + 604))(&hero)																	- return hero class id
+	*(_DWORD *)(&hero + 620))(&hero)																	- return hero name string
 	*(_DWORD *)(&hero + 648))(&hero, X)																	- does hero v2 have specialisation X
 	*(_DWORD *)(v6 + 668)(v6)																			- return hero specialization ID
 	*(_BYTE *)*(v6 + 681)																				- return yes/no has hero been given free resources from HERO_SKILL_ACADEMY_AWARD
