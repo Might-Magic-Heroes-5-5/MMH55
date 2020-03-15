@@ -7,22 +7,22 @@
 (v3 + 7) 		- unit 
 (v3 + 8) 		- unit 
 (v3 + 9) 		- unit 
-(v3 + 10) 		- unit 
+(v3 + 10) 		- unit Cost
 (v3 + 11) 		- unit 
-(v3 + 12) 		- unit 
-(v3 + 13) 		- unit 
-(v3 + 14) 		- unit 
+(v3 + 12) 		- unit CreatureTown
+(v3 + 13) 		- unit Power
+(v3 + 14) 		- unit <Exp>
 (v3 + 15) 		- unit 
-(v3 + 16) 		- unit 
+(v3 + 16) 		- unit shots
 (v3 + 17) 		- unit 
-(v3 + 18) 		- unit initiative				 v2[7]
-(v3 + 19) 		- unit health
+(v3 + 18) 		- unit Tier				 v2[7]
+(v3 + 19) 		- unit WeeklyGrowth
 (v3 + 20) 		- unit range
 (v3 + 21) 		- unit spells
 (v3 + 24) 		- unit MagicElement
-(v3 + 27) 		- unit Cost
+(v3 + 27) 		- unit 
 (v3 + 35) 		- unit CombatSize
 (v3 + 36) 		- unit flybySequence
 (v3 + 39) 		- unit Visual
 (v3 + 41)       - unit time to command
-(v3 + 68) 		- unit shot count
+(v3 + 68) 		- unit flying

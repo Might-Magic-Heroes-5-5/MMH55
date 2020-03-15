@@ -1,48 +1,54 @@
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 68)				    # returns attack 
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 72)					# returns defense           
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 76)					# returns shots 
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 80)					# returns min_dmg 
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 84)					# returns max_dmg 
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 88)					# returns speed
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 92)					# returns initiative
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 96)					# returns flying? true/false
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 100)					# returns hp
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 104)					# returns KnownSpells
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 68)				    # return attack 
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 72)					# return defense           
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 76)					# return shots 
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 80)					# return min_dmg 
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 84)					# return max_dmg 
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 88)					# return speed
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 92)					# return initiative
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 96)					# return flying? true/false
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 100)					# return Health
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 104)					# return KnownSpells
 	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 108)					# --
 	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 112)					# --
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 116)					# returns spellpoints
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 120)					# returns spellpoints1
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 124)					# returns spellpoints2
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 128)					# returns experience
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 132)					# returns  power
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 136)					# returns TimeToCommand
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 140)					# returns Tier
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 144)					# returns Upgrade
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 148)					# returns PairCreature
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 152)					# returns CreatureTown
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 156)					# returns MagicElement array
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 160)					# returns MagicElement array
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 168)					# returns unit weekly Growth
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 172)					- returns unit Cost
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 176)					- returns unit Cost Wood
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 180)					- returns unit Cost Ore
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 184)					- returns unit Cost Mercury
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 188)					- returns unit Cost Crystal
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 192)					- returns unit Cost Sulfur
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 196)					- returns unit Cost Gem
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 200)					- returns unit Cost Gold
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 204)					- returns unit PresetPrice
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 208)					- returns SubjectOfRandomGeneration
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 212)					- returns MonsterShared	
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 220) 					# returns unit combat size (1 or 2)
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 224)					- returns unit pattern attack
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 244)					# returns Visual
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 252)					# returns Range
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 256)					# returns BaseCreature
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 260)					# returns Upgrades Array
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 264)					# returns Upgrades Array
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 268)					# returns Abilities
-	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 272)					# returns Abilities
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 116)					# return spellpoints             #v[29]
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 120)					# return spellpoints1            #v[30]
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 124)					# return spellpoints2           #v[31]
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 128)					# return Experience			  #v[32]
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 132)					# return power		  		      #v[33]
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 136)					# return TimeToCommand			  #v[34]
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 140)					# return Tier					  #v[35]
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 144)					# return Upgrade		  		  #v[36]
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 148)					# return PairCreature			  #v[37]
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 152)					# return CreatureTown            #v[38]
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 156)					# return MagicElement array	
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 160)					# return MagicElement array
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 168)					# return unit WeeklyGrowth
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 172)					# return unit Cost
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 176)					- return unit Cost Wood
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 180)					- return unit Cost Ore
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 184)					- return unit Cost Mercury
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 188)					- return unit Cost Crystal
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 192)					- return unit Cost Sulfur
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 196)					- return unit Cost Gem
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 200)					- return unit Cost Gold
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 204)					# return SubjectOfRandomGeneration
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 208)					- return MonsterShared
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 212)					- return MonsterShared	
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 216)					- return MonsterShared	
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 220) 					# return unit combat size (1 or 2)
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 224)					# return unit pattern attack
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 228)					- return unit pattern attack
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 232)					- return unit pattern attack
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 236)					- return unit pattern attack
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 240)					- return flybySequence
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 244)					# return Visual
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 248)					# return Visual
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 252)					# return Range
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 256)					# return BaseCreature							#v[64]?
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 260)					# return Upgrades Array  						#v[65]?
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 264)					# return Upgrades Array						#v[66]?
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 268)					# return Abilities
+	*(if_creature_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 272)					# return Abilities
 	
 	( v6 && v6[38] == race_id_v4 && v6[35] == unit_tier_v3 && !v6[64] - upgrades or abilities)
 	============================================================================================
@@ -84,20 +90,20 @@
 	
 	
 	
-	*(v7 + 32)								- returns stack size
+	*(v7 + 32)								- return stack size
 	
 	
-	*(v2 + 164)								- returns unit spellpower/ initial offset?
-	*(v2 + 180) 							- returns unit shot count
-	*(v2 + 184) 							- returns unit spellpoints (mana)
-	*(v2 + 188)								- returns unit spellpoints1 (special abilities charges)
-	*(v2 + 192)								- returns unit spellpoints2 (gating related)
-	*(v2 + 196)								- returns mastery lvl
-	*(v2 + 200)								- returns duration
-	*(v2 + 204)								- returns defense
-	*(v2 + 208) 							- returns health
-	*(v2 + 212)								- returns initiative
-    *(v2 + 216)								- returns Tier
+	*(v2 + 164)								- return unit spellpower/ initial offset?
+	*(v2 + 180) 							- return unit shot count
+	*(v2 + 184) 							- return unit spellpoints (mana)
+	*(v2 + 188)								- return unit spellpoints1 (special abilities charges)
+	*(v2 + 192)								- return unit spellpoints2 (gating related)
+	*(v2 + 196)								- return mastery lvl
+	*(v2 + 200)								- return duration
+	*(v2 + 204)								- return defense
+	*(v2 + 208) 							- return health
+	*(v2 + 212)								- return initiative
+    *(v2 + 216)								- return Tier
 	*(v2 + 220)								- Casting spell "Wasp swarm" mastery
 	
 	===================================================================================================
