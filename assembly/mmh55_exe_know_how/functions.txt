@@ -72,7 +72,7 @@
 	*(_DWORD *)(v6 + 408)(v6)																			- return hero specialization ID
 	*(_DWORD *)(v6 + 420)(v6)																			- return hero luck
 	*(_DWORD *)(v6 + 424)(v6)																			- return hero morale
-	*(_DWORD *)(&hero + 32))(&hero_v57)																	- return hero lvl?
+	*(_DWORD *)(&hero + 32))(&hero_v57)																	- return hero lvl
 	*(_DWORD *)(&hero + 220))(&hero, spell_id)															- does hero has learned spell_id?
 	*(_DWORD *)(&hero + 224))(&hero, &Format, &v106, &v107, spell_id)									- does hero has enough skill level?
 	*(_DWORD *)(&hero + 412))(&hero, v1, a3)															- give v1 experience to hero &hero
@@ -87,6 +87,8 @@
 	*(_DWORD *)(&hero + 572)(&hero, &v247, 0) or (mastery, 0, sp)									    - return hero spellpower
 	*(_DWORD *)(&hero + 600))(&hero);																	- return hero race id	
 	*(_DWORD *)(&hero + 604))(&hero)																	- return hero class id
+	*(_DWORD *)(&hero + 608))(&hero)																	- return if creature is on the Favourite enemy list
+	
 	*(_DWORD *)(&hero + 620))(&hero)																	- return hero name string
 	*(_DWORD *)(&hero + 648))(&hero, X)																	- does hero v2 have specialisation X
 	*(_DWORD *)(v6 + 668)(v6)																			- return hero specialization ID
