@@ -712,7 +712,7 @@ VRF	*(number_of_creatures_maybe() + 2736)																- DevourDiceSize
 	*(number_of_creatures_maybe() + 2816)																- AI 
 	*(number_of_creatures_maybe() + 2820)																- Combat
 	*(number_of_creatures_maybe() + 2824)																- DifficultyEasy
-	*(number_of_creatures_maybe() + 2828)																-   
+	*(number_of_creatures_maybe() + 2828)																-   i
 	*(number_of_creatures_maybe() + 2832)																-   
 	*(number_of_creatures_maybe() + 2836)																- DifficultyNormal 
 	*(number_of_creatures_maybe() + 2840)																-   

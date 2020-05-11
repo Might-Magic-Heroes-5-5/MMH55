@@ -11,8 +11,8 @@
 (v3 + 11) 		- unit 
 (v3 + 12) 		- unit CreatureTown
 (v3 + 13) 		- unit Power
-(v3 + 14) 		- unit <Exp>
-(v3 + 15) 		- unit 
+(v3 + 14) 		- unit Health
+(v3 + 15) 		- unit Exp
 (v3 + 16) 		- unit shots
 (v3 + 17) 		- unit 
 (v3 + 18) 		- unit Tier				 v2[7]

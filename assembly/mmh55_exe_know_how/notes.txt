@@ -189,7 +189,7 @@ sub_61BC30 - damage calculation
 
 
 sub_858610 - get_creature_source_xdb_file (sub_D12640, sub_D112C0, sub_A52940)
-sub_849950 - return_warMachines_id_max_value_5
+sub_849950 - return_5_max_warMachines_count
 return_spell_xdb_address_for_mastery_values
 returns_spell_CanSelectDead
 third_var_is_the_input_value
