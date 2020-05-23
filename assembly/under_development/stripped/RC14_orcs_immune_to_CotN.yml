@@ -16,9 +16,14 @@ definitions:
 group: Original
 checkAddress:   00000400
 checkBytes:     8D 41 34 C3 CC CC CC CC
-patchAddress:   000BB8E2
-originalBytes:  C5 E3 00
-patchBytes:     64 14 01
+patchAddress:   00576A43
+originalBytes:  8B 16 6A 0A 8B CE
+patchBytes:     E9 E8 ED 7B 00 90
+---
+ group: Original                 ### stripped space patch
+ patchAddress:   00BD9430
+ originalBytes:  00*
+ patchBytes:     8B 16 6A 69 89 F1 FF 92 8C 02 00 00 84 C0 0F 85 FB 11 84 FF 8B 16 6A 0A 89 F1 E9 FA 11 84 FF 90
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
 checkAddress:   00000400
