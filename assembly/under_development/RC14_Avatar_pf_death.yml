@@ -10,11 +10,11 @@ checkAddress:   00000400
 checkBytes:     8D 41 34 C3 CC CC CC CC
 patchAddress:   004A689C
 originalBytes:  75
-patchBytes:     74
+patchBytes:     EB
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
 checkAddress:   00000400
 checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
 patchAddress:   004DEA6C
 originalBytes:  75 
-patchBytes:     74 
+patchBytes:     EB 
