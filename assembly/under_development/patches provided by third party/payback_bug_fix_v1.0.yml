@@ -1,0 +1,16 @@
+# ----------------------------------------------------
+# ----------------- Payback bug fix v1.0 -------------
+# ----------------------------------------------------
+#
+# Payback bug fix: arcane crystal, blade barrier and summon hive 
+# spend mana and do not give a ATB-bonus
+# ----------------------------------------------------
+# 
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   005831B0
+originalBytes:  E8 8B 85 00 00 84 C0 74 1B 68 50 35 40 00 68 94 11 E6 00 B9 0C 54 FF 00 E8 BC 53 F4 FF
+patchBytes:     8B 43 04 3D 1A 01 00 00 74 05 3D 1C 01 00 00 74 65 90 90 90 90 90 90 90 90 90 90 90 90

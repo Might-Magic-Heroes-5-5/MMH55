@@ -1,0 +1,16 @@
+# ----------------------------------------------------
+# ----------------- Protection v1.0 --------------
+# ----------------------------------------------------
+#
+# Damage reduction corresponds to the description - 15% (original - 14%)
+#
+# ----------------------------------------------------
+# 
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0057A3BC
+originalBytes:  9A
+patchBytes:     99

@@ -1,0 +1,16 @@
+# ----------------------------------------------------
+# --------------- Chilling Steel v1.0 ----------------
+# ----------------------------------------------------
+#
+# Skill deals damage 20% 
+# 
+# ----------------------------------------------------
+# 
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0065B492
+originalBytes:  10 2F
+patchBytes:     F8 2F

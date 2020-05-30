@@ -1,0 +1,21 @@
+# ----------------------------------------------------
+# --------------- Chaotic Spells v1.0 ----------------
+# ----------------------------------------------------
+#
+# Probability of bonus 100% (original 50%), bonus is equal to 10-50% (original 10-40%) 
+# 
+# ----------------------------------------------------
+# 
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   007BEADB
+originalBytes:  32
+patchBytes:     64
+---
+group: Original
+patchAddress:   007BEB17
+originalBytes:  9A 99 19
+patchBytes:     00 00 00
