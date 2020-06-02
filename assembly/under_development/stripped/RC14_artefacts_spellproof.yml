@@ -5,7 +5,7 @@
 # Changes spellproof value for 25% and 50% artifacts
 # 
 # -------------- Things you may want to modify -----------------
-definitions: 
+definitions:                  # defined is damage that passes. 1.0 means 100% damage after proof. 0.3 means 30%, etc..2
 - &spellproof_25_new 0.85001  # ToE default is 0.75 - modifier is actually damage that passes
 - &spellproof_50_new 0.70001  # ToE default is 0.5
 
@@ -18,9 +18,51 @@ definitions:
 group: Original
 checkAddress:   00000400
 checkBytes:     8D 41 34 C3 CC CC CC CC
-patchAddress:   000BB8E2
-originalBytes:  C5 E3 00
-patchBytes:     64 14 01
+patchAddress:   0057A573                                ## FIREPROOF formula location change to not overlap with artifacts
+originalBytes:  BA 00 00
+patchBytes:     A5 B2 7B
+---
+group: Original
+patchAddress:   0057A530                                ## dmg*0.75 - ARTIFACT_DWARVEN_SMITHY_HUMMER
+originalBytes:  5C 4C E3 00
+patchBytes:     14 64 13 01
+---
+group: Original
+patchAddress:   0057A604                                ## dmg*0.75 - ARTIFACT_BEARHIDE_WRAPS
+originalBytes:  5C 4C E3 00
+patchBytes:     14 64 13 01
+---
+group: Original
+patchAddress:   0057A4FF                                ## dmg*0.5 - ICEBERG_SHIELD
+originalBytes:  70 AB E0 00
+patchBytes:     18 64 13 01
+---
+group: Original
+patchAddress:   0057A5D3                                ## dmg*0.5 - DRAGON_FLAME_TONGUE
+originalBytes:  70 AB E0 00
+patchBytes:     18 64 13 01
+---
+group: Original
+patchAddress:   0057A637                                ## dmg*0.5 - ABILITY_FIRE_PROOF_50, RING_OF_LIGHTING_PROTECTION, ARTIFACT_RIGID_MANTLE
+originalBytes:  70 AB E0 00
+patchBytes:     18 64 13 01
+---
+group: Original
+patchAddress:   00BD941C                                ## location for fireproof formula is now separated from artifacts   
+originalBytes:  00*
+patchBytes:     D9 44 24 48 D8 0D 70 AB E0 00 E9 10 4E 84 FF
+---
+group: Original
+patchAddress:   00BD9414                                ## location of the 25% artifacts value
+valueType:      Float      
+originalValue:  *spellproof_25_default
+patchValue:     *spellproof_25_new
+---
+group: Original
+patchAddress:   00BD9418                                ## location of the 50% artifacts value
+valueType:      Float      
+originalValue:  *spellproof_50_default
+patchValue:     *spellproof_50_new
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
 checkAddress:   00000400
@@ -50,7 +92,7 @@ originalBytes:  00 88 E0 00
 patchBytes:     18 64 14 01
 ---
 group: Quantomas3.1j
-patchAddress:   004B66F0                               ## dmg*0.5 - ABILITY_FIRE_PROOF_50, RING_OF_LIGHTING_PROTECTION
+patchAddress:   004B66F0                               ## dmg*0.5 - ABILITY_FIRE_PROOF_50, RING_OF_LIGHTING_PROTECTION, ARTIFACT_RIGID_MANTLE
 originalBytes:  00 88 E0 00
 patchBytes:     18 64 14 01
 ---
