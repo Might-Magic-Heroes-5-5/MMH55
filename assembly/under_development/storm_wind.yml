@@ -5,7 +5,16 @@
 # Change storm wind from -1 to -2 Initiative
 # 
 # -------------- Things you may want to modify -----------------
-
+#ToE - sub_8A4330
+# think you are looking for sub_8A4330
+#funny enough
+#it seems like toe exe uses actual % based reduction
+#that is why it got into the skillwheel in the first place
+#i would assume
+#as being %
+#line 120 btw
+#in the decompiled
+#function
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original
 checkAddress:   00000400
@@ -13,17 +22,6 @@ checkBytes:     8D 41 34 C3 CC CC CC CC
 patchAddress:   000BB8E2
 originalBytes:  
 patchBytes:     
-
-ToE - sub_8A4330
- think you are looking for sub_8A4330
-funny enough
-it seems like toe exe uses actual % based reduction
-that is why it got into the skillwheel in the first place
-i would assume
-as being %
-line 120 btw
-in the decompiled
-function
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
 checkAddress:   00000400
