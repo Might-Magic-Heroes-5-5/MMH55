@@ -27,8 +27,9 @@ group: Quantomas3.1j
 checkAddress:   00000400
 checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
 patchAddress:   004DBC0F
-originalBytes:  D8 25 40 8D E0 00
-patchBytes:     D8 25 34 CD E0 00
+originalBytes:  D8 25 40 8D E0 00  ## default is init-1
+patchBytes:     D8 0D 0C 7C E2 00  ## this makes init*0.8
+#patchBytes:     D8 25 34 CD E0 00 ## this makes init-2
 
 
 
