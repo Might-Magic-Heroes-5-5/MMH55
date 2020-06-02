@@ -16,9 +16,30 @@ definitions:
 group: Original
 checkAddress:   00000400
 checkBytes:     8D 41 34 C3 CC CC CC CC
-patchAddress:   000BB8E2
-originalBytes:  C5 E3 00
-patchBytes:     64 14 01
+patchAddress:   00576377
+originalBytes:  AC A3 E3 00
+patchBytes:     10 64 13 01
+---
+group: Original
+patchAddress:   005763C6
+originalBytes:  AC A3 E3 00
+patchBytes:     10 64 13 01
+---
+group: Original
+patchAddress:   00576415
+originalBytes:  AC A3 E3 00
+patchBytes:     10 64 13 01
+---
+group: Original
+patchAddress:   00576464
+originalBytes:  AC A3 E3 00
+patchBytes:     10 64 13 01
+---
+group: Original
+patchAddress:   00BD9410
+valueType:      Float
+originalValue:  *file_default
+patchValue:     *spellboost 
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
 checkAddress:   00000400
@@ -27,23 +48,23 @@ patchAddress:   004B250B
 originalBytes:  C5 E3 00
 patchBytes:     64 14 01
 ---
- group: Quantomas3.1j
- patchAddress:   004B255A
- originalBytes:  C5 E3 00
- patchBytes:     64 14 01
+group: Quantomas3.1j
+patchAddress:   004B255A
+originalBytes:  C5 E3 00
+patchBytes:     64 14 01
 ---
- group: Quantomas3.1j
- patchAddress:   004B25A9
- originalBytes:  C5 E3 00
- patchBytes:     64 14 01
+group: Quantomas3.1j
+patchAddress:   004B25A9
+originalBytes:  C5 E3 00
+patchBytes:     64 14 01
 ---
- group: Quantomas3.1j
- patchAddress:   004B25F8
- originalBytes:  C5 E3 00
- patchBytes:     64 14 01
+group: Quantomas3.1j
+patchAddress:   004B25F8
+originalBytes:  C5 E3 00
+patchBytes:     64 14 01
 ---
- group: Quantomas3.1j
- patchAddress:   00BD9410
- valueType:      Float
- originalValue:  *file_default
- patchValue:     *spellboost 
+group: Quantomas3.1j
+patchAddress:   00BD9410
+valueType:      Float
+originalValue:  *file_default
+patchValue:     *spellboost 
