@@ -1,5 +1,5 @@
 load_lua_script_combat_adventuremap_town_from_xdb_proxy - check this XREFS!! multiple important stuff regarding scripts
-
+sub_BC7B30 - IF WE KNOW WHAT THIS DO, ANOTHER 4000 can be mapped!
 sub_4A99F0 - debugger in heroes 5?
 sub_9811F0 - hypnotize berserk?
 sub_7B1D90 - game lobby player choice, colour choice, faction choice
