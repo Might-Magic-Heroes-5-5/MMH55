@@ -1,0 +1,16 @@
+# ----------------------------------------------------
+# ----------------- Field outside --------------
+# ----------------------------------------------------
+#
+# Allows you to move creatures outside of the battle arena
+#
+# ----------------------------------------------------
+# 
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0016ACC7
+originalBytes:  75
+patchBytes:     EB

@@ -1,0 +1,16 @@
+# ----------------------------------------------------
+# ----------------- Disable console --------------
+# ----------------------------------------------------
+#
+# Disable console in game
+#
+# ----------------------------------------------------
+# 
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   002693FE
+originalBytes:  04
+patchBytes:     00

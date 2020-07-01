@@ -1,0 +1,16 @@
+# ----------------------------------------------------
+# ----------------- Protection v1.0 --------------
+# ----------------------------------------------------
+#
+# Reverse damage increased from 5% to 25%
+#
+# ----------------------------------------------------
+# 
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0065B0AF
+originalBytes:  18 2F E1
+patchBytes:     58 6A E9
