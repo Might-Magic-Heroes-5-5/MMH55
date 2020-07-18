@@ -2,7 +2,8 @@
 # ----------------- Imbue Arrow Fix --------------
 # ----------------------------------------------------
 #
-# Allows Imbued spell to be canceled
+# Allows Imbued spell to be canceled when Imbue Arrow ability is chosen.
+# If the user then close the book there will be no spell imbued anymore.
 # 
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original
