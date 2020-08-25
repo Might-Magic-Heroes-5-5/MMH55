@@ -14,3 +14,7 @@ checkBytes:     8D 41 34 C3 CC CC CC CC
 patchAddress:   00583211
 originalBytes:  F8 2F
 patchBytes:     0C A7
+---
+patchAddress:   00577b5f
+originalBytes:  F8 2F
+patchBytes:     0C A7
