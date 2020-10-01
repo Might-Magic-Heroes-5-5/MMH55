@@ -1,0 +1,23 @@
+# ----------------------------------------------------
+# ----------------- Creature split change from half<->half to N-1<->1 --------------
+# ----------------------------------------------------
+#
+# When doing splits seconc stack size is no longer half but just 1 unit from original source stack.
+# Works only in prebattle mode. We have not found the functions for Town split and hero inventory split.
+# 
+# 
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00385AA6
+originalBytes:  D1 F8 C3 CC CC CC
+patchBytes:     B8 01 00 00 00 C3
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   002D65D6
+originalBytes:  D1 F8 C3 CC CC CC  
+patchBytes:     B8 01 00 00 00 C3 
+
