@@ -1,0 +1,26 @@
+# ----------------------------------------------------
+# ----------------- 8 skills hero view --------------
+# ----------------------------------------------------
+#
+#When QAI 8skills is enabled this change allows all of them to be presented on Hero Pane -> perks tab without the need to scroll
+# This change requires design adjustment in XDB files to be considered operational. 
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+#group: Original
+#checkAddress:   00000400
+#checkBytes:     8D 41 34 C3 CC CC CC CC
+#patchAddress:   
+#originalBytes:         
+#patchBytes:     
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   00243F3C
+originalBytes:  06    
+patchBytes:     08    
+---
+group: Quantomas3.1j
+patchAddress:   00242E94
+originalBytes:  06
+patchBytes:     08
