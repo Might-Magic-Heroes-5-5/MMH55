@@ -1,0 +1,61 @@
+# ----------------------------------------------------
+# ----------------- hero UI fix --------------
+# ----------------------------------------------------
+#
+# Combines the contents of original Hero pane - "Skills" and "Biography" pages into one page.
+#
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+#group: Original
+#checkAddress:   00000400
+#checkBytes:     8D 41 34 C3 CC CC CC CC
+#patchAddress:   
+#originalBytes:         
+#patchBytes:     
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   00243605
+originalBytes:  6A    
+patchBytes:     61    
+---
+group: Quantomas3.1j
+patchAddress:   0024360A
+originalBytes:  64
+patchBytes:     58
+---
+group: Quantomas3.1j
+patchAddress:   0024362E
+originalBytes:  C4
+patchBytes:     F8
+---
+group: Quantomas3.1j
+patchAddress:   00243633
+originalBytes:  D9 D4
+patchBytes:     E9 F9
+---
+group: Quantomas3.1j
+patchAddress:   00243645
+originalBytes:  61
+patchBytes:     6A
+---
+group: Quantomas3.1j
+patchAddress:   0024364A
+originalBytes:  58
+patchBytes:     64
+---
+group: Quantomas3.1j
+patchAddress:   00243676
+originalBytes:  F8
+patchBytes:     C4
+---
+group: Quantomas3.1j
+patchAddress:   0024367B
+originalBytes:  A1 F9
+patchBytes:     91 D4
+---
+group: Quantomas3.1j
+patchAddress:   0024367F
+originalBytes:  8B 4C 24 1C 51 E8 A7 85 DC FF 83 C4 04 68 5D 5E E2 00 68 54 5E E2 00 8D 4C 24 24 89 7C 24 24 89 7C 24 28 89 7C 24 2C    E8 75 CD DB FF                
+patchBytes:     90*
