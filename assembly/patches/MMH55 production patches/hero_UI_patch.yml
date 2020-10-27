@@ -10,18 +10,18 @@ group: Original
 checkAddress:   00000400
 checkBytes:     8D 41 34 C3 CC CC CC CC
 patchAddress:   002C97F4
-originalBytes:  68 66 52 E3 00 68 60 52 E3 00 8D 4C
-patchBytes:     68 8D FF E1 00 68 84 FF E1 00 8D 4C 
+originalBytes:  68 66 52 E3 00 68 60 52 E3
+patchBytes:     68 8D FF E1 00 68 84 FF E1
 ---
 group: Original
 patchAddress:   002C981C
-originalBytes:  8D 8E C4 00 00 00 E8 49 D6 FF FF
-patchBytes:     8D 8E F8 00 00 00 E8 09 FB FF FF
+originalBytes:  8D 8E C4 00 00 00 E8 49 D6
+patchBytes:     8D 8E F8 00 00 00 E8 09 FB
 ---
 group: Original
 patchAddress:   002C9834
-originalBytes:  68 8D FF E1 00 68 84 FF E1 00
-patchBytes:     68 66 52 E3 00 68 60 52 E3 00
+originalBytes:  68 8D FF E1 00 68 84 FF E1
+patchBytes:     68 66 52 E3 00 68 60 52 E3
 ---
 group: Original
 patchAddress:   002C9864
@@ -30,8 +30,8 @@ patchBytes:     8D 8E C4 00 00 00 E8 01 D6
 ---
 group: Original
 patchAddress:   002C986F
-originalBytes:  8B 4C 24 1C 51 E8 C7 ED 1A 00 83 C4 04 68 45 56 E3 00 68 3C 56 E3 00 8D 4C 24 24 89 7C 24 24 89 7C 24 28 89 7C 24 2C E8 85 76 D3 FF
-patchBytes:     90*
+originalBytes:  8B 4C
+patchBytes:     EB 2A
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
 checkAddress:   00000400
@@ -77,5 +77,5 @@ patchBytes:     91 D4
 ---
 group: Quantomas3.1j
 patchAddress:   0024367F
-originalBytes:  8B 4C 24 1C 51 E8 A7 85 DC FF 83 C4 04 68 5D 5E E2 00 68 54 5E E2 00 8D 4C 24 24 89 7C 24 24 89 7C 24 28 89 7C 24 2C    E8 75 CD DB FF                
-patchBytes:     90*
+originalBytes:  8B 4C
+patchBytes:     EB 2A
