@@ -57,6 +57,7 @@
 	(_DWORD *))(*v6 + 16))(v6);																			- mastery level	
 	*(_DWORD *)(a2 + 48);																				- mastery level	
 	(*(_DWORD *)v6 + 32))																				- mastery level
+	(*(*v8 + 108))(v8)																					- boolean, can unit v8 be affected by rage?
 	(v38 + 120))(v38, COERCE_FLOAT(LODWORD(rage_v172)), v165, 0); 										- gives rage points to creature 
 	((v5[v6] + 120))(rage_v3, a3, 0);                                                                   - gives rage points to creature 	
 	*(_DWORD *)(v10 + 196);																				- mastery level	
@@ -70,24 +71,26 @@
 	*(_DWORD *)v22 + 256))																				- return hero max movement points
 	*(_DWORD *)(a4 + 368))(a4)																			- return hero level
 	*(_DWORD *)(&hero + 376)(v6, X)																		- return hero skill level; 0 - no skill, 1 yes/basic, 2 adv, 3 exp, 4 ult; Calls function does_hero_have_skill - 009F8C80
-	(*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v3 + 388))(v3, LODWORD(v9))						- set ATB value of v3 to v9
+	(*(v3 + 388))(v3, LODWORD(v9))																		- set ATB value of v3 to v9
 	*(_DWORD *)(v6 + 408)(v6)																			- return hero specialization ID
 	*(_DWORD *)(v6 + 420)(v6)																			- return hero luck
 	*(_DWORD *)(v6 + 424)(v6)																			- return hero morale
 	*(_DWORD *)(&hero + 32))(&hero_v57)																	- return hero lvl
 	*(_DWORD *)(&hero + 220))(&hero, spell_id)															- does hero has learned spell_id?
 	*(_DWORD *)(&hero + 224))(&hero, &Format, &v106, &v107, spell_id)									- does hero has enough skill level?
+	*(_DWORD *)(v3 + 380))(v3)																			- return ATB of v3
 	*(_DWORD *)(&hero + 412))(&hero, v1, a3)															- give v1 experience to hero &hero
 	*(_DWORD *)(&hero + 416))(&hero, exp_v19)															- return hero experience
+	*(_DWORD *)(target_unit_a2 + 416)(target_unit_a2)													- health of one creature
 	*(_DWORD *)(&hero + 464)(&hero)																		- number of creatures in stack
 	*(_DWORD *)(&hero + 504))(&hero, *(v4 - 63))														- return if hero has visited spell shrine or not
-	*(_DWORD *)(X + 548))(X, mana, Z)																	- sets hero current mana to new value
+	*(_DWORD *)(X + 548))(X, mana, Z)																	- sets hero X current mana to new value
 	*(_DWORD *)(&hero + 556)(&hero)																		- returns hero current mana
 	*(_DWORD *)(&hero + 560)(&hero)																		- returns hero max mana may be
 	*(_DWORD *)(&hero + 564)(&hero)																		- return hero level
 	*(_DWORD *)(&hero + 568)(&hero, a5, a6)																- return hero mastery level	
 	*(_DWORD *)(&hero + 572)(&hero, &v247, 0) or (mastery, 0, sp)									    - return hero spellpower
-	(*(*target_unit_a1 + 596))(target_unit_a1, spell_id, duration, shield_v7 - (dmg_a2 - dmg_v5) + 100000 * (v6 / 100000), v3[9], v3[10], v3[11], 0)																						  - applies spell effect on creature in combat
+	(*(*target_unit + 596))(target_unit_a1, spell_id, duration, shield_v7 - (dmg_a2 - dmg_v5) + 100000 * (v6 / 100000), v3[9], v3[10], v3[11], 0)																						  - applies spell effect on creature in combat
 	*(_DWORD *)(&hero + 600))(&hero);																	- return hero race id	
 	*(_DWORD *)(&hero + 604))(&hero)																	- return hero class id
 	*(_DWORD *)(&hero + 608))(&hero)																	- return if creature is on the Favourite enemy list
@@ -117,7 +120,6 @@
 	*(v3 + 4) + 8) + v3 + 4) + 532))(*(*(v3 + 4) + 8) + v3 + 4, 16)										- does hero has artifact with ID 16
 
     (*(_DWORD *)(X + 536))(v19, mastery_lvl_v20)														- mana points?
-    (*(_DWORD *)(X + 548))(target_unit_a2, mana_v38 - mana_v62);										- set mana points/ current mana
 	(*(_DWORD *)a1 + 876))(a1, unit_id_v37);															- undead version of unit with unit_id id_v37 may be?
 	*(_DWORD *)(v8 + 4) 																				- unit spell id
 	*(_DWORD *)(v8 + 12) 																				- unit spell mastery lvl
@@ -145,7 +147,7 @@
 	(*(*v5 + 52))(v5);																					- returns race ID
 	
 	(v5 + 40))(v5, 202);																				- returns if unit has spell_ID effect applied or not
-	(*(int (__thiscall **)(_DWORD, signed int))(*(_DWORD *)a2 + 644))(a2, 44)							- returns is a2 has skill with ID 44
+	(*(int (__thiscall **)(_DWORD, signed int))(*(_DWORD *)a2 + 644))(a2, 44)							- returns if a2 has skill with ID 44
 	(a1 + 424))(a1)																						- returns morale									
 	(*(v4 + 468))(v3, v6)																				- total unit hp	
 	(*(_DWORD *)a1 + 112))																				- is creature not yet a corpse
@@ -153,7 +155,7 @@
 	(*some_unit_v23)[172])(some_unit_v23) <= 0 															- Creature has 0 kills?
 	*((*(*v2 + 32))(v2) + 4) 																			- number of altars
 	&a2[*(*(a2 + 1) + 8) + 4];																		    - returns attacking unit
-	(*(int (__thiscall **)(int))(*(_DWORD *)v3 + 380))(v3)												- return ATB of v3
+
 	+ 612))(*(*(a2 + 4) + 8) + a2 + 4, 159, v2);														- returns if creature has spell ID
 	 + 292))(v11, 0, 0, 159, 0);																		- returns if creature has spell ID?? mastey lvl amy be?
 	(*(*v1 + 28))(v1)																				    - return hero mana regen may be?
@@ -179,13 +181,13 @@
 	( (*(*v11 + 408))(v11)																				- return hero spec id
 	(*(*v3 + 212))(v3) == 9																				- return race id
 	(*(*v9 + 400))																						- return attack value
-	(*(*v8 + 108))(v8)																					- unit v8 affected by rage?
+	
 	(*(*(v6 + 28) + 236))(v6 + 28, 65, *(a4 + 4))														- this commands make hero leans spell ID 65 counterstrike
 	(*(*(this + 28) + 448))(this + 28, <primary skill id>, -<value to reduce with>)						- reduce primary skill value
 	(*(*v14 + 88))(v14)																					- element ID
 	
 	*(v4 + 152)																							- returns race iD	
-	(*(_DWORD *)LODWORD(v61) + 416))																	- health of one creature
+	
 	*(v234 - 7) 																						- town_building_id
 	*(v234 - 6)																	 						- town_building_level - important for market place and magic guild
 		
@@ -270,7 +272,6 @@
 	(*(int (__thiscall **)(void *))(*(_DWORD *)v4 + 108))(v4)											-targeted unit
 	(*(int (__thiscall **)(int))(*(_DWORD *)v18 + 116))													-returns hero actually not, check above
 	(*(int (**)(void))(*(_DWORD *)this + 116))
-	(*(int (__thiscall **)(int))(*(_DWORD *)v3 + 380))(v3)												-return ATB of v3
 	+ 464))(																								-actual number of creatures
 	*(_DWORD *)(sub_8C4F00(*(_DWORD *)(v5 + 28)) + 220)													-creature size
 	(*(int (__thiscall **)(int, int, int))(*(_DWORD *)v5 + 404))(v5, a4, a3)							-returns unit defense (or maybe any stat depending or arg's)
