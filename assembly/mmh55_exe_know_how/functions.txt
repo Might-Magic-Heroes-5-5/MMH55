@@ -46,7 +46,7 @@
 	(*(int (__thiscall **)(int))(*(_DWORD *)v9 + 60))(v9)												- returns current week ID
 	(*(int (__thiscall **)(int))(*(_DWORD *)v5 + 560))(v5)						  						- returns week ID	
 	(*(*a2 + 176))(a2)																					- week id for unknown a2	
-	(*(int (__thiscall **)(int))(*(_DWORD *)v4 + 460))(v4);												- returns HP left of the top unit of the stack
+	(*(int (__thiscall **)(int))(*(_DWORD *)v4 + 460))(v4);												- returns HP left of the top creature of the stack
 	
 	+ 48))																								- spell ID
 	*(void **)(v46 + 56);																				- spell ID
@@ -56,7 +56,9 @@
 	*(_DWORD *)(v8 + 12);																				- mastery level	
 	(_DWORD *))(*v6 + 16))(v6);																			- mastery level	
 	*(_DWORD *)(a2 + 48);																				- mastery level	
-	(*(_DWORD *)v6 + 32))																				- mastery level	
+	(*(_DWORD *)v6 + 32))																				- mastery level
+	(v38 + 120))(v38, COERCE_FLOAT(LODWORD(rage_v172)), v165, 0); 										- gives rage points to creature 
+	((v5[v6] + 120))(rage_v3, a3, 0);                                                                   - gives rage points to creature 	
 	*(_DWORD *)(v10 + 196);																				- mastery level	
 	*(_DWORD *)(v10 + 208)																				- return spell dmg
     *(_DWORD *)(v10 + 200)																				- return spell duration
@@ -85,6 +87,7 @@
 	*(_DWORD *)(&hero + 564)(&hero)																		- return hero level
 	*(_DWORD *)(&hero + 568)(&hero, a5, a6)																- return hero mastery level	
 	*(_DWORD *)(&hero + 572)(&hero, &v247, 0) or (mastery, 0, sp)									    - return hero spellpower
+	(*(*target_unit_a1 + 596))(target_unit_a1, spell_id, duration, shield_v7 - (dmg_a2 - dmg_v5) + 100000 * (v6 / 100000), v3[9], v3[10], v3[11], 0)																						  - applies spell effect on creature in combat
 	*(_DWORD *)(&hero + 600))(&hero);																	- return hero race id	
 	*(_DWORD *)(&hero + 604))(&hero)																	- return hero class id
 	*(_DWORD *)(&hero + 608))(&hero)																	- return if creature is on the Favourite enemy list
@@ -182,14 +185,13 @@
 	(*(*v14 + 88))(v14)																					- element ID
 	
 	*(v4 + 152)																							- returns race iD	
-	(*(*target_unit_a1 + 596))(target_unit_a1, v3[14], v3[7], shield_v7 - (dmg_a2 - dmg_v5) + 100000 * (v6 / 100000), v3[9], v3[10], v3[11], 0)
 	(*(_DWORD *)LODWORD(v61) + 416))																	- health of one creature
 	*(v234 - 7) 																						- town_building_id
 	*(v234 - 6)																	 						- town_building_level - important for market place and magic guild
 		
 	
 	
-	 ability_id_v18 = (*(v30 + 628))
+	 (*(v19 + 628))(*(*(v15 + 4) + 8) + v15 + 4, a2, v20, 0, 0, 1);										- gives stuff to hero?
 	
 	(VERY) unreliable mode: ON
 	
@@ -201,7 +203,7 @@
 	
 	
 	
-	(*(void (__thiscall **)(int, signed int, signed int, int, _DWORD, _DWORD))(*(_DWORD *)v5 + 596))	-return changed stat to creature, or hero, mostly are reductions
+
 	
 	(*(int (__thiscall **)(void *))(*(_DWORD *)v4 + 108))(v4)											-targeted unit
 	(*(int (__thiscall **)(int))(*(_DWORD *)v18 + 116))													-returns hero
@@ -264,7 +266,6 @@
 	
 
 	( *(_DWORD *)(v10 + 172) == 283																		-is it spell 283
-	(*(void (__thiscall **)(int, signed int, signed int, int, _DWORD, _DWORD))(*(_DWORD *)v5 + 596))	-return changed stat to creature, or hero, mostly are reductions
 	(*(int (__thiscall **)(int, signed int))(*(_DWORD *)v11 + 812))(v11, 2)								-something related to number of creatures presumably
 	(*(int (__thiscall **)(void *))(*(_DWORD *)v4 + 108))(v4)											-targeted unit
 	(*(int (__thiscall **)(int))(*(_DWORD *)v18 + 116))													-returns hero actually not, check above
