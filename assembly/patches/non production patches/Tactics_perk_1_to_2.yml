@@ -1,0 +1,13 @@
+# ----------------------------------------------------
+# ----------------- Tactics perk increase --------------
+# ----------------------------------------------------
+#
+# Increases deployment area bonus given by "Tactics" perk from 1 to 2
+# 
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   005BD033
+originalBytes:  38 5E 78 0F 95 C0   
+patchBytes:     8A 46 78 00 C0 90   

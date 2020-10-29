@@ -1,0 +1,22 @@
+# ----------------------------------------------------
+# ----------------- Combat Tactical zone patch --------------
+# ----------------------------------------------------
+#
+# Changes the amount of available rows, hero can deploy troops
+# 
+# -------------- Things you may want to modify -----------------
+definitions: 
+  - &tactical_size_new  3
+  
+# -----------Things that should not be modified ----------------
+  
+  - &tactical_size_toe  2
+  
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   005BD03B
+valueType:      Byte
+originalValue:  *tactical_size_toe     
+patchValue:     *tactical_size_new   
