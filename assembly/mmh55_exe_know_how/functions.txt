@@ -58,6 +58,7 @@
 	*(_DWORD *)(a2 + 48);																				- mastery level	
 	(*(_DWORD *)v6 + 32))																				- mastery level
 	(*(*v8 + 108))(v8)																					- boolean, can unit v8 be affected by rage?
+	(*(*a1 + 112))()																					- how many units in the stack has died since begining of the combat
 	(v38 + 120))(v38, COERCE_FLOAT(LODWORD(rage_v172)), v165, 0); 										- gives rage points to creature 
 	((v5[v6] + 120))(rage_v3, a3, 0);                                                                   - gives rage points to creature 	
 	*(_DWORD *)(v10 + 196);																				- mastery level	
@@ -66,7 +67,7 @@
     *(_DWORD *)(v10 + 212) = 0;
     *(_DWORD *)(v10 + 204) = 0;
    
-	*(_DWORD *)unit + 640))(a2, 44)																		- does unit has creature ability ID?
+	
 	*(_DWORD *)v22 + 248))(v22)																			- return hero current movement points
 	*(_DWORD *)v22 + 256))																				- return hero max movement points
 	*(_DWORD *)(a4 + 368))(a4)																			- return hero level
@@ -83,19 +84,26 @@
 	*(_DWORD *)(&hero + 416))(&hero, exp_v19)															- return hero experience
 	*(_DWORD *)(target_unit_a2 + 416)(target_unit_a2)													- health of one creature
 	*(_DWORD *)(&hero + 464)(&hero)																		- number of creatures in stack
+	*(_DWORD *)(*v3 + 472))(v3) 																		- range (1) or melee attack (0)?
+	*(_DWORD *)(*v3 + 476))(v3) 																		- range retaliate related
+	*(_DWORD *)(unit + 496)(unit, *(v1 + 24), hp_to_replenish, 1);										- replenish count with rune of revive
 	*(_DWORD *)(&hero + 504))(&hero, *(v4 - 63))														- return if hero has visited spell shrine or not
+	*(_DWORD *)(*v2 + 544)(v2, spell)																	- creature is given spell
 	*(_DWORD *)(X + 548))(X, mana, Z)																	- sets hero X current mana to new value
 	*(_DWORD *)(&hero + 556)(&hero)																		- returns hero current mana
 	*(_DWORD *)(&hero + 560)(&hero)																		- returns hero max mana may be
 	*(_DWORD *)(&hero + 564)(&hero)																		- return hero level
 	*(_DWORD *)(&hero + 568)(&hero, a5, a6)																- return hero mastery level	
 	*(_DWORD *)(&hero + 572)(&hero, &v247, 0) or (mastery, 0, sp)									    - return hero spellpower
-	(*(*target_unit + 596))(target_unit_a1, spell_id, duration, shield_v7 - (dmg_a2 - dmg_v5) + 100000 * (v6 / 100000), v3[9], v3[10], v3[11], 0)																						  - applies spell effect on creature in combat
+	*(_DWORD *)(a2 + 592)(a2, duration, a6, a8, a7, v39, v13) 												- cast a spell on unit
+	(*(*target_unit + 596))(target_unit, spell_id, duration, shield_v7 - (dmg_a2 - dmg_v5) + 100000 * (v6 / 100000), v3[9], v3[10], v3[11], 0)																						  - applies spell effect on creature in combat
 	*(_DWORD *)(&hero + 600))(&hero);																	- return hero race id	
 	*(_DWORD *)(&hero + 604))(&hero)																	- return hero class id
 	*(_DWORD *)(&hero + 608))(&hero)																	- return if creature is on the Favourite enemy list
 	
 	*(_DWORD *)(&hero + 620))(&hero)																	- return hero name string
+	(*(v17 + 628))(unit, v31, v18, 0, 1, 1);															- may be.. apply visual effect of a spell to unit?
+	*(_DWORD *)(unit + 640))(a2, 44)																	- return if unit has creature ability 44
 	*(_DWORD *)(&hero + 648))(&hero, X)																	- does hero v2 have specialisation X
 	*(_DWORD *)(v6 + 668)(v6)																			- return hero specialization ID
 	*(_BYTE *)*(v6 + 681)																				- return yes/no has hero been given free resources from HERO_SKILL_ACADEMY_AWARD
@@ -138,19 +146,19 @@
 	*(_DWORD *)(v8 + 108)																				- 
 	*(_DWORD *)(v8 + 112)																				- unit morale
 	*(_DWORD *)(v8 + 116)																				- unit luck
+	*(_DWORD *)(v8 + 120)																				- unit spellpoints2
 	
 	(*(_DWORD *)v4 + 404))(v4, 67)  				 													- hero specialization with ID 67
 	(*(_DWORD *)LODWORD(v4) + 404))(COERCE_FLOAT(LODWORD(v4)), 69) )                    				- hero specialization with ID 69
 	(*(*v4 + 812))(v4, 1) >= 4																			- if hero has 4 or more artifacts of set with ID 1
-	(*(*(v2 + *(v2[1] + 8) + 4) + 544))(v2 + *(v2[1] + 8) + 4, 159)										- creature is given spell with ID 159 (Gating)
+	
 	*(140 * a3 + v7 + 24)																				- returns race ID
 	(*(*v5 + 52))(v5);																					- returns race ID
 	
 	(v5 + 40))(v5, 202);																				- returns if unit has spell_ID effect applied or not
-	(*(int (__thiscall **)(_DWORD, signed int))(*(_DWORD *)a2 + 644))(a2, 44)							- returns if a2 has skill with ID 44
-	(a1 + 424))(a1)																						- returns morale									
+	*(_DWORD *)(a2 + 644))(a2, 44)																		- returns if a2 has skill with ID 44
+	*(_DWORD *)(a1 + 424))(a1)																			- returns morale
 	(*(v4 + 468))(v3, v6)																				- total unit hp	
-	(*(_DWORD *)a1 + 112))																				- is creature not yet a corpse
 	(v7 + 28))(v7)																						- unit tier
 	(*some_unit_v23)[172])(some_unit_v23) <= 0 															- Creature has 0 kills?
 	*((*(*v2 + 32))(v2) + 4) 																			- number of altars
@@ -193,7 +201,7 @@
 		
 	
 	
-	 (*(v19 + 628))(*(*(v15 + 4) + 8) + v15 + 4, a2, v20, 0, 0, 1);										- gives stuff to hero?
+	 
 	
 	(VERY) unreliable mode: ON
 	
@@ -223,8 +231,7 @@
 	(unsigned __int8)(*(int (__thiscall **)(int, signed int))(*(_DWORD *)v14 + 252))(v14, 4)			-hopefully, is this unit a shooter
 	*(_DWORD *)(v4 + 212)																				- element id
 	(*(int (__thiscall **)(int))(*(_DWORD *)v19 + 116))(v19)											-returns hero leading unit v19 mayybe
-	(*(void (__thiscall **)(void *, void *, int, int, signed int, int, int))(*(_DWORD *)a2 + 592))(a2, v56, a6, a8, a7, v39, v13) cast a spell
-	what is 188
+	
 	(*(int (__thiscall **)(int))(*(_DWORD *)v5 + 32))(v5)												-avatar of death mana related
 		
 	how_much_damage_health_more((int)v10, v14, v59)														-arguments are spell ID, then mastery, third is unknown
@@ -259,8 +266,6 @@
 	*(float *)(number_of_creatures_maybe() + 1472)														-read from file hp per mana consume corpse
 	(*(int (__thiscall **)(void *))(*(_DWORD *)X + 556))(X)												-number of health in a corpse X (or maybe unit)
 	(*(int (__thiscall **)(int))(*(_DWORD *)a1 + 140))													-lost track, smth around glob spells i think
-	(unsigned __int8)(*(int (__thiscall **)(int, signed int))(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(v7 + 4) + 8) + v7  + 4) + 648))(*(_DWORD *)(*(_DWORD *)(v7 + 4) + 8) + v7 + 4, X)
-	+ 544))(																								-make spell available	
 	
 	(VERY) unreliable mode: ON
 	(*(int (__thiscall **)(int, signed int))(*(_DWORD *)v4 + 116))(v4, 21);								-hero commanding the unit 21 (hopefully) sadly not, more like go to the artifacts of hero v4, wrong
@@ -278,8 +283,6 @@
 	(unsigned __int8)(*(int (__thiscall **)(int, signed int))(*(_DWORD *)v14 + 252))(v14, 4)			-hopefully, is this unit a shooter
 	*(_DWORD *)(v6 + 4)																					-returns current spell's ID
 	(*(int (__thiscall **)(int))(*(_DWORD *)v19 + 116))(v19)											-returns hero leading unit v19 mayybe one more false info
-	(*(void (__thiscall **)(void *, void *, int, int, signed int, int, int))(*(_DWORD *)a2 + 592))(a2, v56, a6, a8, a7, v39, v13) cast a spell
-	what is 188
 	(*(int (__thiscall **)(int *, int))(v3 + 468))(v2, v4)												-total HP of a stack
 	+ 256))(																							-related to rune 256, check all rune numbers in similar fashion
 	+ 632))( what is this
