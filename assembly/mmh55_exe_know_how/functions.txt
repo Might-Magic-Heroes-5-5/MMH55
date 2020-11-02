@@ -6,7 +6,7 @@
 	(*(*target_unit + 28))(target_unit_a2, a1)														    - stack total current hp? not sure?
 	*((**v17)(v17) + 28)																				- return unit ID
 	(**v17)(v17)																						- &unit
-	(*(*a2 + 220))(a2)																					- return town spec ID
+	
 	(*(*v9 + 48))(v9)																					- return player colour ID
 	(v3 + 132)																						    - return player colour ID
 	(v3 + 32)																							- return AI player behaviour ID
@@ -56,17 +56,19 @@
 	*(_DWORD *)(v8 + 12);																				- mastery level	
 	(_DWORD *))(*v6 + 16))(v6);																			- mastery level	
 	*(_DWORD *)(a2 + 48);																				- mastery level	
-	(*(_DWORD *)v6 + 32))																				- mastery level
-	(*(*v8 + 108))(v8)																					- boolean, can unit v8 be affected by rage?
+	*(_DWORD *)(v6 + 32))																				- mastery level
+	*(_DWORD *)(*v5 + 52)(v5, building_id)																- returns town building with ID is built or not
+	*(_DWORD *)(*v3 + 68))(v3, 5)																		- building inside of town
+	*(_DWORD *)(*v8 + 108))(v8)																			- boolean, can unit v8 be affected by rage?
 	(*(*a1 + 112))()																					- how many units in the stack has died since begining of the combat
 	(v38 + 120))(v38, COERCE_FLOAT(LODWORD(rage_v172)), v165, 0); 										- gives rage points to creature 
 	((v5[v6] + 120))(rage_v3, a3, 0);                                                                   - gives rage points to creature 	
-	*(_DWORD *)(v10 + 196);																				- mastery level	
-	*(_DWORD *)(v10 + 208)																				- return spell dmg
-    *(_DWORD *)(v10 + 200)																				- return spell duration
-    *(_DWORD *)(v10 + 212) = 0;
-    *(_DWORD *)(v10 + 204) = 0;
-   
+	*(_DWORD *)(v1 + 196);																				- mastery level	
+	*(_DWORD *)(v1 + 208)																				- return spell dmg
+    *(_DWORD *)(v1 + 200)																				- return spell duration
+    *(_DWORD *)(v1 + 212) = 0;
+    *(_DWORD *)(v1 + 204) = 0;
+	*(_DWORD *)(v1 + 220)(v1)																			- return town spec ID
 	
 	*(_DWORD *)v22 + 248))(v22)																			- return hero current movement points
 	*(_DWORD *)v22 + 256))																				- return hero max movement points
@@ -95,14 +97,15 @@
 	*(_DWORD *)(&hero + 564)(&hero)																		- return hero level
 	*(_DWORD *)(&hero + 568)(&hero, a5, a6)																- return hero mastery level	
 	*(_DWORD *)(&hero + 572)(&hero, &v247, 0) or (mastery, 0, sp)									    - return hero spellpower
-	*(_DWORD *)(a2 + 592)(a2, duration, a6, a8, a7, v39, v13) 												- cast a spell on unit
-	(*(*target_unit + 596))(target_unit, spell_id, duration, shield_v7 - (dmg_a2 - dmg_v5) + 100000 * (v6 / 100000), v3[9], v3[10], v3[11], 0)																						  - applies spell effect on creature in combat
+	*(_DWORD *)(a2 + 592)(a2, duration, a6, a8, a7, v39, v13) 											- cast a spell on unit
+	(*(*target_unit + 596))(target_unit, spell_id, duration, modifier(duration,dmg, hero_lvl), v1, v2, v3, 0)																						  	- apply spell effect on creature in combat
 	*(_DWORD *)(&hero + 600))(&hero);																	- return hero race id	
 	*(_DWORD *)(&hero + 604))(&hero)																	- return hero class id
 	*(_DWORD *)(&hero + 608))(&hero)																	- return if creature is on the Favourite enemy list
 	
 	*(_DWORD *)(&hero + 620))(&hero)																	- return hero name string
 	(*(v17 + 628))(unit, v31, v18, 0, 1, 1);															- may be.. apply visual effect of a spell to unit?
+	*(_DWORD *)(v6 + 640)																				-  return count of equiped artifact set pieces
 	*(_DWORD *)(unit + 640))(a2, 44)																	- return if unit has creature ability 44
 	*(_DWORD *)(&hero + 648))(&hero, X)																	- does hero v2 have specialisation X
 	*(_DWORD *)(v6 + 668)(v6)																			- return hero specialization ID
@@ -150,10 +153,10 @@
 	
 	(*(_DWORD *)v4 + 404))(v4, 67)  				 													- hero specialization with ID 67
 	(*(_DWORD *)LODWORD(v4) + 404))(COERCE_FLOAT(LODWORD(v4)), 69) )                    				- hero specialization with ID 69
-	(*(*v4 + 812))(v4, 1) >= 4																			- if hero has 4 or more artifacts of set with ID 1
+	(*(*v4 + 812))(v4, 1) >= 4												(calls QAI sub_A06520)      - if hero has 4 or more artifacts of set with ID 1
 	
 	*(140 * a3 + v7 + 24)																				- returns race ID
-	(*(*v5 + 52))(v5);																					- returns race ID
+	
 	
 	(v5 + 40))(v5, 202);																				- returns if unit has spell_ID effect applied or not
 	*(_DWORD *)(a2 + 644))(a2, 44)																		- returns if a2 has skill with ID 44
@@ -259,9 +262,6 @@
 	572))(																								-hero spellpower i really hope, mastery ?
 	(*(int (__thiscall **)(int))(*(_DWORD *)v24 + 60))(v24)												-shoule be the current week (from the perspective of v24 ?)
 	(*(int (__thiscall **)(int))(*(_DWORD *)v25 + 44))(v25)												-ability charges left
-				
-	
-	+ 68))(																								-building inside of town
 	(unsigned __int8)(*(int (__thiscall **)(int, signed int))(*(_DWORD *)a1 + 208))(a1, X)				-does hero a1 have spell X							???
 	*(float *)(number_of_creatures_maybe() + 1472)														-read from file hp per mana consume corpse
 	(*(int (__thiscall **)(void *))(*(_DWORD *)X + 556))(X)												-number of health in a corpse X (or maybe unit)
