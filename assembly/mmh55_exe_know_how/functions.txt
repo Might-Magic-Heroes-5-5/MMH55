@@ -40,7 +40,10 @@
 	
 	
 
-	
+	(*(*v7 + 64))(v7, &v22)																				- return X combat map coordinate
+	(*(*v7 + 68))(v7, &v22)																				- return Y combat map coordinate
+	(*(*v7 + 72))(v7, &v22)																				- return X combat map coordinate
+	(*(*v7 + 76))(v7, &v22)																				- return Y combat map coordinate
 	(*(*v25 + 12))(v25, 1, 10)																			- returns random number betwen 1 and 10
 	(*(int (__thiscall **)(int, signed int))(*(_DWORD *)v4 + 116))(v4, 21);								- does hero has artifact with id 21 if yes, it returns artifact ID
 	(*(int (__thiscall **)(int))(*(_DWORD *)v9 + 60))(v9)												- returns current week ID
@@ -108,6 +111,7 @@
 	*(_DWORD *)(v6 + 640)																				-  return count of equiped artifact set pieces
 	*(_DWORD *)(unit + 640))(a2, 44)																	- return if unit has creature ability 44
 	*(_DWORD *)(&hero + 648))(&hero, X)																	- does hero v2 have specialisation X
+	(*(*some_unit_a3 + 652))(some_unit_a3, 43, v22)														- Summon elemental (43)?
 	*(_DWORD *)(v6 + 668)(v6)																			- return hero specialization ID
 	*(_BYTE *)*(v6 + 681)																				- return yes/no has hero been given free resources from HERO_SKILL_ACADEMY_AWARD
 	*(_BYTE *)*(v6 + 682)																				- return yes/no has hero been given free creatures from HERO_SKILL_FOREST_GUARD_EMBLEM
