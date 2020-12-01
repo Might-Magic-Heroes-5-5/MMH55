@@ -13,7 +13,7 @@ originalBytes:  8B 55 00 6A 00
 patchBytes:     E9 D1 E1 7A 00
 ---
 group: Original
-patchAddress:   00BD96C0
+patchAddress:   00BD96C0   #011366C0
 originalBytes:  00*    
 patchBytes:     8B 55 00 6A 00 FF 92 84 01 00 00 89 C1 A3 B0 66 13 01 E8 C9 6F 8F FF 50 56 A1 B0 66 13 01 83 C0 1C 8B 74 24 18 83 FE 42 74 11 83 FE 36 74 0C 83 FE 3B 74 07 5E 58 E9 01 1E 85 FF BE 9A 99 19 3E 89 30 5E 58 E9 F3 1D 85 FF    
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
