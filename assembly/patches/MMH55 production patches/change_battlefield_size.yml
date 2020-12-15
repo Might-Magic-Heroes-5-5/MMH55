@@ -8,8 +8,8 @@
 definitions: 
 - &original_width       12             # Standard battlefield default width
 - &original_height      10             # Standard battlefield default height
-- &modified_width       6              # Standard battlefield new width
-- &modified_height      6              # Standard battlefield new height
+- &modified_width       14             # Standard battlefield new width
+- &modified_height      12             # Standard battlefield new height
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original
 checkAddress:   00000400
