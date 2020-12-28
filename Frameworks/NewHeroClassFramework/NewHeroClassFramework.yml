@@ -24,5 +24,13 @@ checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
 patchAddress:   00461700 # address 00862300
 valueType:      Byte
 originalValue:  *default_class_count
+patchValue:     *new_class_count
+--- # --------------- MAP EDITOR EXE 3.1 PATCH DATA ---------------
+group: MapEditorOriginal
+checkAddress:   00000400
+checkBytes:     8B 4C 24 04 83 41 04 FF
+patchAddress:   004CFC20 # address 008D0820
+valueType:      Byte
+originalValue:  *default_class_count
 patchValue:     *new_class_count 
 
