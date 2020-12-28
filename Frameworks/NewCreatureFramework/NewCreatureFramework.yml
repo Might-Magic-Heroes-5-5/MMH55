@@ -1,12 +1,11 @@
 # ----------------------------------------------------
 # ----------- New Creatures Framework ----------------
 # ----------------------------------------------------
-# By SimonaK
 #
-# Original post:
-# http://heroescommunity.com/viewthread.php3?TID=27113
-# Updated thread:
-# http://heroescommunity.com/viewthread.php3?TID=27275
+# Extends creature limit from 179 to 999.
+# Enables Heroes V RMG to rotate NCF units into generated maps.
+# Original patch by SimonaK: http://heroescommunity.com/viewthread.php3?TID=27113
+# Updated version of the patch by thewaybackiswayahead and dredknight
 #
 # -------------- Things you may want to modify -----------------
 definitions: 
