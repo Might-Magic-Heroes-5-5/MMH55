@@ -1,0 +1,297 @@
+MMH55 changes:
+
+Hero and skills:
+- increased base hero movement from 2500 to 2750
+- increased classes per faction from 1 to 3 where each class has unique primary and secondary skill gain
+- increased skill slots from 6 to 8
+- changed skill "Training" name to "Combat"
+- improved skill "Training/Combat" retaliation bonus per mastery from 5%/10%/20%/25% to 15%/30%/45%/45%
+- decoupled creature training from "Training/Combat" skill. All Haven heroes can train creatures as soon as the "Training Grounds" building is present.
+- reduced "Training/Combat" cost discount per mastery level except basic from 15% to 0%
+- reduced skill "Gating" creature summoned per mastery level from 30%/35%/40%/45% to 15%/20%/25%/30%
+- improved skill "Gating" gated stack starting ATB turn from 0 to 75%
+- reduced skill "Gating" creature gating action ATB turn spent from 50% to 75%
+- reduced skill "Necromancy" resurrection value from 10% + 10% per mastery level to 5% + 5% per mastery levels
+- reduced "Necromancy" HP raised per dark energy from 25 HP per 1 point to 12 HP per 1 point
+- increased skill "Necromancy" starting dark energy from 200 to 300
+- changed skill "Necromancy" raised creatures tier and upgrade type corespond to slayed creatures tier and upgrade type.
+- changed skill "Irresistible Magic" name to "Occultism"
+- reduced skill "Irresistible Magic/Occultism" elemental chains damage bonus per mastery level from 10% to 5%.
+- improved skill "Sorcery" hero spell casts cost less ATB turn based on mastery level, changed from 10%/20%/30% to 11%/22%/33%
+- reduced skill "Defense" damage reduction per mastery level from 10%/20%/30% to 10%/15%/20%
+- improved skill "Offense" damage bonus per mastery level from 5%/10%/15% to 10%/15%/20%
+- reduced skill "Blood Rage" damange absorbtion per mastery level from 50%/55%/60%/65% to 20%/25%/30%/30%
+- reduced skill "Blood Rage" by increasing Rage Points-lost-per-damage-taken multiplier from 1200 to 2400
+- improved skill "Blood Rage" damange absorbtion per mastery level from 50%/55%/60%/65% to 20%/25%/30%/30%
+- improved skills Shatter Destruction/Summoning/Dark and Light   enemy spell mastery reduction per Shater mastery level based on spell level (1/2/3/4/5):
+-- Basic - from 1/1/1/0/0 to 1/1/1/1/0
+-- Advanced - from 2/2/2/1/0 to 2/2/1/1/1
+-- Expert - from 2/2/2/1/1 to 2/2/2/2/2
+- removed perk "Expert Trainer" from game (previously giving 35% training cost discount)
+- improved perk "Banshee Howl" morale and luck reduction from 1 to 2
+- reduced perk "Banshee Howl" duration from 2 + 0.25*hero_level to 2 + 0.1*hero_level
+- changed perk "Benediction" name to "Prayer"
+- improved perk "Benediction/Prayer" bonus defense from 1 to 2
+- reduced perk "Benediction/Prayer" duration from 2 turns per hero level to 1.5 turns per hero level
+- reduced perk "Benediction/Prayer" duration from 0.25 turns per hero level to 0.1 turns per hero level
+- improved perks "Benediction/Prayer", "Banshee howl", "Banish" ATB spent from 1 to 0.85 turns
+- improved perk "Banish" spell "Banish" damage to elementals per hero level from 10 to 40
+- changed perk "Consume Corpse" name to "Drain Soul"
+- improved perk "Consume Corpse/Drain Soul" mana restored from the drained corpse from 1/25 HP to SQRT(1/25)/4 mana of the drained corpse
+- changed perk "Mark of the Necromancer" name to "Spirit Link"
+- reduced perk "Mark of the Necromancer/Spirit Link" mana gain from 1 per 75 damage to 1 per 120 damage
+- reduced "Retribution" bonus damage per morale from 5% to 2%
+- improved perk "Storm Wind" initiative reduction from 1 to 2
+- improved perk "Vitality" HP boost from 2 to 3
+- improved perk "Scouting" visible radius from 4 to 12 squares
+- reduced perk "Intelligence" bonus mana from 50% to 40%
+- improved perk "Avatar of death" by removing mana drain after creature dies
+- improved perk "Avatar of death" mana casting cost per hero level from 2 to 1
+- changed "Excruiating Strike" name to "Critical Strike"
+- improved "Excruiating Strike/Critical Strike" critical hit chance by hero attack from 30% to 70%
+- reduced perk "Gate Master" "Gating" skill bonus from 20% to 5%
+- reduced perk "Swift Gating" creature gating action ATB turn from 25% to 50%
+- improved perk "Hellfire" damage from 10 + 10 per Spellpower to 15 + 15 per Spellpower
+- improved perk "Hellfire" mana cost from 5 to 4
+- reduced perk "Lord of the Undead" resurrection bonus from 5% to 0%
+- added to perk "Lord of the Undead" bonus of 1 Knowledge
+- added to perk "Lord of the Undead" daily gold income of 0.5 per skeleton in hero army
+- added to perk "Lord of the Undead" weekly bonus Skeleton gain in hero army equal to Hero Knowledge
+- improved perk "Plague tent" power by 50% when it deals damage
+- reduced perk "Absolute Rage" rage points bonus from 500 to 160
+- changed "Battlefield Logistics" name to "Death March"
+- reduced "Battlefield Logistics/Death March" speed bonus from 4 to 3
+- improved perk "Tremors" "Earthquake" damage to creature behind walls from 10 + 5*Spellpower to 120 + 12*Spellpower
+- improved perk "Consume Artifact" ATB cost from 1 to 0.5 turns
+- improved perk "Mana Burst" damage per hero level from 10 to 30
+- improved perk "Corrupted Soil" damage per hero level from 3 to 10
+- changed perk "Elven Luck" name to "Critical hit"
+- reduced perk "Elven Luck/Critical hit" bonus damage from 25% to 10%
+- reduced perk "Fine Rune" proc chance from 50% to 40%
+- reduced perk "Tap Runes" mana regen per Knowledge from 0.5 to 0.33
+- removed perk "Runic Armour" from game
+- improved perk "Runic Armour" Spellpower bonus from 4 to 10
+- reduced perk "Mentoring" student experience alignment from 25% to 10%
+- reduced perk "Empathy" bonus/penalty ATB change from 10% to 5%
+- reduced perk "Empathy" ally morale by 2 if hero has "Shouting" skill
+- reduced perk "Preparation" no retaliation is present if Attacker has "No Enemy Retaliation" ability
+- changed perk "Powerful Blow" name to "Chain Attack"
+- (TEST OR CHECK WITH MAGNO) reduced perk "Powerful Blow/Chain Attack" critical hit chance from 10% to 1% 
+- improved perk "Stunning Blow" hit creature ATB drop from 10% to 25%
+- changed perk "Warpath" name to "Pillager"
+- reduced perk "Warpath/Pillager" bonus movement points from 250 to 100
+- removed perk "Luck of Barbarian" from gamess
+- improved perk "Luck of Barbarian" magic proof bonus per point of luck from 5% to 15%
+- changed perk "Defend Us All" bonus creature unit from Goblin to Warrior/Mauler/Warmonger
+- improved perk "Defend Us All" bonus army delivery from one time to once perk week
+- improved perk "Defend Us All" creature bonus formula from 2*number of Warrior/Mauler/Warmonger present in the army to 1
+- improved perks "Weaken Light/Dark/Summoning/Destruction and Light"  enemy spellpower reduction from 25% to 30% and 2 bonus Knowledge
+- improved perks "Detain Light/Dark/Summoning/Destruction" enemy ATB reduction from 25% to 30% and 2 bonus Spellpower
+- improved perks "Corrupt Light/Dark/Summoning/Destruction" with 10 Dragonblood Crystals
+- improved perk "Master of Lightning" target ATB drop from 30% to 40%
+- reduced perk "Magic Mirror" proc chance formula from 10% + hero_level*2% to 10% + hero_level*1%
+- improved perk "Master of Ice" target ATB drop from 30% to 40%
+- improved perk "Master of Fire" target ATB drop from 30% to 40%
+
+Spells:
+- Stronghold "Talisman of Adventure" upgrade costs wood/ore/mercury/crystal/sulfur/gem/gold for levels:
+-- 1 from 3/3/0/0/0/0/1000 to 0/0/1/1/1/1/500 
+-- 2 from 2/2/2/2/2/2/1000 to 0/0/1/1/1/1/500
+-- 3 from 3/3/3/3/3/3/1500 to 5/5/2/2/2/2/1000 and increased hero level requirement from 15 to 20
+-- 4 from 4/4/4/4/4/4/1500 to 0/0/0/0/0/0/0 (because it grants "Advanced Town Portal spell which other factions get for free")
+
+- Stronghold creatures are now immune to "Curse of the Netherworld" as their are considered chaotic neutral.
+- "Imbue arrow" assigned spell can be canceled by closing the spell book in the imbue-arrow-spell-selection choice menu.
+- added "Advaned Town Portal" spell to "Adventure school". It allows selecting the town player wants to teleport to as long as requirements are met.
+
+Artifacts:
+- Stronger magic proof ability from artifacts reduced from 50% to 30% (fire, water, earth, lighting)
+- Weaker magic proof ability from artifacts reduced from 25% to 15% (fire, water, earth, lighting)
+- Artifacts magic boosting ability reduced from 50% to 30% (fire, water, earth, lighting)
+- Reduced "Amulet of Necromancy" "Necromancy" bonus from 10 to 5%
+- Improved "Amulet of Necromancy" HP raised to Dark points spent ratio from 10 to 20%
+
+Town:
+- reduced "Altar of Primal Elements" elemental chains bonus from 10% to 5%
+- reduced "Necromany Amplifier" "Necromancy" resurrection bonus from 10% to 5%
+- improved "Necromany Amplifier" Dark energy bonus from 150 to 200
+- reduced "Tomb of the Lost" "Necromancy" resurrection bonus from 50% to 10%
+- improved "Tomb of the Lost" Dark energy bonus from 150 to 300
+- reduced "Infernal Loom" "Gating" bonus from 10% to 5%
+- access "Training Grounds" does not require "Training" skill anymore
+- improved creature training cost from 300% to 220% original creature cost
+- buildings cost has been altered to provide equal challenge and progression for all factions
+- decreased "Sacrificial Altar" gold to experience multiplier from 0.5 to 0.3
+- decreased "Marketplace" artifacts sold gold cost from 0.5 to 0.3 of purchase value.
+
+Combat view:
+- decreased attack and defense primary skill stat bonus from 5% to 2.5%
+- decreased maximum creature damage reduction from Defense stat bonus from 10% to 25%. (capped at 30 DvsA difference)
+- decreased maximum creature damage amplification from Attack stat bonus from 200% to 300%. (capped at 120 AvsD differece)
+- changed creature split feature to create 2 stacks with sizes N-1 and 1 instead of N/2 and N/2
+- increased hero damage at level 1 for creature tiers 1/2/3/4/5/6/7/8 from 2/1/0.8/0.5/0.3/0.2/0.1/0.01 to 2.4/1.6/0.8/0.6/0.4/0.24/0.16/0.01
+- increased hero damage at level 30 for creature tiers 1/2/3/4/5/6/7/8 from 12/9/6.5/4.5/3/2/1.5/0.15 to 19.2/14.4/9.6/6.4/4/2.4/1.2/0.25
+- changed standard battlefield properties:
+-- minimum small obstacles from 0 to 2
+-- maximum small obstacles from 6 to 12
+-- minimum big obstacles from 1 to 2
+-- maximum big obstacles from 2 to 4
+-- minimum mixed obstacles from 1 to 2
+-- maximum mixed obstacles from 4 to 8
+-- maximum area squares covered by obstacles from 21 to 32
+-- increased battlefield size from 12x10 to 14x14
+-- increased free-of-obstacles horizontal lines from 2 to 6
+
+
+User experience:
+- hero inventory left/right buttons skip 5 artifacts at once instead of 1.
+- town marketplace hero inventory view requires double instead of single click for artifacts to be selected for sale.
+- Hero view tabs "Skills" and "Biography" are now combined into one.
+- Massively expanded descriptions of game elements (skills, perks, spells, specializations, abilities, adventure map sites, town buildings and many more) to include formulas and/or peculiarities present in game mechanics
+
+Lobby:
+- Human player starting resources for difficulties Easy/Normal/Hard/Heroic:
+-- Wood and Ore from 50/30/20/10 to 30/20/20/10
+-- Mercury, Crystal, Sulfur and Gems from 25/15/10/5 to 15/10/10/5
+-- Gold from 50000/30000/20000/10000 to 30000/20000/20000/10000
+- Computer player starting resources for difficulties Easy/Normal/Hard/Heroic:
+-- Wood and Ore from 10/10/20/30 to 30/30/30/30
+-- Mercury, Crystal, Sulfur and Gems from 3/5/10/15 to 15/15/15/15
+-- Gold from 5000/10000/20000/30000 to 30001/30001/30001/30001
+
+Adventure map:
+- Capmaign maps
+-- Creature stack spawn multiplier per difficulty from 0.5/1.0/1.3/1.5 to 1.0/1.2/1.3/1.4 
+-- Hero experience multiplier per difficulty from 2.0/1.0/0.77/0.67 to 1.0/0.9/0.8/0.7
+- Custom maps
+-- Creature stack spawn multiplier per difficulty from 0.5/1.0/1.12/1.4 to 1.0/1.1/1.2/1.3
+-- Neutral stacks weekly growth multiplier per difficulty from 1.05/1.09/1.1/1.11 to 1.11/1.12/1.13/1.14 
+-- Hero experience multiplier per difficulty from 2.0/1.0/1.0/1.0 to 1.0/0.92/0.85/0.79
+
+
+
+Creature abilities:
+- improved "Precise Shot" range from 3 to 4
+- reduced "Jousting" bonus damage per square from 5% to 3.33%
+- reduced "Mana Stealer" mana points stolen per weekly population from 4 to 2
+- improved "Siphon mana" mana stolen multiplier per weekly population from 0.5 to 0.6
+- reduced "Leap" max jump distance from 8 to 7
+- improved "Leap" damage multiplier from 0% + 10% per square jumped to 10% + 10% per square jumped
+- (TEST THIS) improved "Leap" retaliation damage multiplier from 100% to 50% + 5% per square jumped
+- improved "Fear" proc multiplier from 0.8 to 1
+- reduced "Pit Lord Summoning" distance from caster speed to caster speed - 1
+- improved "Festering Aura" morale reduction from 1 to 2
+- improved "Festering Aura" attack reduction from 3 to 4.
+- improved "Festering Aura" defense reduction from 2 to 4.
+- reduced "Torpor" duration from 2 to 1.5 turns
+- reduced "Torpor" proc multiplier from 3 to 2.5 turns
+- reduced "Life Drain" health restored from damage dealt from 50% to 40%
+- improved "Death Wail" damage from Banshee_count*(10 - target moral) to 2*Banshee_count*(12 - target moral)
+- reduced "Sorrow Strike" mastery of "Sorrow" spell effect from Expert to None
+- reduced "Warding Arrow" proc multiplier from 1 to 1.5
+- improved "Force Arrow" proc multiplier from 0.5 to 0.75
+- improved "Blinding Attack" proc multiplier from 1 to 1.5
+- improved "Blinding Attack" Spellpower of "Blind" spell effect from 8 to 14 /to fit new spell duration calculation/
+- reduced "Child of the Light" mastery of cast spells from Expert to Basic
+- improved "Symbiosis" heal Sprites receive per Treant participating in symbiosis from 20 to 25 HP
+- improved "Sabotage" duration multiplier from 5 to 10
+- reduced "Enchanted Armor" heal by spell damage received from 50% to 25%
+- improved "Stormcaller" ranged penalty effect per Titan count from 1% to 2%
+- reduced "Stormcaller" max ranged penalty effect from 90% to 40%
+- improved "Hexing Attack" Spellpower of cast spells from 3 to 10
+- improved "Hexing Attack" proc multiplier from 1.5 to 2
+- reduced "Hexing Attack" mastery of cast spells from Expert to Advanced
+- improved "Regeneration" heal strength from 30-50 to 80-120
+- reduced "Invisibility" duration from 3 to 2 turns
+- reduced "Rider Charge" defence reduction per hex from 20% to 7.5%
+- improved "Wheeling Attack" bonus damage 25% to 40%
+- reduced "Shield Wall" max damage reduction from 90% to 80%
+- improved "Crippling Would" proc multiplier from 0.7 to 1.5
+- reduced "Crippling Would" speed reduction from 50% to 40%
+- reduced "Crippling Would" initiative reduction from 30% to 20%
+- improved "Giant Slayer" attack and defense bonus from 4 to 8
+- improved "Bear Roar" proc multiplier from 0.9 to 2
+- reduced "Paw Strike" proc multiplier from 1 to 0.5
+- improved "Battle Rage" attack bonus from 5 to 8
+- improved "Bash" proc multiplier from 1.5 to 2
+- improved "Mark of Fire" proc multiplier from 1 to 1.5
+- improved "Flamewave" proc multiplier from 2 to 2.5
+- improved Wait command Rage points penalty from 100 to 30
+- improved "Assault" proc multiplier from 1 to 1.5
+- improved "Taunt" proc factor from 1.2 to 2
+- improved "Venom" damage per stack size from 5 to 6
+- improved "Crushing Blow" proc multiplier from 0.8 to 1
+
+Creatures:
+- Goblin Witch-Doctor Rage abilities:
+-- Level 2 - added 3 bonus attack, "Hexing Attack"
+-- Level 2 - removed "Cursed Attack", "Purge"
+-- Level 3 - added "No Enemy Retaliation"
+-- Level 3 - removed "Hexing Attack"
+- Warrior Rage abilities:
+-- Level 1 - reduced bonus health from 5 to 2
+- Mauler Rage abilities:
+-- Level 1 - reduced bonus health from 5 to 2 and bonus initiative from 2 to 1
+-- Level 2 - removed 2 bonus speed
+-- Level 2 - added 1 bonus initiative
+- Warmonger Rage abilities:
+-- Level 1 - reduced bonus health from 8 to 2 
+-- Level 2 - added 1 bonus initiative
+-- Level 3 - reduced bonus defence from 12 to 10
+- Shaman/Sun Daughter Rage abilities:
+-- Level 1 - reduced bonus initative from 2 to 1
+-- Level 1 - added 2 bonus defense
+-- Level 2 - improved bonus health from 7 to 8
+-- Level 3 - reduced bonus defense from 15 to 10
+- Sky Daughter Rage abilities:
+-- Level 1 - added bonus Spellpower multiplier 1.2
+-- Level 1 - reduced bonus initative from 2 to 1
+-- Level 2 - reduced bonus Spellpower multiplier from 2 to 1.5
+-- Level 2 - improved bonus health from 8 to 10
+- Earth Daughter Rage abilities:
+-- Level 1 - reduced bonus initative from 3 to 2
+-- Level 2 - added bonus Spellpower multiplier 1.5
+-- Level 2 - improved bonus health from 8 to 10
+-- Level 3 - removed bonus defense from 15
+-- Level 3 - added bonus Spellpower multiplier 3
+- Slayer Rage abilities:
+-- Level 1 - removed 2 bonus attack
+-- Level 1 - added 1 bonus initiative
+-- Level 2 - improved bonus health from 10 to 12
+-- Level 3 - removed "Double Attack"
+-- Level 3 - added 8 bonus attack
+- Executioner Rage abilities:
+-- Level 1 - removed 3 bonus attack
+-- Level 1 - added 1 bonus initiative
+-- Level 2 - improved bonus health from 10 to 12
+-- Level 3 - removed "Double Attack"
+-- Level 3 - added 8 bonus attack
+- Chieftain Rage abilities:
+-- Level 1 - reduced bonus initative from 2 to 1
+-- Level 2 - improved bonus health from 10 to 15
+-- Level 3 - removed 8 bonus attack
+-- Level 3 - added "Double Attack"
+
+
+Hero Specializations:
+- improved "Suzerain" training cost discount from 1% per 3 hero levels to 2% per hero level.
+- reduced "Gatekeeper" "Gating" bonus per hero level from 1% to 0.33% 
+- removed "Banshee" from the game
+- reduced "Banshee" multiplier from 2 to 1.5.
+- reduced "Cavalry Commander" bonus jousting damage from 10% + 1%*hero_level to 1%*hero_level
+- reduced "Windrider" "Haste" spell bonus per hero level from 1% to 0.15%
+- improved "Windrider" with 1 bonus Spellpower to hero for every 7 hero levels
+- reduced "Aura of Swiftness" initiative from 0% + 1%*hero_level to 2.5% + 0.25%*hero_level
+- reduced "Swarm Queen" - "Wasp Swarm" spell ATB drop additional bonus from 2%*hero_level/3 to 1%*hero_level/3
+- reduced "Swift Striker" ATB starting bonus per hero level from 1% to 0.5%
+- improved "Spell Twister" with 1 bonus to hero Spellpower per 8 hero levels.
+- reduced "Spell Twister" spell enemy redirection chance from 40% + 2%*hero_level to 40% + 1%*hero_level
+- improved "Soulhunter" amount of ghosts summoned per hero level from 1 to 2
+- improved "Reanimator" - "Raise Dead" spell Spellpower bonus from 1 per 5 hero levels to 1 per 3 hero levels
+- improved "Disruptor" bonus damage from 10 + 10*hero_level/3 to 30 + 30*hero_level/2
+- reduced "Windspeaker" bonus spell casting 0 + 0.05*hero_level to 0.075 + 0.025*hero_level
+- reduced "Master of the Elements" - "Summon Elementals" spell Spellpower bonus from 1*hero_level/3 to 1*hero_level/4
+- reduced "Master of the Elements" elementals summoned count from 1*hero_level/3 to 1*hero_level/40
+
+MISC:
+- ElementalChainBonusPerInvocationTrained from 10% to 5%
