@@ -294,4 +294,3 @@ Hero Specializations:
 - reduced "Master of the Elements" elementals summoned count from 1*hero_level/3 to 1*hero_level/40
 
 MISC:
-- ElementalChainBonusPerInvocationTrained from 10% to 5%
