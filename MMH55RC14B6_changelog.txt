@@ -292,5 +292,15 @@ Hero Specializations:
 - reduced "Windspeaker" bonus spell casting 0 + 0.05*hero_level to 0.075 + 0.025*hero_level
 - reduced "Master of the Elements" - "Summon Elementals" spell Spellpower bonus from 1*hero_level/3 to 1*hero_level/4
 - reduced "Master of the Elements" elementals summoned count from 1*hero_level/3 to 1*hero_level/40
+- reduced "Mystic" mana regeneration per day from 1 + hero_level/3 to 1 + hero_level/4
+- reduced "Poison Master" proc chance from 10% + 2*hero_level to 15% + 1%*hero_level
+- reduced "Catalyst" empowered spells casting mana reduction from 5% + 1%*hero_level to 10% + 0.5%*hero_level
+- reduced "Intimidate" enemy initiative reduction from 0% + 1%*hero_level to 2% + 0.2%*hero_level
+- removed "Shadow Dancer" from the game
+- reduced "Shadow Dancer" range damage reduction from 2%*hero_level to 1%*hero_level
+
+
+
 
 MISC:
+- is it removed from the game ? "Shadow Dancer"
