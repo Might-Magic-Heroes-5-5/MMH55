@@ -92,17 +92,26 @@ Hero and skills:
 - reduced perk "Magic Mirror" proc chance formula from 10% + hero_level*2% to 10% + hero_level*1%
 - improved perk "Master of Ice" target ATB drop from 30% to 40%
 - improved perk "Master of Fire" target ATB drop from 30% to 40%
+- (NOT IN PRODUCTION YET) improved perk "Imbue arrow" assigned spell can be canceled by closing the spell book in the imbue-arrow-spell-selection choice menu.
 
 Spells:
+- Reduced "Rune of Revive" resurrection from 40% to 30%
 - Stronghold "Talisman of Adventure" upgrade costs wood/ore/mercury/crystal/sulfur/gem/gold for levels:
 -- 1 from 3/3/0/0/0/0/1000 to 0/0/1/1/1/1/500 
 -- 2 from 2/2/2/2/2/2/1000 to 0/0/1/1/1/1/500
 -- 3 from 3/3/3/3/3/3/1500 to 5/5/2/2/2/2/1000 and increased hero level requirement from 15 to 20
 -- 4 from 4/4/4/4/4/4/1500 to 0/0/0/0/0/0/0 (because it grants "Advanced Town Portal spell which other factions get for free")
+- nerfed "Curse of the Netherworld" does not damage Stronghold creatures anymore.
 
-- Stronghold creatures are now immune to "Curse of the Netherworld" as their are considered chaotic neutral.
-- "Imbue arrow" assigned spell can be canceled by closing the spell book in the imbue-arrow-spell-selection choice menu.
 - added "Advaned Town Portal" spell to "Adventure school". It allows selecting the town player wants to teleport to as long as requirements are met.
+- reduced "Summon Hive" by changing hive "Wasp Swarm" mastery from Expert to Advanced.
+- improved "Summon Hive" stats for None/Basic/Advanced/Expert masteries:
+-- initiative from 2/5/5/10 + 0.25*Spellpower to 11/12/13/14 + 0.1*Spellpower 
+-- health from 10/25/50/100 + 0*Spellpower to 0 + 15/20/25/30*Spellpower 
+- improved "Blade Barrier" health for None/Basic/Advanced/Expert masteries from 20/40/60/96 + 5/8/10/12*Spellpower to 0 + 12/14/19/24*Spellpower 
+
+
+
 
 Artifacts:
 - Stronger magic proof ability from artifacts reduced from 50% to 30% (fire, water, earth, lighting)
@@ -167,6 +176,9 @@ Adventure map:
 -- Creature stack spawn multiplier per difficulty from 0.5/1.0/1.12/1.4 to 1.0/1.1/1.2/1.3
 -- Neutral stacks weekly growth multiplier per difficulty from 1.05/1.09/1.1/1.11 to 1.11/1.12/1.13/1.14 
 -- Hero experience multiplier per difficulty from 2.0/1.0/1.0/1.0 to 1.0/0.92/0.85/0.79
+
+
+
 
 
 
@@ -298,9 +310,17 @@ Hero Specializations:
 - reduced "Intimidate" enemy initiative reduction from 0% + 1%*hero_level to 2% + 0.2%*hero_level
 - removed "Shadow Dancer" from the game
 - reduced "Shadow Dancer" range damage reduction from 2%*hero_level to 1%*hero_level
+- reduced "Sacred Hammer" cast chance from 20% + 3%*hero_level to 15% + 1%*hero_level
+- reduced "Rune Artist" chance from 20% + 1%*hero_level to 1% + 1%*hero_level
+- reduced "Tracker" movement points per level from 1% to 0.33%
+- improved "Tracker" by adding Wolf Summmoning feat
+- improved "Wyvern Tamer" base HP from 1 to 2.
 
 
 
 
 MISC:
-- is it removed from the game ? "Shadow Dancer"
+- "Shadow Dancer" - removed from the game ( reduced ranged damage reduction bonus per hero level from 2% to 1%)
+- "Blood Drinker" removed from the game ( reduced bonus Attack per hero level from 1 per 6 to 1 per 9 )	
+- "BorderGuard" - removed from the game
+- "Warchief" - removed from the game ( reduced mana reduction per hero level from 1 per 4 to 1 per 20 )
