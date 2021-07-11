@@ -92,7 +92,7 @@ Hero and skills:
 - reduced perk "Magic Mirror" proc chance formula from 10% + hero_level*2% to 10% + hero_level*1%
 - improved perk "Master of Ice" target ATB drop from 30% to 40%
 - improved perk "Master of Fire" target ATB drop from 30% to 40%
-- (NOT IN PRODUCTION YET) improved perk "Imbue arrow" assigned spell can be canceled by closing the spell book in the imbue-arrow-spell-selection choice menu.
+- (NOT IN PRODUCTION YET) improved perk "Imbue arrow" assigned spell can be canceled by closing the spell book in the imbue-arrow-spell-selection choice menu
 
 Spells:
 - Reduced "Rune of Revive" resurrection from 40% to 30%
@@ -101,17 +101,20 @@ Spells:
 -- 2 from 2/2/2/2/2/2/1000 to 0/0/1/1/1/1/500
 -- 3 from 3/3/3/3/3/3/1500 to 5/5/2/2/2/2/1000 and increased hero level requirement from 15 to 20
 -- 4 from 4/4/4/4/4/4/1500 to 0/0/0/0/0/0/0 (because it grants "Advanced Town Portal spell which other factions get for free")
-- nerfed "Curse of the Netherworld" does not damage Stronghold creatures anymore.
+- nerfed "Curse of the Netherworld" does not damage Stronghold creatures anymore
 
-- added "Advaned Town Portal" spell to "Adventure school". It allows selecting the town player wants to teleport to as long as requirements are met.
-- reduced "Summon Hive" by changing hive "Wasp Swarm" mastery from Expert to Advanced.
+- added "Advaned Town Portal" spell to "Adventure school". It allows selecting the town player wants to teleport to as long as requirements are met
+- reduced "Summon Hive" by changing hive "Wasp Swarm" mastery from Expert to Advanced
 - improved "Summon Hive" stats for None/Basic/Advanced/Expert masteries:
 -- initiative from 2/5/5/10 + 0.25*Spellpower to 11/12/13/14 + 0.1*Spellpower 
 -- health from 10/25/50/100 + 0*Spellpower to 0 + 15/20/25/30*Spellpower 
 - improved "Blade Barrier" health for None/Basic/Advanced/Expert masteries from 20/40/60/96 + 5/8/10/12*Spellpower to 0 + 12/14/19/24*Spellpower 
-
-
-
+- reduced "Deep Freeze" phyisical damage bonus per mastery level from 101%/103%/103%/103% + 1%/3%/3%/3%*Spellpower to 105%/110%/115%/120% + 1%*Spellpower
+- reduced "Ralling Cry" morale bonus per hero level from 1 per 8 to 1 per 20
+- reduced "Word of the Chief" ATB boost from 0.1 + 0.02*hero_level to 0.2 + 0.015*hero_level
+- improved "Word of the Chief" Rage points boost from 30 to 60
+- reduced "Battle Cry" attack bonus per level from 1 per 2 to 1 per 5
+- reduced "Shout of Many" damage multiplier from 1 to 0.7
 
 Artifacts:
 - Stronger magic proof ability from artifacts reduced from 50% to 30% (fire, water, earth, lighting)
@@ -132,12 +135,91 @@ Town:
 - buildings cost has been altered to provide equal challenge and progression for all factions
 - decreased "Sacrificial Altar" gold to experience multiplier from 0.5 to 0.3
 - decreased "Marketplace" artifacts sold gold cost from 0.5 to 0.3 of purchase value.
+- improved heroes starting army tier 3 min/max unit count per stack from -0.6/0.4 to -0.1/0.4
+- reduced heroes starting army tier 1 min/max unit count per stack for heroes with Tier 1 specialization from min 1/1.5 to 1/1.2
+- reduced heroes starting army tier 1 stacks for heroes with Tier 1 specialization from 3 to 2
+- improved heroes starting army tier 2 min/max unit count per stack for heroes with Tier 2 specialization from min 0.6/0.8 to 0.7/0.8
+- reduced heroes starting army tier 2 stacks for heroes with Tier 2 specialization from 3 to 2
+- improved heroes starting army tier 3 min/max unit count per stack for heroes with Tier 3 specialization from min 0.5/0.7 to 0.6/0.7
+- reduced heroes starting army tier 3 stacks for heroes with Tier 3 specialization from 3 to 2
+- reduced "Slave Market" creature sell cost % of purchase cost reduced from 95% + 5% per Slave market to 45% + 5% per Save market.
+
+Artifact Sets:
+1. "Archer's Dream" - 2 pieces - removed from game
+2. "Armor of Dwarven Kings" - 4 pieces
+- set bonuses removed: 
+-- For 2 items: +40% Magic Proof capacity to all the creatures in the Hero's army for 2 set pieces
+-- For 4 items: Casts "Endurance" and "Deflect Missile" spells at the expert level to all friendly creatures at the start of combat for 4 set pieces
+-- For 2 items (Runemage class only): Increases Runemage's Spellpower by +10%
+- set bonuses added:
+-- For 4 items: +8 Defense
+3. "Death's Embrace" - from 4 to 6 pieces - added "Necromancer's Helm" and "Skull of the Netherworld"
+- set bonuses removed:
+-- For 2 items: Decreases speed of all enemy creatures by -1.
+-- For 4 items: Enemy creatures that fail the morale check get a -20% penalty to their Attack and Defense until the start of next turn.
+-- For 2 items (Necromancer class only): "Banshee Howl" will now decrease enemy's Morale and Luck by -2 and its Initiative by -20%. Moreover, the use of this ability will only move the Hero 50% backwards along the ATB bar.
+- set bonuses added:
+-- For 3 items: +6 Spellpower
+-- For 6 items: +6 Spellpower for the total of 12.
+4. "Lion's Spirit" - 3 pieces
+- set bonuses removed:
+-- For 3 items: Each time a positive Morale effect is triggered with any of the creatures in the hero's army, the hero moves 10 percent forward along the ATB bar. (If the Morale effect is negative, the hero is moved backwards).
+-- For 2 items (Knight class only): Knight's attacks (including Retaliation Strike) decrease enemy morale by -2.
+- set bonuses added:
+-- For 3 pieces: +6 Attack
+5. "Power of Dragons" - 8 pieces
+- set bonuses removed:
+-- For 2 items: Adds +1 to all hero's parameters.
+-- For 4 items: Provides a bonus of +5 Attack and Defense to all tier 7 creatures in hero's army, also increasing their hit points by +20.
+-- For 6 items: Adds another +3 to all hero's parameters (cumulative with the 2 items bonus).
+-- For 8 items: Reinforces hero's army with one tier 7 creature every day.
+- set bonuses added:
+-- For 2 items:  +2 to all primary skills
+-- For 4 items:  +2 to all primary skills for the total of 4.
+6. "Runeforce" - 2 pieces - removed from game
+7. "Sar-Issus Regalia" - 4 pieces
+- set bonuses removed:
+-- For 4 items: Hero moves backward along the ATB bar 10% less than usual while casting any spell.
+-- For 2 items (Wizard class only): Wizard moves backward along the ATB bar 10% less than usual while casting any spell.
+- set bonuses added:
+-- For 4 items: +4 Spellpower
+8. "Vestment of Enlightenment" - 2 pieces
+- set bonuses removed:
+-- For 2 items: Increases the amount of experience gained by the Hero by +15%
+- set bonuses added:
+-- For 2 items: The hero receives an amount of experience every day equal to amount of days passed * 10.
+9. "Weapons of Might" - 2 pieces - removed from game
+10. "Will of Urgash" - 2 pieces - removed from game
+11. "Tunic of the Prophet" - 4 pieces - added to the game
+- Pieces - "Coif of the Prophet", "Robe of the Prophet", "Sandals of the Prohpet", "Silksword of the Prophet"
+- Set bonus
+-- For 4 items: +8 Knowledge
+12. "Garments of the Saint" - 5 pieces - added to the game
+- Pieces - "Ring of Life", "Ankh of Life", "Sandals of the Saint", "Cloak of the Saint", "Staff of the Sanit"
+- Set bonus
+-- For 3 items: Artifact ressurection action mana cost is reduced by 2 mana
+13. "Armour of the Forgotten Hero" - 4 pieces - added to the game
+- Pieces - "Curiass of the Forgotten Hero", "Helmet of the Forgotten Hero", "Boots of the Forgotten Hero", "Shield of the Forgotten Hero"
+- Set bonus
+-- For 4 items: +1 to primary skills, Luck and Morale
+14. "Cornucopia" - 6 pieces - added to the game
+- Pieces - "Sacred seed", "Dwarven Pickaxe", "Magic Box of the Dragon Breeder", "Crystal Eyeball", "Circlet of Infinite Gems", "Endless Vial of Mercury"
+- Set bonus
+-- For 6 items: Delivering the full set to "Arcane Library" will grant the hero with "Cornucopia" ultimate artifact.
+15. "Regalia of the Legion" - 8 pieces - added to the game
+- Pieces - "Golden Mascot of the Legion", "Decree of the Legion", "Register of the Legion", "Crest of the Legion", "War Drums of the Legion", "Horn of the Legion", "Mantle of the Legion", "Banner of the Legion"
+- Set bonus
+-- For 8 items: Delivering the full set to "Altar of Sacrifice" will grant hero random high tier prize
+
 
 Combat view:
-- decreased attack and defense primary skill stat bonus from 5% to 2.5%
-- decreased maximum creature damage reduction from Defense stat bonus from 10% to 25%. (capped at 30 DvsA difference)
-- decreased maximum creature damage amplification from Attack stat bonus from 200% to 300%. (capped at 120 AvsD differece)
-- changed creature split feature to create 2 stacks with sizes N-1 and 1 instead of N/2 and N/2
+- reduced Attack and Defense stat bonuses from 5% to 2.5%
+- reduced Defense stat maximum creature damage reduction from 10% to 25%. (capped at 30 DvsA difference)
+- reduced Attack stat maximum creature damage amplification from from 200% to 300%. (capped at 120 AvsD differece)
+- reduced "Luck" good luck damage multiplier from 2 to 1.67
+- improved "Luck" bad luck damage multiplier from 0.5 to 0.6
+- reduced "Morale" good morale initiative multiplier from 0.5 to 0.4
+- improved "Morale" bad morale initiative multiplier from 0.5 to 0.6
 - increased hero damage at level 1 for creature tiers 1/2/3/4/5/6/7/8 from 2/1/0.8/0.5/0.3/0.2/0.1/0.01 to 2.4/1.6/0.8/0.6/0.4/0.24/0.16/0.01
 - increased hero damage at level 30 for creature tiers 1/2/3/4/5/6/7/8 from 12/9/6.5/4.5/3/2/1.5/0.15 to 19.2/14.4/9.6/6.4/4/2.4/1.2/0.25
 - changed standard battlefield properties:
@@ -157,6 +239,7 @@ User experience:
 - town marketplace hero inventory view requires double instead of single click for artifacts to be selected for sale.
 - Hero view tabs "Skills" and "Biography" are now combined into one.
 - Massively expanded descriptions of game elements (skills, perks, spells, specializations, abilities, adventure map sites, town buildings and many more) to include formulas and/or peculiarities present in game mechanics
+- changed creature split feature to create 2 stacks with sizes N-1 and 1 instead of N/2 and N/2
 
 Lobby:
 - Human player starting resources for difficulties Easy/Normal/Hard/Heroic:
@@ -316,6 +399,39 @@ Hero Specializations:
 - improved "Tracker" by adding Wolf Summmoning feat
 - improved "Wyvern Tamer" base HP from 1 to 2.
 
+
+AI changes for difficulties Easy/Normal/Hard/Heroic:
+- Max level spells AI is allowed to cast from 3/3/5/5 to 5/5/5/5
+- AI AOE spell casts always centered on creatures from true/true/false/false to false/false/false/false
+- AI considers only shortest path to enemy only from true/true/false/false to false/false/false/false
+- Aggressiveness towards human players from 1/1/1/1 to 2/2/2/2
+- Aggressiveness towards AI players from 1/1/0.5/0.25 to 0.75/0.5/0.33/0.25
+- AI cowaradance level from Humans from 0.1/0.1/0.2/0.3 to 0/0/0/0
+- value of Town for calculation of enemy hero army strength when in town from 32000/32000/64000/128000 to 128000/128000/128000/128000
+- AI vengefulness against Human players attacks from 1/1/1/1 to 2/2/2/2
+- AI vengefulness against AI players attacks from 1/1/0.5/0 to 0/0/0/0
+- Days between AI building structures in town from 2/2/1/1 to 1/1/1/1
+- Does AI checks if town is in danger from 0/0/1/1 to 1/1/1/1
+- Does AI checks if hero is in danger from 1/1/1/1 to 1/1/1/1
+- How often AI to consider if it needs to put hero in town garrison from 0/0/1/1 to 1/1/1/1
+- Heroes AI will hire at start of the game 1/1/2/1 to 1/1/1/1
+- Heroes AI wiil hire per owned town 1/1/1/2 to 1/1/1/1
+- Max amount of heroes AI can have on the map from 8/8/14/17 to 14/14/14/14
+- AI begins looking for grail after opponening N amonut of obelisks where N is changed from 15/15/5/3 to 3/3/3/3
+- AI starts digging for Grail when the unveiled map and obelisk map match no less than N% where N is changed from 80/80/70/60 to 60/60/60/60
+- AI threat multiplier for different threats based on source and game difficulty
+-- enemies - 0/0/1/1 to 1/1/1/1
+-- neutrals - 1/1/2/2 to 2/2/2/2
+-- allies - 2/2/3/3 to 3/3/3/3
+-- ours - 3/3/4/4 to 4/4/4/4
+- Distance in days AI to consider threat from 2/2/3/4 to 4/4/4/4
+- ThreatsAccComingLimit from 5000/5000/10000/15000 to 15000/15000/15000/15000
+- ThreatsAccComingCalmingDivisor from 2/2/1.5/1.125 to 1.125/1.125/1.125/1.125
+- ThreatsAccComingCoef from 0.02/0.2/0.4/0.6 to 0.6/0.6/0.6/0.6
+- ThreatsTownInDangerThreshold from 100000/100000/250000/500000 to 500000/500000/500000/500000
+- StrategicCaptureDistance from 15/15/25/30 to 30/30/30/30
+- Creature growth in AI towns 0.5/1/1/1 to 1/1/1/1
+- AI priority of border guard keys from 1500 to 9000
 
 
 
