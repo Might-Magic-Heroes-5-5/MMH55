@@ -1,159 +1,244 @@
 MMH55 changes:
 
-Hero and skills:
-- increased base hero movement from 2500 to 2750
-- increased classes per faction from 1 to 3 where each class has unique primary and secondary skill gain
-- increased skill slots from 6 to 8
-- changed skill "Training" name to "Combat"
-- improved skill "Training/Combat" retaliation bonus per mastery from 5%/10%/20%/25% to 15%/30%/45%/45%
-- decoupled creature training from "Training/Combat" skill. All Haven heroes can train creatures as soon as the "Training Grounds" building is present.
-- reduced "Training/Combat" cost discount per mastery level except basic from 15% to 0%
-- reduced skill "Gating" creature summoned per mastery level from 30%/35%/40%/45% to 15%/20%/25%/30%
-- improved skill "Gating" gated stack starting ATB turn from 0 to 75%
-- reduced skill "Gating" creature gating action ATB turn spent from 50% to 75%
-- reduced skill "Necromancy" resurrection value from 10% + 10% per mastery level to 5% + 5% per mastery levels
-- reduced "Necromancy" HP raised per dark energy from 25 HP per 1 point to 12 HP per 1 point
-- increased skill "Necromancy" starting dark energy from 200 to 300
-- changed skill "Necromancy" raised creatures tier and upgrade type corespond to slayed creatures tier and upgrade type.
-- changed skill "Irresistible Magic" name to "Occultism"
-- reduced skill "Irresistible Magic/Occultism" elemental chains damage bonus per mastery level from 10% to 5%.
-- improved skill "Sorcery" hero spell casts cost less ATB turn based on mastery level, changed from 10%/20%/30% to 11%/22%/33%
-- reduced skill "Defense" damage reduction per mastery level from 10%/20%/30% to 10%/15%/20%
-- improved skill "Offense" damage bonus per mastery level from 5%/10%/15% to 10%/15%/20%
-- reduced skill "Blood Rage" damange absorbtion per mastery level from 50%/55%/60%/65% to 20%/25%/30%/30%
-- reduced skill "Blood Rage" by increasing Rage Points-lost-per-damage-taken multiplier from 1200 to 2400
-- improved skill "Blood Rage" damange absorbtion per mastery level from 50%/55%/60%/65% to 20%/25%/30%/30%
-- improved skills Shatter Destruction/Summoning/Dark and Light   enemy spell mastery reduction per Shater mastery level based on spell level (1/2/3/4/5):
+Heroes:
+- improved base hero movement from 2500 to 2750
+- improved max hero level from 40 to 99
+- improved hero leveling curve, now it is easier to get to higher levels.
+- improved classes per faction from 1 to 3 where each class has unique primary and secondary skill gain
+- hero skill slots from 6 to 8
+
+Skills:
+
+New:
+
+Removed:
+- "Expert Trainer" perk - 35% training cost discount
+- "Runic Armour" - hero receives "Arcane Armour" spell and (from 4 to 10) effective Spellpower when casting it
+- "Luck of Barbarian" - army gets (from +5% to +15%) Magic Proof for every point of Luck
+
+Changed:
+- there are no longer racial skills
+- "Training" skill name is now "Combat"
+- "Necromancy" skill raised creatures tier and upgrade type corespond to slayed creatures tier and upgrade type.
+- "Irresistible Magic" skill name is now "Occultism"
+- "Benediction" perk name is now "Prayer"
+- "Consume Corpse" perk name is now "Drain Soul"
+- "Mark of the Necromancer" perk name is now "Spirit Link"
+- "Excruiating Strike" perk name is now "Critical Strike"
+- "Battlefield Logistics" perk name is now "Death March"
+- "Elven Luck" perk name is now "Critical hit"
+- "Powerful Blow" perk name is now "Chain Attack"
+- "Warpath" perk name is now "Pillager"
+- "Lord of the Undead" perk redesign
+-- resurrection from 5% to 0%
+-- added bonus of 1 Knowledge
+-- daily gold income of 0.5 per skeleton in hero army
+-- weekly bonus Skeleton gain in hero army equal to Hero Knowledge
+- "Defend Us All" perk redesign
+-- creature from Goblin to Warrior/Mauler/Warmonger
+-- army delivery from one time to once perk week
+-- creature formula from 2*creature_count present in the army to 1
+
+Fix:
+- "Training/Combat" skill is not required for heroes to train creatures at "Training Grounds" building.
+- (NOT IN PRODUCTION YET) "Imbue arrow" perk assigned spell can be canceled by closing the spell book in the imbue-arrow-spell-selection choice menu
+
+Nerfed:
+- "Training/Combat" skill cost discount per mastery level except basic from 15% to 0%
+- "Gating" skill creature summoned per mastery level from 30%/35%/40%/45% to 15%/20%/25%/30%
+- "Necromancy" skill resurrection portion from 10% + 10% per mastery level to 5% + 5% per mastery level
+- "Necromancy" skill HP raised by resurrection per dark energy from 25 HP per 1 point to 12 HP per 1 point
+- "Irresistible Magic/Occultism" skill elemental chains effect damage bonus per mastery level from 10% to 5%.
+- "Defense" skill damage reduction per mastery level from 10%/20%/30% to 10%/15%/20%
+- "Blood Rage" skill damange absorbtion per mastery level from 50%/55%/60%/65% to 20%/25%/30%/30%
+- "Blood Rage" skill Rage-Points-lost-per-damage-taken multiplier from 1200 to 2400
+- "Banshee Howl" perk duration from 2 + 0.25*hero_level to 2 + 0.1*hero_level
+- "Benediction/Prayer" perk duration from 2 + 0.25*hero_level to 2 + 0.1*hero_level
+- "Consume Corpse/Drain Soul" perk mana restored from the drained corpse from 1/25 HP to SQRT(1/25)/4 mana of the drained corpse
+- "Mark of the Necromancer/Spirit Link" mana gain from 1 per 75 damage to 1 per 120 damage
+- "Retribution" perk damage per morale from 5% to 2%
+- "Intelligence" mana multiplier from 50% to 40%
+- "Gate Master" perk Gating bonus from 20% to 5%
+- "Swift Gating" perk creature-use-of-gating-skill-ATB-cost increased from 25% to 50%
+- "Absolute Rage" perk rage points from 500 to 160
+- "Battlefield Logistics/Death March" perk speed from 4 to 3
+- "Elven Luck/Critical hit" perk bonus damage from 25% to 10%
+- "Fine Rune" perk proc chance from 50% to 40%
+- "Tap Runes" perk mana regen per Knowledge from 0.5 to 0.33
+- "Mentoring" perk experience alignment from 25% to 10%
+- "Empathy" perk bonus/penalty ATB from 10% to 5%
+- "Empathy" perk -2 ally Morale penalty if hero has "Shouting" skill
+- "Preparation" perk - Defender no longer retaliates Attacker has "No Enemy Retaliation" ability
+- (TEST OR CHECK WITH MAGNO) "Powerful Blow/Chain Attack" perk critical hit chance from 10% to 1% 
+- "Warpath/Pillager" perk bonus movement points from 250 to 100
+- "Magic Mirror" perk proc chance from 10% + hero_level*2% to 10% + hero_level*1%
+
+Buffed:
+- "Training/Combat" skill retaliation bonus damage per mastery from 5%/10%/20%/25% to 15%/30%/45%/45%
+- "Gating" skill gated stack starting ATB turn from 0 to 75%
+- "Necromancy" skill starting dark energy from 200 to 300
+- "Sorcery" skill ATB cast cost reduction for each mastery level from 10%/20%/30% to 11%/22%/33%
+- "Offense" damage bonus per mastery level from 5%/10%/15% to 10%/15%/20%
+- "Blood Rage" damange absorbtion per mastery level from 50%/55%/60%/65% to 20%/25%/30%/30%
+- Shatter Destruction/Summoning/Dark and Light enemy spell mastery reduction per Shater mastery level based on spell level (1/2/3/4/5):
 -- Basic - from 1/1/1/0/0 to 1/1/1/1/0
 -- Advanced - from 2/2/2/1/0 to 2/2/1/1/1
 -- Expert - from 2/2/2/1/1 to 2/2/2/2/2
-- removed perk "Expert Trainer" from game (previously giving 35% training cost discount)
-- improved perk "Banshee Howl" morale and luck reduction from 1 to 2
-- reduced perk "Banshee Howl" duration from 2 + 0.25*hero_level to 2 + 0.1*hero_level
-- changed perk "Benediction" name to "Prayer"
-- improved perk "Benediction/Prayer" bonus defense from 1 to 2
-- reduced perk "Benediction/Prayer" duration from 2 turns per hero level to 1.5 turns per hero level
-- reduced perk "Benediction/Prayer" duration from 0.25 turns per hero level to 0.1 turns per hero level
-- improved perks "Benediction/Prayer", "Banshee howl", "Banish" ATB spent from 1 to 0.85 turns
-- improved perk "Banish" spell "Banish" damage to elementals per hero level from 10 to 40
-- changed perk "Consume Corpse" name to "Drain Soul"
-- improved perk "Consume Corpse/Drain Soul" mana restored from the drained corpse from 1/25 HP to SQRT(1/25)/4 mana of the drained corpse
-- changed perk "Mark of the Necromancer" name to "Spirit Link"
-- reduced perk "Mark of the Necromancer/Spirit Link" mana gain from 1 per 75 damage to 1 per 120 damage
-- reduced "Retribution" bonus damage per morale from 5% to 2%
-- improved perk "Storm Wind" initiative reduction from 1 to 2
-- improved perk "Vitality" HP boost from 2 to 3
-- improved perk "Scouting" visible radius from 4 to 12 squares
-- reduced perk "Intelligence" bonus mana from 50% to 40%
-- improved perk "Avatar of death" by removing mana drain after creature dies
-- improved perk "Avatar of death" mana casting cost per hero level from 2 to 1
-- changed "Excruiating Strike" name to "Critical Strike"
-- improved "Excruiating Strike/Critical Strike" critical hit chance by hero attack from 30% to 70%
-- reduced perk "Gate Master" "Gating" skill bonus from 20% to 5%
-- reduced perk "Swift Gating" creature gating action ATB turn from 25% to 50%
-- improved perk "Hellfire" damage from 10 + 10 per Spellpower to 15 + 15 per Spellpower
-- improved perk "Hellfire" mana cost from 5 to 4
-- reduced perk "Lord of the Undead" resurrection bonus from 5% to 0%
-- added to perk "Lord of the Undead" bonus of 1 Knowledge
-- added to perk "Lord of the Undead" daily gold income of 0.5 per skeleton in hero army
-- added to perk "Lord of the Undead" weekly bonus Skeleton gain in hero army equal to Hero Knowledge
-- improved perk "Plague tent" power by 50% when it deals damage
-- reduced perk "Absolute Rage" rage points bonus from 500 to 160
-- changed "Battlefield Logistics" name to "Death March"
-- reduced "Battlefield Logistics/Death March" speed bonus from 4 to 3
-- improved perk "Tremors" "Earthquake" damage to creature behind walls from 10 + 5*Spellpower to 120 + 12*Spellpower
-- improved perk "Consume Artifact" ATB cost from 1 to 0.5 turns
-- improved perk "Mana Burst" damage per hero level from 10 to 30
-- improved perk "Corrupted Soil" damage per hero level from 3 to 10
-- changed perk "Elven Luck" name to "Critical hit"
-- reduced perk "Elven Luck/Critical hit" bonus damage from 25% to 10%
-- reduced perk "Fine Rune" proc chance from 50% to 40%
-- reduced perk "Tap Runes" mana regen per Knowledge from 0.5 to 0.33
-- removed perk "Runic Armour" from game
-- improved perk "Runic Armour" Spellpower bonus from 4 to 10
-- reduced perk "Mentoring" student experience alignment from 25% to 10%
-- reduced perk "Empathy" bonus/penalty ATB change from 10% to 5%
-- reduced perk "Empathy" ally morale by 2 if hero has "Shouting" skill
-- reduced perk "Preparation" no retaliation is present if Attacker has "No Enemy Retaliation" ability
-- changed perk "Powerful Blow" name to "Chain Attack"
-- (TEST OR CHECK WITH MAGNO) reduced perk "Powerful Blow/Chain Attack" critical hit chance from 10% to 1% 
-- improved perk "Stunning Blow" hit creature ATB drop from 10% to 25%
-- changed perk "Warpath" name to "Pillager"
-- reduced perk "Warpath/Pillager" bonus movement points from 250 to 100
-- removed perk "Luck of Barbarian" from gamess
-- improved perk "Luck of Barbarian" magic proof bonus per point of luck from 5% to 15%
-- changed perk "Defend Us All" bonus creature unit from Goblin to Warrior/Mauler/Warmonger
-- improved perk "Defend Us All" bonus army delivery from one time to once perk week
-- improved perk "Defend Us All" creature bonus formula from 2*number of Warrior/Mauler/Warmonger present in the army to 1
-- improved perks "Weaken Light/Dark/Summoning/Destruction and Light"  enemy spellpower reduction from 25% to 30% and 2 bonus Knowledge
-- improved perks "Detain Light/Dark/Summoning/Destruction" enemy ATB reduction from 25% to 30% and 2 bonus Spellpower
-- improved perks "Corrupt Light/Dark/Summoning/Destruction" with 10 Dragonblood Crystals
-- improved perk "Master of Lightning" target ATB drop from 30% to 40%
-- reduced perk "Magic Mirror" proc chance formula from 10% + hero_level*2% to 10% + hero_level*1%
-- improved perk "Master of Ice" target ATB drop from 30% to 40%
-- improved perk "Master of Fire" target ATB drop from 30% to 40%
-- (NOT IN PRODUCTION YET) improved perk "Imbue arrow" assigned spell can be canceled by closing the spell book in the imbue-arrow-spell-selection choice menu
+- "Banshee Howl" perk Morale and Luck reduction from 1 to 2
+- "Benediction/Prayer" perk Defense from 1 to 2
+- "Benediction/Prayer" perk usage ATB cost from 1 to 0.85 turns 
+- "Banshee howl" perk usage ATB cost from 1 to 0.85 turns
+- "Banish" perk usage ATB cost from 1 to 0.85 turns
+- "Banish" perk damage to elementals per hero level from 10 to 40
+- "Storm Wind" perk initiative reduction from 1 to 2
+- "Vitality" perk HP boost from 2 to 3
+- "Scouting" perk visible radius from 4 to 12 squares
+- "Avatar of death" perk mana drain after creature dies from max mana to 0
+- "Avatar of death" perk casting cost per hero level from 2 to 1 mana
+- "Excruiating Strike/Critical Strike" perk critical hit chance from 30% to 70%
+- "Hellfire" perk damage from 10 + 10 per Spellpower to 15 + 15 per Spellpower
+- "Hellfire" perk mana cost from 5 to 4
+- "Plague tent" perk power from 100 to 150% when it deals damage
+- "Tremors" perk "Earthquake" spell damage to creature behind walls from 10 + 5*Spellpower to 120 + 12*Spellpower
+- "Consume Artifact" perk usage ATB cost from 1 to 0.5 turns
+- "Mana Burst" perk damage per hero level from 10 to 30
+- "Corrupted Soil" perk damage per hero level from 3 to 10
+- "Stunning Blow" perk ATB drop from 10% to 25%
+- "Weaken Light" perk enemy spellpower reduction from 25% to 30% and 2 bonus Knowledge
+- "Weaken Dark" perk enemy spellpower reduction from 25% to 30% and 2 bonus Knowledge
+- "Weaken Summoning" perk enemy spellpower reduction from 25% to 30% and 2 bonus Knowledge
+- "Weaken Destruction" perk enemy spellpower reduction from 25% to 30% and 2 bonus Knowledge
+- "Detain Light" perk enemy ATB reduction from 25% to 30% and 2 bonus Spellpower
+- "Detain Dark" perk enemy ATB reduction from 25% to 30% and 2 bonus Spellpower
+- "Detain Summoning" perk enemy ATB reduction from 25% to 30% and 2 bonus Spellpower
+- "Detain Destruction" perk enemy ATB reduction from 25% to 30% and 2 bonus Spellpower
+- "Corrupt Light/Dark/Summoning/Destruction" perk grants hero 10 Dragonblood Crystals
+- "Corrupt Dark" perk grants hero 10 Dragonblood Crystals
+- "Corrupt Summoning" perk grants hero 10 Dragonblood Crystals
+- "Corrupt Destruction" perk grants hero 10 Dragonblood Crystals
+- "Master of Lightning" perk ATB drop from 30% to 40%
+- "Master of Ice" perk ATB drop from 30% to 40%
 
-Spells:
-- Reduced "Rune of Revive" resurrection from 40% to 30%
+SPELLS:
+
+New:
+- added "Advaned Town Portal" spell to "Adventure school". It allows selecting the town player wants to teleport to as long as requirements are met
+
+Fixes:
+- Empowered Armageddon not benefiting from "Master of Fire" and "Ignite" perks
+- Empowered Armageddon stone hitting central squares did not do additional damage as the spell description specifies
+
+Nerfs:
+- "Rune of Revive" resurrection from 40% to 30%
 - Stronghold "Talisman of Adventure" upgrade costs wood/ore/mercury/crystal/sulfur/gem/gold for levels:
 -- 1 from 3/3/0/0/0/0/1000 to 0/0/1/1/1/1/500 
 -- 2 from 2/2/2/2/2/2/1000 to 0/0/1/1/1/1/500
 -- 3 from 3/3/3/3/3/3/1500 to 5/5/2/2/2/2/1000 and increased hero level requirement from 15 to 20
 -- 4 from 4/4/4/4/4/4/1500 to 0/0/0/0/0/0/0 (because it grants "Advanced Town Portal spell which other factions get for free")
-- nerfed "Curse of the Netherworld" does not damage Stronghold creatures anymore
+- "Curse of the Netherworld" Stronghold creatures do not receive damage anymore
+- "Summon Hive" - Hive "Wasp Swarm" mastery from Expert to Advanced
+- "Deep Freeze" phyisical damage bonus per mastery level from 101%/103%/103%/103% + 1%/3%/3%/3%*Spellpower to 105%/110%/115%/120% + 1%*Spellpower
+- "Ralling Cry" morale bonus per hero level from 1 per 8 to 1 per 20
+- "Word of the Chief" ATB boost from 0.1 + 0.02*hero_level to 0.2 + 0.015*hero_level
+- "Battle Cry" attack bonus per level from 1 per 2 to 1 per 5
+- "Shout of Many" damage multiplier from 1 to 0.7
 
-- added "Advaned Town Portal" spell to "Adventure school". It allows selecting the town player wants to teleport to as long as requirements are met
-- reduced "Summon Hive" by changing hive "Wasp Swarm" mastery from Expert to Advanced
-- improved "Summon Hive" stats for None/Basic/Advanced/Expert masteries:
+Boosts:
+- "Summon Hive" stats for None/Basic/Advanced/Expert masteries:
 -- initiative from 2/5/5/10 + 0.25*Spellpower to 11/12/13/14 + 0.1*Spellpower 
 -- health from 10/25/50/100 + 0*Spellpower to 0 + 15/20/25/30*Spellpower 
-- improved "Blade Barrier" health for None/Basic/Advanced/Expert masteries from 20/40/60/96 + 5/8/10/12*Spellpower to 0 + 12/14/19/24*Spellpower 
-- reduced "Deep Freeze" phyisical damage bonus per mastery level from 101%/103%/103%/103% + 1%/3%/3%/3%*Spellpower to 105%/110%/115%/120% + 1%*Spellpower
-- reduced "Ralling Cry" morale bonus per hero level from 1 per 8 to 1 per 20
-- reduced "Word of the Chief" ATB boost from 0.1 + 0.02*hero_level to 0.2 + 0.015*hero_level
-- improved "Word of the Chief" Rage points boost from 30 to 60
-- reduced "Battle Cry" attack bonus per level from 1 per 2 to 1 per 5
-- reduced "Shout of Many" damage multiplier from 1 to 0.7
+- "Blade Barrier" health for None/Basic/Advanced/Expert masteries from 20/40/60/96 + 5/8/10/12*Spellpower to 0 + 12/14/19/24*Spellpower  
+- "Word of the Chief" Rage points boost from 30 to 60 
 
-Artifacts:
-- Stronger magic proof ability from artifacts reduced from 50% to 30% (fire, water, earth, lighting)
-- Weaker magic proof ability from artifacts reduced from 25% to 15% (fire, water, earth, lighting)
-- Artifacts magic boosting ability reduced from 50% to 30% (fire, water, earth, lighting)
-- Reduced "Amulet of Necromancy" "Necromancy" bonus from 10 to 5%
-- Improved "Amulet of Necromancy" HP raised to Dark points spent ratio from 10 to 20%
+ARTIFACTS:
 
-Town:
-- reduced "Altar of Primal Elements" elemental chains bonus from 10% to 5%
-- reduced "Necromany Amplifier" "Necromancy" resurrection bonus from 10% to 5%
-- improved "Necromany Amplifier" Dark energy bonus from 150 to 200
-- reduced "Tomb of the Lost" "Necromancy" resurrection bonus from 50% to 10%
-- improved "Tomb of the Lost" Dark energy bonus from 150 to 300
-- reduced "Infernal Loom" "Gating" bonus from 10% to 5%
-- access "Training Grounds" does not require "Training" skill anymore
-- improved creature training cost from 300% to 220% original creature cost
-- buildings cost has been altered to provide equal challenge and progression for all factions
-- decreased "Sacrificial Altar" gold to experience multiplier from 0.5 to 0.3
-- decreased "Marketplace" artifacts sold gold cost from 0.5 to 0.3 of purchase value.
-- improved heroes starting army tier 3 min/max unit count per stack from -0.6/0.4 to -0.1/0.4
-- reduced heroes starting army tier 1 min/max unit count per stack for heroes with Tier 1 specialization from min 1/1.5 to 1/1.2
-- reduced heroes starting army tier 1 stacks for heroes with Tier 1 specialization from 3 to 2
-- improved heroes starting army tier 2 min/max unit count per stack for heroes with Tier 2 specialization from min 0.6/0.8 to 0.7/0.8
-- reduced heroes starting army tier 2 stacks for heroes with Tier 2 specialization from 3 to 2
-- improved heroes starting army tier 3 min/max unit count per stack for heroes with Tier 3 specialization from min 0.5/0.7 to 0.6/0.7
-- reduced heroes starting army tier 3 stacks for heroes with Tier 3 specialization from 3 to 2
-- reduced "Slave Market" creature sell cost % of purchase cost reduced from 95% + 5% per Slave market to 45% + 5% per Save market.
+New:
 
-Artifact Sets:
-1. "Archer's Dream" - 2 pieces - removed from game
-2. "Armor of Dwarven Kings" - 4 pieces
+Fixes:
+
+Nerfs:
+- Stronger magic proof from artifacts from 50% to 30% (fire, water, earth, lighting)
+- Weaker magic proof from artifacts from 25% to 15% (fire, water, earth, lighting)
+- Spell boosting artifacts reduced from 50% to 30% (fire, water, earth, lighting)
+- "Amulet of Necromancy" "Necromancy" bonus from 10 to 5%
+
+Boosts:
+- "Amulet of Necromancy" HP raised to Dark points spent ratio from 10 to 20%
+
+TOWN VIEW:
+
+New:
+
+Nerfs:
+- "Altar of Primal Elements" elemental chains bonus from 10% to 5%
+- "Necromany Amplifier" "Necromancy" resurrection bonus from 10% to 5%
+- "Tomb of the Lost" "Necromancy" resurrection bonus from 50% to 10%
+- "Infernal Loom" "Gating" bonus from 10% to 5%
+-  "Marketplace" artifacts sold value from 0.5 to 0.3 of purchase cost.
+- "Tavern"
+-- heroes starting army tier 1 min/max unit count per stack for heroes with Tier 1 specialization from min 1/1.5 to 1/1.2
+-- heroes starting army tier 1 stacks for heroes with Tier 1 specialization from 3 to 2
+-- heroes starting army tier 2 stacks for heroes with Tier 2 specialization from 3 to 2
+-- heroes starting army tier 3 stacks for heroes with Tier 3 specialization from 3 to 2
+
+Boosts:
+- "Necromany Amplifier" Dark energy bonus from 150 to 200
+- "Tomb of the Lost" Dark energy bonus from 150 to 300
+- "Training Grounds" does not require "Training/Combat" skill anymore
+- "Training Grounds" creature training cost from 300% to 220% original creature cost
+- Faction town buildings cost has been altered to provide equal challenge and progression for all factions
+- "Tavern"
+-- heroes starting army tier 3 min/max unit count per stack from -0.6/0.4 to -0.1/0.4
+-- heroes starting army tier 2 min/max unit count per stack for heroes with Tier 2 specialization from min 0.6/0.8 to 0.7/0.8
+-- heroes starting army tier 3 min/max unit count per stack for heroes with Tier 3 specialization from min 0.5/0.7 to 0.6/0.7
+-- heroes starting army tier 3 min/max unit count per stack from -0.6/0.4 to -0.1/0.4
+- "Slave Market" creature sold value of original cost from 95% + 5% per Slave market owned to 45% + 5% per Save market owned.
+
+
+ARTIFACT SETS:
+
+New:
+"Tunic of the Prophet" - 4 pieces
+- Pieces - "Coif of the Prophet", "Robe of the Prophet", "Sandals of the Prohpet", "Silksword of the Prophet"
+- Set bonus
+-- For 4 items: +8 Knowledge
+
+"Garments of the Saint" - 5 pieces
+- Pieces - "Ring of Life", "Ankh of Life", "Sandals of the Saint", "Cloak of the Saint", "Staff of the Sanit"
+- Set bonus
+-- For 3 items: Artifact ressurection action mana cost is reduced by 2 mana
+
+"Armour of the Forgotten Hero" - 4 pieces
+- Pieces - "Curiass of the Forgotten Hero", "Helmet of the Forgotten Hero", "Boots of the Forgotten Hero", "Shield of the Forgotten Hero"
+- Set bonus
+-- For 4 items: +1 to primary skills, Luck and Morale
+
+"Cornucopia" - 6 pieces
+- Pieces - "Sacred seed", "Dwarven Pickaxe", "Magic Box of the Dragon Breeder", "Crystal Eyeball", "Circlet of Infinite Gems", "Endless Vial of Mercury"
+- Set bonus
+-- For 6 items: Delivering the full set to "Arcane Library" will grant the hero with "Cornucopia" ultimate artifact.
+
+"Regalia of the Legion" - 8 pieces
+- Pieces - "Golden Mascot of the Legion", "Decree of the Legion", "Register of the Legion", "Crest of the Legion", "War Drums of the Legion", "Horn of the Legion", "Mantle of the Legion", "Banner of the Legion"
+- Set bonus
+-- For 8 items: Delivering the full set to "Altar of Sacrifice" will grant hero random high tier prize
+
+Removed:
+"Archer's Dream" - 2 pieces
+"Runeforce" - 2 pieces
+"Weapons of Might" - 2 pieces
+"Will of Urgash" - 2 pieces
+
+Changed:
+"Armor of Dwarven Kings" - 4 pieces
 - set bonuses removed: 
 -- For 2 items: +40% Magic Proof capacity to all the creatures in the Hero's army for 2 set pieces
 -- For 4 items: Casts "Endurance" and "Deflect Missile" spells at the expert level to all friendly creatures at the start of combat for 4 set pieces
 -- For 2 items (Runemage class only): Increases Runemage's Spellpower by +10%
 - set bonuses added:
 -- For 4 items: +8 Defense
-3. "Death's Embrace" - from 4 to 6 pieces - added "Necromancer's Helm" and "Skull of the Netherworld"
+
+"Death's Embrace" - from 4 to 6 pieces - added "Necromancer's Helm" and "Skull of the Netherworld"
 - set bonuses removed:
 -- For 2 items: Decreases speed of all enemy creatures by -1.
 -- For 4 items: Enemy creatures that fail the morale check get a -20% penalty to their Attack and Defense until the start of next turn.
@@ -161,13 +246,15 @@ Artifact Sets:
 - set bonuses added:
 -- For 3 items: +6 Spellpower
 -- For 6 items: +6 Spellpower for the total of 12.
-4. "Lion's Spirit" - 3 pieces
+
+"Lion's Spirit" - 3 pieces
 - set bonuses removed:
 -- For 3 items: Each time a positive Morale effect is triggered with any of the creatures in the hero's army, the hero moves 10 percent forward along the ATB bar. (If the Morale effect is negative, the hero is moved backwards).
 -- For 2 items (Knight class only): Knight's attacks (including Retaliation Strike) decrease enemy morale by -2.
 - set bonuses added:
 -- For 3 pieces: +6 Attack
-5. "Power of Dragons" - 8 pieces
+
+"Power of Dragons" - 8 pieces
 - set bonuses removed:
 -- For 2 items: Adds +1 to all hero's parameters.
 -- For 4 items: Provides a bonus of +5 Attack and Defense to all tier 7 creatures in hero's army, also increasing their hit points by +20.
@@ -176,43 +263,22 @@ Artifact Sets:
 - set bonuses added:
 -- For 2 items:  +2 to all primary skills
 -- For 4 items:  +2 to all primary skills for the total of 4.
-6. "Runeforce" - 2 pieces - removed from game
-7. "Sar-Issus Regalia" - 4 pieces
+
+"Sar-Issus Regalia" - 4 pieces
 - set bonuses removed:
 -- For 4 items: Hero moves backward along the ATB bar 10% less than usual while casting any spell.
 -- For 2 items (Wizard class only): Wizard moves backward along the ATB bar 10% less than usual while casting any spell.
 - set bonuses added:
 -- For 4 items: +4 Spellpower
-8. "Vestment of Enlightenment" - 2 pieces
+
+"Vestment of Enlightenment" - 2 pieces
 - set bonuses removed:
 -- For 2 items: Increases the amount of experience gained by the Hero by +15%
 - set bonuses added:
 -- For 2 items: The hero receives an amount of experience every day equal to amount of days passed * 10.
-9. "Weapons of Might" - 2 pieces - removed from game
-10. "Will of Urgash" - 2 pieces - removed from game
-11. "Tunic of the Prophet" - 4 pieces - added to the game
-- Pieces - "Coif of the Prophet", "Robe of the Prophet", "Sandals of the Prohpet", "Silksword of the Prophet"
-- Set bonus
--- For 4 items: +8 Knowledge
-12. "Garments of the Saint" - 5 pieces - added to the game
-- Pieces - "Ring of Life", "Ankh of Life", "Sandals of the Saint", "Cloak of the Saint", "Staff of the Sanit"
-- Set bonus
--- For 3 items: Artifact ressurection action mana cost is reduced by 2 mana
-13. "Armour of the Forgotten Hero" - 4 pieces - added to the game
-- Pieces - "Curiass of the Forgotten Hero", "Helmet of the Forgotten Hero", "Boots of the Forgotten Hero", "Shield of the Forgotten Hero"
-- Set bonus
--- For 4 items: +1 to primary skills, Luck and Morale
-14. "Cornucopia" - 6 pieces - added to the game
-- Pieces - "Sacred seed", "Dwarven Pickaxe", "Magic Box of the Dragon Breeder", "Crystal Eyeball", "Circlet of Infinite Gems", "Endless Vial of Mercury"
-- Set bonus
--- For 6 items: Delivering the full set to "Arcane Library" will grant the hero with "Cornucopia" ultimate artifact.
-15. "Regalia of the Legion" - 8 pieces - added to the game
-- Pieces - "Golden Mascot of the Legion", "Decree of the Legion", "Register of the Legion", "Crest of the Legion", "War Drums of the Legion", "Horn of the Legion", "Mantle of the Legion", "Banner of the Legion"
-- Set bonus
--- For 8 items: Delivering the full set to "Altar of Sacrifice" will grant hero random high tier prize
 
 
-Combat view:
+COMBAT VIEW:
 - reduced Attack and Defense stat bonuses from 5% to 2.5%
 - reduced Defense stat maximum creature damage reduction from 10% to 25%. (capped at 30 DvsA difference)
 - reduced Attack stat maximum creature damage amplification from from 200% to 300%. (capped at 120 AvsD differece)
@@ -233,13 +299,13 @@ Combat view:
 -- increased battlefield size from 12x10 to 14x14
 -- increased free-of-obstacles horizontal lines from 2 to 6
 
-
 User experience:
 - hero inventory left/right buttons skip 5 artifacts at once instead of 1.
-- town marketplace hero inventory view requires double instead of single click for artifacts to be selected for sale.
+- town marketplace hero inventory view requires double click instead of single click for artifacts to be selected for sale.
 - Hero view tabs "Skills" and "Biography" are now combined into one.
 - Massively expanded descriptions of game elements (skills, perks, spells, specializations, abilities, adventure map sites, town buildings and many more) to include formulas and/or peculiarities present in game mechanics
 - changed creature split feature to create 2 stacks with sizes N-1 and 1 instead of N/2 and N/2
+
 
 Lobby:
 - Human player starting resources for difficulties Easy/Normal/Hard/Heroic:
@@ -259,13 +325,14 @@ Adventure map:
 -- Creature stack spawn multiplier per difficulty from 0.5/1.0/1.12/1.4 to 1.0/1.1/1.2/1.3
 -- Neutral stacks weekly growth multiplier per difficulty from 1.05/1.09/1.1/1.11 to 1.11/1.12/1.13/1.14 
 -- Hero experience multiplier per difficulty from 2.0/1.0/1.0/1.0 to 1.0/0.92/0.85/0.79
-
+- decreased "Sacrificial Altar" gold to experience multiplier from 0.5 to 0.3
 
 
 
 
 
 Creature abilities:
+- nerfed "Gating" ability use ATB cost from 50% to 75%
 - improved "Precise Shot" range from 3 to 4
 - reduced "Jousting" bonus damage per square from 5% to 3.33%
 - reduced "Mana Stealer" mana points stolen per weekly population from 4 to 2
