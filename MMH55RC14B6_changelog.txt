@@ -35,6 +35,10 @@ Removed:
 Fixed:
 - "Training/Combat" skill is not required for heroes to train creatures at "Training Grounds" building.
 - (NOT IN PRODUCTION YET) "Imbue arrow" perk assigned spell can be canceled by closing the spell book in the imbue-arrow-spell-selection choice menu
+- "Imbue Balista" Ballista imbued shots does not exhaust hero ATB anymore
+- "Master of Life/Master of Ruin" perk now affects "Empowered Fist of Wrath" spell
+- "Offensive formation" attack bonus apply to all units (previosly Dwarves only)
+- "Defensive formation" defense bonus apply to all units (previosly Dwarves only)
 
 Changed:
 - there are no longer racial skills
@@ -49,6 +53,10 @@ Changed:
 - "Elven Luck" perk name is now "Critical hit"
 - "Powerful Blow" perk name is now "Chain Attack"
 - "Warpath" perk name is now "Pillager"
+- "Master of Life" perk redesign
+-- name is now "Master of Ruin"
+-- removed Spellpower bonus to "Raise Dead"
+-- added Spellpower bonus to "Firewall" spell
 - "Lord of the Undead" perk redesign
 -- resurrection from 5% to 0%
 -- added bonus of 1 Knowledge
@@ -68,10 +76,12 @@ Nerfed:
 - "Defense" skill damage reduction per mastery level from 10%/20%/30% to 10%/15%/20%
 - "Blood Rage" skill damange absorbtion per mastery level from 50%/55%/60%/65% to 20%/25%/30%/30%
 - "Blood Rage" skill Rage-Points-lost-per-damage-taken multiplier from 1200 to 2400
+- "Enlightenment" skill primary stats bonus per mastery from 1 per 4/3/2 hero levels to 1 per 6/5/4 hero levels
+
 - "Banshee Howl" perk duration from 2 + 0.25*hero_level to 2 + 0.1*hero_level
 - "Benediction/Prayer" perk duration from 2 + 0.25*hero_level to 2 + 0.1*hero_level
 - "Consume Corpse/Drain Soul" perk mana restored from the drained corpse from 1/25 HP to SQRT(1/25)/4 mana of the drained corpse
-- "Mark of the Necromancer/Spirit Link" mana gain from 1 per 75 damage to 1 per 120 damage
+- "Mark of the Necromancer/Spirit Link" perk mana gain from 1 per 75 damage to 1 per 120 damage
 - "Retribution" perk damage per morale from 5% to 2%
 - "Intelligence" mana multiplier from 50% to 40%
 - "Gate Master" perk Gating bonus from 20% to 5%
@@ -90,6 +100,7 @@ Nerfed:
 - "Magic Mirror" perk proc chance from 10% + hero_level*2% to 10% + hero_level*1%
 
 Buffed:
+- "War Machines" skill "First Aid Tent" healing power per mastery changed from flat 10/20/50/100 to 10 + (5/6/8/10)*hero_level
 - "Training/Combat" skill retaliation bonus damage per mastery from 5%/10%/20%/25% to 15%/30%/45%/45%
 - "Gating" skill gated stack starting ATB turn from 0 to 75%
 - "Necromancy" skill starting dark energy from 200 to 300
@@ -134,6 +145,8 @@ Buffed:
 - "Corrupt Destruction" perk grants hero 10 Dragonblood Crystals
 - "Master of Lightning" perk ATB drop from 30% to 40%
 - "Master of Ice" perk ATB drop from 30% to 40%
+- "Counterspell" perk mana drain from 2 to 1.5 times of ressited spell cost
+- "Flaming Arrows" perk damage from 50 to 2*hero_level
 
 SPELLS:
 
@@ -162,6 +175,9 @@ Nerfed:
 - "Word of the Chief" ATB boost from 0.1 + 0.02*hero_level to 0.2 + 0.015*hero_level
 - "Battle Cry" attack bonus per level from 1 per 2 to 1 per 5
 - "Shout of Many" damage multiplier from 1 to 0.7
+- "Frenzy" duration at Expert level nerfed from 2 to 1 turns.
+- "Mass Suffering", "Mass Slow", "Mass Vulnerability", "Mass Plague", "Mass Weakness", "Mass Forgetfullness", "Mass Divine Strength", "Mass Haste", "Mass Endurance", "Mass Cleansing", "Mass Righteous Might", "Mass Deflect Missile" ATB casting cost from 0.5 to 0.85 turns
+- "Mass Suffering", "Mass Slow", "Mass Vulnerability", "Mass Plague", "Mass Weakness", "Mass Forgetfullness", "Mass Divine Strength", "Mass Haste", "Mass Endurance", "Mass Righteous Might", "Mass Deflect Missile" mana casting cost multiplier from 2 to 4
 
 Buffed:
 - "Summon Hive" stats for None/Basic/Advanced/Expert masteries:
@@ -169,6 +185,7 @@ Buffed:
 -- health from 10/25/50/100 + 0*Spellpower to 0 + 15/20/25/30*Spellpower 
 - "Blade Barrier" health for None/Basic/Advanced/Expert masteries from 20/40/60/96 + 5/8/10/12*Spellpower to 0 + 12/14/19/24*Spellpower  
 - "Word of the Chief" Rage points boost from 30 to 60 
+
 
 ARTIFACTS:
 
@@ -185,6 +202,7 @@ Nerfed:
 - "Amulet of Necromancy" "Necromancy" bonus from 10 to 5%
 
 Buffed:
+- Game artifact count incrased from 96 to 127
 - "Amulet of Necromancy" HP raised to Dark points spent ratio from 10 to 20%
 
 TOWN VIEW:
@@ -197,6 +215,7 @@ Fixed:
 
 Changed:
 - "Marketplace" hero inventory view requires double click instead of single click for artifacts to be selected for sale.
+- Tower damage calculation changed from damage = tower_damage * (town_level/max_town_level) to damage = tower_damage * (  town_level/max_town_level * 0.5 + town_level*town_level/(max_town_level*max_town_level) * 0.5  )
 
 Nerfed:
 - "Altar of Primal Elements" elemental chains bonus from 10% to 5%
@@ -213,7 +232,7 @@ Nerfed:
 Buffed:
 - "Necromany Amplifier" Dark energy bonus from 150 to 200
 - "Tomb of the Lost" Dark energy bonus from 150 to 300
-- "Training Grounds" does not require "Training/Combat" skill anymore
+- "Training Grounds" does not require "Training/Combat" skill or hero to be "Knight" class anymore
 - "Training Grounds" creature training cost from 300% to 220% original creature cost
 - Factions building cost has been altered to provide equal challenge and progression for all factions
 - "Tavern"
@@ -222,7 +241,8 @@ Buffed:
 -- heroes starting army tier 3 min/max unit count per stack for heroes with Tier 3 specialization from min 0.5/0.7 to 0.6/0.7
 -- heroes starting army tier 3 min/max unit count per stack from -0.6/0.4 to -0.1/0.4
 - "Slave Market" creature sold value of original cost from 95% + 5% per Slave market owned to 45% + 5% per Save market owned.
-
+-  Main tower damage from 70 to 200 for full developed city
+-  Side tower damage from 50 to 140 for full developed city
 
 ARTIFACT SETS:
 
@@ -330,6 +350,8 @@ Changed:
 -- maximum area squares covered by obstacles from 21 to 32
 -- increased battlefield size from 12x10 to 14x14
 -- increased free-of-obstacles horizontal lines from 2 to 6
+- starting combat creature and hero ATB randomization range from 0-0.25 to 0-0.10
+
 
 Nerfed:
 - Attack bonus from 5% to 2.5%
@@ -338,6 +360,7 @@ Nerfed:
 - Attack stat maximum creature damage amplification from from 200% to 300%. (capped at 120 AvsD differece)
 - "Luck" good luck damage multiplier from 2 to 1.67
 - "Morale" good morale initiative multiplier from 0.5 to 0.4
+- "First Aid Tent" healing shots from 10 to 3
 
 Buffed:
 - "Luck" bad luck damage multiplier from 0.5 to 0.6
@@ -509,16 +532,14 @@ New:
 
 Removed:
 - "Banshee" multiplier from 2 to 1.5.
-- "Shadow Dancer" range damage reduction per hero level from 2% to 1%
 - "Blood Drinker" reduced bonus Attack per hero level from 1 per 6 to 1 per 9	
 - "BorderGuard"
 - "Warchief" mana reduction per hero level from 1 per 4 to 1 per 20
 
 Fixed:
-
+- "Fire Wielder" specialization now affects "Empowered Fireball"
 
 Changed:
-
 
 Nerfed:
 - "Gatekeeper" "Gating" bonus per hero level from 1% to 0.33% 
@@ -538,6 +559,8 @@ Nerfed:
 - "Sacred Hammer" cast chance from 20% + 3%*hero_level to 15% + 1%*hero_level
 - "Rune Artist" chance from 20% + 1%*hero_level to 1% + 1%*hero_level
 - "Tracker" movement points per level from 1% to 0.33%
+- "Shadow Dancer" range damage reduction per hero level from 2% to 1%
+- "Protector" dwarves hp bonus from 1 HP per 5 hero levels to 1 HP per 10 hero levels
 
 Buffed:
 - "Suzerain" training cost discount from 1% per 3 hero levels to 2% per hero level.
@@ -548,6 +571,9 @@ Buffed:
 - "Disruptor" bonus damage from 10 + 10*hero_level/3 to 30 + 30*hero_level/2
 - "Tracker" added Wolf Summmoning feat
 - "Wyvern Tamer" base HP from 1 to 2.
+- "Coven Mistress" salvo chance from 10% + 2%*hero_level to 30% + 1%*hero_level
+- "Coven Mistress" salvo chance can trigger on non-damaging single target spells
+- "Coven Mistress" salvo chance can trigger on AOE damaging spells targeting the creature under the cursor (but not mass damage spells like Armageddon)
 
 AI CHANGES FOR DIFFICULTIES EASY/NORMAL/HARD/HEROIC:
 - Max level spells AI is allowed to cast from 3/3/5/5 to 5/5/5/5
