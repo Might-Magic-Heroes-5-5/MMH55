@@ -3,7 +3,7 @@ MMH55 changes:
 HEROES:
 New:
 - 3 hero classes per faction, each class has unique primary and secondary skill gain
-- New hero pictures
+- Hero count per faction is now 18 for a total of 144
 
 Removed:
 - ToE hero classes were scrapped
@@ -53,6 +53,7 @@ Changed:
 - "Elven Luck" perk name is now "Critical hit"
 - "Powerful Blow" perk name is now "Chain Attack"
 - "Warpath" perk name is now "Pillager"
+- "Magic Insight" perk name is now "Arcane Omniscience"
 - "Master of Life" perk redesign
 -- name is now "Master of Ruin"
 -- removed Spellpower bonus to "Raise Dead"
@@ -190,20 +191,102 @@ Buffed:
 ARTIFACTS:
 
 New:
+- "Steadfast Shield" - Minor, left hand - 4 Defense, -1 Attack
+- "Dwarven Shield" - Minor, left hand - 3 Defense
+
+- "Shield of the Forgotten Hero" - Relic, left hand - 8 Defense
+- "Helmet of the Forgotten Hero" - Relic, head - 2 to all primary skills
+
+
+- "Silksword of the Prohpet" - Major, left hand - 3 Attack, hero recovers 8 mana after battle
+- "Coif of the Prohpet" - Minor, head - Regenerates 6 mana per day
+- "Robe of the Prohpet" - Major, chest - 1 Spellpower, 1 Knowledge, regenerates 4 mana per day
+
+- "Staff of the Saint" - Relic, main hand - Resurrects 30% + 1%*Knowledge Tier 5 living creatures after combat for 14 mana
+- "Ankh of Life" - Minor, Amulet - Resurrects 30% + 1%*Knowledge Tier 2 living creatures after combat for 8 mana
+
+- "Angelic Alliance" - Ultimate, main hand - 12 Attack , 20% Initiative
+- "Archmage Codex" - Ultimate, pocket - 12 Knowledge, Each week Phoenix is summoned in each hero town
+- "Shield of the Sentinel" - Ultimate, left hand - 12 Defense, Ressurects 30% + 1%*Knowledge Tier 6 living creatures after combat for 6 mana
+- "Staff of Asha's Eightfold" - Ultimate, main hand - 12 Spellpower, 10 mana regeneration per day
+- "Cuirass of the Dragon Gods" - Ultimate, chest - 6 to all skills
+- "Cornucopia" - Ultimate, inventory - hero receives random resouce every day equal to Knowledge/2 (if gold formula is (Knowledge/2)*1000
+
 
 Removed:
+- "Mask of Equity" ??
 
 Fixed:
 
+Changed:
+- "Unicorn Horn Bow" slot from main hand to left Hand
+- "Wand of X" slot from main hand to pocket
+- "Book Of Power" slot from left hand to pocket
+- "Magic Scroll of X" slot from left hand to pocket
+- "Tome of Dark Magic" slot from left hand to pocket
+- "Tome of Destruction Magic" slot from left hand to pocket
+- "Tome of Light Magic" slot from left hand to pocket
+- "Tome of Summoning Magic" slot from left hand to pocket
+- "Armor of the Forgotten Hero" name to "Cuirass of the Forgotten Hero"
+- "Pendant of Mastery" redesign:
+-- does not grant bonus hero mastery level in faction secondary skill
+-- Spellpower bonus
+--- 4 for heroes below level 30
+--- 4 for heroes of level 30+ (total of 8)
+--- 4 for heroes of level 40+ (total of 12)
+--- Warlock class does no get bonus Spellpower
+--- Gatekeeper class does no get bonus Spellpower
+-- Warlock class "Occultism" skill get 1 mastery level if already at Expert it grants 25% more spell damage to otherwise resistant creatures
+-- Gatekeeper class "Gating" skill get 1 mastery level if already at Expert Gating is 5% more potent and allows gating of Devils
+
 Nerfed:
+
 - Stronger magic proof from artifacts from 50% to 30% (fire, water, earth, lighting)
 - Weaker magic proof from artifacts from 25% to 15% (fire, water, earth, lighting)
-- Spell boosting artifacts reduced from 50% to 30% (fire, water, earth, lighting)
-- "Amulet of Necromancy" "Necromancy" bonus from 10 to 5%
+- "Trident of the Titans" lighting spells enhancement from 50% to 30%
+- "Staff of the Netherworld" grants -2 Morale to allied army
+- "Dragon Flame Tongue" cold protection from 50% to 40%
+- "Dwarven Smithy Hammer" Attack from 3 to 2
+- "Dwarven Smithy Hammer" fire protection from 25% to 20%
+- "Shield of Crystal Ice" fire protection from 50% to 40%
+- "Helm of the Dwarven Kings" Knowledge from 4 to 3
+- "Cuirass of the Dwarven Kings" Defense from 4 to 3
+- "Dragon Scale Armor" Attack from 3 to 2
+- "Evercold Icicle" cold spells ehancement from 50% to 30%
 
 Buffed:
-- Game artifact count incrased from 96 to 127
+- Game artifact count incrased by 34 (up to 127)
+- "Axe of Mountain Lords" Attack from 4 to 6
+- "Beginner's Magic Wand" Spellpower from 2 to 3
+- "Dragon Flame Tongue" Attack from 2 to 4
+- "Edge of Balance" Attack/Defense bonus from 3 to 4
+- "Ogre Club" Attack from 5 to 7
+- "Runic War Axe" Attack from 2 to 3
+- "Runic War Axe" Spellpower from 2 to 3
+- "Sword of Might" Attack from 2 to 3
+- "Wand of X" Spellpower from 0 to 2
+- "Dragon Scale Shield" Defense from 3 to 4
+- "Magic Scroll of X" Knowledge from 0 to 2
+- "Moonblade" Attack from 3 to 5
+- "Ogre Shield" Defense from 5 to 7
+- "Shield of the Dwarven Kings" Defense from 4 to 6
+- "All-Seeing Crown" Spellpower from 0 to 1
+- "Crown of Leadership" doubles effect of recruitment ability of active Regalia artifact on the hero
+- "Dragon Talon Crown" Knowledge from 3 to 4
+- "Helm Of Chaos" Knowledge from 3 to 5
+- "Helm of the Dwarven Kings" Defense from 0 to 3
+- "Turban of Enlightenment" Knowledge from 0 to 3
+- "Cuirass of the Dwarven Kings" Attack from 0 to 3
+- "Dragon Scale Armor" Defense from 0 to 2
+- "Runic War Harness" Defense from 2 to 3
+- "Runic War Harness" Knowledge from 2 to 3
+- "Scale Mail of Enlightenment" Spellpower from 0 to 3
+- "Tunic of the Carved Flesh" Spellpower from 3 to 5
 - "Amulet of Necromancy" HP raised to Dark points spent ratio from 10 to 20%
+- "Amulet of Necromancy" "Necromancy" resurrection bonus from 0% to 5%
+- "Dragon Teeth Necklace" Spellpower from 3 to 4
+- "Pendant of Conflux" boosts creature summoning in all Magic Guilds by hero Knowledge/2 Dragonblood crystals
+
 
 TOWN VIEW:
 
@@ -255,7 +338,7 @@ New:
 "Garments of the Saint" - 5 pieces
 - Pieces - "Ring of Life", "Ankh of Life", "Sandals of the Saint", "Cloak of the Saint", "Staff of the Sanit"
 - Set bonus
--- For 3 items: Artifact ressurection action mana cost is reduced by 2 mana
+-- For 3 items: Artifact resurrection action mana cost is reduced by 2 mana
 
 "Armour of the Forgotten Hero" - 4 pieces
 - Pieces - "Curiass of the Forgotten Hero", "Helmet of the Forgotten Hero", "Boots of the Forgotten Hero", "Shield of the Forgotten Hero"
@@ -386,6 +469,20 @@ Lobby:
 
 ADVENTURE MAP VIEW:
 New:
+- ARMG places 28 new artifacts + 6 new ultimate items obtainable by quests.
+- ARMG places ~30 more adventure map objects and an additional 480 (for a total of 720) random mixed neutral templates. The object and army variation will be much greater than H5 maps currently in existance
+- ARMG can balance player starting areas much better (only differences in adventure objects that have minor impact on the game such as morale boosters remain)
+- In addition to towns, dwellings and mines, Witch huts can now be placed exactly symmetrical, Shrine and primary skill boosters are precisely valued
+- ARMG can distinguish between early, mid and late game areas and properly adjust challenges and rewards to the player
+- ARMG can generate maps with size up to XXXL 320x320 with underground
+- ARMG places all the objects missing in the original RMG except the swan pond. The Dwarven Warren functions as a windmill and the windmill as a waterwheel (this only applies to RMG maps, not human made maps)
+- ARMG does not randomly swap between valuable adv objects like artifact merchant and weak adv objects like war machine factory
+- All new objects are placed with respect to blocked and active tiles and many more objects are guarded
+- Objects are not placed completely random, but only in areas where they are useful and don't ruin the balance
+- ARMG places seer huts with random generated quests. The seer huts know which artifacts the RMG has a tendency to duplicate and therefore collecting more then one is rewarded. This will turn duplicate artifact placements in a fun feature
+- 2 new battlemaps for the Dwarven scenery and 3 battle maps will have random obstacles
+- new landscape themes for almost all factions and all tiles use better quality DXT3 textures and/or new HD textures
+- new manual found heroes V game folder for the Advanced RMG will provide visualizations of the zoning schemes for all new templates
 
 Removed:
 
@@ -404,6 +501,10 @@ Nerfed:
 - "Sacrificial Altar" gold to experience multiplier from 0.5 to 0.3
 
 Buffed:
+- Improved Dungeon underground, better atmospherical lightning.
+- The ARMG has improved Dwarven underground scenery, you no longer walk through a gigantic overly bright field of torches, the new lightning is more 'fiery' and the structure more ‘classic RPG’ maze like with more columns, lava roads and new interactive adventure objects such as mineshafts and abandoned rail wagons.
+- ARMG has greatly improvement artifact/monster placement. Unlike the old RMG the ARMG does not sometimes fill complete areas with the same useless (sack of endless gold) artifact. Late game areas have better artifacts and stronger monsters
+- ARMG can handle a much higher object density and can place if necessary objects closer to towns
 
 
 CREATURE ABILITIES:
