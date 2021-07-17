@@ -4,6 +4,12 @@ HEROES:
 New:
 - 3 hero classes per faction, each class has unique primary and secondary skill gain
 - Hero count per faction is now 18 for a total of 144
+- added "Town Governor" feature
+--
+--
+--
+--
+--
 
 Removed:
 - ToE hero classes were scrapped
@@ -61,7 +67,7 @@ Changed:
 - "Lord of the Undead" perk redesign
 -- resurrection from 5% to 0%
 -- added bonus of 1 Knowledge
--- daily gold income of 0.5 per skeleton in hero army
+-- daily Gold income of 0.5 per skeleton in hero army
 -- weekly bonus Skeleton gain in hero army equal to Hero Knowledge
 - "Defend Us All" perk redesign
 -- creature from Goblin to Warrior/Mauler/Warmonger
@@ -161,10 +167,10 @@ Fixed:
 - Empowered Armageddon stone hitting central squares did not do additional damage as the spell description specifies
 
 Changed:
-
+ 
 Nerfed:
 - "Rune of Revive" resurrection from 40% to 30%
-- Stronghold "Talisman of Adventure" upgrade costs wood/ore/mercury/crystal/sulfur/gem/gold for levels:
+- Stronghold "Talisman of Adventure" upgrade costs wood/ore/mercury/crystal/sulfur/gem/Gold for levels:
 -- 1 from 3/3/0/0/0/0/1000 to 0/0/1/1/1/1/500 
 -- 2 from 2/2/2/2/2/2/1000 to 0/0/1/1/1/1/500
 -- 3 from 3/3/3/3/3/3/1500 to 5/5/2/2/2/2/1000 and increased hero level requirement from 15 to 20
@@ -193,28 +199,45 @@ ARTIFACTS:
 New:
 - "Steadfast Shield" - Minor, left hand - 4 Defense, -1 Attack
 - "Dwarven Shield" - Minor, left hand - 3 Defense
-
+- "Ring of Shadowbrand" - Major, finger - 4 Spellpower
+- "Royal Heirloom" - Item has no magical properties but can be sold for significant amount of Gold or sacrificed for huge amount of experience
+- "Sacred Seed" - Minor, inventory - Every week hero receives 1000 Gold and Knowledge/2 Wood
+- "Dwarven Pickaxe" - Minor, inventory - Every week hero receives 1000 Gold and Knowledge/2 Ore
+- "Magic Box of the Dragon Breeder" - Minor, inventory - Every week hero receives 1000 Gold and Knowledge/2 Sulphur
+- "Crystal Eyeball" - Minor, inventory - Every week hero receives 1000 Gold and Knowledge/2 Crystals
+- "Circlet of Infinite Gems" - Minor, inventory - Every week hero receives 1000 Gold and Knowledge/2 Gems
+- "Endless Vial of Mercury" - Minor, inventory - Every week hero receives 1000 Gold and Knowledge/2 Mercury
+- "Golden Mascot of the Legion" - Major, inventory - Hero receices 75*Knowledge Gold per day.
+- "Decree of the Legion" - Minor, inventory - At the start of every week the hero army will be reinforced by Knowledge amount of native Tier 1 creatures. The hero needs to have some of this creatures in his army.
+- "Register of the Legion" - Minor, inventory - At the start of every week the hero army will be reinforced by Knowledge/1.5 amount of native Tier 2 creatures. The hero needs to have some of this creatures in his army.
+- "Crest of the Legion" - Major, inventory - At the start of every week the hero army will be reinforced by Knowledge/2 amount of native Tier 3 creatures. The hero needs to have some of this creatures in his army.
+- "War Drums of the Legion" - Major, inventory - At the start of every week the hero army will be reinforced by Knowledge/3 amount of native Tier 4 creatures. The hero needs to have some of this creatures in his army.
+- "Horn of the Legion" - Major, inventory - At the start of every week the hero army will be reinforced by Knowledge/4 amount of native Tier 5 creatures. The hero needs to have some of this creatures in his army.
+- "Mantle of the Legion" - Relic, inventory - At the start of every week the hero army will be reinforced by Knowledge/6 amount of native Tier 6 creatures. The hero needs to have some of this creatures in his army.
+- "Banner of the Legion" - Relic, inventory - At the start of every week the hero army will be reinforced by Knowledge/12 amount of native Tier 7 creatures. The hero needs to have some of this creatures in his army.
 - "Shield of the Forgotten Hero" - Relic, left hand - 8 Defense
-- "Helmet of the Forgotten Hero" - Relic, head - 2 to all primary skills
-
-
+- "Helmet of the Forgotten Hero" - Relic, head - 2 to all primary stats
+- "Boots of the Forgotten Hero" - Relic, feet - 1 to all primary skills, 1 Morale, 1 Luck
 - "Silksword of the Prohpet" - Major, left hand - 3 Attack, hero recovers 8 mana after battle
 - "Coif of the Prohpet" - Minor, head - Regenerates 6 mana per day
 - "Robe of the Prohpet" - Major, chest - 1 Spellpower, 1 Knowledge, regenerates 4 mana per day
-
+- "Sandals of the Prophet" - Minor, feet - Once per day the hero gains 250 movement points after a battle
+- "Ring of Life" - Minor, finger - Resurrects 30% + 1%*Knowledge Tier 1 living creatures after combat for 6 mana
+- "Ankh of Life" - Minor, amulet - Resurrects 30% + 1%*Knowledge Tier 2 living creatures after combat for 8 mana
+- "Cloak of the Saint" - Major, shoulders - Resurrects 30% + 1%*Knowledge Tier 3 living creatures after combat for 10 mana
+- "Sandals of the Saint" - Major, feet - Resurrects 30% + 1%*Knowledge Tier 4 living creatures after combat for 12 mana
 - "Staff of the Saint" - Relic, main hand - Resurrects 30% + 1%*Knowledge Tier 5 living creatures after combat for 14 mana
-- "Ankh of Life" - Minor, Amulet - Resurrects 30% + 1%*Knowledge Tier 2 living creatures after combat for 8 mana
-
 - "Angelic Alliance" - Ultimate, main hand - 12 Attack , 20% Initiative
 - "Archmage Codex" - Ultimate, pocket - 12 Knowledge, Each week Phoenix is summoned in each hero town
 - "Shield of the Sentinel" - Ultimate, left hand - 12 Defense, Ressurects 30% + 1%*Knowledge Tier 6 living creatures after combat for 6 mana
 - "Staff of Asha's Eightfold" - Ultimate, main hand - 12 Spellpower, 10 mana regeneration per day
-- "Cuirass of the Dragon Gods" - Ultimate, chest - 6 to all skills
-- "Cornucopia" - Ultimate, inventory - hero receives random resouce every day equal to Knowledge/2 (if gold formula is (Knowledge/2)*1000
-
+- "Cuirass of the Dragon Gods" - Ultimate, chest - 6 to all primary skills
 
 Removed:
 - "Mask of Equity" ??
+- "Ring of Speed" - 20% Initiative
+- "Sandals of the Blessed" - 1 to all primary skills
+- "Sack of Endless Gold" - 250 Gold per day
 
 Fixed:
 
@@ -238,6 +261,14 @@ Changed:
 --- Gatekeeper class does no get bonus Spellpower
 -- Warlock class "Occultism" skill get 1 mastery level if already at Expert it grants 25% more spell damage to otherwise resistant creatures
 -- Gatekeeper class "Gating" skill get 1 mastery level if already at Expert Gating is 5% more potent and allows gating of Devils
+- "Bag of Endless Gold" redesign:
+-- slot from shoulders to inventory
+-- Gold per day from 1000 to Knowledge*50
+- "Horn of Plenty" redesign:
+-- name is now "Cornucopia"
+-- Rarity from Major to Ultimate
+-- slot from pocket to inventory
+-- hero receives random resouce every day equal to Knowledge/2 (if Gold formula is (Knowledge/2)*1000
 
 Nerfed:
 
@@ -245,14 +276,26 @@ Nerfed:
 - Weaker magic proof from artifacts from 25% to 15% (fire, water, earth, lighting)
 - "Trident of the Titans" lighting spells enhancement from 50% to 30%
 - "Staff of the Netherworld" grants -2 Morale to allied army
-- "Dragon Flame Tongue" cold protection from 50% to 40%
+- "Dragon Flame Tongue" cold spells protection from 50% to 40%
 - "Dwarven Smithy Hammer" Attack from 3 to 2
-- "Dwarven Smithy Hammer" fire protection from 25% to 20%
-- "Shield of Crystal Ice" fire protection from 50% to 40%
+- "Dwarven Smithy Hammer" fire spells protection from 25% to 20%
+- "Shield of Crystal Ice" fire spells protection from 50% to 40%
 - "Helm of the Dwarven Kings" Knowledge from 4 to 3
 - "Cuirass of the Dwarven Kings" Defense from 4 to 3
 - "Dragon Scale Armor" Attack from 3 to 2
-- "Evercold Icicle" cold spells ehancement from 50% to 30%
+- "Evercold Icicle" cold spells enhancement from 50% to 30%
+- "Ring of Lightning Protection" protection from lighting spells from 50% to 40%
+- "Ring of Machine Affinity" Defense from 1 to 0
+- "Ring of Sar-Issus" Knowledge from 0 to -2
+- "Boots of the Swift Journey" the hero losses 750 movement points when unequipping the artifact
+- "Emerald Slippers" earth spells enhancement from 50% to 30%
+- "Greaves of the Dwarven Kings" Attack from 4 to 0
+- "Bearhide Wraps" protection from ice spells from 25% to 20%
+- "Cloak of Sylanna" protection from earth spells from 50% to 40%
+- "Dragon Wing Mantle" Knowledge from 3 to 2
+- (NOT TRUE? may be 30?) "Phoenix Feather Cape" fire spells enhancement from 50% to 40%
+- "Skull of Markal" Spellpower from 5 to 4
+- "Skull of Markal" Knowledge from 5 to 4
 
 Buffed:
 - Game artifact count incrased by 34 (up to 127)
@@ -286,7 +329,25 @@ Buffed:
 - "Amulet of Necromancy" "Necromancy" resurrection bonus from 0% to 5%
 - "Dragon Teeth Necklace" Spellpower from 3 to 4
 - "Pendant of Conflux" boosts creature summoning in all Magic Guilds by hero Knowledge/2 Dragonblood crystals
-
+- "Elemental Waistband" increase the potency of Magic Guild creature summoning by 2%*Knowledge
+- "Ring of Banishment" Spellpower from 0 to 2
+- "Ring of Banishment" Knowledge from 0 to 2
+- "Ring of Caution" Attack from 2 to 3
+- "Ring of Caution" Defense from 2 to 3
+- "Ring of the Unrepentant" Knowledge from 0 to 1
+- "Boots Of Levitation" Spellpower from 0 to 3
+- "Boots Of Levitation" Knowledge from 0 to 3
+- "Dragon Bone Greaves" Spellpower from 3 to 4
+- "Greaves of the Dwarven Kings" Defense from 0 to 3
+- "Greaves of the Dwarven Kings" Spellpower from 0 to 3
+- "Bearhide Wraps" Defense from 1 to 2
+- "Cape of the Lion's Mane" Defense from 0 to 2
+- "Dragon Wing Mantle" Spellpower from 0 to 2
+- "Wings of the Angel" Morale from 0 to 2
+- "Wings of the Angel" Luck from 0 to 2
+- "Rune of Flame" teaches hero "Empowered Eldritch Arrow"
+- "Sextant of the Sea Elves" Knowledge from 0 to 1
+- "Skull of Markal" Moral from -2 to -1
 
 TOWN VIEW:
 
@@ -435,7 +496,6 @@ Changed:
 -- increased free-of-obstacles horizontal lines from 2 to 6
 - starting combat creature and hero ATB randomization range from 0-0.25 to 0-0.10
 
-
 Nerfed:
 - Attack bonus from 5% to 2.5%
 - Defense bonus from 5% to 2.5%
@@ -449,25 +509,12 @@ Buffed:
 - "Luck" bad luck damage multiplier from 0.5 to 0.6
 - "Morale" bad morale initiative multiplier from 0.5 to 0.6
 
-
-
 User experience:
-
 - Massively expanded descriptions of game elements (skills, perks, spells, specializations, abilities, adventure map sites, town buildings and many more) to include formulas and/or peculiarities present in game mechanics
 - changed creature split feature to create 2 stacks with sizes N-1 and 1 instead of N/2 and N/2
 
-
-Lobby:
-- Human player starting resources for difficulties Easy/Normal/Hard/Heroic:
--- Wood and Ore from 50/30/20/10 to 30/20/20/10
--- Mercury, Crystal, Sulfur and Gems from 25/15/10/5 to 15/10/10/5
--- Gold from 50000/30000/20000/10000 to 30000/20000/20000/10000
-- Computer player starting resources for difficulties Easy/Normal/Hard/Heroic:
--- Wood and Ore from 10/10/20/30 to 30/30/30/30
--- Mercury, Crystal, Sulfur and Gems from 3/5/10/15 to 15/15/15/15
--- Gold from 5000/10000/20000/30000 to 30001/30001/30001/30001
-
 ADVENTURE MAP VIEW:
+
 New:
 - ARMG places 28 new artifacts + 6 new ultimate items obtainable by quests.
 - ARMG places ~30 more adventure map objects and an additional 480 (for a total of 720) random mixed neutral templates. The object and army variation will be much greater than H5 maps currently in existance
@@ -496,14 +543,23 @@ Changed:
 -- Creature stack spawn multiplier per difficulty from 0.5/1.0/1.12/1.4 to 1.0/1.1/1.2/1.3
 -- Neutral stacks weekly growth multiplier per difficulty from 1.05/1.09/1.1/1.11 to 1.11/1.12/1.13/1.14 
 -- Hero experience multiplier per difficulty from 2.0/1.0/1.0/1.0 to 1.0/0.92/0.85/0.79
+- Human player starting resources for difficulties Easy/Normal/Hard/Heroic:
+-- Wood and Ore from 50/30/20/10 to 30/20/20/10
+-- Mercury, Crystal, Sulfur and Gems from 25/15/10/5 to 15/10/10/5
+-- Gold from 50000/30000/20000/10000 to 30000/20000/20000/10000
+- Computer player starting resources for difficulties Easy/Normal/Hard/Heroic:
+-- Wood and Ore from 10/10/20/30 to 30/30/30/30
+-- Mercury, Crystal, Sulfur and Gems from 3/5/10/15 to 15/15/15/15
+-- Gold from 5000/10000/20000/30000 to 30001/30001/30001/30001
+
 
 Nerfed:
-- "Sacrificial Altar" gold to experience multiplier from 0.5 to 0.3
+- "Sacrificial Altar" Gold to experience multiplier from 0.5 to 0.3
 
 Buffed:
 - Improved Dungeon underground, better atmospherical lightning.
 - The ARMG has improved Dwarven underground scenery, you no longer walk through a gigantic overly bright field of torches, the new lightning is more 'fiery' and the structure more ‘classic RPG’ maze like with more columns, lava roads and new interactive adventure objects such as mineshafts and abandoned rail wagons.
-- ARMG has greatly improvement artifact/monster placement. Unlike the old RMG the ARMG does not sometimes fill complete areas with the same useless (sack of endless gold) artifact. Late game areas have better artifacts and stronger monsters
+- ARMG has greatly improvement artifact/monster placement. Unlike the old RMG the ARMG does not sometimes fill complete areas with the same useless (sack of endless Gold) artifact. Late game areas have better artifacts and stronger monsters
 - ARMG can handle a much higher object density and can place if necessary objects closer to towns
 
 
