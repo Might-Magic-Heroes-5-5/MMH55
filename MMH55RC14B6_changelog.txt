@@ -571,9 +571,23 @@ Removed:
 Fixed:
 
 Changed:
+- "Large Creature" ability name is now "2x2"
+- "Enraged" ability name is now "Enrage"
+- "Armoured" ability name is now "Armored"
+- "Crossfire" ability name is now "Cross Attack"
+- "Fear Attack" ability name is now "Fear"
 - "Summon Pit Lords" ability name is now "Pit Lord Summoning"
 - "Acid Breath" ability name is now "Breath Attack"
+- "Immune to Puppet Master" ability name is now "Immune to Hypnotize"
+- "Immuninty to Fire" ability name is now "Immune to Fire"
+- "Immuninty to Earth" ability name is now "Immune to Earth"
+- "Immuninty to Lighting" ability name is now "Immune to Air"
+- "Immuninty to Cold" ability name is now "Immune to Water"
+- "Spray Attack" ability name is now "Three-Tile Attack"
+-  ??? "Fire Breath" ability name is now "Hellbreath"
 - "Whirlwind" ability name is now "Half-Circle Attack"
+- "Shield Allies" ability name is now "Shield Other"
+- "Ranged Retaliation" ability name is now "Ranged Retaliate"
 - Goblin Witch-Doctor Rage abilities:
 -- Level 2 - added 3 bonus attack, "Hexing Attack"
 -- Level 2 - removed "Cursed Attack", "Purge"
@@ -653,7 +667,7 @@ Buffed:
 - "Mana Destroyer" mana destroyed per creature in the stack from 0.5 to 0.6
 - "Leap" damage multiplier from 0% + 10% per square jumped to 10% + 10% per square jumped
 - "Leap" retaliation damage multiplier from 100% to 50% + 5% per square jumped
-- "Fear" proc multiplier from 0.8 to 1
+- "Fear/Fear Attack" proc multiplier from 0.8 to 1
 - "Festering Aura" Morale reduction from 1 to 2
 - "Festering Aura" Attack reduction from 2 to 4
 - "Festering Aura" Defense reduction from 2 to 4
@@ -765,3 +779,5 @@ AI CHANGES FOR DIFFICULTIES EASY/NORMAL/HARD/HEROIC:
 - Creature growth in AI towns 0.5/1/1/1 to 1/1/1/1
 - AI priority of border guard keys from 1500 to 9000
 
+Misc:
+- Check hellhound upgrade if abilities are valid?
