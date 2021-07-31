@@ -578,6 +578,7 @@ Fixed:
 
 Changed:
 - "Large Creature" ability name is now "2x2"
+- "Range Penalty" ability name is now "Melee Preference"
 - "Enraged" ability name is now "Enrage"
 - "Evil-eye" ability name is now "Evil eye"
 - "Armoured" ability name is now "Armored"
@@ -587,15 +588,12 @@ Changed:
 - "Acid Breath" ability name is now "Champion Charge"
 - "Fire Breath" ability name is now "Breath Attack"
 - "Immune to Puppet Master" ability name is now "Immune to Hypnotize"
-- "Immuninty to Fire" ability name is now "Immune to Fire"
-- "Immuninty to Earth" ability name is now "Immune to Earth"
-- "Immuninty to Lighting" ability name is now "Immune to Air"
-- "Immuninty to Cold" ability name is now "Immune to Water"
 - "Spray Attack" ability name is now "Three-Tile Attack"
 - "Three-headed Attack" ability name is now "Hellbreath"
 - "Whirlwind" ability name is now "Half-Circle Attack"
 - "Shield Allies" ability name is now "Shield Other"
 - "Ranged Retaliation" ability name is now "Ranged Retaliate"
+- "Order of the Chief" ability name is now "Command Other"
 - Goblin Witch-Doctor Rage abilities:
 -- Level 2 - added 3 bonus attack, "Hexing Attack"
 -- Level 2 - removed "Cursed Attack", "Purge"
@@ -674,7 +672,7 @@ Nerfed:
 Buffed:
 - "Precise Shot" range from 3 to 4
 - (TEST THIS) "Siphon mana" mana stolen per creature from 0.5 (0.125) to 0.6 (???)
-- "Mana Destroyer" mana destroyed per creature in the stack from 0.5 to 0.6
+- (TEST THIS) "Mana Destroyer" mana destroyed per creature in the stack from 0.5 to 0.6
 - "Leap" damage multiplier from 0% + 10% per square jumped to 10% + 10% per square jumped
 - "Leap" retaliation damage multiplier from 100% to 50% + 5% per square jumped
 - "Fear/Fear Attack" proc multiplier from 0.8 to 1
@@ -688,10 +686,9 @@ Buffed:
 - "Blinding Attack" proc multiplier from 1 to 1.5
 - "Blinding Attack" "Blind" spell Spellpower from 8 to 14 /to fit new spell duration calculation/
 - "Symbiosis" heal Sprites receive per Treant participating in symbiosis from 20 to 25 HP
-- "Sabotage" duration multiplier from 5 to 10
 - "Stormcaller" ranged penalty effect per Titan count from 1% to 2%
 - "Hexing Attack" Spellpower of cast spells from 3 to 10
-- "Hexing Attack" proc multiplier from 1.5 to 2
+----------------- (WRONG) "Hexing Attack" proc multiplier from 1.5 to 2
 - "Regeneration" heal strength from 30-50 to 80-120
 - "Wheeling Attack" bonus damage 25% to 40%
 - "Crippling Wound" proc multiplier from 0.7 to 1.5
