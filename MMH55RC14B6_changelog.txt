@@ -591,6 +591,7 @@ Changed:
 - "Spray Attack" ability name is now "Three-Tile Attack"
 - "Three-headed Attack" ability name is now "Hellbreath"
 - "Whirlwind" ability name is now "Half-Circle Attack"
+- "Six-headed attack" ability name is now "Full-Circle Attack"
 - "Shield Allies" ability name is now "Shield Other"
 - "Ranged Retaliation" ability name is now "Ranged Retaliate"
 - "Order of the Chief" ability name is now "Command Other"
@@ -681,7 +682,7 @@ Buffed:
 -- Attack reduction from 2 to 4
 -- Defense reduction from 2 to 4
 - "Death Wail" damage from Banshee_count*(10 - target moral) to 2*Banshee_count*(12 - target moral)
-- "Warding Arrow" proc multiplier from 1 to 1.5
+- "Warding Arrows" proc multiplier from 1 to 1.5
 - "Force Arrow" ignore defense from 50% to 25%
 - "Blinding Attack" proc multiplier from 1 to 1.5
 - "Blinding Attack" "Blind" spell Spellpower from 8 to 14 /to fit new spell duration calculation/
@@ -705,6 +706,8 @@ Buffed:
 - "Crushing Blow" proc multiplier from 0.8 to 1
 - "Call Lightning" damage per creature from 30 to 40
 - "Explosion" damage from 9 + 9*creature_SP to 40*creature_SP
+- "Whip Strike" spellpower from 3 to 10
+- "Whip Strike" procfactor from 1,5 to 2,0
 
 HERO SPECIALIZATIONS:
 New:
