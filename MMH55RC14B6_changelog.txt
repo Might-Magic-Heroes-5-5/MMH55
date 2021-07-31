@@ -150,8 +150,13 @@ Buffed:
 - "Corrupt Dark" perk grants hero 10 Dragonblood Crystals
 - "Corrupt Summoning" perk grants hero 10 Dragonblood Crystals
 - "Corrupt Destruction" perk grants hero 10 Dragonblood Crystals
-- "Master of Lightning" perk ATB drop from 30% to 40%
-- "Master of Ice" perk ATB drop from 30% to 40%
+- "Master of Fire" perk teaches hero "Fireball" spell
+- "Master of Lightning" perk
+-- ATB drop from 30% to 40%
+-- teaches hero "Lightning" spell
+- "Master of Ice"
+-- perk ATB drop from 30% to 40%
+-- teaches hero "Ice Bolt" spell
 - "Counterspell" perk mana drain from 2 to 1.5 times of ressited spell cost
 - "Flaming Arrows" perk damage from 50 to 2*hero_level
 
@@ -366,7 +371,8 @@ Nerfed:
 - "Necromany Amplifier" "Necromancy" resurrection bonus from 10% to 5%
 - "Tomb of the Lost" "Necromancy" resurrection bonus from 50% to 10%
 - "Infernal Loom" "Gating" bonus from 10% to 5%
--  "Marketplace" artifacts sold value from 0.5 to 0.3 of purchase cost.
+- "Marketplace" artifacts sold value from 0.5 to 0.3 of purchase cost.
+- Limited the ability to build "Artifact merchant" buildings for Dungeon/Academy players to 1 for all towns if map has multiple of such towns.
 - "Tavern"
 -- heroes starting army tier 1 min/max unit count per stack for heroes with Tier 1 specialization from min 1/1.5 to 1/1.2
 -- heroes starting army tier 1 stacks for heroes with Tier 1 specialization from 3 to 2
@@ -385,8 +391,8 @@ Buffed:
 -- heroes starting army tier 3 min/max unit count per stack for heroes with Tier 3 specialization from min 0.5/0.7 to 0.6/0.7
 -- heroes starting army tier 3 min/max unit count per stack from -0.6/0.4 to -0.1/0.4
 - "Slave Market" creature sold value of original cost from 95% + 5% per Slave market owned to 45% + 5% per Save market owned.
--  Main tower damage from 70 to 200 for full developed city
--  Side tower damage from 50 to 140 for full developed city
+- Main tower damage from 70 to 200 for full developed city
+- Side tower damage from 50 to 140 for full developed city
 
 ARTIFACT SETS:
 
@@ -516,7 +522,7 @@ User experience:
 ADVENTURE MAP VIEW:
 
 New:
-- ARMG places 28 new artifacts + 6 new ultimate items obtainable by quests.
+- ARMG places 34 new artifacts - 28 standard and 6 ultimate obtainable only by questss.
 - ARMG places ~30 more adventure map objects and an additional 480 (for a total of 720) random mixed neutral templates. The object and army variation will be much greater than H5 maps currently in existance
 - ARMG can balance player starting areas much better (only differences in adventure objects that have minor impact on the game such as morale boosters remain)
 - In addition to towns, dwellings and mines, Witch huts can now be placed exactly symmetrical, Shrine and primary skill boosters are precisely valued
@@ -573,18 +579,20 @@ Fixed:
 Changed:
 - "Large Creature" ability name is now "2x2"
 - "Enraged" ability name is now "Enrage"
+- "Evil-eye" ability name is now "Evil eye"
 - "Armoured" ability name is now "Armored"
 - "Crossfire" ability name is now "Cross Attack"
 - "Fear Attack" ability name is now "Fear"
 - "Summon Pit Lords" ability name is now "Pit Lord Summoning"
-- "Acid Breath" ability name is now "Breath Attack"
+- "Acid Breath" ability name is now "Champion Charge"
+- "Fire Breath" ability name is now "Breath Attack"
 - "Immune to Puppet Master" ability name is now "Immune to Hypnotize"
 - "Immuninty to Fire" ability name is now "Immune to Fire"
 - "Immuninty to Earth" ability name is now "Immune to Earth"
 - "Immuninty to Lighting" ability name is now "Immune to Air"
 - "Immuninty to Cold" ability name is now "Immune to Water"
 - "Spray Attack" ability name is now "Three-Tile Attack"
--  ??? "Fire Breath" ability name is now "Hellbreath"
+- "Three-headed Attack" ability name is now "Hellbreath"
 - "Whirlwind" ability name is now "Half-Circle Attack"
 - "Shield Allies" ability name is now "Shield Other"
 - "Ranged Retaliation" ability name is now "Ranged Retaliate"
@@ -655,11 +663,13 @@ Nerfed:
 - "Invisibility" duration from 3 to 2 turns
 - "Rider Charge" defence reduction per hex from 20% to 7.5%
 - "Shield Wall" max damage reduction from 90% to 80%
-- "Crippling Would" speed reduction from 50% to 40%
-- "Crippling Would" initiative reduction from 30% to 20%
+- "Crippling Wound" speed reduction from 50% to 40%
+- "Crippling Wound" initiative reduction from 30% to 20%
 - "Bear Roar" small (1x1) creatures fear proc multiplier from 2 to 1
 - "Paw Strike" proc multiplier from 1 to 0.5
 - (WORK IN PROGRESS) "Battle Dive" damage from 200% to 150%
+- "Hellbreath/Three-headed Attack" secondary target damage from 100% to 75%
+- "Champion Charge/Acid Breath" secondary target damage from 100% to 50%
 
 Buffed:
 - "Precise Shot" range from 3 to 4
@@ -668,12 +678,13 @@ Buffed:
 - "Leap" damage multiplier from 0% + 10% per square jumped to 10% + 10% per square jumped
 - "Leap" retaliation damage multiplier from 100% to 50% + 5% per square jumped
 - "Fear/Fear Attack" proc multiplier from 0.8 to 1
-- "Festering Aura" Morale reduction from 1 to 2
-- "Festering Aura" Attack reduction from 2 to 4
-- "Festering Aura" Defense reduction from 2 to 4
+- "Festering Aura":
+-- Morale reduction from 1 to 2
+-- Attack reduction from 2 to 4
+-- Defense reduction from 2 to 4
 - "Death Wail" damage from Banshee_count*(10 - target moral) to 2*Banshee_count*(12 - target moral)
 - "Warding Arrow" proc multiplier from 1 to 1.5
-- "Force Arrow" proc multiplier from 0.5 to 0.75
+- "Force Arrow" ignore defense from 50% to 25%
 - "Blinding Attack" proc multiplier from 1 to 1.5
 - "Blinding Attack" "Blind" spell Spellpower from 8 to 14 /to fit new spell duration calculation/
 - "Symbiosis" heal Sprites receive per Treant participating in symbiosis from 20 to 25 HP
@@ -683,7 +694,7 @@ Buffed:
 - "Hexing Attack" proc multiplier from 1.5 to 2
 - "Regeneration" heal strength from 30-50 to 80-120
 - "Wheeling Attack" bonus damage 25% to 40%
-- "Crippling Would" proc multiplier from 0.7 to 1.5
+- "Crippling Wound" proc multiplier from 0.7 to 1.5
 - "Giant Slayer" attack and defense bonus from 4 to 8
 - "Bear Roar" big (2x2) creatures fear proc multiplier from 0.9 to 2
 - "Battle Rage" attack bonus from 5 to 8
@@ -695,7 +706,7 @@ Buffed:
 - "Taunt" proc factor from 1.2 to 2
 - "Venom" damage per stack size from 5 to 6
 - "Crushing Blow" proc multiplier from 0.8 to 1
-- "Call Lighting" damage per creature from 30 to 40
+- "Call Lightning" damage per creature from 30 to 40
 - "Explosion" damage from 9 + 9*creature_SP to 40*creature_SP
 
 HERO SPECIALIZATIONS:
