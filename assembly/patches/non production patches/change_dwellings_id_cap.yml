@@ -1,0 +1,72 @@
+# ----------------------------------------------------
+# ----------------- Change Dwellings id cap --------------
+# ----------------------------------------------------
+#
+# Change adventure map dwelling selection based on creature tier offered
+#
+# ----------------------------------------------------
+definitions: 
+- &ToE_dw_max_id  3              # ID is from 0 to 3 - for tiers1,2,3 and Military post dwellings
+- &M55_dw_max_id  7              # increase ID count to fit new dwellings in
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0001AF07                                                   ### T4 - T7
+originalBytes:  33 C0 BE 01 00 00 00 EB 3C B8 01 00 00 00 BE 02 00 00 00 EB 30 B8 02 00 00 00 BE 03 00 00 00 EB 24 BE 04 00 00 00 EB 18 BE 05 00 00 00 EB 11 BE 06 00 00 00 EB 0A BE 07 00 00 00 EB 03 83 CE FF B8 03 00 00 00
+patchBytes:     EB 11 EB 0F EB 0D EB 0B EB 09 EB 07 EB 05 83 CE FF EB 2D 89 C6 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 66 48 90 90 90
+---
+group: Original
+patchAddress:   0001B010                                                   ### Switch addresses change
+originalBytes:  07 BB 41 00 10 BB 41 00 1C BB 41 00 28 BB 41 00 2F BB 41 00 36 BB 41 00 3D BB 41 00 44 BB 41 00
+patchBytes:     07 BB 41 00 09 BB 41 00 0B BB 41 00 0D BB 41 00 0F BB 41 00 11 BB 41 00 13 BB 41 00 15 BB 41 00
+---
+group: Original
+patchAddress:   001C8BC6                                                   ### increase dwelling count id from 3 to 8
+valueType:      byte
+originalValue:  *ToE_dw_max_id
+patchValue:     *M55_dw_max_id
+---
+group: Original
+patchAddress:   001C8BCA                                                    ### increase dwelling count id from 3 to 8
+valueType:      integer
+originalValue:  *ToE_dw_max_id
+patchValue:     *M55_dw_max_id
+
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0054F447                                                 ### Dwelling change
+originalBytes:  33 C0 BE 01 00 00 00 EB 3C B8 01 00 00 00 BE 02 00 00 00 EB 30 B8 02 00 00 00 BE 03 00 00 00 EB 24 BE 04 00 00 00 EB 18 BE 05 00 00 00 EB 11 BE 06 00 00 00 EB 0A BE 07 00 00 00 EB 03 83 CE FF B8 03 00 00 00
+patchBytes:     EB 11 EB 0F EB 0D EB 0B EB 09 EB 07 EB 05 83 CE FF EB 2D 89 C6 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 66 48 90 90 90
+--- 
+group: Quantomas3.1j
+patchAddress:   0054F550                                                  ### Switch addresses change
+originalBytes:  47 00 95 00 50 00 95 00 5C 00 95 00 68 00 95 00 6F 00 95 00 76 00 95 00 7D 00 95 00 84 00 95 00
+patchBytes:     47 00 95 00 49 00 95 00 4B 00 95 00 4D 00 95 00 4F 00 95 00 51 00 95 00 53 00 95 00 55 00 95 00
+--- 
+group: Quantomas3.1j
+patchAddress:   000F98A6                                                  ### Switch addresses change
+valueType:      byte
+originalValue:  *ToE_dw_max_id
+patchValue:     *M55_dw_max_id
+--- 
+group: Quantomas3.1j
+patchAddress:   000F98AA                                                 ### Switch addresses change
+valueType:      Integer
+originalValue:  *ToE_dw_max_id
+patchValue:     *M55_dw_max_id
+
+--- # ----------- MAP EDITOR EXE 3.1 PATCH DATA ------------
+group: MapEditorOriginal
+checkAddress:   004B6DB0
+checkBytes:     B8 B4 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC
+patchAddress:   003B9887                                                 ### Dwelling change
+originalBytes:  33 C0 BE 01 00 00 00 EB 3C B8 01 00 00 00 BE 02 00 00 00 EB 30 B8 02 00 00 00 BE 03 00 00 00 EB 24 BE 04 00 00 00 EB 18 BE 05 00 00 00 EB 11 BE 06 00 00 00 EB 0A BE 07 00 00 00 EB 03 83 CE FF B8 03 00 00 00
+patchBytes:     EB 11 EB 0F EB 0D EB 0B EB 09 EB 07 EB 05 83 CE FF EB 2D 89 C6 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 66 48 90 90 90
+--- 
+group: MapEditorOriginal
+patchAddress:   003B9990                                                  ### Switch addresses change
+originalBytes:  87 A4 7B 00 90 A4 7B 00 9C A4 7B 00 A8 A4 7B 00 AF A4 7B 00 B6 A4 7B 00 BD A4 7B 00 C4 A4 7B 00
+patchBytes:     87 A4 7B 00 89 A4 7B 00 8B A4 7B 00 8D A4 7B 00 8F A4 7B 00 91 A4 7B 00 93 A4 7B 00 95 A4 7B 00
