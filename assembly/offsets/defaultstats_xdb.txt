@@ -725,7 +725,7 @@ VRF	*(number_of_creatures_maybe() + 2736)																- DevourDiceSize
 	*(number_of_creatures_maybe() + 2868)																-   
 	*(number_of_creatures_maybe() + 2872)																-   
 	*(number_of_creatures_maybe() + 2876)																-   
-	*(number_of_creatures_maybe() + 2880)																-   
+	*(number_of_creatures_maybe() + 2880)																- MaxRuneMoneyEstimate  
 	*(number_of_creatures_maybe() + 2884)																-   
 	*(number_of_creatures_maybe() + 2888)																-   
 	*(number_of_creatures_maybe() + 2892)																-   

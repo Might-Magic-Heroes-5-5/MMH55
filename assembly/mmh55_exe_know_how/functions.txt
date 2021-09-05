@@ -55,11 +55,12 @@
 	*(void **)(v46 + 56);																				- spell ID
 	*(_DWORD *)(v10 + 172)																				- spell ID
 	*(void **)(v59 + 908);																				- spell ID
-	
+	*(*(*v15 + 168))(v15)																				- days passed since start
 	*(_DWORD *)(v8 + 12);																				- mastery level	
 	(_DWORD *))(*v6 + 16))(v6);																			- mastery level	
 	*(_DWORD *)(a2 + 48);																				- mastery level	
 	*(_DWORD *)(v6 + 32))																				- mastery level
+	(*(*v11 + 52))(v11)																					- return race id (0-8)
 	*(_DWORD *)(*v5 + 52)(v5, building_id)																- returns town building with ID is built or not
 	*(_DWORD *)(*v3 + 68))(v3, 5)																		- building inside of town
 	*(_DWORD *)(*v8 + 108))(v8)																			- boolean, can unit v8 be affected by rage?
@@ -71,6 +72,11 @@
     *(_DWORD *)(v1 + 200)																				- return spell duration
     *(_DWORD *)(v1 + 212) = 0;
     *(_DWORD *)(v1 + 204) = 0;
+	(*(**(a1 + 416) + 32))(*(a1 + 416))																	- return w_o_m_c_s_g_gold resource array
+	(*(*v5 + 216))(v5)																					- return w_o_m_c_s_g_gold resource array
+	(*(*v25 + 268))(v25, &v46);																			- return w_o_m_c_s_g_gold resource array
+	(*(*v8 + 232))(v8);																					- return w_o_m_c_s_g_gold resource array
+	*(sub_961520(a1 + 212) + 92)																		- return town bonus ID
 	*(_DWORD *)(v1 + 220)(v1)																			- return town spec ID
 	
 	*(_DWORD *)v22 + 248))(v22)																			- return hero current movement points
