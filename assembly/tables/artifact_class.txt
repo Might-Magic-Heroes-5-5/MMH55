@@ -1,0 +1,28 @@
+int __fastcall define_Table_DBArtifact_ArtifactEffect_objects_item_obj_type_vars(int a1, int artifact_class_id_a2)
+{
+  int result; // eax
+
+  switch ( artifact_class_id_a2 )
+  {
+    case 0:(a1, "ARTF_CLASS_MINOR");
+      result = a1;
+      break;
+    case 1:(a1, "ARTF_CLASS_MAJOR");
+      result = a1;
+      break;
+    case 2:(a1, "ARTF_CLASS_RELIC");
+      result = a1;
+      break;
+    case 3:(a1, "ARTF_CLASS_GRAIL");
+      result = a1;
+      break;
+    default:
+      *a1 = 0;
+      *(a1 + 4) = 0;
+      *(a1 + 8) = 0;
+      input_from_screen_proxy2(a1, "ARTF_CLASS_MINOR", "");
+      result = a1;
+      break;
+  }
+  return result;
+}

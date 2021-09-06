@@ -1,0 +1,32 @@
+=======================================
+From artifact reference list
+=======================================
+(v3) 				- NameFileRef
+(v3 + 4) 			- NameFileRef
+(v3 + 8) 			- DescriptionFileRef
+(v3 + 12) 			- DescriptionFileRef
+(v3 + 16) 			- Model
+(v3 + 16) 			- Model
+(v3 + 20) 			- Type
+(v3 + 24) 			- Slot
+(v3 + 28) 			- Icon
+(v3 + 32)			- Icon
+(v3 + 36) 			- CostOfGold
+(v3 + 40) 			- AIValue
+(v3 + 44) 			- CanBeGeneratedToSell
+(v3 + 48) 			- HeroStatsModif
+(v3 + 52) 			- HeroStatsModif
+(v3 + 56) 			- HeroStatsModif
+(v3 + 60) 			- ArtifactShared
+(v3 + 64) 			- ArtifactShared
+(v3 + 68) 			- AvailableForPresets
+(v3 + 72) 			- PresetPrice
+
+
+
+
+=======================================
+From memory
+=======================================
+*(v5 + 36)          - returns artifact rarity class
+*(a1 + 40)			- returns artifact ID

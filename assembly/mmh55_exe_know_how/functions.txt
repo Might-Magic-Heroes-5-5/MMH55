@@ -209,6 +209,7 @@
 	
 	*(v4 + 152)																							- returns race iD	
 	
+	(*(*a3 + 84))(a3, X) 																				- return 1 if town_building with id X exists
 	*(v234 - 7) 																						- town_building_id
 	*(v234 - 6)																	 						- town_building_level - important for market place and magic guild
 		
