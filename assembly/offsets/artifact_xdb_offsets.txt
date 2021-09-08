@@ -28,5 +28,7 @@ From artifact reference list
 =======================================
 From memory
 =======================================
-*(v5 + 36)          - returns artifact rarity class
+*(v5 + 36)          - returns artifact class
 *(a1 + 40)			- returns artifact ID
+*(a1 + 104)			- returns artifact gold cost maybe
+*(a1 + 52)			- returns artifact gold cost maybe

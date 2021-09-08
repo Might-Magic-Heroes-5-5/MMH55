@@ -1,0 +1,4 @@
+Artifact.xdb - reference table, offset for one item
+###################################
+(v3 + 4) 			- ID
+(v3 + 8) 			- obj

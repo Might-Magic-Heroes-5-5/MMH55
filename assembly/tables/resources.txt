@@ -15,7 +15,7 @@ int __fastcall sub_6C1A70(int a1, int a2)
     case 2:(a1, "Mercury");
       result = v2;
       break;
-    case 3:(a1, "Crystal");
+    case 3:(a1, "Crystal");	
       result = v2;
       break;
     case 4:(a1, "Sulfur");
