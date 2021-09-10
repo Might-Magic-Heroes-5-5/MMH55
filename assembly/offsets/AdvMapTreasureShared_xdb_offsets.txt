@@ -22,3 +22,6 @@
 (v3 + 208) 			- AdventureSoundEffect
 (v3 + 216) 			- RazedStatic
 (v3 + 224) 			- Icon128
+(v3 + 236) 			- Type
+(v3 + 236) 			- MaxResource
+(v3 + 236) 			- MinResource
