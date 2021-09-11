@@ -1,0 +1,6 @@
+(v3 + 28) 		- FileNameRef
+(v3 + 35) 		- unit CombatSize
+(v3 + 36) 		- unit flybySequence
+(v3 + 39) 		- unit Visual
+(v3 + 41)       - unit time to command
+(v3 + 68) 		- unit flying

@@ -1,5 +1,5 @@
 # ----------------------------------------------------
-# ----------------- Hero skills count change --------------
+# ----------------- Hero skills count change v1.1 --------------
 # ----------------------------------------------------
 #
 # Changes default hero skills count from 6 to 8.
@@ -8,9 +8,14 @@
 group: Original
 checkAddress:   00000400
 checkBytes:     8D 41 34 C3 CC CC CC CC
-patchAddress:   007501E5    # 00B50DE5 - skill number address
+patchAddress:   007501E5    # 00B50DE5   - skill number address
 originalBytes:  14
 patchBytes:     1C
+---
+group: Original
+patchAddress:   0074C799    # 00B4D398   - Fix GiveHeroSkill calculation of left empty hero skills slots
+originalBytes:  05
+patchBytes:     08
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
 checkAddress:   00000400
@@ -23,3 +28,8 @@ group: Quantomas3.1j
 patchAddress:   003B70D3  #              - changes skill number text in the game lobby
 originalBytes:  06
 patchBytes:     08
+---
+group: Quantomas3.1j        
+patchAddress:   005F82C7  # 009F8EC7     - Fix GiveHeroSkill calculation of left empty hero skills slots
+originalBytes:  83 C5 FF
+patchBytes:     90 90 90

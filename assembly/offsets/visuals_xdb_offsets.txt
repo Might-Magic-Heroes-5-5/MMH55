@@ -1,4 +1,4 @@
-(v3 + 68) 			- 
+(v3 + 68) 			- CreatureNameFileRef
 (v3 + 76) 			- 
 (v3 + 84) 			- 
 (v3 + 96) 			- 

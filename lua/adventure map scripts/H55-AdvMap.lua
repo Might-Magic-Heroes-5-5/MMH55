@@ -3034,19 +3034,26 @@ function H55_WitchVisit(hero,hut)
 	else
 		local choice1 = H55_WHChoice1[hut];
 		local classtype = H55_GetHeroClass(hero);
+		local heroskills = {};
+		
+		for i, s in H55_WitchSkills do
+	 		if HasHeroSkill(hero, s) then
+				H55_Insert(heroskills, s);
+			end
+		end
+		
 		for i=1,H55_ClassesCount do
 			if classtype == H55_ClassesNames[i] then
 				local mastery1 = GetHeroSkillMastery(hero,H55_WitchSkills[H55_WitchSelect[i][choice1]]);				
-				if mastery1 <= 2 then
+				if (mastery1 == 0 and heroskills > 7) or mastery1 == 3 then
+					H55_WitchVisit2nd(hero,hut);
+				elseif mastery1 <= 2 then
 					QuestionBoxForPlayers(GetPlayerFilter(player),{"/Text/Game/Scripts/Witch/Questionone.txt";
 					mastery=H55_WitchMasteryText[mastery1],skill=H55_WitchSkillText[H55_WitchSelect[i][choice1]]},
-					"H55_WitchAccept01('"..hero.."','"..hut.."')","H55_WitchRefuse01('"..hero.."','"..hut.."')");
-				elseif mastery1 == 3 then
-					H55_WitchVisit2nd(hero,hut);
+					"H55_WitchAccept01('"..hero.."','"..hut.."')","H55_WitchRefuse01('"..hero.."','"..hut.."','"..heroskills.."')");			 			 
 				end;
 				break;
 			end;
-			
 		end;
 	end;
 end;
@@ -3069,7 +3076,7 @@ function H55_WitchAccept01(hero,hut)
 	end;
 end;
 
-function H55_WitchVisit2nd(hero,hut)
+function H55_WitchVisit2nd(hero,hut,heroskills)
 	local player = GetObjectOwner(hero);
 	local choice2 = H55_WHChoice2[hut];
 	local classtype = H55_GetHeroClass(hero);
@@ -3077,19 +3084,19 @@ function H55_WitchVisit2nd(hero,hut)
 	for i=1,H55_ClassesCount do
 		if classtype == H55_ClassesNames[i] then
 			local mastery2 = GetHeroSkillMastery(hero,H55_WitchSkills[H55_WitchSelect[i][choice2]]);
-			if mastery2 <= 2 then
+			if (mastery2 == 0 and heroskills > 7) or mastery == 3 then
+				ShowFlyingSign("/Text/Game/Scripts/Witch/Already.txt",hero,player,5);	
+			elseif mastery2 <= 2 then
 				QuestionBoxForPlayers(GetPlayerFilter(player),{"/Text/Game/Scripts/Witch/Questiononealt.txt";
 				gold=price,mastery=H55_WitchMasteryText[mastery2],skill=H55_WitchSkillText[H55_WitchSelect[i][choice2]]},
 				"H55_WitchAccept02('"..hero.."','"..hut.."')","H55_WitchRefuse02('"..hero.."')");
-			elseif mastery2 == 3 then
-				ShowFlyingSign("/Text/Game/Scripts/Witch/Already.txt",hero,player,5);				
 			end;
 			break;
 		end;
 	end;
 end;
 
-function H55_WitchRefuse01(hero,hut)
+function H55_WitchRefuse01(hero,hut,heroskills)
 	local player = GetObjectOwner(hero);
 	local choice2 = H55_WHChoice2[hut];
 	local classtype = H55_GetHeroClass(hero);
@@ -3097,12 +3104,14 @@ function H55_WitchRefuse01(hero,hut)
 	for i=1,H55_ClassesCount do
 		if classtype == H55_ClassesNames[i] then
 			local mastery2 = GetHeroSkillMastery(hero,H55_WitchSkills[H55_WitchSelect[i][choice2]]);
-			if mastery2 <= 2 then
+			if mastery2 == 0 and heroskills > 7 then
+				ShowFlyingSign("/Text/Game/Scripts/Witch/Already.txt",hero,player,5);
+			elseif mastery2 <= 2 then
 				QuestionBoxForPlayers(GetPlayerFilter(player),{"/Text/Game/Scripts/Witch/Questiontwo.txt";
 				gold=price,mastery=H55_WitchMasteryText[mastery2], skill=H55_WitchSkillText[H55_WitchSelect[i][choice2]]},
 				"H55_WitchAccept02('"..hero.."','"..hut.."')","H55_WitchRefuse02('"..hero.."')");
 			elseif mastery2 == 3 then
-				ShowFlyingSign("/Text/Game/Scripts/Witch/Nooffer.txt",hero,player,5);				
+				ShowFlyingSign("/Text/Game/Scripts/Witch/Nooffer.txt",hero,player,5)
 			end;
 			break;
 		end;
