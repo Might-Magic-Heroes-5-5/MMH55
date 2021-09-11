@@ -50,25 +50,26 @@
 	*(v3 + 268)					# return Abilities
 	*(v3 + 272)					# return Abilities
 	
-	( v6 && v6[38] == race_id_v4 && v6[35] == unit_tier_v3 && !v6[64] - upgrades or abilities)
+
 	============================================================================================
-	Temporary Unit value offsets
+	GameMechanics/CreatureVisual/Creatures/*(CreatureVisual).xdb array settings
 	============================================================================================
 
-  *this = *(a2 + 68);                           // unit attack
-  *(this + 4) = *(a2 + 72);                     // unit defense
-  *(this + 8) = *(a2 + 80);                     // unit min_dmg 
-  *(this + 12) = *(a2 + 84);                    // unit max_dmg 
-  *(this + 24) = *(a2 + 88);                    // unit speed
-  *(this + 28) = *(a2 + 92);                    // unit initiative
-  *(this + 32) = *(a2 + 76);                    // unit shots 
-  *(this + 36) = 0;
-  *(this + 40) = 0;
-  *(this + 44) = *(a2 + 116);                   // unit spellpoints
-  *(this + 16) = *(a2 + 100);                   // unit hp
-  *(this + 20) = *(a2 + 100);                   // unit hp
-  result = *(a2 + 252);                         // Range
-  *(this + 48) = result;                        // Range
+	*(a2 + 68)                  # CreatureNameFileRef
+	*(v3 + 80)                  # CreatureAbilitiesFileRef
+	*(v3 + 92)                  # DescriptionFileRef
+	*(v3 + 104)                  # Icon
+	*(v3 + 112)                  # Icon32
+	*(v3 + 120)                  # Icon64 
+	*(v3 + 124)                  # Icon128
+	*(v3 + 132)                  # AnimCharacter
+	*(v3 + 140)                  # DeadCharacter
+	*(v3 + 148)                  # AnimShot
+	*(v3 + 156)                  # SummoningEffect
+	*(v3 + 164)                  # DamageEffect
+	*(v3 + 172)                  # TeleportingMove
+	*(v3 + X)                  # 
+	*(v3 + X)                  # 
 
 
 	

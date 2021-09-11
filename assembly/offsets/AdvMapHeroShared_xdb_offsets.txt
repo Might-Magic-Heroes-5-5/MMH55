@@ -1,47 +1,56 @@
-(v3 + 68) 			- Model
-(v3 + 76) 			- AnimSet
-(v3 + 84) 			- blockedTiles
-(v3 + 96) 			- holeTiles
-(v3 + 108) 			- activeTiles
-(v3 + 120) 			- passableTiles
-(v3 + 132) 			- PossessionMarkerTile - X
-(v3 + 136) 			- PossessionMarkerTile - Y
-(v3 + 140) 			- Effect
-(v3 + 148) 			- EffectWhenOwned
-(v3 + 156) 			- messagesFileRef
-(v3 + 168) 			- WaterBased
-(v3 + 169) 			- ApplyHeroTrace
-(v3 + 172) 			- SoundEffect
-(v3 + 180) 			- flybyMessageFileRef
-(v3 + 192) 			- ObjectTypeFileRef
-(v3 + 204) 			- TerrainAligned
-(v3 + 205) 			- FlyPassable
-(v3 + 208) 			- AdventureSoundEffect
-(v3 + 216) 			- RazedStatic
-(v3 + 224) 			- Icon128
-(v3 + 236) 			- InternalName
-(v3 + 248) 			- Class
-(v3 + 252) 			- Specialization
-(v3 + 256) 			- PrimarySkill
-(v3 + 268) 			- SpecializationNameFileRef
-(v3 + 280) 			- SpecializationDescFileRef
-(v3 + 292) 			- SpecializationIcon
-(v3 + 300) 			- FaceTexture
-(v3 + 308) 			- FaceTextureSmall
-(v3 + 316) 			- HeroCharacterArena
-(v3 + 324) 			- HeroCharacterArenaMelee
-(v3 + 332) 			- HeroCharacterAdventure
-(v3 + 340) 			- HeroIndividualCamera
-(v3 + 348) 			- CombatVisual
-(v3 + 356) 			- TownType
-(v3 + 360) 			- Editable
-(v3 + 460) 			- ArrowButtonState
-(v3 + 464) 			- Decal
-(v3 + 472) 			- Selection
-(v3 + 480) 			- Trace
-(v3 + 488) 			- RaceTraitIcon
-(v3 + 496) 			- RaceTraitDescFileRef
-(v3 + 508) 			- ScenarioHero
-(v3 + 512) 			- AdventureMusic
-(v3 + 520) 			- HideInEditor
-(v3 + 524) 			- PresetMinimalAttributes
+      (v3 + 68) 			- Model
+      (v3 + 76) 			- AnimSet
+      (v3 + 84) 			- blockedTiles
+      (v3 + 96) 			- holeTiles
+      (v3 + 108) 			- activeTiles
+      (v3 + 120) 			- passableTiles
+      (v3 + 132) 			- PossessionMarkerTile - X
+      (v3 + 136) 			- PossessionMarkerTile - Y
+      (v3 + 140) 			- Effect
+      (v3 + 148) 			- EffectWhenOwned
+      (v3 + 156) 			- messagesFileRef
+      (v3 + 168) 			- WaterBased
+      (v3 + 169) 			- ApplyHeroTrace
+      (v3 + 172) 			- SoundEffect
+      (v3 + 180) 			- flybyMessageFileRef
+      (v3 + 192) 			- ObjectTypeFileRef
+      (v3 + 204) 			- TerrainAligned
+      (v3 + 205) 			- FlyPassable
+      (v3 + 208) 			- AdventureSoundEffect
+      (v3 + 216) 			- RazedStatic
+      (v3 + 224) 			- Icon128
+      (v3 + 236) 			- InternalName
+      (v3 + 248) 			- Class
+      (v3 + 252) 			- Specialization
+      (v3 + 256) 			- PrimarySkill
+      (v3 + 268) 			- SpecializationNameFileRef
+      (v3 + 280) 			- SpecializationDescFileRef
+      (v3 + 292) 			- SpecializationIcon
+      (v3 + 296) 			- SpecializationIcon href
+      (v3 + 300) 			- FaceTexture
+      (v3 + 304) 			- FaceTexture href
+      (v3 + 308) 			- FaceTextureSmall
+      (v3 + 312) 			- FaceTextureSmall href
+      (v3 + 316) 			- HeroCharacterArena
+      (v3 + 320) 			- HeroCharacterArena href
+      (v3 + 324) 			- HeroCharacterArenaMelee
+      (v3 + 332) 			- HeroCharacterAdventure
+      (v3 + 336) 			- HeroCharacterAdventure href
+      (v3 + 340) 			- HeroIndividualCamera
+      (v3 + 348) 			- CombatVisual
+      (v3 + 352) 			- CombatVisual href
+      (v3 + 356) 			- TownType
+      (v3 + 360) 			- Editable
+      (v3 + 364) 			- Editable / NameFileRef
+      (v3 + 376) 			- Editable / BiographyFileRef
+      (v3 + 460) 			- ArrowButtonState
+      (v3 + 464) 			- Decal
+      (v3 + 472) 			- Selection
+      (v3 + 476) 			- Selection href
+      (v3 + 480) 			- Trace
+      (v3 + 488) 			- RaceTraitIcon
+      (v3 + 496) 			- RaceTraitDescFileRef
+      (v3 + 508) 			- ScenarioHero
+      (v3 + 512) 			- AdventureMusic
+      (v3 + 520) 			- HideInEditor
+      (v3 + 524) 			- PresetMinimalAttributes

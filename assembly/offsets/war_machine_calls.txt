@@ -1,39 +1,38 @@
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 76)						- return unit shot count 
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 68)						# ruturns unit shots??
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 72)						# return unit initiative         
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 76)						- return unit shots 
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 80)						# return unit defense
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 84)						# return min_dmg 
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 88)						# return max_dmg
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 92)						# return Health
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 96)						- return is unit flying?
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 100)					- return unit hp
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 104)					- return KnownSpells
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 108)					- return KnownSpells
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 112)					# return morale
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 116)					- return unit spellpoints
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 120)					- return unit spellpoints1
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 124)					- return unit spellpoints2
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 128)					- return unit experience
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 132)					- return unit power
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 136)					# return PresetPrice
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 140)					# return Combat Size
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 144)					- return flybySequence
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 148)					- 
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 152)					- 
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 156)					# return Visual
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 160)					# return Visual
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 164)					# return TimeToCommand
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 168)					- return Offense
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 172)					- return Offense
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 176)					- return Defense
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 180)					- return Defense
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 184)					- return MinDamageFactor
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 188)					- return MinDamageFactor
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 192)					- return MaxDamageFactor
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 196)					- return MaxDamageFactor
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 200)					- return unit Cost Gold
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 204)					- return unit PresetPrice
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 208)					- return SubjectOfRandomGeneration
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 212)					- return MonsterShared	
-	*(if_warmachine_exists_return_its_xdb_file_else_0(*(v5 + 28)) + 216)					# return PresetPrice
+============================================================================================
+	GameMechanics/CreatureVisual/Creatures/*(CreatureVisual).xdb array settings
+============================================================================================
+
+	*(a2 + 68)                  # CreatureNameFileRef
+	*(v3 + 80)                  # CreatureAbilitiesFileRef
+	*(v3 + 92)                  # DescriptionFileRef
+	*(v3 + 104)                  # Icon
+	*(v3 + 112)                  # Icon32
+	*(v3 + 120)                  # Icon64 
+	*(v3 + 124)                  # Icon128
+	*(v3 + 132)                  # AnimCharacter
+	*(v3 + 140)                  # DeadCharacter
+	*(v3 + 148)                  # AnimShot
+	*(v3 + 156)                  # SummoningEffect
+	*(v3 + 164)                  # DamageEffect
+	*(v3 + 172)                  # TeleportingMove
+	*(v3 + X)                  # 
+	
+============================================================================================
+	GameMechanics/RefTables/WarMachines.xdb unit stats
+============================================================================================
+	*(a2 + 68)                   # Shots
+	*(v3 + 72)                   # Initiative
+	*(v3 + 76)                   # Health
+	*(v3 + 80)                   # Range
+	*(v3 + 84)                   # spellIDs
+	*(v3 + 92)                   # MagicElement 
+	*(v3 + 96)                   # Cost
+	*(v3 + 124)                  # CombatSize
+	*(v3 + 128)                  # flybySequence
+VRF *(v3 + 156)                  # Visual
+	*(v3 + 144)                  # TimeToCommand
+	*(v3 + 148)                  # Offense
+	*(v3 + 156)                  # Defense
+	*(v3 + 164)                  # MinDamageFactor
+	*(v3 + 172)                  # MaxDamageFactor
+	*(v3 + 180)                  # PresetPrice
