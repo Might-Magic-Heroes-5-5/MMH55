@@ -24,3 +24,21 @@
 (v3 + 252) 			- Type
 (v3 + 256) 			- Razed
 (v3 + 264) 			- Combat
+(v3 + 272) 			- buildings
+(v3 + 276) 			- buildings
+(v3 + 284) 			- FitRandomTownMaskPositionShift - X
+(v3 + 288) 			- FitRandomTownMaskPositionShift - Y
+(v3 + 292) 			- MagicSchool_0
+(v3 + 296) 			- MagicSchool_1
+(v3 + 300) 			- Icons
+(v3 + 304) 			- Icons/Icon55x55
+(v3 + 308) 			- Icons/Icon55x55 href
+(v3 + 312) 			- Icons/IconWithFort55x55
+(v3 + 316) 			- Icons/IconWithFort55x55 href
+
+
+##################################################
+Undetinified memory  town array
+##################################################
+(v3 + 52)(v9, 1)	- Town has fort(1)?
+(v3 + 212)(v3)		- Town ID
