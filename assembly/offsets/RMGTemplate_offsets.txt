@@ -1,0 +1,28 @@
+(v3 + 68) 			- NameFileRef
+(v3 + 76) 			- DescriptionFileRef
+(v3 + 84) 			- Name
+(v3 + 92) 			- Zones
+(v3 + X) 			- Connections
+(v3 + X) 			- GraalOnMap
+(v3 + X) 			- MinPlayers
+(v3 + X) 			- MaxPlayers
+(v3 + X) 			- MinMapSize
+(v3 + X) 			- MaxMapSize
+(v3 + X) 			- Underground
+(v3 + X) 			- TestTemplate
+
+ZONES
+(v3 + 32) 			- Mines
+(v3 + 44) 			- AbandonedMines
+(v3 + 48) 			- Dwellings
+(v3 + 60) 			- UpgBuildingsDensity
+(v3 + 64) 			- TreasureDensity
+(v3 + 68) 			- TreasureChestDensity
+(v3 + 72) 			- Prisons
+(v3 + 76) 			- LandCartographer
+(v3 + 80) 			- ShopPoints
+(v3 + 84) 			- ShrinePoints
+(v3 + 88) 			- LuckMoralBuildingsDensity
+(v3 + 92) 			- ResourceBuildingsDensity
+(v3 + 96) 			- TreasureBuildingPoints
+

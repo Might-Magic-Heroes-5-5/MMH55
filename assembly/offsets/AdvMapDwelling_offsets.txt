@@ -1,0 +1,15 @@
+(v3 + 8) 			- Visited/not Visited marker
+(v3 + 68) 			- Pos
+(v3 + 68) 			- Rot
+(v3 + 68) 			- Floor
+(v3 + 68) 			- Name
+(v3 + 68) 			- CombatScript
+(v3 + 68) 			- pointLights
+(v3 + 68) 			- Shared
+(v3 + 68) 			- PlayerID
+(v3 + 68) 			- CaptureTrigger
+(v3 + 68) 			- RandomCreatures
+(v3 + 68) 			- creaturesEnabled
+(v3 + 68) 			- RndSource
+(v3 + 68) 			- LinkToPlayer
+(v3 + 68) 			- LinkToTown

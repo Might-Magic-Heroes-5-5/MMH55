@@ -1,4 +1,3 @@
-(v3 + 8) 			- Visited/not Visited marker
 (v3 + 68) 			- Model
 (v3 + 76) 			- AnimSet
 (v3 + 84) 			- blockedTiles
