@@ -34,7 +34,7 @@ originalValue:  *ToE_dw_max_id
 patchValue:     *M55_dw_max_id
 --- 
 group: Original
-patchAddress:   0091EB37                                                  ### Remove dwell placement cap for static dwellings
+patchAddress:   0051DF37                                                  ### Remove dwell placement cap for static dwellings
 originalBytes:  B9 03 00 00 00
 patchBytes:     90 90 90 90 90
 --- 
