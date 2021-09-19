@@ -1,3 +1,4 @@
+(v3 + 8) 			- town rotation maybe
 (v3 + 68) 			- Model
 (v3 + 76) 			- AnimSet
 (v3 + 84) 			- blockedTiles
@@ -7,7 +8,7 @@
 (v3 + 132) 			- PossessionMarkerTile - X
 (v3 + 136) 			- PossessionMarkerTile - Y
 (v3 + 140) 			- Effect
-(v3 + 148) 			- EffectWhenOwned
+(v3 + 148) 			- EffectWhenOwned + 77
 (v3 + 156) 			- messagesFileRef
 (v3 + 168) 			- WaterBased
 (v3 + 169) 			- ApplyHeroTrace

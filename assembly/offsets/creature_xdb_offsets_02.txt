@@ -120,10 +120,16 @@
   *(unit_v8 + 112)							- unit morale after bonuses
   *(unit_v8 + 116)							- unit luck after bonuses
   *(unit_v8 + 124)							- unit range
+   (unit_v8 + 140)							- unit ability list
   *(unit_v8 + 152) = 0;
   *(unit_v8 + 156)
   *(unit_v8 + 168)
-  *(unit_v8 + 196) = sub_9DBE10(a3, v5, SLODWORD(a4));
+  *(unit_v8 + 172)
+  *(unit_v8 + 176)
+  *(unit_v8 + 180)
+  *(unit_v8 + 184)
+  *(unit_v8 + 188)
+  *(unit_v8 + 196) = 						- does creature benefit from hero spec may be?
   *(unit_v8 + 184) = *(v5 + 72);
   *(unit_v8 + 188) = *(v5 + 76);
   *v13 = *(v5 + 56);
