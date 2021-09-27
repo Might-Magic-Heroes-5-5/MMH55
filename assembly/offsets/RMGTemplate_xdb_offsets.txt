@@ -1,6 +1,7 @@
 *(v3 + X)				-
 *(v3 + X)				-
-*(v3 + X)[2]			- Zones
+*(v3 + 92)[2]			- Zones					|MAP editor [23]
+*(v3 + 96)  			- Zones					|MAP editor [24] last address
 *(v3 + X)[3]			- Connections
 *(v3 + X)				-
 *(v3 + X)				-
@@ -10,4 +11,39 @@
 *(v3 + X)				-
 *(v3 + X)				-
 *(v3 + X)				-
-*(v3 + X)				-
+ X)				-
+
+#########################################
+
+*(v3 + 236)			    - Zone ID
+
+
+###############Zone item offsets - array size 112 bytes / Editor - 116 bytes ##########################
+*(v3 + 0)				- <Index>
+*(v3 + 4)				- <Setting>
+*(v3 + 8)				- <CanBeWater>
+*(v3 + 12)				- <Size>
+*(v3 + 16)				- <CanBePlayerStart>
+*(v3 + 20)				- <Town>
+*(v3 + 24)				- <TownGuardStrenght>
+*(v3 + 28)				- <Mines>
+*(v3 + 32)				- <Mines>
+*(v3 + 36)				- <Mines>
+*(v3 + 40)				- <AbandonedMines>
+*(v3 + 44)				- <Dwellings>
+*(v3 + 48)				- <Dwellings>
+*(v3 + 52)				- <Dwellings>
+*(v3 + 56)				- <UpgBuildingsDensity>
+*(v3 + 60)				- <TreasureDensity>
+*(v3 + 64)				- <TreasureChestDensity>
+*(v3 + 68)				- <Prisons>
+*(v3 + 72)				- <LandCartographer>
+*(v3 + 76)				- <ShopPoints>
+*(v3 + 80)				- <ShrinePoints>
+*(v3 + 84)				- <LuckMoralBuildingsDensity>
+*(v3 + 88)				- <ResourceBuildingsDensity>
+*(v3 + 92)				- <TreasureBuildingPoints>
+*(v3 + 96)				- <TreasureBlocksTotalValue>
+*(v3 + 100)				- <DenOfThieves>
+*(v3 + 104)				- <RedwoodObservatoryDensity>
+*(v3 + 108)				- <BuffPoints>

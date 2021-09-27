@@ -1,4 +1,5 @@
 (v3 + 8) 			- Visited/not Visited marker
+(v3 + 12) 			- dwelling tier?
 (v3 + 68) 			- Pos
 (v3 + 68) 			- Rot
 (v3 + 68) 			- Floor
