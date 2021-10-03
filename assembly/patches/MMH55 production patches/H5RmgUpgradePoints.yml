@@ -1,0 +1,79 @@
+# ----------------------------------------------------
+# ----------------- RMG Upgrade Points fix -----------
+# ----------------------------------------------------
+#
+# H5 Rmg Upgrade Points changes per selection 
+#
+# ----------------------------------------------------
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original 
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00506A06                                                  ### UpgradeBuilding multiplier case: default
+originalBytes:  C7 44 24 1C 00 00 80 3F                                   ### value is 1.0
+patchBytes:     C7 44 24 1C 00 00 00 3F                                   ### value is 0.5
+--- 
+group: Original
+patchAddress:   00506A17                                                  ### case: 0
+originalBytes:  C7 44 24 1C CD CC 4C 3E                                   ### value is 0.2
+patchBytes:     C7 44 24 1C 00 00 00 3F                                   ### value is 0.5
+--- 
+group: Original
+patchAddress:   00506A21                                                  ### case: 1
+originalBytes:  C7 44 24 1C 00 00 00 3F                                   ### value is 0.5
+patchBytes:     C7 44 24 1C 9A 99 19 3F                                   ### value is 0.6
+--- 
+group: Original
+patchAddress:   00506A2B                                                  ### case: 2
+originalBytes:  C7 44 24 1C 00 00 80 3F                                   ### value is 1.0
+patchBytes:     C7 44 24 1C 33 33 33 3F                                   ### value is 0.7
+--- 
+group: Original
+patchAddress:   00506A35                                                  ### case: 3
+originalBytes:  C7 44 24 1C 00 00 00 40                                   ### value is 2.0
+patchBytes:     C7 44 24 1C CD CC 4C 3F                                   ### value is 0.8
+--- 
+group: Original
+patchAddress:   00506A3F                                                  ### case: 4
+originalBytes:  C7 44 24 1C 00 00 80 40                                   ### value is 4.0
+patchBytes:     C7 44 24 1C 00 00 80 3F                                   ### value is 1.0
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   006E7E47
+originalBytes:  06
+patchBytes:     03
+--- # ----------- MAP EDITOR EXE 3.1 PATCH DATA ------------
+group: MapEditorOriginal
+checkAddress:   004B6DB0
+checkBytes:     B8 B4 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC
+patchAddress:   008F1B56                                                  ### case: default
+originalBytes:  C7 44 24 1C 00 00 80 3F                                   ### value is 1.0
+patchBytes:     C7 44 24 1C 00 00 00 3F                                   ### value is 0.5
+--- 
+group: MapEditorOriginal
+patchAddress:   008F1B67                                                  ### case: 0
+originalBytes:  C7 44 24 1C CD CC 4C 3E                                   ### value is 0.2
+patchBytes:     C7 44 24 1C 00 00 00 3F                                   ### value is 0.5
+--- 
+group: MapEditorOriginal
+patchAddress:   008F1B71                                                  ### case: 1
+originalBytes:  C7 44 24 1C 00 00 00 3F                                   ### value is 0.5
+patchBytes:     C7 44 24 1C 9A 99 19 3F                                   ### value is 0.6
+--- 
+group: MapEditorOriginal
+patchAddress:   008F1B7B                                                  ### case: 2
+originalBytes:  C7 44 24 1C 00 00 80 3F                                   ### value is 1.0
+patchBytes:     C7 44 24 1C 33 33 33 3F                                   ### value is 0.7
+--- 
+group: MapEditorOriginal
+patchAddress:   008F1B85                                                  ### case: 3
+originalBytes:  C7 44 24 1C 00 00 00 40                                   ### value is 2.0
+patchBytes:     C7 44 24 1C CD CC 4C 3F                                   ### value is 0.8
+--- 
+group: MapEditorOriginal
+patchAddress:   008F1B8F                                                  ### case: 4
+originalBytes:  C7 44 24 1C 00 00 80 40                                   ### value is 4.0
+patchBytes:     C7 44 24 1C 00 00 80 3F                                   ### value is 1.0

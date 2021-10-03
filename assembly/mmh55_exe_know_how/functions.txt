@@ -206,9 +206,7 @@
 	(*(*(v6 + 28) + 236))(v6 + 28, 65, *(a4 + 4))														- this commands make hero leans spell ID 65 counterstrike
 	(*(*(this + 28) + 448))(this + 28, <primary skill id>, -<value to reduce with>)						- reduce primary skill value
 	(*(*v14 + 88))(v14)																					- element ID
-	
-	*(v4 + 152)																							- returns race iD	
-	
+
 	(*(*a3 + 84))(a3, X) 																				- return 1 if town_building with id X exists
 	*(v234 - 7) 																						- town_building_id
 	*(v234 - 6)																	 						- town_building_level - important for market place and magic guild
