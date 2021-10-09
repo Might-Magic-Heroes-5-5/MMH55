@@ -1,15 +1,15 @@
-(v3 + 68) 			- NameFileRef
-(v3 + 76) 			- DescriptionFileRef
-(v3 + 84) 			- Name
-(v3 + 92) 			- Zones
-(v3 + X) 			- Connections
-(v3 + X) 			- GraalOnMap
-(v3 + X) 			- MinPlayers
-(v3 + X) 			- MaxPlayers
-(v3 + X) 			- MinMapSize
-(v3 + X) 			- MaxMapSize
-(v3 + X) 			- Underground
-(v3 + X) 			- TestTemplate
+[0] (v3 + 68) 			- NameFileRef
+[1] (v3 + 76) 			- DescriptionFileRef
+[2] (v3 + 84) 			- Name
+[3] (v3 + 92) 			- Zones
+[1] (v3 + X) 			- Connections
+[1] (v3 + X) 			- GraalOnMap
+[1] (v3 + X) 			- MinPlayers
+[1] (v3 + X) 			- MaxPlayers
+[1] (v3 + X) 			- MinMapSize
+[1] (v3 + X) 			- MaxMapSize
+[1] (v3 + X) 			- Underground
+[1] (v3 + X) 			- TestTemplate
 
 ZONES
 (v3 + 32) 			- Mines

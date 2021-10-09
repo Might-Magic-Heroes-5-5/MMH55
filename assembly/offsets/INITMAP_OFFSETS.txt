@@ -1,0 +1,3 @@
+
+
+[45] *(v3 + 180) 			- map seed (taken from time in seconds)
