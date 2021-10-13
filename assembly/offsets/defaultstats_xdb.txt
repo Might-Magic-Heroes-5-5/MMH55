@@ -527,8 +527,8 @@ VRF	*(number_of_creatures_maybe() + 2072)																- Waylayer_ATBShiftPerL
 VRF	*(number_of_creatures_maybe() + 2076)																- Necromancer
 VRF	*(number_of_creatures_maybe() + 2080)																- Soulhunter_ManesSummonedBase
 vRF	*(number_of_creatures_maybe() + 2084)																- Soulhunter_ManesSummonedPerLevel
-VRF	*(number_of_creatures_maybe() + 2088)																- Reanimator_SpellpowerBonus
-VRF *(number_of_creatures_maybe() + 2092)																- Reanimator_SpellpowerBonusLevelDivisor
+522	*(number_of_creatures_maybe() + 2088)																- Reanimator_SpellpowerBonus
+523 *(number_of_creatures_maybe() + 2092)																- Reanimator_SpellpowerBonusLevelDivisor
 	*(number_of_creatures_maybe() + 2096)																- Reanimator_SpellpowerBonusPerLevel
 	*(number_of_creatures_maybe() + 2100)																- <AvatarOfDeath_Creature href="AvatarOfDeath.xdb#xpointer(/RPGCombatUniqueCreatureStats)"/>
 	*(number_of_creatures_maybe() + 2104)																- <AvatarOfDeath_Creature href="AvatarOfDeath.xdb#xpointer(/RPGCombatUniqueCreatureStats)"/>
