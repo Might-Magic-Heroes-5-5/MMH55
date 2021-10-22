@@ -37,6 +37,12 @@ patchBytes:     D8 0D 9C F7 E2 00                                         ### ad
 group: Quantomas3.1j
 checkAddress:   00000400
 checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+group: Quantomas3.1j
+patchAddress:   00911641                                                  ### case: default
+originalBytes:  D8 0D 34 C2 E0 00                                         ### address of 0.7
+patchBytes:     D8 0D F4 29 F5 00                                         ### address of 1.75
+---
+group: Quantomas3.1j
 patchAddress:   00911671                                                  ### case: 2
 originalBytes:  D8 0D 10 C5 E3 00                                         ### address of 1.5    
 patchBytes:     D8 0D A0 C4 E0 00                                         ### address of 3.0
@@ -50,11 +56,6 @@ group: Quantomas3.1j
 patchAddress:   009116CB                                                  ### case: 4
 originalBytes:  D8 0D 0C A3 EB 00                                         ### address of 3.75
 patchBytes:     D8 0D 14 AC E0 00                                         ### address of 8.0
---- 
-group: Quantomas3.1j
-patchAddress:   00911641                                                  ### case: default
-originalBytes:  D8 0D 34 C2 E0 00                                         ### address of 0.69999999
-patchBytes:     D8 0D F4 29 F5 00                                         ### address of 1.75
 --- # ----------- MAP EDITOR EXE 3.1 PATCH DATA ------------
 group: MapEditorOriginal
 checkAddress:   004B6DB0
