@@ -1,0 +1,46 @@
+ sub_6E4A60
+ 
+ switch ( *(a1 + 32) )
+      {
+        case 0: "Permanent"
+          A1ArrayItems_equal_stringA2_proxy(&Format, 
+          v20 = (*(*(v14 + *(v14[1] + 8) + 4) + 268))(v14 + *(v14[1] + 8) + 4, &Format);
+          sub_404740(v47, v20);
+          PeiCoreSetMem(Format);
+          break;
+        case 1: "Turns"
+          A1ArrayItems_equal_stringA2_proxy(v61, );
+          v22 = (*(*(v14 + *(v14[1] + 8) + 4) + 268))(v14 + *(v14[1] + 8) + 4, v61);
+          sub_404740(v47, v22);
+          PeiCoreSetMem(v61[0]);
+          break;
+        case 2: "Actions"
+          A1ArrayItems_equal_stringA2_proxy(v56, );
+          v23 = (*(*(v14 + *(v14[1] + 8) + 4) + 268))(v14 + *(v14[1] + 8) + 4, v56);
+          sub_404740(v47, v23);
+          PeiCoreSetMem(v56[0]);
+          break;
+        case 3: "UntilTouched"
+          A1ArrayItems_equal_stringA2_proxy(v60, );
+          v21 = (*(*(v14 + *(v14[1] + 8) + 4) + 268))(v14 + *(v14[1] + 8) + 4, v60);
+          sub_404740(v47, v21);
+          PeiCoreSetMem(v60[0]);
+          break;
+        case 4: "Hitpoints"
+          A1ArrayItems_equal_stringA2_proxy(&v48, );
+          v24 = (*(*(v14 + *(v14[1] + 8) + 4) + 268))(v14 + *(v14[1] + 8) + 4, &v48);
+          sub_404740(v47, v24);
+          PeiCoreSetMem(v48);
+          break;
+        case 5: "UntilFirstAttack"
+          A1ArrayItems_equal_stringA2_proxy(&v44, );
+          v19 = (*(*(v14 + *(v14[1] + 8) + 4) + 268))(v14 + *(v14[1] + 8) + 4, &v44);
+          sub_404740(v47, v19);
+          PeiCoreSetMem(v44);
+          break;
+        case 6: 
+          sub_404740(v47, (a1 + 88));
+          break;
+        default:
+          break;
+      }

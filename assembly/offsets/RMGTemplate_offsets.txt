@@ -2,7 +2,7 @@
 [1] (v3 + 76) 			- DescriptionFileRef
 [2] (v3 + 84) 			- Name
 [3] (v3 + 92) 			- Zones
-[1] (v3 + X) 			- Connections
+[1] (v3 + 100) 			- Connections
 [1] (v3 + X) 			- GraalOnMap
 [1] (v3 + X) 			- MinPlayers
 [1] (v3 + X) 			- MaxPlayers
@@ -25,4 +25,8 @@ ZONES
 (v3 + 88) 			- LuckMoralBuildingsDensity
 (v3 + 92) 			- ResourceBuildingsDensity
 (v3 + 96) 			- TreasureBuildingPoints
+(v3 + 100) 			- TreasureBlocksTotalValue
+(v3 + 104) 			- DenOfThieves
+(v3 + 108) 			- RedwoodObservatoryDensity
+(v3 + 112) 			- BuffPoints
 

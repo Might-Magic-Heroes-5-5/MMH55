@@ -1,8 +1,10 @@
-(v3 + 68) 			- 
+(v3 + 68) 			- Creature Combat Size - 1 or 2
 (v3 + 76) 			- 
 (v3 + 84) 			- 
+(v3 + 92) 			- If stack has taken damage?
 (v3 + 96) 			- 
 (v3 + 108) 			- Number of creatures to be revived?
+(v3 + 112)(v3)		- Number of creatures killed since begining of the combat | Initial stack size +120 -> (*(*v3 + 8))(CreaturesKilled_v6) 
 (v3 + 120) 			- 
 (v3 + 132) 			-
 (v3 + 136) 			-
@@ -23,7 +25,7 @@
 (v3 + 240) 			-
 (v3 + 252) 			-
 (v3 + 264) 			- 
-(v3 + 416) 			- creature ID max health
+(v3 + 416)(v3)		- creature ID max health
 (v3 + 420) 			-  
 (v3 + 424) 			-  
 (v3 + 428) 			-  
@@ -34,8 +36,8 @@
 (v3 + 448) 			-  
 (v3 + 452) 			-  
 (v3 + 456)			-  
-(v3 + 460) 			- stack creature health left
-(v3 + 464) 			- stack current number of creatures
+(v3 + 460) 			- stack top creature health left
+(v3 + 464) 			- current stack size
 (v3 + 468)			- 
 (v3 + 472)			- 
 (v3 + 476)			- 
@@ -60,7 +62,7 @@
 (v3 + 552)			- 
 (v3 + 556)			- hero current mana
 (v3 + 560)			- hero max mana
-(v3 + 564)			- hero level
+(v3 + 564)(v3)		- hero level
 (v3 + 568)			- hero mastery level
 (v3 + 572) 			- hero spell power?
 (v3 + 576)			- 

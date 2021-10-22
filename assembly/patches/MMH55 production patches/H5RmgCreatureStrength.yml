@@ -1,0 +1,84 @@
+# ----------------------------------------------------
+# ----------------- RMG Creature Strength fix -----------
+# ----------------------------------------------------
+#
+# Changes H5 Rmg Creature Strength multiplier per selection 
+#
+# ----------------------------------------------------
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original 
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   007A6BBD                                                  ### case: 0
+originalBytes:  D8 0D E4 2F E1 00                                         ### address of 0.40000001
+patchBytes:     D8 0D E4 A7 E0 00                                         ### address of 1.0
+--- 
+group: Original
+patchAddress:   007A6BE8                                                  ### case: 1
+originalBytes:  D8 0D 04 A7 E1 00                                         ### address of 0.89999998
+patchBytes:     D8 0D FC 26 E8 00                                         ### address of 1.7
+--- 
+group: Original
+patchAddress:   007A6C10                                                  ### case: 2
+originalBytes:  D8 0D FC 26 E8 00                                         ### address of 1.7
+patchBytes:     D8 0D 80 32 E1 00                                         ### address of 3.0
+--- 
+group: Original
+patchAddress:   007A6C38                                                  ### case: 3
+originalBytes:  D8 0D 80 1C E1 00                                         ### address of 4.0
+patchBytes:     D8 0D 80 1C E1 00                                         ### address of 4.0
+--- 
+group: Original
+patchAddress:   007A6C60                                                  ### case: 4
+originalBytes:  D8 0D 34 7D E5 00                                         ### address of 12.0
+patchBytes:     D8 0D 9C F7 E2 00                                         ### address of 8.0
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   00911671                                                  ### case: 2
+originalBytes:  D8 0D 10 C5 E3 00                                         ### address of 1.5    
+patchBytes:     D8 0D A0 C4 E0 00                                         ### address of 3.0
+--- 
+group: Quantomas3.1j
+patchAddress:   0091169E                                                  ### case: 3
+originalBytes:  D8 0D 10 A3 EB 00                                         ### address of 2.25
+patchBytes:     D8 0D B8 A5 E0 00                                         ### address of 4.0   
+--- 
+group: Quantomas3.1j
+patchAddress:   009116CB                                                  ### case: 4
+originalBytes:  D8 0D 0C A3 EB 00                                         ### address of 3.75
+patchBytes:     D8 0D 14 AC E0 00                                         ### address of 8.0
+--- 
+group: Quantomas3.1j
+patchAddress:   00911641                                                  ### case: default
+originalBytes:  D8 0D 34 C2 E0 00                                         ### address of 0.69999999
+patchBytes:     D8 0D F4 29 F5 00                                         ### address of 1.75
+--- # ----------- MAP EDITOR EXE 3.1 PATCH DATA ------------
+group: MapEditorOriginal
+checkAddress:   004B6DB0
+checkBytes:     B8 B4 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC
+patchAddress:   00392C6D                                                  ### case: 0
+originalBytes:  D8 0D 5C F0 0F 01                                         ### address of 0.40000001
+patchBytes:     D8 0D 48 C0 0D 01                                         ### address of 1.0
+--- 
+group: MapEditorOriginal
+patchAddress:   00392C98                                                  ### case: 1
+originalBytes:  D8 0D 64 50 0E 01                                         ### address of 0.89999998
+patchBytes:     D8 0D E8 DA 11 01                                         ### address of 1.7
+--- 
+group: MapEditorOriginal
+patchAddress:   00392CC0                                                  ### case: 2
+originalBytes:  D8 0D E8 DA 11 01                                         ### address of 1.7
+patchBytes:     D8 0D 94 24 0E 01                                         ### address of 3.0
+--- 
+group: MapEditorOriginal
+patchAddress:   00392CE8                                                  ### case: 3
+originalBytes:  D8 0D A0 C9 0D 01                                         ### address of 4.0
+patchBytes:     D8 0D A0 C9 0D 01                                         ### address of 4.0
+--- 
+group: MapEditorOriginal
+patchAddress:   00392D10                                                  ### case: 4
+originalBytes:  D8 0D E4 DA 11 01                                         ### address of 12.0
+patchBytes:     D8 0D E8 C1 11 01                                         ### address of 8.0

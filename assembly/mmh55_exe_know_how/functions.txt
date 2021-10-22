@@ -93,7 +93,6 @@
 	*(_DWORD *)(v3 + 380))(v3)																			- return ATB of v3
 	*(_DWORD *)(&hero + 412))(&hero, v1, a3)															- give v1 experience to hero &hero
 	*(_DWORD *)(&hero + 416))(&hero, exp_v19)															- return hero experience
-	*(_DWORD *)(target_unit_a2 + 416)(target_unit_a2)													- health of one creature
 	*(_DWORD *)(*v3 + 472))(v3) 																		- range (1) or melee attack (0)?
 	*(_DWORD *)(*v3 + 476))(v3) 																		- range retaliate related
 	*(_DWORD *)(unit + 496)(unit, *(v1 + 24), hp_to_replenish, 1);										- replenish count with rune of revive
