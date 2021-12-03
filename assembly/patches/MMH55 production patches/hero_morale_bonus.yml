@@ -1,0 +1,27 @@
+# ----------------------------------------------------
+# ----------------- Hero Morale Bonus v1 --------------
+# ----------------------------------------------------
+#
+# Changes army morale bonus provided by the hero when he is of the same alignment
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+ - &bonusMoraleM55 0
+ # -------------- Things that should not be modified -----------------
+ - &bonusMoraleToe 1
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   005A963                                                     
+valueType:      Byte
+originalValue:  *bonusMoraleToe
+patchValue:     *bonusMoraleM55
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0054C703                                                     
+valueType:      Byte
+originalValue:  *bonusMoraleToe
+patchValue:     *bonusMoraleM55                                                 
