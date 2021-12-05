@@ -1,0 +1,41 @@
+# ----------------------------------------------------
+# ----------------- Artifact spell damage bonus --------------
+# ----------------------------------------------------
+#
+# Adds spell damage bonus to more artifacts
+#
+# ----------------------------------------------------
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00760C90                                        ## Jump to new code space
+originalBytes:  83 F9 2D 7C 08 83 F9 32 7F 03 B0 01 C3 32 C0 C3
+patchBytes:     E9 DB 4E 5D 00 C3 90 90 90 90 90 90 90 90 90 90
+---
+group: Original
+patchAddress:   00BD9800                                        ## Add ASCI description of the patch in asselby
+originalBytes:  00*                                              
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 41 72 74 66 20 73 70 65 6C 6C 20 64 6D 67
+---
+patchAddress:   00BD9820  ## 01146820                           ## added code
+originalBytes:  00*                                             
+patchBytes:     8B 4D 04 E8 68 F2 78 FF 83 F8 01 75 48 68 C0 00 00 00 8B CF E8 77 A4 74 FF 85 C0 74 38 DB 44 24 14 6A 00 D9 7C 24 1C 6A 00 0F B7 44 24 20 D8 0D C8 9F E0 00 80 CC 0C 68 C0 00 00 00 B2 01 8B CB 89 44 24 20 D9 6C 24 20 DB 5C 24 20 D9 6C 24 24 E8 5B 1D 84 FF 8B 4D 04 E8 13 F2 78 FF 83 F8 04 75 48 68 C1 00 00 00 8B CF E8 22 A4 74 FF 85 C0 74 38 DB 44 24 14 6A 00 D9 7C 24 1C 6A 00 0F B7 44 24 20 D8 0D C8 9F E0 00 80 CC 0C 68 C1 00 00 00 B2 01 8B CB 89 44 24 20 D9 6C 24 20 DB 5C 24 20 D9 6C 24 24 E8 06 1D 84 FF 8B 4D 04 E8 BE F1 78 FF 83 F8 02 75 48 68 C2 00 00 00 8B CF E8 CD A3 74 FF 85 C0 74 38 DB 44 24 14 6A 00 D9 7C 24 1C 6A 00 0F B7 44 24 20 D8 0D C8 9F E0 00 80 CC 0C 68 C2 00 00 00 B2 01 8B CB 89 44 24 20 D9 6C 24 20 DB 5C 24 20 D9 6C 24 24 E8 B1 1C 84 FF 8B 4D 04 E8 69 F1 78 FF 83 F8 03 75 48 68 C3 00 00 00 8B CF E8 78 A3 74 FF 85 C0 74 38 DB 44 24 14 6A 00 D9 7C 24 1C 6A 00 0F B7 44 24 20 D8 0D C8 9F E0 00 80 CC 0C 68 C3 00 00 00 B2 01 8B CB 89 44 24 20 D9 6C 24 20 DB 5C 24 20 D9 6C 24 24 E8 5C 1C 84 FF 83 7C 24 14 00 0F 8E 51 C9 76 FF E9 9A C8 76 FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4   
+patchAddress:   004B2614 ## 008B3214                            ## Jump to new code space
+originalBytes:  E8 B7 53 0D 00 83 7C 24 14 00 0F 8E 9E 00 00 00
+patchBytes:     E8 B7 53 0D 00 E9 02 36 89 00 90 90 90 90 90 90
+---
+group: Quantomas3.1j
+patchAddress:   00BD9800                                        ## Add ASCI description of the patch in asselby
+originalBytes:  00*                                              
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 41 72 74 66 20 73 70 65 6C 6C 20 64 6D 67
+---
+group: Quantomas3.1j
+patchAddress:   00BD9820  ## 01146820                           ## added code
+originalBytes:  00*                                             
+patchBytes:     8B 4D 04 E8 68 F2 78 FF 83 F8 01 75 48 68 C0 00 00 00 8B CF E8 77 A4 74 FF 85 C0 74 38 DB 44 24 14 6A 00 D9 7C 24 1C 6A 00 0F B7 44 24 20 D8 0D C8 9F E0 00 80 CC 0C 68 C0 00 00 00 B2 01 8B CB 89 44 24 20 D9 6C 24 20 DB 5C 24 20 D9 6C 24 24 E8 5B 1D 84 FF 8B 4D 04 E8 13 F2 78 FF 83 F8 04 75 48 68 C1 00 00 00 8B CF E8 22 A4 74 FF 85 C0 74 38 DB 44 24 14 6A 00 D9 7C 24 1C 6A 00 0F B7 44 24 20 D8 0D C8 9F E0 00 80 CC 0C 68 C1 00 00 00 B2 01 8B CB 89 44 24 20 D9 6C 24 20 DB 5C 24 20 D9 6C 24 24 E8 06 1D 84 FF 8B 4D 04 E8 BE F1 78 FF 83 F8 02 75 48 68 C2 00 00 00 8B CF E8 CD A3 74 FF 85 C0 74 38 DB 44 24 14 6A 00 D9 7C 24 1C 6A 00 0F B7 44 24 20 D8 0D C8 9F E0 00 80 CC 0C 68 C2 00 00 00 B2 01 8B CB 89 44 24 20 D9 6C 24 20 DB 5C 24 20 D9 6C 24 24 E8 B1 1C 84 FF 8B 4D 04 E8 69 F1 78 FF 83 F8 03 75 48 68 C3 00 00 00 8B CF E8 78 A3 74 FF 85 C0 74 38 DB 44 24 14 6A 00 D9 7C 24 1C 6A 00 0F B7 44 24 20 D8 0D C8 9F E0 00 80 CC 0C 68 C3 00 00 00 B2 01 8B CB 89 44 24 20 D9 6C 24 20 DB 5C 24 20 D9 6C 24 24 E8 5C 1C 84 FF 83 7C 24 14 00 0F 8E 51 C9 76 FF E9 9A C8 76 FF

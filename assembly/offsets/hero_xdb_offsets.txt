@@ -3,10 +3,23 @@
 (*(*a3 + 32))(a3)				 - return hero level
 (*(*a3 + 116))(a3, X)			 - Has artifact with ID X?
 (*(*a3 + 376))(X)  				 - returns mastery of hero skill with id X
-(*(*a3 + 404))(a3, X)			 - hero has specialization with id X
+(*(*a3 + 404))(a3, X)			 - hero has specialization with id X (a3, X, a4, week_id)
 (*(*a3 + 412))(&hero, v1, a3)	 - give v1 experience to hero
 (*(*a3 + 812))(a3 + X)   	 	 - 2 or more artifacts of X set?
 (*(*v4 + 820))(v4) + 16)     	 - ????????
 
 *(v7 + 600)                      - Hero race ID
 *(v7 + 704)                      - Hero role ID
+
+
+
+
+
+
+
+*(v7 + 316)                      - Army array
+
+
+
+
+
