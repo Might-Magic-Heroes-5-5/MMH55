@@ -123,4 +123,4 @@ patchBytes:     *QAI33
 group: Quantomas3.1j
 patchAddress:   00BD9953  ## 01146953                           ## added code
 originalBytes:  00*
-patchBytes:     80 CC 0C 68 C3 00 00 00 B2 01 8B CB 89 44 24 20 D9 6C 24 20 DB 5C 24 20 D9 6C 24 24 E8 5C 1C 84 FF 83 7C 24 14 00 0F 8E 51 C9 76 FF E9 9A C8 76 FF
+patchBytes:     80 CC 0C 68 C3 00 00 00 B2 01 8B CB 89 44 24 20 D9 6C 24 20 DB 5C 24 20 D9 6C 24 24 E8 5C 1C 84 FF 83 7C 24 14 00 0F 8E 43 C9 76 FF E9 9A C8 76 FF
