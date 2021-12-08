@@ -19,6 +19,21 @@ originalBytes:  83 7C 24 10 00 0F 8E 9E 00 00 00
 patchBytes:     E9 95 F7 7B 00 90 90 90 90 90 90
 ---
 group: Original
+patchAddress:   005762FE  ## 00976EFE                                       ## adjust jump
+originalBytes:  0F 84 82 01 00 00                                              
+patchBytes:     0F 84 70 FA 7B 00 
+---
+group: Original
+patchAddress:   0057631F  ## 00976F1F                                       ## adjust jump
+originalBytes:  0F 84 61 01 00 00                                              
+patchBytes:     0F 84 4F FA 7B 00
+---
+group: Original
+patchAddress:   0057633B  ## 00976F3B                                       ## adjust jump
+originalBytes:  0F 84 45 01 00 00                                             
+patchBytes:     0F 84 33 FA 7B 00
+---
+group: Original
 patchAddress:   00BD9800                                        ## Add ASCI description of the patch in asselby
 originalBytes:  00*                                              
 patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 41 72 74 66 20 73 70 65 6C 6C 20 64 6D 67
@@ -49,7 +64,7 @@ originalBytes:  00*
 patchBytes:     80 CC 0C 68 C1 00 00 00 B2 01 8B CB 89 44 24 1C D9 6C 24 1C DB 5C 24 1C D9 6C 24 20 E8 F6 50 88 FF 8B 4D 04 E8 EE D9 8F FF 83 F8 02 75 48 68 C2 00 00 00 8B CF E8 9D FD B6 FF 85 C0 74 38 DB 44 24 10 6A 00 D9 7C 24 18 6A 00 0F B7 44 24 1C 
 ---
 group: Original
-patchAddress:   00BD98F8  ## 011368F80                           ## added code
+patchAddress:   00BD98F8  ## 011368F80                          ## added code
 originalBytes:  00*                                         
 patchBytes:     *TOE33
 ---
