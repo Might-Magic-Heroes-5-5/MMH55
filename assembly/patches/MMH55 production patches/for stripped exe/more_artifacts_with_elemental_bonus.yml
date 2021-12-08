@@ -76,6 +76,21 @@ originalBytes:  83 7C 24 14 00 0F 8E 9E 00 00 00
 patchBytes:     E9 02 36 89 00 90 90 90 90 90 90
 ---
 group: Quantomas3.1j
+patchAddress:   004B2491 ## 008B3091                            ## adjust jump
+originalBytes:  0F 84 82 01 00 00                                             
+patchBytes:     0F 84 DD 38 89 00
+---
+group: Quantomas3.1j
+patchAddress:   004B24B2 ## 008B30B2                            ## adjust jump
+originalBytes:  0F 84 61 01 00 00                                             
+patchBytes:     0F 84 BC 38 89 00
+---
+group: Quantomas3.1j
+patchAddress:   004B24CE ## 008B30CE                            ## adjust jump
+originalBytes:  0F 84 45 01 00 00                                           
+patchBytes:     0F 84 A0 38 89 00
+---
+group: Quantomas3.1j
 patchAddress:   00BD9800                                        ## Add ASCI description of the patch in asselby
 originalBytes:  00*                                              
 patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 41 72 74 66 20 73 70 65 6C 6C 20 64 6D 67
