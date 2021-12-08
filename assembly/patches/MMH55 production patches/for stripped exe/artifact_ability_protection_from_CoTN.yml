@@ -48,7 +48,7 @@ patchBytes:     D0 8B 8B 00 8B 8C 8B 00 1C 8E 8B 00 56 8D 8B 00 1C 8E 8B 00 1C 8
 group: Quantomas3.1j
 patchAddress:   00BD9A70  ## 01146A70                           ## case 21 CoTN specifics
 originalBytes:  00*                                         
-patchBytes:     68 B4 00 00 00 E8 35 A2 74 FF 85 C0 0F 84 BB 24 77 FF E9 AD 24 77 FF 90
+patchBytes:     68 B4 00 00 00 E8 36 A2 74 FF 85 C0 0F 84 9A 23 77 FF E9 AE 24 77 FF 90
 #---
 #################################
 #group: Quantomas3.1j
