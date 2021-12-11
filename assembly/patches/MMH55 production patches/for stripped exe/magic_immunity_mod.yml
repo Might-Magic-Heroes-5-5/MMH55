@@ -2,7 +2,7 @@
 # ----------------- Magic Immunity mod --------------
 # ----------------------------------------------------
 #
-# Adjusts H5 immunity function. Changes include:
+# Alters internal game spell immunity function so more artifacts or abilities can grant full or partial resistance to specific spells. Current changes include:
 # - Added immunity to Curse of the Netherworld (21) for Artifact with ID 180
 #
 # ----------------------------------------------------
