@@ -9,7 +9,7 @@
 # ----------------------------------------------------
 definitions: 
  - &ART01_ID 173
- - &ART01_MR 100
+ - &ART01_MR 20
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original
 checkAddress:   00000400
@@ -45,7 +45,7 @@ patchBytes:     8B 17 89 F9 FF 52 0C 8B 10 89 C1 FF 52 0C 85 C0 0F 84 E6 62 84 F
 ---
 ################### MAGIC RESISTANCE ARTIFACT
 group: Original
-patchAddress:   0057CFFD  ## 0097CFFD                           ## fork from resistance artifacts
+patchAddress:   0057C3FD  ## 0097CFFD                           ## fork from resistance artifacts
 originalBytes:  8B 16 8B CE FF 52 74                                        
 patchBytes:     E9 BE 9A 7B 00 90 90
 ---
