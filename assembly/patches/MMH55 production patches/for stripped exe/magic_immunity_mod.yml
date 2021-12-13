@@ -75,13 +75,13 @@ patchAddress:   00BD9AE0  ## 01136AE0                           ##
 originalBytes:  00*
 patchBytes:     30 D2 89 D9 E8 D7 4E 88 FF 83 C5
 ---
-group: Quantomas3.1j
+group: Original
 patchAddress:   00BD9AEB  ## 01136AEB                           ## resistance %
 valueType:      Byte      
 originalValue:  00
 patchValue:     *ART01_MR
 ---
-group: Quantomas3.1j
+group: Original
 patchAddress:   00BD9AEC  ## 01136AEC                           ##     
 originalBytes:  00*
 patchBytes:     89 6C 24 10 8B 16 89 F1 FF 52 74 E9 08 65 84 FF
