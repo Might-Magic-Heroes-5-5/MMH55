@@ -2,10 +2,13 @@
 # ----------------- Magic Immunity mod --------------
 # ----------------------------------------------------
 #
-# Alters internal game spell immunity function so more artifacts or abilities can grant full or partial resistance to specific spells. Current changes include:
+# Alters spell immunity function so more artifacts or abilities can grant full or partial resistance to spells. Current changes include:
 # - Added immunity to Curse of the Netherworld (21) for Artifact with ID 180
 #
 # ----------------------------------------------------
+definitions: 
+ - &ART01_ID 173
+ - &ART01_MR 100
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original
 checkAddress:   00000400
@@ -38,6 +41,50 @@ group: Original
 patchAddress:   00BD9A70  ## 01136A70                           ## case 21 CoTN immunity
 originalBytes:  00*                                         
 patchBytes:     8B 17 89 F9 FF 52 0C 8B 10 89 C1 FF 52 0C 85 C0 0F 84 E6 62 84 FF 8B 10 89 C1 FF 12 8B 10 89 C1 FF 52 74 68 B4 00 00 00 89 C1 E8 E1 FB B6 FF 85 C0 E9 BB 62 84 FF
+---
+################### MAGIC RESISTANCE ARTIFACT
+group: Original
+patchAddress:   0057CFFD  ## 0097CFFD                           ## fork from resistance artifacts
+originalBytes:  8B 16 8B CE FF 52 74                                        
+patchBytes:     E9 BE 9A 7B 00 90 90
+---
+group: Original
+patchAddress:   00BD9AC0  ## 01136AC0                           ## Resistnce artifact code start
+originalBytes:  00*                                         
+patchBytes:     8B 06 89 F1 FF 50 74 68
+---
+group: Original
+patchAddress:   00BD9AC8  ## 01136AC8                           ## artifact ID
+valueType:      Integer      
+originalValue:  0
+patchValue:     *ART01_ID
+---
+group: Original
+patchAddress:   00BD9ACC  ## 01136ACC                           ##    
+originalBytes:  00*
+patchBytes:     89 C1 E8 AD FB B6 FF 85 C0 74 19 6A 00 6A 00 68
+---
+group: Original
+patchAddress:   00BD9ADC  ## 01136ADC                           ## artifact ID
+valueType:      Integer      
+originalValue:  0
+patchValue:     *ART01_ID
+---
+group: Original
+patchAddress:   00BD9AE0  ## 01136AE0                           ##    
+originalBytes:  00*
+patchBytes:     30 D2 89 D9 E8 D7 4E 88 FF 83 C5
+---
+group: Quantomas3.1j
+patchAddress:   00BD9AEB  ## 01136AEB                           ## resistance %
+valueType:      Byte      
+originalValue:  00
+patchValue:     *ART01_MR
+---
+group: Quantomas3.1j
+patchAddress:   00BD9AEC  ## 01136AEC                           ##     
+originalBytes:  00*
+patchBytes:     89 6C 24 10 8B 16 89 F1 FF 52 74 E9 08 65 84 FF
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
 checkAddress:   00000400
@@ -70,3 +117,47 @@ group: Quantomas3.1j
 patchAddress:   00BD9A70  ## 01146A70                           ## case 21 CoTN immunity
 originalBytes:  00*                                         
 patchBytes:     8B 17 89 F9 FF 52 0C 8B 10 89 C1 FF 52 0C 85 C0 0F 84 96 23 77 FF 8B 10 89 C1 FF 12 8B 10 89 C1 FF 52 74 68 B4 00 00 00 89 C1 E8 11 A2 74 FF 85 C0 E9 6B 23 77 FF
+---
+################### MAGIC RESISTANCE ARTIFACT
+group: Quantomas3.1j
+patchAddress:   004B849A  ## 008B909A                           ## fork from resistance artifacts
+originalBytes:  8B 16 8B CE FF 52 74                                        
+patchBytes:     E9 21 DA 88 00 90 90
+---
+group: Quantomas3.1j
+patchAddress:   00BD9AC0  ## 01146AC0                           ## Resistnce artifact code start
+originalBytes:  00*                                         
+patchBytes:     8B 06 89 F1 FF 50 74 68
+---
+group: Quantomas3.1j
+patchAddress:   00BD9AC8  ## 01146AC8                           ## artifact ID
+valueType:      Integer      
+originalValue:  0
+patchValue:     *ART01_ID
+---
+group: Quantomas3.1j
+patchAddress:   00BD9ACC  ## 01146ACC                           ##    
+originalBytes:  00*
+patchBytes:     89 C1 E8 DD A1 74 FF 85 C0 74 19 6A 00 6A 00 68
+---
+group: Quantomas3.1j
+patchAddress:   00BD9ADC  ## 01146ADC                           ## artifact ID
+valueType:      Integer      
+originalValue:  0
+patchValue:     *ART01_ID
+---
+group: Quantomas3.1j
+patchAddress:   00BD9AE0  ## 01146AE0                           ##    
+originalBytes:  00*
+patchBytes:     30 D2 89 D9 E8 E7 1A 84 FF 83 C5
+---
+group: Quantomas3.1j
+patchAddress:   00BD9AEB  ## 01146AEB                           ## resistance %
+valueType:      Byte      
+originalValue:  00
+patchValue:     *ART01_MR
+---
+group: Quantomas3.1j
+patchAddress:   00BD9AEC  ## 01146AEC                           ##     
+originalBytes:  00*
+patchBytes:     89 6C 24 10 8B 16 89 F1 FF 52 74 E9 A5 25 77 FF
