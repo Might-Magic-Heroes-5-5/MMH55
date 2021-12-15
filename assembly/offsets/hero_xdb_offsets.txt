@@ -1,7 +1,7 @@
 (v3 + 28) 			- hero knowledge
 
 (*(*a3 + 32))(a3)				 - return hero level
-(*(*a3 + 116))(a3, X)			 - Has artifact with ID X?
+(*(*a3 + 116))(a3, X)			 - Has artifact with ID X? artifact list of hero
 (*(*a3 + 376))(X)  				 - returns mastery of hero skill with id X
 (*(*a3 + 404))(a3, X)			 - hero has specialization with id X (a3, X, a4, week_id)
 (*(*a3 + 412))(&hero, v1, a3)	 - give v1 experience to hero
