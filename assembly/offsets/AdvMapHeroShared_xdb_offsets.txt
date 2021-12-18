@@ -17,9 +17,9 @@
       (v3 + 204) 			- TerrainAligned
       (v3 + 205) 			- FlyPassable
       (v3 + 208) 			- AdventureSoundEffect
-      (v3 + 216) 			- RazedStatic
-      (v3 + 224) 			- Icon128
-      (v3 + 236) 			- InternalName
+      (v3 + 220) 			- RazedStatic
+      (v3 + 232) 			- Icon128
+      (v3 + 244) 			- InternalName
       (v3 + 248) 			- Class
       (v3 + 252) 			- Specialization
       (v3 + 256) 			- PrimarySkill

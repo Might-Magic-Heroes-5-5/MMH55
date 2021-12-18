@@ -1,26 +1,19 @@
 	*(v33 + 68)					# returns NameFileRef
-	*(v33 + 72)					# LongDescriptionFileRef
-	*(v33 + 76)					# Texture
-	*(v33 + 80)					# EffectTexture
-	*(v33 + 84)					- returns min_dmg 
-	*(v33 + 88)					- returns max_dmg
-	*(v33 + 92)					- returns Health
-	*(v33 + 96)				    - returns is unit flying?
-	*(v33 + 100)				- returns unit hp
-	*(v33 + 104)				- returns KnownSpells
-	*(v33 + 108)				- returns KnownSpells
-	*(v33 + 112)				- returns morale
-	*(v33 + 116)				- returns unit spellpoints
-	*(v33 + 120)				- returns unit spellpoints1
-	*(v33 + 124)				- returns unit spellpoints2
-	*(v33 + 128)				- returns unit experience
-	*(v33 + 132)				# returns spell lvl
-	*(v33 + 136)				# returns MagicSchool
-	*(v33 + 140)				# returns RequiredHeroLevel
-	*(v33 + 144)				# returns IsAimed
+	*(v33 + 80)					# LongDescriptionFileRef
+	*(v33 + 92)					# Texture
+	*(v33 + 104)			    # EffectTexture
+	*(v33 + 116)				# SpellBookPredictions
+	*(v33 + 120)				- 
+	*(v33 + 124)				- 
+	*(v33 + 128)				- 
+	*(v33 + 132)				# Level
+	*(v33 + 136)				# MagicSchool
+	*(v33 + 140)				# RequiredHeroLevel
+	*(v33 + 142)				# IsAimed
+	*(v33 + 144)				# TrainedCost
 	*(v33 + 148)				# returns damage array
 	*(v33 + 152)				# returns damage array
-	*(v33 + 156)				- returns unit element_first
+	*(v33 + 156)				# returns damage array 
 	*(v33 + 160)				# returns duration array
 	*(v33 + 164)				# returns duration array
 	*(v33 + 168)				# returns duration array
@@ -34,7 +27,6 @@
 	*(v33 + 200)				# returns IsAreaAttack
 	*(v33 + 204)				# returns IsAreaAttack
 	*(v33 + 205)				# returns IsAreaAttack
-	
 	*(v33 + 206)				# returns CanSelectDead
 	*(v33 + 208)				# returns Target
 	*(v33 + 212)				# returns Element
