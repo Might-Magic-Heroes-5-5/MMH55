@@ -25,14 +25,14 @@ checkAddress:   00000400
 checkBytes:     8D 41 34 C3 CC CC CC CC
 patchAddress:   0057C422  ## 0097D022                           ## Plate of Forgotten Hero resistance
 valueType:      Byte
-originalBytes:  *TOE_FORGOTTEN_HERO_PLATE_MR                                        
-patchBytes:     *FORGOTTEN_HERO_PLATE_MR
+originalValue:  *TOE_FORGOTTEN_HERO_PLATE_MR                                        
+patchValue:     *FORGOTTEN_HERO_PLATE_MR
 ---
 group: Original
 patchAddress:   0057C44C  ## 0097D04C                           ## Boots of Interference resistance
 valueType:      Byte
-originalBytes:  *TOE_INTERFERENCE_BOOTS_MR                                       
-patchBytes:     *INTERFERENCE_BOOTS_MR
+originalValue:  *TOE_INTERFERENCE_BOOTS_MR                                       
+patchValue:     *INTERFERENCE_BOOTS_MR
 ---
 group: Original
 patchAddress:   0057C3FD  ## 0097CFFD                           ## fork from resistance artifacts
@@ -115,14 +115,14 @@ checkAddress:   00000400
 checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
 patchAddress:   004B84BF  ## 008B90BF                           ## Plate of Forgotten Hero resistance
 valueType:      Byte
-originalBytes:  *TOE_FORGOTTEN_HERO_PLATE_MR                                        
-patchBytes:     *FORGOTTEN_HERO_PLATE_MR
+originalValue:  *TOE_FORGOTTEN_HERO_PLATE_MR                                        
+patchValue:     *FORGOTTEN_HERO_PLATE_MR
 ---
 group: Quantomas3.1j
 patchAddress:   004B84E9  ## 008B90E9                           ## Boots of Interference resistance
 valueType:      Byte
-originalBytes:  *TOE_INTERFERENCE_BOOTS_MR                                       
-patchBytes:     *INTERFERENCE_BOOTS_MR
+originalValue:  *TOE_INTERFERENCE_BOOTS_MR                                       
+patchValue:     *INTERFERENCE_BOOTS_MR
 ---
 group: Quantomas3.1j
 patchAddress:   004B849A  ## 008B909A                           ## fork from resistance artifacts
