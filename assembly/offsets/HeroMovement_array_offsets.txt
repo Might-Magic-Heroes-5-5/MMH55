@@ -1,0 +1,12 @@
+(v3 + 0) 			- bool HERO_SKILL_PATHFINDING
+(v3 + 1) 			- bool WAYFARER_BOOTS
+(v3 + 2) 			- bool ANGEL_WINGS
+(v3 + 3) 			- 
+(v3 + 4) 			- 
+(v3 + 5) 			- 
+(v3 + 6) 			- 
+(v3 + 7) 			- 
+(v3 + 8) 			- 
+(v3 + 12) 			- int terrain type ID
+(v3 + 16) 			- bool HERO_SKILL_SNATCH
+(v3 + 20) 			- int penalty_reduction
