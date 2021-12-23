@@ -7,27 +7,27 @@
 # - Movement cost for homeland of the hero (100)
 # - The movement cost for roads (75)
 # - The movement cost penalty for dirt, lava, taiga and subterran (25)
-# - The movement cost penalty for sand and snow (25)
-# - Factor to penalty for hero pathfinding perk (0.25)
+# - The movement cost penalty for sand and snow (50)
+# - Factor to penalty for hero pathfinding perk (0.5)
 # - Hero speciality "Tracker" movement point penalty per level factor (0.01) 
 #   (*) the formula for this is penalty = penalty * (1 - specialityTracker*(2*heroLevel-1))
 #       so at level 10 the actual penalty is 81% of the real penalty
 #       using higher values than 0.02 might make the game crash because of the negative result at high hero levels.
 # - Standard movement cost (100)
-# - Ship movement cost (110)
+# - Ship movement cost (100)
 # - Factor for diagonal movement (1.41)
 #
 # -------------- Things you may want to modify -----------------
 definitions: 
-- &pathfinding_factor                         0.25   # original value is 0.25
+- &pathfinding_factor                         0.50   # original value is 0.50
 - &tracker_factor_per_level                   0.01   # original value is 0.01
 - &diagonal_movement_factor                   1.41   # original value is 1.41
 - &move_cost_hero_homeland                     100
 - &move_cost_road                               75
-- &move_cost_ship                              110
+- &move_cost_ship                              100
 - &move_cost_standard                          100
 - &move_penalty_dirt_lava_taiga_subterran       25
-- &move_penalty_sand_snow                       25
+- &move_penalty_sand_snow                       50
 
 # -----------Things that should not be modified ----------------
 

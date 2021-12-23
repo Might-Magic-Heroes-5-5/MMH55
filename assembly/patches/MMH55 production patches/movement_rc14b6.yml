@@ -1,0 +1,212 @@
+# ----------------------------------------------------
+# -------------- Hero Movement Points ----------------
+# ----------------------------------------------------
+# A collection of various Hero movement related values.
+#
+# Contains:
+# - Movement cost for homeland of the hero (100)
+# - The movement cost for roads (75)
+# - The movement cost penalty for dirt, lava, taiga and subterran (25)
+# - The movement cost penalty for sand and snow (25)
+# - Factor to penalty for hero pathfinding perk (0.25)
+# - Hero speciality "Tracker" movement point penalty per level factor (0.01) 
+#   (*) the formula for this is penalty = penalty * (1 - specialityTracker*(2*heroLevel-1))
+#       so at level 10 the actual penalty is 81% of the real penalty
+#       using higher values than 0.02 might make the game crash because of the negative result at high hero levels.
+# - Standard movement cost (100)
+# - Ship movement cost (110)
+# - Factor for diagonal movement (1.41)
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+- &pathfinding_factor                         0.25   # original value is 0.5, lowering it means stronger bonus
+- &tracker_factor_per_level                   0.01   # original value is 0.01
+- &diagonal_movement_factor                   1.41   # original value is 1.41
+- &move_cost_hero_homeland                     100
+- &move_cost_road                               75
+- &move_cost_ship                              110
+- &move_cost_standard                          100
+- &move_penalty_dirt_lava_taiga_subterran       25
+- &move_penalty_sand_snow                       25
+
+# -----------Things that should not be modified ----------------
+
+- &original_movement_cost_hero_homeland                100
+- &original_movement_cost_road                          75
+- &original_movement_cost_ship                         100
+- &original_movement_cost_standard                     100
+- &original_movement_penalty_dirt_lava_taiga_subterran  25
+- &original_movement_penalty_sand_snow                  50
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ patchAddress:   330
+ originalBytes:  00 00 00 00     # empty space
+ valueType:      Float
+ patchValue:     *pathfinding_factor
+---
+ group: Original
+ patchAddress:   334
+ originalBytes:  00 00 00 00     # empty space
+ valueType:      Float
+ patchValue:     *tracker_factor_per_level
+---
+ group: Original
+ patchAddress:   338
+ originalBytes:  00 00 00 00     # empty space
+ valueType:      Float
+ patchValue:     *diagonal_movement_factor
+---
+ group: Original
+ checkAddress:   8A8E6D
+ checkBytes:     CC CC CC 51 8B 41 04 8B 09 53 56 8B 74 24 1C BA
+ patchAddress:   8A8E7D
+ valueType:      Integer
+ originalValue:  *original_movement_cost_hero_homeland
+ patchValue:     *move_cost_hero_homeland
+---
+ group: Original
+ checkAddress:   8A8EB7
+ checkBytes:     83 E8 06 74 0A 83 E8 01 74 05 83 E8 01 75 0A BA
+ patchAddress:   8A8EC7
+ valueType:      Integer
+ originalValue:  *original_movement_cost_road
+ patchValue:     *move_cost_road
+---
+ group: Original
+ checkAddress:   8A8EE1
+ checkBytes:     5C 24 1C 77 1F FF 24 8D E8 9B CA 00 C7 44 24 1C
+ patchAddress:   8A8EF1
+ valueType:      Integer
+ originalValue:  *original_movement_penalty_dirt_lava_taiga_subterran
+ patchValue:     *move_penalty_dirt_lava_taiga_subterran
+---
+ group: Original
+ patchAddress:   8A8EFB
+ valueType:      Integer
+ originalValue:  *original_movement_penalty_sand_snow
+ patchValue:     *move_penalty_sand_snow
+---
+ group: Original
+ checkAddress:   8A8F08
+ checkBytes:     26 DB 44 24 1C D9 7C 24 18 0F B7 44 24 18 D8 0D
+ patchAddress:   8A8F18          # Float pointer for hero perk pathfinding
+ valueType:      Address
+ originalValue:  E0AB70          # original pointer to float value 0.5
+ patchValue:     400330          # own pointer
+---
+ group: Original
+ checkAddress:   8A8F42
+ checkBytes:     30 DB 44 24 18 D9 7C 24 18 0F B7 44 24 18 D8 0D
+ patchAddress:   8A8F52          # Hero speciality "Tracker" movement point penalty per level factor
+ valueType:      Address
+ originalValue:  E15A80          # original pointer to float value 0.01
+ patchValue:     400334          # own pointer
+---
+ group: Original
+ checkAddress:   8A8F69
+ checkBytes:     24 1C DB 5C 24 1C D9 6C 24 18 8B 54 24 1C 83 C2
+ patchAddress:   8A8F79
+ valueType:      Byte
+ originalValue:  *original_movement_cost_standard
+ patchValue:     *move_cost_standard
+---
+ group: Original
+ patchAddress:   8A8F7D
+ valueType:      Integer
+ originalValue:  *original_movement_cost_ship
+ patchValue:     *move_cost_ship
+---
+ group: Original
+ checkAddress:   8A8F8A
+ checkBytes:     40 DB 44 24 08 D9 7C 24 10 0F B7 44 24 10 D8 0D
+ patchAddress:   8A8F9A          # Float pointer to diagonal movement penalty factor
+ valueType:      Address
+ originalValue:  E557B8          # original pointer to float value 1.41
+ patchValue:     400338          # own pointer
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+ group: Quantomas3.1j
+ patchAddress:   330
+ originalBytes:  00 00 00 00     # empty space
+ valueType:      Float
+ patchValue:     *pathfinding_factor
+---
+ group: Quantomas3.1j
+ patchAddress:   334
+ originalBytes:  00 00 00 00     # empty space
+ valueType:      Float
+ patchValue:     *tracker_factor_per_level
+---
+ group: Quantomas3.1j
+ patchAddress:   338
+ originalBytes:  00 00 00 00     # empty space
+ valueType:      Float
+ patchValue:     *diagonal_movement_factor
+---
+ group: Quantomas3.1j
+ checkAddress:   723E8D
+ checkBytes:     CC CC CC 51 8B 41 04 8B 09 53 56 8B 74 24 1C BA
+ patchAddress:   723E9D
+ valueType:      Integer
+ originalValue:  *original_movement_cost_hero_homeland
+ patchValue:     *move_cost_hero_homeland
+---
+ group: Quantomas3.1j
+ checkAddress:   723ED7
+ checkBytes:     83 E8 06 74 0A 83 E8 01 74 05 83 E8 01 75 0A BA
+ patchAddress:   723EE7
+ valueType:      Integer
+ originalValue:  *original_movement_cost_road
+ patchValue:     *move_cost_road
+---
+ group: Quantomas3.1j
+ checkAddress:   723F01
+ checkBytes:     5C 24 1C 77 1F FF 24 8D 08 4C B2 00 C7 44 24 1C
+ patchAddress:   723F11
+ valueType:      Integer
+ originalValue:  *original_movement_penalty_dirt_lava_taiga_subterran
+ patchValue:     *move_penalty_dirt_lava_taiga_subterran
+---
+ group: Quantomas3.1j
+ patchAddress:   723F1B
+ valueType:      Integer
+ originalValue:  *original_movement_penalty_sand_snow
+ patchValue:     *move_penalty_sand_snow
+---
+ group: Quantomas3.1j
+ checkAddress:   723F28
+ checkBytes:     26 DB 44 24 1C D9 7C 24 18 0F B7 44 24 18 D8 0D
+ patchAddress:   723F38          # Float pointer for hero perk pathfinding
+ valueType:      Address
+ originalValue:  E08800     # original pointer to float value 0.5
+ patchValue:     400330     # own pointer
+---
+ group: Quantomas3.1j
+ checkAddress:   723F62
+ checkBytes:     30 DB 44 24 18 D9 7C 24 18 0F B7 44 24 18 D8 0D
+ patchAddress:   723F72          # Hero speciality "Tracker" movement point penalty per level factor
+ valueType:      Address
+ originalValue:  E0C458          # original pointer to float value 0.01
+ patchValue:     400334          # own pointer
+---
+ group: Quantomas3.1j
+ checkAddress:   723F89
+ checkBytes:     24 1C DB 5C 24 1C D9 6C 24 18 8B 54 24 1C 83 C2
+ patchAddress:   723F99
+ valueType:      Byte
+ originalValue:  *original_movement_cost_standard
+ patchValue:     *move_cost_standard
+---
+ group: Quantomas3.1j
+ patchAddress:   723F9D
+ valueType:      Integer
+ originalValue:  *original_movement_cost_ship
+ patchValue:     *move_cost_ship
+---
+ group: Quantomas3.1j
+ checkAddress:   723FAA
+ checkBytes:     40 DB 44 24 08 D9 7C 24 10 0F B7 44 24 10 D8 0D
+ patchAddress:   723FBA          # Float pointer to diagonal movement penalty factor
+ valueType:      Address
+ originalValue:  E798A0          # original pointer to float value 1.41
+ patchValue:     400338          # own pointer 
