@@ -1,0 +1,44 @@
+# ----------------------------------------------------
+# ----------------- Morale func mod --------------
+# ----------------------------------------------------
+#
+# Hooks morale function so new artifacts, skills and abilities can be added. Current changes:
+# - Added artifact ID 175 to reduce enemymorale by 1
+# - Added artifact ID 129 to reduce enemymorale by 1
+#
+#----------------- VALUES TO MODIFY ---------------------
+#----------------- DO NOT MODIFY ---------------------
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00589575  ## 0098A175                           ## jump from Morale function to added Morale code
+originalBytes:  F7 D8 8D 34 46
+patchBytes:     E9 A6 CB 7A 00
+---
+group: Original
+patchAddress:   00BD9D00  ## 01136D00                           ## Add ASCI description of the patch in asselby
+originalBytes:  00*                                              
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 6D 6F 72 61 6C 20 66 75 6E 63 74 6E
+---
+group: Original
+patchAddress:   00BD9D20  ## 01136D20                           ## New code -1 Artifact with ID 175 and -1 Morale
+originalBytes:  00*                                      
+patchBytes:     F7 D8 8D 34 46 8B 07 89 F9 FF 10 8B 10 68 AF 00 00 00 89 C1 FF 52 74 89 C1 E8 42 F9 B6 FF F7 D8 8D 34 06 8B 07 89 F9 FF 10 8B 10 68 81 00 00 00 89 C1 FF 52 74 89 C1 E8 24 F9 B6 FF F7 D8 8D 34 06 E9 14 34 85 FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   006761F5  ## 00A76DF5                           ## jump from Morale function to added Morale code
+originalBytes:  F7 D8 8D 34 46
+patchBytes:     E9 26 FF 6C 00
+---
+group: Quantomas3.1j
+patchAddress:   00BD9D00  ## 01146D00                           ## Add ASCI description of the patch in asselby
+originalBytes:  00*                                              
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 6D 6F 72 61 6C 20 66 75 6E 63 74 6E
+---
+group: Quantomas3.1j
+patchAddress:   00BD9D20  ## 01146D20                           ## New code -1 Artifact with ID 175 and -1 Morale
+originalBytes:  00*                                      
+patchBytes:     F7 D8 8D 34 46 8B 07 89 F9 FF 10 8B 10 68 AF 00 00 00 89 C1 FF 52 74 89 C1 E8 72 9F 74 FF F7 D8 8D 34 06 8B 07 89 F9 FF 10 8B 10 68 81 00 00 00 89 C1 FF 52 74 89 C1 E8 54 9F 74 FF F7 D8 8D 34 06 E9 94 00 93 FF
