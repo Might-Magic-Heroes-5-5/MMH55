@@ -23,7 +23,7 @@ originalBytes:  00*
 patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 6C 75 63 6B 20 66 75 6E 63 74 6F 6E
 ---
 group: Original
-patchAddress:   00BD9C20  ## 01136C20                           ## New code -1 Artifact with ID 175 and -1 Luck
+patchAddress:   00BD9C20  ## 01136C20                           ## New code
 originalBytes:  00*
 patchBytes:     F7 D8 8D 34 06 8B 07 89 F9 FF 10 8B 10 68 AF 00 00 00 89 C1 FF 52 74 89 C1 E8 42 FA B6 FF F7 D8 8D 34 06 8B 07 89 F9 FF 10 8B 10 6A 49 89 C1 FF 52 74 89 C1 E8 27 FA B6 FF F7 D8 8D 34 46 E9 F0 31 85 FF
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
@@ -40,6 +40,6 @@ originalBytes:  00*
 patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 6C 75 63 6B 20 66 75 6E 63 74 6F 6E
 ---
 group: Quantomas3.1j
-patchAddress:   00BD9C20  ## 01146C20                           ## New code with artifacts and skills
+patchAddress:   00BD9C20  ## 01146C20                           ## New code
 originalBytes:  00*
 patchBytes:     F7 D8 8D 34 06 8B 07 89 F9 FF 10 8B 10 68 AF 00 00 00 89 C1 FF 52 74 89 C1 E8 72 A0 74 FF F7 D8 8D 34 06 8B 07 89 F9 FF 10 8B 10 6A 49 89 C1 FF 52 74 89 C1 E8 57 A0 74 FF F7 D8 8D 34 46 E9 70 FE 92 FF
