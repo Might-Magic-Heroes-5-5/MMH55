@@ -1,23 +1,4 @@
 ============================================================================================
-	GameMechanics/CreatureVisual/Creatures/*(CreatureVisual).xdb array settings
-============================================================================================
-
-	*(a2 + 68)                  # CreatureNameFileRef
-	*(v3 + 80)                  # CreatureAbilitiesFileRef
-	*(v3 + 92)                  # DescriptionFileRef
-	*(v3 + 104)                  # Icon
-	*(v3 + 112)                  # Icon32
-	*(v3 + 120)                  # Icon64 
-	*(v3 + 124)                  # Icon128
-	*(v3 + 132)                  # AnimCharacter
-	*(v3 + 140)                  # DeadCharacter
-	*(v3 + 148)                  # AnimShot
-	*(v3 + 156)                  # SummoningEffect
-	*(v3 + 164)                  # DamageEffect
-	*(v3 + 172)                  # TeleportingMove
-	*(v3 + X)                  # 
-	
-============================================================================================
 	GameMechanics/RefTables/WarMachines.xdb unit stats
 ============================================================================================
 	*(a2 + 68)                   # Shots

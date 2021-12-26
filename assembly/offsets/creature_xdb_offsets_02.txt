@@ -109,6 +109,23 @@
 	
 	===================================================================================================
 	
+  *(unit_v8 + 4) 							- 
+  *(unit_v8 + 8) 							- 
+  *(unit_v8 + 12) 							- 
+  *(unit_v8 + 20) 							- 
+  *(unit_v8 + 24) 							- 
+  *(unit_v8 + 28) 							- 
+  *(unit_v8 + 32) 							- 
+  *(unit_v8 + 36) 							- 
+  *(unit_v8 + 40) 							- 
+  *(unit_v8 + 44) 							- 
+  *(unit_v8 + 48) 							- 
+  *(unit_v8 + 52) 							- 
+  *(unit_v8 + 56) 							- 
+  *(unit_v8 + 60) 							- 
+  *(unit_v8 + 64) 							- 
+  *(unit_v8 + 68) 							- 
+  *(unit_v8 + 72) 							- 
   *(unit_v8 + 76) 							- unit attack after bonuses
   *(unit_v8 + 80) 							- unit defense after bonuses
   *(unit_v8 + 84) 							- unit min dmg after bonuses
@@ -127,11 +144,17 @@
   *(unit_v8 + 172)
   *(unit_v8 + 176)
   *(unit_v8 + 180)
-  *(unit_v8 + 184)
-  *(unit_v8 + 188)
-  *(unit_v8 + 196) = 						- does creature benefit from hero spec may be?
   *(unit_v8 + 184) = *(v5 + 72);
   *(unit_v8 + 188) = *(v5 + 76);
+  *(unit_v8 + 192) 							- is creature favourite enemy
+  *(unit_v8 + 193) 							- 
+  *(unit_v8 + 194) 							- 
+  *(unit_v8 + 196) 							- is creature affacted by enemy specialization
+  *(unit_v8 + 200) 							-
+  *(unit_v8 + 204) 							-
+  *(unit_v8 + 208) 							- 
+  
+  ##########################################################################
   *v13 = *(v5 + 56);
   v13[1] = *(v5 + 60);
   v13[2] = *(v5 + 64);
