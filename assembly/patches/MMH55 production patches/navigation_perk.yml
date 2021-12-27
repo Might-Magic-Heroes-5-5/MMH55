@@ -1,0 +1,22 @@
+# ----------------------------------------------------
+# ----------------- Navigation perk --------------
+# ----------------------------------------------------
+#
+# Navigation movement bonus reduced from 50% to 25%
+#
+#----------------- VALUES TO MODIFY ---------------------
+#----------------- DO NOT MODIFY ---------------------
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0074D3C9  ## 00B4DFC9                           ## Navigation bonus
+originalBytes:  D8 0D AC A3 E3 00
+patchBytes:     D8 0D BC 39 E2 00
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   005F8E39  ## 009F9A39                           ## Navigation bonus
+originalBytes:  D8 0D 10 C5 E3 00
+patchBytes:     D8 0D 10 D4 E2 00
