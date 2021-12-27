@@ -5,7 +5,7 @@
 # Alters spell immunity function so more artifacts or abilities can grant full or partial resistance to spells. Current changes include:
 # - Added immunity to Curse of the Netherworld (21) for Artifact with ID 180
 # - Added immunity to Armageddon (10) for Artifact with ID 123
-# - Added immunity to Armageddon (20) for Artifact with ID 168
+# - Added immunity to Hypnotize  (20) for Artifact with ID 168
 #
 # ----------------------------------------------------
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
@@ -47,9 +47,9 @@ originalBytes:  83 FB 09 8B C8
 patchBytes:     E9 DD 9D 7B 00
 ---
 group: Original
-patchAddress:   00BD9C00  ## 01136C00                           ## case 10 Armageddon immunity
+patchAddress:   00BD9C00  ## 01136C00                           ## immunity cases: 10  Armageddon; 20 Hypnotize
 originalBytes:  00*                                      
-patchBytes:     83 FB 0A 89 C1 75 1A 6A 7B E8 72 FA B6 FF 85 C0 0F 84 7C 62 84 FF 6A 00 6A 03 6A 7B E9 5D 62 84 FF 83 FB 09 E9 FA 61 84 FF
+patchBytes:     83 FB 0A 89 C1 75 1A 6A 7B E8 72 FA B6 FF 85 C0 0F 84 7C 62 84 FF 6A 00 6A 03 6A 7B E9 5D 62 84 FF 83 FB 14 75 20 68 A8 00 00 00 E8 50 FA B6 FF 85 C0 0F 84 5A 62 84 FF 6A 00 6A 03 68 A8 00 00 00 E9 38 62 84 FF 83 FB 09 E9 D5 61 84 FF
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
 checkAddress:   00000400
@@ -89,6 +89,6 @@ originalBytes:  83 FB 09 8B C8
 patchBytes:     E9 31 DD 88 00
 ---
 group: Quantomas3.1j
-patchAddress:   00BD9C00  ## 01146C00                           ## case 10 Armageddon immunity
+patchAddress:   00BD9C00  ## 01146C00                           ## immunity cases: 10  Armageddon; 20 Hypnotize
 originalBytes:  00*                                      
-patchBytes:     83 FB 0A 89 C1 75 1A 6A 7B E8 A2 A0 74 FF 85 C0 0F 84 28 23 77 FF 6A 00 6A 03 6A 7B E9 09 23 77 FF 83 FB 09 E9 A6 22 77 FF
+patchBytes:     83 FB 0A 89 C1 75 1A 6A 7B E8 A2 A0 74 FF 85 C0 0F 84 28 23 77 FF 6A 00 6A 03 6A 7B E9 09 23 77 FF 83 FB 14 75 20 68 A8 00 00 00 E8 80 A0 74 FF 85 C0 0F 84 06 23 77 FF 6A 00 6A 03 68 A8 00 00 00 E9 E4 22 77 FF 83 FB 09 E9 81 22 77 FF
