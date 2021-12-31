@@ -3,7 +3,7 @@
 # ----------------------------------------------------
 #
 # Hooks health function so new artifacts, skills and abilities can be added. Current changes:
-# - Added artifact ID 163 to increase HP by 2
+# - Added artifact ID 166 to increase HP by 2
 # - Added artifact ID 124 to increase HP by 6
 #
 #----------------- VALUES TO MODIFY ---------------------
@@ -24,7 +24,7 @@ patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 68 6
 group: Original
 patchAddress:   00BDA620  ## 01137620                            ## New code
 originalBytes:  00*
-patchBytes:     8D 2C 47 8B 06 68 A3 00 00 00 89 F1 FF 50 74 89 C1 E8 4A F0 B6 FF 84 C0 74 03 83 C5 02 8B 06 6A 7C 89 F1 FF 50 74 89 C1 E8 33 F0 B6 FF 84 C0 74 03 83 C5 06 8B 4B 1C E9 9E 4E 38 FF
+patchBytes:     8D 2C 47 8B 06 68 A6 00 00 00 89 F1 FF 50 74 89 C1 E8 4A F0 B6 FF 84 C0 74 03 83 C5 02 8B 06 6A 7C 89 F1 FF 50 74 89 C1 E8 33 F0 B6 FF 84 C0 74 03 83 C5 06 8B 4B 1C E9 9E 4E 38 FF
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
 checkAddress:   00000400
@@ -41,4 +41,4 @@ patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 68 6
 group: Quantomas3.1j
 patchAddress:   00BDA620  ## 01147620  00875C9A                         ## New code
 originalBytes:  00*
-patchBytes:     8D 2C 47 8B 06 68 A3 00 00 00 89 F1 FF 50 74 89 C1 E8 7A 96 74 FF 84 C0 74 03 83 C5 02 8B 06 6A 7C 89 F1 FF 50 74 89 C1 E8 63 96 74 FF 84 C0 74 03 83 C5 06 8B 4B 1C E9 3E E6 72 FF
+patchBytes:     8D 2C 47 8B 06 68 A6 00 00 00 89 F1 FF 50 74 89 C1 E8 7A 96 74 FF 84 C0 74 03 83 C5 02 8B 06 6A 7C 89 F1 FF 50 74 89 C1 E8 63 96 74 FF 84 C0 74 03 83 C5 06 8B 4B 1C E9 3E E6 72 FF
