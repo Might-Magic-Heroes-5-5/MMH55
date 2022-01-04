@@ -4,76 +4,95 @@
 #
 # H5 Rmg Upgrade Points changes per selection 
 #
-# ----------------------------------------------------
-
+#----------------- VALUES TO MODIFY ---------------------
+definitions: 
+ - &*M55_v1 1.0
+ - &*M55_v2 1.2
+ - &*M55_v3 1.4
+ - &*M55_v4 1.6
+ - &*M55_v5 2.0
+ #----------------- DO NOT MODIFY ---------------------
+ - &*TOE_v1 0.2
+ - &*TOE_v2 0.5
+ - &*TOE_v3 1.0
+ - &*TOE_v4 2.0
+ - &*TOE_v5 4.0
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original 
 checkAddress:   00000400
 checkBytes:     8D 41 34 C3 CC CC CC CC
-patchAddress:   00506A06                                                  ### UpgradeBuilding multiplier case: default
-originalBytes:  C7 44 24 1C 00 00 80 3F                                   ### value is 1.0
-patchBytes:     C7 44 24 1C 00 00 00 3F                                   ### value is 0.5
+patchAddress:   00506A0A          ## 0090760A                             ### UpgradeBuilding multiplier case: default
+valueType:      Float
+originalValue:  *TOE_v3
+patchValue:     *M55_v3
 --- 
 group: Original
-patchAddress:   00506A17                                                  ### case: 0
-originalBytes:  C7 44 24 1C CD CC 4C 3E                                   ### value is 0.2
-patchBytes:     C7 44 24 1C 00 00 00 3F                                   ### value is 0.5
+patchAddress:   00506A1B          ## 0090761B                             ### case: 0
+valueType:      Float
+originalValue:  *TOE_v1
+patchValue:     *M55_v1
 --- 
 group: Original
-patchAddress:   00506A21                                                  ### case: 1
-originalBytes:  C7 44 24 1C 00 00 00 3F                                   ### value is 0.5
-patchBytes:     C7 44 24 1C 9A 99 19 3F                                   ### value is 0.6
+patchAddress:   00506A25          ## 00907625                             ### case: 1
+valueType:      Float
+originalValue:  *TOE_v2
+patchValue:     *M55_v2
 --- 
 group: Original
-patchAddress:   00506A2B                                                  ### case: 2
-originalBytes:  C7 44 24 1C 00 00 80 3F                                   ### value is 1.0
-patchBytes:     C7 44 24 1C 33 33 33 3F                                   ### value is 0.7
+patchAddress:   00506A2F          ## 0090762F                             ### case: 2
+valueType:      Float
+originalValue:  *TOE_v3
+patchValue:     *M55_v3
 --- 
 group: Original
-patchAddress:   00506A35                                                  ### case: 3
-originalBytes:  C7 44 24 1C 00 00 00 40                                   ### value is 2.0
-patchBytes:     C7 44 24 1C CD CC 4C 3F                                   ### value is 0.8
+patchAddress:   00506A39          ## 00907639                             ### case: 3
+valueType:      Float
+originalValue:  *TOE_v4
+patchValue:     *M55_v4
 --- 
 group: Original
-patchAddress:   00506A3F                                                  ### case: 4
-originalBytes:  C7 44 24 1C 00 00 80 40                                   ### value is 4.0
-patchBytes:     C7 44 24 1C 00 00 80 3F                                   ### value is 1.0
---- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
-group: Quantomas3.1j
-checkAddress:   00000400
-checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
-patchAddress:   006E7E47
-originalBytes:  06
-patchBytes:     03
+patchAddress:   00506A43          ## 00907643                             ### case: 4
+valueType:      Float
+originalValue:  *TOE_v5
+patchValue:     *M55_v5
 --- # ----------- MAP EDITOR EXE 3.1 PATCH DATA ------------
 group: MapEditorOriginal
 checkAddress:   004B6DB0
 checkBytes:     B8 B4 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC
-patchAddress:   008F1B56                                                  ### case: default
-originalBytes:  C7 44 24 1C 00 00 80 3F                                   ### value is 1.0
-patchBytes:     C7 44 24 1C 00 00 00 3F                                   ### value is 0.5
+patchAddress:   008F1B5A                                                  ### case: default
+valueType:      Float
+originalValue:  *TOE_v3
+patchValue:     *M55_v3
 --- 
 group: MapEditorOriginal
-patchAddress:   008F1B67                                                  ### case: 0
-originalBytes:  C7 44 24 1C CD CC 4C 3E                                   ### value is 0.2
-patchBytes:     C7 44 24 1C 00 00 00 3F                                   ### value is 0.5
+patchAddress:   008F1B6B                                                  ### case: 0
+valueType:      Float
+originalValue:  *TOE_v1
+patchValue:     *M55_v1
 --- 
 group: MapEditorOriginal
-patchAddress:   008F1B71                                                  ### case: 1
-originalBytes:  C7 44 24 1C 00 00 00 3F                                   ### value is 0.5
-patchBytes:     C7 44 24 1C 9A 99 19 3F                                   ### value is 0.6
+patchAddress:   008F1B75                                                  ### case: 1
+valueType:      Float
+originalValue:  *TOE_v2
+patchValue:     *M55_v2
 --- 
 group: MapEditorOriginal
-patchAddress:   008F1B7B                                                  ### case: 2
-originalBytes:  C7 44 24 1C 00 00 80 3F                                   ### value is 1.0
-patchBytes:     C7 44 24 1C 33 33 33 3F                                   ### value is 0.7
+patchAddress:   008F1B7F                                                  ### case: 2
+valueType:      Float
+originalValue:  *TOE_v3
+patchValue:     *M55_v3
 --- 
 group: MapEditorOriginal
-patchAddress:   008F1B85                                                  ### case: 3
-originalBytes:  C7 44 24 1C 00 00 00 40                                   ### value is 2.0
-patchBytes:     C7 44 24 1C CD CC 4C 3F                                   ### value is 0.8
+patchAddress:   008F1B89                                                  ### case: 3
+valueType:      Float
+originalValue:  *TOE_v4
+patchValue:     *M55_v4
 --- 
 group: MapEditorOriginal
-patchAddress:   008F1B8F                                                  ### case: 4
-originalBytes:  C7 44 24 1C 00 00 80 40                                   ### value is 4.0
-patchBytes:     C7 44 24 1C 00 00 80 3F                                   ### value is 1.0
+patchAddress:   008F1B93                                                  ### case: 4
+valueType:      Float
+originalValue:  *TOE_v5
+patchValue:     *M55_v5
+#--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+#checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+#patchAddress:   006E7E47
