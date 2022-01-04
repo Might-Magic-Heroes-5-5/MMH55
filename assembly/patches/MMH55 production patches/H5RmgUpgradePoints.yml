@@ -6,17 +6,17 @@
 #
 #----------------- VALUES TO MODIFY ---------------------
 definitions: 
- - &*M55_v1 1.0
- - &*M55_v2 1.2
- - &*M55_v3 1.4
- - &*M55_v4 1.6
- - &*M55_v5 2.0
+ - &M55_v1 1.0
+ - &M55_v2 1.2
+ - &M55_v3 1.4
+ - &M55_v4 1.6
+ - &M55_v5 2.0
  #----------------- DO NOT MODIFY ---------------------
- - &*TOE_v1 0.2
- - &*TOE_v2 0.5
- - &*TOE_v3 1.0
- - &*TOE_v4 2.0
- - &*TOE_v5 4.0
+ - &TOE_v1 0.2
+ - &TOE_v2 0.5
+ - &TOE_v3 1.0
+ - &TOE_v4 2.0
+ - &TOE_v5 4.0
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original 
 checkAddress:   00000400
@@ -93,6 +93,3 @@ patchAddress:   008F1B93                                                  ### ca
 valueType:      Float
 originalValue:  *TOE_v5
 patchValue:     *M55_v5
-#--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
-#checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
-#patchAddress:   006E7E47
