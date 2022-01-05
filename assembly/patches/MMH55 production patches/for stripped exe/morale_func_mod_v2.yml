@@ -5,6 +5,7 @@
 # Hooks morale function so new artifacts, skills and abilities can be added. Current changes:
 # - Added artifact ID 175 to reduce enemy morale by 1
 # - Added artifact ID 129 to reduce enemy morale by 1
+# - Added artifact ID 164 to reduce enemy morale by 1
 #
 #----------------- VALUES TO MODIFY ---------------------
 #----------------- DO NOT MODIFY ---------------------
