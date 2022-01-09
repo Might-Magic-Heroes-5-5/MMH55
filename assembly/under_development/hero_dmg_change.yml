@@ -1,0 +1,56 @@
+# ----------------------------------------------------
+# ----------------- Hero dmg tier range --------------
+# ----------------------------------------------------
+#
+# Change hero span of tiers to damage
+#
+# ----------------------------------------------------
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   007456C5                                         ### change hero damage to tier check max size from 8 to 12
+originalBytes:  08
+patchBytes:     0C
+---
+group: Quantomas3.1j
+patchAddress:   00745760                                         ### change hero damage to tier check max size from 8 to 12
+originalBytes:  08 
+patchBytes:     0C
+---
+group: Quantomas3.1j
+patchAddress:   0074571B                                         ### change defaultstat.xdb herodamage1 array size check from 8 to 12 elements
+originalBytes:  20 
+patchBytes:     30
+---
+group: Quantomas3.1j
+patchAddress:   0074573D                                         ### change defaultstat.xdb herodamage30 array size check from 8 to 12 elements
+originalBytes:  20 
+patchBytes:     30
+---
+group: Quantomas3.1j
+patchAddress:   006B7F4D                                         ### Increase Arcane Crystal max tier presented on Unit GUI from 8 to 12
+originalBytes:  08 
+patchBytes:     0C
+---
+group: Quantomas3.1j
+patchAddress:   006B7F52                                         ### Increase Arcane Crystal max tier presented on Unit GUI from 8 to 12
+originalBytes:  08 
+patchBytes:     0C
+---
+group: Quantomas3.1j
+patchAddress:   006B80CF                                         ### Increase Summon Hive max tier presented on Unit GUI from 8 to 12
+originalBytes:  08 
+patchBytes:     0C
+---
+group: Quantomas3.1j
+patchAddress:   006B80D4                                         ### Increase Summon Hive max tier presented on Unit GUI from 8 to 12
+originalBytes:  08 
+patchBytes:     0C
+---
+group: Quantomas3.1j
+patchAddress:   0025352F                                         ### may be description value text?
+originalBytes:  08 
+patchBytes:     0C

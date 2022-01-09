@@ -1,0 +1,43 @@
+# ----------------------------------------------------
+# ----------------- Change skill count --------------
+# ----------------------------------------------------
+#
+# Increases the max value of in-game hero skills
+#
+# ----------------------------------------------------
+definitions: 
+- &original_count       221             # default hero count
+- &modified_count       222             # desired hero count
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   006CA770
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   006F08B6   ### field width
+valueType:      Integer
+originalValue:  *original_count
+patchValue:     *modified_count
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0053E290   ### skill count
+valueType:      Integer
+originalValue:  *original_count
+patchValue:     *modified_count
+---
+group: Quantomas3.1j
+patchAddress:   005393F1   ### skill count
+valueType:      Integer
+originalValue:  *original_count
+patchValue:     *modified_count
+---
+group: Quantomas3.1j
+patchAddress:   0068522E   ### remove +1
+originalBytes:  2B C8
+patchBytes:     90 90
+---
+group: Quantomas3.1j
+patchAddress:   00685408  ### skill count
+valueType:      Integer
+originalValue:  *original_count
+patchValue:     *modified_count
