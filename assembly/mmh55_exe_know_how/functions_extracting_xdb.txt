@@ -350,7 +350,7 @@ ScriptCommand_AdvMap_GetPlayerSelectedCampaignBonusIndex								-- sub_503520 ( 
 ScriptCommand_AdvMap_BlockTownGarrisonForAI												-- sub_4E77C0 ( townName, isBlocked );
 ScriptCommand_AdvMap_AllowHeroHiringByRaceForAI											-- sub_4E7A60 ( playerID, townTypeID, allow );
 ScriptCommand_AdvMap_AllowHiringOfHeroForAI												-- sub_4E7D20 ( playerID, heroName, allow );
-ScriptCommand_AdvMap_DoNotGiveTurnToPlayerAIIfNoTownsAndActiveHeroes     				-- sub_4EB470 ( playerID, enable );
+ScriptCommand_AdvMap_DoNotGiveTurnToPlayerAIIfNoTownsAndActiveHeroes     				-- sub_4EB470 ( playerID, enable );	
 ScriptCommand_AdvMap_SetHeroesExpCoef								     				-- sub_4E6990 ( fCoef );
 ScriptCommand_AdvMap_IsHeroInBoat								     					-- sub_4E72A0 ( heroName );
 ScriptCommand_AdvMap_SinkHero								     						-- sub_4E7510 ( heroName );

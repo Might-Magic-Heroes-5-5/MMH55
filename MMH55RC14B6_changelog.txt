@@ -707,7 +707,7 @@ Buffed:
 - "Call Lightning" damage per creature from 30 to 40
 - "Explosion" damage from 9 + 9*creature_SP to 40*creature_SP
 - "Whip Strike" spellpower from 3 to 10
-- "Whip Strike" procfactor from 1,5 to 2,0
+- "Whip Strike" procfactor from 1.5 to 2
 
 HERO SPECIALIZATIONS:
 New:
