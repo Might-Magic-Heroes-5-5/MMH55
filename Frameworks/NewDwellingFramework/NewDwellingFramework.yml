@@ -14,7 +14,7 @@ checkAddress:   00000400
 checkBytes:     8D 41 34 C3 CC CC CC CC
 patchAddress:   0001AF07                                                  ### Random dwellings building count from 4 to 8
 originalBytes:  33 C0 BE 01 00 00 00 EB 3C B8 01 00 00 00 BE 02 00 00 00 EB 30 B8 02 00 00 00 BE 03 00 00 00 EB 24 BE 04 00 00 00 EB 18 BE 05 00 00 00 EB 11 BE 06 00 00 00 EB 0A BE 07 00 00 00 EB 03 83 CE FF B8 03 00 00 00
-patchBytes:     EB 11 EB 0F EB 0D EB 0B EB 09 EB 07 EB 05 83 CE FF EB 2D 89 C6 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 66 48 90 90 90
+patchBytes:     EB 11 EB 0F EB 0D EB 0B EB 09 EB 07 EB 05 83 CE FF EB 2D 89 C6 83 C6 01 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
 ---
 group: Original
 patchAddress:   0001B010                                                  ### Switch addresses change
@@ -47,9 +47,9 @@ patchBytes:     C7 41 00 01 00 00 00 90
 group: Quantomas3.1j
 checkAddress:   00000400
 checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
-patchAddress:   0054F447                                                  ### Random dwellings building count from 4 to 8
+patchAddress:   0054F447      #00950047                                   ### Random dwellings building count from 4 to 8
 originalBytes:  33 C0 BE 01 00 00 00 EB 3C B8 01 00 00 00 BE 02 00 00 00 EB 30 B8 02 00 00 00 BE 03 00 00 00 EB 24 BE 04 00 00 00 EB 18 BE 05 00 00 00 EB 11 BE 06 00 00 00 EB 0A BE 07 00 00 00 EB 03 83 CE FF B8 03 00 00 00
-patchBytes:     EB 11 EB 0F EB 0D EB 0B EB 09 EB 07 EB 05 83 CE FF EB 2D 89 C6 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 66 48 90 90 90
+patchBytes:     EB 11 EB 0F EB 0D EB 0B EB 09 EB 07 EB 05 83 CE FF EB 2D 89 C6 83 C6 01 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
 --- 
 group: Quantomas3.1j
 patchAddress:   0054F550                                                  ### Switch addresses change
@@ -83,7 +83,7 @@ checkAddress:   004B6DB0
 checkBytes:     B8 B4 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC
 patchAddress:   003B9887                                                  ### Random dwellings building count from 4 to 8
 originalBytes:  33 C0 BE 01 00 00 00 EB 3C B8 01 00 00 00 BE 02 00 00 00 EB 30 B8 02 00 00 00 BE 03 00 00 00 EB 24 BE 04 00 00 00 EB 18 BE 05 00 00 00 EB 11 BE 06 00 00 00 EB 0A BE 07 00 00 00 EB 03 83 CE FF B8 03 00 00 00
-patchBytes:     EB 11 EB 0F EB 0D EB 0B EB 09 EB 07 EB 05 83 CE FF EB 2D 89 C6 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 66 48 90 90 90
+patchBytes:     EB 11 EB 0F EB 0D EB 0B EB 09 EB 07 EB 05 83 CE FF EB 2D 89 C6 83 C6 01 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
 --- 
 group: MapEditorOriginal
 patchAddress:   003B9990                                                  ### Switch addresses change
