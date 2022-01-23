@@ -21,7 +21,7 @@ definitions:
   - &attack_max                   20
   
   - &shatter_per_mille           100
-  - &shatter_max                   5
+  - &shatter_max                  10
   
   - &health_per_mille            167
   - &health_max                   15
