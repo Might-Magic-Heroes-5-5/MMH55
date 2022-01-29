@@ -1,0 +1,29 @@
+# ----------------------------------------------------
+# ----------------- Flaming arrows fix v1.3 --------------
+# ----------------------------------------------------
+#
+# Changes "Flaming arrows" perk to deal 0 damage
+#
+# ----------------------------------------------------
+# ---------- Things you may modify -------------------
+
+definitions: 
+- &new_damage       0 
+# ---------- DO NOT modify -------------------
+- &toe_damage      50 
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0065E3DF
+valueType:      Float
+originalValue:  *toe_damage
+patchValue:     *new_damage
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0059226F
+valueType:      Float
+originalValue:  *toe_damage
+patchValue:     *new_damage
