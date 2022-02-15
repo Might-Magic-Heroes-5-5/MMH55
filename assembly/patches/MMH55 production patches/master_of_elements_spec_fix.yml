@@ -1,0 +1,21 @@
+# ----------------------------------------------------
+# ----------------- Master of Elements spec fix --------------
+# ----------------------------------------------------
+#
+# Removes elemental summoning after ally creature death for Master of Elements specialization
+#
+# ----------------------------------------------------
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00659A0E
+originalBytes:  0F 84 1C 01 00 00
+patchBytes:     E9 1D 01 00 00 90
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0058D8FE
+originalBytes:  0F 84 1C 01 00 00
+patchBytes:     E9 1D 01 00 00 90
