@@ -2,7 +2,7 @@
 # ----------------- Disable dark/light opposites --------------
 # ----------------------------------------------------
 #
-# Disable console in game
+# Disable dispel effect when casting a spell on top fo an opposite one haste/slow; curse/bless; weakness/blodlust
 #
 # ----------------------------------------------------
 # 
