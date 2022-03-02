@@ -2,8 +2,8 @@
 # ----------------- Disable dark/light opposites --------------
 # ----------------------------------------------------
 #
-# Disable dispel effect when casting a spell on top fo an opposite one haste/slow; curse/bless; weakness/blodlust
-#
+# Disable dispel effect when casting a spell on top of an opposite one haste/slow; weakness/blodlust
+# Makes owner of eternal light perk has his bless spell effect immune to curse casts.
 # ----------------------------------------------------
 # 
 #
@@ -11,11 +11,11 @@
 group: Original
 checkAddress:   00000400
 checkBytes:     8D 41 34 C3 CC CC CC CC
-#patchAddress:   000E302D                                             ## curse vs bless
-#originalBytes:  0F 94 C0
-#patchBytes:     B0 00 90
-#---
-#group: Original
+patchAddress:   000E365B
+originalBytes:  32
+patchBytes:     64
+---
+group: Original
 patchAddress:   000E3011                                             ## slow vs haste
 originalBytes:  0F 94 C0
 patchBytes:     B0 00 90
@@ -24,11 +24,6 @@ group: Original
 patchAddress:   000E3003                                             ## weakness vs bloodlust
 originalBytes:  0F 94 C0
 patchBytes:     B0 00 90
-#---
-#group: Original
-#patchAddress:   000E303B                                             ## bless vs curse
-#originalBytes:  0F 94 C0
-#patchBytes:     B0 00 90
 ---
 group: Original
 patchAddress:   000E301F                                             ## haste vs slow
@@ -43,11 +38,11 @@ patchBytes:     B0 00 90
 group: Quantomas3.1j
 checkAddress:   00000400
 checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
-#patchAddress:   0061DF1D                                             ## curse vs bless
-#originalBytes:  0F 94 C0
-#patchBytes:     B0 00 90
-#---
-#group: Quantomas3.1j
+patchAddress:   0061E4F3
+originalBytes:  32
+patchBytes:     64
+---
+group: Quantomas3.1j
 patchAddress:   0061DF01                                             ## slow vs haste
 originalBytes:  0F 94 C0
 patchBytes:     B0 00 90
@@ -56,11 +51,6 @@ group: Quantomas3.1j
 patchAddress:   0061DEF3                                             ## weakness vs bloodlust
 originalBytes:  0F 94 C0
 patchBytes:     B0 00 90
-#---
-#group: Quantomas3.1j
-#patchAddress:   0061DF2B                                             ## bless vs curse
-#originalBytes:  0F 94 C0
-#patchBytes:     B0 00 90
 ---
 group: Quantomas3.1j
 patchAddress:   0061DF0F                                             ## haste vs slow
