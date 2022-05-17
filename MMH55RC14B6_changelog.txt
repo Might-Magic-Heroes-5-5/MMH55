@@ -11,8 +11,8 @@ New:
 --
 --
 
-Removed:
 - ToE hero classes were scrapped
+Removed:
 
 Fixed:
 

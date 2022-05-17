@@ -1,0 +1,66 @@
+# ----------------------------------------------------
+# ----------------- Spirit link fix --------------
+# ----------------------------------------------------
+#
+# Spirit Link formula changed from DAMAGE/MANA_PER_HP to (SQRT(DAMAGE) + const)/MANA_PER_HP
+# 
+# -------------- Things you may want to modify -----------------
+definitions: 
+- &const      1
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC   
+patchAddress:   004A63B3  ## 008A6FB3
+originalBytes:  8B 4C 24 10 8B D8
+patchBytes:     E9 68 17 89 00 90
+---
+group: Original
+patchAddress:   00BDB700  ## 01138700                           ## Add ASCI description of the patch in asselby
+originalBytes:  00*                                              
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 4D 4F 44 3D 3D 3D 3D 3D 3D 20 53 51 52 20 73 70 69 72 69 74 20 6C 69 6E 6B
+---
+group: Original
+patchAddress:   00BDB720  ## 01138720                                                   
+originalBytes:  00*
+patchBytes:     8B 4C 24 10 89 C3 51 DB 04 24 D9 FA DB 1C 24 59 83 C1 
+---
+group: Original
+patchAddress:   00BDB732  ## 01138732   
+valueType:      byte                                                
+originalValue:  00
+patchValue:     *const
+---
+group: Original
+patchAddress:   00BDB733  ## 01138733                                                  
+originalBytes:  00*
+patchBytes:     E9 81 E8 76 FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   004DE583  ## 008DF183                                                   
+originalBytes:  8B 4C 24 10 8B D8
+patchBytes:     E9 98 95 86 00 90
+---
+group: Quantomas3.1j
+patchAddress:   00BDB700  ## 01148700                           ## Add ASCI description of the patch in asselby
+originalBytes:  00*                                              
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 4D 4F 44 3D 3D 3D 3D 3D 3D 20 53 51 52 20 73 70 69 72 69 74 20 6C 69 6E 6B
+---
+group: Quantomas3.1j
+patchAddress:   00BDB720  ## 01148720                                                   
+originalBytes:  00*
+patchBytes:     8B 4C 24 10 89 C3 51 DB 04 24 D9 FA DB 1C 24 59 83 C1
+---
+group: Quantomas3.1j
+patchAddress:   00BDB732  ## 01138732   
+valueType:      byte                                                
+originalValue:  00
+patchValue:     *const
+---
+group: Quantomas3.1j
+patchAddress:   00BDB733  ## 01138733                                                  
+originalBytes:  00*
+patchBytes:     E9 51 6A 79 FF
