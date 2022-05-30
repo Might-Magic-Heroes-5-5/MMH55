@@ -1,20 +1,19 @@
 =======================================
 From artifact reference list
 =======================================
-(v3 + 68)			- NameFileRef
-(v3 + 76) 			- DescriptionFileRef
-(v3 + 84) 			- Model
-(v3 + 92) 			- Type
-(v3 + 96)  			- Slot
-(v3 + 100)  		- Icon
-(v3 + 108) 			- CostOfGold
-(v3 + X)  			- AIValue
-(v3 + X)  			- CanBeGeneratedToSell
-(v3 + X)  			- HeroStatsModif
-(v3 + X)  			- HeroStatsModif
-(v3 + X)  			- ArtifactShared
-(v3 + X)  			- AvailableForPresets
-(v3 + X)  			- PresetPrice
+(v3 + 4)			- NameFileRef
+(v3 + 16) 			- DescriptionFileRef
+(v3 + 28) 			- Model
+(v3 + 36) 			- Type
+(v3 + 40)  			- Slot
+(v3 + 44)  	    	- Icon
+(v3 + 52) 			- CostOfGold
+(v3 + 56)  			- AIValue
+(v3 + 60)  			- CanBeGeneratedToSell
+(v3 + 64)  			- HeroStatsModif
+(v3 + 76)  			- ArtifactShared
+(v3 + 88)  			- AvailableForPresets
+(v3 + 92)  			- PresetPrice
 
 other:
 *(v5 + 32)          - Spell ID given to the owner of the artifact

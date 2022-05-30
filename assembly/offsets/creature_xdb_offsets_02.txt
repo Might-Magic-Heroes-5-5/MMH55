@@ -72,6 +72,9 @@
 	*(v3 + X)                  # 
 
 
+
++ 680 - return CreatureVisual Array ?
+
 	
 	
 	
