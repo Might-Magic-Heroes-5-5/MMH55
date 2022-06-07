@@ -73,6 +73,7 @@
     *(_DWORD *)(v1 + 212) = 0;
     *(_DWORD *)(v1 + 204) = 0;
 	(*(**(a1 + 416) + 32))(*(a1 + 416))																	- return w_o_m_c_s_g_gold resource array
+	(*(*a4 + 416))(a4, a2)																               - return weekly growth
 	(*(*v5 + 216))(v5)																					- return w_o_m_c_s_g_gold resource array
 	(*(*v25 + 268))(v25, &v46);																			- return w_o_m_c_s_g_gold resource array
 	(*(*v8 + 232))(v8);																					- return w_o_m_c_s_g_gold resource array

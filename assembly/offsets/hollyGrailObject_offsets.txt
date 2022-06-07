@@ -28,8 +28,8 @@
 (v3 + 416)(v3)		- creature ID max health
 (v3 + 420) 			-  
 (v3 + 424) 			-  
-(v3 + 428) 			-  
-(v3 + 432) 			-  
+(v3 + 428) 			-  Luck or morale
+(v3 + 432) 			-  Luck or morale
 (v3 + 436) 			-  
 (v3 + 440) 			-  
 (v3 + 444) 			-  
