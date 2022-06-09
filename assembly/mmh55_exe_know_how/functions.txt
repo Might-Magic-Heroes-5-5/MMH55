@@ -101,7 +101,7 @@
 	*(_DWORD *)(*v2 + 544)(v2, spell)																	- creature is given spell
 	*(_DWORD *)(X + 548))(X, mana, Z)																	- sets hero X current mana to new value
 	*(_DWORD *)(a2 + 592)(a2, duration, a6, a8, a7, v39, v13) 											- cast a spell on unit
-	(*(*target_unit + 596))(target_unit, spell_id, duration, modifier(duration,dmg, hero_lvl), v1, v2, v3, 0)																						  	- apply spell effect on creature in combat
+	(*(*target_unit + 596))(target_unit, spell_id, duration, mastery, hero_level, spellpower, v3, 0)																						  	- apply spell effect on creature in combat
 	*(_DWORD *)(&hero + 600))(&hero);																	- return hero race id	
 	*(_DWORD *)(&hero + 604))(&hero)																	- return hero class id
 	*(_DWORD *)(&hero + 608))(&hero)																	- return if creature is on the Favourite enemy list
@@ -222,7 +222,7 @@
 
 	
 	(*(int (__thiscall **)(void *))(*(_DWORD *)v4 + 108))(v4)											-targeted unit
-	(*(int (__thiscall **)(int))(*(_DWORD *)v18 + 116))													-returns hero
+	(*v18 + 116)																						-returns hero artifact inventory
 	
 
 	

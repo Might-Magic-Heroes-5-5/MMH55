@@ -287,11 +287,11 @@ VRF	*(number_of_creatures_maybe() + 1144)			- Base
 VRF	*(number_of_creatures_maybe() + 1148)			- LevelDivisor
 VRF	*(number_of_creatures_maybe() + 1152)			- PerDividedLevel
 	*(number_of_creatures_maybe() + 1156)			- Bonuses
-	*(number_of_creatures_maybe() + 1160)			- Item
-	*(number_of_creatures_maybe() + 1164)			- DamageAbsorbtionPerHeroSkill
-	*(number_of_creatures_maybe() + 1168)			- Item 0
-	*(number_of_creatures_maybe() + 1172)			- Item1,2
-	*(number_of_creatures_maybe() + 1176)			- Item3,4
+	*(number_of_creatures_maybe() + 1160)			- Bonuses
+	*(number_of_creatures_maybe() + 1164)			- Bonuses
+	*(number_of_creatures_maybe() + 1168)			- DamageAbsorbtionPerHeroSkill
+	*(number_of_creatures_maybe() + 1172)			- DamageAbsorbtionPerHeroSkill
+	*(number_of_creatures_maybe() + 1176)			- DamageAbsorbtionPerHeroSkill
 VRF	*(number_of_creatures_maybe() + 1180)			- HealthToRageTransferCoef
 VRF	*(number_of_creatures_maybe() + 1184)			- VenomDuration
 VRF	*(number_of_creatures_maybe() + 1188)			- SwallowGoblinRange
