@@ -349,8 +349,8 @@ VRF	*(number_of_creatures_maybe() + 1392)			- Retribution_DamageBonusPerMorale
 	*(number_of_creatures_maybe() + 1396)			- <DemonLord>
 	*(number_of_creatures_maybe() + 1400)			- Gating
 	*(number_of_creatures_maybe() + 1404)			- PortionOfSummonedByGatingLevel 
-	*(number_of_creatures_maybe() + 1408)			- <item>
-	*(number_of_creatures_maybe() + 1412)			- <item>
+	*(number_of_creatures_maybe() + 1408)			- PortionOfSummonedByGatingLevel
+	*(number_of_creatures_maybe() + 1412)			- PortionOfSummonedByGatingLevel
 	*(number_of_creatures_maybe() + 1416)			- CallerStartATB
 VRF	*(number_of_creatures_maybe() + 1420)			- GatedStartATB
 	*(number_of_creatures_maybe() + 1424)			- InitiativeFactor	
@@ -674,12 +674,12 @@ VRF	*(number_of_creatures_maybe() + 2656)			- PerDividedLevel
 VRF	*(number_of_creatures_maybe() + 2664)			- Base 
 VRF	*(number_of_creatures_maybe() + 2668)			- LevelDivisor 
 VRF	*(number_of_creatures_maybe() + 2672)			- PerDividedLevel 
-VRF	*(number_of_creatures_maybe() + 2676)			- ShoutOfMany_DamagePerCreatureInArmy 
-VRF	*(number_of_creatures_maybe() + 2680)			- ShoutOfMany_ShockwaveMoveTime 
-	*(number_of_creatures_maybe() + 2684)			- LuckAndMorale 
-VRF	*(number_of_creatures_maybe() + 2688)			- GoodLuck_DamageMultiplier 
-VRF	*(number_of_creatures_maybe() + 2692)			- BadLuck_DamageMultiplier 
-VRF *(number_of_creatures_maybe() + 2696)			- GoodMorale_ATBValue 
+VRF	*(number_of_creatures_maybe() + 2672)			- ShoutOfMany_DamagePerCreatureInArmy 
+VRF	*(number_of_creatures_maybe() + 2672)			- ShoutOfMany_ShockwaveMoveTime 
+	*(number_of_creatures_maybe() + 2672)			- LuckAndMorale 
+VRF	*(number_of_creatures_maybe() + 2676)			- GoodLuck_DamageMultiplier 
+VRF	*(number_of_creatures_maybe() + 2680)			- BadLuck_DamageMultiplier 
+VRF *(number_of_creatures_maybe() + 2684)			- GoodMorale_ATBValue 
 VRF *(number_of_creatures_maybe() + 2700)			- BadMorale_ATBValue 
 VRF	*(number_of_creatures_maybe() + 2704)			- GhostMode 
 VRF	*(number_of_creatures_maybe() + 2708)			- MaxSkillLevel 

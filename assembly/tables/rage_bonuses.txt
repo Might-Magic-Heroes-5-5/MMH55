@@ -1,0 +1,53 @@
+// #STR: "DEMON_RAGE_BONUS_NONE", "DEMON_RAGE_BONUS_HEALTH", "DEMON_RAGE_BONUS_ATTACK", "DEMON_RAGE_BONUS_DEFENCE", "DEMON_RAGE_BONUS_DAMAGE", "DEMON_RAGE_BONUS_SPEED", "DEMON_RAGE_BONUS_INITIATIVE", "DEMON_RAGE_BONUS_ACCURACY", "DEMON_RAGE_BONUS_SPELLPOWER_MULT", "DEMON_RAGE_BONUS_ABILITY"
+_DWORD *__fastcall define_demon_rage_bonus_vars(_DWORD *a1, int a2)
+{
+  _DWORD *result; // eax
+
+  switch ( a2 )
+  {
+    case 0: "DEMON_RAGE_BONUS_NONE"
+      result = a1;
+      break;
+    case 1: "DEMON_RAGE_BONUS_HEALTH"
+      result = a1;
+      break;
+    case 2: "DEMON_RAGE_BONUS_ATTACK"
+      result = a1;
+      break;
+    case 3: "DEMON_RAGE_BONUS_DEFENCE"
+      result = a1;
+      break;
+    case 4: "DEMON_RAGE_BONUS_DAMAGE"
+      result = a1;
+      break;
+    case 5: "DEMON_RAGE_BONUS_SPEED"
+      result = a1;
+      break;
+    case 6: "DEMON_RAGE_BONUS_INITIATIVE"
+      result = a1;
+      break;
+    case 7: "DEMON_RAGE_BONUS_ACCURACY"
+      result = a1;
+      break;
+    case 8: "DEMON_RAGE_BONUS_SPELLPOWER_MULT"
+      result = a1;
+      break;
+    case 9: "DEMON_RAGE_BONUS_ABILITY"
+      result = a1;
+      break;
+    case 10: "DEMON_RAGE_BONUS_DISABLE_ABILITY"
+      result = a1;
+      break;
+    case 11: "DEMON_RAGE_BONUS_SPELL"
+      result = a1;
+      break;
+    default:
+      *a1 = 0;
+      a1[1] = 0;
+      a1[2] = 0;
+      putA2inA1mem(a1, "DEMON_RAGE_BONUS_NONE", ""
+      result = a1;
+      break;
+  }
+  return result;
+}

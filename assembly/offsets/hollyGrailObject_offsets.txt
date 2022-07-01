@@ -70,7 +70,7 @@
 (v3 + 584)			- 
 (v3 + 588)			- 
 (v3 + 592)			- 
-(v3 + 596)			- 
+(v3 + 596)			- apply effect
 (v3 + 600)			- 
 (v3 + 604)			- 
 (v3 + 608)			- 
@@ -80,5 +80,7 @@
 (v3 + 624)			- 
 (v3 + 628)			- 
 (v3 + 632)			- 
-(v3 + 636)			- 
+(v3 + 636)			-  set Visuals? (*(*a3 + 636))(a3, a6, SpellVisualA_v12, xy_v24, 0)
 (v3 + 640)(a2, 44) 	- does hero has specialization 44?
+(v3 + 644)(a2, 44) 	- does hero has skill 44?
+(v3 + 708))         - return creature rage points

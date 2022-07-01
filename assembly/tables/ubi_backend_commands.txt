@@ -1,0 +1,517 @@
+ result = a1 - 1;
+  switch ( a1 )
+  {
+    case 1:
+      strcpy(Buffer, "NEWUSERREQUEST");
+      result = 0;
+      break;
+    case 2:
+      strcpy(Buffer, "CONNECTIONREQUEST");
+      result = 81;
+      break;
+    case 3:
+      result = Buffer;
+      strcpy(Buffer, "PLAYERNEW");
+      break;
+    case 4:
+      strcpy(Buffer, "DISCONNECTION");
+      result = 67;
+      break;
+    case 5:
+      strcpy(Buffer, "PLAYERREMOVED");
+      result = 77;
+      break;
+    case 7:
+      result = 78;
+      strcpy(Buffer, "NEWS");
+      break;
+    case 8:
+      strcpy(Buffer, "SEARCHPLAYER");
+      result = 65;
+      break;
+    case 9:
+      strcpy(Buffer, "REMOVEACCOUNT");
+      result = 67;
+      break;
+    case 11:
+      strcpy(Buffer, "SERVERSLIST");
+      result = 73;
+      break;
+    case 13:
+      result = Buffer;
+      strcpy(Buffer, "SESSIONLIST");
+      break;
+    case 15:
+      strcpy(Buffer, "PLAYERLIST");
+      result = 83;
+      break;
+    case 16:
+      result = Buffer;
+      strcpy(Buffer, "GETGROUPINFO");
+      break;
+    case 17:
+      result = Buffer;
+      strcpy(Buffer, "GROUPINFO");
+      break;
+    case 18:
+      strcpy(Buffer, "GETPLAYERINFO");
+      result = 82;
+      break;
+    case 19:
+      result = Buffer;
+      strcpy(Buffer, "PLAYERINFO");
+      break;
+    case 20:
+      result = Buffer;
+      strcpy(Buffer, "CHATALL");
+      break;
+    case 21:
+      strcpy(Buffer, "CHATLIST");
+      result = 76;
+      break;
+    case 22:
+      strcpy(Buffer, "CHATSESSION");
+      result = 73;
+      break;
+    case 24:
+      result = 67;
+      strcpy(Buffer, "CHAT");
+      break;
+    case 26:
+      result = Buffer;
+      strcpy(Buffer, "CREATESESSION");
+      break;
+    case 27:
+      result = Buffer;
+      strcpy(Buffer, "SESSIONNEW");
+      break;
+    case 28:
+      result = Buffer;
+      strcpy(Buffer, "JOINSESSION");
+      break;
+    case 31:
+      result = Buffer;
+      strcpy(Buffer, "JOINNEW");
+      break;
+    case 32:
+      strcpy(Buffer, "LEAVESESSION");
+      result = 83;
+      break;
+    case 33:
+      strcpy(Buffer, "JOINLEAVE");
+      result = 69;
+      break;
+    case 34:
+      strcpy(Buffer, "SESSIONREMOVE");
+      result = 69;
+      break;
+    case 38:
+      strcpy(Buffer, "GSSUCCESS");
+      result = 67;
+      break;
+    case 39:
+      result = Buffer;
+      strcpy(Buffer, "GSFAIL");
+      break;
+    case 40:
+      strcpy(Buffer, "BEGINGAME");
+      result = 78;
+      break;
+    case 45:
+      strcpy(Buffer, "UPDATEPLAYERINFO");
+      result = 73;
+      break;
+    case 48:
+      strcpy(Buffer, "MASTERCHANGED");
+      result = 65;
+      break;
+    case 51:
+      strcpy(Buffer, "UPDATESESSIONSTATE");
+      result = 84;
+      break;
+    case 52:
+      strcpy(Buffer, "URGENTMESSAGE");
+      result = 69;
+      break;
+    case 54:
+      strcpy(Buffer, "NEWWAITMODULE");
+      result = 79;
+      break;
+    case 55:
+      strcpy(Buffer, "KILLMODULE");
+      result = 0;
+      break;
+    case 58:
+      strcpy(Buffer, "STILLALIVE");
+      result = 0;
+      break;
+    case 59:
+      strcpy(Buffer, "PING");
+      result = aPing[4];
+      break;
+    case 60:
+      strcpy(Buffer, "PLAYERKICK");
+      result = 0;
+      break;
+    case 61:
+      strcpy(Buffer, "PLAYERMUTE");
+      result = 0;
+      break;
+    case 62:
+      strcpy(Buffer, "ALLOWGAME");
+      result = 87;
+      break;
+    case 63:
+      result = Buffer;
+      strcpy(Buffer, "FORBIDGAME");
+      break;
+    case 64:
+      result = Buffer;
+      strcpy(Buffer, "GAMELIST");
+      break;
+    case 65:
+      strcpy(Buffer, "UPDATEADVERTISMEMENTS");
+      result = 77;
+      break;
+    case 66:
+      strcpy(Buffer, "UPDATENEWS");
+      result = 87;
+      break;
+    case 67:
+      strcpy(Buffer, "VERSIONLIST");
+      result = 73;
+      break;
+    case 68:
+      strcpy(Buffer, "UPDATEVERSIONS");
+      result = 78;
+      break;
+    case 70:
+      strcpy(Buffer, "UPDATEDISTANTROUTERS");
+      result = 0;
+      break;
+    case 71:
+      strcpy(Buffer, "ADMINLOGIN");
+      result = 73;
+      break;
+    case 72:
+      result = Buffer;
+      strcpy(Buffer, "STAT_PLAYER");
+      break;
+    case 73:
+      strcpy(Buffer, "STAT_GAME");
+      result = 69;
+      break;
+    case 74:
+      strcpy(Buffer, "UPDATEFRIEND");
+      result = 0;
+      break;
+    case 75:
+      strcpy(Buffer, "ADDFRIEND");
+      result = 82;
+      break;
+    case 76:
+      result = Buffer;
+      strcpy(Buffer, "DELFRIEND");
+      break;
+    case 77:
+      strcpy(Buffer, "LOGINWAITMODULE");
+      result = 84;
+      break;
+    case 78:
+      strcpy(Buffer, "LOGINFRIENDS");
+      result = 69;
+      break;
+    case 79:
+      strcpy(Buffer, "ADDIGNOREFRIEND");
+      result = 69;
+      break;
+    case 80:
+      strcpy(Buffer, "DELIGNOREFRIEND");
+      result = 69;
+      break;
+    case 81:
+      strcpy(Buffer, "STATUSCHANGE");
+      result = 65;
+      break;
+    case 82:
+      strcpy(Buffer, "JOINARENA");
+      result = 65;
+      break;
+    case 83:
+      strcpy(Buffer, "LEAVEARENA");
+      result = 0;
+      break;
+    case 84:
+      strcpy(Buffer, "IGNORELIST");
+      result = 0;
+      break;
+    case 85:
+      strcpy(Buffer, "IGNOREFRIEND");
+      result = 0;
+      break;
+    case 86:
+      strcpy(Buffer, "GETARENA");
+      result = 82;
+      break;
+    case 87:
+      result = Buffer;
+      strcpy(Buffer, "GETSESSION");
+      break;
+    case 88:
+      result = Buffer;
+      strcpy(Buffer, "PAGEPLAYER");
+      break;
+    case 89:
+      result = Buffer;
+      strcpy(Buffer, "FRIENDLIST");
+      break;
+    case 90:
+      result = Buffer;
+      strcpy(Buffer, "PEERMSG");
+      break;
+    case 91:
+      result = Buffer;
+      strcpy(Buffer, "PEERPLAYER");
+      break;
+    case 92:
+      result = Buffer;
+      strcpy(Buffer, "DISCONNECTFRIENDS");
+      break;
+    case 93:
+      strcpy(Buffer, "JOINWAITMODULE");
+      result = 0;
+      break;
+    case 94:
+      strcpy(Buffer, "LOGINSESSION");
+      result = 0;
+      break;
+    case 95:
+      strcpy(Buffer, "DISCONNECTSESSION");
+      result = 83;
+      break;
+    case 96:
+      strcpy(Buffer, "PLAYERDISCONNECT");
+      result = 0;
+      break;
+    case 97:
+      strcpy(Buffer, "ADVERTISEMENT");
+      result = 69;
+      break;
+    case 98:
+      strcpy(Buffer, "MODIFYUSER");
+      result = 69;
+      break;
+    case 99:
+      strcpy(Buffer, "STARTGAME");
+      result = 69;
+      break;
+    case 100:
+      strcpy(Buffer, "CHANGEVERSION");
+      result = 82;
+      break;
+    case 101:
+      result = 80;
+      strcpy(Buffer, "PAGER");
+      break;
+    case 102:
+      result = 76;
+      strcpy(Buffer, "LOGIN");
+      break;
+    case 103:
+      result = 80;
+      strcpy(Buffer, "PHOTO");
+      break;
+    case 104:
+      strcpy(Buffer, "LOGINARENA");
+      result = 78;
+      break;
+    case 106:
+      result = Buffer;
+      strcpy(Buffer, "SQLCREATE");
+      break;
+    case 107:
+      strcpy(Buffer, "SQLSELECT");
+      result = 69;
+      break;
+    case 108:
+      strcpy(Buffer, "SQLDELETE");
+      result = 69;
+      break;
+    case 109:
+      result = Buffer;
+      strcpy(Buffer, "SQLSET");
+      break;
+    case 110:
+      result = Buffer;
+      strcpy(Buffer, "SQLSTAT");
+      break;
+    case 111:
+      result = 0;
+      strcpy(Buffer, "SQLQUERY");
+      break;
+    case 127:
+      strcpy(Buffer, "ROUTEURLIST");
+      result = 69;
+      break;
+    case -125:
+      strcpy(Buffer, "DISTANCEVECTOR");
+      result = 79;
+      break;
+    case -124:
+      result = Buffer;
+      strcpy(Buffer, "WRAPPEDMESSAGE");
+      break;
+    case -123:
+      result = Buffer;
+      strcpy(Buffer, "CHANGEFRIEND");
+      break;
+    case -122:
+      strcpy(Buffer, "NEWRELFRIEND");
+      result = 0;
+      break;
+    case -121:
+      strcpy(Buffer, "DELRELFRIEND");
+      result = 0;
+      break;
+    case -120:
+      strcpy(Buffer, "NEWIGNOREFRIEND");
+      result = 69;
+      break;
+    case -119:
+      strcpy(Buffer, "DELETEIGNOREFRIEND");
+      result = 0;
+      break;
+    case -118:
+      strcpy(Buffer, "ARENACONNECTION");
+      result = 73;
+      break;
+    case -117:
+      strcpy(Buffer, "ARENADISCONNECTION");
+      result = 0;
+      break;
+    case -116:
+      strcpy(Buffer, "ARENAWAITMODULE");
+      result = 85;
+      break;
+    case -115:
+      result = Buffer;
+      strcpy(Buffer, "ARENANEW");
+      break;
+    case -113:
+      strcpy(Buffer, "NEWBASICGROUP");
+      result = 71;
+      break;
+    case -112:
+      strcpy(Buffer, "ARENAREMOVED");
+      result = 79;
+      break;
+    case -111:
+      strcpy(Buffer, "DELETEBASICGROUP");
+      result = 0;
+      break;
+    case -110:
+      strcpy(Buffer, "SESSIONSBEGIN");
+      result = 78;
+      break;
+    case -108:
+      strcpy(Buffer, "GROUPDATA");
+      result = 65;
+      break;
+    case -105:
+      strcpy(Buffer, "ARENA_MESSAGE");
+      result = 69;
+      break;
+    case -99:
+      result = Buffer;
+      strcpy(Buffer, "ARENALISTREQUEST");
+      break;
+    case -98:
+      strcpy(Buffer, "ROUTERPLAYERNEW");
+      result = 78;
+      break;
+    case -97:
+      strcpy(Buffer, "BASEGROUPREQUEST");
+      result = 0;
+      break;
+    case -90:
+      strcpy(Buffer, "UPDATEPLAYERPING");
+      result = 80;
+      break;
+    case -87:
+      strcpy(Buffer, "UPDATEGROUPSIZE");
+      result = 79;
+      break;
+    case -77:
+      strcpy(Buffer, "SLEEP");
+      result = 80;
+      break;
+    case -76:
+      strcpy(Buffer, "WAKEUP");
+      result = 85;
+      break;
+    case -75:
+      result = Buffer;
+      strcpy(Buffer, "SYSTEMPAGE");
+      break;
+    case -67:
+      result = Buffer;
+      strcpy(Buffer, "SESSIONOPEN");
+      break;
+    case -66:
+      strcpy(Buffer, "SESSIONCLOSE");
+      result = 76;
+      break;
+    case -64:
+      result = Buffer;
+      strcpy(Buffer, "LOGINCLANMANAGER");
+      break;
+    case -63:
+      strcpy(Buffer, "DISCONNECTCLANMANAGER");
+      result = 78;
+      break;
+    case -62:
+      strcpy(Buffer, "CLANMANAGERPAGE");
+      result = 71;
+      break;
+    case -61:
+      strcpy(Buffer, "UPDATECLANPLAYER");
+      result = 0;
+      break;
+    case -60:
+      strcpy(Buffer, "PLAYERCLANS");
+      result = 69;
+      break;
+    case -57:
+      strcpy(Buffer, "GETPERSISTANTGROUPINFO");
+      break;
+    case -54:
+      strcpy(Buffer, "UPDATEGROUPPING");
+      result = 79;
+      break;
+    case -53:
+      strcpy(Buffer, "DEFERREDGAMESTARTED");
+      result = 83;
+      break;
+    case -51:
+      result = Buffer;
+      strcpy(Buffer, "BEGINCLIENTHOSTGAME");
+      break;
+    case -47:
+      result = Buffer;
+      strcpy(Buffer, "LOBBY_MSG");
+      break;
+    case -46:
+      strcpy(Buffer, "LOBBYSERVERLOGIN");
+      result = 0;
+      break;
+    case -45:
+      strcpy(Buffer, "SETGROUPSZDATA");
+      result = 84;
+      break;
+    case -44:
+      strcpy(Buffer, "GROUPSZDATA");
+      result = 65;
+      break;
+    default:
+      result = sprintf(Buffer, "%d", a1);
+      break;
