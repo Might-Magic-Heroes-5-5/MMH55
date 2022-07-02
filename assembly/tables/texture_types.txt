@@ -1,0 +1,3 @@
+  case 0: "REGULAR"
+  case 1: "TEXTURE_2D"
+  default: "REGULAR"
