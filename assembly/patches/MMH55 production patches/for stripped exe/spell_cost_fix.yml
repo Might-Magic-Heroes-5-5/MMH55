@@ -1,0 +1,63 @@
+# ----------------------------------------------------
+# ----------------- Spell cost fix --------------
+# ----------------------------------------------------
+#  
+# Adjust following spell costs
+# - Mass spells spell cost from x2 to x4
+# - Mass dispel spell cost remain x2
+# - Sar Isus spell cost reduction from 50% to 25% rounded
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC   
+patchAddress:   00633BA2   ## 00A347A2
+originalBytes:  85 ED 75 0B 8B CF E8 C3 F7 FF FF 85 C0 74 02 03 F6
+patchBytes:     E9 79 40 70 00 90 90 90 90 90 90 90 90 90 90 90 90
+---
+group: Original            ## header name "SPELL COST"
+patchAddress:   00BDB800   ## 01138800
+originalBytes:  00*
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 4D 4F 44 3D 3D 3D 3D 3D 3D 20 53 70 65 6C 6C 73 20 63 6F 73 74 20 66 69 78
+---
+group: Original            ## mass/empowred/dispell new code
+patchAddress:   00BDB820   ## 01138820
+originalBytes:  00*
+patchBytes:     83 FD 1A 74 13 85 ED 74 04 03 F6 EB 0B 8B CF E8 3C B7 8F FF 85 C0 74 02 01 F6 E9 74 BF 8F FF 90
+---
+group: Original            ## jump to new sar issus code
+patchAddress:   00633CDA   ## 00A348DA 
+originalBytes:  8B C6 99 2B C2 D1 F8
+patchBytes:     E9 61 3F 70 00 90 90
+---
+group: Original            ## Sar issus new code
+patchAddress:   00BDB840   ## 01138840
+originalBytes:  00*
+patchBytes:     8B C6 8D 04 40 83 C0 02 C1 F8 02 E9 91 C0 8F FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j       ## add jump to handle mass/empowered/dispel spells
+checkAddress:   00000400 
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   004D5372   ## 008D5F72
+originalBytes:  85 ED 75 0B 8B CF E8 C3 F7 FF FF 85 C0 74 02 03 F6
+patchBytes:     E9 A9 28 87 00 90 90 90 90 90 90 90 90 90 90 90 90
+---
+group: Quantomas3.1j       ## header name "SPELL COST"
+patchAddress:   00BDB800   ## 01148800
+originalBytes:  00*
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 4D 4F 44 3D 3D 3D 3D 3D 3D 20 53 70 65 6C 6C 73 20 63 6F 73 74 20 66 69 78
+---
+group: Quantomas3.1j       ## mass/empowred/dispell new code
+patchAddress:   00BDB820   ## 01148820
+originalBytes:  00*
+patchBytes:     83 FD 1A 74 13 85 ED 74 04 01 F6 EB 0B 89 F9 E8 0C CF 78 FF 85 C0 74 02 01 F6 E9 44 D7 78 FF 90
+---
+group: Quantomas3.1j       ## jump to new sar issus code
+patchAddress:   004D54AA   ## 008D60AA 
+originalBytes:  8B C6 99 2B C2 D1 F8
+patchBytes:     E9 91 27 87 00 90 90
+---
+group: Quantomas3.1j       ## Sar issus new code
+patchAddress:   00BDB840   ## 01148840
+originalBytes:  00*
+patchBytes:     89 F0 8D 04 40 83 C0 02 C1 F8 02 E9 61 D8 78 FF
