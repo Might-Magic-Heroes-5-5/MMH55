@@ -1,9 +1,8 @@
 # ----------------------------------------------------
-# ----------------- Crystal Scales fix --------------
+# ----------------- Cold Death immunity --------------
 # ----------------------------------------------------
 #  
-# Crystal Scale ability prevents the following effects from triggering (Immunity) on the owner:
-# - Cold Death
+# The following abilities give immunity to cold death - Crystal Scales, Mechanical
 #
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original
@@ -18,10 +17,10 @@ patchAddress:   00BDB860   ## 01138860
 originalBytes:  00*
 patchBytes:     3D 3D 3D 3D 3D 3D 3D 4D 4F 44 3D 3D 3D 3D 3D 3D 20 43 72 79 73 74 61 6C 20 20 53 63 61 6C 65 73
 ---
-group: Original            ## enable for "Cold death"
+group: Original            ## enable for "Cold death" and "Mechanical"
 patchAddress:   00BDB880   ## 01138880
 originalBytes:  00*
-patchBytes:     8B 06 6A 42 8B CE FF 90 8C 02 00 00 84 C0 0F 85 5C F2 83 FF 8B 16 8B CE FF 92 A8 01 00 00 E9 49 F2 83 FF
+patchBytes:     8B 06 6A 42 8B CE FF 90 8C 02 00 00 84 C0 0F 85 5C F2 83 FF 8B 06 6A 09 8B CE FF 90 8C 02 00 00 84 C0 0F 85 48 F2 83 FF 8B 16 8B CE FF 92 A8 01 00 00 E9 35 F2 83 FF
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j       ## add jump for Cold Death check
 checkAddress:   00000400 
@@ -35,7 +34,7 @@ patchAddress:   00BDB860   ## 01148860
 originalBytes:  00*
 patchBytes:     3D 3D 3D 3D 3D 3D 3D 4D 4F 44 3D 3D 3D 3D 3D 3D 20 43 72 79 73 74 61 6C 20 20 53 63 61 6C 65 73
 ---
-group: Quantomas3.1j       ## enable for "Cold death"
+group: Quantomas3.1j       ## enable for "Cold death" and "Mechanical"
 patchAddress:   00BDB880   ## 01148880
 originalBytes:  00*
-patchBytes:     8B 06 6A 42 8B CE FF 90 80 02 00 00 84 C0 0F 85 2C B3 76 FF 8B 16 8B CE FF 92 A0 01 00 00 E9 19 B3 76 FF
+patchBytes:     8B 06 6A 42 8B CE FF 90 80 02 00 00 84 C0 0F 85 2C B3 76 FF 8B 06 6A 09 8B CE FF 90 80 02 00 00 84 C0 0F 85 18 B3 76 FF 8B 16 8B CE FF 92 A0 01 00 00 E9 05 B3 76 FF
