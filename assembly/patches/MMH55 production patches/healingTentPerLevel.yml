@@ -1,14 +1,14 @@
 # ----------------------------------------------------
 # ------------ Healing Tent HP per Level ---------------
 # ----------------------------------------------------
-# Depending on mastery each hero level will add 5, 6, 8 or 10 hp to healing amount of the healing tent.
+# Depending on mastery each hero level will add 0, 4, 8 or 10 hp to healing amount of the healing tent.
 #
 # By Deflaktor
 #
 # -------------- Things you may want to modify -----------------
 definitions: 
-- &no_mastery_hp_per_level         5
-- &basic_mastery_hp_per_level      6
+- &no_mastery_hp_per_level         0
+- &basic_mastery_hp_per_level      4
 - &advanced_mastery_hp_per_level   8
 - &expert_mastery_hp_per_level    10
 

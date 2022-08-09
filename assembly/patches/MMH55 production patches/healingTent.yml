@@ -1,16 +1,16 @@
 # ----------------------------------------------------
 # ------------ Healing Tent HP ---------------
 # ----------------------------------------------------
-# Changes Healing amount from (10,20,50,100) to (10,10,10,10)
+# Changes Healing amount from (10,20,50,100) to (10,40,75,200)
 #
 # By Deflaktor
 #
 # -------------- Things you may want to modify -----------------
 definitions: 
-- &no_mastery_healing         10
-- &basic_mastery_healing      10
-- &advanced_mastery_healing   10
-- &expert_mastery_healing     10
+- &no_mastery_healing          0
+- &basic_mastery_healing       0
+- &advanced_mastery_healing    0
+- &expert_mastery_healing      0
 
 - &no_mastery_unknown_value          0
 - &basic_mastery_unknown_value       0
