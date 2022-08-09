@@ -1,0 +1,11 @@
+XDB_DATA_TYPES:
+case 1: integer
+case 2: float
+case 3: boolean
+case 4:
+case 5:
+case 6:
+case 7:
+case 8: creature_id
+case 9:
+case 10:

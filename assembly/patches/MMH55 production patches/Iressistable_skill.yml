@@ -1,0 +1,71 @@
+# ----------------------------------------------------
+# ----------------- Irresistable skill --------------
+# ----------------------------------------------------
+# 
+#  Change penetration modifier for basic/advanced/expert/ultimate skill levels
+#
+# ----------------------------------------------------
+# ---- adjustable values ------
+definitions: 
+ - &M55_BASIC    20
+ - &M55_ADVANCED 30
+ - &M55_EXPERT   40
+ - &M55_ULTIMATE 40
+ # ---- Original ToE values - DO NOT MODIFY
+ - &TOE_BASIC    20
+ - &TOE_ADVANCED 40
+ - &TOE_EXPERT   50
+ - &TOE_ULTIMATE 75
+ #
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00B4471C   ## 00F46F1C
+valueType:      BYTE
+originalValue:  *TOE_BASIC
+patchValue:     *M55_BASIC
+---
+group: Original
+patchAddress:   00B44720   ## 00F46F20
+valueType:      BYTE
+originalValue:  *TOE_ADVANCED
+patchValue:     *M55_ADVANCED
+---
+group: Original
+patchAddress:   00B44724   ## 00F46F24
+valueType:      BYTE
+originalValue:  *TOE_EXPERT
+patchValue:     *M55_EXPERT
+---
+group: Original
+patchAddress:   00B44728   ## 00F46F28
+valueType:      BYTE
+originalValue:  *TOE_ULTIMATE
+patchValue:     *M55_ULTIMATE
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400 
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   00B6D984   ## 00F6F584
+valueType:      BYTE
+originalValue:  *TOE_BASIC
+patchValue:     *M55_BASIC
+---
+group: Quantomas3.1j
+patchAddress:   00B6D988   ## 00F6F588
+valueType:      BYTE
+originalValue:  *TOE_ADVANCED
+patchValue:     *M55_ADVANCED
+---
+group: Quantomas3.1j
+patchAddress:   00B6D98C   ## 00F6F58C
+valueType:      BYTE
+originalValue:  *TOE_EXPERT
+patchValue:     *M55_EXPERT
+---
+group: Quantomas3.1j
+patchAddress:   00B6D990  ## 00F6F590
+valueType:      BYTE
+originalValue:  *TOE_ULTIMATE
+patchValue:     *M55_ULTIMATE

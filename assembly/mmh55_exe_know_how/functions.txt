@@ -197,7 +197,7 @@
 	(*(*v3 + 212))(v3) == 9																				- return race id
 	(*(*v9 + 400))																						- return attack value
 	
-	(*(*(v6 + 28) + 236))(v6 + 28, 65, *(a4 + 4))														- this commands make hero leans spell ID 65 counterstrike
+	(*(v37 + 236))(a1 + 28, spell_id, v115);											     			- this commands make hero leans spell ID 
 	(*(*(this + 28) + 448))(this + 28, <primary skill id>, -<value to reduce with>)						- reduce primary skill value
 	(*(*v14 + 88))(v14)																					- element ID
 
