@@ -8,12 +8,12 @@
 #----------------- VALUES TO MODIFY ---------------------
 definitions:
 - &M55_chance  100
-- &M55_max_reduction 0.75
-- &M55_min_reduction 0.9
+- &M55_max_multiplier 0.75
+- &M55_min_multiplier 0.9
 #----------------- DO NOT MODIFY ---------------------
 - &TOE_chance  50
-- &TOE_max_reduction 0.60000002
-- &TOE_min_reduction 0.9
+- &TOE_max_multiplier 0.60000002
+- &TOE_min_multiplier 0.9
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original           ## adventure map chance
 checkAddress:   00000400
@@ -37,14 +37,14 @@ patchValue:     *M55_chance
 group: Original           ## erratic mana combat spells min mana reduction 5%
 patchAddress:   007BEB12  ## 00BBF712
 valueType:      Float
-originalValue:  *TOE_min_reduction
-patchValue:     *M55_min_reduction
+originalValue:  *TOE_min_multiplier
+patchValue:     *M55_min_multiplier
 ---
 group: Original           ## erratic mana combat spells max mana reduction 30%
 patchAddress:   007BEB17  ## 00BBF717
 valueType:      Float
-originalValue:  *TOE_max_reduction
-patchValue:     *M55_max_reduction
+originalValue:  *TOE_max_multiplier
+patchValue:     *M55_max_multiplier
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
 checkAddress:   00000400
@@ -68,14 +68,14 @@ patchValue:     *M55_chance
 group: Quantomas3.1j      ## erratic mana combat spells min mana reduction 5%
 patchAddress:   00743832  ## 00B44432
 valueType:      Float
-originalValue:  *TOE_min_reduction
-patchValue:     *M55_min_reduction
+originalValue:  *TOE_min_multiplier
+patchValue:     *M55_min_multiplier
 ---
 group: Quantomas3.1j      ## erratic mana combat spells max mana reduction 30%
 patchAddress:   00743837  ## 00B44437
 valueType:      Float
-originalValue:  *TOE_max_reduction
-patchValue:     *M55_max_reduction
+originalValue:  *TOE_max_multiplier
+patchValue:     *M55_max_multiplier
 
 
 
