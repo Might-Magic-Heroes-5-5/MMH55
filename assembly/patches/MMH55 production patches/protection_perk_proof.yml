@@ -1,0 +1,27 @@
+# ----------------------------------------------------
+# ----------------- Protection perk proof --------------
+# ----------------------------------------------------
+#
+# Protection perk magic proof changed from 15% to 20%
+#
+#----------------- VALUES TO MODIFY ---------------------
+definitions:
+- &M55_proof 0.8
+#----------------- DO NOT MODIFY ---------------------
+- &TOE_proof 0.85
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0057A3BC  ## 0097AFBC
+valueType:      float
+originalValue:  *TOE_proof
+patchValue:     *M55_proof
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   004B6475  ## 008B7075
+valueType:      float
+originalValue:  *TOE_proof
+patchValue:     *M55_proof

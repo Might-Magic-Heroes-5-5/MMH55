@@ -4,8 +4,6 @@
 #
 # Enables Barbarian heroes to use standard spellbook instead of parchment
 #
-#----------------- VALUES TO MODIFY ---------------------
-#----------------- DO NOT MODIFY ---------------------
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original
 checkAddress:   00000400
