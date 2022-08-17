@@ -70,7 +70,7 @@
 (v3 + 584)			- 
 (v3 + 588)			- 
 (v3 + 592)			- 
-(v3 + 596)			- apply effect
+(v3 + 596)			- apply effect ( target, spell_id, duration, mastery, hero_lvl, spellpower, v13, *CombatHero3)
 (v3 + 600)			- 
 (v3 + 604)			- 
 (v3 + 608)			- 
