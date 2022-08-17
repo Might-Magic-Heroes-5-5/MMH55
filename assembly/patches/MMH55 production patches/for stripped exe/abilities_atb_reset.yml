@@ -2,7 +2,7 @@
 # ----------------- Abilities ATB reset --------------
 # ----------------------------------------------------
 # Patch allows alteration of spent Hero atb after cast of the following abilities:
-# - Encourag, Prayer, Banshee Howl, Bannish, Avatar of Death, Refresh Rune, Retaliation Strike, Demonic Strike, Spirit Link, Mark of the Sorcerer, Chain Attack
+# - Encourage, Prayer, Banshee Howl, Bannish, Avatar of Death, Refresh Rune, Retaliation Strike, Demonic Strike, Spirit Link, Mark of the Sorcerer, Chain Attack
 #
 # -------------- Things you may want to modify -----------------
 definitions: 
