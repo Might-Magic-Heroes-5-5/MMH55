@@ -1,0 +1,35 @@
+# ----------------------------------------------------
+# ----------------- Perk boxes choice --------------
+# ----------------------------------------------------
+#
+# In TOE offers:
+# level-up-perk box 1: offers standard perk unless present, then any perk is offered.
+# level-up-perk box 2: offers special perk unless present,  then any perk is offered.
+#
+# This patch makes any perk to have a chance of appearance at both slots.
+#
+# ----------------------------------------------------
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00751DF7                   ## 00B529F7
+originalBytes:  00
+patchBytes:     01
+---
+group: Original
+patchAddress:   00751E83                   ## 00B52A83 
+originalBytes:  00
+patchBytes:     01
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   005FD837                   ## 009FE437
+originalBytes:  00
+patchBytes:     01
+---
+group: Quantomas3.1j
+patchAddress:   005FD8C3                   ## 009FE4C3 
+originalBytes:  00
+patchBytes:     01
