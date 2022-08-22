@@ -1,0 +1,28 @@
+# ----------------------------------------------------
+# ----------------- Last Stand --------------
+# ----------------------------------------------------
+#
+# Adjusts last stand threshold trigger
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+ - &m55_threshold 2
+# -----------Things that should not be modified ----------------
+ - &toe_threshold 1
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original               ## remove pendant of mastery skill bonus
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   006588B1      ## 00A594B1
+valueType:      Byte
+originalValue:  *toe_threshold
+patchValue:     *m55_threshold
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j          ## remove pendant of mastery skill bonus
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0058C7A1      ## 0098D3A1 
+valueType:      Byte
+originalValue:  *toe_threshold
+patchValue:     *m55_threshold
