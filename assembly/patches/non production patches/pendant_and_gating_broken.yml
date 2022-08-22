@@ -10,14 +10,14 @@
 group: Original               ## remove pendant of mastery skill bonus
 checkAddress:   00000400
 checkBytes:     8D 41 34 C3 CC CC CC CC
-patchAddress:   0074C590      ## 00B4D190 
-originalBytes:  75
+patchAddress:   0074C59E      ## 00B4D19E 
+originalBytes:  74
 patchBytes:     EB
 ---
-group: Original               ## remove pendant of mastery check for memory mentor
-patchAddress:   0074E3C5      ## 00B4EFC5 
-originalBytes:  75
-patchBytes:     EB
+group: Original               ## remove pendant of mastery bonus for some necro stuff
+patchAddress:   0074E3BE      ## 00B4EFBE 
+originalBytes:  E8 8D 65 D2 FF
+patchBytes:     B8 00 00 00 00
 ---
 group: Original               ## fork the code from "grant gating spell to infernal creatures if mastery allows it"
 patchAddress:   00854398      ## 00C54F98
@@ -37,14 +37,14 @@ patchBytes:     01 C0 39 F0 7D 15 8B 13 89 D9 6A 5A FF 92 74 01 00 00 85 C0 75 0
 group: Quantomas3.1j          ## remove pendant of mastery skill bonus
 checkAddress:   00000400
 checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
-patchAddress:   005F80C0      ## 009F8CC0 
-originalBytes:  75
+patchAddress:   005F80CE      ## 009F8CCE 
+originalBytes:  74
 patchBytes:     EB 
 ---
-group: Quantomas3.1j          ## remove pendant of mastery check for memory mentor
-patchAddress:   005F9E15      ## 009FAA15 
-originalBytes:  75
-patchBytes:     EB
+group: Quantomas3.1j          ## remove pendant of mastery bonus for some necro stuff
+patchAddress:   005F9E1C      ## 009FAA1C 
+originalBytes:  E8 8F 62 E9 FF
+patchBytes:     B8 00 00 00 00
 ---
 group: Quantomas3.1j          ## fork the code from "grant gating spell to infernal creatures if mastery allows it"
 patchAddress:   00663F78      ## 00A64B78
