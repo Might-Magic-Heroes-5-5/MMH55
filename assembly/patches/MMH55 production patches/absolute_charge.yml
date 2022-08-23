@@ -1,0 +1,35 @@
+# ----------------------------------------------------
+# --------------- Absolute charge ------------
+# ----------------------------------------------------
+#
+# Changes Retaliation strike damage multiplier from 3 to 1.5 times
+#
+# ----------------------------------------------------------
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   007C1256       ## 00BC1E56
+originalBytes:  0F 84 F7 FD FF FF 8D 3C 7F
+patchBytes:     74 2F 8D 3C 7F D1 FF 90 90
+---
+group: Original
+patchAddress:   007C1287        ## 00BC1E87
+originalBytes:  CC*
+patchBytes:     E9 C7 FD FF FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   00745AC6       ## 00B466C6
+originalBytes:  0F 84 F7 FD FF FF 8D 3C 7F
+patchBytes:     74 2F 8D 3C 7F D1 FF 90 90
+---
+group: Quantomas3.1j
+patchAddress:   00745AF7        ## 00B466F7
+originalBytes:  CC*
+patchBytes:     E9 C7 FD FF FF
+
+
+
+
