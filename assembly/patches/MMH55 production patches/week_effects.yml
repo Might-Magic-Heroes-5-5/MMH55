@@ -5,8 +5,8 @@
 # Changes effect strength of the following weeks:
 # - weeks of Feebleness, Infirmity -> Defense multiplier         from 0.8 to &weeks_of_lower_defense
 # - weeks of Sorrow, Light -> Luck / Morale reduction            from 2 to &weeks_of_lower_luck_and_more
-# - weeks of Fire, Water, Air, Earth, Chaos                      from 150%*damage to damage + damamge/weeks_of_elemental_damage_divisor.
-# - week  of Fire and Ice                                        from 2*damage to damage + damamge/weeks_of_elemental_damage_divisor.
+# - weeks of Fire, Water, Air, Earth, Chaos                      from 150%*damage to damage + damage/weeks_of_elemental_damage_divisor.
+# - week  of Fire and Ice                                        from 2*damage to damage + damage/weeks_of_elemental_damage_divisor.
 # - weeks of  Idleness, Calm -> Initiative multiplier            from 0.8 to &weeks_of_lower_initiative
 #
 # -------------- Things you may want to modify -----------------
