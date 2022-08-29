@@ -1,0 +1,183 @@
+# ----------------------------------------------------
+# ----------------- Week effects --------------
+# ----------------------------------------------------
+#
+# Changes effect strength of the following weeks:
+# - weeks of Feebleness, Infirmity -> Defense multiplier         from 0.8 to &weeks_of_lower_defense
+# - weeks of Sorrow, Light -> Luck / Morale reduction            from 2 to &weeks_of_lower_luck_and_more
+# - weeks of Fire, Water, Air, Earth, Chaos                      from 150%*damage to damage + damamge/weeks_of_elemental_damage_divisor.
+# - week  of Fire and Ice                                        from 2*damage to damage + damamge/weeks_of_elemental_damage_divisor.
+# - weeks of  Idleness, Calm -> Initiative multiplier            from 0.8 to &weeks_of_lower_initiative
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+ - &weeks_of_lower_defense            0.9  ## float
+ - &weeks_of_lower_luck_and_morale      1  ## int
+ - &weeks_of_elemental_damage_divisor   5  ## int
+ - &weeks_of_lower_initiative        0.95  ## float
+ - &weeks_of_might_divisor              5  ## int
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original               ## Weeks of Feebleness, Infirmity pointer
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   007CD1AD      ## 00BCDDAD 
+originalBytes:  D9 05 7C 85 E1 00
+patchBytes:     D9 05 E5 DD BC 00
+---
+group: Original               ## Weeks of Feebleness, Infirmity value
+patchAddress:   007CD1E5      ## 00BCDDE5 
+valueType:      Float
+originalBytes:  CC*
+patchValue:     *weeks_of_lower_defense
+---
+group: Original               ## Hook Week of Light to Week of Sorrow
+patchAddress:   007CD0B4      ## 00BCDCB4 
+originalBytes:  2B C2
+patchBytes:     EB F5
+---
+group: Original               ## Weeks of Light, Sorrow value
+patchAddress:   007CD0AD      ## 00BCDCAD 
+valueType:      Byte
+originalValue:  2
+patchValue:     *weeks_of_lower_luck_and_morale
+---
+group: Original               ## Weeks of Fire, Water, Earth, Air, Chaos, Fire and Ice
+patchAddress:   007CD2A0      ## 00BCDEA0 
+originalBytes:  2E
+patchBytes:     25
+---
+group: Original               ## Weeks of Fire, Water, Earth, Air, Chaos, Fire and Ice
+patchAddress:   007CD2C4      ## 00BCDEC4 
+originalBytes:  75 09 8B C7 99 2B C2 D1 F8 03 F8 83 FE 41 74 0E 83 FE 48 75 12 03
+patchBytes:     74 11 83 FE 41 74 0C 83 FE 48 74 07 5E 89 F8 5F C2 04 00 89 F8 B9
+---
+group: Original               ## Weeks of Fire, Water, Earth, Air, Chaos, Fire and Ice
+patchAddress:   007CD2DA      ## 00BCDEDA
+valueType:      Byte
+originalBytes:  FF
+patchValue:     *weeks_of_elemental_damage_divisor
+---
+group: Original               ## Weeks of Fire, Water, Earth, Air, Chaos, Fire and Ice
+patchAddress:   007CD2DB      ## 00BCDEDB 
+originalBytes:  5E 8B C7 5F C2 04 00 8B C7 99 2B C2 D1 F8 03 F8 5E 8B C7 5F C2 04 00
+patchBytes:     00 00 00 99 F7 F9 01 C7 EB EB CC CC CC CC CC CC CC CC CC CC CC CC CC
+---
+group: Original               ## Weeks of Calm value pointer
+patchAddress:   007CD155      ## 00BCDD55 
+originalBytes:  7C 85 E1
+patchBytes:     76 DD BC 
+---
+group: Original               ## Weeks of Feebleness value pointer
+patchAddress:   007CD167      ## 00BCDD67 
+originalBytes:  7C 85 E1
+patchBytes:     76 DD BC
+---
+group: Original               ## Weeks of Calm/Feebleness modifier
+patchAddress:   007CD176      ## 00BCDD76 
+valueType:      Float
+originalBytes:  CC*
+patchValue:     *weeks_of_lower_initiative
+---
+group: Original               ## Weeks of Might, Might and Magic
+patchAddress:   007CD31B      ## 00BCDF1B 
+originalBytes:  09 8B C1 99 2B C2 
+patchBytes:     0E 8B C1 99 53 BB
+---
+group: Original               ## Weeks of Might, Might and Magic
+patchAddress:   007CD321      ## 00BCDF21
+valueType:      Integer
+originalBytes:  D1 F8 03 C8
+patchValue:     *weeks_of_might_divisor
+---
+group: Original               ## Weeks of Might, Might and Magic
+patchAddress:   007CD325      ## 00BCDF25 
+originalBytes:  8B C1 C3 CC CC CC CC CC
+patchBytes:     F7 FB 5B 01 C1 89 C8 C3
+#---
+#group: Original               ## Week of Disease
+#patchAddress:   00634CA8      ## 00A358A8 
+#originalBytes:  B8 56 55 55 55 F7 EE 8B C2 C1 E8 1F 03 C2
+#patchBytes:     89 F0 BB 03 00 00 00 D1 F0 99 F7 FB 90 90
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j          ## Weeks of Feebleness, Infirmity pointer
+checkAddress:   00000400      ## 
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0063493D      ## 00A3553D 
+originalBytes:  D9 05 0C 7C E2 00
+patchBytes:     D9 05 75 55 A3 00
+---
+group: Quantomas3.1j          ## Weeks of Feebleness, Infirmity value
+patchAddress:   00634975      ## 00A35575 
+valueType:      Float
+originalBytes:  CC*
+patchValue:     *weeks_of_lower_defense
+---
+group: Quantomas3.1j          ## Hook Week of Light to Week of Sorrow
+patchAddress:   00634844      ## 00A35444 
+originalBytes:  2B C2
+patchBytes:     EB F5
+---
+group: Quantomas3.1j          ## Weeks of Light, Sorrow value
+patchAddress:   0063483D      ## 00A3543D 
+valueType:      Byte
+originalValue:  2
+patchValue:     *weeks_of_lower_luck_and_morale
+---
+group: Quantomas3.1j          ## Weeks of Fire, Water, Earth, Air, Chaos, Fire and Ice
+patchAddress:   00634A30      ## 00A35630
+originalBytes:  2E
+patchBytes:     25
+---
+group: Quantomas3.1j          ## Weeks of Fire, Water, Earth, Air, Chaos, Fire and Ice
+patchAddress:   00634A54      ## 00A35654 
+originalBytes:  75 09 8B C7 99 2B C2 D1 F8 03 F8 83 FE 41 74 0E 83 FE 48 75 12 03
+patchBytes:     74 11 83 FE 41 74 0C 83 FE 48 74 07 5E 89 F8 5F C2 04 00 89 F8 B9
+---
+group: Quantomas3.1j          ## Weeks of elemental damage value
+patchAddress:   00634A6A      ## 00A3566A
+valueType:      Byte
+originalBytes:  FF
+patchValue:     *weeks_of_elemental_damage_divisor
+---
+group: Quantomas3.1j          ## Weeks of Fire, Water, Earth, Air, Chaos, Fire and Ice
+patchAddress:   00634A6B      ## 00A3566B 
+originalBytes:  5E 8B C7 5F C2 04 00 8B C7 99 2B C2 D1 F8 03 F8 5E 8B C7 5F C2 04 00
+patchBytes:     00 00 00 99 F7 F9 01 C7 EB EB CC CC CC CC CC CC CC CC CC CC CC CC CC
+---
+group: Quantomas3.1j          ## Weeks of Calm value pointer
+patchAddress:   006348E5      ## 00A354E5 
+originalBytes:  0C 7C E2
+patchBytes:     06 55 A3 
+---
+group: Quantomas3.1j          ## Weeks of Feebleness value pointer
+patchAddress:   006348F7      ## 00A354F7 
+originalBytes:  0C 7C E2
+patchBytes:     06 55 A3
+---
+group: Quantomas3.1j          ## Weeks of Calm/Feebleness modifier
+patchAddress:   00634906      ## 00A35506 
+valueType:      Float
+originalBytes:  CC*
+patchValue:     *weeks_of_lower_initiative 
+---
+group: Quantomas3.1j          ## Weeks of Might, Might and Magic
+patchAddress:   00634AAB      ## 00A356AB 
+originalBytes:  09 8B C1 99 2B C2
+patchBytes:     0E 8B C1 99 53 BB
+---
+group: Quantomas3.1j          ## Weeks of Might, Might and Magic
+patchAddress:   00634AB1      ## 00A356B1
+valueType:      Integer
+originalBytes:  D1 F8 03 C8
+patchValue:     *weeks_of_might_divisor
+---
+group: Quantomas3.1j          ## Weeks of Might, Might and Magic
+patchAddress:   00634AB5      ## 00A356B5 
+originalBytes:  8B C1 C3 CC CC CC CC CC
+patchBytes:     F7 FB 5B 01 C1 89 C8 C3
+#---
+#group: Quantomas3.1j          ## Week of Disease
+#patchAddress:   00634CA8      ## 00A358A8 
+#originalBytes:  B8 56 55 55 55 F7 EE 8B C2 C1 E8 1F 03 C2
+#patchBytes:     75 0E 8B C1 99 53 BB 05 00 00 00 F7 FB 5B 01 C1 89 C8 C3
