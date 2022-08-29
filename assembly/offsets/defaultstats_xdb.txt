@@ -404,11 +404,11 @@ VRF	*(number_of_creatures_maybe() + 1608)			- MeltArtifact_HealPerArtifactEffect
 	*(number_of_creatures_maybe() + 1616)			- Ranger	
 VRF	*(number_of_creatures_maybe() + 1620)			- SunFireDamagePerHeroLevel	
 VRF	*(number_of_creatures_maybe() + 1624)			- SoilBurnDamagePerHeroLevel	
-NOT	*(number_of_creatures_maybe() + 1628)			- StormWind_InitiativePenalty	
-VRF	*(number_of_creatures_maybe() + 1632)			- StormWind_SpeedPenalty	
-VRF	*(number_of_creatures_maybe() + 1636)			- FogVeil_InitiativePenalty	
-	*(number_of_creatures_maybe() + 1640)			- FogVeil_DamageDecrease	
-	*(number_of_creatures_maybe() + 1644)			- ElvenLuck_DamageMultiplier	1628???
+NOT	*(number_of_creatures_maybe() + -)			- StormWind_InitiativePenalty	
+VRF	*(number_of_creatures_maybe() + -)			- StormWind_SpeedPenalty	
+VRF	*(number_of_creatures_maybe() + -)			- FogVeil_InitiativePenalty	
+	*(number_of_creatures_maybe() + -)			- FogVeil_DamageDecrease	
+	*(number_of_creatures_maybe() + 1628)			- ElvenLuck_DamageMultiplier	???
 VRF	*(number_of_creatures_maybe() + 1648)			- ImbueArrow_ATBDropOnCast	
 
 ======================================== SOMETHING IS WRONG HERE, BOTH SIDES SEEM RIGHT ============================================================================
