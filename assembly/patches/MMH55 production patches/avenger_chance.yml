@@ -1,0 +1,57 @@
+# ----------------------------------------------------
+# ----------------- Avenger fix --------------
+# ----------------------------------------------------
+#
+# Changes: 
+#  - Avenger skill trigger chance
+#  - Know your enemy bonus chance
+#  - Avenger bonus damage modifier 1.0 to 0.5
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+- &m55_avenger_base             70
+- &m55_know_your_enemy          10
+#
+# -----------Things that should not be modified ----------------
+#
+- &toe_avenger_base             40
+- &toe_know_your_enemy          10
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0065A2C6         ## 00A5AEC6
+valueType:      Byte
+originalValue:  *toe_know_your_enemy
+patchValue:     *m55_know_your_enemy
+---
+group: Original
+patchAddress:   0065A2C9         ## 00A5AEC9
+valueType:      Byte
+originalValue:  *toe_avenger_base
+patchValue:     *m55_avenger_base
+---
+group: Original
+patchAddress:   006640C1         ## 00A64CC1   damage from 100% to to 50%
+originalBytes:  D8 05 E4 A7 E0 00
+patchBytes:     D8 05 70 AB E0 00
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0058E1B6         ## 0098EDB6
+valueType:      Byte
+originalValue:  *toe_know_your_enemy
+patchValue:     *m55_know_your_enemy
+---
+group: Quantomas3.1j
+patchAddress:   0058E1B9         ## 0098EDB9
+valueType:      Byte
+originalValue:  *toe_avenger_base
+patchValue:     *m55_avenger_base
+---
+group: Quantomas3.1j
+patchAddress:   00597EE1         ## 00998AE1   damage from 100% to to 50%
+originalBytes:  D8 05 40 8D E0 00
+patchBytes:     D8 05 00 88 E0 00

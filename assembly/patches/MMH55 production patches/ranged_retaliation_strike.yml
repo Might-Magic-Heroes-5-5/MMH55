@@ -17,5 +17,5 @@ group: Quantomas3.1j          ## Remove check for Melee/Ranged attack
 checkAddress:   00000400
 checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
 patchAddress:   00598753      ## 00999353 
-originalBytes:  75 1F
+originalBytes:  75 19
 patchBytes:     90 90
