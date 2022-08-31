@@ -1,0 +1,123 @@
+# ----------------------------------------------------
+# ----------------- Avenger fix --------------
+# ----------------------------------------------------
+#
+# Changes: 
+#  - Avenger hero trigger chance from 40% to 70%
+#  - Avenger hero bonus damage from 100% to 50%
+#  - Avenger army trigger chance from 40% to 70%
+#  - Avenger army bonus damage from 100% to 50%
+#  - Know your enemy bonus chance
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+- &m55_creature_chance_base      70
+- &m55_creature_chance_KYE       10
+- &m55_hero_chance_base          70
+#
+# -----------Things that should not be modified ----------------
+#
+- &toe_creature_chance_base      40
+- &toe_creature_chance_KYE       10
+- &toe_hero_chance_base          40
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original                  ## ARMY: "know your enemy" crit chance bonus
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0065A2C6         ## 00A5AEC6
+valueType:      Byte
+originalValue:  *toe_creature_chance_KYE
+patchValue:     *m55_creature_chance_KYE
+---
+group: Original                  ## ARMY: avenger crit chance
+patchAddress:   0065A2C9         ## 00A5AEC9
+valueType:      Byte
+originalValue:  *toe_creature_chance_base
+patchValue:     *m55_creature_chance_base
+---
+group: Original                  ## ARMY: avenger crit damage
+patchAddress:   00666EF3         ## 00A67AF3
+originalBytes:  D8 05 E4 A7 E0 00
+patchBytes:     D8 05 70 AB E0 00
+---
+group: Original                  ## ARMY: avenger crit damage for Chain shot from 100% to 50%
+patchAddress:   006640C1         ## 00A64CC1
+originalBytes:  D8 05 E4 A7 E0 00
+patchBytes:     D8 05 70 AB E0 00
+---
+group: Original                  ## HERO: avenger crit chance
+patchAddress:   004CE8F4         ## 008CF4F4
+valueType:      Integer
+originalValue:  *toe_hero_chance_base
+patchValue:     *m55_hero_chance_base
+---
+group: Original                  ## HERO: avenger crit damage fork
+patchAddress:   004CE8FF         ## 008CF4FF
+originalBytes:  0F 84 C8 00 00 00 8B 4C 24 78 8D 14 09
+patchBytes:     E9 FC 96 86 00 90 90 90 8D 14 49 D1 EA
+---
+group: Original                  ## HERO: avenger crit damage code from 100% to 50%
+patchAddress:   00BDBC00         ## 01138C00
+originalBytes:  00*
+patchBytes:     0F 84 C7 69 79 FF 8B 4C 24 78 E9 F8 68 79 FF
+---
+group: Original                  ## HERO: Deadeye perk damage fork
+patchAddress:   007C10F2         ## 00BC1CF2
+originalBytes:  8D 3C 00 8B CB
+patchBytes:     E9 1A 6F 57 00
+---
+group: Original                  ## HERO: Deadeye perk damage code from 100% to 50%
+patchAddress:   00BDBC11         ## 01138C11
+originalBytes:  00*
+patchBytes:     8D 3C 40 D1 EF 89 D9 E9 DA 90 A8 FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j             ## ARMY: "know your enemy" crit chance bonus
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0058E1B6         ## 0098EDB6
+valueType:      Byte
+originalValue:  *toe_creature_chance_KYE
+patchValue:     *m55_creature_chance_KYE
+---
+group: Quantomas3.1j             ## ARMY: avenger crit chance
+patchAddress:   0058E1B9         ## 0098EDB9
+valueType:      Byte
+originalValue:  *toe_creature_chance_base
+patchValue:     *m55_creature_chance_base
+---
+group: Quantomas3.1j             ## ARMY: avenger crit damage
+patchAddress:   0059AC5E         ## 0099B85E
+originalBytes:  D8 05 40 8D E0 00
+patchBytes:     D8 05 00 88 E0 00
+---
+group: Quantomas3.1j             ## ARMY: avenger crit damage for Chain shot from 100% to 50%
+patchAddress:   00597EE1         ## 00998AE1
+originalBytes:  D8 05 40 8D E0 00
+patchBytes:     D8 05 00 88 E0 00
+---
+group: Quantomas3.1j             ## HERO: avenger crit chance
+patchAddress:   0059DA68         ## 0099E668
+valueType:      Integer
+originalValue:  *toe_hero_chance_base
+patchValue:     *m55_hero_chance_base
+---
+group: Quantomas3.1j             ## HERO: avenger crit damage fork
+patchAddress:   0059DA73         ## 0099E673
+originalBytes:  0F 84 CE 00 00 00 8B 4C 24 78 8D 14 09
+patchBytes:     E9 88 A5 7A 00 90 90 90 8D 14 49 D1 EA
+---
+group: Quantomas3.1j             ## HERO: avenger crit damage code from 100% to 50%
+patchAddress:   00BDBC00         ## 01148C00
+originalBytes:  00*
+patchBytes:     0F 84 41 5B 85 FF 8B 4C 24 78 E9 6C 5A 85 FF
+---
+group: Quantomas3.1j             ## HERO: Deadeye perk damage fork
+patchAddress:   00745962         ## 00B46562
+originalBytes:  8D 3C 00 8B CB
+patchBytes:     E9 AA 26 60 00
+---
+group: Quantomas3.1j             ## HERO: Deadeye perk damage code from 100% to 50%
+patchAddress:   00BDBC11         ## 01148C11
+originalBytes:  00*
+patchBytes:     8D 3C 40 D1 EF 89 D9 E9 4A D9 9F FF
