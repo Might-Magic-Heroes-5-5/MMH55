@@ -26,13 +26,13 @@ originalValue:  *toe_base
 patchValue:     *m55_base
 ---
 group: Original
-patchAddress:   00658DC0        ## 00A599C0
+patchAddress:   00658DBE        ## 00A599BE
 originalBytes:  8D 04 7F 99 F7 F9
 patchBytes:     B8 00 00 00 00 90
 ---
 group: Original
-patchAddress:   00A599D7        ## 00A599D7
-originalBytes:  8D 04 89 99 F7 FF
+patchAddress:   00658DD7        ## 00A599D7
+originalBytes:  8D 04 49 99 F7 FF
 patchBytes:     B8 00 00 00 00 90
 
 
