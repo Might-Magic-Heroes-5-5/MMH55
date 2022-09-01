@@ -1,0 +1,40 @@
+# ----------------------------------------------------
+# --------------- Abilities chance no HP ratio ------------
+# ----------------------------------------------------
+#
+# Changes abilities trigger chance formula from 25% to 40% with no HP ratio bonuses or penlaties
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+ - &m55_base  40
+# -----------Things that should not be modified ----------------
+ - &toe_base  25
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00658DDE        ## 00A599DE
+valueType:      Byte
+originalValue:  *toe_base
+patchValue:     *m55_base
+---
+group: Original
+patchAddress:   00658DC6        ## 00A599C6
+valueType:      Byte
+originalValue:  *toe_base
+patchValue:     *m55_base
+---
+group: Original
+patchAddress:   00658DC0        ## 00A599C0
+originalBytes:  8D 04 7F 99 F7 F9
+patchBytes:     B8 00 00 00 00 90
+---
+group: Original
+patchAddress:   00A599D7        ## 00A599D7
+originalBytes:  8D 04 89 99 F7 FF
+patchBytes:     B8 00 00 00 00 90
+
+
+
+
