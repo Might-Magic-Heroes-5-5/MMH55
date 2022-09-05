@@ -2,49 +2,50 @@
 # ----------------- First Aid Tent modifiers v3 --------------
 # ----------------------------------------------------
 #
-# Patch increases Plague Tent damage by 50%
-# Decrease Ring of Machine Afinity tent heal modifier from 2 to 1.5
+# Plague Tent damage increased by 20%
+# Ring of Machine Afinity Tent modifier from 2 to 1.5
+# Plague Tent cast does not spend shots. However Tent will not get anymore turns if Shots are depleted
 # The following addresses are used for temporary storage 
 # - 011364F9/011464F9/00BD94F9
 # - 011364FD/011464FD/00BD94FD
 # 
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
-group: Original
-checkAddress:   00000400
-checkBytes:     8D 41 34 C3 CC CC CC CC
-patchAddress:   0057FED9
-originalBytes:  84 C0 8B CD 0F 84 56 02 00 00
-patchBytes:     E9 DA 59 7B 00 90 90 90 90 90
----
- group: Original                 
- patchAddress:   00586143
+ group: Original
+ checkAddress:   00000400
+ checkBytes:     8D 41 34 C3 CC CC CC CC
+ patchAddress:   00586143         ## 00986D43
  originalBytes:  50 55 8D 54 24 30 8D 4C 24 48 E8 3E 04 FF FF
  patchBytes:     E9 18 F7 7A 00 E8 43 04 FF FF E8 1E F7 7A 00
 ---
  group: Original                 
- patchAddress:   0057663F
+ patchAddress:   0057663F         ## 0097723F
  originalBytes:  7E 06 8B 07 03 C0 89 07
  patchBytes:     E9 5C F2 7B 00 90 90 90
 ---
- group: Original                 ### stripped space patch
- patchAddress:   00BD9460
- originalBytes:  00*
- patchBytes:     50 55 8D 54 24 30 8D 4C 24 48 E9 D9 08 85 FF 90 81 7C 24 14 60 01 00 00 75 13 50 57 8B 3D 90 64 13 01 8B 07 8D 04 40 D1 E8 89 07 5F 58 C3 00 00 E8 F9 18
+ group: Original                 
+ patchAddress:   0057FED9         ## 00980AD9
+ originalBytes:  84 C0 8B CD 0F 84 56 02 00 00
+ patchBytes:     E9 DA 59 7B 00 90 90 90 90 90
 ---
- group: Original                  ## stripped space patch; Ring of War machines 
- patchAddress:   00BD94A0         ## 011464A0
+ group: Original                  ## stripped space patch
+ patchAddress:   00BD9460         ## 01136460
  originalBytes:  00*
- patchBytes:     7E 09 8B 07 8D 04 40 D1 E8 89 07 89 3D 90 64 13 01 E9 91 0D 84 FF 00 00 84 C0 75 13 57 51 8B 0D 90 64 13 01 8B 39 8D 3C 7F D1 EF 89 39 59 5F 89 E9 84 C0 0F 84 60 A8 84 FF E9 05 A6 84 FF
+ patchBytes:     50 55 8D 54 24 30 8D 4C 24 48 E9 D9 08 85 FF 90 81 7C 24 14 60 01 00 00 75 20 50 57 8B 3D F9 64 13 01 DB 07 D8 0D 1C 2F E1 00 36 DB 1D FD 64 13 01 A1 FD 64 13 01 89 07 5F 58 C3
+---
+ group: Original                  ## stripped space patch; Ring of War machines // hover damage
+ patchAddress:   00BD94A0         ## 011364A0
+ originalBytes:  00*
+ patchBytes:     7E 09 8B 07 8D 04 40 D1 E8 89 07 89 3D F9 64 13 01 E9 91 0D 84 FF 00 00 84 C0 75 21 57 51 8B 0D F9 64 13 01 DB 01 D8 0D 1C 2F E1 00 36 DB 1D FD 64 13 01 8B 3D FD 64 13 01 89 39 59 5F 89 E9 84 C0 0F 84 52 A8 84 FF E9 F2 A5 84 FF
 ---
  group: Original                  ## fork from shots code
- patchAddress:   00741409         ## 00A750E4
+ patchAddress:   006744E4         ## 00A750E4
  originalBytes:  E8 37 6F A9 FF
- patchBytes:     E9 F7 13 6C 00
+ patchBytes:     E9 1F 14 6C 00
 ---
  group: Original                  ## new code - do not reduce shots if using Plague
- patchAddress:   00BD9500         ## 01136500
+ patchAddress:   00BD9508         ## 01136508
  originalBytes:  00*
- patchBytes:     E8 3B 5B 3D FF 81 7F 04 60 01 00 00 0F 85 F7 EB 93 FF E9 FF EB 93 FF
+ patchBytes:     E8 13 5B 3D FF 81 7F 04 60 01 00 00 0F 85 CF EB 93 FF E9 D7 EB 93 FF
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
 checkAddress:   00000400
@@ -68,10 +69,10 @@ patchBytes:     E9 C3 37 88 00 E8 2E 06 FF FF E8 C9 37 88 00
  originalBytes:  00*
  patchBytes:     50 55 8D 54 24 30 8D 4C 24 48 E9 2E C8 77 FF 90 81 7C 24 14 60 01 00 00 75 20 50 57 8B 3D F9 64 14 01 DB 07 D8 0D C8 9F E0 00 36 DB 1D FD 64 14 01 A1 FD 64 14 01 89 07 5F 58 C3
 ---
- group: Quantomas3.1j             ## stripped space patch; Ring of War machines 
+ group: Quantomas3.1j             ## new code Ring of War machines 
  patchAddress:   00BD94A0         ## 011464A0
  originalBytes:  00*
- patchBytes:     7E 06 8B 07 01 C0 89 07 89 3D F9 64 14 01 E9 D1 CE 76 FF 90 00 00 00 00 84 C0 75 21 57 51 8B 0D F9 64 14 01 DB 01 D8 0D C8 9F E0 00 36 DB 1D FD 64 14 01 8B 3D FD 64 14 01 89 39 59 5F 89 E9 84 C0 0F 84 E2 67 77 FF E9 82 65 77 FF
+ patchBytes:     7E 09 8B 07 8D 04 40 D1 E8 89 07 89 3D F9 64 14 01 E9 CE CE 76 FF 00 00 84 C0 75 21 57 51 8B 0D F9 64 14 01 DB 01 D8 0D C8 9F E0 00 36 DB 1D FD 64 14 01 8B 3D FD 64 14 01 89 39 59 5F 89 E9 84 C0 0F 84 E2 67 77 FF E9 82 65 77 FF
 ---
  group: Quantomas3.1j             ## fork from shots code
  patchAddress:   00741404         ## 00B42004
