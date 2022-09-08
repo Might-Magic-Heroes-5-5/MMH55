@@ -2,7 +2,8 @@
 # ----------------- Suffering Strike --------------
 # ----------------------------------------------------
 #
-#  Suffering Strike hero attack effect moved to Master of Curses perk
+#  Suffering Strike hero attack effect moved to Master of Curses perk.
+#  Stronghold Agonizing strike is made separate perk with its own suffering ability
 #
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
  group: Original
