@@ -1,0 +1,22 @@
+# ----------------------------------------------------
+# ----------------- Suffering Strike --------------
+# ----------------------------------------------------
+#
+#  Suffering Strike hero attack effect moved to Master of Curses perk
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ checkAddress:   00000400
+ checkBytes:     8D 41 34 C3 CC CC CC CC
+ patchAddress:   004CEA91         ## 008CF691
+ valueType:      Byte
+ originalValue:  95
+ patchValue:     46
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+ group: Quantomas3.1j
+ checkAddress:   00000400
+ checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+ patchAddress:   0059DC0A         ## 0099E80A
+ valueType:      Byte
+ originalValue:  95
+ patchValue:     46
