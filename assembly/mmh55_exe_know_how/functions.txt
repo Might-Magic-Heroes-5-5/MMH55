@@ -212,22 +212,8 @@
 	(VERY) unreliable mode: ON
 	
 	
-
-	 (*(void (__thiscall **)(int, signed int, signed int))(*(_DWORD *)v2 + 236))(v2, spell_id_v3, 70)  - give hero empowered spell?
-	
-	
-	
-	
-	
-
-	
 	(*(int (__thiscall **)(void *))(*(_DWORD *)v4 + 108))(v4)											-targeted unit
 	(*v18 + 116)																						-returns hero artifact inventory
-	
-
-	
-	
-	
 	(*(int (__thiscall **)(int))(*(_DWORD *)a2 + 116))		check	above			dont	listen		-initiative (of unit or warmachine ?)
 	(*(int (__thiscall **)(int))(*(_DWORD *)v6 + 800))(v6)												-has hero artifact set (to learn lvl 4 spells specific instance)
 	(*(int (__thiscall **)(int, int, int))(*(_DWORD *)v5 + 404))(v5, a4, a3)							-returns unit defense (or maybe any stat depending or arg's)
