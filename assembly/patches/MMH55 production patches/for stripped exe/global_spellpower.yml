@@ -6,7 +6,7 @@
 # Master of life perk affect Firewall
 # Master of life perk affect Empowered Fist of Wrath
 # Master of Life perk does not affect Animate dead
-# Arcane Armor perk now grants bonus to Lightning (defaultstats value) and Chain Lightning including empowered versions
+# Arcane Armor perk now grants bonus to Lightning (defaultstats value) and Chain Lightning including empowered versions. Also provides the Lightning spell to the onwer instead of Celestial Shield.
 #
 # ----------------------------------------------------
 
@@ -104,6 +104,12 @@ patchBytes:     |                      ## SPELL IDs
      CC CC CC CC CC CC CC CC CC CC
      CC CC CC CC CC CC CC CC CC CC
      CC
+---
+group: Original                  ## Change spell given by Arcane Armor from Celestial Shield to Lighting Bolt
+patchAddress:   00754BAF         ## 00B557AF
+valueType:      byte
+originalValue:  34
+patchValue:     3
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j             ## adjust new table logical frame
 checkAddress:   00000400
@@ -198,3 +204,9 @@ patchBytes:     |                      ## SPELL IDs
      CC CC CC CC CC CC CC CC CC CC
      CC CC CC CC CC CC CC CC CC CC
      CC
+---
+group: Quantomas3.1j             ## Change spell given by Arcane Armor from Celestial Shield to Lighting Bolt
+patchAddress:   006002EF         ## 00A00EEF
+valueType:      byte
+originalValue:  34
+patchValue:     3
