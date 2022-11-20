@@ -1,0 +1,22 @@
+# ----------------------------------------------------
+# ----------------- Snare fix --------------
+# ----------------------------------------------------
+#
+# TOE bug fix: game crashing when Arcane Crystal or Blade Barrier are summoned on a tile with snare
+#
+#----------------- VALUES TO MODIFY ---------------------
+#----------------- DO NOT MODIFY ---------------------
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   005BA74A  ## 009BB34A
+originalBytes:  8B 06 8B E9 57 8B CE FF 50 6C 8B 16 8B CE
+patchBytes:     8B 16 8B E9 57 8B CE FF 52 6C 85 C0 74 69
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0074739A  ## 00B47F9A
+originalBytes:  8B 06 8B E9 57 8B CE FF 50 6C 8B 16 8B CE
+patchBytes:     8B 16 8B E9 57 8B CE FF 52 6C 85 C0 74 69
