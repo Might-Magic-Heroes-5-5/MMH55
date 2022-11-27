@@ -1,3 +1,6 @@
+replacable arrays:
+CombatWarMachine2 <-> CreatureCombat2 <-> CombatHero3
+
 XDB_DATA_TYPES:
 case 1: integer
 case 2: float
