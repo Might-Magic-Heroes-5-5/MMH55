@@ -1,14 +1,19 @@
 replacable arrays:
-CombatWarMachine2 <-> CreatureCombat2 <-> CombatHero3
+
+Hero -> Hero0
+
+CombatWarMachine2 = CreatureCombat2 = CombatHero3
 
 XDB_DATA_TYPES:
 case 1: integer
 case 2: float
 case 3: boolean
 case 4:
-case 5:
+case 5: string
 case 6:
 case 7:
-case 8: creature_id
-case 9:
+case 8: internal_id
+case 9: shared_game_object
 case 10:
+case 11:
+case 12: EXTENDED_COMBAT_BLOCKERS
