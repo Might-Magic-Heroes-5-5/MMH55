@@ -1,0 +1,61 @@
+# ----------------------------------------------------
+# ----------------- Global movement --------------
+# ----------------------------------------------------
+#
+# Modify movement bonuses:
+# - logistics - from 10% per mastery level to m55_logistics%
+# - boots of speed - from 25% per mastery level to m55_boots%
+#
+#----------------- VALUES TO MODIFY ---------------------
+definitions:
+ - &m55_logistics 0.08
+ - &m55_boots 0.15
+#----------------- DO NOT MODIFY ---------------------
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0074D30C  ## 00B4DF0C                           ## pointer to logistics bonus
+originalBytes:  10 2F E1
+patchBytes:     F8 E0 B4
+---
+group: Original
+patchAddress:   0074D4F8  ## 00B4E0F8                           ## Logistics bonus
+valueType:      Float
+originalBytes:  CC*                                              
+patchValue:     *m55_logistics
+---
+group: Original
+patchAddress:   0074D347  ## 00B4DF47                           ## pointer to Boots of Speed bonus
+originalBytes:  B8 1B E1 00
+patchBytes:     F3 E0 B4 00
+---
+group: Original
+patchAddress:   0074D4F3  ## 00B4E0F3                           ## Boots of Speed bonus
+valueType:      Float
+originalBytes:  CC*                                              
+patchValue:     *m55_boots
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   005F8D7C  ## 009F997C                           ## pointer to logistics bonus
+originalBytes:  C0 9F E0
+patchBytes:     68 9B 9F
+---
+group: Quantomas3.1j
+patchAddress:   005F8F68  ## 009F9B68                           ## Logistics bonus
+valueType:      Float
+originalBytes:  CC*                                              
+patchValue:     *m55_logistics
+---
+group: Quantomas3.1j
+patchAddress:   005F8DB7  ## 009F99B7                           ## pointer to Boots of Speed bonus
+originalBytes:  4C B0 E0 00
+patchBytes:     63 9B 9F 00
+---
+group: Quantomas3.1j
+patchAddress:   005F8F63  ## 009F9B63                           ## Boots of Speed bonus
+valueType:      Float
+originalBytes:  CC*                                              
+patchValue:     *m55_boots
