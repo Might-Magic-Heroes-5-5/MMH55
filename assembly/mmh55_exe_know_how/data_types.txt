@@ -17,3 +17,19 @@ case 9: shared_game_object
 case 10:
 case 11:
 case 12: EXTENDED_COMBAT_BLOCKERS
+
+Combat_XXXX modules:
+1 - Creature
+2 - Hero
+3 - War machine
+9 - Spawn
+
+purecall:
+CombatBase
+
+00E52434     CombatCreature@NWorld@@6B@_2
+00E7AF7C     CombatWarMachine@NWorld@@6B@_2
+00E6526C     CombatSpawn@NWorld@@6B@_2
+00E7B60C     CombatHero@NWorld@@6B@_3
+
+00E51A1C     CombatBase@NWorld@@6B@_1 
