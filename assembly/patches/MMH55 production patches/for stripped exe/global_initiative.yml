@@ -4,6 +4,9 @@
 # Initiative function has been rewritten and works by the following formula:
 #    total_initiative = creature_base*(1 + specializations + necro_lead_modifier) + march_of_the_golems]*[1 + cumulative_of_all_artifact_bonuses]
 #
+# Fixes:
+# - (QAI only) March Of the Golems perk does not grant initiative bonus to Magnetic Golems
+#
 # Changes:
 # - Leadership grants &necrolead_bonus initiative per mastery level to Undead creatures.
 # Example: 2.5% bonus per mastery level is enetered as 0.025
