@@ -1,0 +1,90 @@
+# ----------------------------------------------------
+# ----------------- Empowered Damage Formula --------------
+# ----------------------------------------------------
+#
+# Changes Empowered spell bonus damage formula from (base_damage to dmg_per_level*Hero_level)*100%
+#
+## ------------- things to note -------------
+## 01148B6C - used as temporary data cache location
+# -------------- Things you may want to modify -----------------
+definitions: 
+ - &base_damage    1.3
+ - &dmg_per_level  0.01000001
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ checkAddress:   00000400
+ checkBytes:     8D 41 34 C3 CC CC CC CC
+ patchAddress:   0057604D         ## 00976C4D - jump to new empowered damage code
+ originalBytes:  D8 0D AC A3 E3 00
+ patchBytes:     E9 CE 1E 7C 00 90
+---
+ group: Original                  ## Add ASCI description of the patch in asselby
+ patchAddress:   00BDBB00         ## 01138B00
+ originalBytes:  00*
+ patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 45 6D 70 6F 77 65 72 65 64 20 73 70 65 6C 6C 73
+---
+ group: Original                  ## empowered damage - new logic
+ patchAddress:   00BDBB20         ## 01138B20
+ originalBytes:  00*
+ patchBytes:     50 51 81 7D 00 9C 49 E8 00 74 0A 8B 4C 24 0C 8B 01 89 C9 EB 05 8B 45 00 89 E9 FF 90 3C 02 00 00 50 DB 04 24 D8 0D 74 8B 13 01 D8 05 70 8B 13 01 D8 C9 36 DB 1D 6C 8B 13 01 DB 1C 24 36 DB 05 6C 8B 13 01 58 59 58 E9 E8 E0 83 FF
+---
+ group: Original                  ## base spell damage
+ patchAddress:   00BDBB70         ## 01138B70
+ valueType:      float
+ originalValue:  0
+ patchValue:     *base_damage
+---
+ group: Original                  ## % damage per hero level bonus
+ patchAddress:   00BDBB74         ## 01138B74
+ valueType:      float
+ originalValue:  0
+ patchValue:     *dmg_per_level
+---
+ group: Original                  ## jump to new Armageddon secondary empowered damage code
+ patchAddress:   0045E92C         ## 0085F52C
+ originalBytes:  DB 44 24 14 D9 7C 24 10 0F B7 44 24 10 D8 0D AC A3 E3 00
+ patchBytes:     E9 4F 96 8D 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+---
+ group: Original                  ## Armageddon secondary empowered damage - new logic
+ patchAddress:   00BDBB80         ## 01138B80
+ originalBytes:  00*
+ patchBytes:     51 8B 45 00 89 E9 FF 90 3C 02 00 00 50 DB 04 24 D8 0D 74 8B 13 01 D8 05 70 8B 13 01 DB 44 24 1C D9 7C 24 18 D8 C9 36 DB 1D 6C 8B 13 01 DB 1C 24 36 DB 05 6C 8B 13 01 58 59 0F B7 44 24 10 E9 7C 69 72 FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+ group: Quantomas3.1j
+ checkAddress:   00000400
+ checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+ patchAddress:   004B21DD         ## 008B2DDD - jump to new empowered damage code
+ originalBytes:  D8 0D 10 C5 E3 00
+ patchBytes:     E9 3E 5D 89 00 90
+---
+ group: Quantomas3.1j             ## Add ASCI description of the patch in asselby
+ patchAddress:   00BDBB00         ## 01148B00
+ originalBytes:  00*
+ patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 45 6D 70 6F 77 65 72 65 64 20 73 70 65 6C 6C 73
+---
+ group: Quantomas3.1j             ## empowered damage - new logic
+ patchAddress:   00BDBB20         ## 01148B20
+ originalBytes:  00*
+ patchBytes:     50 51 81 7D 00 0C B6 E7 00 74 0A 8B 4C 24 0C 8B 01 89 C9 EB 05 8B 45 00 89 E9 FF 90 34 02 00 00 50 DB 04 24 D8 0D 74 8B 14 01 D8 05 70 8B 14 01 D8 C9 36 DB 1D 6C 8B 14 01 DB 1C 24 36 DB 05 6C 8B 14 01 58 59 58 E9 78 A2 76 FF
+---
+ group: Quantomas3.1j             ## base spell damage
+ patchAddress:   00BDBB70         ## 01148B70
+ valueType:      float
+ originalValue:  0
+ patchValue:     *base_damage
+---
+ group: Quantomas3.1j             ## % damage per hero level bonus
+ patchAddress:   00BDBB74         ## 01148B74
+ valueType:      float
+ originalValue:  0
+ patchValue:     *dmg_per_level
+---
+ group: Quantomas3.1j             ## jump to new Armageddon secondary empowered damage code
+ patchAddress:   0066DEFC         ## 00A6EAFC
+ originalBytes:  DB 44 24 14 D9 7C 24 10 0F B7 44 24 10 D8 0D 10 C5 E3 00
+ patchBytes:     E9 7F A0 6D 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+---
+ group: Quantomas3.1j             ## Armageddon secondary empowered damage - new logic
+ patchAddress:   00BDBB80         ## 01148B80
+ originalBytes:  00*
+ patchBytes:     51 8B 45 00 89 E9 FF 90 34 02 00 00 50 DB 04 24 D8 0D 74 8B 14 01 D8 05 70 8B 14 01 DB 44 24 1C D9 7C 24 18 D8 C9 36 DB 1D 6C 8B 14 01 DB 1C 24 36 DB 05 6C 8B 14 01 58 59 0F B7 44 24 10 E9 4C 5F 92 FF
