@@ -32,7 +32,7 @@ originalBytes:  0F 95 C0 5E C3
 patchBytes:     E9 D6 AE 7B 00
 ---
 group: Quantomas3.1j           ## Add ASCI description of the patch in asselby
-patchAddress:   00BDB930       ## 01148930
+patchAddress:   00BDB930       ## 01148930   
 originalBytes:  00*
 patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 43 68 61 69 6E 20 53 68 6F 74 20 49 6D 75 6E 69 74 79
 ---

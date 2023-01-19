@@ -4,82 +4,126 @@
 #
 # Changes H5 Rmg Creature Strength multiplier per selection 
 #
-# ----------------------------------------------------
-
+# -------------- Things you may want to modify -----------------
+definitions: 
+ - &case0    1
+ - &case1    1.7
+ - &case2    3.0
+ - &case3    4.0
+ - &case4    8.0
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original 
 checkAddress:   00000400
 checkBytes:     8D 41 34 C3 CC CC CC CC
-patchAddress:   007A6BBD                                                  ### case: 0
-originalBytes:  D8 0D E4 2F E1 00                                         ### address of 0.40000001
-patchBytes:     D8 0D E4 A7 E0 00                                         ### address of 1.0
+patchAddress:   007A6BA9 ## 00BA77A9
+originalBytes:  FF 24 85 D4 79 BA 00 DB 44 24 48 D9 7C 24 48 0F B7 44 24 48 D8 0D E4 A7 E0 00 80 CC 0C 89 44 24 0C D9 6C 24 0C DB 5C 24 0C D9 6C 24 48 E9 9E 00 00 00 DB 44 24 48 D9 7C 24 48 0F B7 44 24 48 D8 0D
+patchBytes:     DB 44 24 48 D9 7C 24 48 FF 24 85 D4 79 BA 00 D8 0D EA 77 BA 00 EB 1E D8 0D EE 77 BA 00 EB 16 D8 0D F2 77 BA 00 EB 0E D8 0D F6 77 BA 00 EB 06 D8 0D FA 77 BA 00 0F B7 44 24 48 E9 7E 00 00 00 90 90
 --- 
 group: Original
-patchAddress:   007A6BE8                                                  ### case: 1
-originalBytes:  D8 0D 04 A7 E1 00                                         ### address of 0.89999998
-patchBytes:     D8 0D FC 26 E8 00                                         ### address of 1.7
+patchAddress:   007A6BFE ## 00BA77FE
+originalBytes:  6C 24 48 EB 76 DB 44 24 48 D9 7C 24 48 0F B7 44 24 48 D8 0D 80 32 E1 00 80 CC 0C 89 44 24 0C D9 6C 24 0C DB 5C 24 0C D9 6C 24 48 EB 4E DB 44 24 48 D9 7C 24 48 0F B7 44 24 48 D8 0D 80 1C E1 00 80 CC 0C 89 44 24 0C D9 6C 24 0C DB 5C 24 0C D9 6C 24 48 EB 26 DB 44 24 48 D9 7C 24 48 0F B7 44 24 48 D8 0D 9C F7 E2 00
+patchBytes:     90*
 --- 
 group: Original
-patchAddress:   007A6C10                                                  ### case: 2
-originalBytes:  D8 0D FC 26 E8 00                                         ### address of 1.7
-patchBytes:     D8 0D 80 32 E1 00                                         ### address of 3.0
+patchAddress:   007A6DD4 ## 00BA79D4                                      ### switch table
+originalBytes:  B0 77 BA 00 DB 77 BA 00 03 78 BA 00 2B 78 BA 00 53 78 BA 00
+patchBytes:     B8 77 BA 00 C0 77 BA 00 C8 77 BA 00 D0 77 BA 00 D8 77 BA 00
 --- 
 group: Original
-patchAddress:   007A6C38                                                  ### case: 3
-originalBytes:  D8 0D 80 1C E1 00                                         ### address of 4.0
-patchBytes:     D8 0D 80 1C E1 00                                         ### address of 4.0
+patchAddress:   007A6BEA ## 00BA77EA                                      ### case 0 value
+valueType:      float
+originalBytes:  FC 26 E8 00
+patchValue:     *case0
 --- 
 group: Original
-patchAddress:   007A6C60                                                  ### case: 4
-originalBytes:  D8 0D 34 7D E5 00                                         ### address of 12.0
-patchBytes:     D8 0D 9C F7 E2 00                                         ### address of 8.0
+patchAddress:   007A6BEE ## 00BA77EE                                      ### case 1 value
+valueType:      float
+originalBytes:  80 CC 0C 89
+patchValue:     *case1
+--- 
+group: Original
+patchAddress:   007A6BF2 ## 00BA77F2                                      ### case 2 value
+valueType:      float
+originalBytes:  44 24 0C D9
+patchValue:     *case2
+--- 
+group: Original
+patchAddress:   007A6BF6 ## 00BA77F6                                      ### case 3 value
+valueType:      float
+originalBytes:  6C 24 0C DB
+patchValue:     *case3
+--- 
+group: Original
+patchAddress:   007A6BFA ## 00BA77FA                                      ### case 4 value
+valueType:      float
+originalBytes:  5C 24 0C D9
+patchValue:     *case4
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
 checkAddress:   00000400
 checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
-group: Quantomas3.1j
-patchAddress:   00911641                                                  ### case: default
+patchAddress:   00911641 ## 00D12241                                      ### case: default
 originalBytes:  D8 0D 34 C2 E0 00                                         ### address of 0.7
-patchBytes:     D8 0D F4 29 F5 00                                         ### address of 1.75
+patchBytes:     D8 0D A0 93 E0 00                                         ### address of 100
 ---
 group: Quantomas3.1j
-patchAddress:   00911671                                                  ### case: 2
+patchAddress:   00911671 ## 00D12271                                      ### case: 2
 originalBytes:  D8 0D 10 C5 E3 00                                         ### address of 1.5    
-patchBytes:     D8 0D A0 C4 E0 00                                         ### address of 3.0
+patchBytes:     D8 0D A0 93 E0 00                                         ### address of 100
 --- 
 group: Quantomas3.1j
-patchAddress:   0091169E                                                  ### case: 3
+patchAddress:   0091169E ## 00D1229E                                      ### case: 3
 originalBytes:  D8 0D 10 A3 EB 00                                         ### address of 2.25
-patchBytes:     D8 0D B8 A5 E0 00                                         ### address of 4.0   
+patchBytes:     D8 0D A0 93 E0 00                                         ### address of 100  
 --- 
 group: Quantomas3.1j
-patchAddress:   009116CB                                                  ### case: 4
+patchAddress:   009116CB ## 00D122CB                                      ### case: 4
 originalBytes:  D8 0D 0C A3 EB 00                                         ### address of 3.75
-patchBytes:     D8 0D 14 AC E0 00                                         ### address of 8.0
+patchBytes:     D8 0D A0 93 E0 00                                         ### address of 100
 --- # ----------- MAP EDITOR EXE 3.1 PATCH DATA ------------
 group: MapEditorOriginal
 checkAddress:   004B6DB0
 checkBytes:     B8 B4 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC
-patchAddress:   00392C6D                                                  ### case: 0
-originalBytes:  D8 0D 5C F0 0F 01                                         ### address of 0.40000001
-patchBytes:     D8 0D 48 C0 0D 01                                         ### address of 1.0
+patchAddress:   00392C59 ## 00793859
+originalBytes:  FF 24 85 84 3A 79 00 DB 44 24 48 D9 7C 24 48 0F B7 44 24 48 D8 0D 48 C0 0D 01 80 CC 0C 89 44 24 0C D9 6C 24 0C DB 5C 24 0C D9 6C 24 48 E9 9E 00 00 00 DB 44 24 48 D9 7C 24 48 0F B7 44 24 48 D8 0D
+patchBytes:     DB 44 24 48 D9 7C 24 48 FF 24 85 84 3A 79 00 D8 0D 9A 38 79 00 EB 1E D8 0D 9E 38 79 00 EB 16 D8 0D A2 38 79 00 EB 0E D8 0D A6 38 79 00 EB 06 D8 0D AA 38 79 00 0F B7 44 24 48 E9 7E 00 00 00 90 90
 --- 
 group: MapEditorOriginal
-patchAddress:   00392C98                                                  ### case: 1
-originalBytes:  D8 0D 64 50 0E 01                                         ### address of 0.89999998
-patchBytes:     D8 0D E8 DA 11 01                                         ### address of 1.7
+patchAddress:   00392CAE ## 007938AE
+originalBytes:  6C 24 48 EB 76 DB 44 24 48 D9 7C 24 48 0F B7 44 24 48 D8 0D 94 24 0E 01 80 CC 0C 89 44 24 0C D9 6C 24 0C DB 5C 24 0C D9 6C 24 48 EB 4E DB 44 24 48 D9 7C 24 48 0F B7 44 24 48 D8 0D A0 C9 0D 01 80 CC 0C 89 44 24 0C D9 6C 24 0C DB 5C 24 0C D9 6C 24 48 EB 26 DB 44 24 48 D9 7C 24 48 0F B7 44 24 48 D8 0D E8 C1 11 01
+patchBytes:     90*
 --- 
 group: MapEditorOriginal
-patchAddress:   00392CC0                                                  ### case: 2
-originalBytes:  D8 0D E8 DA 11 01                                         ### address of 1.7
-patchBytes:     D8 0D 94 24 0E 01                                         ### address of 3.0
+patchAddress:   00392E84 ## 00793A84                                      ### switch table
+originalBytes:  60 38 79 00 8B 38 79 00 B3 38 79 00 DB 38 79 00 03 39 79 00
+patchBytes:     68 38 79 00 70 38 79 00 78 38 79 00 80 38 79 00 88 38 79 00
 --- 
 group: MapEditorOriginal
-patchAddress:   00392CE8                                                  ### case: 3
-originalBytes:  D8 0D A0 C9 0D 01                                         ### address of 4.0
-patchBytes:     D8 0D A0 C9 0D 01                                         ### address of 4.0
+patchAddress:   00392C9A ## 0079389A                                      ### case 0 value
+valueType:      float
+originalBytes:  E8 DA 11 01
+patchValue:     *case0
 --- 
 group: MapEditorOriginal
-patchAddress:   00392D10                                                  ### case: 4
-originalBytes:  D8 0D E4 DA 11 01                                         ### address of 12.0
-patchBytes:     D8 0D E8 C1 11 01                                         ### address of 8.0
+patchAddress:   00392C9E ## 0079389E                                      ### case 1 value
+valueType:      float
+originalBytes:  80 CC 0C 89
+patchValue:     *case1
+--- 
+group: MapEditorOriginal
+patchAddress:   00392CA2 ## 007938A2                                      ### case 2 value
+valueType:      float
+originalBytes:  44 24 0C D9
+patchValue:     *case2
+--- 
+group: MapEditorOriginal
+patchAddress:   00392CA6 ## 007938A6                                      ### case 3 value
+valueType:      float
+originalBytes:  6C 24 0C DB
+patchValue:     *case3
+--- 
+group: MapEditorOriginal
+patchAddress:   00392CAA ## 007938AA                                      ### case 4 value
+valueType:      float
+originalBytes:  5C 24 0C D9
+patchValue:     *case4
