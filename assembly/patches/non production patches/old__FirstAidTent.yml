@@ -1,0 +1,283 @@
+# ----------------------------------------------------
+# ------------ First Aid Tent mod  ---------------
+# ----------------------------------------------------
+# Changes the following aspects of First Aid Tent war machine:
+# - Changed: flat bonus healing amount from (10,20,50,100) per War Machine mastery to (0,20,40,80) per Defense mastery
+# - Changed: "Embalmer" specialization healing bonus from 5 per hero level to 5 per defense primary stat.
+# - Added: Additional healing bonus based on Defense primary stat. Bonus is based on War Machines mastery level - 5,6,8,10
+# 
+# By Deflaktor & Dredknight
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+- &no_mastery_healing               20
+- &basic_mastery_healing            30
+- &advanced_mastery_healing         40
+- &expert_mastery_healing           60
+
+- &no_mastery_unknown_value          0
+- &basic_mastery_unknown_value       0
+- &advanced_mastery_unknown_value    1
+- &expert_mastery_unknown_value      3
+
+- &new_skill_used_for_mastery        7
+
+- &no_mastery_hp_per_defense         4
+- &basic_mastery_hp_per_defense      4
+- &advanced_mastery_hp_per_defense   6
+- &expert_mastery_hp_per_defense     8
+
+# -----------Things that should not be modified ----------------
+
+- &original_healing_value_no_mastery         10
+- &original_healing_value_basic_mastery      20
+- &original_healing_value_advanced_mastery   50
+- &original_healing_value_expert_mastery    100
+
+- &original_unknown_value_no_mastery          0
+- &original_unknown_value_basic_mastery       0
+- &original_unknown_value_advanced_mastery    1
+- &original_unknown_value_expert_mastery      3
+
+- &original_skill_used_for_mastery            2
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ checkAddress:   00576596
+ checkBytes:     03 56 57 8B F9 77 3D FF 24 85 4C 72 97 00 C7 07
+ patchAddress:   005765A6
+ valueType:      Integer
+ originalValue:  *original_healing_value_no_mastery
+ patchValue:     *no_mastery_healing
+---
+ group: Original
+ checkAddress:   005765AA
+ checkBytes:     C7 02
+ patchAddress:   005765AC
+ valueType:      Integer
+ originalValue:  *original_unknown_value_no_mastery
+ patchValue:     *no_mastery_unknown_value
+---
+ group: Original
+ patchAddress:   005765B4
+ valueType:      Integer
+ originalValue:  *original_healing_value_basic_mastery
+ patchValue:     *basic_mastery_healing
+---
+ group: Original
+ patchAddress:   005765BA
+ valueType:      Integer
+ originalValue:  *original_unknown_value_basic_mastery
+ patchValue:     *basic_mastery_unknown_value
+---
+ group: Original
+ patchAddress:   005765C2
+ valueType:      Integer
+ originalValue:  *original_healing_value_advanced_mastery
+ patchValue:     *advanced_mastery_healing
+---
+ group: Original
+ patchAddress:   005765C8
+ valueType:      Integer
+ originalValue:  *original_unknown_value_advanced_mastery
+ patchValue:     *advanced_mastery_unknown_value
+---
+ group: Original
+ patchAddress:   005765D0
+ valueType:      Integer
+ originalValue:  *original_healing_value_expert_mastery
+ patchValue:     *expert_mastery_healing
+---
+ group: Original
+ patchAddress:   005765D6
+ valueType:      Integer
+ originalValue:  *original_unknown_value_expert_mastery
+ patchValue:     *expert_mastery_unknown_value
+---
+ group: Original
+ patchAddress:   00674ED6   # 00A75AD6
+ valueType:      Byte
+ originalValue:  *original_skill_used_for_mastery
+ patchValue:     *new_skill_used_for_mastery
+---
+ group: Original            # Change embalmer specialization bonus from per hero level to per hero defense stat
+ patchAddress:   0057661A   # 0097721A
+ originalBytes:  3C 02
+ patchBytes:     9C 01
+---
+ group: Original
+ checkAddress:   005765E0
+ checkBytes:     FF 50 18 8B 10 8B C8 FF 52 0C 8B F0 85 F6 74 57
+ patchAddress:   005765F0                # 009771F0 fork code
+ originalBytes:  8B 46 04 8B 48 08       # mov eax,[esi+04] ;  mov ecx,[eax+08]
+ patchBytes:     E9 05 1F 49 00 90       # jmp 00E090FA     ;  nop
+---
+ group: Original
+ checkAddress:   00A084EA
+ checkBytes:     CC CC CC CC CC CC B9 E4 9E 0E 01 E9 66 17 F7 FF
+ patchAddress:   00A084FA                # 00E090FA
+ originalBytes:  00*                     # empty space
+ patchBytes:     |
+    8B 46 04                      # mov eax,dword ptr ds:[esi+4]
+    8B 48 08                      # mov ecx,dword ptr ds:[eax+8]
+    8B 54 31 04                   # mov edx,dword ptr ds:[ecx+esi+4]
+    8D 4C 31 04                   # lea ecx,dword ptr ds:[ecx+esi+4]
+    FF 92 9C 01 00 00             # call dword ptr ds:[edx+19C]
+    50                            # push eax
+    8B 06                         # mov eax,dword ptr ds:[esi]
+    89 F1                         # mov ecx,esi
+    FF 10                         # call dword ptr ds:[eax]
+    8B 10                         # mov edx,dword ptr ds:[eax]
+    6A 02                         # push 2
+    89 C1                         # mov ecx,eax
+    FF 92 74 01 00 00             # call dword ptr ds:[edx+174]
+    59                            # pop ecx
+    8B 04 85 38 91 E0 00          # mov eax,dword ptr ds:[eax*4+E09138]
+    F7 E1                         # mul ecx
+    01 07                         # add dword ptr ds:[edi],eax
+    8B 46 04                      # mov eax,dword ptr ds:[esi+4]
+    8B 48 08                      # mov ecx,dword ptr ds:[eax+8]
+    E9 BE E0 B6 FF                # jmp 9771F6
+---
+ group: Original
+ patchAddress:   00A08538          # 00E09138
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *no_mastery_hp_per_defense
+---
+ group: Original
+ patchAddress:   00A0853C          # 00E0913C
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *basic_mastery_hp_per_defense
+---
+ group: Original
+ patchAddress:   00A08540          # 00E09140
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *advanced_mastery_hp_per_defense
+---
+ group: Original
+ patchAddress:   00A08544          # 00E09144
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *expert_mastery_hp_per_defense
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+ group: Quantomas3.1j
+ checkAddress:   004B26D6
+ checkBytes:     03 56 57 8B F9 77 3D FF 24 85 8C 33 8B 00 C7 07
+ patchAddress:   004B26E6
+ valueType:      Integer
+ originalValue:  *original_healing_value_no_mastery
+ patchValue:     *no_mastery_healing
+---
+ group: Quantomas3.1j
+ checkAddress:   004B26EA
+ checkBytes:     C7 02
+ patchAddress:   004B26EC
+ valueType:      Integer
+ originalValue:  *original_unknown_value_no_mastery
+ patchValue:     *no_mastery_unknown_value
+---
+ group: Quantomas3.1j
+ patchAddress:   004B26F4
+ valueType:      Integer
+ originalValue:  *original_healing_value_basic_mastery
+ patchValue:     *basic_mastery_healing
+---
+ group: Quantomas3.1j
+ patchAddress:   004B26FA
+ valueType:      Integer
+ originalValue:  *original_unknown_value_basic_mastery
+ patchValue:     *basic_mastery_unknown_value
+---
+ group: Quantomas3.1j
+ patchAddress:   004B2702
+ valueType:      Integer
+ originalValue:  *original_healing_value_advanced_mastery
+ patchValue:     *advanced_mastery_healing
+---
+ group: Quantomas3.1j
+ patchAddress:   004B2708
+ valueType:      Integer
+ originalValue:  *original_unknown_value_advanced_mastery
+ patchValue:     *advanced_mastery_unknown_value
+---
+ group: Quantomas3.1j
+ patchAddress:   004B2710
+ valueType:      Integer
+ originalValue:  *original_healing_value_expert_mastery
+ patchValue:     *expert_mastery_healing
+---
+ group: Quantomas3.1j
+ patchAddress:   004B2716
+ valueType:      Integer
+ originalValue:  *original_unknown_value_expert_mastery
+ patchValue:     *expert_mastery_unknown_value
+---
+ group: Quantomas3.1j
+ patchAddress:   00741DF6   # 00B429F6
+ valueType:      Byte
+ originalValue:  *original_skill_used_for_mastery
+ patchValue:     *new_skill_used_for_mastery
+---
+ group: Quantomas3.1j       # Change embalmer specialization bonus from per hero level to per hero defense stat
+ patchAddress:   004B275A   # 008B335A
+ originalBytes:  34 02
+ patchBytes:     94 01
+---
+ group: Quantomas3.1j 
+ patchAddress:   004B2730                # 008B3330 fork code
+ originalBytes:  8B 46 04 8B 48 08       # mov eax,[esi+04] ;  mov ecx,[eax+08]
+ patchBytes:     E9 15 40 55 00 90       # jmp 00E0734A     ;  nop
+---
+ group: Quantomas3.1j
+ checkAddress:   00A0673A
+ checkBytes:     CC CC CC CC CC CC B9 E4 57 0F 01 E9 C6 CD DA FF
+ patchAddress:   00A0674A                # 00E0734A
+ originalBytes:  00*                     # empty space 
+ patchBytes:     |
+    8B 46 04                      # mov eax,dword ptr ds:[esi+4]
+    8B 48 08                      # mov ecx,dword ptr ds:[eax+8]
+    8B 54 31 04                   # mov edx,dword ptr ds:[ecx+esi+4]
+    8D 4C 31 04                   # lea ecx,dword ptr ds:[ecx+esi+4]
+    FF 92 94 01 00 00             # call dword ptr ds:[edx+194]
+    50                            # push eax
+    8B 06                         # mov eax,dword ptr ds:[esi]
+    89 F1                         # mov ecx,esi
+    FF 10                         # call dword ptr ds:[eax]
+    8B 10                         # mov edx,dword ptr ds:[eax]
+    6A 02                         # push 2
+    89 C1                         # mov ecx,eax
+    FF 92 78 01 00 00             # call dword ptr ds:[edx+178]
+    59                            # pop ecx
+    8B 04 85 88 73 E0 00          # mov eax,dword ptr ds:[eax*4+E07388]
+    F7 E1                         # mul ecx
+    01 07                         # add dword ptr ds:[edi],eax
+    8B 46 04                      # mov eax,dword ptr ds:[esi+4]
+    8B 48 08                      # mov ecx,dword ptr ds:[eax+8]
+    E9 AE BF AA FF                # jmp mmh55_64b11_tent.8B3336
+---
+ group: Quantomas3.1j
+ patchAddress:   00A06788          # 00E07388
+ originalBytes:  00*
+ valueType:      Integer
+ patchValue:     *no_mastery_hp_per_defense
+---
+ group: Quantomas3.1j
+ patchAddress:   00A0678C          # 00E0738C
+ originalBytes:  00*
+ valueType:      Integer
+ patchValue:     *basic_mastery_hp_per_defense
+---
+ group: Quantomas3.1j
+ patchAddress:   00A06790          # 00E07390
+ originalBytes:  00*
+ valueType:      Integer
+ patchValue:     *advanced_mastery_hp_per_defense
+---
+ group: Quantomas3.1j
+ patchAddress:   00A06794          # 00E07394
+ originalBytes:  00*
+ valueType:      Integer
+ patchValue:     *expert_mastery_hp_per_defense
