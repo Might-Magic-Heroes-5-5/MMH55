@@ -1,0 +1,62 @@
+# ----------------------------------------------------
+# --------------- Multishot mod ------------
+# ----------------------------------------------------
+#
+# Changes multi shot hero level bonus  +3 hero levels to -*reduce_levels_by
+#
+definitions: 
+ - &reduce_levels_by 3
+#
+# ----------------------------------------------------------
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   007C11A8       ## 00BC1DA8
+originalBytes:  0F 84 CA 00 00 00
+patchBytes:     0F 84 AB 47 57 00
+---
+group: Original
+patchAddress:   00BD9559        ## 01136559
+originalBytes:  00*
+patchBytes:     8B 44 24 14 83 ED
+---
+group: Original
+patchAddress:   00BD955F        ## 0113655F
+valueType:      Byte
+originalValue:  0
+patchValue:     *reduce_levels_by
+---
+group: Original
+patchAddress:   00BD9560        ## 01136560
+originalBytes:  00*
+patchBytes:     83 FD 00 7F 05 BD 01 00 00 00 55 50 E9 D7 B6 A8 FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   00745A18       ## 00B46618
+originalBytes:  0F 84 CA 00 00 00
+patchBytes:     0F 84 3B FF 5F 00
+---
+group: Quantomas3.1j
+patchAddress:   00BD9559        ## 01146559
+originalBytes:  00*
+patchBytes:     8B 44 24 14 83 ED
+---
+group: Quantomas3.1j
+patchAddress:   00BD955F        ## 0114655F
+valueType:      Byte
+originalValue:  0
+patchValue:     *reduce_levels_by
+---
+group: Quantomas3.1j
+patchAddress:   00BD9560        ## 01146560
+originalBytes:  00*
+patchBytes:     83 FD 00 7F 05 BD 01 00 00 00 55 50 E9 47 FF 9F FF
+
+
+
+
+
+
