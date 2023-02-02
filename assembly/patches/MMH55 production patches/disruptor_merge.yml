@@ -2,7 +2,8 @@
 # ----------------- Disruptor merge --------------
 # ----------------------------------------------------
 #
-# Merge Disruptor specialization damage into Vulnerability spell
+# Merge Disruptor specialization damage into Vulnerability spell.
+# Damage multiplier changed from (hero_level-1) to hero spellpower
 # 
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
  group: Original
@@ -26,6 +27,11 @@
  patchAddress:   005762B9         ## 00976EB9
  originalBytes:  2A
  patchBytes:     00
+---
+ group: Original                  ## adjusts hero_level to hero_sp
+ patchAddress:   005762A3         ## 00976EA3
+ originalBytes:  FF 92 3C 02 00 00 83 E8 01
+ patchBytes:     6A 00 55 FF 92 44 02 00 00
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
  group: Quantomas3.1j
  checkAddress:    00000400        ## is_spell_dealing_damage
@@ -48,3 +54,8 @@
  patchAddress:   004B244C         ## 008B304C
  originalBytes:  2A
  patchBytes:     00
+---
+ group: Quantomas3.1j             ## adjusts hero_level to hero_sp
+ patchAddress:   004B2436         ## 008B3036
+ originalBytes:  FF 92 34 02 00 00 83 E8 01
+ patchBytes:     6A 00 55 FF 92 3C 02 00 00
