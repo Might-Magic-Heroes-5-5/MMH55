@@ -1,0 +1,8 @@
+switch ( ghost_actions_a2 )
+  {
+    case 0:(a1, "GHOST_SKILL_DEVOUR");
+    case 1:(a1, "GHOST_SKILL_HAUNT");
+    case 2:(a1, "GHOST_SKILL_POSSESS");
+    case 3:(a1, "GHOST_SKILL_CURSE");
+    case 4:(a1, "GHOST_SKILL_REVENGE");
+    case 5:(a1, "GHOST_SKILL_SPEED");
