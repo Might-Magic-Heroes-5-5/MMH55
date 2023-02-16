@@ -1,0 +1,76 @@
+# ----------------------------------------------------
+# --------------- Whip Stike spells ----------------
+# ----------------------------------------------------
+#
+#   Enable changing spell ids of Whip strike as follow:
+#   1. SPELL1_ID instead of Slow
+#   2. SPELL2_ID instead of Suffering
+#   3. SPELL3_ID instead of Frenzy
+#
+# ----------------------------------------------------
+# -------------- Things you may want to modify -----------------
+definitions: 
+- &SPELL1_ID       12 # Slow
+- &SPELL2_ID       15 # Suffering
+- &SPELL3_ID       11 # Weakness
+#
+--- # --------------- ORIGINAL PATCH DATA ---------------
+group: Original
+checkAddress:   44BE7A
+checkBytes:     E8 A1 50 BB FF
+patchAddress:   0065D6DF              ## 00A5E2DF
+valueType:      Integer
+originalValue:  12
+patchValue:     *SPELL1_ID
+---
+group: Original
+patchAddress:   0065D6E5              ## 00A5E2E5
+originalBytes:  33
+patchBytes:     BB
+---
+group: Original
+patchAddress:   0065D6E6              ## 00A5E2E6
+valueType:      Integer
+originalBytes:  DB 83 F8 4B
+patchValue:     *SPELL2_ID
+---
+group: Original
+patchAddress:   0065D6EA              ## 00A5E2EA
+originalBytes:  0F 9D C3 83 EB 01 83 E3
+patchBytes:     83 F8 4B 7D 02 EB 05 BB
+---
+group: Original
+patchAddress:   0065D6F2              ## 00A5E2F2
+valueType:      Integer
+originalBytes:  FD 83 C3 12
+patchValue:     *SPELL3_ID
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   0053E1CA
+checkBytes:     E8 51 22 AC FF
+patchAddress:   0059156F              ## 0099216F
+valueType:      Integer
+originalValue:  12
+patchValue:     *SPELL1_ID
+---
+group: Quantomas3.1j
+patchAddress:   00591575              ## 00992175
+originalBytes:  33
+patchBytes:     BB
+---
+group: Quantomas3.1j
+patchAddress:   00591576              ## 00992176
+valueType:      Integer
+originalBytes:  DB 83 F8 4B
+patchValue:     *SPELL2_ID
+---
+group: Quantomas3.1j
+patchAddress:   0059157A              ## 0099217A
+originalBytes:  0F 9D C3 83 EB 01 83 E3
+patchBytes:     83 F8 4B 7D 02 EB 05 BB
+---
+group: Quantomas3.1j
+patchAddress:   00591582             ## 00992182
+valueType:      Integer
+originalBytes:  FD 83 C3 12
+patchValue:     *SPELL3_ID
