@@ -1,0 +1,24 @@
+# ----------------------------------------------------
+# --------------- Random Dark and Light ability fix ----------------
+# ----------------------------------------------------
+#
+# Changes the list of Dark spells cast by Random Dark and Random Dark & Light abilites from
+# Weakness, Suffering, Confusion, Slow, Plague, Vulnerability 
+# to
+# Weakness, Suffering, Confusion, Slow
+#
+# ----------------------------------------------------
+--- # --------------- ORIGINAL PATCH DATA ---------------
+group: Original
+checkAddress:   44BE7A
+checkBytes:     E8 A1 50 BB FF
+patchAddress:   005789B5                 ## 009795B5
+originalBytes:  8B 46 04 3B 46 08 C7 04 24 0D 00 00 00 74 12 85 C0 74 06 C7 00 0D 00 00 00 83 C0 04 89 46 04 EB 11 6A 01 6A 01 8D 4C 24 08 51 50 8B CE E8 F9 30 1A 00 8B 46 04 3B 46 08 C7 04 24 0E 00 00 00 74 12 85 C0 74 06 C7 00 0E 00 00 00 83 C0 04 89 46 04 EB 11 6A 01 6A 01 8D 54 24 08 52 50 8B CE E8 C7 30 1A 00
+patchBytes:     EB 62 90*
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   0053E1CA
+checkBytes:     E8 51 22 AC FF
+patchAddress:   004B4A95                 ## 008B5695
+originalBytes:  8B 46 04 3B 46 08 C7 04 24 0D 00 00 00 74 12 85 C0 74 06 C7 00 0D 00 00 00 83 C0 04 89 46 04 EB 11 6A 01 6A 01 8D 4C 24 08 51 50 8B CE E8 39 C5 47 00 8B 46 04 3B 46 08 C7 04 24 0E 00 00 00 74 12 85 C0 74 06 C7 00 0E 00 00 00 83 C0 04 89 46 04 EB 11 6A 01 6A 01 8D 54 24 08 52 50 8B CE E8 07 C5 47 00
+patchBytes:     EB 62 90*
