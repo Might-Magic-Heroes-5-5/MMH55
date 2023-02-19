@@ -2,7 +2,7 @@
 # ----------------- Instant Travel mod --------------
 # ----------------------------------------------------
 #
-# Changes Instant Travel movement points requirements from 50% to 15%
+# Changes Instant Travel movement points requirements from 50% to 20%
 #
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
  group: Original
@@ -20,7 +20,7 @@
  group: Original                  ## new code
  patchAddress:   00BDBCA0         ## 01138CA0
  originalBytes:  00*
- patchBytes:     BD 14 00 00 00 F7 FD 8D 2C 40 E9 E5 C7 72 FF 00 00 99 B9 14 00 00 00 F7 F9 8D 04 40 E9 04 CC 72 FF
+ patchBytes:     BD 05 00 00 00 F7 FD E9 E8 C7 72 FF 00 00 00 00 00 99 B9 05 00 00 00 F7 F9 E9 07 CC 72 FF
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
  group: Quantomas3.1j
  checkAddress:   00000400
@@ -37,4 +37,4 @@
  group: Quantomas3.1j             ## new code
  patchAddress:   00BDBCA0         ## 01148CA0
  originalBytes:  00*
- patchBytes:     BD 14 00 00 00 F7 FD 8D 2C 40 E9 89 11 88 FF 00 00 99 B9 14 00 00 00 F7 F9 8D 04 40 E9 E5 15 88 FF
+ patchBytes:     BD 05 00 00 00 F7 FD E9 8C 11 88 FF 00 00 00 00 00 99 B9 05 00 00 00 F7 F9 E9 E8 15 88 FF
