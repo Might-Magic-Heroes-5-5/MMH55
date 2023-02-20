@@ -2,8 +2,9 @@
 # ----------------- Orcs immune to CotN --------------
 # ----------------------------------------------------
 #
-# Patch makes Stronghold creatures immune to "Curse of the Netherworld" spell
-# 
+# Patch makes:
+# - Stronghold creatures immune to "Curse of the Netherworld" spell
+# - (QAI) War Machines immune to "Curse of the Netherworld" spell
 # ----------------------------------------------------
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original
