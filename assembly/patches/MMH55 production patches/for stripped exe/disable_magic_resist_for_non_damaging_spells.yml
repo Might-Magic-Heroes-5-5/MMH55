@@ -1,0 +1,32 @@
+# ----------------------------------------------------
+# ----------------- Disable Magic Resist for non damagig spells --------------
+# ----------------------------------------------------
+#
+# Spells that do not do direct damage (including Plague) will not trigger magic resist.
+# However immunities will work.
+# 
+# ----------------------------------------------------
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   004B87B6           ## 0097D316 - jump to new code
+originalBytes:  85 C0 0F 8E D9 00 00 00
+patchBytes:     E9 85 BB 7B 00 90 90 90
+---
+group: Original                    ## new code - if spell does not deal damage skip magic resist rolls
+patchAddress:   00BDBEA0           ## 01138EA0
+originalBytes:  00*
+patchBytes:     85 C0 0F 8E 4F 45 84 FF 89 FA 89 E9 E8 FF CD 3A FF 84 C0 0F 84 3E 45 84 FF E9 60 44 84 FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   004B87B6           ## 008B93B6 - jump to new code
+originalBytes:  85 C0 0F 8E D9 00 00 00
+patchBytes:     E9 E5 FA 88 00 90 90 90
+---
+group: Quantomas3.1j               ## new code - if spell does not deal damage skip magic resist rolls
+patchAddress:   00BDBEA0           ## 01148EA0
+originalBytes:  00*
+patchBytes:     85 C0 0F 8E EF 05 77 FF 89 FA 89 E9 E8 AF E6 83 FF 84 C0 0F 84 DE 05 77 FF E9 00 05 77 FF
