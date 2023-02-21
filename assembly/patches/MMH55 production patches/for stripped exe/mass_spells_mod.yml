@@ -1,0 +1,235 @@
+# ----------------------------------------------------
+# ----------------- Mass spells POC --------------
+# ----------------------------------------------------
+#
+# Changes:
+# - Ability to modify effect strength of mass spells
+# - Adds Combat FlyBy message when Occultism penetrates creature magic resistance
+# - Adds spellbook prediction for Curse, Bless and Dispel spells. Now shows the dynamic bonus formula.
+# -------------- Things you may want to modify -----------------
+definitions: 
+ - &MASS_CURSE              2.0                  ## oppoiste of other modifiers. Higher value means weaker effect
+ - &MASS_BLESS              0.5
+ - &MASS_SLOW               0.5
+ - &MASS_HASTE              0.5
+ - &MASS_BLOODLUST          0.5
+ - &MASS_WEAKNESS           0.5
+ - &MASS_STONESKIN          0.5
+ - &MASS_DISRUPTING_RAY     0.5
+ - &MASS_DEFLECT_ARROWS     0.5
+ - &MASS_FORGETFULLNESS     0.5
+ - &MASS_CLEANSING          0.5
+# -----------Things that should not be modified ----------------
+ - &MASS_PLAGUE             1.0                  ## plague effect is unchanged. Modifying this value will achieve nothing.
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ checkAddress:   00000400
+ checkBytes:     8D 41 34 C3 CC CC CC CC
+ patchAddress:   00000400         ## 00000400
+ originalBytes:  D8 0D AC A3 E3 00
+ patchBytes:     E9 CE 1E 7C 00 90
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+ group: Quantomas3.1j
+ checkAddress:   00000400
+ checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+ patchAddress:   0061F152                      ## 00A1FD52
+ originalBytes:  89 4E 24 8B 4C 24 28          ## spelleffect block - new
+ patchBytes:     E9 7A 8F 72 00 90 90
+---
+ group: Quantomas3.1j                          ## spelleffect block - copy update
+ patchAddress:   0061ED8F                      ## 00A1F98F
+ originalBytes:  88 4E 53 8B CE
+ patchBytes:     E9 5B 93 72 00
+---
+ group: Quantomas3.1j                          ## check for mass and negsp
+ patchAddress:   0067255B                      ## 00A7315B
+ originalBytes:  8B 55 00 8B CD
+ patchBytes:     E9 A3 5B 6D 00
+---
+ group: Quantomas3.1j                          ## fork int spell desc
+ patchAddress:   00588074                      ## 00988C74
+ originalBytes:  80 CC 0C D8 C1
+ patchBytes:     E8 BF 00 7C 00
+---
+ group: Quantomas3.1j                          ## fork dec spell desc
+ patchAddress:   00587EFC                      ## 00988AFC
+ originalBytes:  80 CC 0C D8 C1
+ patchBytes:     E8 37 02 7C 00
+---
+ group: Quantomas3.1j                          ## fork Vulnerability spell desc
+ patchAddress:   005880DA                      ## 00988CDA
+ originalBytes:  80 CC 0C D8 C1
+ patchBytes:     E8 59 00 7C 00
+---
+ group: Quantomas3.1j                          ## Adjusting description switch db
+ patchAddress:   00588F94                      ## 00989B94
+ originalBytes:  00 01 02 0E 00 0E 01 03 04 05 0E 0E 00
+ patchBytes:     01 01 02 0E 00 0E 01 03 04 05 0E 0E 01
+---
+ group: Quantomas3.1j                          ## new functionality
+ patchAddress:   00BDBCD1                      ## 01148CD1
+ originalBytes:  00*
+ patchBytes:     88 5E 35 83 FA 00 7D 06 C6 46 35 01 F7 DA 89 4E 24 8B 4C 24 28 E9 6E 70 8D FF 00 00 00 00 88 4E 53 8A 4F 35 88 4E 35 89 F1 E9 95 6C 8D FF 00 00 00 00 80 7C 24 40 01 75 02 F7 D8 8B 55 00 89 E9 E9 4A A4 92 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 82 CC 0C D8 C1 8B 8C 24 6C 02 00 00 8B 49 04 81 F9 D2 00 00 00 7C 0D 81 E9 D2 00 00 00 D8 0C 8D 44 8E 14 01 C3
+---
+ group: Quantomas3.1j                          ## Mass curse mod
+ patchAddress:   00BDBE44                      ## 01148E44
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_CURSE
+---
+ group: Quantomas3.1j                          ## Mass vulnerability mod
+ patchAddress:   00BDBE48                      ## 01148E48
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_DISRUPTING_RAY
+---
+ group: Quantomas3.1j                          ## Mass slow mod
+ patchAddress:   00BDBE4C                      ## 01148E4C
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_SLOW
+---
+ group: Quantomas3.1j                          ## Mass forgetfullness mod
+ patchAddress:   00BDBE50                      ## 01148E50
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_FORGETFULLNESS
+---
+ group: Quantomas3.1j                          ## Mass plague mod
+ patchAddress:   00BDBE54                      ## 01148E54
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_PLAGUE
+---
+ group: Quantomas3.1j                          ## Mass suffering mod
+ patchAddress:   00BDBE58                      ## 01148E58
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_WEAKNESS
+---
+ group: Quantomas3.1j                          ## Mass bless mod
+ patchAddress:   00BDBE5C                      ## 01148E5C
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_BLESS
+---
+ group: Quantomas3.1j                          ## Mass cleansing mod
+ patchAddress:   00BDBE60                      ## 01148E60
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_CLEANSING
+---
+ group: Quantomas3.1j                          ## Mass endurance mod
+ patchAddress:   00BDBE64                      ## 01148E64
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_STONESKIN
+---
+ group: Quantomas3.1j                          ## Mass deflect missile mod
+ patchAddress:   00BDBE68                      ## 01148E68
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_DEFLECT_ARROWS
+---
+ group: Quantomas3.1j                          ## Mass righteous might mod
+ patchAddress:   00BDBE6C                      ## 01148E6C
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_BLOODLUST
+---
+ group: Quantomas3.1j                          ## Mass haste mod
+ patchAddress:   00BDBE70                      ## 01148E70
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_HASTE
+---
+ group: Quantomas3.1j                          ## fork suffering
+ patchAddress:   006765A9                      ## 00A771A9
+ originalBytes:  74 08 DD D8 D9 05 04 88 E0 00 DB 44 24 14
+ patchBytes:     FF 35 58 8E 14 01 E8 AD 1B 6D 00 90 90 90
+---
+ group: Quantomas3.1j                          ## fork rightous might
+ patchAddress:   006765FA                      ## 00A771FA
+ originalBytes:  74 08 DD D8 D9 05 04 88 E0 00 DB 44 24 14
+ patchBytes:     FF 35 6C 8E 14 01 E8 5C 1B 6D 00 90 90 90
+---
+ group: Quantomas3.1j                          ## fork endurance
+ patchAddress:   00675927                      ## 00A76527
+ originalBytes:  74 08 DD D8 D9 05 04 88 E0 00
+ patchBytes:     E9 56 28 6D 00 90 90 90 90 90
+---
+ group: Quantomas3.1j                          ## fork vulnerability
+ patchAddress:   004B8DCD                      ## 008B99CD
+ originalBytes:  D8 05 00 88 E0 00
+ patchBytes:     E9 D1 F3 88 00 90
+---
+ group: Quantomas3.1j                          ## fork slow
+ patchAddress:   0061E526                      ## 00A1F126
+ originalBytes:  8B 50 28 52 8B 50 20 E8 2E 73 EB FF
+ patchBytes:     FF 35 4C 8E 14 01 E8 AE 9C 72 00 90
+---
+ group: Quantomas3.1j                          ## fork haste
+ patchAddress:   0061E55D                      ## 00A1F15D
+ originalBytes:  8B 50 28 52 8B 50 20 E8 F7 72 EB FF
+ patchBytes:     FF 35 70 8E 14 01 E8 77 9C 72 00 90
+---
+ group: Quantomas3.1j                          ## fork bless
+ patchAddress:   004D9D56                      ## 008DA956
+ originalBytes:  8B C8 E8 A3 43 14 00 D9 5C 24 10
+ patchBytes:     FF 35 5C 8E 14 01 E8 5E E4 86 00
+---
+ group: Quantomas3.1j                          ## fork curse
+ patchAddress:   004D9DBD                      ## 008DA9BD
+ originalBytes:  8B C8 E8 3C 43 14 00 D9 5C 24 10
+ patchBytes:     FF 35 44 8E 14 01 E8 F7 E3 86 00
+---
+ group: Quantomas3.1j                          ## fork forgetfullness
+ patchAddress:   004B20C1                      ## 008B2CC1
+ originalBytes:  E8 3A C0 16 00 D9 1C 24 8B 04 24
+ patchBytes:     FF 35 50 8E 14 01 E8 34 61 89 00
+---
+ group: Quantomas3.1j                          ## fork deflect missile
+ patchAddress:   004B20F1                      ## 008B2CF1
+ originalBytes:  E8 0A C0 16 00 D9 1C 24 8B 04 24
+ patchBytes:     FF 35 68 8E 14 01 E8 04 61 89 00
+---
+ group: Quantomas3.1j                          ## fork dispel missile
+ patchAddress:   00671DD6                      ## 00A729D6
+ originalBytes:  8B 44 24 1C 2B C5
+ patchBytes:     E9 49 64 6D 00 90
+---
+ group: Quantomas3.1j                         ## Creature effects new code
+ patchAddress:   00BDBD61                     ## 01148D61
+ originalBytes:  00*
+ patchBytes:     74 08 DD D8 D9 05 04 88 E0 00 8A 4F 35 84 C9 74 05 3E D8 4C 24 04 DB 44 24 1C C2 04 00 00 00 00 00 74 08 DD D8 D9 05 04 88 E0 00 3E 8A 4D 35 84 C9 74 06 D8 0D 64 8E 14 01 E9 92 D7 92 FF 00 00 00 00 D8 05 00 88 E0 00 80 7C 24 13 00 74 06 D8 0D 48 8E 14 01 E9 18 0C 77 FF 00 00 00 00 50 89 C1 E8 39 5F 8D FF 58 8A 40 35 84 C0 74 05 3E D8 4C 24 04 D9 5C 24 18 C2 04 00 00 00 00 00 50 8B 50 28 52 8B 50 20 E8 74 D6 78 FF 58 8A 40 35 84 C0 74 05 3E D8 4C 24 04 C2 04 00 00 00 00 00 E8 FB 5E 8D FF 8B 44 24 08 8A 40 35 84 C0 74 05 3E D8 4C 24 04 D9 5C 24 08 8B 44 24 08 C2 04 00 00 00 00 00 8B 84 24 8C 00 00 00 84 C0 74 06 D8 0D 5C 8E 14 01 8B 44 24 1C 29 E8 E9 9C 9B 92 FF
+---
+ group: Quantomas3.1j                          ## Occultsim alternative check for MR
+ patchAddress:   004B8917                      ## 008B9517
+ originalBytes:  D8 4C 24 10 D9 5C 24 10
+ patchBytes:     E9 2E CD 88 00 90 90 90
+---
+ group: Quantomas3.1j                          ## fork to CombatLogSetMagicResistMessage
+ patchAddress:   004B898B                      ## 008B958B
+ originalBytes:  6A 60 E8 2E 30 B5 FF
+ patchBytes:     E9 7D CC 88 00 90 90
+---
+ group: Quantomas3.1j                          ## Choosing log resist text from array
+ patchAddress:   005DC068                      ## 009DCC68
+ originalBytes:  38 56 4C 0F 95 C2
+ patchBytes:     8A 56 4C 90 90 90
+---
+ group: Quantomas3.1j                          ## Set Combat FlyBy message
+ patchAddress:   004B89E9                      ## 008B95E9
+ originalBytes:  68 FC 10 E5
+ patchBytes:     E9 40 CC 88
+---
+ group: Quantomas3.1j                         ## new logic for agic resist message
+ patchAddress:   00BD920D                     ## 0114620D
+ originalBytes:  00*
+ patchBytes:     C6 44 24 18 00 83 7C 24 44 64 74 05 C6 44 24 18 03 6A 60 E8 9B 63 2C FF E9 68 33 77 FF 00 00 00 00 80 7C 24 18 03 75 07 68 03 63 14 01 EB 05 68 FC 10 E5 00 E9 A8 33 77 FF 00 00 00 00 D8 4C 24 10 D9 5C 24 10 80 7C 24 44 00 0F 84 F1 33 77 FF 80 7C 24 40 00 0F 84 E6 33 77 FF D9 44 24 10 D8 0D A0 93 E0 00 D9 7C 24 40 0F B7 44 24 40 82 CC 0C 89 44 24 44 D9 6C 24 44 DB 5C 24 44 83 7C 24 44 00 D9 6C 24 40 0F 84 B5 33 77 FF E9 C8 32 77 FF
+---
+ group: Quantomas3.1j                          ## penetration bool and FlyBy source name
+ patchAddress:   00BD9300                      ## 01146300
+ originalBytes:  00*
+ patchBytes:     90 90 90 46 4C 59 49 4E 47 5F 53 49 47 4E 5F 50 41 52 54 49 41 4C 4C 59 5F 52 45 53 49 53 54 45 44
