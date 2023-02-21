@@ -2,7 +2,7 @@
 # ----------------- Disable Magic Resist for non damagig spells --------------
 # ----------------------------------------------------
 #
-# Spells that do not do direct damage (including Plague) will not trigger magic resist.
+# Spells that do not do direct damage (Plague is counted as DD spell) will not trigger magic resist.
 # However immunities will work.
 # 
 # ----------------------------------------------------
