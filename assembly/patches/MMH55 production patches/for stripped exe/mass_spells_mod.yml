@@ -29,6 +29,206 @@ definitions:
  patchAddress:   00000400         ## 00000400
  originalBytes:  D8 0D AC A3 E3 00
  patchBytes:     E9 CE 1E 7C 00 90
+ patchAddress:   000E42E2                      ## 004E4EE2
+ originalBytes:  89 4E 24 8B 4C 24 28          ## spelleffect block - new
+ patchBytes:     E9 EA 3D C5 00 90 90
+---
+ group: Original                               ## spelleffect block - copy update
+ patchAddress:   000E3F0F                      ## 004E4B0F
+ originalBytes:  88 4E 53 8B CE
+ patchBytes:     E9 DB 41 C5 00
+---
+ group: Original                               ## check for mass and negsp
+ patchAddress:   007BE4E5                      ## 00BBF0E5
+ originalBytes:  8B 13 8B CB 89 44 24 30
+ patchBytes:     E9 19 9C 57 00 90 90 90
+---
+ group: Original                               ## fork int spell desc
+ patchAddress:   005BB464                      ## 009BC064
+ originalBytes:  80 CC 0C D8 C1
+ patchBytes:     E8 CF CC 77 00
+---
+ group: Original                               ## fork dec spell desc
+ patchAddress:   005BB2EC                      ## 009BBEEC
+ originalBytes:  80 CC 0C D8 C1
+ patchBytes:     E8 47 CE 77 00
+---
+ group: Original                               ## fork Vulnerability spell desc
+ patchAddress:   005BB4CA                      ## 009BC0CA
+ originalBytes:  80 CC 0C D8 C1
+ patchBytes:     E8 69 CC 77 00
+---
+ group: Original                               ## Adjusting description switch db
+ patchAddress:   005BC384                      ## 009BCF84
+ originalBytes:  00 01 02 0E 00 0E 01 03 04 05 0E 0E 00
+ patchBytes:     01 01 02 0E 00 0E 01 03 04 05 0E 0E 01
+---
+ group: Original                               ## new functionality
+ patchAddress:   00BDBCD1                      ## 01138CD1
+ originalBytes:  00*
+ patchBytes:     88 5E 35 83 FA 00 7D 06 C6 46 35 01 F7 DA 89 4E 24 8B 4C 24 28 E9 FE C1 3A FF 00 00 00 00 88 4E 53 8A 4F 35 88 4E 35 89 F1 E9 15 BE 3A FF 00 00 00 00 80 7C 24 34 01 75 02 F7 D8 36 8B 13 89 D9 89 44 24 30 E9 D3 63 A8 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 82 CC 0C D8 C1 8B 8C 24 6C 02 00 00 8B 49 04 81 F9 D2 00 00 00 7C 0D 81 E9 D2 00 00 00 D8 0C 8D 44 8E 13 01 C3
+---
+ group: Original                               ## Mass curse mod
+ patchAddress:   00BDBE44                      ## 01138E44
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_CURSE
+---
+ group: Original                               ## Mass vulnerability mod
+ patchAddress:   00BDBE48                      ## 01138E48
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_DISRUPTING_RAY
+---
+ group: Original                               ## Mass slow mod
+ patchAddress:   00BDBE4C                      ## 01138E4C
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_SLOW
+---
+ group: Original                               ## Mass forgetfullness mod
+ patchAddress:   00BDBE50                      ## 01138E50
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_FORGETFULLNESS
+---
+ group: Original                               ## Mass plague mod
+ patchAddress:   00BDBE54                      ## 01138E54
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_PLAGUE
+---
+ group: Original                               ## Mass suffering mod
+ patchAddress:   00BDBE58                      ## 01138E58
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_WEAKNESS
+---
+ group: Original                               ## Mass bless mod
+ patchAddress:   00BDBE5C                      ## 01138E5C
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_BLESS
+---
+ group: Original                               ## Mass cleansing mod
+ patchAddress:   00BDBE60                      ## 01138E60
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_CLEANSING
+---
+ group: Original                               ## Mass endurance mod
+ patchAddress:   00BDBE64                      ## 01138E64
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_STONESKIN
+---
+ group: Original                               ## Mass deflect missile mod
+ patchAddress:   00BDBE68                      ## 01138E68
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_DEFLECT_ARROWS
+---
+ group: Original                               ## Mass righteous might mod
+ patchAddress:   00BDBE6C                      ## 01138E6C
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_BLOODLUST
+---
+ group: Original                               ## Mass haste mod
+ patchAddress:   00BDBE70                      ## 01138E70
+ valueType:      Float
+ originalValue:  0
+ patchValue:     *MASS_HASTE
+---
+ group: Original                               ## fork suffering
+ patchAddress:   00589929                      ## 0098A529
+ originalBytes:  74 08 DD D8 D9 05 10 BE E0 00 DB 44 24 14
+ patchBytes:     FF 35 58 8E 13 01 E8 2D E8 7A 00 90 90 90
+---
+ group: Original                               ## fork rightous might
+ patchAddress:   0058997A                      ## 0098A57A
+ originalBytes:  74 08 DD D8 D9 05 10 BE E0 00 DB 44 24 14
+ patchBytes:     FF 35 6C 8E 13 01 E8 DC E7 7A 00 90 90 90
+---
+ group: Original                               ## fork endurance
+ patchAddress:   00588CA7                      ## 009898A7
+ originalBytes:  74 08 DD D8 D9 05 10 BE E0 00
+ patchBytes:     E9 D6 F4 7A 00 90 90 90 90 90
+---
+ group: Original                               ## fork vulnerability
+ patchAddress:   0057CD5F                      ## 0097D95F
+ originalBytes:  D8 05 70 AB E0 00
+ patchBytes:     E9 3F B4 7B 00 90
+---
+ group: Original                               ## fork slow
+ patchAddress:   000E3696                      ## 004E4296
+ originalBytes:  8B 50 28 52 8B 50 20 E8 FE 09 55 00
+ patchBytes:     FF 35 4C 8E 13 01 E8 3E 4B C5 00 90
+---
+ group: Original                               ## fork haste
+ patchAddress:   000E36CD                      ## 004E42CD
+ originalBytes:  8B 50 28 52 8B 50 20 E8 C7 09 55 00
+ patchBytes:     FF 35 70 8E 13 01 E8 07 4B C5 00 90
+---
+ group: Original                               ## fork bless
+ patchAddress:   004A1B26                      ## 008A2726
+ originalBytes:  8B C8 E8 13 17 C4 FF D9 5C 24 10
+ patchBytes:     FF 35 5C 8E 13 01 E8 8E 66 89 00
+---
+ group: Original                               ## fork curse
+ patchAddress:   004A1B8D                      ## 008A278D
+ originalBytes:  8B C8 E8 AC 16 C4 FF D9 5C 24 10
+ patchBytes:     FF 35 44 8E 13 01 E8 27 66 89 00
+---
+ group: Original                               ## fork forgetfullness
+ patchAddress:   00575F31                      ## 00976B31
+ originalBytes:  E8 0A D3 B6 FF D9 1C 24 8B 04 24
+ patchBytes:     FF 35 50 8E 13 01 E8 C4 22 7C 00
+---
+ group: Original                               ## fork deflect missile
+ patchAddress:   00575F61                      ## 00976B61
+ originalBytes:  E8 DA D2 B6 FF D9 1C 24 8B 04 24
+ patchBytes:     FF 35 68 8E 13 01 E8 94 22 7C 00
+---
+ group: Original                               ## fork dispel missile
+ patchAddress:   007BDD76                      ## 00BBE976
+ originalBytes:  8B 44 24 1C 2B C5
+ patchBytes:     E9 A9 A4 57 00 90
+---
+ group: Original                               ## Creature effects new code
+ patchAddress:   00BDBD61                      ## 01138D61
+ originalBytes:  00*
+ patchBytes:     74 08 DD D8 D9 05 10 BE E0 00 8A 4F 35 84 C9 74 05 3E D8 4C 24 04 DB 44 24 1C C2 04 00 00 00 00 00 74 08 DD D8 D9 05 10 BE E0 00 3E 8A 4D 35 84 C9 74 06 D8 0D 64 8E 13 01 E9 12 0B 85 FF 00 00 00 00 D8 05 70 AB E0 00 80 7C 24 2F 00 74 06 D8 0D 48 8E 13 01 E9 AA 4B 84 FF 00 00 00 00 50 89 C1 E8 79 B0 3A FF 58 8A 40 35 84 C0 74 05 3E D8 4C 24 04 D9 5C 24 18 C2 04 00 00 00 00 00 50 8B 50 28 52 8B 50 20 E8 B4 BE 8F FF 58 8A 40 35 84 C0 74 05 3E D8 4C 24 04 C2 04 00 00 00 00 00 E8 3B B0 3A FF 8B 44 24 08 8A 40 35 84 C0 74 05 3E D8 4C 24 04 D9 5C 24 08 8B 44 24 08 C2 04 00 00 00 00 00 8B 84 24 98 00 00 00 84 C0 74 06 D8 0D 5C 8E 13 01 8B 44 24 1C 29 E8 E9 3C 5B A8 FF
+---
+ group: Original                               ## Occultsim alternative check for MR
+ patchAddress:   0057C877                      ## 0097D477
+ originalBytes:  D8 4C 24 10 D9 5C 24 10
+ patchBytes:     E9 CE 8D 7B 00 90 90 90
+---
+ group: Original                               ## fork to CombatLogSetMagicResistMessage
+ patchAddress:   0057C8EB                      ## 0097D4EB
+ originalBytes:  6A 60 E8 DE BA EF FF
+ patchBytes:     E9 1D 8D 7B 00 90 90
+---
+ group: Original                               ## Choosing log resist text from array
+ patchAddress:   008996C8                      ## 00C9A2C8
+ originalBytes:  38 56 4C 0F 95 C2
+ patchBytes:     8A 56 4C 90 90 90
+---
+ group: Original                               ## Set Combat FlyBy message
+ patchAddress:   0057C949                      ## 0097D549
+ originalBytes:  68 E8 12 E6
+ patchBytes:     E9 E0 8C 7B
+---
+ group: Original                               ## new logic for agic resist message
+ patchAddress:   00BD920D                      ## 0113620D
+ originalBytes:  00*
+ patchBytes:     C6 44 24 18 00 83 7C 24 44 64 74 05 C6 44 24 18 03 6A 60 E8 AB 2D 74 FF E9 C8 72 84 FF 00 00 00 00 80 7C 24 18 03 75 07 68 03 63 13 01 EB 05 68 E8 12 E6 00 E9 08 73 84 FF 00 00 00 00 D8 4C 24 10 D9 5C 24 10 80 7C 24 44 00 0F 84 51 73 84 FF 80 7C 24 40 00 0F 84 46 73 84 FF D9 44 24 10 D8 0D C0 82 E1 00 D9 7C 24 40 0F B7 44 24 40 82 CC 0C 89 44 24 44 D9 6C 24 44 DB 5C 24 44 83 7C 24 44 00 D9 6C 24 40 0F 84 15 73 84 FF E9 28 72 84 FF
+---
+ group: Original                               ## penetration bool and FlyBy source name
+ patchAddress:   00BD9300                      ## 01136300
+ originalBytes:  00*
+ patchBytes:     90 90 90 46 4C 59 49 4E 47 5F 53 49 47 4E 5F 50 41 52 54 49 41 4C 4C 59 5F 52 45 53 49 53 54 45 44
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
  group: Quantomas3.1j
  checkAddress:   00000400
