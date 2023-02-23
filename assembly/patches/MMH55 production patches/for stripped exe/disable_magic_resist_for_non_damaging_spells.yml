@@ -13,7 +13,7 @@
 group: Original
 checkAddress:   00000400
 checkBytes:     8D 41 34 C3 CC CC CC CC
-patchAddress:   004B87B6           ## 0097D316 - jump to new code
+patchAddress:   0057C716           ## 0097D316 - jump to new code
 originalBytes:  85 C0 0F 8E D9 00 00 00
 patchBytes:     E9 85 BB 7B 00 90 90 90
 ---
