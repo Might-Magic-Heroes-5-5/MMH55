@@ -229,6 +229,17 @@ definitions:
  patchAddress:   00BD9300                      ## 01136300
  originalBytes:  00*
  patchBytes:     90 90 90 46 4C 59 49 4E 47 5F 53 49 47 4E 5F 50 41 52 54 49 41 4C 4C 59 5F 52 45 53 49 53 54 45 44
+---
+ group: Original                               ## fork before decay damage calculation
+ patchAddress:   007BD6AC                      ## 00BBE2AC
+ originalBytes:  8B 5C 24 3C 8B 54 24 40
+ patchBytes:     E9 C7 AB 57 00 90 90 90
+---
+ group: Original                               ## if mass adjust spellpower
+ patchAddress:   00BDBE78                      ## 01138E78
+ originalBytes:  00*
+ patchBytes:     8B 5C 24 3C 8B 54 24 40 83 FA 00 7D 02 F7 DA E9 28 54 A8 FF
+
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
  group: Quantomas3.1j
  checkAddress:   00000400
@@ -433,3 +444,13 @@ definitions:
  patchAddress:   00BD9300                      ## 01146300
  originalBytes:  00*
  patchBytes:     90 90 90 46 4C 59 49 4E 47 5F 53 49 47 4E 5F 50 41 52 54 49 41 4C 4C 59 5F 52 45 53 49 53 54 45 44
+---
+ group: Quantomas3.1j                          ## fork before decay damage calculation
+ patchAddress:   0067171C                      ## 00A7231C
+ originalBytes:  8B 5C 24 40 8B 54 24 44
+ patchBytes:     E9 57 6B 6D 00 90 90 90
+---
+ group: Quantomas3.1j                          ## if mass adjust spellpower
+ patchAddress:   00BDBE78                      ## 01148E78
+ originalBytes:  00*
+ patchBytes:     8B 5C 24 40 8B 54 24 44 83 FA 00 7D 02 F7 DA E9 98 94 92 FF
