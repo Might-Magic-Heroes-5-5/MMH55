@@ -20,7 +20,7 @@
  group: Original                  ## new code
  patchAddress:   00BDBCA0         ## 01138CA0
  originalBytes:  00*
- patchBytes:     BD 05 00 00 00 F7 FD E9 E8 C7 72 FF 00 00 00 00 00 99 B9 05 00 00 00 F7 F9 E9 07 CC 72 FF
+ patchBytes:     BD 05 00 00 00 F7 FD 89 C5 E9 E6 C7 72 FF 00 00 00 99 B9 05 00 00 00 F7 F9 E9 07 CC 72 FF
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
  group: Quantomas3.1j
  checkAddress:   00000400
@@ -37,4 +37,4 @@
  group: Quantomas3.1j             ## new code
  patchAddress:   00BDBCA0         ## 01148CA0
  originalBytes:  00*
- patchBytes:     BD 05 00 00 00 F7 FD E9 8C 11 88 FF 00 00 00 00 00 99 B9 05 00 00 00 F7 F9 E9 E8 15 88 FF
+ patchBytes:     BD 05 00 00 00 F7 FD 89 C5 E9 8A 11 88 FF 00 00 00 99 B9 05 00 00 00 F7 F9 E9 E8 15 88 FF
