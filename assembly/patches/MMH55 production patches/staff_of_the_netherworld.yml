@@ -2,20 +2,36 @@
 # ----------------- Staff of Netherworld --------------
 # ----------------------------------------------------
 # 
-#  Change initiative penalty from 20% to 15%
+#  Change staff of the Netherworld initiative penalty  from 20% to &INITIATIVE_PENALTY.
+#  Example: 0.15 is 15%
 #
+# -------------- Things you may want to modify -----------------
+definitions: 
+ - &INITIATIVE_PENALTY        0.12
 # ----------------------------------------------------
 --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
-group: Original
-checkAddress:   00000400
-checkBytes:     8D 41 34 C3 CC CC CC CC
-patchAddress:   004A3A39   ## 008A4639
-originalBytes:  F8 2F E1 00
-patchBytes:     54 9D F4 00
+ group: Original
+ checkAddress:   00000400
+ checkBytes:     8D 41 34 C3 CC CC CC CC
+ patchAddress:   004A3A39   ## 008A4639
+ originalBytes:  F8 2F E1 00
+ patchBytes:     49 47 8A 00
+---
+ group: Original
+ patchAddress:   004A3B49   ## 008A4749
+ valueType:      Float
+ originalBytes:  CC*
+ patchValue:     *INITIATIVE_PENALTY
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
-group: Quantomas3.1j
-checkAddress:   00000400 
-checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
-patchAddress:   004DBBF5   ## 008DC7F5
-originalBytes:  F4 AB E0 00
-patchBytes:     AC 65 F5 00
+ group: Quantomas3.1j
+ checkAddress:   00000400 
+ checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+ patchAddress:   004DBBF5   ## 008DC7F5
+ originalBytes:  F4 AB E0 00
+ patchBytes:     17 C9 8D 00
+---
+ group: Quantomas3.1j
+ patchAddress:   004DBD17   ## 008DC917
+ valueType:      Float
+ originalBytes:  CC*
+ patchValue:     *INITIATIVE_PENALTY
