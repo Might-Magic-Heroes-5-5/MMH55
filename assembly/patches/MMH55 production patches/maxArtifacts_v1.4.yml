@@ -1,0 +1,118 @@
+# ----------------------------------------------------
+# --------------- Max Artifacts v1.4 ----------------
+# ----------------------------------------------------
+#
+# Changes the amount of available artifacts from 97 to &max_artifact_count
+# Credit: Deflaktor
+# ----------------------------------------------------
+# -------------- Things you may want to modify -----------------
+definitions: 
+- &max_artifact_count            196
+--- # --------------- ORIGINAL PATCH DATA ---------------
+group: Original
+checkAddress:   44BE7A
+checkBytes:     E8 A1 50 BB FF
+patchAddress:   0044BE7F              ## 0084CA7F
+originalBytes:  6A 61     # push 61
+patchBytes:     EB 57     # jmp 0084CAD8
+---
+group: Original
+patchAddress:   0044BED8              ## 0084CAD8
+originalBytes:  CC
+patchBytes:     68               # push
+---
+group: Original
+patchAddress:   0044BED9              ## 0084CAD9
+originalBytes:  CC*
+valueType:      Integer
+patchValue:     *max_artifact_count
+---
+group: Original
+patchAddress:   0044BEDD              ## 0084CADD
+originalBytes:  CC*
+patchBytes:     EB A2     # jmp 0084CA81
+---
+group: Original
+checkAddress:   446C95
+checkBytes:     C3 CC CC CC CC CC CC CC CC CC CC B8
+patchAddress:   446CA1
+valueType:      Integer
+originalValue:  97
+patchValue:     *max_artifact_count
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   0053E1CA ## 0093EDCA
+checkBytes:     E8 51 22 AC FF
+patchAddress:   0053E1CF              ## 0093EDCF
+originalBytes:  6A 61     # push 61
+patchBytes:     EB 57     # jmp 0053E228
+---
+group: Quantomas3.1j
+patchAddress:   0053E228              ## 0093EE28
+originalBytes:  CC
+patchBytes:     68                    # push
+---
+group: Quantomas3.1j
+patchAddress:   0053E229              ## 0093EE29
+originalBytes:  CC*
+valueType:      Integer
+patchValue:     *max_artifact_count
+---
+group: Quantomas3.1j
+patchAddress:   0053E22D              ## 0093EE2D
+originalBytes:  CC CC
+patchBytes:     EB A2     # jmp 0093EDD1
+---
+group: Quantomas3.1j
+checkAddress:   005393D5
+checkBytes:     C3 CC CC CC CC CC CC CC CC CC CC B8
+patchAddress:   005393E1
+valueType:      Integer
+originalValue:  97
+patchValue:     *max_artifact_count
+--- # --------------- MAP EDITOR EXE 3.1 PATCH DATA ---------------
+group: MapEditorOriginal
+checkAddress:   8C537A
+checkBytes:     E8 E1 CF 73 FF
+patchAddress:   008C537F              ## 00CC5F7F
+originalBytes:  6A 61     # push 61 & lea eax,[esp+24]
+patchBytes:     EB 57     # jmp 00CC5FD8
+---
+group: MapEditorOriginal
+patchAddress:   008C53D8              ## 00CC5FD8
+originalBytes:  CC
+patchBytes:     68        # push
+---
+group: MapEditorOriginal
+patchAddress:   008C53D9              ## 00CC5FD9
+originalBytes:  CC*
+valueType:      Integer
+patchValue:     *max_artifact_count
+---
+group: MapEditorOriginal
+patchAddress:   008C53DD              ## 00CC5FDD
+originalBytes:  CC*
+patchBytes:     EB A2     # jmp 00CC5F81
+---
+group: MapEditorOriginal
+checkAddress:   8C05C5
+checkBytes:     C3 CC CC CC CC CC CC CC CC CC CC B8
+patchAddress:   8C05D1
+valueType:      Integer
+originalValue:  97
+patchValue:     *max_artifact_count
+
+
+#
+#
+#
+#QAI test patch changing int to double
+#patchAddress:   0053E1CF  ## changing int to double
+#originalBytes:  6A 7F 8D 44 24 24 50 8D 4C 24 1C 51 68 EC B5 FE 00 8B CE BB 03 00 00 00 E8 A4 EF FF FF EB 02 33 C0 8B C8 E8 69 A1 28 00 F6 C3 02 74 10 8B 54 24 14 52 83 E3 FD E8 27 DA AC FF 83 C4 04 F6 C3 01 74 0D 8B 44 24 20 50 E8 15 DA AC FF 83 C4 04 5F 5E 8B C5 5D 5B 83 C4 1C C3 CC CC CC CC CC CC CC CC
+#patchBytes:     68 f4 01 00 00 8D 44 24 24 50 8D 4C 24 1C 51 68 EC B5 FE 00 8B CE BB 03 00 00 00 E8 A1 EF FF FF EB 02 33 C0 8B C8 E8 66 A1 28 00 F6 C3 02 74 10 8B 54 24 14 52 83 E3 FD E8 24 DA AC FF 83 C4 04 F6 C3 01 74 0D 8B 44 24 20 50 E8 12 DA AC FF 83 C4 04 5F 5E 8B C5 5D 5B 83 C4 1C C3 CC CC CC CC CC
+
+## second change is required here at address 005393E1
+
+## h5 ToE offsets are 44BE7F and 446CA1
+
+## editor offsets are 8C537F and 8C05D1
