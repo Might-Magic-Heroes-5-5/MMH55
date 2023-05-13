@@ -6,17 +6,17 @@
 #
 # -------------- Things you may want to modify -----------------
 definitions: 
- - &m55_encourage          0.2
+ - &m55_encourage          0.15
  - &m55_prayer             0.15
  - &m55_banshee_howl       0.15
  - &m55_bannish            0.33
- - &m55_avatar_of_death    0.15
- - &m55_refresh_rune       0.33
- - &m55_retaliation_strike 1.0
- - &m55_demonic_strike     0.75
+ - &m55_avatar_of_death    0.33
+ - &m55_refresh_rune       0.5
+ - &m55_retaliation_strike 0.3
+ - &m55_demonic_strike     0.15
  - &m55_spirit_link        0.5
- - &m55_mark_of_the_sorc   0.5
- - &m55_chain_attack       0.5
+ - &m55_mark_of_the_sorc   0.25
+ - &m55_chain_attack       0.45
 #
 # --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 group: Original
