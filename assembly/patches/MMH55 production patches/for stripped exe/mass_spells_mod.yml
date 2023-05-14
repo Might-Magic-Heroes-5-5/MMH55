@@ -36,12 +36,12 @@ definitions:
  group: Original                               ## spelleffect block - copy update
  patchAddress:   000E3F0F                      ## 004E4B0F
  originalBytes:  88 4E 53 8B CE
- patchBytes:     E9 EC 41 C5 00
+ patchBytes:     E9 DB 41 C5 00
 ---
  group: Original                               ## check for mass and negsp
  patchAddress:   007BE4E5                      ## 00BBF0E5
  originalBytes:  8B 13 8B CB 89 44 24 30
- patchBytes:     E9 2A 9C 57 00 90 90 90
+ patchBytes:     E9 19 9C 57 00 90 90 90
 ---
  group: Original                               ## fork int spell desc
  patchAddress:   005BB464                      ## 009BC064
@@ -66,7 +66,7 @@ definitions:
  group: Original                               ## new functionality
  patchAddress:   00BDBCD1                      ## 01138CD1
  originalBytes:  00*
- patchBytes:     88 5E 35 51 50 8B 4C 24 1C E8 D1 B1 8F FF 85 C0 58 59 74 0B 83 FA 00 7D 06 C6 46 35 01 F7 DA 89 4E 24 8B 4C 24 28 E9 ED C1 3A FF 00 00 00 00 88 4E 53 8A 4F 35 88 4E 35 89 F1 E9 04 BE 3A FF 00 00 00 00 80 7C 24 34 01 75 02 F7 D8 36 8B 13 89 D9 89 44 24 30 E9 C2 63 A8 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 82 CC 0C D8 C1 8B 8C 24 6C 02 00 00 8B 49 04 81 F9 D2 00 00 00 7C 0D 81 E9 D2 00 00 00 D8 0C 8D 44 8E 13 01 C3
+ patchBytes:     88 5E 35 83 FA 00 7D 06 C6 46 35 01 F7 DA 89 4E 24 8B 4C 24 28 E9 FE C1 3A FF 00 00 00 00 88 4E 53 8A 4F 35 88 4E 35 89 F1 E9 15 BE 3A FF 00 00 00 00 80 7C 24 34 01 75 02 F7 D8 36 8B 13 89 D9 89 44 24 30 E9 D3 63 A8 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 82 CC 0C D8 C1 8B 8C 24 6C 02 00 00 8B 49 04 81 F9 D2 00 00 00 7C 0D 81 E9 D2 00 00 00 D8 0C 8D 44 8E 13 01 C3
 ---
  group: Original                               ## Mass curse mod
  patchAddress:   00BDBE44                      ## 01138E44
@@ -251,12 +251,12 @@ definitions:
  group: Quantomas3.1j                          ## spelleffect block - copy update
  patchAddress:   0061ED8F                      ## 00A1F98F
  originalBytes:  88 4E 53 8B CE
- patchBytes:     E9 6C 93 72 00
+ patchBytes:     E9 5B 93 72 00
 ---
  group: Quantomas3.1j                          ## check for mass and negsp
  patchAddress:   0067255B                      ## 00A7315B
  originalBytes:  8B 55 00 8B CD
- patchBytes:     E9 B4 5B 6D 00
+ patchBytes:     E9 A3 5B 6D 00
 ---
  group: Quantomas3.1j                          ## fork int spell desc
  patchAddress:   00588074                      ## 00988C74
@@ -281,7 +281,7 @@ definitions:
  group: Quantomas3.1j                          ## new functionality
  patchAddress:   00BDBCD1                      ## 01148CD1
  originalBytes:  00*
- patchBytes:     88 5E 35 51 50 8B 4C 24 1C E8 A1 C9 78 FF 85 C0 58 59 74 0B 83 FA 00 7D 06 C6 46 35 01 F7 DA 89 4E 24 8B 4C 24 28 E9 5D 70 8D FF 00 00 00 00 88 4E 53 8A 4F 35 88 4E 35 89 F1 E9 84 6C 8D FF 00 00 00 00 80 7C 24 40 01 75 02 F7 D8 8B 55 00 89 E9 E9 39 A4 92 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 82 CC 0C D8 C1 8B 8C 24 6C 02 00 00 8B 49 04 81 F9 D2 00 00 00 7C 0D 81 E9 D2 00 00 00 D8 0C 8D 44 8E 14 01 C3
+ patchBytes:     88 5E 35 83 FA 00 7D 06 C6 46 35 01 F7 DA 89 4E 24 8B 4C 24 28 E9 6E 70 8D FF 00 00 00 00 88 4E 53 8A 4F 35 88 4E 35 89 F1 E9 95 6C 8D FF 00 00 00 00 80 7C 24 40 01 75 02 F7 D8 8B 55 00 89 E9 E9 4A A4 92 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 82 CC 0C D8 C1 8B 8C 24 6C 02 00 00 8B 49 04 81 F9 D2 00 00 00 7C 0D 81 E9 D2 00 00 00 D8 0C 8D 44 8E 14 01 C3
 ---
  group: Quantomas3.1j                          ## Mass curse mod
  patchAddress:   00BDBE44                      ## 01148E44
