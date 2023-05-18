@@ -1,0 +1,45 @@
+# ----------------------------------------------------
+# ----------------- Health func mod --------------
+# ----------------------------------------------------
+#
+# Hooks health function so new artifacts, skills and abilities can be added. Current changes:
+# - Added artifact ID 166 to increase HP by 2
+# - Added artifact ID 124 to increase HP by 6
+# - Added artifact ID 169 to increase HP by 4
+#
+#----------------- VALUES TO MODIFY ---------------------
+#----------------- DO NOT MODIFY ---------------------
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   000BB8F4  ## 004BC4F4                           ## jump from Health function to added Health code
+originalBytes:  8B 4B 1C 8D 2C 47
+patchBytes:     E9 27 B1 C7 00 90
+---
+group: Original
+patchAddress:   00BDA600  ## 01137600                           ## Add ASCI description of the patch in asselby
+originalBytes:  00*                                              
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 68 65 61 6C 74 68 20 66 75 6E 63 74
+---
+group: Original
+patchAddress:   00BDA620  ## 01137620                            ## New code
+originalBytes:  00*
+patchBytes:     8D 2C 47 8B 06 68 A6 00 00 00 89 F1 FF 50 74 89 C1 E8 4A F0 B6 FF 84 C0 74 03 83 C5 02 8B 06 6A 7C 89 F1 FF 50 74 89 C1 E8 33 F0 B6 FF 84 C0 74 03 83 C5 06 8B 06 68 A9 00 00 00 89 F1 FF 50 74 89 C1 E8 19 F0 B6 FF 84 C0 74 03 83 C5 04 8B 4B 1C E9 84 4E 38 FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   00475094  ## 00875C94                           ## jump from Health function to added Health code
+originalBytes:  8B 4B 1C 8D 2C 47
+patchBytes:     E9 87 19 8D 00 90
+---
+group: Quantomas3.1j
+patchAddress:   00BDA600  ## 01147600                           ## Add ASCI description of the patch in asselby
+originalBytes:  00*                                              
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 68 65 61 6C 74 68 20 66 75 6E 63 74
+---
+group: Quantomas3.1j
+patchAddress:   00BDA620  ## 01147620                           ## New code
+originalBytes:  00*
+patchBytes:     8D 2C 47 8B 06 68 A6 00 00 00 89 F1 FF 50 74 89 C1 E8 7A 96 74 FF 84 C0 74 03 83 C5 02 8B 06 6A 7C 89 F1 FF 50 74 89 C1 E8 63 96 74 FF 84 C0 74 03 83 C5 06 8B 06 68 A9 00 00 00 89 F1 FF 50 74 89 C1 E8 49 96 74 FF 84 C0 74 03 83 C5 04 8B 4B 1C E9 24 E6 72 FF

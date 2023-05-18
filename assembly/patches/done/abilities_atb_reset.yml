@@ -1,0 +1,362 @@
+# ----------------------------------------------------
+# ----------------- Abilities ATB reset --------------
+# ----------------------------------------------------
+# Patch allows alteration of spent Hero atb after cast of the following abilities:
+# - Encourage, Prayer, Banshee Howl, Bannish, Avatar of Death, Refresh Rune, Retaliation Strike, Demonic Strike, Spirit Link, Mark of the Sorcerer, Chain Attack
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+ - &m55_encourage          0.15
+ - &m55_prayer             0.15
+ - &m55_banshee_howl       0.15
+ - &m55_bannish            0.33
+ - &m55_avatar_of_death    0.33
+ - &m55_refresh_rune       0.5
+ - &m55_retaliation_strike 0.3
+ - &m55_demonic_strike     0.15
+ - &m55_spirit_link        0.5
+ - &m55_mark_of_the_sorc   0.25
+ - &m55_chain_attack       0.45
+#
+# --- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   005878EA    # 009884EA
+originalBytes:  8B 55 00 6A
+patchBytes:     E9 B1 E1 7A
+---
+group: Original
+patchAddress:   00BD96A0    # 011366A0
+originalBytes:  00*
+patchBytes:     |
+     8B 74 24 10                 # mov esi,dword ptr ss:[esp+10]
+     83 FE 34                    # cmp esi,34
+     75 07                       # jne 11466B0
+     68                          # push ...  
+---
+group: Original             # SPELL_ENCOURAGE
+patchAddress:   00BD96AA    # 011366AA
+valueType:      float
+originalValue:  00
+patchValue:     *m55_encourage
+---
+group: Original
+patchAddress:   00BD96AE    # 011366AE
+originalBytes:  00*
+patchBytes:     |
+     EB 44                       # jmp 11466F4
+     83 FE 36                    # cmp esi,36
+     75 07                       # jne 11466B4
+     68                          # push ...
+---
+group: Original             # SPELL_PRAYER
+patchAddress:   00BD96B6    # 011366B6
+valueType:      float
+originalValue:  00
+patchValue:     *m55_prayer
+---
+group: Original
+patchAddress:   00BD96BA    # 011366BA
+originalBytes:  00*
+patchBytes:     |
+     EB 38                       # jmp 11466F4
+     83 FE 3B                    # cmp esi,3B
+     75 07                       # jne 11466C8
+     68                          # push ...
+---
+group: Original             # SPELL_DEATH_SCREAM
+patchAddress:   00BD96C2    # 011366C2
+valueType:      float
+originalValue:  00
+patchValue:     *m55_banshee_howl
+---
+group: Original
+patchAddress:   00BD96C6    # 011366C6
+originalBytes:  00*
+patchBytes:     |
+     EB 2C                       # jmp 11466F4
+     83 FE 42                    # cmp esi,42
+     75 07                       # jne 11466D4
+     68                          # push ...
+---
+group: Original             # SPELL_ABILITY_UNSUMMON
+patchAddress:   00BD96CE    # 011366CE
+valueType:      float
+originalValue:  00
+patchValue:     *m55_bannish
+---
+group: Original
+patchAddress:   00BD96D2    # 011366D2
+originalBytes:  00*
+patchBytes:     |
+     EB 20                       # jmp 11466F4
+     81 FE C8 00 00 00           # cmp esi,C8
+     75 07                       # jne 11466E3
+     68                          # push ...
+---
+group: Original             # SPELL_ABILITY_AVATAR_OF_DEATH
+patchAddress:   00BD96DD    # 011366DD
+valueType:      float
+originalValue:  00
+patchValue:     *m55_avatar_of_death
+---
+group: Original
+patchAddress:   00BD96E1    # 011466E1
+originalBytes:  00*
+patchBytes:     |
+     EB 11                       # jmp 11466F4
+     81 FE 03 01 00 00           # cmp esi,103
+     75 07                       # jne 11466F2
+     68                          # push ...
+---
+group: Original             # SPELL_ABILITY_REFRESH_RUNE
+patchAddress:   00BD96EC    # 011366EC
+valueType:      float
+originalValue:  00
+patchValue:     *m55_refresh_rune
+---
+group: Original
+patchAddress:   00BD96F0    # 011366F0
+originalBytes:  00*
+patchBytes:     |
+     EB 02                       # jmp 11466F4
+     6A 00                       # push 0
+     8B 55 00                    # mov edx,dword ptr ss:[ebp]
+     E9 F3 1D 85 FF              # jmp 9884EF
+---
+group: Original
+patchAddress:   00586E80  ## 00987A80                           ## fork from code
+originalBytes:  8B 45 00 68 00 00 00 3F
+patchBytes:     E9 5B 0E 7B 00 90 90 90
+---
+group: Original
+patchAddress:   00BDB8E0  ## 011388E0                           ##  Retaliation Strike?
+originalBytes:  00*
+patchBytes:     8B 45 00 83 7C 24 10 35 75 05 68
+---
+group: Original
+patchAddress:   00BDB8EB  ## 011388EB                           ##  set atb after Retaliation Strike to
+valueType:      float
+originalValue:  00
+patchValue:     *m55_retaliation_strike
+---
+group: Original
+patchAddress:   00BDB8EF  ## 011388EF                           ##  Demonic Strike?
+originalBytes:  00*
+patchBytes:     83 7C 24 10 38 75 05 68
+---
+group: Original
+patchAddress:   00BDB8F7  ## 011388F7                           ##  set atb after Demonic Strike to
+valueType:      float
+originalValue:  00
+patchValue:     *m55_demonic_strike
+---
+group: Original
+patchAddress:   00BDB8FB  ## 011388FB                           ##  Is it Spirit Link?
+originalBytes:  00*
+patchBytes:     83 7C 24 10 3A 75 05 68
+---
+group: Original
+patchAddress:   00BDB903  ## 01138903                           ##  set atb after Spirit Link cast to
+valueType:      float
+originalValue:  00
+patchValue:     *m55_spirit_link
+---
+group: Original
+patchAddress:   00BDB907  ## 01138907                           ##  Is it Mark of the Sorcerer?
+originalBytes:  00*
+patchBytes:     83 7C 24 10 3F 75 05 68
+---
+group: Original
+patchAddress:   00BDB90F  ## 0113890F                           ##  set atb after Mark of the Sorcerer cast to
+valueType:      float
+originalValue:  00
+patchValue:     *m55_mark_of_the_sorc
+---
+group: Original
+patchAddress:   00BDB913  ## 01138913                           ##  Is it Chain Attack?
+originalBytes:  00*
+patchBytes:     81 7C 24 10 31 01 00 00 75 05 68
+---
+group: Original
+patchAddress:   00BDB91E  ## 0113891E                           ##  set atb after Chain Atack to
+valueType:      float
+originalValue:  00
+patchValue:     *m55_chain_attack
+---
+group: Original
+patchAddress:   00BDB922  ## 01138922                           ## return to code
+originalBytes:  00*
+patchBytes:     E9 61 F1 84 FF 
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   004C381C    # 008C441C
+originalBytes:  8B 55 00 6A # 00 FF 92 7C 01 00 00 8B C8 E8 42 24 10 00
+patchBytes:     E9 7F 22 88 # 00 FF 92 7C 01 00 00 8B C8 E8 42 24 10 00
+---
+group: Quantomas3.1j
+patchAddress:   00BD96A0    # 011466A0
+originalBytes:  00*
+patchBytes:     |
+     8B 74 24 10                 # mov esi,dword ptr ss:[esp+10]
+     83 FE 34                    # cmp esi,34
+     75 07                       # jne 11466B0
+     68                          # push ...  
+---
+group: Quantomas3.1j        # SPELL_ENCOURAGE
+patchAddress:   00BD96AA    # 011466AA
+valueType:      float
+originalValue:  00
+patchValue:     *m55_encourage
+---
+group: Quantomas3.1j
+patchAddress:   00BD96AE    # 011466AE
+originalBytes:  00*
+patchBytes:     |
+     EB 44                       # jmp 11466F4
+     83 FE 36                    # cmp esi,36
+     75 07                       # jne 11466B4
+     68                          # push ...
+---
+group: Quantomas3.1j        # SPELL_PRAYER
+patchAddress:   00BD96B6    # 011466B6
+valueType:      float
+originalValue:  00
+patchValue:     *m55_prayer
+---
+group: Quantomas3.1j
+patchAddress:   00BD96BA    # 011466BA
+originalBytes:  00*
+patchBytes:     |
+     EB 38                       # jmp 11466F4
+     83 FE 3B                    # cmp esi,3B
+     75 07                       # jne 11466C8
+     68                          # push ...
+---
+group: Quantomas3.1j        # SPELL_DEATH_SCREAM
+patchAddress:   00BD96C2    # 011466C2
+valueType:      float
+originalValue:  00
+patchValue:     *m55_banshee_howl
+---
+group: Quantomas3.1j
+patchAddress:   00BD96C6    # 011466C6
+originalBytes:  00*
+patchBytes:     |
+     EB 2C                       # jmp 11466F4
+     83 FE 42                    # cmp esi,42
+     75 07                       # jne 11466D4
+     68                          # push ...
+---
+group: Quantomas3.1j        # SPELL_ABILITY_UNSUMMON
+patchAddress:   00BD96CE    # 011466CE
+valueType:      float
+originalValue:  00
+patchValue:     *m55_bannish
+---
+group: Quantomas3.1j
+patchAddress:   00BD96D2    # 011466D2
+originalBytes:  00*
+patchBytes:     |
+     EB 20                       # jmp 11466F4
+     81 FE C8 00 00 00           # cmp esi,C8
+     75 07                       # jne 11466E3
+     68                          # push ...
+---
+group: Quantomas3.1j        # SPELL_ABILITY_AVATAR_OF_DEATH
+patchAddress:   00BD96DD    # 011466DD
+valueType:      float
+originalValue:  00
+patchValue:     *m55_avatar_of_death
+---
+group: Quantomas3.1j
+patchAddress:   00BD96E1    # 011466E1
+originalBytes:  00*
+patchBytes:     |
+     EB 11                       # jmp 11466F4
+     81 FE 03 01 00 00           # cmp esi,103
+     75 07                       # jne 11466F2
+     68                          # push ...
+---
+group: Quantomas3.1j        # SPELL_ABILITY_REFRESH_RUNE
+patchAddress:   00BD96EC    # 011466EC
+valueType:      float
+originalValue:  00
+patchValue:     *m55_refresh_rune
+---
+group: Quantomas3.1j
+patchAddress:   00BD96F0    # 011466F0
+originalBytes:  00*
+patchBytes:     |
+     EB 02                       # jmp 11466F4
+     6A 00                       # push 0
+     8B 55 00                    # mov edx,dword ptr ss:[ebp]
+     E9 25 DD 77 FF              # jmp 8C4421
+---
+group: Quantomas3.1j 
+patchAddress:   004C2DE0  ## 008C39E0                           ## fork from code
+originalBytes:  8B 45 00 68 00 00 00 3F
+patchBytes:     E9 FB 4E 88 00 90 90 90
+---
+group: Quantomas3.1j
+patchAddress:   00BDB8E0  ## 011488E0                           ##  Retaliation Strike?
+originalBytes:  00*
+patchBytes:     8B 45 00 83 7C 24 10 35 75 05 68
+---
+group: Quantomas3.1j
+patchAddress:   00BDB8EB  ## 011488EB                           ##  set atb after Retaliation Strike to
+valueType:      float
+originalValue:  00
+patchValue:     *m55_retaliation_strike
+---
+group: Quantomas3.1j
+patchAddress:   00BDB8EF  ## 011488EF                           ##  Demonic Strike?
+originalBytes:  00*
+patchBytes:     83 7C 24 10 38 75 05 68
+---
+group: Quantomas3.1j
+patchAddress:   00BDB8F7  ## 011488F7                           ##  set atb after Demonic Strike to
+valueType:      float
+originalValue:  00
+patchValue:     *m55_demonic_strike
+---
+group: Quantomas3.1j
+patchAddress:   00BDB8FB  ## 011488FB                           ##  Is it Spirit Link?
+originalBytes:  00*
+patchBytes:     83 7C 24 10 3A 75 05 68
+---
+group: Quantomas3.1j
+patchAddress:   00BDB903  ## 01148903                           ##  set atb after Spirit Link cast to
+valueType:      float
+originalValue:  00
+patchValue:     *m55_spirit_link
+---
+group: Quantomas3.1j
+patchAddress:   00BDB907  ## 01148907                           ##  Is it Mark of the Sorcerer?
+originalBytes:  00*
+patchBytes:     83 7C 24 10 3F 75 05 68
+---
+group: Quantomas3.1j
+patchAddress:   00BDB90F  ## 0114890F                           ##  set atb after Mark of the Sorcerer cast to
+valueType:      float
+originalValue:  00
+patchValue:     *m55_mark_of_the_sorc
+---
+group: Quantomas3.1j
+patchAddress:   00BDB913  ## 01148913                           ##  Is it Chain Attack?
+originalBytes:  00*
+patchBytes:     81 7C 24 10 31 01 00 00 75 05 68
+---
+group: Quantomas3.1j
+patchAddress:   00BDB91E  ## 0114891E                           ##  set atb after Chain Atack to
+valueType:      float
+originalValue:  00
+patchValue:     *m55_chain_attack
+---
+group: Quantomas3.1j
+patchAddress:   00BDB922  ## 01148922                           ## return to code
+originalBytes:  00*
+patchBytes:     E9 C1 B0 77 FF

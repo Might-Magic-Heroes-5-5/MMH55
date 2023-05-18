@@ -3,10 +3,7 @@
 # ----------------------------------------------------
 #
 # Adds 20%/33% elemental spell damage bonus to more artifacts
-# - Artifact 192 adds 33% bonus Lightning damage
-# - Artifact 193 adds 33% bonus Earth damage
-# - Artifact 194 adds 33% bonus Fire damage
-# - Artifact 195 adds 33% bonus Water damage
+#
 # ----------------------------------------------------
 definitions: 
  - &TOE20 D8 0D 1C 2F E1 00

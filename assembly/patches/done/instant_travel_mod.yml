@@ -1,0 +1,40 @@
+# ----------------------------------------------------
+# ----------------- Instant Travel mod --------------
+# ----------------------------------------------------
+#
+# Changes Instant Travel movement points requirements from 50% to 20%
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ checkAddress:   00000400
+ checkBytes:     8D 41 34 C3 CC CC CC CC
+ patchAddress:   0046488E         ## 0086548E - jump to calc new mp requirements
+ originalBytes:  2B C2 8B E8 8B 06 8B CE D1 FD
+ patchBytes:     E9 0D 38 8D 00 90 8B 06 89 F1
+---
+ group: Original                  ## jump to calc new mp costs
+ patchAddress:   00464CC0         ## 008658C0
+ originalBytes:  99 2B C2 D1 F8
+ patchBytes:     E9 EC 33 8D 00
+---
+ group: Original                  ## new code
+ patchAddress:   00BDBCA0         ## 01138CA0
+ originalBytes:  00*
+ patchBytes:     BD 05 00 00 00 F7 FD 89 C5 E9 E6 C7 72 FF 00 00 00 99 B9 05 00 00 00 F7 F9 E9 07 CC 72 FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+ group: Quantomas3.1j
+ checkAddress:   00000400
+ checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+ patchAddress:   005C9232         ## 009C9E32 - jump to calc new mp requirements
+ originalBytes:  2B C2 8B E8 8B 06 8B CE D1 FD
+ patchBytes:     E9 69 EE 77 00 90 8B 06 89 F1
+---
+ group: Quantomas3.1j             ## jump to calc new mp costs
+ patchAddress:   005C96A1         ## 009CA2A1
+ originalBytes:  99 2B C2 D1 F8
+ patchBytes:     E9 0B EA 77 00
+---
+ group: Quantomas3.1j             ## new code
+ patchAddress:   00BDBCA0         ## 01148CA0
+ originalBytes:  00*
+ patchBytes:     BD 05 00 00 00 F7 FD 89 C5 E9 8A 11 88 FF 00 00 00 99 B9 05 00 00 00 F7 F9 E9 E8 15 88 FF

@@ -1,0 +1,94 @@
+# ----------------------------------------------------
+# ----------------- Magic Immunity mod --------------
+# ----------------------------------------------------
+#
+# Alters spell immunity function so more artifacts or abilities can grant full or partial resistance to spells. Current changes include:
+# - Added immunity to Curse of the Netherworld (21) for Artifact with ID 180
+# - Added immunity to Armageddon (10) for Artifact with ID 123
+# - Added immunity to Hypnotize  (20) for Artifact with ID 168
+#
+# ----------------------------------------------------
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0057BF1F  ## 0097CB1F                           ## change switch scope from 11-20 to 11-21
+originalBytes:  83 F8 09
+patchBytes:     83 F8 0A
+---
+group: Original
+patchAddress:   0057BF28  ## 0097CB28                           ## Change switch pointer location
+originalBytes:  FF 24 85 7C D1 97 00                                              
+patchBytes:     FF 24 85 20 6A 13 01
+---
+group: Original
+patchAddress:   0057C57C  ## 0097D17C                           ## Zero the old switch to make space for other things
+originalBytes:  47 CB 97 00 02 CC 97 00 6C CD 97 00 CD CC 97 00 6C CD 97 00 6C CD 97 00 36 CB 97 00 DA CB 97 00 2F CB 97 00 51 CB 97 00
+patchBytes:     90*
+---
+group: Original
+patchAddress:   00BD9A00  ## 01136A00                           ## Add ASCI description of the patch in asselby
+originalBytes:  00*                                              
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 73 70 65 6C 20 69 6D 75 6E 69 74 79
+---
+group: Original
+patchAddress:   00BD9A20  ## 01136A20                           ## Add new switch + case 21 pointer
+originalBytes:  00*                                         
+patchBytes:     47 CB 97 00 02 CC 97 00 6C CD 97 00 CD CC 97 00 6C CD 97 00 6C CD 97 00 36 CB 97 00 DA CB 97 00 2F CB 97 00 51 CB 97 00 70 6A 13 01
+---
+group: Original
+patchAddress:   00BD9A70  ## 01136A70                           ## case 21 CoTN immunity
+originalBytes:  00*                                         
+patchBytes:     8B 17 89 F9 FF 52 0C 8B 10 89 C1 FF 52 0C 85 C0 0F 84 E6 62 84 FF 8B 10 89 C1 FF 12 8B 10 89 C1 FF 52 74 68 B4 00 00 00 89 C1 E8 E1 FB B6 FF 85 C0 E9 BB 62 84 FF
+---
+group: Original
+patchAddress:   0057C21E  ## 0097CE1E                           ## fork from case
+originalBytes:  83 FB 09 8B C8                                        
+patchBytes:     E9 DD 9D 7B 00
+---
+group: Original
+patchAddress:   00BD9C00  ## 01136C00                           ## immunity cases: 10  Armageddon; 20 Hypnotize
+originalBytes:  00*                                      
+patchBytes:     83 FB 0A 89 C1 75 1A 6A 7B E8 72 FA B6 FF 85 C0 0F 84 7C 62 84 FF 6A 00 6A 03 6A 7B E9 5D 62 84 FF 83 FB 14 75 20 68 A8 00 00 00 E8 50 FA B6 FF 85 C0 0F 84 5A 62 84 FF 6A 00 6A 03 68 A8 00 00 00 E9 38 62 84 FF 83 FB 09 E9 D5 61 84 FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4   
+patchAddress:   004B7FA8  ## 008B8BA8                           ## change switch scope from 11-20 to 11-21
+originalBytes:  83 F8 09                                              
+patchBytes:     83 F8 0A
+---
+group: Quantomas3.1j
+patchAddress:   004B7FB1  ## 008B8BB1                           ## Change switch pointer location
+originalBytes:  FF 24 85 18 92 8B 00                                          
+patchBytes:     FF 24 85 20 6A 14 01
+---
+group: Quantomas3.1j
+patchAddress:   004B8618  ## 008B9218                           ## Zero the old switch to make space for other things
+originalBytes:  D0 8B 8B 00 8B 8C 8B 00 1C 8E 8B 00 56 8D 8B 00 1C 8E 8B 00 1C 8E 8B 00 BF 8B 8B 00 63 8C 8B 00 B8 8B 8B 00 DA 8B 8B 00
+patchBytes:     90*
+---
+group: Quantomas3.1j
+patchAddress:   00BD9A00  ## 01146A00                           ## Add ASCI description of the patch in asselby
+originalBytes:  00*                                              
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 73 70 65 6C 20 69 6D 75 6E 69 74 79
+---
+group: Quantomas3.1j
+patchAddress:   00BD9A20  ## 01146A20                           ## Add new switch + case 21 pointer
+originalBytes:  00*                                         
+patchBytes:     D0 8B 8B 00 8B 8C 8B 00 1C 8E 8B 00 56 8D 8B 00 1C 8E 8B 00 1C 8E 8B 00 BF 8B 8B 00 63 8C 8B 00 B8 8B 8B 00 DA 8B 8B 00 70 6A 14 01
+---
+group: Quantomas3.1j
+patchAddress:   00BD9A70  ## 01146A70                           ## case 21 CoTN immunity
+originalBytes:  00*                                         
+patchBytes:     8B 17 89 F9 FF 52 0C 8B 10 89 C1 FF 52 0C 85 C0 0F 84 96 23 77 FF 8B 10 89 C1 FF 12 8B 10 89 C1 FF 52 74 68 B4 00 00 00 89 C1 E8 11 A2 74 FF 85 C0 E9 6B 23 77 FF
+---
+group: Quantomas3.1j
+patchAddress:   004B82CA  ## 008B8ECA                           ## fork from case
+originalBytes:  83 FB 09 8B C8                                        
+patchBytes:     E9 31 DD 88 00
+---
+group: Quantomas3.1j
+patchAddress:   00BD9C00  ## 01146C00                           ## immunity cases: 10  Armageddon; 20 Hypnotize
+originalBytes:  00*                                      
+patchBytes:     83 FB 0A 89 C1 75 1A 6A 7B E8 A2 A0 74 FF 85 C0 0F 84 28 23 77 FF 6A 00 6A 03 6A 7B E9 09 23 77 FF 83 FB 14 75 20 68 A8 00 00 00 E8 80 A0 74 FF 85 C0 0F 84 06 23 77 FF 6A 00 6A 03 68 A8 00 00 00 E9 E4 22 77 FF 83 FB 09 E9 81 22 77 FF

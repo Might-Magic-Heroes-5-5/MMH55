@@ -1,0 +1,212 @@
+# ----------------------------------------------------
+# ----------------- Global spellpower --------------
+# ----------------------------------------------------
+#
+# Fire wielder specialization affect empowered Fireball.
+# Master of life perk affect Firewall
+# Master of life perk affect Empowered Fist of Wrath
+# Master of Life perk does not affect Animate dead
+# Arcane Armor perk now grants bonus to Lightning (defaultstats value) and Chain Lightning including empowered versions. Also provides the Lightning spell to the onwer instead of Celestial Shield.
+#
+# ----------------------------------------------------
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   007BF5E6         ## 00BC01E6
+originalBytes:  83 FF 26 8B 6C 24 1C 89 7C 24 18 0F 8F 1E 01 00 00 0F 84 34 01 00 00 8D 47 FE 83 F8 21 0F 87 4D 02 00 00 0F B6 80 D0 05 BC 00 FF 24 85 B8 05 BC 00
+patchBytes:     81 FF 1C 01 00 00 8B 6C 24 1C 89 7C 24 18 0F 87 5C 02 00 00 89 F8 90 90 90 90 90 90 90 90 90 90 90 90 90 0F B6 80 B5 05 BC 00 FF 24 85 30 65 13 01
+---
+group: Original                  ## add new jump case block
+patchAddress:   00BD9530         ## 01136530
+originalBytes:  00*
+patchBytes: |   
+     26 04 BC 00   ## 0.  MASTER_OF_ANMIATION (LIFE) - ANIMATE DEAD / MAGIC FIST
+     5A 03 BC 00   ## 1.  SUMMON ELEMENTALS BONUS FROM BAND OF CONJURER
+     92 03 BC 00   ## 2.  SKILL AND SPEC SUMMON ELEMENTALS - CONJURE PHOENIX BONUS / SUMMON ELEMENTALs
+     31 03 BC 00   ## 3.  SKILL_MASTER_OF_QUAKES - SPELL_BLADE_BARRIER/ARCANE CRYSTAL/FIRE_TRAPP BONUS 
+     56 04 BC 00   ## 4.  default case
+     70 02 BC 00   ## 5.  SPECIALIZATION WIELDER OF FIRE - FIREBALL / EMP. FIREBALL
+     DB 02 BC 00   ## 6.  CELESTIAL SHIELD SPELL -> CELESTIAL SHIELD BONUS (now changed to lightning)
+     1E 02 BC 00   ## 7.  MASTER_OF_SICKNESS - CURSE OF THE NETHERWORLD 
+     47 02 BC 00   ## 8.  SKILL_MASTER_OF_WRATH - WORD OF LIGHT
+---
+group: Original
+patchAddress:   007BF9B5         ## 00BC05B5
+originalBytes:  |
+     8D 49 00 26 04 BC 00 70 02 BC
+     00 1E 02 BC 00 DB 02 BC 00 47
+     02 BC 00 56 04 BC 00 00 05 05
+     01 05 05 05 05 05 05 05 05 05
+     05 05 05 05 05 05 02 05 05 05
+     05 05 05 05 05 05 05 05 05 03
+     04 8B FF 26 04 BC 00 5A 03 BC
+     00 92 03 BC 00 31 03 BC 00 56
+     04 BC 00 00 01 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 02 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 03 04 03 CC CC CC CC 
+     CC 
+patchBytes:     |                      ## SPELL IDs
+     04 04 00 06 04 05 04 06 04 04     ## 0-9
+     04 04 04 04 04 04 04 04 04 04     ## 10-19
+     04 07 04 04 04 04 04 04 04 04     ## 20-29
+     04 04 04 04 04 08 04 04 03 04     ## 30-39
+     04 04 04 01 04 04 04 04 04 04     ## 40-49
+     04 04 04 04 04 04 04 04 04 04     ## 50-59
+     04 04 04 04 04 04 04 04 04 04     ## 60-69
+     04 04 04 04 04 04 04 04 04 04     ## 70-79
+     04 04 04 04 04 04 04 04 04 04     ## 80-89
+     04 04 04 04 04 04 04 04 04 04     ## 90-99
+     04 04 04 04 04 04 04 04 04 04     ## 100-109
+     04 04 04 04 04 04 04 04 04 04     ## 110-119
+     04 04 04 04 04 04 04 04 04 04     ## 120-129
+     04 04 04 04 04 04 04 04 04 04     ## 130-139
+     04 04 04 04 04 04 04 04 04 04     ## 140-149
+     04 04 04 04 04 04 04 04 04 04     ## 150-159
+     04 04 04 04 04 04 04 04 04 04     ## 160-169
+     04 04 04 04 04 04 04 04 04 04     ## 170-179
+     04 04 04 04 04 04 04 04 04 04     ## 180-189
+     04 04 04 04 04 04 04 04 04 04     ## 190-199
+     04 04 04 04 04 04 04 04 04 04     ## 200-209
+     04 04 04 04 04 04 04 04 04 04     ## 210-219
+     04 04 04 04 00 06 04 05 04 06     ## 220-229
+     04 04 04 04 04 02 00 04 04 04     ## 230-239
+     04 04 04 04 04 04 04 04 04 04     ## 240-249
+     04 04 04 04 04 04 04 04 04 04     ## 250-259
+     04 04 04 04 04 04 04 04 04 04     ## 260-269
+     04 04 04 04 04 04 04 04 04 04     ## 270-279
+     04 04 03 04 03 CC CC CC CC CC     ## 280-284
+     CC CC CC CC CC CC CC CC CC CC
+     CC CC CC CC CC CC CC CC CC CC
+     CC CC CC CC CC CC CC CC CC CC
+     CC CC CC CC CC CC CC CC CC CC
+     CC
+---
+group: Original                  ## Change spell given by Arcane Armor from Celestial Shield to Lighting Bolt
+patchAddress:   00754BAF         ## 00B557AF
+valueType:      byte
+originalValue:  34
+patchValue:     3
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j             ## adjust new table logical frame
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   00744226         ## 00B44E26
+originalBytes:  83 FF 26 8B 6C 24 1C 89 7C 24 18 0F 8F 1E 01 00 00 0F 84 34 01 00 00 8D 47 FE 83 F8 21 0F 87 4D 02 00 00 0F B6 80 10 52 B4 00 FF 24 85 F8 51 B4 00
+patchBytes:     81 FF 1C 01 00 00 8B 6C 24 1C 89 7C 24 18 0F 87 5C 02 00 00 89 F8 90 90 90 90 90 90 90 90 90 90 90 90 90 0F B6 80 F5 51 B4 00 FF 24 85 30 65 14 01
+---
+group: Quantomas3.1j             ## add new jump case block
+patchAddress:   00BD9530         ## 01146530
+originalBytes:  00*
+patchBytes: |   
+     66 50 B4 00   ## 0.  MASTER_OF_ANMIATION (LIFE) - ANIMATE DEAD / MAGIC FIST
+     9A 4F B4 00   ## 1.  SUMMON ELEMENTALS BONUS FROM BAND OF CONJURER
+     D2 4F B4 00   ## 2.  SKILL AND SPEC SUMMON ELEMENTALS - CONJURE PHOENIX BONUS / SUMMON ELEMENTALs
+     71 4F B4 00   ## 3.  SKILL_MASTER_OF_QUAKES - SPELL_BLADE_BARRIER/ARCANE CRYSTAL/FIRE_TRAPP BONUS 
+     96 50 B4 00   ## 4.  default case
+     B0 4E B4 00   ## 5.  FIREBALL/EMPOWERED BONUS FROM FLAMEWIELDER SPEC
+     1B 4F B4 00   ## 6.  CELESTIAL SHIELD SPELL -> CELESTIAL SHIELD BONUS (now changed to lightning)
+     5E 4E B4 00   ## 7.  MASTER_OF_SICKNESS - CURSE OF THE NETHERWORLD 
+     87 4E B4 00   ## 8.  SKILL_MASTER_OF_WRATH - WORD OF LIGHT
+---
+group: Quantomas3.1j
+patchAddress:   007445F5         ## 00B451F5
+originalBytes:  |
+     8D 49 00 66 50 B4 00 B0 4E B4
+     00 5E 4E B4 00 1B 4F B4 00 87
+     4E B4 00 96 50 B4 00 00 05 05
+     01 05 05 05 05 05 05 05 05 05
+     05 05 05 05 05 05 02 05 05 05
+     05 05 05 05 05 05 05 05 05 03
+     04 8B FF 66 50 B4 00 9A 4F B4
+     00 D2 4F B4 00 71 4F B4 00 96
+     50 B4 00 00 01 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 02 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 04 04 04 04 04 04 04 
+     04 04 04 03 04 03 CC CC CC CC 
+     CC 
+patchBytes:     |                      ## SPELL IDs
+     04 04 00 06 04 05 04 06 04 04     ## 0-9
+     04 04 04 04 04 04 04 04 04 04     ## 10-19
+     04 07 04 04 04 04 04 04 04 04     ## 20-29
+     04 04 04 04 04 08 04 04 03 04     ## 30-39
+     04 04 04 01 04 04 04 04 04 04     ## 40-49
+     04 04 04 04 04 04 04 04 04 04     ## 50-59
+     04 04 04 04 04 04 04 04 04 04     ## 60-69
+     04 04 04 04 04 04 04 04 04 04     ## 70-79
+     04 04 04 04 04 04 04 04 04 04     ## 80-89
+     04 04 04 04 04 04 04 04 04 04     ## 90-99
+     04 04 04 04 04 04 04 04 04 04     ## 100-109
+     04 04 04 04 04 04 04 04 04 04     ## 110-119
+     04 04 04 04 04 04 04 04 04 04     ## 120-129
+     04 04 04 04 04 04 04 04 04 04     ## 130-139
+     04 04 04 04 04 04 04 04 04 04     ## 140-149
+     04 04 04 04 04 04 04 04 04 04     ## 150-159
+     04 04 04 04 04 04 04 04 04 04     ## 160-169
+     04 04 04 04 04 04 04 04 04 04     ## 170-179
+     04 04 04 04 04 04 04 04 04 04     ## 180-189
+     04 04 04 04 04 04 04 04 04 04     ## 190-199
+     04 04 04 04 04 04 04 04 04 04     ## 200-209
+     04 04 04 04 04 04 04 04 04 04     ## 210-219
+     04 04 04 04 00 06 04 05 04 06     ## 220-229
+     04 04 04 04 04 02 00 04 04 04     ## 230-239
+     04 04 04 04 04 04 04 04 04 04     ## 240-249
+     04 04 04 04 04 04 04 04 04 04     ## 250-259
+     04 04 04 04 04 04 04 04 04 04     ## 260-269
+     04 04 04 04 04 04 04 04 04 04     ## 270-279
+     04 04 03 04 03 CC CC CC CC CC     ## 280-284
+     CC CC CC CC CC CC CC CC CC CC
+     CC CC CC CC CC CC CC CC CC CC
+     CC CC CC CC CC CC CC CC CC CC
+     CC CC CC CC CC CC CC CC CC CC
+     CC
+---
+group: Quantomas3.1j             ## Change spell given by Arcane Armor from Celestial Shield to Lighting Bolt
+patchAddress:   006002EF         ## 00A00EEF
+valueType:      byte
+originalValue:  34
+patchValue:     3

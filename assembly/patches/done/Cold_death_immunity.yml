@@ -1,0 +1,40 @@
+# ----------------------------------------------------
+# ----------------- Cold Death immunity --------------
+# ----------------------------------------------------
+#  
+# The following abilities give immunity to cold death - Crystal Scales, Mechanical
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400   ## add jump for Cold Death check
+checkBytes:     8D 41 34 C3 CC CC CC CC   
+patchAddress:   00576EE2   ## 00977AE2
+originalBytes:  8B 16 8B CE FF 92 A8 01 00 00
+patchBytes:     E9 99 0D 7C 00 90 90 90 90 90
+---
+group: Original            ## header name "Crystal Scales"
+patchAddress:   00BDB860   ## 01138860
+originalBytes:  00*
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 4D 4F 44 3D 3D 3D 3D 3D 3D 20 43 72 79 73 74 61 6C 20 20 53 63 61 6C 65 73
+---
+group: Original            ## enable for "Cold death" and "Mechanical"
+patchAddress:   00BDB880   ## 01138880
+originalBytes:  00*
+patchBytes:     8B 06 6A 42 8B CE FF 90 8C 02 00 00 84 C0 0F 85 5C F2 83 FF 8B 06 6A 09 8B CE FF 90 8C 02 00 00 84 C0 0F 85 48 F2 83 FF 8B 16 8B CE FF 92 A8 01 00 00 E9 35 F2 83 FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j       ## add jump for Cold Death check
+checkAddress:   00000400 
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   004B2FB2   ## 008B3BB2
+originalBytes:  8B 16 8B CE FF 92 A0 01 00 00
+patchBytes:     E9 C9 4C 89 00 90 90 90 90 90
+---
+group: Quantomas3.1j       ## header name "Crystal Scales"
+patchAddress:   00BDB860   ## 01148860
+originalBytes:  00*
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 4D 4F 44 3D 3D 3D 3D 3D 3D 20 43 72 79 73 74 61 6C 20 20 53 63 61 6C 65 73
+---
+group: Quantomas3.1j       ## enable for "Cold death" and "Mechanical"
+patchAddress:   00BDB880   ## 01148880
+originalBytes:  00*
+patchBytes:     8B 06 6A 42 8B CE FF 90 80 02 00 00 84 C0 0F 85 2C B3 76 FF 8B 06 6A 09 8B CE FF 90 80 02 00 00 84 C0 0F 85 18 B3 76 FF 8B 16 8B CE FF 92 A0 01 00 00 E9 05 B3 76 FF

@@ -1,0 +1,42 @@
+# ----------------------------------------------------
+# ----------------- Chain Shot immunity --------------
+# ----------------------------------------------------
+#
+# Makes creature with Crystal Scale ability immune to Chain Shot
+#
+# ----------------------------------------------------
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original                ## fork the code
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00658FD5       ## 00A59BD5
+originalBytes:  0F 95 C0 5E C3
+patchBytes:     E9 76 ED 6D 00
+---
+group: Original                ## Add ASCI description of the patch in asselby
+patchAddress:   00BDB930       ## 01138930
+originalBytes:  00*
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 43 68 61 69 6E 20 53 68 6F 74 20 49 6D 75 6E 69 74 79
+---
+group: Original                ## Add Chain Shot immunity to Crystal Scales ability
+patchAddress:   00BDB950       ## 01138950
+originalBytes:  00*
+patchBytes:     75 0E 8B 06 89 F1 6A 42 FF 90 8C 02 00 00 85 C0 0F 95 C0 5E C3
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j           ## fork the code
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0058CE75       ## 0098DA75
+originalBytes:  0F 95 C0 5E C3
+patchBytes:     E9 D6 AE 7B 00
+---
+group: Quantomas3.1j           ## Add ASCI description of the patch in asselby
+patchAddress:   00BDB930       ## 01148930   
+originalBytes:  00*
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 43 68 61 69 6E 20 53 68 6F 74 20 49 6D 75 6E 69 74 79
+---
+group: Quantomas3.1j           ## Add Chain Shot immunity to Crystal Scales ability
+patchAddress:   00BDB950       ## 01148950
+originalBytes:  00*
+patchBytes:     75 0E 8B 06 89 F1 6A 42 FF 90 80 02 00 00 85 C0 0F 95 C0 5E C3

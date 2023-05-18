@@ -1,0 +1,235 @@
+# ----------------------------------------------------
+# ----------------- Magic resistance mod --------------
+# ----------------------------------------------------
+#
+# Alters existing spell resistance function.
+# Creates and binds more game artifacts, abilities, perks with resistance.
+# - Plate of Forgotten Hero magic resist can be changed by modifying FORGOTTEN_HERO_PLATE_MR
+# - Boots of Interference magic resist can be changed by modifying INTERFERENCE_BOOTS_MR
+# - Added new artifact with ID 173 that provides ARTIFACT01_MR% resistance
+# - Added new artifact with ID 174 that provides ARTIFACT02_MR% resistance
+# 
+# Fixes:
+# - Fixed Magic resistance not triggering for caster hero troops for Armageddon, Curse of the Netherworld and Word of Light spells
+#
+#----------------- VALUES TO MODIFY ---------------------
+definitions: 
+ - &FORGOTTEN_HERO_PLATE_MR  10
+ - &INTERFERENCE_BOOTS_MR    15
+ - &ARTIFACT01_ID           173
+ - &ARTIFACT01_MR             5
+ - &ARTIFACT02_ID           174
+ - &ARTIFACT02_MR            10
+#----------------- DO NOT MODIFY ---------------------
+ - &TOE_FORGOTTEN_HERO_PLATE_MR 20
+ - &TOE_INTERFERENCE_BOOTS_MR 10
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0057C422  ## 0097D022                           ## Plate of Forgotten Hero resistance
+valueType:      Byte
+originalValue:  *TOE_FORGOTTEN_HERO_PLATE_MR                                        
+patchValue:     *FORGOTTEN_HERO_PLATE_MR
+---
+group: Original
+patchAddress:   0057C44C  ## 0097D04C                           ## Boots of Interference resistance
+valueType:      Byte
+originalValue:  *TOE_INTERFERENCE_BOOTS_MR                                       
+patchValue:     *INTERFERENCE_BOOTS_MR
+---
+group: Original
+patchAddress:   0057C3FD  ## 0097CFFD                           ## fork from resistance artifacts
+originalBytes:  8B 16 8B CE FF 52 74                                        
+patchBytes:     E9 1E 9D 7B 00 90 90
+---
+group: Original
+patchAddress:   00BD9D00  ## 01136D00 #####                       ## Add ASCI description of the patch in asselby
+originalBytes:  00*                                         
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 73 70 65 6C 6C 20 72 65 73 69 73 74
+---
+group: Original
+patchAddress:   00BD9D20  ## 01136D20 #####                       ## new code
+originalBytes:  00*                                         
+patchBytes:     8B 06 89 F1 FF 50 74 68
+---
+group: Original
+patchAddress:   00BD9D28  ## 01136D28 #####                       ## artifact ID
+valueType:      Integer      
+originalValue:  0
+patchValue:     *ARTIFACT01_ID 
+---
+group: Original
+patchAddress:   00BD9D2C  ## 01136D2C #####                       ## new code
+originalBytes:  00*                                         
+patchBytes:     89 C1 E8 4D F9 B6 FF 85 C0 74 15 6A 00 6A 00 68
+---
+group: Original
+patchAddress:   00BD9D3C  ## 01136D3C                           ## artifact ID
+valueType:      Integer      
+originalValue:  0
+patchValue:     *ARTIFACT01_ID
+---
+group: Original
+patchAddress:   00BD9D40  ## 01136D40                           ##    
+originalBytes:  00*
+patchBytes:     30 D2 89 D9 E8 77 4C 88 FF 83 C5
+---
+group: Original
+patchAddress:   00BD9D4B  ## 01136D4B                           ## resistance %
+valueType:      Byte      
+originalValue:  0
+patchValue:     *ARTIFACT01_MR
+---
+group: Original
+patchAddress:   00BD9D4C  ## 01136D4C                           ##     
+originalBytes:  00*
+patchBytes:     89 6C 24 10 8B 06 89 F1 FF 50 74 68    
+---
+group: Original
+patchAddress:   00BD9D58  ## 01136D58                           ## artifact 2 ID
+valueType:      Integer      
+originalValue:  0
+patchValue:     *ARTIFACT02_ID
+---
+group: Original
+patchAddress:   00BD9D5C  ## 01136D5C                           ##     
+originalBytes:  00*
+patchBytes:     89 C1 E8 1D F9 B6 FF 85 C0 74 19 6A 00 6A 00 68
+---
+group: Original
+patchAddress:   00BD9D6C  ## 01136D6C                           ## artifact 2 ID
+valueType:      Integer      
+originalValue:  0
+patchValue:     *ARTIFACT02_ID
+---
+group: Original
+patchAddress:   00BD9D70  ## 01136D70                           ##     
+originalBytes:  00*
+patchBytes:     30 D2 89 D9 E8 47 4C 88 FF 83 C5 
+---
+group: Original
+patchAddress:   00BD9D7B  ## 01136D7B                           ## resistance %
+valueType:      Byte      
+originalValue:  0
+patchValue:     *ARTIFACT02_MR
+---
+group: Original
+patchAddress:   00BD9D7C  ## 01136D7C                           ##     
+originalBytes:  00*
+patchBytes:     89 6C 24 10 8B 16 89 F1 FF 52 74 E9 78 62 84 FF
+---
+group: Original
+patchAddress:   0057C310  ## 0097CF10                           ## Fork Magic resist to new "Skip logic code"
+originalBytes:  8B CB E8 09 76 0B 00 84 C0 74 1F 85 FF 74 0F
+patchBytes:     E9 7B 9E 7B 00 90 90 90 90 90 90 90 90 90 90
+---
+group: Original                                                 ## MAGIC RESIST skip logic changed   
+patchAddress:   00BD9D90  ## 01136D90                           ## from ALLIED(Hero,Combat) == TRUE AND CAN_SPELL_TARGET_ALLY == TRUE                      
+originalBytes:  00*                                             ## to   ALLIED(Hero,Combat) == TRUE ANDD IS_SPELL_DEALING_DAMAGE == FALSE 
+patchBytes:     8B 54 24 30 89 D9 E8 15 EF 3A FF 84 C0 0F 85 97 61 84 FF E9 77 61 84 FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   004B84BF  ## 008B90BF                           ## Plate of Forgotten Hero resistance
+valueType:      Byte
+originalValue:  *TOE_FORGOTTEN_HERO_PLATE_MR                                        
+patchValue:     *FORGOTTEN_HERO_PLATE_MR
+---
+group: Quantomas3.1j
+patchAddress:   004B84E9  ## 008B90E9                           ## Boots of Interference resistance
+valueType:      Byte
+originalValue:  *TOE_INTERFERENCE_BOOTS_MR                                       
+patchValue:     *INTERFERENCE_BOOTS_MR
+---
+group: Quantomas3.1j
+patchAddress:   004B849A  ## 008B909A                           ## fork from resistance artifacts
+originalBytes:  8B 16 8B CE FF 52 74                                        
+patchBytes:     E9 81 DC 88 00 90 90
+---
+group: Quantomas3.1j
+patchAddress:   00BD9D00  ## 01146D00 #####                       ## Add ASCI description of the patch in asselby
+originalBytes:  00*                                         
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 73 70 65 6C 6C 20 72 65 73 69 73 74
+---
+group: Quantomas3.1j
+patchAddress:   00BD9D20  ## 01146D20 #####                       ## new code
+originalBytes:  00*                                         
+patchBytes:     8B 06 89 F1 FF 50 74 68
+---
+group: Quantomas3.1j
+patchAddress:   00BD9D28  ## 01146D28 #####                       ## artifact ID
+valueType:      Integer      
+originalValue:  0
+patchValue:     *ARTIFACT01_ID 
+---
+group: Quantomas3.1j
+patchAddress:   00BD9D2C  ## 01146D2C #####                       ## new code
+originalBytes:  00*                                         
+patchBytes:     89 C1 E8 7D 9F 74 FF 85 C0 74 15 6A 00 6A 00 68
+---
+group: Quantomas3.1j
+patchAddress:   00BD9D3C  ## 01146D3C                           ## artifact ID
+valueType:      Integer      
+originalValue:  0
+patchValue:     *ARTIFACT01_ID
+---
+group: Quantomas3.1j
+patchAddress:   00BD9D40  ## 01146D40                           ##    
+originalBytes:  00*
+patchBytes:     30 D2 89 D9 E8 87 18 84 FF 83 C5
+---
+group: Quantomas3.1j
+patchAddress:   00BD9D4B  ## 01146D4B                           ## resistance %
+valueType:      Byte      
+originalValue:  0
+patchValue:     *ARTIFACT01_MR
+---
+group: Quantomas3.1j
+patchAddress:   00BD9D4C  ## 01146D4C                           ##     
+originalBytes:  00*
+patchBytes:     89 6C 24 10 8B 06 89 F1 FF 50 74 68
+---
+group: Quantomas3.1j
+patchAddress:   00BD9D58  ## 01146D58                           ## artifact 2 ID
+valueType:      Integer      
+originalValue:  0
+patchValue:     *ARTIFACT02_ID
+---
+group: Quantomas3.1j
+patchAddress:   00BD9D5C  ## 01146D5C                           ##     
+originalBytes:  00*
+patchBytes:     89 C1 E8 4D 9F 74 FF 85 C0 74 19 6A 00 6A 00 68
+---
+group: Quantomas3.1j
+patchAddress:   00BD9D6C  ## 01146D6C                           ## artifact 2 ID
+valueType:      Integer      
+originalValue:  0
+patchValue:     *ARTIFACT02_ID
+---
+group: Quantomas3.1j
+patchAddress:   00BD9D70  ## 01146D70                           ##     
+originalBytes:  00*
+patchBytes:     30 D2 89 D9 E8 57 18 84 FF 83 C5
+---
+group: Quantomas3.1j
+patchAddress:   00BD9D7B  ## 01146D7B                           ## resistance %
+valueType:      Byte      
+originalValue:  0
+patchValue:     *ARTIFACT02_MR
+---
+group: Quantomas3.1j
+patchAddress:   00BD9D7C  ## 01146D7C                           ##     
+originalBytes:  00*
+patchBytes:     89 6C 24 10 8B 16 89 F1 FF 52 74 E9 15 23 77 FF
+---
+group: Quantomas3.1j
+patchAddress:   004B83B1  ## 008B8FB1                           ## Fork Magic resist to new "Skip logic code"
+originalBytes:  8B CB E8 38 CD 01 00 84 C0 74 1B
+patchBytes:     E9 DA DD 88 00 90 90 90 90 90 90
+---
+group: Quantomas3.1j                                            ## MAGIC RESIST skip logic changed   
+patchAddress:   00BD9D90  ## 01146D90                           ## from ALLIED(Hero,Combat) == TRUE AND CAN_SPELL_TARGET_ALLY == TRUE                      
+originalBytes:  00*                                             ## to   ALLIED(Hero,Combat) == TRUE ANDD IS_SPELL_DEALING_DAMAGE == FALSE 
+patchBytes:     8B 54 24 30 89 D9 E8 C5 07 84 FF 84 C0 0F 85 34 22 77 FF E9 14 22 77 FF

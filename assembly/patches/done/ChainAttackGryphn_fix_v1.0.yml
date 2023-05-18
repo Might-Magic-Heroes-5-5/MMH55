@@ -1,0 +1,23 @@
+# ----------------------------------------------------
+# ----------------- Chain strike + Griffin Dive  --------------
+# ----------------------------------------------------
+#
+# Fix the game crashing when Gryphn with Chain attack buff attacks target with "Battle dive" ability. 
+# Prerequisites: WARNING This patch works only on stripped exe that has extra space available.
+# ----------------------------------------------------
+# 
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+## Note: In 3.1 issue was  fixed by Nival
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   00598C05            # 00999805                                       
+originalBytes:  80 7C 24 13
+patchBytes:     E8 D6 C9 7A
+---
+group: Quantomas3.1j
+patchAddress:   00BD91E0            # 011461E0
+originalBytes:  00 00 00 00 00 00 00 00 00 00
+patchBytes:     80 7C 24 17 00 8B 6C 24 2C C3

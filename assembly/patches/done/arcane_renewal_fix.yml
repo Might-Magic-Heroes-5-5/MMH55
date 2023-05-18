@@ -1,0 +1,41 @@
+# ----------------------------------------------------
+# ----------------- Arcane renewal fix --------------
+# ----------------------------------------------------
+#  
+# Fix Arcane renewal being triggered when Summon Hive, Blade Barrier and Arcane Crystal are cast succesfully
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC   
+patchAddress:   0057DC3D   ## 0097E83D                                            
+originalBytes:  E8 FE 71 2D 00
+patchBytes:     E9 9E 9F 7B 00
+---
+group: Original
+patchAddress:   00BDB7C0   ## 011387C0
+originalBytes:  00*
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 4D 4F 44 3D 3D 3D 3D 3D 3D 20 41 72 63 61 6E 65 20 20 72 65 6E 65 77 61 6C
+---
+group: Original
+patchAddress:   00BDB7E0   ## 011387E0
+originalBytes:  00*
+patchBytes:     E8 5B D2 B1 FF C6 44 24 13 00 E9 53 60 84 FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   004B9C51   ##  008BA851
+originalBytes:  E8 BA AD 1A 00
+patchBytes:     E9 8A DF 88 00
+---
+group: Quantomas3.1j
+patchAddress:   00BDB7C0   ## 011487C0
+originalBytes:  00*
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 4D 4F 44 3D 3D 3D 3D 3D 3D 20 41 72 63 61 6E 65 20 20 72 65 6E 65 77 61 6C
+---
+group: Quantomas3.1j
+patchAddress:   00BDB7E0   ## 011487E0
+originalBytes:  00*
+patchBytes:     E8 2B CE 91 FF C6 44 24 12 00 E9 67 20 77 FF
+
