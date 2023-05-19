@@ -52,7 +52,7 @@ definitions:
  group: Original
  checkAddress:   007BECB9
  checkBytes:     FF 92 74 01 00 00 89 44 24 1C DB 44 24 1C D8 0D
- patchAddress:   007BECC9         # 
+ patchAddress:   007BECC9         # 00BBF8C9
  valueType:      Address
  originalValue:  E12F10           # pointer to float value 0.10 (for sorcery skill level multiplier)
  patchValue:     40033C           # pointer to own float value  

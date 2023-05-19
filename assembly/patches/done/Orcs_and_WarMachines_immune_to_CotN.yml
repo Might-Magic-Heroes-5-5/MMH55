@@ -1,0 +1,32 @@
+# ----------------------------------------------------
+# ----------------- Orcs immune to CotN --------------
+# ----------------------------------------------------
+#
+# Patch makes:
+# - Stronghold creatures immune to "Curse of the Netherworld" spell
+# - (QAI) War Machines immune to "Curse of the Netherworld" spell
+# ----------------------------------------------------
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00576A43        ## 00977643
+originalBytes:  8B 16 6A 0A 8B CE
+patchBytes:     E9 E8 ED 7B 00 90
+---
+group: Original                 ### stripped space patch
+patchAddress:   00BD9430
+originalBytes:  00*
+patchBytes:     8B 16 6A 69 89 F1 FF 92 8C 02 00 00 84 C0 0F 85 FB 11 84 FF 8B 16 6A 0A 89 F1 E9 FA 11 84 FF 90
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   004B2B83           ## 008B3783
+originalBytes:  8B 16 6A 0A 8B CE
+patchBytes:     E9 A8 2C 89 00 90
+---
+group: Quantomas3.1j             ### stripped space patch
+patchAddress:   00BD9430
+originalBytes:  00*
+patchBytes:     8B 16 6A 69 89 F1 FF 92 80 02 00 00 84 C0 0F 85 3B D3 76 FF 8B 16 89 F1 FF 12 83 F8 03 0F 84 2C D3 76 FF 8B 16 6A 0A 89 F1 E9 2B D3 76 FF

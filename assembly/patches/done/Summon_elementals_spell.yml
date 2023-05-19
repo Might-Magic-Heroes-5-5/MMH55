@@ -1,0 +1,52 @@
+# ----------------------------------------------------
+# ----------------- Summon elementals spell --------------
+# ----------------------------------------------------
+# Enable certain perks to force specific elemental type casts by "Summon Elementals" spell as follow:
+# - Tremors: Air elementals only
+# - Brimstone Rain: Water elementals only
+# - Default cast summons Earth elemental only
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC   
+patchAddress:   00460A84   ## 00861684                                          
+originalBytes:  57 8D 54 24 1C 
+patchBytes:     E9 E7 70 8D 00
+---
+group: Original
+patchAddress:   00BDB750   ## 01138750
+originalBytes:  00*
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 73 75 6D 6D 6F 6E 20 73 70 65 6C 6C
+#---
+#group: Original
+#patchAddress:   00BDB770   ## 01138770  # random summon cast
+#originalBytes:  00*
+#patchBytes:     8B 55 00 BB 58 00 00 00 68 8B 00 00 00 89 E9 FF 92 90 02 00 00 84 C0 0F 85 09 8F 72 FF 8B 55 00 BB 56 00 00 00 6A 58 89 E9 FF 92 90 02 00 00 84 C0 0F 85 EF 8E 72 FF 57 8D 54 24 1C E9 D8 8E 72 FF
+---
+group: Original
+patchAddress:   00BDB770   ## 01138770  # earth only
+originalBytes:  00*
+patchBytes:     8B 55 00 BB 58 00 00 00 68 8B 00 00 00 89 E9 FF 92 90 02 00 00 84 C0 0F 85 09 8F 72 FF 8B 55 00 BB 56 00 00 00 6A 58 89 E9 FF 92 90 02 00 00 84 C0 0F 85 EF 8E 72 FF BB 57 00 00 00 E9 E5 8E 72 FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0066FFE4   ## 00A70BE4                                          
+originalBytes:  57 8D 54 24 1C 
+patchBytes:     E9 87 7B 6D 00
+---
+group: Quantomas3.1j
+patchAddress:   00BDB750   ## 01148750
+originalBytes:  00*
+patchBytes:     3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 73 75 6D 6D 6F 6E 20 73 70 65 6C 6C
+#---
+#group: Quantomas3.1j
+#patchAddress:   00BDB770   ## 01148770  # random summon cast
+#originalBytes:  00*
+#patchBytes:     8B 55 00 BB 58 00 00 00 68 8B 00 00 00 89 E9 FF 92 84 02 00 00 84 C0 0F 85 69 84 92 FF 8B 55 00 BB 56 00 00 00 6A 58 89 E9 FF 92 84 02 00 00 84 C0 0F 85 4F 84 92 FF 57 8D 54 24 1C E9 38 84 92 FF
+---
+group: Quantomas3.1j
+patchAddress:   00BDB770   ## 01148770  # earth only
+originalBytes:  00*
+patchBytes:     8B 55 00 BB 58 00 00 00 68 8B 00 00 00 89 E9 FF 92 84 02 00 00 84 C0 0F 85 69 84 92 FF 8B 55 00 BB 56 00 00 00 6A 58 89 E9 FF 92 84 02 00 00 84 C0 0F 85 4F 84 92 FF BB 57 00 00 00 E9 45 84 92 FF

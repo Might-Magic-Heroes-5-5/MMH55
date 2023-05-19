@@ -1,0 +1,33 @@
+# ----------------------------------------------------
+# ----------------- War Machines HP --------------
+# ----------------------------------------------------
+#
+# Adjusts War Machine formula from:
+# ( BASE_HP + WAR_MACHINE_MASTERY_LEVEL * MASTERY_BONUS ) * PERK_MULTIPLIER
+# to
+# ( BASE_HP + WAR_MACHINE_MASTERY_LEVEL * MASTERY_BONUS * HERO_LEVEL ) * PERK_MULTIPLIER
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ checkAddress:   00000400
+ checkBytes:     8D 41 34 C3 CC CC CC CC
+ patchAddress:   000BBC45         ## 004BC845
+ originalBytes:  01 44 24 0C 8B 43 1C
+ patchBytes:     E9 16 C4 C7 00 90 90
+---
+ group: Original                  ## new HP code
+ patchAddress:   00BDBC60         ## 01138C60
+ originalBytes:  00*
+ patchBytes:     50 8B 06 89 F1 FF 50 20 59 0F AF C1 01 44 24 0C 8B 43 1C E9 D4 3B 38 FF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+ group: Quantomas3.1j
+ checkAddress:   00000400
+ checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+ patchAddress:   004753E5         ## 00875FE5
+ originalBytes:  01 44 24 0C 8B 43 1C
+ patchBytes:     E9 76 2C 8D 00 90 90
+---
+ group: Quantomas3.1j             ## new HP code
+ patchAddress:   00BDBC60         ## 01148C60
+ originalBytes:  00*
+ patchBytes:     50 8B 06 89 F1 FF 50 20 59 0F AF C1 01 44 24 0C 8B 43 1C E9 74 D3 72 FF

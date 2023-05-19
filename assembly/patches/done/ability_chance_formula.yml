@@ -1,0 +1,63 @@
+# ----------------------------------------------------
+# --------------- Abilities chance ------------
+# ----------------------------------------------------
+#
+# Changes abilities trigger chance formula from 25% +/- 3% to 40% +/- 5%
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+ - &m55_base  40
+# -----------Things that should not be modified ----------------
+ - &toe_base  25
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00658DDE        ## 00A599DE
+valueType:      Byte
+originalValue:  *toe_base
+patchValue:     *m55_base
+---
+group: Original
+patchAddress:   00658DD9        ## 00A599D9
+originalBytes:  49
+patchBytes:     89
+---
+group: Original
+patchAddress:   00658DC6        ## 00A599C6
+valueType:      Byte
+originalValue:  *toe_base
+patchValue:     *m55_base
+---
+group: Original
+patchAddress:   00658DC0        ## 00A599C0
+originalBytes:  7F
+patchBytes:     BF
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0058D5EE        ## 0098E1EE
+valueType:      Byte
+originalValue:  *toe_base
+patchValue:     *m55_base
+---
+group: Quantomas3.1j
+patchAddress:   0058D5E9        ## 0098E1E9
+originalBytes:  49
+patchBytes:     89
+---
+group: Quantomas3.1j
+patchAddress:   0058D5D8        ## 0098E1D8
+valueType:      Byte
+originalValue:  *toe_base
+patchValue:     *m55_base
+---
+group: Quantomas3.1j
+patchAddress:   0058D5D2        ## 0098E1D2
+originalBytes:  7F
+patchBytes:     BF
+
+
+

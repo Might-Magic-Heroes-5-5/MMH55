@@ -1,0 +1,70 @@
+# ----------------------------------------------------
+# ----------------- Spellboost Artifacts value --------------
+# ----------------------------------------------------
+#
+# Patch allows to change spellboost value of artifacts
+# 
+# -------------- Things you may want to modify -----------------
+definitions: 
+- &spellboost 1.20001  # ToE default is 1.5
+
+# -----------Things that should not be modified ----------------
+
+- &file_default 0
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original                    ## TITANS_TRIDENT
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00576377           ## 00976F77
+originalBytes:  AC A3 E3 00
+patchBytes:     10 64 13 01
+---
+group: Original                    ## EVERCOLD_ICICLE
+patchAddress:   005763C6           ## 00976FC6
+originalBytes:  AC A3 E3 00
+patchBytes:     10 64 13 01
+---
+group: Original                    ## PHOENIX_FEATHER_CAPE
+patchAddress:   00576415           ## 00977015
+originalBytes:  AC A3 E3 00
+patchBytes:     10 64 13 01
+---
+group: Original                    ## ARTIFACT_EARTHSLIDERS
+patchAddress:   00576464           ## 00977064
+originalBytes:  AC A3 E3 00
+patchBytes:     10 64 13 01
+---
+group: Original                    ## float value
+patchAddress:   00BD9410           ## 01136410
+valueType:      Float
+originalValue:  *file_default
+patchValue:     *spellboost 
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j               ## TITANS_TRIDENT
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   004B250B           ## 008B310B
+originalBytes:  C5 E3 00
+patchBytes:     64 14 01
+---
+group: Quantomas3.1j               ## EVERCOLD_ICICLE
+patchAddress:   004B255A           ## 008B315A
+originalBytes:  C5 E3 00
+patchBytes:     64 14 01
+---
+group: Quantomas3.1j               ## PHOENIX_FEATHER_CAPE
+patchAddress:   004B25A9           ## 008B31A9
+originalBytes:  C5 E3 00
+patchBytes:     64 14 01
+---
+group: Quantomas3.1j               ## ARTIFACT_EARTHSLIDERS
+patchAddress:   004B25F8           ## 008B31F8
+originalBytes:  C5 E3 00
+patchBytes:     64 14 01
+---
+group: Quantomas3.1j               ## float value
+patchAddress:   00BD9410           ## 01146410
+valueType:      Float
+originalValue:  *file_default
+patchValue:     *spellboost 
