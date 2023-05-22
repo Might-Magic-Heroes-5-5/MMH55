@@ -1,0 +1,40 @@
+# ----------------------------------------------------
+# ----------------- Modify Battlefield size --------------
+# ----------------------------------------------------
+#
+# Change standard battlefield size
+#
+# ----------------------------------------------------
+definitions: 
+- &original_width       12             # Standard battlefield default width
+- &original_height      10             # Standard battlefield default height
+- &modified_width       14             # Standard battlefield new width
+- &modified_height      12             # Standard battlefield new height
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   006F08B6   ### 00AF14B6 field width
+valueType:      Integer
+originalValue:  *original_width
+patchValue:     *modified_width
+---
+group: Original
+patchAddress:   006F08BC   ### 00AF14BC field height
+valueType:      Integer
+originalValue:  *original_height
+patchValue:     *modified_height
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0057D6E6   ### 0097E2E6 field width
+valueType:      Integer
+originalValue:  *original_width
+patchValue:     *modified_width
+---
+group: Quantomas3.1j
+patchAddress:   0057D6EC   ### 0097E2EC field height
+valueType:      Integer
+originalValue:  *original_height  
+patchValue:     *modified_height

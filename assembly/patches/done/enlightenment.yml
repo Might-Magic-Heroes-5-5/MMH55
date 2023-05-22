@@ -1,0 +1,28 @@
+# ----------------------------------------------------
+# --------------- Enlightenment Balance Mod ------------
+# ----------------------------------------------------
+#
+# Changes level divisor from (4,3,2) to (6,5,4)
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+ - &level_divisor 7        # divisor = (6 - enlightenmentLevel)   -> (6,5,4)
+# -----------Things that should not be modified ----------------
+ - &original_level_divisor 5   # divisor = (5 - enlightenmentLevel)   -> (4,3,2)
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ checkAddress:   0074B2A9
+ checkBytes:     B8 05 00 00 00 2B C1 83 F8 02 B9 02 00 00 00 7C
+ patchAddress:   0074B2AA          ## 00B4BEAA
+ valueType:      Integer
+ originalValue:  *original_level_divisor
+ patchValue:     *level_divisor
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+ group: Quantomas3.1j
+ checkAddress:   005F6DD9
+ checkBytes:     B8 05 00 00 00 2B C1 83 F8 02 B9 02 00 00 00 7C
+ patchAddress:   005F6DDA       ## 009F79DA
+ valueType:      Integer
+ originalValue:  *original_level_divisor
+ patchValue:     *level_divisor

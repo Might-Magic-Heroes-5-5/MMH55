@@ -1,0 +1,294 @@
+# ----------------------------------------------------
+# ----------------- Wand spells and charges --------------
+# ----------------------------------------------------
+#
+# Change existing spells and their charges provided by Wand artifact
+#
+# ----------------------------------------------------
+# ---- adjustable values ------
+definitions: 
+ - &M55_S01 39
+ - &M55_C01 6
+ - &M55_S02 5
+ - &M55_C02 3
+ - &M55_S03 4
+ - &M55_C03 3
+ - &M55_S04 17
+ - &M55_C04 6
+ - &M55_S05 282
+ - &M55_C05 5
+ - &M55_S06 32
+ - &M55_C06 3
+ - &M55_S07 26
+ - &M55_C07 3
+ - &M55_S08 41
+ - &M55_C08 5
+ - &M55_S09 29
+ - &M55_C09 6
+ - &M55_S10 277
+ - &M55_C10 5
+ # ---- Original ToE values - DO NOT MODIFY
+ - &TOE_S01 1
+ - &TOE_S02 5
+ - &TOE_S03 4
+ - &TOE_S04 12
+ - &TOE_S05 15
+ - &TOE_S06 13
+ - &TOE_S07 24
+ - &TOE_S08 25
+ - &TOE_S09 29
+ - &TOE_S10 40
+ - &TOE_C01 6
+ - &TOE_C02 3
+ - &TOE_C03 3
+ - &TOE_C04 5
+ - &TOE_C05 5
+ - &TOE_C06 10
+ - &TOE_C07 4
+ - &TOE_C08 4
+ - &TOE_C09 6
+ - &TOE_C10 6
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00A91728  ## 00E93128                           ## Spell ID01
+valueType:      Integer
+originalValue:  *TOE_S01
+patchValue:     *M55_S01
+---
+group: Original
+patchAddress:   00A9172C  ## 00E9312C                           ## Spell ID02
+valueType:      Integer
+originalValue:  *TOE_S02
+patchValue:     *M55_S02
+---
+group: Original
+patchAddress:   00A91730  ## 00E93130                           ## Spell ID03
+valueType:      Integer
+originalValue:  *TOE_S03
+patchValue:     *M55_S03
+---
+group: Original
+patchAddress:   00A91734  ## 00E93134                           ## Spell ID04
+valueType:      Integer
+originalValue:  *TOE_S04
+patchValue:     *M55_S04
+---
+group: Original
+patchAddress:   00A91738  ## 00E93138                           ## Spell ID05
+valueType:      Integer
+originalValue:  *TOE_S05
+patchValue:     *M55_S05
+---
+group: Original
+patchAddress:   00A9173C  ## 00E9313C                           ## Spell ID06
+valueType:      Integer
+originalValue:  *TOE_S06
+patchValue:     *M55_S06
+---
+group: Original
+patchAddress:   00A91740  ## 00E93140                           ## Spell ID07
+valueType:      Integer
+originalValue:  *TOE_S07
+patchValue:     *M55_S07
+---
+group: Original
+patchAddress:   00A91744  ## 00E93144                           ## Spell ID08
+valueType:      Integer
+originalValue:  *TOE_S08
+patchValue:     *M55_S08
+---
+group: Original
+patchAddress:   00A91748  ## 00E93148                           ## Spell ID09
+valueType:      Integer
+originalValue:  *TOE_S09
+patchValue:     *M55_S09
+---
+group: Original
+patchAddress:   00A9174C  ## 00E9314C                           ## Spell ID10
+valueType:      Integer
+originalValue:  *TOE_S10
+patchValue:     *M55_S10
+---
+group: Original
+patchAddress:   00A91750  ## 00E93150                           ## Spell ID01 charge
+valueType:      Integer
+originalValue:  *TOE_C01
+patchValue:     *M55_C01
+---
+group: Original
+patchAddress:   00A91754  ## 00E93154                          ## Spell ID02 charge
+valueType:      Integer
+originalValue:  *TOE_C02
+patchValue:     *M55_C02
+---
+group: Original
+patchAddress:   00A91758  ## 00E93158                           ## Spell ID03 charge
+valueType:      Integer
+originalValue:  *TOE_C03
+patchValue:     *M55_C03
+---
+group: Original
+patchAddress:   00A9175C  ## 00E9315C                           ## Spell ID04 charge
+valueType:      Integer
+originalValue:  *TOE_C04
+patchValue:     *M55_C04
+---
+group: Original
+patchAddress:   00A91760  ## 00E93160                           ## Spell ID05 charge
+valueType:      Integer
+originalValue:  *TOE_C05
+patchValue:     *M55_C05
+---
+group: Original
+patchAddress:   00A91764  ## 00E93164                           ## Spell ID06 charge
+valueType:      Integer
+originalValue:  *TOE_C06
+patchValue:     *M55_C06
+---
+group: Original
+patchAddress:   00A91768  ## 00E93168                           ## Spell ID07 charge
+valueType:      Integer
+originalValue:  *TOE_C07
+patchValue:     *M55_C07
+---
+group: Original
+patchAddress:   00A9176C  ## 00E9316C                           ## Spell ID08 charge
+valueType:      Integer
+originalValue:  *TOE_C08
+patchValue:     *M55_C08
+---
+group: Original
+patchAddress:   00A91770  ## 00E93170                           ## Spell ID09 charge
+valueType:      Integer
+originalValue:  *TOE_C09
+patchValue:     *M55_C09
+---
+group: Original
+patchAddress:   00A91774  ## 00E93174                           ## Spell ID10 charge
+valueType:      Integer
+originalValue:  *TOE_C10
+patchValue:     *M55_C10
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4   
+patchAddress:   00A4E330  ## 00E4FB30                           ## Spell ID01
+valueType:      Integer
+originalValue:  *TOE_S01
+patchValue:     *M55_S01
+---
+group: Quantomas3.1j
+patchAddress:   00A4E334  ## 00E4FB34                           ## Spell ID02
+valueType:      Integer
+originalValue:  *TOE_S02
+patchValue:     *M55_S02
+---
+group: Quantomas3.1j
+patchAddress:   00A4E338  ## 00E4FB38                           ## Spell ID03
+valueType:      Integer
+originalValue:  *TOE_S03
+patchValue:     *M55_S03
+---
+group: Quantomas3.1j
+patchAddress:   00A4E33C  ## 00E4FB3C                           ## Spell ID04
+valueType:      Integer
+originalValue:  *TOE_S04
+patchValue:     *M55_S04
+---
+group: Quantomas3.1j
+patchAddress:   00A4E340  ## 00E4FB40                           ## Spell ID05
+valueType:      Integer
+originalValue:  *TOE_S05
+patchValue:     *M55_S05
+---
+group: Quantomas3.1j
+patchAddress:   00A4E344  ## 00E4FB44                           ## Spell ID06
+valueType:      Integer
+originalValue:  *TOE_S06
+patchValue:     *M55_S06
+---
+group: Quantomas3.1j
+patchAddress:   00A4E348  ## 00E4FB48                           ## Spell ID07
+valueType:      Integer
+originalValue:  *TOE_S07
+patchValue:     *M55_S07
+---
+group: Quantomas3.1j
+patchAddress:   00A4E34C  ## 00E4FB4C                           ## Spell ID08
+valueType:      Integer
+originalValue:  *TOE_S08
+patchValue:     *M55_S08
+---
+group: Quantomas3.1j
+patchAddress:   00A4E350  ## 00E4FB50                           ## Spell ID09
+valueType:      Integer
+originalValue:  *TOE_S09
+patchValue:     *M55_S09
+---
+group: Quantomas3.1j
+patchAddress:   00A4E354  ## 00E4FB54                           ## Spell ID10
+valueType:      Integer
+originalValue:  *TOE_S10
+patchValue:     *M55_S10
+---
+group: Quantomas3.1j
+patchAddress:   00A4E358  ## 00E4FB58                           ## Spell ID01 charge
+valueType:      Integer
+originalValue:  *TOE_C01
+patchValue:     *M55_C01
+---
+group: Quantomas3.1j
+patchAddress:   00A4E35C  ## 00E4FB5C                           ## Spell ID02 charge
+valueType:      Integer
+originalValue:  *TOE_C02
+patchValue:     *M55_C02
+---
+group: Quantomas3.1j
+patchAddress:   00A4E360  ## 00E4FB60                           ## Spell ID03 charge
+valueType:      Integer
+originalValue:  *TOE_C03
+patchValue:     *M55_C03
+---
+group: Quantomas3.1j
+patchAddress:   00A4E364  ## 00E4FB64                           ## Spell ID04 charge
+valueType:      Integer
+originalValue:  *TOE_C04
+patchValue:     *M55_C04
+---
+group: Quantomas3.1j
+patchAddress:   00A4E368  ## 00E4FB68                           ## Spell ID05 charge
+valueType:      Integer
+originalValue:  *TOE_C05
+patchValue:     *M55_C05
+---
+group: Quantomas3.1j
+patchAddress:   00A4E36C  ## 00E4FB6C                           ## Spell ID06 charge
+valueType:      Integer
+originalValue:  *TOE_C06
+patchValue:     *M55_C06
+---
+group: Quantomas3.1j
+patchAddress:   00A4E370  ## 00E4FB70                           ## Spell ID07 charge
+valueType:      Integer
+originalValue:  *TOE_C07
+patchValue:     *M55_C07
+---
+group: Quantomas3.1j
+patchAddress:   00A4E374  ## 00E4FB74                           ## Spell ID08 charge
+valueType:      Integer
+originalValue:  *TOE_C08
+patchValue:     *M55_C08
+---
+group: Quantomas3.1j
+patchAddress:   00A4E378  ## 00E4FB78                           ## Spell ID09 charge
+valueType:      Integer
+originalValue:  *TOE_C09
+patchValue:     *M55_C09
+---
+group: Quantomas3.1j
+patchAddress:   00A4E37C  ## 00E4FB7C                           ## Spell ID10 charge
+valueType:      Integer
+originalValue:  *TOE_C10
+patchValue:     *M55_C10

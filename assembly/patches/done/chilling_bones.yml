@@ -1,0 +1,21 @@
+# ----------------------------------------------------
+# ----------------- Chilling Bones fix --------------
+# ----------------------------------------------------
+#
+# Changes chilling bones return damage from 5% to 10%
+#
+# -----------------------------------------------------
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0065B0AD  ## 00A5BCAD
+originalBytes:  D8 0D 18 2F E1 00
+patchBytes:     D8 0D 10 2F E1 00
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0058EE2D  ## 0098FA2D
+originalBytes:  D8 0D C4 9F E0 00
+patchBytes:     D8 0D C0 9F E0 00

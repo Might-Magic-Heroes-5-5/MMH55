@@ -1,0 +1,78 @@
+# ----------------------------------------------------
+# ----------------- Ballista and Catapult shots per perk --------------
+# ----------------------------------------------------
+# Moves tripple Catapult functionality from tripple Catapult perk to perk of choice
+# Changes shots Ballista and Catapult amount of bonus war machines get for each perk as follows:
+####   PERK NAME   ########   BONUS SHOT CHANGES   #####
+# - Catapult         - from *toe_shots  to *new_shots 
+# - Ballista         - from *toe_shots  to *new_shots
+# - Bromstone Rain   - from *toe_Cshots to *new_Cshots
+# - Tripple Ballista - from *toe_Bshots to *new_Bshots
+# 
+# -------------- Things you may want to modify -----------------
+definitions:
+- &new_skill  99
+- &new_shots  1
+- &new_Cshots 3
+- &new_Bshots 3
+#
+# -------------- Things you must not modify -----------------
+- &toe_skill  88
+- &toe_shots  1
+- &toe_Cshots 2
+- &toe_Bshots 2
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC   
+patchAddress:   006750B4  ## 00A75CB4             # Skill change
+valueType:      byte                                                
+originalValue:  *toe_skill
+patchValue:     *new_skill
+---
+group: Original
+patchAddress:   00675103  ## 00A75D03             # Catapult and Ballista perks
+valueType:      byte                                                
+originalValue:  *toe_shots
+patchValue:     *new_shots
+---
+group: Original
+patchAddress:   006750C0  ## 00A75CC0             # Brimstone Rain perk
+valueType:      Integer                                                
+originalValue:  *toe_Cshots
+patchValue:     *new_Cshots
+---
+group: Original
+patchAddress:   006750E3  ## 00A75CE3             # Tripple Ballista perk
+valueType:      Integer                                                
+originalValue:  *toe_Bshots
+patchValue:     *new_Bshots
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   00741FD4  ## 00B42BD4             # Skill change
+valueType:      byte                                                
+originalValue:  *toe_skill
+patchValue:     *new_skill
+---
+group: Quantomas3.1j
+patchAddress:   00742023  ## 00B42C23             # Catapult and Ballista perks
+valueType:      byte                                                
+originalValue:  *toe_shots
+patchValue:     *new_shots
+---
+group: Quantomas3.1j
+patchAddress:   00741FE0  ## 00B42BE0             # Brimstone Rain perk
+valueType:      Integer                                                
+originalValue:  *toe_Cshots
+patchValue:     *new_Cshots
+---
+group: Quantomas3.1j
+patchAddress:   00742003  ## 00B42C03             # Tripple Ballista perk
+valueType:      Integer                                                
+originalValue:  *toe_Bshots
+patchValue:     *new_Bshots
+
+

@@ -1,0 +1,20 @@
+# ----------------------------------------------------
+# ----------------- Barbarian spellbook fix --------------
+# ----------------------------------------------------
+#
+# Enables Barbarian heroes to use standard spellbook instead of parchment
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0028846B  ## 0068906B
+originalBytes:  74
+patchBytes:     EB
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   001BE87B  ## 005BF47B
+originalBytes:  74
+patchBytes:     EB

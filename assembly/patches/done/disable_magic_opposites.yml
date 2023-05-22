@@ -1,0 +1,63 @@
+# ----------------------------------------------------
+# ----------------- Disable dark/light opposites --------------
+# ----------------------------------------------------
+#
+# Disable dispel effect when casting a spell on top of an opposite one haste/slow; weakness/blodlust
+# Makes owner of eternal light perk has his bless spell effect immune to curse casts.
+# ----------------------------------------------------
+# 
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   000E365B             ## 004E425B
+originalBytes:  32
+patchBytes:     64
+---
+group: Original
+patchAddress:   000E3011             ## 004E3C11                     ## slow vs haste
+originalBytes:  0F 94 C0
+patchBytes:     B0 00 90
+---
+group: Original
+patchAddress:   000E3003             ## 004E3C03                     ## weakness vs bloodlust
+originalBytes:  0F 94 C0
+patchBytes:     B0 00 90
+---
+group: Original
+patchAddress:   000E301F             ## 004E3C1F                     ## haste vs slow
+originalBytes:  0F 94 C0
+patchBytes:     B0 00 90
+---
+group: Original
+patchAddress:   000E2FF5             ## 004E425B                     ## bloodlust vs weakness
+originalBytes:  0F 94 C0
+patchBytes:     B0 00 90
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   0061E4F3        ## 00A1F0F3
+originalBytes:  32
+patchBytes:     64
+---
+group: Quantomas3.1j
+patchAddress:   0061DF01        ## 00A1EB01                          ## slow vs haste
+originalBytes:  0F 94 C0
+patchBytes:     B0 00 90
+---
+group: Quantomas3.1j
+patchAddress:   0061DEF3        ## 00A1EAF3                          ## weakness vs bloodlust
+originalBytes:  0F 94 C0
+patchBytes:     B0 00 90
+---
+group: Quantomas3.1j
+patchAddress:   0061DF0F        ## 00A1EB0F                          ## haste vs slow
+originalBytes:  0F 94 C0
+patchBytes:     B0 00 90
+---
+group: Quantomas3.1j
+patchAddress:   0061DEE5        ## 00A1EAE5                          ## bloodlust vs weakness
+originalBytes:  0F 94 C0
+patchBytes:     B0 00 90

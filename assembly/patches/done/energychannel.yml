@@ -1,0 +1,45 @@
+# ----------------------------------------------------
+# --------------- Energy Channel Ability -------------
+# ----------------------------------------------------
+# Changes Energy Channel Mana Cost Reduction from 25% to 10%
+#
+# changes the multiplier which multiplies mana cost from
+#   0.75   to   0.9
+#
+# has been corrected to be a little bit above 0.9 to avoid rounding error
+# 
+# when setting it 0.9 the nearest float value is 0.8999999762 which
+# results in a spell costing 10 mana being reduced to 8 mana.
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+ - &energy_channel_percentage 0.9501      # original value is 0.75
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ checkAddress:   57768A
+ checkBytes:     D8 0D
+ patchAddress:   57768C             # 0097828C
+ valueType:      Address
+ originalValue:  E34C5C
+ patchValue:     400340
+---
+ group: Original
+ patchAddress:   340
+ valueType:      Float
+ originalBytes:  00 00 00 00
+ patchValue:     *energy_channel_percentage
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+ group: Quantomas3.1j
+ checkAddress:   4B376A
+ checkBytes:     D8 0D
+ patchAddress:   4B376C             # 008B436C
+ valueType:      Address
+ originalValue:  E0FC4C
+ patchValue:     400340
+---
+ group: Quantomas3.1j
+ patchAddress:   340
+ valueType:      Float
+ originalBytes:  00 00 00 00
+ patchValue:     *energy_channel_percentage
