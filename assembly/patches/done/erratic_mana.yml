@@ -1,0 +1,81 @@
+# ----------------------------------------------------
+# ----------------- Erratic Mana --------------
+# ----------------------------------------------------
+#
+# Trigger chance increased from 50% to 100%
+# Mana reduction decreased from 0-50% to 0-30%
+#
+#----------------- VALUES TO MODIFY ---------------------
+definitions:
+- &M55_chance  100
+- &M55_max_multiplier 0.7
+- &M55_min_multiplier 0.9
+#----------------- DO NOT MODIFY ---------------------
+- &TOE_chance  50
+- &TOE_max_multiplier 0.60000002
+- &TOE_min_multiplier 0.9
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original           ## adventure map chance
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC 
+patchAddress:   0074B943  ## 00B4C543
+valueType:      Byte
+originalValue:  *TOE_chance
+patchValue:     *M55_chance
+---
+group: Original           ## adventure map reduction
+patchAddress:   0074B96D  ## 00B4C56D
+originalBytes:  80 85 E1 00
+patchBytes:     98 56 E1 00
+---
+group: Original
+patchAddress:   007BEADB  ## 00BBF6DB
+valueType:      Byte
+originalValue:  *TOE_chance
+patchValue:     *M55_chance
+---
+group: Original           ## erratic mana combat spells min mana reduction 5%
+patchAddress:   007BEB12  ## 00BBF712
+valueType:      Float
+originalValue:  *TOE_min_multiplier
+patchValue:     *M55_min_multiplier
+---
+group: Original           ## erratic mana combat spells max mana reduction 30%
+patchAddress:   007BEB17  ## 00BBF717
+valueType:      Float
+originalValue:  *TOE_max_multiplier
+patchValue:     *M55_max_multiplier
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   005F7473  ## 009F8073
+valueType:      Byte
+originalValue:  *TOE_chance
+patchValue:     *M55_chance
+---
+group: Quantomas3.1j
+patchAddress:   005F749D  ## 009F809D
+originalBytes:  D4 26 E2 00
+patchBytes:     34 C2 E0 00
+---
+group: Quantomas3.1j
+patchAddress:   007437FB  ## 00B443FB
+valueType:      Byte
+originalValue:  *TOE_chance
+patchValue:     *M55_chance
+---
+group: Quantomas3.1j      ## erratic mana combat spells min mana reduction 5%
+patchAddress:   00743832  ## 00B44432
+valueType:      Float
+originalValue:  *TOE_min_multiplier
+patchValue:     *M55_min_multiplier
+---
+group: Quantomas3.1j      ## erratic mana combat spells max mana reduction 30%
+patchAddress:   00743837  ## 00B44437
+valueType:      Float
+originalValue:  *TOE_max_multiplier
+patchValue:     *M55_max_multiplier
+
+
+

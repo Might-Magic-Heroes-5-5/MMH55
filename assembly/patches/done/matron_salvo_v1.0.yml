@@ -1,0 +1,42 @@
+# ----------------------------------------------------
+# ----------------- Matron Salvo fix v1 --------------
+# ----------------------------------------------------
+#
+# Changes salvo chance to 30% + 1% per hero lvl and enables activation on non damaging and mass spells
+#
+# ----------------------------------------------------
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00578230                                                    ### 00978E30 is spell dealing damage?
+originalBytes:  8B 4F 04 8B D6 E8 76 CE B6 FF 84 C0 0F 84 96 01 00 00
+patchBytes:     90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+---
+#group: Original
+#patchAddress:   00578242                                                    ### 00978E42 is spell mass? This will activate salvo calculation under mass spell cast cursor unit
+#originalBytes:  8B 4F 04 E8 26 B8 0B 00 84 C0 0F 85 86 01 00 00
+#patchBytes:     90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+#---
+group: Original
+patchAddress:   00578330                                                     ### 00978F30 Salvo formula
+originalBytes:  6C 00 0A
+patchBytes:     68 1E 90
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   004B4310                                                    ### 008B4F10 is spell dealing damage?
+originalBytes:  8B 4F 04 8B D6 E8 46 26 0D 00 84 C0 0F 84 96 01 00 00
+patchBytes:     90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+---
+#group: Quantomas3.1j
+#patchAddress:   004B4322                                                    ### 008B4F22 is spell mass? This will activate salvo calculation under mass spell cast cursor unit
+#originalBytes:  8B 4F 04 E8 16 0F 02 00 84 C0 0F 85 86 01 00 00
+#patchBytes:     90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+#---
+group: Quantomas3.1j
+patchAddress:   004B4410                                                     ### 008B5010 Salvo formula
+originalBytes:  6C 00 0A
+patchBytes:     68 1E 90

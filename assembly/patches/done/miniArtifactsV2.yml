@@ -1,0 +1,449 @@
+# ----------------------------------------------------
+# ---------------- Mini Artifacts V2.2 ---------------
+# ----------------------------------------------------
+# Changes the calculation for the values of the mini artifacts
+#
+# The routine for calculating the mini artifacts has been
+# completely rewritten. For all mini artifacts (except 
+# for Magic Defense) the method is now as following:
+#
+#  value = (wisdom * miniArtifact_per_mille) / 1000
+#  value++
+#  if(value > miniArtifact_max)
+#    value = miniArtifact_max
+#
+# miniArtifact_per_mille and miniArtifact_max can be set for each
+# artifact seperately. 
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+  - &attack_per_mille            150
+  - &attack_max                   20
+  
+  - &shatter_per_mille           100
+  - &shatter_max                  10
+  
+  - &health_per_mille            167
+  - &health_max                   15
+  
+  - &defense_per_mille           150
+  - &defense_max                  20
+  
+  - &magicProof_max_percent     40.001
+  
+  - &luck_per_mille               50
+  - &luck_max                     10
+  
+  - &moral_per_mille              50
+  - &moral_max                    10
+  
+  - &speed_per_mille              25
+  - &speed_max                     5
+  
+  - &initiative_per_mille        500
+  - &initiative_max               50
+  
+# -----------Things that should not be modified ----------------
+  
+  - &divisor                    1000
+  
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Original
+checkAddress:   8096F0
+checkBytes:     83 EC 0C 85 D2 56 8B F2 7F 05 BE 01 00 00 00 8D 41 FF
+patchAddress:   00809702         # 00C0A302
+originalBytes:  |
+  83 F8 09              # cmp eax,09 { 9 }
+  89 74 24 04           # mov [esp+04],esi
+  0F87 F4000000         # ja 00C0A403
+  FF 24 85 0CA4C000     # jmp dword ptr [eax*4+00C0A40C]
+  B8 67666666           # mov eax,66666667 { "gfff" }
+  F7 EE                 # imul esi
+  D1 FA                 # sar edx,1
+  8B C2                 # mov eax,edx
+  C1 E8 1F              # shr eax,1F { 31 }
+  8D 44 02 01           # lea eax,[edx+eax+01]
+  5E                    # pop esi
+  83 C4 0C              # add esp,0C { 12 }
+  C3                    # ret 
+  8B C6                 # mov eax,esi
+  99                    # cdq 
+  83 E2 03              # and edx,03 { 3 }
+  03 C2                 # add eax,edx
+  C1 F8 02              # sar eax,02 { 2 }
+  83 C0 01              # add eax,01 { 1 }
+  5E                    # pop esi
+  83 C4 0C              # add esp,0C { 12 }
+  C3                    # ret 
+patchBytes:     |
+  83 F8 05              # cmp eax,05 { 5 }
+  89 74 24 04           # mov [esp+04],esi
+  74 35                 # je 00C0A340
+  8B C8                 # mov ecx,eax
+  0FAF 34 8D 0CA4C000   # imul esi,[ecx*4+00C0A40C]
+  8B C6                 # mov eax,esi
+  BA 00000000           # mov edx,00000000 { 0 }
+  8B 35 0CA4C000        # mov esi,[00C0A40C] { [000003E8] }
+  F7 FE                 # idiv esi
+  40                    # inc eax
+  8B 34 8D B2A3C000     # mov esi,[ecx*4+00C0A3B2]
+  39 F0                 # cmp eax,esi
+  0F8C 02000000         # jl 00C0A336
+  8B C6                 # mov eax,esi
+  5E                    # pop esi
+  83 C4 0C              # add esp,0C { 12 }
+  C3                    # ret 
+  90*                   # nops to fill
+---
+group: Original
+patchAddress:   0080980C         # 00C0A40C
+valueType:      Integer
+originalBytes:  16 A3 C0 00 
+patchValue:     *divisor
+---
+group: Original
+patchAddress:   00809810         # 00C0A410
+valueType:      Integer
+originalBytes:  2D A3 C0 00 
+patchValue:     *attack_per_mille
+---
+group: Original
+patchAddress:   00809814         # 00C0A414
+valueType:      Integer
+originalBytes:  E2 A3 C0 00
+patchValue:     *shatter_per_mille
+---
+group: Original
+patchAddress:   00809818         # 00C0A418
+valueType:      Integer
+originalBytes:  16 A3 C0 00 
+patchValue:     *health_per_mille
+---
+group: Original
+patchAddress:   0080981C         # 00C0A41C
+valueType:      Integer
+originalBytes:  2D A3 C0 00
+patchValue:     *defense_per_mille
+---
+group: Original
+checkAddress:   00809820         # 00C0A420
+checkBytes:     40 A3 C0 00 
+---
+group: Original
+patchAddress:   00809824         # 00C0A424
+valueType:      Integer
+originalBytes:  B2 A3 C0 00
+patchValue:     *luck_per_mille
+---
+group: Original
+patchAddress:   00809828         # 00C0A428
+valueType:      Integer
+originalBytes:  CA A3 C0 00
+patchValue:     *moral_per_mille
+---
+group: Original
+patchAddress:   0080982C         # 00C0A42C
+valueType:      Integer
+originalBytes:  E2 A3 C0 00 
+patchValue:     *speed_per_mille
+---
+group: Original
+patchAddress:   00809830         # 00C0A430
+valueType:      Integer
+originalBytes:  FC A3 C0 00
+patchValue:     *initiative_per_mille
+---
+group: Original
+checkAddress:   008097B2         # 00C0A3B2
+checkBytes:     B8 67 66 66 
+---
+group: Original
+patchAddress:   008097B6         # 00C0A3B6
+valueType:      Integer
+originalBytes:  66 F7 EE C1 
+patchValue:     *attack_max
+---
+group: Original
+patchAddress:   008097BA         # 00C0A3BA
+valueType:      Integer
+originalBytes:  FA 02 8B CA 
+patchValue:     *shatter_max
+---
+group: Original
+patchAddress:   008097BE         # 00C0A3BE
+valueType:      Integer
+originalBytes:  C1 E9 1F 8D 
+patchValue:     *health_max
+---
+group: Original
+patchAddress:   008097C2         # 00C0A3C2
+valueType:      Integer
+originalBytes:  44 0A 01 5E 
+patchValue:     *defense_max
+---
+group: Original
+checkAddress:   008097C6         # 00C0A3C6
+checkBytes:     83 C4 0C C3 
+---
+group: Original
+patchAddress:   008097CA         # 00C0A3CA
+valueType:      Integer
+originalBytes:  B8 67 66 66 
+patchValue:     *luck_max
+---
+group: Original
+patchAddress:   008097CE         # 00C0A3CE
+valueType:      Integer
+originalBytes:  66 F7 EE C1 
+patchValue:     *moral_max
+---
+group: Original
+patchAddress:   008097D2         # 00C0A3D2
+valueType:      Integer
+originalBytes:  FA 02 8B C2 
+patchValue:     *speed_max
+---
+group: Original
+patchAddress:   008097D6         # 00C0A3D6
+valueType:      Integer
+originalBytes:  C1 E8 1F 8D
+patchValue:     *initiative_max
+---
+group: Original
+patchAddress:   008097DA         # 00C0A3DA
+originalBytes:  |
+  44 02 01              # lea eax,[edx+eax+01]
+  5E                    # pop esi
+  83 C4 0C              # add esp,0C { 12 }
+  C3                    # ret 
+  B8 89 88 88 88        # mov eax,88888889 { -2004318071 }
+  F7 EE                 # imul esi
+  03 D6                 # add edx,esi
+  C1 FA 03              # sar edx,03 { 3 }
+  8B CA                 # mov ecx,edx
+  C1 E9 1F              # shr ecx,1F { 31 }
+  8D 44 0A 01           # lea eax,[edx+ecx+01]
+  5E                    # pop esi
+  83 C4 0C              # add esp,0C { 12 }
+  C3                    # ret 
+  8B C6                 # mov eax,esi
+  5E                    # pop esi
+  83 C4 0C              # add esp,0C { 12 }
+  C3                    # ret 
+  83 C8 FF              # or eax,-01 { 255 }
+  5E                    # pop esi
+  83 C4 0C              # add esp,0C { 12 }
+  C3                    # ret 
+patchBytes:     90*
+---
+group: Original
+patchAddress:   00809793                           # 00C0A393 pointer to 85% magic proof cap value
+valueType:      Address
+originalValue:  E88638                             # Pointer to double value 85.0
+patchValue:     400328                             # Pointer to own double value
+---
+group: Original
+patchAddress:   328                                # free space
+originalBytes:  00 00 00 00 00 00 00 00
+valueType:      Double
+patchValue:     *magicProof_max_percent            # 75 percent magic proof value
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   5B4060
+checkBytes:     83 EC 0C 85 D2 56 8B F2 7F 05 BE 01 00 00 00 8D 41 FF
+patchAddress:   005B4072                   ## 009B4C72
+originalBytes:  |
+  83 F8 09              # cmp eax,09 { 9 }
+  89 74 24 04           # mov [esp+04],esi
+  0F87 F4000000         # ja 009B4D73
+  FF 24 85 7C4D9B00     # jmp dword ptr [eax*4+009B4D7C]
+  B8 67666666           # mov eax,66666667 { "gfff" }
+  F7 EE                 # imul esi
+  D1 FA                 # sar edx,1
+  8B C2                 # mov eax,edx
+  C1 E8 1F              # shr eax,1F { 31 }
+  8D 44 02 01           # lea eax,[edx+eax+01]
+  5E                    # pop esi
+  83 C4 0C              # add esp,0C { 12 }
+  C3                    # ret 
+  8B C6                 # mov eax,esi
+  99                    # cdq 
+  83 E2 03              # and edx,03 { 3 }
+  03 C2                 # add eax,edx
+  C1 F8 02              # sar eax,02 { 2 }
+  83 C0 01              # add eax,01 { 1 }
+  5E                    # pop esi
+  83 C4 0C              # add esp,0C { 12 }
+  C3                    # ret 
+patchBytes:     |
+  83 F8 05              # cmp eax,05 { 5 }
+  89 74 24 04           # mov [esp+04],esi
+  74 35                 # je 009B4CB0
+  8B C8                 # mov ecx,eax
+  0FAF 34 8D 7C4D9B00   # imul esi,[ecx*4+009B4D7C]
+  8B C6                 # mov eax,esi
+  BA 00000000           # mov edx,00000000 { 0 }
+  8B 35 7C4D9B00        # mov esi,[009B4D7C] { [000003E8] }
+  F7 FE                 # idiv esi
+  40                    # inc eax
+  8B 34 8D 224D9B00     # mov esi,[ecx*4+009B4D22]
+  39 F0                 # cmp eax,esi
+  0F8C 02000000         # jl 009B4CA6
+  8B C6                 # mov eax,esi
+  5E                    # pop esi
+  83 C4 0C              # add esp,0C { 12 }
+  C3                    # ret 
+  90*                   # nops to fill
+---
+group: Quantomas3.1j
+patchAddress:   005B417C          ## 009B4D7C
+valueType:      Integer
+originalBytes:  86 4C 9B 00
+patchValue:     *divisor
+---
+group: Quantomas3.1j
+patchAddress:   005B4180          ## 009B4D80
+valueType:      Integer
+originalBytes:  9D 4C 9B 00
+patchValue:     *attack_per_mille
+---
+group: Quantomas3.1j
+patchAddress:   005B4184          ## 009B4D84
+valueType:      Integer
+originalBytes:  52 4D 9B 00 
+patchValue:     *shatter_per_mille
+---
+group: Quantomas3.1j
+patchAddress:   005B4188          ## 009B4D88
+valueType:      Integer
+originalBytes:  86 4C 9B 00 
+patchValue:     *health_per_mille
+---
+group: Quantomas3.1j
+patchAddress:   005B418C          ## 009B4D8C
+valueType:      Integer
+originalBytes:  9D 4C 9B 00 
+patchValue:     *defense_per_mille
+---
+group: Quantomas3.1j
+checkAddress:   005B4190          ## 009B4D90
+checkBytes:     B0 4C 9B 00 
+---
+group: Quantomas3.1j
+patchAddress:   005B4194          ## 009B4D94
+valueType:      Integer
+originalBytes:  22 4D 9B 00 
+patchValue:     *luck_per_mille
+---
+group: Quantomas3.1j
+patchAddress:   005B4198          ## 009B4D98
+valueType:      Integer
+originalBytes:  3A 4D 9B 00 
+patchValue:     *moral_per_mille
+---
+group: Quantomas3.1j
+patchAddress:   005B419C          ## 009B4D9C
+valueType:      Integer
+originalBytes:  52 4D 9B 00 
+patchValue:     *speed_per_mille
+---
+group: Quantomas3.1j
+patchAddress:   005B41A0          ## 009B4DA0
+valueType:      Integer
+originalBytes:  6C 4D 9B 00
+patchValue:     *initiative_per_mille
+---
+group: Quantomas3.1j
+checkAddress:   005B4122          ## 009B4D22
+checkBytes:     B8 67 66 66 
+---
+group: Quantomas3.1j
+patchAddress:   005B4126          ## 009B4D26
+valueType:      Integer
+originalBytes:  66 F7 EE C1 
+patchValue:     *attack_max
+---
+group: Quantomas3.1j
+patchAddress:   005B412A          ## 009B4D2A
+valueType:      Integer
+originalBytes:  FA 02 8B CA 
+patchValue:     *shatter_max
+---
+group: Quantomas3.1j
+patchAddress:   005B412E          ## 009B4D2E
+valueType:      Integer
+originalBytes:  C1 E9 1F 8D 
+patchValue:     *health_max
+---
+group: Quantomas3.1j
+patchAddress:   005B4132          ## 009B4D32
+valueType:      Integer
+originalBytes:  44 0A 01 5E 
+patchValue:     *defense_max
+---
+group: Quantomas3.1j
+checkAddress:   005B4136          ## 009B4D36
+checkBytes:     83 C4 0C C3 
+---
+group: Quantomas3.1j
+patchAddress:   005B413A          ## 009B4D3A
+valueType:      Integer
+originalBytes:  B8 67 66 66 
+patchValue:     *luck_max
+---
+group: Quantomas3.1j
+patchAddress:   005B413E          ## 009B4D3E
+valueType:      Integer
+originalBytes:  66 F7 EE C1 
+patchValue:     *moral_max
+---
+group: Quantomas3.1j
+patchAddress:   005B4142          ## 009B4D42
+valueType:      Integer
+originalBytes:  FA 02 8B C2 
+patchValue:     *speed_max
+---
+group: Quantomas3.1j
+patchAddress:   005B4146          ## 009B4D46
+valueType:      Integer
+originalBytes:  C1 E8 1F 8D
+patchValue:     *initiative_max
+---
+group: Quantomas3.1j
+patchAddress:   005B414A          ## 009B4D4A
+originalBytes:  |
+  44 02 01              # lea eax,[edx+eax+01]
+  5E                    # pop esi
+  83 C4 0C              # add esp,0C { 12 }
+  C3                    # ret 
+  B8 89 88 88 88        # mov eax,88888889 { -2004318071 }
+  F7 EE                 # imul esi
+  03 D6                 # add edx,esi
+  C1 FA 03              # sar edx,03 { 3 }
+  8B CA                 # mov ecx,edx
+  C1 E9 1F              # shr ecx,1F { 31 }
+  8D 44 0A 01           # lea eax,[edx+ecx+01]
+  5E                    # pop esi
+  83 C4 0C              # add esp,0C { 12 }
+  C3                    # ret 
+  8B C6                 # mov eax,esi
+  5E                    # pop esi
+  83 C4 0C              # add esp,0C { 12 }
+  C3                    # ret 
+  83 C8 FF              # or eax,-01 { 255 }
+  5E                    # pop esi
+  83 C4 0C              # add esp,0C { 12 }
+  C3                    # ret 
+patchBytes:     90*
+---
+group: Quantomas3.1j
+patchAddress:   005B4103                           # 009B4D03 pointer to 85% magic proof cap value
+valueType:      Address
+originalValue:  E5F3E8                             # Pointer to double value 85.0
+patchValue:     400328                             # Pointer to own double value
+---
+group: Quantomas3.1j
+patchAddress:   328                                # free space
+originalBytes:  00 00 00 00 00 00 00 00
+valueType:      Double
+patchValue:     *magicProof_max_percent            # 85 percent magic proof value

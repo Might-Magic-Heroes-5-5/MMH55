@@ -1,0 +1,197 @@
+# ----------------------------------------------------
+# ------------ First Aid Tent mod  ---------------
+# ----------------------------------------------------
+# Changes the following aspects of First Aid Tent war machine:
+# - Changed: flat bonus healing amount from (10,20,50,100) per War Machine mastery to (20,30,40,60) per Defense mastery
+# - Changed: "Embalmer" specialization healing bonus from 5 per hero level to 5 per defense primary stat.
+# - Added: Additional healing bonus based on Defense primary stat. Bonus is based on War Machines mastery level - 5,6,8,10
+# - Changed: Cleansing debufs level 0/0/1/3 based on War Machine mastery to debufs level 0/1/2/3 based on Light Magic mastery
+# 
+# By Deflaktor & Dredknight
+#
+# -------------- Things you may want to modify -----------------
+definitions:
+- &new_skill_used_for_mastery                     7
+- &m55_flat_healing_none_mastery                 20
+- &m55_flat_healing_basic_mastery                30
+- &m55_flat_healing_advanced_mastery             40
+- &m55_flat_healing_expert_mastery               60
+
+- &per_defense_point_healing_none_WM_mastery      4
+- &per_defense_point_healing_basic_WM_mastery     4
+- &per_defense_point_healing_advanced_WM_mastery  6
+- &per_defense_point_healing_expert_WM_mastery    8
+
+# -----------Things that should not be modified ----------------
+- &toe_skill_used_for_mastery             2
+- &toe_flat_healing_none_mastery         10
+- &toe_flat_healing_basic_mastery        20
+- &toe_flat_healing_advanced_mastery     50
+- &toe_flat_healing_expert_mastery      100
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ checkAddress:   00576596
+ checkBytes:     03 56 57 8B F9 77 3D FF 24 85 4C 72 97 00 C7 07
+ patchAddress:   00674ED6   # 00A75AD6
+ valueType:      Byte
+ originalValue:  *toe_skill_used_for_mastery
+ patchValue:     *new_skill_used_for_mastery
+---
+ group: Original
+ patchAddress:   005765A6   # 009771A6
+ valueType:      Integer
+ originalValue:  *toe_flat_healing_none_mastery
+ patchValue:     *m55_flat_healing_none_mastery
+---
+ group: Original
+ patchAddress:   005765B4   # 009771B4
+ valueType:      Integer
+ originalValue:  *toe_flat_healing_basic_mastery
+ patchValue:     *m55_flat_healing_basic_mastery
+---
+ group: Original
+ patchAddress:   005765C2   # 009771C2
+ valueType:      Integer
+ originalValue:  *toe_flat_healing_advanced_mastery
+ patchValue:     *m55_flat_healing_advanced_mastery
+---
+ group: Original
+ patchAddress:   005765C8   # 009771C8
+ valueType:      Integer
+ originalValue:  1
+ patchValue:     0
+---
+ group: Original
+ patchAddress:   005765D0   # 009771D0
+ valueType:      Integer
+ originalValue:  *toe_flat_healing_expert_mastery
+ patchValue:     *m55_flat_healing_expert_mastery
+---
+ group: Original
+ patchAddress:   005765D6   # 009771D6
+ valueType:      Integer
+ originalValue:  3
+ patchValue:     0
+---
+ group: Original
+ patchAddress:   005765F0   # 009771F0 fork code
+ originalBytes:  8B 46 04 8B 48 08
+ patchBytes:     E9 05 1F 49 00 90
+---
+ group: Original            # Change embalmer specialization bonus from per hero level to per hero defense stat
+ patchAddress:   00576618   # 00977218
+ originalBytes:  FF 92 3C 02 00 00
+ patchBytes:     FF 92 9C 01 00 00
+---
+ group: Original
+ patchAddress:   00A084FA                # 00E090FA
+ originalBytes:  00*                     # empty space
+ patchBytes:     8B 46 04 8B 48 08 8B 54 31 04 8D 4C 31 04 FF 92 9C 01 00 00 50 8B 06 89 F1 FF 10 8B 10 6A 02 89 C1 FF 92 74 01 00 00 59 8B 04 85 5A 91 E0 00 F7 E1 01 07 8B 46 04 8B 48 08 8B 06 89 F1 FF 10 8B 10 6A 0B 89 C1 FF 92 74 01 00 00 89 44 24 3C 8B 46 04 8B 48 08 E9 A2 E0 B6 FF 90 90 90 90 90 90
+---
+ group: Original
+ patchAddress:   00A0855A          # 00E0915A
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *per_defense_point_healing_none_WM_mastery
+---
+ group: Original
+ patchAddress:   00A0855E          # 00E0915E
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *per_defense_point_healing_basic_WM_mastery
+---
+ group: Original
+ patchAddress:   00A08562          # 00E09162
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *per_defense_point_healing_advanced_WM_mastery
+---
+ group: Original
+ patchAddress:   00A08566          # 00E09166
+ originalBytes:  00*               # empty space
+ valueType:      Integer
+ patchValue:     *per_defense_point_healing_expert_WM_mastery
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+ group: Quantomas3.1j
+ checkAddress:   004B26D6
+ checkBytes:     03 56 57 8B F9 77 3D FF 24 85 8C 33 8B 00 C7 07
+ patchAddress:   00741DF6          # 00B429F6
+ valueType:      Byte
+ originalValue:  *toe_skill_used_for_mastery
+ patchValue:     *new_skill_used_for_mastery
+---
+ group: Quantomas3.1j              # 
+ patchAddress:   004B26E6          # 008B32E6
+ valueType:      Integer
+ originalValue:  *toe_flat_healing_none_mastery
+ patchValue:     *m55_flat_healing_none_mastery
+---
+ group: Quantomas3.1j
+ patchAddress:   004B26F4          # 008B32F4
+ valueType:      Integer
+ originalValue:  *toe_flat_healing_basic_mastery
+ patchValue:     *m55_flat_healing_basic_mastery
+---
+ group: Quantomas3.1j
+ patchAddress:   004B2702          # 008B3302
+ valueType:      Integer
+ originalValue:  *toe_flat_healing_advanced_mastery
+ patchValue:     *m55_flat_healing_advanced_mastery
+---
+ group: Quantomas3.1j
+ patchAddress:   004B2708          # 008B3308
+ valueType:      Integer           # remove basic cleansing from Advanced WM skill
+ originalValue:  1
+ patchValue:     0
+---
+ group: Quantomas3.1j
+ patchAddress:   004B2710          # 008B3310
+ valueType:      Integer
+ originalValue:  *toe_flat_healing_expert_mastery
+ patchValue:     *m55_flat_healing_expert_mastery
+---
+ group: Quantomas3.1j              # remove expert cleansing from Expert WM skill
+ patchAddress:   004B2716          # 008B3316
+ valueType:      Integer
+ originalValue:  3
+ patchValue:     0
+---
+ group: Quantomas3.1j 
+ patchAddress:   004B2730           # 008B3330 fork code
+ originalBytes:  8B 46 04 8B 48 08
+ patchBytes:     E9 15 40 55 00 90
+---
+ group: Quantomas3.1j               # Change embalmer specialization bonus from per hero level to per hero defense stat
+ patchAddress:   004B2758           # 008B3358
+ originalBytes:  FF 92 34 02 00 00
+ patchBytes:     FF 92 94 01 00 00
+---
+ group: Quantomas3.1j
+ patchAddress:   00A0674A           # 00E0734A
+ originalBytes:  00*                # empty space 
+ patchBytes:     8B 46 04 8B 48 08 8B 54 31 04 8D 4C 31 04 FF 92 94 01 00 00 50 8B 06 89 F1 FF 10 8B 10 6A 02 89 C1 FF 92 78 01 00 00 59 8B 04 85 AA 73 E0 00 F7 E1 01 07 8B 46 04 8B 48 08 8B 06 89 F1 FF 10 8B 10 6A 0B 89 C1 FF 92 78 01 00 00 89 44 24 3C 8B 46 04 8B 48 08 E9 92 BF AA FF 90 90 90 90 90 90
+---
+ group: Quantomas3.1j
+ patchAddress:   00A067AA           # 00E073AA
+ originalBytes:  00*
+ valueType:      Integer
+ patchValue:     *per_defense_point_healing_none_WM_mastery
+---
+ group: Quantomas3.1j
+ patchAddress:   00A067AE           # 00E073AE
+ originalBytes:  00*
+ valueType:      Integer
+ patchValue:     *per_defense_point_healing_basic_WM_mastery
+---
+ group: Quantomas3.1j
+ patchAddress:   00A067B2           # 00E073B2
+ originalBytes:  00*
+ valueType:      Integer
+ patchValue:     *per_defense_point_healing_advanced_WM_mastery
+---
+ group: Quantomas3.1j
+ patchAddress:   00A067B6           # 00E073B6
+ originalBytes:  00*
+ valueType:      Integer
+ patchValue:     *per_defense_point_healing_expert_WM_mastery
