@@ -19,15 +19,15 @@
 #
 # -------------- Things you may want to modify -----------------
 definitions: 
-- &pathfinding_factor                         0.25   # original value is 0.5, lowering it means stronger bonus
+- &pathfinding_factor                         0.00   # original value is 0.5, lowering it means stronger bonus
 - &tracker_factor_per_level                   0.01   # original value is 0.01
 - &diagonal_movement_factor                   1.41   # original value is 1.41
 - &move_cost_hero_homeland                     100
 - &move_cost_road                               75
-- &move_cost_ship                              110
+- &move_cost_ship                               75
 - &move_cost_standard                          100
-- &move_penalty_dirt_lava_taiga_subterran       25
-- &move_penalty_sand_snow                       25
+- &move_penalty_dirt_lava_taiga_subterran       10
+- &move_penalty_sand_snow                       10
 
 # -----------Things that should not be modified ----------------
 
