@@ -1,0 +1,28 @@
+# ----------------------------------------------------
+# ----------------- Protector specialization fix v1.0 --------------
+# ----------------------------------------------------
+#
+# Changes "Protector" specialization hp bonus level divisor
+#
+# ----------------------------------------------------
+# Value is  2^34/X where X is the level_divisor multiplied by 2. 20 means divisor by 10. 10 - by 5, etc..
+# Things you may want to modify
+definitions: 
+- &devisor_by_5        1717986919     # Original value. This is 2^32/20 which is div by 10 lvls 
+- &devisor_by_10       858993460      # this is 2^32/10 which is div by 5 lvls
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   000BB92B       # 004BC52B
+valueType:      Integer
+originalValue:  *devisor_by_5
+patchValue:     *devisor_by_10
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   004750CB       # 00875CCB
+valueType:      Integer
+originalValue:  *devisor_by_5
+patchValue:     *devisor_by_10

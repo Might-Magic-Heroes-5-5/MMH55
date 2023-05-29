@@ -1,0 +1,52 @@
+# ----------------------------------------------------
+# ----------------- Power of Stone --------------
+# ----------------------------------------------------
+# 
+#  Change spell granted by Power of Stone
+# ----------------------------------------------------
+# ---- adjustable values ------
+definitions: 
+ - &M55_SPELL 29
+ # ---- Original ToE values - DO NOT MODIFY
+ - &TOE_SPELL 25
+ #
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00754496   ## 00B55096
+valueType:      Integer
+originalValue:  *TOE_SPELL
+patchValue:     *M55_SPELL
+---
+group: Original
+patchAddress:   006338E6   ## 00A344E6
+valueType:      BYTE
+originalValue:  *TOE_SPELL
+patchValue:     *M55_SPELL
+---
+group: Original
+patchAddress:   0074A906   ## 00B4B506
+valueType:      BYTE
+originalValue:  *TOE_SPELL
+patchValue:     *M55_SPELL
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400 
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   004D50B6   ## 008D5CB6
+valueType:      BYTE
+originalValue:  *TOE_SPELL
+patchValue:     *M55_SPELL
+---
+group: Quantomas3.1j
+patchAddress:   005F6466   ## 009F7066
+valueType:      BYTE
+originalValue:  *TOE_SPELL
+patchValue:     *M55_SPELL
+---
+group: Quantomas3.1j
+patchAddress:   005FFBDF   ## 00A007DF
+valueType:      BYTE
+originalValue:  *TOE_SPELL
+patchValue:     *M55_SPELL

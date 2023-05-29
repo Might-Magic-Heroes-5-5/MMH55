@@ -1,0 +1,21 @@
+# ----------------------------------------------------
+# ----------------- Ranged Retaliation strike --------------
+# ----------------------------------------------------
+#
+# Adds Hero retaliates not only on melee but also on ranged attacks against the marked creature.
+#
+# ----------------------------------------------------
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original               ## Remove check for Melee/Ranged attack
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   0066496B      ## 00A6556B 
+originalBytes:  75 18
+patchBytes:     90 90
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j          ## Remove check for Melee/Ranged attack
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   00598753      ## 00999353 
+originalBytes:  75 19
+patchBytes:     90 90

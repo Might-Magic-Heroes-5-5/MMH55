@@ -1,0 +1,31 @@
+# ----------------------------------------------------
+# ----------------- Pyromancy bonus --------------
+# ----------------------------------------------------
+#
+# Remove Pyromancy bonus of 40%
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC   
+patchAddress:   00461C6F   ## 0086286F                                            
+originalBytes:  74
+patchBytes:     EB
+#---
+#group: Original
+#patchAddress:   00461C80   ## 00862880   40-25                                           
+#originalBytes:  94 C1 E4 00
+#patchBytes:     BC 39 E2 00
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   006711CF   ## 00A71DCF
+originalBytes:  74
+patchBytes:     EB
+#---
+#group: Quantomas3.1j
+#patchAddress:   006711E0   ## 00A71DE0   40-25                                       
+#originalBytes:  E0 4E E6 00
+#patchBytes:     10 D4 E2 00
+

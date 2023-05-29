@@ -1,0 +1,21 @@
+# ----------------------------------------------------
+# --------------- Rune of Dragonform fix ------------
+# ----------------------------------------------------
+#
+# Disables usage of Rune of Dragonform for Fire Dragon.
+#
+# ----------------------------------------------------------
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   000BA413        ## 004BB013
+originalBytes:  8B 80 00 01 00 00 83 C0 D7 83 F8 3F 77 12 0F B6 80 40 B0 4B 00 FF 24 85 38 B0 4B 00
+patchBytes:     8B 80 8C 00 00 00 83 F8 07 7C 15 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   00473C13        ## 00874813
+originalBytes:  8B 80 00 01 00 00 83 C0 D7 83 F8 3F 77 12 0F B6 80 40 48 87 00 FF 24 85 38 48 87 00
+patchBytes:     8B 80 8C 00 00 00 83 F8 07 7C 15 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90

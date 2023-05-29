@@ -1,0 +1,53 @@
+# ----------------------------------------------------
+# ----------------- Dwarven Formations for All --------------
+# ----------------------------------------------------
+#
+# Makes "Offensive & Defensive formation" skills applicable to all units
+# WARNING: Dwarven formations formula depends on unit POWER value. Make sure proper power balance is done otherwise players can experience non intuitive bonus disparities.
+# Note: If 2 nearby stacks have the same POWER value, none of them will gain any bonus
+# ----------------------------------------------------
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   004A18F1                                ## 008A24F1 if unit is dwarf calculate defensive formation coeficient
+originalBytes:  0F 85 8D 00 00 00
+patchBytes:     90 90 90 90 90 90
+---
+group: Original
+patchAddress:   004A1D6E                                ## 008A296E if unit is Dwarf, calculate power
+originalBytes:  0F 85 F2 00 00 00
+patchBytes:     90 90 90 90 90 90
+---
+group: Original
+patchAddress:   004A1DE6                                ## 008A29E6 if unit is Dwarf, give attack/defense
+originalBytes:  75 0B
+patchBytes:     90 90
+---
+group: Original
+patchAddress:   004A3DEE                                ## 008A49EE if unit is dwarf calculate offensive formation coeficient
+originalBytes:  0F 85 89 00 00 00
+patchBytes:     90 90 90 90 90 90
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   004D9B21                                ## 008DA721 if unit is dwarf calculate defensive formation coeficient
+originalBytes:  0F 85 8D 00 00 00
+patchBytes:     90 90 90 90 90 90
+---
+group: Quantomas3.1j
+patchAddress:   004D9F9E                                ## 008DAB9E if unit is Dwarf, calculate power
+originalBytes:  0F 85 F2 00 00 00
+patchBytes:     90 90 90 90 90 90
+---
+group: Quantomas3.1j
+patchAddress:   004DA016                                ## 008DAC16 if unit is Dwarf, give attack/defense
+originalBytes:  75 0B
+patchBytes:     90 90
+---
+group: Quantomas3.1j
+patchAddress:   004DBFBE                                ## 008DCBBE if unit is dwarf calculate offensive formation coeficient
+originalBytes:  0F 85 89 00 00 00
+patchBytes:     90 90 90 90 90 90
