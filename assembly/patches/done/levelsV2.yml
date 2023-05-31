@@ -1,0 +1,351 @@
+# ----------------------------------------------------
+# -------------------- Levels V2.0 -------------------
+# ----------------------------------------------------
+# A complete rewrite of the experience table and sets max level to 99.
+#
+# The experience curve is less steep after level 25. Everything below that is like original.
+#
+# Instead of calculating the needed experience for next level, the exp is precalculated 
+# and inserted into the EXE file directly. This eliminates the cache ingame. 
+#
+# As such the first 65 levels are hardcoded into the EXE file. If the hero reaches 
+# level 65, it takes the last_defined_level_exp and increases it by 
+# after_last_defined_level_exp_increase for each additional level. In this example,
+# the last defined level is 65 with the needed exp of 300M and an increase of 50M. 
+# Level 51 will need 350M, 
+# level 52 will need 400M, 
+# level 53 will need 450M,
+#    ...
+# level 99 will need 2B.
+#
+# In the EXE file there is enough space for up to 77 user defined levels, if needed.
+#
+definitions: 
+# -----------Things that you may want to modify ----------------
+
+ - &max_level     99
+
+ - &experience_table | 
+   0        , 1000     , 2000     , 3200     , 4600     ,    #  1 -  5
+   6200     , 8000     , 10000    , 12200    , 14700    ,    #  6 - 10
+   17500    , 20600    , 24300    , 28700    , 34100    ,    # 11 - 15
+   40500    , 48200    , 57400    , 68500    , 81700    ,    # 16 - 20
+   97600    , 116000   , 139000   , 167000   , 200000   ,    # 21 - 25
+   239000   , 286000   , 343000   , 411000   , 492000   ,    # 26 - 30
+   590000   , 706000   , 846000   , 1010000  , 1210000  ,    # 31 - 35
+   1450000  , 1740000  , 2080000  , 2500000  , 3000000  ,    # 36 - 40
+   3600000  , 4330000  , 5230000  , 6310000  , 7640000  ,    # 41 - 45
+   9240000  , 11200000 , 13500000 , 16400000 , 20000000 ,    # 46 - 50
+   24100000 , 29100000 , 35100000 , 42200000 , 50600000 ,    # 51 - 55
+   60700000 , 72600000 , 86900000 , 103000000, 124000000,    # 56 - 60
+   148000000, 176000000, 210000000, 251000000, 300000000     # 61 - 65
+
+ - &last_defined_level     65
+ - &last_defined_level_exp     300000000
+ - &after_last_defined_level_exp_increase     50000000
+
+# -----------Things that should not be modified ----------------
+ - &original_max_level      40
+ - &level_0_exp              0
+ - &max_exp         2147483647 
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA --------------------
+ # the algorithm
+ group: Original
+ checkAddress:   0074BAA0
+ checkBytes:     5E C2 04 00 B0 01 5E C2 04 00 CC CC CC CC CC CC
+ patchAddress:   0074BAB0           # 00B4C6B0
+ originalBytes:  |
+   83 EC 08              # sub esp,08 { 8 }
+   80 3D 46710201 00     # cmp byte ptr [01027146],00 { [0] }
+   0F85 4C010000         # jne 00B4C80C
+   A1 E055F700           # mov eax,[00F755E0] { [00000000] }
+   8B 15 E455F700        # mov edx,[00F755E4] { [00000000] }
+   A3 906D0201           # mov [01026D90],eax { [00000000] }
+   A1 E855F700           # mov eax,[00F755E8] { [000003E8] }
+   A3 986D0201           # mov [01026D98],eax { [00000000] }
+   A1 F055F700           # mov eax,[00F755F0] { [00000C80] }
+   89 15 946D0201        # mov [01026D94],edx { [00000000] }
+   8B 15 EC55F700        # mov edx,[00F755EC] { [000007D0] }
+   A3 A06D0201           # mov [01026DA0],eax { [00000000] }
+ patchBytes:     |
+   B8 FFFFFF7F           # mov eax,7FFFFFFF { 2147483647 }
+   3B 0D F0C6B400        # cmp ecx,[00B4C6F0] { [0000003C] }
+   0F8F 22000000         # jg 00B4C6E3
+   3B 0D F4C6B400        # cmp ecx,[00B4C6F4] { [00000032] }
+   0F8E 17000000         # jng 00B4C6E4
+   A1 F8C6B400           # mov eax,[00B4C6F8] { [0496ED40] }
+   8B 15 F4C6B400        # mov edx,[00B4C6F4] { [00000032] }
+   03 05 FCC6B400        # add eax,[00B4C6FC] { [01C9C380] }
+   42                    # inc edx
+   39 CA                 # cmp edx,ecx
+   7C F5                 # jl 00B4C6D8
+   C3                    # ret 
+   8B 04 8D 00C7B400     # mov eax,[ecx*4+00B4C700]
+   C3                    # ret 
+   90                    # nop 
+   90                    # nop 
+   90                    # nop 
+   90                    # nop 
+---
+ # max level for algorithm
+ group: Original
+ patchAddress:   0074BAF0           # 00B4C6F0
+ valueType:      Integer
+ originalBytes:  A1 F8 55 F7
+ patchValue:     *max_level
+---
+ # last defined level for algorithm
+ group: Original
+ patchAddress:   0074BAF4           # 00B4C6F4
+ valueType:      Integer
+ originalBytes:  00 89 15 9C
+ patchValue:     *last_defined_level
+---
+ # last defined level exp for algorithm
+ group: Original
+ patchAddress:   0074BAF8           # 00B4C6F8
+ valueType:      Integer
+ originalBytes:  6D 02 01 8B
+ patchValue:     *last_defined_level_exp
+---
+ # the experience increase for each level after the last defined level for the algorithm
+ group: Original
+ patchAddress:   0074BAFC           # 00B4C6FC
+ valueType:      Integer
+ originalBytes:  15 F4 55 F7
+ patchValue:     *after_last_defined_level_exp_increase
+---
+ # level_0_exp
+ group: Original
+ patchAddress:   0074BB00           # 00B4C700
+ valueType:      Integer
+ originalBytes:  00 A3 A8 6D
+ patchValue:     *level_0_exp
+---
+ # experience_table
+ group: Original
+ patchAddress:   0074BB04           # 00B4C704
+ valueType:      Integer
+ originalBytes:   |
+   02 01 A1 00  56 F7 00 89  15 A4 6D 02  01 8B 15 FC  55 F7 00 A3  # 1-5
+   B0 6D 02 01  A1 08 56 F7  00 89 15 AC  6D 02 01 8B  15 04 56 F7  # 6-10
+   00 A3 B8 6D  02 01 A1 10  56 F7 00 56  8B 35 0C 56  F7 00 89 15  # 11-15
+   B4 6D 02 01  A3 C0 6D 02  01 8B D0 2B  C6 89 35 BC  6D 02 01 89  # 16-20
+   44 24 08 BE  C4 6D 02 01  8D 64 24 00  DB 44 24 08  D9 7C 24 04  # 21-25
+   0F B7 44 24  04 D8 0D 1C  2F E1 00 80  CC 0C 89 44  24 08 D9 6C  # 26-30
+   24 08 DB 5C  24 08 03 54  24 08 81 FA  FF FF FF 7F  D9 6C 24 04  # 31-35
+   0F 8D 80 00  00 00 85 D2  8B C2 7D 02  33 C0 89 06  83 C6 04 81  # 36-40
+   FE F4 6D 02  01 7C B5 BE  19 00 00 00  8D 46 F3 89  44 24 04 DB  # 41-45
+   44 24 04 D9  7C 24 04 0F  B7 44 24 04  DA 4C 24 08  80 CC 0C D8  # 46-50
+   0D 10 2F E1  00 89 44 24  08 D9 6C 24  08 DB 5C 24  08 03 54 24  # 51-55
+   08 81 FA FF  FF FF 7F D9  6C 24 04 7D  30 85 D2 8B  C2 7D 02 33  # 56-60
+   C0 89 04 B5  90 6D 02 01  83 C6 01 83  FE 28 7E AC  C6 05 46 71  # 61-65
+   02 01 01 5E  85 C9 7D 14  33 C0 83 C4  08 C3 B8 FF  FF FF 7F EB  # 66-70
+   81 B8 FF FF  FF 7F EB D1  83 F9 28 B8  FF FF FF 7F  7F 07 8B 04  # 71-75
+   8D 90 6D 02  01 83 C4 08  C3*                                    # 76-77
+ patchValue:     *experience_table
+---
+ # default map max restriction level
+ group: Original
+ checkAddress:   596EBA
+ checkBytes:     C7 86 30 01 00 00
+ patchAddress:   00596EC0           # 00997AC0
+ valueType:      Integer
+ originalValue:  *original_max_level
+ patchValue:     *max_level
+---
+ # heroLevel > maxLevel?
+ group: Original
+ checkAddress:   5A9D71
+ checkBytes:     83 F8
+ patchAddress:   005A9D73           # 009AA973
+ valueType:      Byte
+ originalValue:  *original_max_level
+ patchValue:     *max_level
+---
+ # heroLevel := maxLevel
+ group: Original
+ checkAddress:   5A9D76
+ checkBytes:     B8
+ patchAddress:   005A9D77           # 009AA977
+ valueType:      Integer
+ originalValue:  *original_max_level
+ patchValue:     *max_level
+---
+ # unknown method: heroLevel right before reaching max level? heroLevel > maxLevel?
+ group: Original
+ checkAddress:   74BC54
+ checkBytes:     83 F9
+ patchAddress:   0074BC56           # 00B4C856
+ valueType:      Byte
+ originalValue:  *original_max_level
+ patchValue:     *max_level
+---
+ # unknown method: heroLevel := maxLevel
+ group: Original
+ checkAddress:   74BC59
+ checkBytes:     B8
+ patchAddress:   0074BC5A           # 00B4C85A
+ valueType:      Integer
+ originalValue:  *original_max_level
+ patchValue:     *max_level
+---
+ # currentMapMaxLevel > maxLevel?
+ group: Original
+ checkAddress:   58BA84
+ checkBytes:     83 F8
+ patchAddress:   0058BA86           # 0098C686
+ valueType:      Byte
+ originalValue:  *original_max_level
+ patchValue:     *max_level
+---
+ # currentMapMaxLevel := maxLevel
+ group: Original
+ checkAddress:   58BA89
+ checkBytes:     B8
+ patchAddress:   0058BA8A           # 0098C68A
+ valueType:      Integer
+ originalValue:  *original_max_level
+ patchValue:     *max_level
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+ # the algorithm
+ group: Quantomas3.1j
+ checkAddress:   5F75D0
+ checkBytes:     5E C2 04 00 B0 01 5E C2 04 00 CC CC CC CC CC CC
+ patchAddress:   005F75E0 ## 009F81E0
+ originalBytes:  |
+   83 EC 08              # sub esp,08 { 8 }
+   80 3D 8E0BFF00 00     # cmp byte ptr [00FF0B8E],00 { [1] }
+   0F85 4C010000         # jne 009F833C
+   A1 1828F700           # mov eax,[00F72818] { [00000000] }
+   8B 15 1C28F700        # mov edx,[00F7281C] { [00000000] }
+   A3 7807FF00           # mov [00FF0778],eax { [00000000] }
+   A1 2028F700           # mov eax,[00F72820] { [000003E8] }
+   A3 8007FF00           # mov [00FF0780],eax { [000003E8] }
+   A1 2828F700           # mov eax,[00F72828] { [00000C80] }
+   89 15 7C07FF00        # mov [00FF077C],edx { [00000000] }
+   8B 15 2428F700        # mov edx,[00F72824] { [000007D0] }
+   A3 8807FF00           # mov [00FF0788],eax { [00000C80] }
+ patchBytes:     |
+   B8 FFFFFF7F           # mov eax,7FFFFFFF { 2147483647 }
+   3B 0D 20829F00        # cmp ecx,[009F8220] { [0000003C] }
+   0F8F 22000000         # jg 009F8213
+   3B 0D 24829F00        # cmp ecx,[009F8224] { [00000032] }
+   0F8E 17000000         # jng 009F8214
+   A1 28829F00           # mov eax,[009F8228] { [0496ED40] }
+   8B 15 24829F00        # mov edx,[009F8224] { [00000032] }
+   03 05 2C829F00        # add eax,[009F822C] { [01C9C380] }
+   42                    # inc edx
+   39 CA                 # cmp edx,ecx
+   7C F5                 # jl 009F8208
+   C3                    # ret 
+   8B 04 8D 30829F00     # mov eax,[ecx*4+009F8230]
+   C3                    # ret 
+   90                    # nop 
+   90                    # nop 
+   90                    # nop 
+   90                    # nop 
+---
+ # max level for algorithm
+ group: Quantomas3.1j
+ patchAddress:   005F7620           # 009F8220
+ valueType:      Integer
+ originalBytes:  A1 30 28 F7
+ patchValue:     *max_level
+---
+ # last defined level for algorithm
+ group: Quantomas3.1j
+ patchAddress:   005F7624           # 009F8224
+ valueType:      Integer
+ originalBytes:  00 89 15 84
+ patchValue:     *last_defined_level
+---
+ # last defined level exp for algorithm
+ group: Quantomas3.1j
+ patchAddress:   005F7628           # 009F8228
+ valueType:      Integer
+ originalBytes:  07 FF 00 8B
+ patchValue:     *last_defined_level_exp
+---
+ # the experience increase for each level after the last defined level for the algorithm
+ group: Quantomas3.1j
+ patchAddress:   005F762C           # 009F822C
+ valueType:      Integer
+ originalBytes:  15 2C 28 F7
+ patchValue:     *after_last_defined_level_exp_increase
+---
+ # level_0_exp
+ group: Quantomas3.1j
+ patchAddress:   005F7630           # 009F8230
+ valueType:      Integer
+ originalBytes:  00 A3 90 07
+ patchValue:     *level_0_exp
+---
+ # experience_table
+ group: Quantomas3.1j
+ patchAddress:   005F7634           # 009F8234
+ valueType:      Integer
+ originalBytes:   |
+   FF 00 A1 38  28 F7 00 89  15 8C 07 FF  00 8B 15 34  28 F7 00 A3  # 1-5
+   98 07 FF 00  A1 40 28 F7  00 89 15 94  07 FF 00 8B  15 3C 28 F7  # 6-10
+   00 A3 A0 07  FF 00 A1 48  28 F7 00 56  8B 35 44 28  F7 00 89 15  # 11-15
+   9C 07 FF 00  A3 A8 07 FF  00 8B D0 2B  C6 89 35 A4  07 FF 00 89  # 16-20
+   44 24 08 BE  AC 07 FF 00  8D 64 24 00  DB 44 24 08  D9 7C 24 04  # 21-25
+   0F B7 44 24  04 D8 0D C8  9F E0 00 80  CC 0C 89 44  24 08 D9 6C  # 26-30
+   24 08 DB 5C  24 08 03 54  24 08 81 FA  FF FF FF 7F  D9 6C 24 04  # 31-35
+   0F 8D 80 00  00 00 85 D2  8B C2 7D 02  33 C0 89 06  83 C6 04 81  # 36-40
+   FE DC 07 FF  00 7C B5 BE  19 00 00 00  8D 46 F3 89  44 24 04 DB  # 41-45
+   44 24 04 D9  7C 24 04 0F  B7 44 24 04  DA 4C 24 08  80 CC 0C D8  # 46-50
+   0D C0 9F E0  00 89 44 24  08 D9 6C 24  08 DB 5C 24  08 03 54 24  # 51-55
+   08 81 FA FF  FF FF 7F D9  6C 24 04 7D  30 85 D2 8B  C2 7D 02 33  # 56-60
+   C0 89 04 B5  78 07 FF 00  83 C6 01 83  FE 28 7E AC  C6 05 8E 0B  # 61-65
+   FF 00 01 5E  85 C9 7D 14  33 C0 83 C4  08 C3 B8 FF  FF FF 7F EB  # 66-70
+   81 B8 FF FF  FF 7F EB D1  83 F9 28 B8  FF FF FF 7F  7F 07 8B 04  # 71-75
+   8D 78 07 FF  00 83 C4 08  C3*                                    # 76-77
+ patchValue:     *experience_table
+---
+ # default map max restriction level
+ group: Quantomas3.1j
+ checkAddress:   0049F07A
+ checkBytes:     C7 86 30 01 00 00
+ patchAddress:   0049F080           # 0089FC80
+ valueType:      Integer
+ originalValue:  *original_max_level
+ patchValue:     *max_level
+---
+ # unknown method: heroLevel right before reaching max level? heroLevel > maxLevel?
+ group: Quantomas3.1j
+ checkAddress:   0048ED11
+ checkBytes:     83 F8
+ patchAddress:   0048ED13           # 0088F913
+ valueType:      Byte
+ originalValue:  *original_max_level
+ patchValue:     *max_level
+---
+ # unknown method: heroLevel := maxLevel
+ group: Quantomas3.1j
+ checkAddress:   0048ED16 
+ checkBytes:     B8
+ patchAddress:   0048ED17           # 0088F917
+ valueType:      Integer
+ originalValue:  *original_max_level
+ patchValue:     *max_level
+---
+ # currentMapMaxLevel > maxLevel?
+ group: Quantomas3.1j
+ checkAddress:   493774
+ checkBytes:     83 F8
+ patchAddress:   00493776           # 00894376
+ valueType:      Byte
+ originalValue:  *original_max_level
+ patchValue:     *max_level
+---
+ # currentMapMaxLevel := maxLevel
+ group: Quantomas3.1j
+ checkAddress:   493779
+ checkBytes:     B8
+ patchAddress:   0049377A           # 0089437A
+ valueType:      Integer
+ originalValue:  *original_max_level
+ patchValue:     *max_level
+---

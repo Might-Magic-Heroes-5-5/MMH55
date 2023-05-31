@@ -15,12 +15,12 @@
 #line 120 btw
 #in the decompiled
 #function
---- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------    
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
 --- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
 group: Quantomas3.1j
 checkAddress:   00000400
 checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
-patchAddress:   004DBC0F
+patchAddress:   004DBC0F           ## 008DC80F
 originalBytes:  D8 25 40 8D E0 00  ## default is init-1
 patchBytes:     D8 25 34 CD E0 00 ## this makes init-2
 
