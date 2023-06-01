@@ -1,0 +1,81 @@
+# ----------------------------------------------------
+# ----------------- hero UI fix --------------
+# ----------------------------------------------------
+#
+# Combines the contents of original Hero pane - "Skills" and "Biography" pages into one page.
+#
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   002C97F4              ## 006CA3F4
+originalBytes:  68 66 52 E3 00 68 60 52 E3
+patchBytes:     68 8D FF E1 00 68 84 FF E1
+---
+group: Original
+patchAddress:   002C981C              ## 006CA41C
+originalBytes:  8D 8E C4 00 00 00 E8 49 D6
+patchBytes:     8D 8E F8 00 00 00 E8 09 FB
+---
+group: Original
+patchAddress:   002C9834              ## 006CA434
+originalBytes:  68 8D FF E1 00 68 84 FF E1
+patchBytes:     68 66 52 E3 00 68 60 52 E3
+---
+group: Original
+patchAddress:   002C9864              ## 006CA464
+originalBytes:  8D 8E F8 00 00 00 E8 C1 FA
+patchBytes:     8D 8E C4 00 00 00 E8 01 D6
+---
+group: Original
+patchAddress:   002C986F              ## 006CA46F
+originalBytes:  8B 4C
+patchBytes:     EB 2A
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   00243605        ## 00644205
+originalBytes:  6A    
+patchBytes:     61    
+---
+group: Quantomas3.1j
+patchAddress:   0024360A        ## 0064420A
+originalBytes:  64
+patchBytes:     58
+---
+group: Quantomas3.1j
+patchAddress:   0024362E        ## 0064422E
+originalBytes:  C4
+patchBytes:     F8
+---
+group: Quantomas3.1j
+patchAddress:   00243633        ## 00644233
+originalBytes:  D9 D4
+patchBytes:     E9 F9
+---
+group: Quantomas3.1j
+patchAddress:   00243645        ## 00644245
+originalBytes:  61
+patchBytes:     6A
+---
+group: Quantomas3.1j
+patchAddress:   0024364A        ## 0064424A
+originalBytes:  58
+patchBytes:     64
+---
+group: Quantomas3.1j
+patchAddress:   00243676        ## 00644276
+originalBytes:  F8
+patchBytes:     C4
+---
+group: Quantomas3.1j
+patchAddress:   0024367B        ## 0064427B
+originalBytes:  A1 F9
+patchBytes:     91 D4
+---
+group: Quantomas3.1j
+patchAddress:   0024367F        ## 0064427F
+originalBytes:  8B 4C
+patchBytes:     EB 2A

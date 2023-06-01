@@ -1,0 +1,36 @@
+# ----------------------------------------------------
+# ----------------- New Hero Class Framework --------------
+# ----------------------------------------------------
+#
+# Increases Hero class count from 8 to 73
+#
+# -------------- Things you may want to modify -----------------
+definitions:
+- &new_class_count          74             # number should be equal to game classes + CLASS_NONE count
+# -------------- Things that should not be modified ----------------
+- &default_class_count      9             
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   006E1DE0 # address 00A564F0
+valueType:      Byte
+originalValue:  *default_class_count
+patchValue:     *new_class_count 
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   00461700 # address 00862300
+valueType:      Byte
+originalValue:  *default_class_count
+patchValue:     *new_class_count
+--- # --------------- MAP EDITOR EXE 3.1 PATCH DATA ---------------
+group: MapEditorOriginal
+checkAddress:   00000400
+checkBytes:     8B 4C 24 04 83 41 04 FF
+patchAddress:   004CFC20 # address 008D0820
+valueType:      Byte
+originalValue:  *default_class_count
+patchValue:     *new_class_count 
+

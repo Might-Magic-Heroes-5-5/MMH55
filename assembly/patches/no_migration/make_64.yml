@@ -1,0 +1,19 @@
+# ----------------------------------------------------
+# ----------------- Make 64 --------------
+# ----------------------------------------------------
+# enables usage of additional memory for EXE
+#
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+group: Original
+checkAddress:   00000400
+checkBytes:     8D 41 34 C3 CC CC CC CC
+patchAddress:   00000156
+originalBytes:  0E
+patchBytes:     2E
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+group: Quantomas3.1j
+checkAddress:   00000400
+checkBytes:     56 57 8B 7C 24 0C 57 8B F1 E8 D2 B7 00 00 83 C4
+patchAddress:   00000146
+originalBytes:  0E
+patchBytes:     2E
