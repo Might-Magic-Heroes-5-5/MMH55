@@ -27,9 +27,106 @@ Combat_XXXX modules:
 purecall:
 CombatBase
 
-00E52434     CombatCreature@NWorld@@6B@_2
+00E52434     CombatCreature@NWorld@@6B@_2   // 00E4FBA4
 00E7AF7C     CombatWarMachine@NWorld@@6B@_2
 00E6526C     CombatSpawn@NWorld@@6B@_2
-00E7B60C     CombatHero@NWorld@@6B@_3
+00E7B60C     CombatHero@NWorld@@6B@_3       // 00E8499C
 
 00E51A1C     CombatBase@NWorld@@6B@_1 
+
+
+0: CGenericMaterial	
+1: CWaterMaterial
+2: CTracksMaterial
+3: CTerrainMaterial
+4: CCloudsH5Material
+5: CAnimWaterMaterial
+6: CSurfMaterial
+7: CSimpleSkyMaterial(0)
+8: CReflectWaterMaterial
+9: CSimpleSkyMaterial(1)b
+
+
+case 1(0): AI
+case 2(3): lock
+case x(2): human
+
+
+player state on map:
+
+1 - active
+4 - slot not available
+
+
+
+human: 2
+AI: 0
+locked: 3:
+
+
+
+
+this is how you chain xml file to another one
+
+
+	<CameraLimits href="CameraLimits.xdb#xpointer(/CameraLimits)"/>
+	
+	
+	you can also do it inline instead of using another file 
+	
+	<CameraLimits href="#n:inline(CameraLimits)" id="item_860c389e-289c-4cdd-8ee8-83a7bf05b702">
+		<CameraLimits ObjectRecordID="1000012">
+			<limits>
+				<MinRod>55</MinRod>
+				<MaxRod>90</MaxRod>
+				<MinX>-1e+006</MinX>
+				<MaxX>1e+006</MaxX>
+				<MinY>1e+006</MinY>
+				<MaxY>-1e+006</MaxY>
+				<MinZ>8</MinZ>
+				<MaxZ>20</MaxZ>
+				<MinPitch>-35</MinPitch>
+				<MaxPitch>0</MaxPitch>
+				<MinYaw>0</MinYaw>
+				<MaxYaw>0</MaxYaw>
+				<UsePitchLimits>false</UsePitchLimits>
+				<UseYawLimits>false</UseYawLimits>
+			</limits>
+		</CameraLimits>
+	</CameraLimits>
+	
+	
+	
+	but how to do the opposite?
+	Lets say you have this
+	
+	
+	lets say you have this  xml code
+<?xml version="1.0" encoding="UTF-8"?>
+<RPGStats ObjectRecordID="1">
+	<CreaturePowerPointsForOneEnergy>12</CreaturePowerPointsForOneEnergy>
+	<NecroPendant_CreatureCostDisountPercents>20</NecroPendant_CreatureCostDisountPercents>
+	<TransformTable>
+		<Item>
+			<Dead>CREATURE_ACIDIC_HYDRA</Dead>
+			<Rise>CREATURE_LICH_MASTER</Rise>
+		</Item>
+		<Item>
+			<Dead>CREATURE_ANGEL</Dead>
+			<Rise>CREATURE_BONE_DRAGON</Rise>
+		</Item>
+		<Item>
+			<Dead>CREATURE_ANGER_TREANT</Dead>
+			<Rise>CREATURE_BANSHEE</Rise>
+		</Item>
+		<Item>
+			<Dead>CREATURE_ARCH_DEMON</Dead>
+			<Rise>CREATURE_HORROR_DRAGON</Rise>
+		</Item>
+	<TransformTable/>	
+</RPGStats>
+	
+	how to move TransformTable in another file and chain it to the source file. 
+	It should be done in a way that for the system reading the xml does not matter.
+	
+	
