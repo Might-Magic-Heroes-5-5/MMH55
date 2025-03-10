@@ -1,0 +1,8 @@
+<TextBlock FontSize="24" Margin="320,10"><Span  FontSize="24" Foreground="LightBlue">Ranked rules</Span></TextBlock>
+ - Players should agree that the game will be ranked
+ - One player should generate the map and distribute it to the opponent
+ - Players should agree on faction/hero pick method, game turn time, combat turn time.
+ - Exploiting bugs is strictly forbidden. Please report issues to mod discord channel or on moddb.
+ - End game report is written by the winner, the loser accepts the report with autofil.
+
+Be respectful and enjoy your time!

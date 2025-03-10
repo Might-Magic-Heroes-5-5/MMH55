@@ -1,0 +1,25 @@
+<TextBlock FontSize="22" Margin="0,5">Description</TextBlock> 
+    Unofficial expansion pack for HOMM5 that includes many new adventure objects, new larger battlefields, new heroes, new classes, new specializations, new skills, new artifacts, new adventure spells, new HD textures and a greatly improved RMG with more than 60 'visualized' Templates. The AI is much more intelligent and calculated much faster. Balance is also greatly improved both for small competitive multiplayer maps as well as XXXL maps with countless epic battles.
+
+<TextBlock FontSize="22" Margin="0,5">Custom mode</TextBlock> 
+     This mode is meant for all games taking place on human-made maps (mostly symmetrical ones), this includes all multiplayer maps from vanilla or from the compatible maps database at MMH55 discord channel.
+
+<Span Foreground="Red">How to play LAN game vs AI?</Span>
+
+MMH55 utilize new version of the AI which is not compatible with LAN games. In order to play LAN games in multiplayer all players should use <Bold>Map Generator</Bold> to  play the game so the original ToE AI is used.
+
+<TextBlock FontSize="22" Margin="0,5">Guides</TextBlock> 
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/tutorials/mmh55-customizing-town-management">Configure Town Management and Governance</Hyperlink>
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/tutorials/mmh55-difficulty-settings">Adjust map and AI difficulty</Hyperlink>
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/tutorials/mmh55-customizing-user-settings">Customize User Settings</Hyperlink>
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/tutorials/mmh55-generate-a-random-map">Generate random map and activate scripts</Hyperlink>
+
+<TextBlock FontSize="22" Margin="0,5">MMH55 philosophy</TextBlock> 
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/news/might-magic-heroes-55-lore-update">Lore fundamentals</Hyperlink>
+<Hyperlink NavigateUri="http://heroescommunity.com/viewthread.php3?TID=41320">Core design</Hyperlink>
+
+<TextBlock FontSize="22" Margin="0,5">Helpful links</TextBlock> 
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55">Official page</Hyperlink>
+<Hyperlink NavigateUri="https://discord.gg/khKPUrKxC4">Official discord</Hyperlink>
+
+
