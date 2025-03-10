@@ -1,7 +1,0 @@
-  case 0: "TF_DXT1"
-  case 1: "TF_DXT3"
-  case 2: "TF_DXT4"
-  case 3: "TF_DXT5"
-  case 4:  "TF_8888"
-  case 5: "TF_565"
-  default: "TF_DXT1"

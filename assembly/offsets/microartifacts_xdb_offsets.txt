@@ -1,1 +1,0 @@
-(v3 + 112) 		- artifact Costs array	

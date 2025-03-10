@@ -1,5 +1,0 @@
-  case 0: "CLAMP"
-  case 1: "WRAP"
-  case 2: "WRAP_X"
-  case 3: "WRAP_Y"
-  default:"CLAMP"

@@ -1,9 +1,0 @@
-(v3 + 68) 			- Instances
-(v3 + 72) 			- Instances
-(v3 + 76) 			- Lights
-(v3 + 80) 			- Lights
-(v3 + 84) 			- Models
-(v3 + 88) 			- Models
-(v3 + 92) 			- WindAffected
-(v3 + 96) 			- WindPower
-(v3 + 100) 			- Duration

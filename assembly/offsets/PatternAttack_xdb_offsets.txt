@@ -1,6 +1,0 @@
-(v3 + 68) 			- Patterns
-(v3 + 72) 			- Patterns
-(v3 + 76) 			- RotateToMainTarget
-(v3 + 80) 			- DamageToMainTargetCoefficient
-(v3 + 84) 			- DamageToOtherTargetsCoefficient
-(v3 + 88) 			- DamageAll

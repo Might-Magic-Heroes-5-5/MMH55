@@ -1,6 +1,0 @@
-(*a4 + 7) 			- Offense value
-(*a4 + 8) 			- Defense value
-(*a4 + 9) 			- Spellpower value
-(*a4 + 10) 			- Knowledge value
-(*a4 + 17)          - Spell ID
-(*a4 + 80) 			- <AdvMapHeroShared>
