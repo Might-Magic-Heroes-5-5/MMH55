@@ -1,0 +1,62 @@
+    Unofficial expansion pack for HOMM5 that includes many new adventure objects, new larger battlefields, new heroes, new classes, new specializations, new skills, new artifacts, new adventure spells, new HD textures and a greatly improved RMG with more than 60 'visualized' Templates. The AI is much more intelligent and calculated much faster. Balance is also greatly improved both for small competitive multiplayer maps as well as XXXL maps with countless epic battles.
+
+<TextBlock FontSize="22" Margin="0,5">Duel mode</TextBlock> 
+     This mode is meant for all games taking place on H55-Duel template, possibly in the future 3rd party duel maps made compatible with H55 will also be valid.
+
+<Span Foreground="Red">What is duel map?</Span>
+
+    Duel maps have long been used in multiplayer, to significantly reduce game time and only focus on combat tactics. The adventure part of the game is skipped, but other than in 'duel   mode' the player will receive a huge amount of experience at the beginning of the game and build up the hero's skills by him/herself. The player will also decide between alternate upgrades and receive a random stash of artifacts and arrange the slots. Victory is achieved by killing the other player's main hero on neutral terrain (not in a siege).
+
+<Span Foreground="Red">How to play?</Span>
+
+1. Visit Abandoned Mine to receive a random stash of Artifacts.
+2. Visit Witch Hut to receive a huge boost in experience.
+3. Walk back to your town to make sure you learned all spells, buy all troops and don't forget the war machines!
+4. Proceed to the middle zone and fight your opponent on the random generated terrain type.
+
+Notes:
+<Italic>- If your hero dies you lose the game, you cannot hire another one.
+- To prevent players stalling the game, towns will be destroyed on day 8, after that you have a maximum of 7 days left to kill your enemy.
+- Redwood Observatories on this map can restore your mana, other temporary boosters are not usable.
+- The battle sites on this map are too dangerous on default setting and visiting them will cause you to lose.</Italic>
+
+<Span Foreground="Red">How to generate a Duel map</Span>
+
+1. Go to Lobby App -> Settings-> select <Bold>Map Generator</Bold> button
+2. Generate a map according to <Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/tutorials/mmh55-generate-a-random-map">the map generation guide</Hyperlink>*
+3. Once saved** you  need to activate map scripts
+  -> Go to Lobby App -> Settings-> General Settings -> select "Open the game folder"
+  -> Browse bin directory and open MMH55_Mapmixer.exe
+  -> From MapMiixer browse the map file and apply mapmixer, this will activate scripts. Close the MapMixer app
+4. Browse the Maps folder, get the map file and send it to your opponents, they should place it in their Map folder
+5. Play the game!
+
+<Span Foreground="Red">How customize a duel map?</Span>
+
+H5.5 Duel Maps are special ARMG maps generated on the smallest map size: <Bold>Tiny without underground</Bold>, so you can have endless amounts of them both with forced or unforced factions. After generation the game will auto-detect the map as a duel map and regulate the game, but remember you have to activate scripts on them with the provided tools to use them hotseat and LAN! The players can very easily customize hero level, army size, and the amount of received random artifacts (which can also be 0). There will also be a demo duel map.
+The following variables can be set in the MMH55-Settings.pak file, but they can also be copy/pasted in the mapscript so that the player can create multiple different duel maps (one for level 20 heroes, one for level 30 heroes etc.).
+<Span Background="Black" Foreground="White">
+H55_Duel_WeeksGrowth = 12; --Army size is determined in weeks of growth.
+H55_Duel_Experience = 200000; --how many experience the heroes will have at start
+H55_Duel_Relics = 4;
+H55_Duel_Majors = 8;
+H55_Duel_Minors = 4;</Span> 
+
+A random generated duel map consist of 3 zones, the middle zone will also contain battle sites but by default they are way too dangerous to visit (to maintain the traditional duel map gameplay). If desired the player can reduce their guards and nerf the arrtifacts gained at the start of the map, this may cause the players to make a run for the battle sites before killing each other.
+<Span Background="Black" Foreground="White">
+H55_Duel_BankDifficulty = 6; --By default (value 6) Battle sites are 3x stronger as H55_Duel_WeeksGrowth (8), making them much too dangerous.
+</Span>
+<TextBlock FontSize="22" Margin="0,5">Related guides</TextBlock>
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/news/mmh55-random-duel-maps">Duel map guide with pictures</Hyperlink>
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/tutorials/mmh55-generate-a-random-map">Generate Duel map and activate scripts</Hyperlink>
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/tutorials/mmh55-customizing-town-management">Customize MMH55-Settings.pak</Hyperlink>
+<Hyperlink NavigateUri="https://heroes5.fandom.com/wiki/.pak_Files">Edit Pak files</Hyperlink>
+
+<TextBlock FontSize="22" Margin="0,5">MMH55 philosophy</TextBlock> 
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/news/might-magic-heroes-55-lore-update">Lore fundamentals</Hyperlink>
+<Hyperlink NavigateUri="http://heroescommunity.com/viewthread.php3?TID=41320">Core design</Hyperlink>
+
+<TextBlock FontSize="22" Margin="0,5">Helpful links</TextBlock> 
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55">Official page</Hyperlink>
+<Hyperlink NavigateUri="https://discord.gg/khKPUrKxC4">Official discord</Hyperlink>
+

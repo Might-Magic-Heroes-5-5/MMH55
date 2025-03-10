@@ -1,0 +1,37 @@
+<TextBlock FontSize="22" Margin="0,5">Description</TextBlock> 
+    Unofficial expansion pack for HOMM5 that includes many new adventure objects, new larger battlefields, new heroes, new classes, new specializations, new skills, new artifacts, new adventure spells, new HD textures and a greatly improved RMG with more than 60 'visualized' Templates. The AI is much more intelligent and calculated much faster. Balance is also greatly improved both for small competitive multiplayer maps as well as XXXL maps with countless epic battles.
+
+<TextBlock FontSize="22" Margin="0,5">ARMG Mode</TextBlock>
+     This mode is meant for all games taking place on a newly generated ARMG map (excluding H55-Duel template).
+
+<Span Foreground="Red">How to play LAN game vs AI?</Span>
+
+MMH55 utilize new version of the AI which is not compatible with LAN games. In order to play LAN games in multiplayer all players should use <Bold>Map Generator</Bold> to  play the game so the original ToE AI is used.
+
+<Span Foreground="Red">How to generate and use ARMG map</Span>
+
+1. Go to Lobby App -> Settings-> select "Map Generator" button
+2. Generate a map according to <Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/tutorials/mmh55-generate-a-random-map">the map generation guide</Hyperlink>*
+3. Once saved** you  need to activate map scripts
+  -> Go to Lobby App -> Settings-> General Settings -> select "Open the game folder"
+  -> Browse bin directory and open MMH55_Mapmixer.exe
+  -> From MapMiixer browse the map file and apply mapmixer, this will activate scripts. Close the MapMixer app
+4. Browse the Maps folder, get the map file and send it to your opponents, they should place it in their Map folder
+5. Play the game!
+
+* <Italic>For an in depth description of map generation features consult with game_folder/ARMG Manual.pdf.
+** When saving the map you will get the error message <Bold>"RMG marker will be lost"</Bold> which can be safely disregarded. It means that map objects become static which is prerequisite for LAN multiplayer, otherwise <Bold>error 0.2.0</Bold> will be generated while players try to join.</Italic>
+
+<TextBlock FontSize="22" Margin="0,5">Related Guides</TextBlock>
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/tutorials/mmh55-generate-a-random-map">Generate random map and activate scripts</Hyperlink>
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/tutorials/mmh55-customizing-town-management">Configure Town Management and Governance</Hyperlink>
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/tutorials/mmh55-customizing-user-settings">Customize User Settings</Hyperlink>
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/tutorials/mmh55-difficulty-settings">Adjust map and AI difficulty</Hyperlink>
+
+<TextBlock FontSize="22" Margin="0,5">MMH55 philosophy</TextBlock> 
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/news/might-magic-heroes-55-lore-update">Lore fundamentals</Hyperlink>
+<Hyperlink NavigateUri="http://heroescommunity.com/viewthread.php3?TID=41320">Core design</Hyperlink>
+
+<TextBlock FontSize="22" Margin="0,5">Helpful links</TextBlock> 
+<Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55">Official page</Hyperlink>
+<Hyperlink NavigateUri="https://discord.gg/khKPUrKxC4">Official discord</Hyperlink>
