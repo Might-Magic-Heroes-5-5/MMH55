@@ -18,16 +18,16 @@ Notes:
 <Italic>- If your hero dies you lose the game, you cannot hire another one.
 - To prevent players stalling the game, towns will be destroyed on day 8, after that you have a maximum of 7 days left to kill your enemy.
 - Redwood Observatories on this map can restore your mana, other temporary boosters are not usable.
-- The battle sites on this map are too dangerous on default setting and visiting them will cause you to lose.</Italic>
+- The battle sites on this map are too dangerous on default setting and visiting them will cause you to lose.</Italic> -> http://heroescommunity.com/viewthread.php3?TID=41320
 
 <Span Foreground="Red">How to generate a Duel map</Span>
 
-1. Go to Lobby App -> Settings-> select <Bold>Map Generator</Bold> button
+1. Go to Lobby App -> Settings-> select <Bold>Utility</Bold> button
 2. Generate a map according to <Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/tutorials/mmh55-generate-a-random-map">the map generation guide</Hyperlink>*
 3. Once saved** you  need to activate map scripts
   -> Go to Lobby App -> Settings-> General Settings -> select "Open the game folder"
   -> Browse bin directory and open MMH55_Mapmixer.exe
-  -> From MapMiixer browse the map file and apply mapmixer, this will activate scripts. Close the MapMixer app
+  -> From MapMixer browse the map file and apply mapmixer, this will activate scripts. Close the MapMixer app
 4. Browse the Maps folder, get the map file and send it to your opponents, they should place it in their Map folder
 5. Play the game!
 

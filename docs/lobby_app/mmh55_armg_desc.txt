@@ -6,16 +6,16 @@
 
 <Span Foreground="Red">How to play LAN game vs AI?</Span>
 
-MMH55 utilize new version of the AI which is not compatible with LAN games. In order to play LAN games in multiplayer all players should use <Bold>Map Generator</Bold> to  play the game so the original ToE AI is used.
+MMH55 utilize new version of the AI which is not compatible with LAN games. In order to play LAN games in multiplayer all players should use <Bold>Utility</Bold> to  play the game so the original ToE AI is used.
 
 <Span Foreground="Red">How to generate and use ARMG map</Span>
 
-1. Go to Lobby App -> Settings-> select "Map Generator" button
+1. Go to Lobby App -> Settings-> select "Utility" button
 2. Generate a map according to <Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/tutorials/mmh55-generate-a-random-map">the map generation guide</Hyperlink>*
 3. Once saved** you  need to activate map scripts
   -> Go to Lobby App -> Settings-> General Settings -> select "Open the game folder"
   -> Browse bin directory and open MMH55_Mapmixer.exe
-  -> From MapMiixer browse the map file and apply mapmixer, this will activate scripts. Close the MapMixer app
+  -> From MapMixer browse the map file and apply mapmixer, this will activate scripts. Close the MapMixer app
 4. Browse the Maps folder, get the map file and send it to your opponents, they should place it in their Map folder
 5. Play the game!
 
@@ -30,7 +30,7 @@ MMH55 utilize new version of the AI which is not compatible with LAN games. In o
 
 <TextBlock FontSize="22" Margin="0,5">MMH55 philosophy</TextBlock> 
 <Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/news/might-magic-heroes-55-lore-update">Lore fundamentals</Hyperlink>
-<Hyperlink NavigateUri="http://heroescommunity.com/viewthread.php3?TID=41320">Core design</Hyperlink>
+<Hyperlink NavigateUri="http://heroescommunity.com/viewthread.php3?TID=41320">Core design</Hyperlink> -> http://heroescommunity.com/viewthread.php3?TID=41320
 
 <TextBlock FontSize="22" Margin="0,5">Helpful links</TextBlock> 
 <Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55">Official page</Hyperlink>

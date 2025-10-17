@@ -6,7 +6,7 @@
 
 <Span Foreground="Red">How to play LAN game vs AI?</Span>
 
-MMH55 utilize new version of the AI which is not compatible with LAN games. In order to play LAN games in multiplayer all players should use <Bold>Map Generator</Bold> to  play the game so the original ToE AI is used.
+MMH55 utilize new version of the AI which is not compatible with LAN games. In order to play LAN games in multiplayer all players should use <Bold>Utility</Bold> to  play the game so the original ToE AI is used.
 
 <TextBlock FontSize="22" Margin="0,5">Guides</TextBlock> 
 <Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/tutorials/mmh55-customizing-town-management">Configure Town Management and Governance</Hyperlink>
@@ -16,7 +16,7 @@ MMH55 utilize new version of the AI which is not compatible with LAN games. In o
 
 <TextBlock FontSize="22" Margin="0,5">MMH55 philosophy</TextBlock> 
 <Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55/news/might-magic-heroes-55-lore-update">Lore fundamentals</Hyperlink>
-<Hyperlink NavigateUri="http://heroescommunity.com/viewthread.php3?TID=41320">Core design</Hyperlink>
+<Hyperlink NavigateUri="http://heroescommunity.com/viewthread.php3?TID=41320">Core design</Hyperlink> -> http://heroescommunity.com/viewthread.php3?TID=41320
 
 <TextBlock FontSize="22" Margin="0,5">Helpful links</TextBlock> 
 <Hyperlink NavigateUri="https://www.moddb.com/mods/might-magic-heroes-55">Official page</Hyperlink>
