@@ -24,7 +24,7 @@ Replaces vanilla duel mode feature, it grants combat matches as if the combat ma
     - Light - Divine Strength, Haste, Endurance, Cleansing, Righteous Might, Deflect Missile
     - Destruction - Lightning, Stone Spikes
     - Summoning - Fire Trap, Wasp Swarm, Arcane Crystal, Blade Barrier
-- <Span Foreground="LightGreen">armies**</Span> but of their own faction and are precisely numbered by weekly growth.
+- <Span Foreground="LightGreen">armies**</Span> are of their own faction and are precisely numbered by weekly growth.
 
 <Bold>*</Bold><Italic>Empowered, Mass versions, high damage spells and high level spells are left out because the matches are not about winning a match based on casting one or two super spells.</Italic>
 <Bold>**</Bold><Italic>For each faction there is also a hero that only plays with unupgraded creatures, those are supposed to be used only against other such hero with unupgraded creatures OR in a 3x3 faction vs faction match.</Italic>
